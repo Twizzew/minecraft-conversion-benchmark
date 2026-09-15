@@ -103,7 +103,7 @@ Every line must report `OK`. If a file does not match, it is not an MCCB v1.0 so
 
 Documentation and world files in this benchmark are released under
 [CC BY 4.0](LICENSE) — you may redistribute and build on them, including commercially,
-with attribution to WorldSwitch.
+with attribution to WorldSwitch. See [NOTICE.md](NOTICE.md) for the attribution format.
 
 Minecraft is a trademark of Mojang Studios / Microsoft. This project is not affiliated
 with, endorsed by, or sponsored by Mojang Studios or Microsoft. The world files contain
