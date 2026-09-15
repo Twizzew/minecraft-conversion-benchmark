@@ -1,0 +1,10 @@
+# Checksum files and shell scripts MUST keep LF endings: a CRLF in SHA256SUMS.txt
+# leaves a trailing \r in the filename and makes `sha256sum -c` fail on every line.
+* text=auto eol=lf
+SHA256SUMS.txt text eol=lf
+*.sh text eol=lf
+*.ps1 text eol=crlf
+
+# World archives are binary and are never committed, but be explicit.
+*.mcworld binary
+*.zip binary

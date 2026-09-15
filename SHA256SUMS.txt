@@ -1,0 +1,14 @@
+# MCCB v1.0 - Source Worlds
+# SHA-256 of the six frozen SOURCE MASTER worlds.
+# Published before any conversion was run and before any comparative result existed.
+# These six files are immutable for MCCB v1.0.
+#
+# Verify:  sha256sum -c SHA256SUMS.txt        (Linux / macOS / Git Bash)
+#          pwsh ./tools/verify.ps1            (Windows PowerShell)
+#
+47942eef4464f4e9435cd11292bd37113d0135421e3501d0454b55d05bee8cde *MCCB_J01_STATIC_JAVA.zip
+db97f7497094ed5681600b37a76ab81e975341280883dcf433b3d6c40e8f17a4 *MCCB_J02_LIVING_JAVA.zip
+45c7ae7293ff1dfd3310757a8b56f1d094e6928aa20a82b68ff45428f55bbc50 *MCCB_J03_SYSTEMS_JAVA.zip
+83e8e9909a3d8915980df317073b80c11421152d8f7ed88714fd196e45c0a667 *MCCB_B01_STATIC_BEDROCK.mcworld
+34d9b5dfaff557ef5e3907cae8fba31fc5de8dc03cb49c145ab14b0e6f6ccd10 *MCCB_B02_LIVING_BEDROCK.mcworld
+fd16e5d795f6b707fb48bce821e09dcad5a8e15c87e101d6e080bb24c911a838 *MCCB_B03_SYSTEMS_BEDROCK.mcworld
