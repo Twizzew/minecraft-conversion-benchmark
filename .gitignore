@@ -1,0 +1,14 @@
+# World files are distributed via GitHub Releases, never committed to Git.
+_release_assets/
+*.mcworld
+*.mcpack
+*.mctemplate
+
+# Java world archives
+MCCB_J0*.zip
+
+# Local scratch
+/tmp/
+*.log
+.DS_Store
+Thumbs.db
