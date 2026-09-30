@@ -1,0 +1,18 @@
+[jtb] pré-vol : 1 chunks échantillonnés, 1 avec palette, palette lisible ✓
+[jtb] 128130 charge(s) biome Bedrock reportée(s) disponibles
+[jtb] sidecar cartes : 2760 id(s) Java ré-appairé(s) aux ids Bedrock d'origine
+[jtb] support décorations : 294 vérifiée(s), 0 sans support (résolue(s) en casse vanilla), 0 fixe(s) conservé(s), 6 indéterminée(s) conservée(s)
+[jtb] régions : 882 tâche(s) en séquentiel
+[jtb] 217 entité(s) de chunks sans blocs récupérées (sweep)
+[jtb] 27 joueur(s) secondaire(s) → player_server_
+[jtb] récupération : spawn (-8, 64, -1) → 799/2160 sous-chunk(s) lisibles autour de Y=64
+[jtb] copies de secours : 20/20 posée(s)
+[jtb] clés globales Bedrock (LevelChunkMetaDataDictionary + Overworld/mobevents/…) écrites
+[jtb] sidecar : 40716 champ(s) Bedrock-only greffé(s) sur 8437 chunk(s) de block entities
+[jtb] sidecar : 242 grand(s) coffre(s) rendu(s) à leur meneur d'origine
+[jtb] sidecar : 391783 enregistrements Bedrock-only restaurés, 7470 instantané(s) périmé(s) écarté(s) (l'état Java courant fait foi)
+[jtb] raids : 2 clé(s) VILLAGE_*_RAID écrite(s)
+[jtb] villageois : 357 lien(s) lit/cloche/poste → 49 clé(s) VILLAGE_*_POI, 6 POI de village vidé(s) (plus aucune localisation côté Java)
+[jtb] villageois : 358 DwellingUniqueID pose(s)
+[jtb] 1068792 sections, 128130 chunks, 47031 BE, 107244 entities, 2760 maps, 0 structures, player=yes, legacy=0
+[jtb] java-sidecar : enregistrements sans instantané seuls (monde venu de Bedrock)

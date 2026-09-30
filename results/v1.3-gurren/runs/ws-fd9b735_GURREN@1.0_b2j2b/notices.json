@@ -1,0 +1,454 @@
+[
+ {
+  "players": {
+   "total": 27,
+   "linked": 0,
+   "unlinked": 27,
+   "direction": "java_to_bedrock",
+   "accountLinking": {
+    "supported": false,
+    "reason": "aucun enregistrement `player_<XUID>` natif n'existe SEUL dans le corpus : rien n'établit qu'un client Bedrock résolve son profil par XUID plutôt que par un identifiant calculé localement (SelfSignedId / PlatformOfflineId), non dérivable d'un XUID. Le rattachement n'est donc pas RÉALISABLE DE FAÇON FIABLE avec ce que porte un monde ; ce n'est pas une impossibilité prouvée du format."
+   },
+   "registryFile": "worldswitch_player_recovery.json",
+   "entries": [
+    {
+     "label": "f5a1c0de-0000-4000-8000-000000000001",
+     "sourceId": "f5a1c0de-0000-4000-8000-000000000001",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "db:player_server_f5a1c0de-0000-4000-8000-000000000001",
+     "recovery": {
+      "dimension": "overworld",
+      "x": -14,
+      "y": 68,
+      "z": -8
+     },
+     "recoverySkippedReason": null,
+     "itemsCopied": 37
+    },
+    {
+     "label": "0263f532-352d-4b72-8ea9-988baedae32a",
+     "sourceId": "0263f532-352d-4b72-8ea9-988baedae32a",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "db:player_server_0263f532-352d-4b72-8ea9-988baedae32a",
+     "recovery": {
+      "dimension": "overworld",
+      "x": -10,
+      "y": 64,
+      "z": -2
+     },
+     "recoverySkippedReason": null,
+     "itemsCopied": 33
+    },
+    {
+     "label": "0a2aee6b-f274-45f8-b95a-0baf66569ba2",
+     "sourceId": "0a2aee6b-f274-45f8-b95a-0baf66569ba2",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "db:player_server_0a2aee6b-f274-45f8-b95a-0baf66569ba2",
+     "recovery": {
+      "dimension": "overworld",
+      "x": -6,
+      "y": 64,
+      "z": -2
+     },
+     "recoverySkippedReason": null,
+     "itemsCopied": 5
+    },
+    {
+     "label": "1455d1c0-01a1-4254-a7ff-626d7bc7eaf7",
+     "sourceId": "1455d1c0-01a1-4254-a7ff-626d7bc7eaf7",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "db:player_server_1455d1c0-01a1-4254-a7ff-626d7bc7eaf7",
+     "recovery": {
+      "dimension": "overworld",
+      "x": -10,
+      "y": 64,
+      "z": 0
+     },
+     "recoverySkippedReason": null,
+     "itemsCopied": 10
+    },
+    {
+     "label": "160ce1b5-f5e0-457f-8b29-09f0f388f561",
+     "sourceId": "160ce1b5-f5e0-457f-8b29-09f0f388f561",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "db:player_server_160ce1b5-f5e0-457f-8b29-09f0f388f561",
+     "recovery": {
+      "dimension": "overworld",
+      "x": -6,
+      "y": 64,
+      "z": 0
+     },
+     "recoverySkippedReason": null,
+     "itemsCopied": 3
+    },
+    {
+     "label": "19c142b2-274f-4974-b176-29bf04de512b",
+     "sourceId": "19c142b2-274f-4974-b176-29bf04de512b",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "db:player_server_19c142b2-274f-4974-b176-29bf04de512b",
+     "recovery": {
+      "dimension": "overworld",
+      "x": -11,
+      "y": 64,
+      "z": -4
+     },
+     "recoverySkippedReason": null,
+     "itemsCopied": 9
+    },
+    {
+     "label": "2486826b-4882-4be5-9b27-edd5e0251811",
+     "sourceId": "2486826b-4882-4be5-9b27-edd5e0251811",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "db:player_server_2486826b-4882-4be5-9b27-edd5e0251811",
+     "recovery": {
+      "dimension": "overworld",
+      "x": -11,
+      "y": 64,
+      "z": 2
+     },
+     "recoverySkippedReason": null,
+     "itemsCopied": 40
+    },
+    {
+     "label": "412d2634-a84e-49e8-931d-3b3932b58d54",
+     "sourceId": "412d2634-a84e-49e8-931d-3b3932b58d54",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "db:player_server_412d2634-a84e-49e8-931d-3b3932b58d54",
+     "recovery": {
+      "dimension": "overworld",
+      "x": -8,
+      "y": 64,
+      "z": -4
+     },
+     "recoverySkippedReason": null,
+     "itemsCopied": 45
+    },
+    {
+     "label": "59a7462b-6317-4ff6-933b-0555631fed52",
+     "sourceId": "59a7462b-6317-4ff6-933b-0555631fed52",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "db:player_server_59a7462b-6317-4ff6-933b-0555631fed52",
+     "recovery": null,
+     "recoverySkippedReason": null,
+     "itemsCopied": null
+    },
+    {
+     "label": "63fef28e-29f2-4e54-a05a-53b43c854a76",
+     "sourceId": "63fef28e-29f2-4e54-a05a-53b43c854a76",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "db:player_server_63fef28e-29f2-4e54-a05a-53b43c854a76",
+     "recovery": {
+      "dimension": "overworld",
+      "x": -4,
+      "y": 68,
+      "z": 3
+     },
+     "recoverySkippedReason": null,
+     "itemsCopied": 38
+    },
+    {
+     "label": "66108713-73a3-4689-a07b-b2dea9a6ed41",
+     "sourceId": "66108713-73a3-4689-a07b-b2dea9a6ed41",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "db:player_server_66108713-73a3-4689-a07b-b2dea9a6ed41",
+     "recovery": null,
+     "recoverySkippedReason": null,
+     "itemsCopied": null
+    },
+    {
+     "label": "67ed41b6-e0cb-4f46-8a54-8469064ed42d",
+     "sourceId": "67ed41b6-e0cb-4f46-8a54-8469064ed42d",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "db:player_server_67ed41b6-e0cb-4f46-8a54-8469064ed42d",
+     "recovery": {
+      "dimension": "overworld",
+      "x": -3,
+      "y": 63,
+      "z": -3
+     },
+     "recoverySkippedReason": null,
+     "itemsCopied": 39
+    },
+    {
+     "label": "7b3d04de-f267-4a1a-82a6-7d277c6178e9",
+     "sourceId": "7b3d04de-f267-4a1a-82a6-7d277c6178e9",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "db:player_server_7b3d04de-f267-4a1a-82a6-7d277c6178e9",
+     "recovery": null,
+     "recoverySkippedReason": null,
+     "itemsCopied": null
+    },
+    {
+     "label": "7d6d2471-c6dd-4369-8fd7-3a3a642e303b",
+     "sourceId": "7d6d2471-c6dd-4369-8fd7-3a3a642e303b",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "db:player_server_7d6d2471-c6dd-4369-8fd7-3a3a642e303b",
+     "recovery": null,
+     "recoverySkippedReason": null,
+     "itemsCopied": null
+    },
+    {
+     "label": "8c5158c4-c6ee-4adc-9ecd-7c78680848f1",
+     "sourceId": "8c5158c4-c6ee-4adc-9ecd-7c78680848f1",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "db:player_server_8c5158c4-c6ee-4adc-9ecd-7c78680848f1",
+     "recovery": {
+      "dimension": "overworld",
+      "x": -13,
+      "y": 64,
+      "z": -2
+     },
+     "recoverySkippedReason": null,
+     "itemsCopied": 62
+    },
+    {
+     "label": "9365ac78-4545-4890-a5d6-52950ca84575",
+     "sourceId": "9365ac78-4545-4890-a5d6-52950ca84575",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "db:player_server_9365ac78-4545-4890-a5d6-52950ca84575",
+     "recovery": {
+      "dimension": "overworld",
+      "x": -3,
+      "y": 63,
+      "z": -1
+     },
+     "recoverySkippedReason": null,
+     "itemsCopied": 12
+    },
+    {
+     "label": "938aa99a-a2f5-4143-8f74-0b04b23ac2c8",
+     "sourceId": "938aa99a-a2f5-4143-8f74-0b04b23ac2c8",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "db:player_server_938aa99a-a2f5-4143-8f74-0b04b23ac2c8",
+     "recovery": {
+      "dimension": "overworld",
+      "x": -13,
+      "y": 64,
+      "z": 0
+     },
+     "recoverySkippedReason": null,
+     "itemsCopied": 40
+    },
+    {
+     "label": "a4515beb-6a6b-4f63-ac7f-46e6c53e93c0",
+     "sourceId": "a4515beb-6a6b-4f63-ac7f-46e6c53e93c0",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "db:player_server_a4515beb-6a6b-4f63-ac7f-46e6c53e93c0",
+     "recovery": {
+      "dimension": "overworld",
+      "x": -3,
+      "y": 64,
+      "z": 1
+     },
+     "recoverySkippedReason": null,
+     "itemsCopied": 33
+    },
+    {
+     "label": "b69fa182-1d1b-416b-b84c-9c27892a1b64",
+     "sourceId": "b69fa182-1d1b-416b-b84c-9c27892a1b64",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "db:player_server_b69fa182-1d1b-416b-b84c-9c27892a1b64",
+     "recovery": {
+      "dimension": "overworld",
+      "x": -14,
+      "y": 63,
+      "z": -7
+     },
+     "recoverySkippedReason": null,
+     "itemsCopied": 25
+    },
+    {
+     "label": "b7127117-af1a-419e-a26a-4c33f73998ee",
+     "sourceId": "b7127117-af1a-419e-a26a-4c33f73998ee",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "db:player_server_b7127117-af1a-419e-a26a-4c33f73998ee",
+     "recovery": null,
+     "recoverySkippedReason": null,
+     "itemsCopied": null
+    },
+    {
+     "label": "b905aaa2-8942-498d-9854-2e8b8218585b",
+     "sourceId": "b905aaa2-8942-498d-9854-2e8b8218585b",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "db:player_server_b905aaa2-8942-498d-9854-2e8b8218585b",
+     "recovery": {
+      "dimension": "overworld",
+      "x": -11,
+      "y": 63,
+      "z": -7
+     },
+     "recoverySkippedReason": null,
+     "itemsCopied": 1
+    },
+    {
+     "label": "dc3d4846-308e-4cb0-8119-49fde9a548cb",
+     "sourceId": "dc3d4846-308e-4cb0-8119-49fde9a548cb",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "db:player_server_dc3d4846-308e-4cb0-8119-49fde9a548cb",
+     "recovery": {
+      "dimension": "overworld",
+      "x": -8,
+      "y": 63,
+      "z": -7
+     },
+     "recoverySkippedReason": null,
+     "itemsCopied": 26
+    },
+    {
+     "label": "eac9fc72-affb-49ff-afc3-207bbfc95bab",
+     "sourceId": "eac9fc72-affb-49ff-afc3-207bbfc95bab",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "db:player_server_eac9fc72-affb-49ff-afc3-207bbfc95bab",
+     "recovery": {
+      "dimension": "overworld",
+      "x": -14,
+      "y": 64,
+      "z": 2
+     },
+     "recoverySkippedReason": null,
+     "itemsCopied": 41
+    },
+    {
+     "label": "efaf9253-4092-4493-88b7-e2b3654c8400",
+     "sourceId": "efaf9253-4092-4493-88b7-e2b3654c8400",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "db:player_server_efaf9253-4092-4493-88b7-e2b3654c8400",
+     "recovery": {
+      "dimension": "overworld",
+      "x": -14,
+      "y": 70,
+      "z": 3
+     },
+     "recoverySkippedReason": null,
+     "itemsCopied": 7
+    },
+    {
+     "label": "f441ded9-eadd-4afc-85ae-d16e4d097995",
+     "sourceId": "f441ded9-eadd-4afc-85ae-d16e4d097995",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "db:player_server_f441ded9-eadd-4afc-85ae-d16e4d097995",
+     "recovery": null,
+     "recoverySkippedReason": null,
+     "itemsCopied": null
+    },
+    {
+     "label": "f8c7c3da-be6e-43b6-a85a-70578973f865",
+     "sourceId": "f8c7c3da-be6e-43b6-a85a-70578973f865",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "db:player_server_f8c7c3da-be6e-43b6-a85a-70578973f865",
+     "recovery": {
+      "dimension": "overworld",
+      "x": -11,
+      "y": 68,
+      "z": -8
+     },
+     "recoverySkippedReason": null,
+     "itemsCopied": 32
+    },
+    {
+     "label": "ffbd1bdc-3372-4cc2-abbb-31b9a3fd72d2",
+     "sourceId": "ffbd1bdc-3372-4cc2-abbb-31b9a3fd72d2",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "db:player_server_ffbd1bdc-3372-4cc2-abbb-31b9a3fd72d2",
+     "recovery": null,
+     "recoverySkippedReason": null,
+     "itemsCopied": null
+    }
+   ]
+  },
+  "fidelity": {
+   "total": 2487,
+   "families": 37,
+   "byCategory": {
+    "normalized": 1609,
+    "archived": 562,
+    "dropped": 285,
+    "approximated": 27,
+    "cosmetic": 4
+   },
+   "detailed": 37,
+   "truncated": 0
+  }
+ }
+]

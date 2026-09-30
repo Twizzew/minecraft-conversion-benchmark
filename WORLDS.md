@@ -1,175 +1,103 @@
-# The six MCCB v1.0 source worlds
+# MCCB source worlds — version 1.1
 
-Three themes × two editions. Each theme stresses a different layer of a world, so a failure
-can be attributed to a layer instead of to "the conversion".
+The v1.0 version of this page (six worlds) is kept verbatim in
+[`docs/history/WORLDS-v1.0.md`](docs/history/WORLDS-v1.0.md). Every world revision has
+its own generated card in [`worlds/`](worlds/); the machine-readable record is
+[`manifests/worlds.json`](manifests/worlds.json).
+
+## Themes and classes
 
 | Theme | What it stresses |
 |-------|------------------|
 | **STATIC** | Blocks, block states, block entities and items — data that never moves. |
 | **LIVING** | Entities: mobs, variants, inventories, trades, taming, persistence. |
 | **SYSTEMS** | The world itself: chunks, dimensions, redstone, commands, scoreboards, timers. |
+| **COMMANDS** | Command blocks: 400 stations, each carrying its own declared expectation. |
 
-All six worlds were built with **vanilla, non-experimental** content only. No world was
-produced by converting another world, and none was tuned for any particular converter.
+| Class | Meaning | v1.1 worlds |
+|---|---|---|
+| `LAB` | Built by a generator (datapack / behaviour pack) to cover families systematically. | J01, J02, J03, J04, B01, B03 |
+| `MANUAL_NATIVE` | Built by hand in the retail game: engine-authentic state. | B02 |
+| `REAL_WORLD_SURVIVAL` | Played for a long time. | none published (see KNOWN_LIMITATIONS.md) |
 
----
+Results of different classes are never added together.
 
-## Java Edition — 26.2 (`DataVersion` 4903)
+## The seven v1.1 worlds
 
-Each Java world is a ZIP containing a single world folder, ready to be dropped into
-`.minecraft/saves/`. The datapack that generated the fixtures ships inside the world at
-`datapacks/`, so the construction is auditable.
+| World | Edition | Theme | Class | File | SHA-256 | Card |
+|---|---|---|---|---|---|---|
+| **J01@1.1** | Java 26.3 | STATIC | LAB | `MCCB_J01_STATIC_JAVA_v1.1.zip` | `b28294c7…6cf3` | [card](worlds/J01_r1.1/README.md) |
+| **J02@1.0** | Java 26.2 | LIVING | LAB | `MCCB_J02_LIVING_JAVA.zip` | `db97f749…17a4` | [card](worlds/J02_r1.0/README.md) |
+| **J03@1.0** | Java 26.2 | SYSTEMS | LAB | `MCCB_J03_SYSTEMS_JAVA.zip` | `45c7ae72…bc50` | [card](worlds/J03_r1.0/README.md) |
+| **J04@1.0** | Java 26.3 | COMMANDS | LAB | `MCCB_J04_COMMANDS_JAVA.zip` | `44a58908…b4c` | [card](worlds/J04_r1.0/README.md) |
+| **B01@1.0** | Bedrock 1.26.45 | STATIC | LAB | `MCCB_B01_STATIC_BEDROCK.mcworld` | `83e8e990…0a667` | [card](worlds/B01_r1.0/README.md) |
+| **B02@1.0** | Bedrock 1.26.45 | LIVING | MANUAL_NATIVE | `MCCB_B02_LIVING_BEDROCK.mcworld` | `34d9b5df…ccd10` | [card](worlds/B02_r1.0/README.md) |
+| **B03@1.0** | Bedrock 1.26.45 | SYSTEMS | LAB | `MCCB_B03_SYSTEMS_BEDROCK.mcworld` | `fd16e5d7…1a838` | [card](worlds/B03_r1.0/README.md) |
 
-### J01 — STATIC
+Full hashes: [`checksums/MCCB-v1.1-source-worlds.sha256`](checksums/MCCB-v1.1-source-worlds.sha256).
 
-| | |
-|---|---|
-| Asset | `MCCB_J01_STATIC_JAVA.zip` |
-| Size | 7 036 006 bytes (43.7 MiB uncompressed, 93 files) |
-| `LevelName` | `MCCB J01 STATIC - Java 26.2` |
-| Dimensions | `minecraft:overworld` (13 region files) + custom dimension `mccb26:states` (9 region files) |
-| Datapack | `MCCB_J01_STATIC_JAVA26_2_R9_ITEM_REGISTRY_FIX.zip` (pack format 107.1) |
+**Changes from v1.0.** J01 revision 1.1 replaces revision 1.0 (J01@1.0 is SUPERSEDED: its
+file stays in the v1.0 release, byte-identical, and is never an input of v1.1). J04 is
+new. J02, J03, B01, B02 and B03 are the v1.0 files, byte-identical.
 
-Declared coverage, as recorded in the datapack's own `COVERAGE.json`:
+## Declared versus contained
 
-- 1 537 registered Java 26.2 item IDs tracked; 1 536 materialisable as item stacks.
-- Block states enumerated with the vanilla `minecraft:debug` generator, copied into
-  144 tiles across a 360×360 window in the dedicated `mccb26:states` dimension.
-- 460 mandatory item-component / variant instances.
-- 111 data-component registry types classified; 74 probed with explicit values.
-- 26 static block / block-entity fixtures, plus multiblock and connectivity fixtures.
+Each generator pack declares cases; MCCB evaluates only what the frozen world
+**contains** (METHODOLOGY §5.1). The comparison is measured in
+[`reports/source-validation/`](reports/source-validation/SOURCE-VALIDATION-v1.1.md). The
+two large gaps:
 
-The datapack explicitly does **not** claim every possible value of unbounded components
-(names, lore, custom data, arbitrary nested content).
+- **B01@1.0** — only 6 of the 18 generator functions of its pack have their blocks in the
+  world; the others' chunks do not exist. The 702 declared cases overstate it.
+- **B03@1.0** — its Nether content laboratory (29 blocks) holds lava or air at every
+  position; 2 of 3 chunk-boundary markers are in chunks that do not exist.
 
-### J02 — LIVING
+## Short descriptions
 
-| | |
-|---|---|
-| Asset | `MCCB_J02_LIVING_JAVA.zip` |
-| Size | 3 308 679 bytes (24.1 MiB uncompressed, 75 files) |
-| `LevelName` | `MCCB_J02_LIVING_JAVA26_2` |
-| Dimensions | Overworld (9 region files), Nether (4), End (4) — with `entities/` and `poi/` in each |
-| Datapack | `MCCB_J02_LIVING_26_2_HARDENED_R3.zip` (pack format 107.1) |
+**J01@1.1 — STATIC (Java).** Every block state enumerated in a dedicated datapack
+dimension (`mccb26:states`, 144 tiles), block and block-entity fixtures in the overworld,
+1 536 materialisable item ids and 460 item-component variants in containers. Revision 1.1
+populated the variant barrels slot by slot (an external NBT edit declared in the world's
+own QA report, never re-verified in game) and was saved once in Java 26.3.
 
-Entity-focused: mob variants, ages, inventories, villager professions and trades, taming
-and ownership, leashes, persistence flags, and per-dimension entity placement. The `poi/`
-and `entities/` folders of all three dimensions are populated, which is where most
-entity-related conversion losses actually show up.
+**J02@1.0 — LIVING (Java).** Mob variants, ages, inventories, villager professions and
+trades, taming and ownership, leashes, vehicles, persistence flags; entities in all three
+dimensions.
 
-### J03 — SYSTEMS
+**J03@1.0 — SYSTEMS (Java).** Spawn, seed, time, weather, difficulty, gamerules,
+scoreboards, command blocks, redstone assemblies, chunk boundaries, portals, pending
+scheduled ticks, world border, clocks and random sequences. In-world verification: 85/85.
 
-| | |
-|---|---|
-| Asset | `MCCB_J03_SYSTEMS_JAVA.zip` |
-| Size | 6 325 350 bytes (66.3 MiB uncompressed, 162 files) |
-| `LevelName` | `MCCB_J03_SYSTEMS_JAVA26` |
-| Dimensions | Overworld (36 region files), Nether (4), End (8) |
-| Datapack | `MCCB_J03_SYSTEMS_JAVA26_2_READY.zip` (pack format 107.1) |
+**J04@1.0 — COMMANDS (Java 26.3).** 400 command-block stations. Each station carries its
+own declared classification in a book and a sign — `DIRECT` 126, `ADAPTABLE` 185,
+`NO_EQUIVALENT` 71, `ROUND_TRIP_ONLY` 18 — which MCCB uses for the direct command rule
+(fixture-rules §3.2). Those classifications were written by the benchmark's author
+(WorldSwitch); they are public and can be challenged.
 
-World-level state: spawn, seed, time, weather, difficulty, gamerules, scoreboards,
-command blocks, redstone assemblies, chunk boundaries, pending scheduled ticks and
-cross-dimension travel. The world carries `scoreboard.dat`, `scheduled_events.dat`,
-`world_clocks.dat`, `random_sequences.dat` and `game_rules.dat` with non-default content.
+**B01@1.0 — STATIC (Bedrock).** Block states, block entities, connections, multiblocks and
+manual stations, as far as present (see above).
 
----
+**B02@1.0 — LIVING (Bedrock, built by hand).** Villagers with trades, wolves, cats,
+parrots, horses, donkeys, pigs with harnesses, pillagers, a wandering trader, happy
+ghasts, raid state — placed manually in the retail client. Its internal level name is
+`Benchmarck manuel v1`.
 
-## Bedrock Edition — 1.26.45 (minimum compatible client 1.26.40)
-
-Each Bedrock world is an `.mcworld` archive, ready to be imported into the Bedrock client.
-Fixtures are already materialised in the LevelDB (`db/`). The generator behavior pack
-that built them ships inside the archive under `behavior_packs/` for audit and
-reproduction; it is **not** enabled in the exported world.
-
-### B01 — STATIC
-
-| | |
-|---|---|
-| Asset | `MCCB_B01_STATIC_BEDROCK.mcworld` |
-| Size | 119 207 bytes (39 files) |
-| `LevelName` | `B01 STATIC Core` |
-| Client | `lastOpenedWithVersion` 1.26.45.1 · `InventoryVersion` 1.26.45 · experiments OFF |
-| Generator pack | `MCCBB01STA` (revision R8, `min_engine_version` 1.26.40) |
-
-Declared coverage, from the pack's own `COVERAGE.json` (`source_policy: NATIVE_BEDROCK_ONLY`):
-
-- 702 cases, 700 assertions, 262 palette block IDs, 53 manually-placed cases.
-- By category: 394 BLOCK, 232 BLOCK_STATE, 44 BLOCK_ENTITY, 17 ITEM_COMPLEX, 6 CONNECTION,
-  4 MULTIBLOCK, 2 CONTAINER, 2 PARITY, 1 WATERLOGGING.
-- Includes recent stable families: Shelf variants and their comparator matrix, Copper Age
-  blocks, Pale Garden / resin, Creaking Heart states, stair `minecraft:corner` matrix,
-  Trial Spawner `trial_spawner_state` 0–5 × `ominous`, Vault direction × `ominous`.
-- Deliberate non-goals stated by the pack: no exhaustive Cartesian product of visually
-  redundant states, no fabricated Java NBT inside Bedrock, no experimental content.
-
-### B02 — LIVING
-
-| | |
-|---|---|
-| Asset | `MCCB_B02_LIVING_BEDROCK.mcworld` |
-| Size | 159 654 bytes (9 files) |
-| `LevelName` | `Benchmarck manuel v1` |
-| Client | `lastOpenedWithVersion` 1.26.45.1 · `InventoryVersion` 1.26.45 · experiments OFF |
-| Generator pack | none — this world was built **entirely by hand** in the retail client |
-
-B02 is the only source world with no behavior pack at all: every fixture was placed
-manually in-game, which is the only way to obtain engine-authentic entity state that a
-command cannot fabricate. Its LevelDB contains, among others, villagers (`villager_v2`)
-with trades and professions, wolves with collar/armor/variant state, cats, parrots,
-horses, donkeys with chest and saddle state, pigs with harnesses, pillagers with
-crossbows, wandering traders with llamas, happy ghasts, and raid state
-(`raid_configuration`, `raid_persistence`).
-
-The internal `LevelName` was never changed after the world was built; the published
-filename `MCCB_B02_LIVING_BEDROCK.mcworld` is the benchmark identifier for the same bytes.
-
-### B03 — SYSTEMS
-
-| | |
-|---|---|
-| Asset | `MCCB_B03_SYSTEMS_BEDROCK.mcworld` |
-| Size | 779 237 bytes (57 files) |
-| `LevelName` | `BO3 SYSTEMS` |
-| Client | `lastOpenedWithVersion` 1.26.45.1 · `InventoryVersion` 1.26.45 · experiments OFF |
-| World | Infinite / Normal, **seed 26062026** |
-| Generator pack | `MCCBB03SYS` (revision R17, `min_engine_version` 1.26.40) |
-
-Declared coverage, from the pack's own `COVERAGE.json`:
-
-- 96 cases, 95 assertions, 46 manual / manually-activated cases.
-- By category: 24 COMMAND, 17 CHUNK, 14 DIMENSION, 9 STRUCTURE, 9 WORLD, 8 REDSTONE,
-  7 BIOME, 4 TIMER, 3 SCOREBOARD, 1 PORTAL.
-- Chunk boundaries at exact ±16, negative quadrants, and far markers at ±1 000 000.
-- Nether and End laboratories built at native arrival points, plus a schedule deliberately
-  left **pending** at freeze so that post-conversion first-load behaviour can be observed.
-
-B03 also records two edition differences explicitly rather than faking them:
-
-| ID | Status | Reason |
-|----|--------|--------|
-| `WORLD:JAVA_WORLD_BORDER` | `NOT_APPLICABLE` | Bedrock has no native equivalent of Java's `/worldborder`. |
-| `WORLD:TICKING_AREA` | `SEMANTIC_EQUIVALENT` | Bedrock ticking areas are tested as native persistent ticking, not as Java spawn-chunk semantics. |
-
----
+**B03@1.0 — SYSTEMS (Bedrock).** Seed 26062026. Chunk boundaries (±16, negative quadrants,
+far markers), commands, redstone, timers, scoreboards, Nether and End laboratories, a
+deliberately pending schedule, ticking areas.
 
 ## Published name ↔ original filename
 
-The bytes published in the release are identical to the files frozen locally. Only the
-filename was normalised, so the mapping is recorded here in full.
-
 | Published asset | Original frozen filename | SHA-256 |
 |---|---|---|
+| `MCCB_J01_STATIC_JAVA_v1.1.zip` | `MCCB J01 STATIC v1.1.zip` | `b28294c78bb7e3c755827153b8d52bbdb5f80a9a45b598d6608a141493d26cf3` |
+| `MCCB_J04_COMMANDS_JAVA.zip` | `J04 COMMANDS.zip` | `44a58908bbf86554eb85c6c0fb6b8b060ed016965e943eab05e72145606a7b4c` |
+| `MCCB_J02_LIVING_JAVA.zip` | `MCCB_J02_LIVING_JAVA26_2 (2).zip` | `db97f7497094ed5681600b37a76ab81e975341280883dcf433b3d6c40e8f17a4` |
+| `MCCB_J03_SYSTEMS_JAVA.zip` | `MCCB_J03_SYSTEMS_JAVA26.zip` | `45c7ae7293ff1dfd3310757a8b56f1d094e6928aa20a82b68ff45428f55bbc50` |
 | `MCCB_B01_STATIC_BEDROCK.mcworld` | `B01 STATIC Core.mcworld` | `83e8e9909a3d8915980df317073b80c11421152d8f7ed88714fd196e45c0a667` |
 | `MCCB_B02_LIVING_BEDROCK.mcworld` | `Benchmarck manuel v1.mcworld` | `34d9b5dfaff557ef5e3907cae8fba31fc5de8dc03cb49c145ab14b0e6f6ccd10` |
 | `MCCB_B03_SYSTEMS_BEDROCK.mcworld` | `BO3 SYSTEMS.mcworld` | `fd16e5d795f6b707fb48bce821e09dcad5a8e15c87e101d6e080bb24c911a838` |
-| `MCCB_J01_STATIC_JAVA.zip` | `MCCB J01 STATIC - Java 26_2.zip` | `47942eef4464f4e9435cd11292bd37113d0135421e3501d0454b55d05bee8cde` |
-| `MCCB_J02_LIVING_JAVA.zip` | `MCCB_J02_LIVING_JAVA26_2 (2).zip` | `db97f7497094ed5681600b37a76ab81e975341280883dcf433b3d6c40e8f17a4` |
-| `MCCB_J03_SYSTEMS_JAVA.zip` | `MCCB_J03_SYSTEMS_JAVA26.zip` | `45c7ae7293ff1dfd3310757a8b56f1d094e6928aa20a82b68ff45428f55bbc50` |
 
-## A note on the coverage figures
-
-The case, assertion and category counts above are **declarations made by each world's own
-generator pack**, reproduced here verbatim so that they can be checked against the world
-itself. They are not independent measurements, and this repository does not assert that
-every declared case is present and correct — the world files are published precisely so
-that anyone can check.
+Files with similar names that exist elsewhere (re-zips, drafts, earlier revisions) are
+**not** MCCB worlds; they are listed with their hashes in `manifests/worlds.json`
+(`non_canonical_files`).

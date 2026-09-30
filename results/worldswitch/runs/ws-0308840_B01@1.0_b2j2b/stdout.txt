@@ -1,0 +1,11 @@
+[jtb] pré-vol : 1 chunks échantillonnés, 1 avec palette, palette lisible ✓
+[jtb] 41 charge(s) biome Bedrock reportée(s) disponibles
+[jtb] régions : 4 tâche(s) en séquentiel
+[jtb] 1 joueur(s) secondaire(s) → player_server_
+[jtb] récupération : spawn (0, 64, 0) → 67/2400 sous-chunk(s) lisibles autour de Y=64
+[jtb] copies de secours : 1/1 posée(s)
+[jtb] clés globales Bedrock (LevelChunkMetaDataDictionary + Overworld/mobevents/…) écrites
+[jtb] sidecar : 88 champ(s) Bedrock-only greffé(s) sur 13 chunk(s) de block entities
+[jtb] sidecar : 110 enregistrements Bedrock-only restaurés
+[jtb] 67 sections, 41 chunks, 56 BE, 11 entities, 0 maps, 0 structures, player=yes, legacy=0
+[jtb] java-sidecar : enregistrements sans instantané seuls (monde venu de Bedrock)

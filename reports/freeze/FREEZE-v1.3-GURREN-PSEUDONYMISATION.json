@@ -1,0 +1,75 @@
+{
+ "schema": "mccb.freeze-addendum-supplement/1",
+ "benchmark_version": "1.3",
+ "freeze_file_sha256": "8e317c7be305c990b6833657f9acbdba6076340fba9657960556610fbe4251a2",
+ "addendum_file": "reports/freeze/FREEZE-v1.3-GURREN-ADDENDUM.json",
+ "addendum_file_sha256": "7d9cbe6c0bd7795f576ee9f15c0c93fdb26ce1c5e372fd377fad08cc605f1046",
+ "statement": "Written after grading, before publication. The addendum is left unchanged and still records the file that was graded. A last check of that file found Xbox account identifiers (XUIDs) that the sanitiser had not removed: in sign TextOwner fields and written-book xuid tags, and, physically, in LevelDB entries deleted by the sanitiser but not yet compacted away (RealmsStoriesData* keys and values) and in the MANIFEST. The published source is the same world with those identifiers removed. No assertion, verdict or count changed.",
+ "written_at": "2026-09-30",
+ "graded_source": {
+  "file": "MCCB_R01_SURVIVAL_BEDROCK.mcworld",
+  "sha256": "a640374228039cc6dd502c0192b472b30a0f9baa8588f886d2057990dcd1e1db",
+  "bytes": 654372052,
+  "published": false
+ },
+ "published_source": {
+  "file": "MCCB_R01_SURVIVAL_BEDROCK.mcworld",
+  "sha256": "4cc666cf1325caa53e26189558d09b2f8bc534b733f134c58dd485b3c9d461fa",
+  "bytes": 681858287,
+  "published": "release asset"
+ },
+ "derivation": {
+  "script": "reports/gurren/pseudonymise-owners.mjs",
+  "script_sha256": "c569e0b23cda0f080f5232e6ae30a0a983a38c0b2611aa66525ddbcf133d5144",
+  "replaced": {
+   "sign_TextOwner": 85,
+   "written_book_xuid": 3,
+   "distinct_account_ids": 6
+  },
+  "rule": "each account id replaced by a fixed 16-character pseudonym, 0000000000000001 upwards in order of first appearance in key order; same id, same pseudonym; the mapping is not recorded",
+  "database": "rebuilt from its 2 110 791 live entries; every key and every other value byte-identical (checked by the script by reading both databases back); deleted entries no longer present",
+  "checked_on_published_file": "raw scan of every table block, log and MANIFEST: 0 XUID-like value, 0 RealmsStoriesData key, 0 player_<id> identity record, 0 MsaId / SelfSignedId / PlatformOnlineId / PlatformOfflineId field, 0 e-mail-like value, 0 of the 64 account ids listed for the original world's players; the 3 written-book xuid tags hold pseudonyms"
+ },
+ "fixtures": {
+  "file": "fixtures/GURREN_1.0.jsonl.gz",
+  "graded": {
+   "file_sha256": "fb56364e67d58931bae169e6de1df6249e492e6165c3e63c72c6f39e49304ef9",
+   "content_sha256": "9af167af59a6bb423baa64f688610a11ed26533f1ed9fc599f1b003d0fcd9e29"
+  },
+  "published": {
+   "file_sha256": "917f3ca35dfb966ef3a66ea5d2ff2e4213fdcb787455410d7fb39711325d4dd7",
+   "content_sha256": "2c107cc4a9524fd157012149604ad950e0ce110ac28a03cbcd13b14df1b43672",
+   "built_from": "published_source, with the frozen tools (reports/gurren/run-gurren.sh freeze)"
+  },
+  "check": "graded content with the header source_sha256 replaced and the same 176 id strings replaced is byte-identical to the published content; same 2 025 895 subjects"
+ },
+ "results": {
+  "note": "the per-assertion files carry the same substitution (id strings inside evidence); summary.json, the COMPARISON tables and every status are unchanged. summary.json keeps the hashes of the files as graded (results_file.sha256, fixtures).",
+  "files": [
+   {
+    "file": "results/v1.3-gurren/chunker/chunker-1.20.0_GURREN@1.0_b2j/results.jsonl.gz",
+    "strings_replaced": 83,
+    "graded_file_sha256": "2dc27584d41bb3e3185fbc31beaef3319ddeb15a036fc215ade0eab9ef462b16",
+    "published_file_sha256": "b9d72dde4ffc204bde05b4bca1d84d18101da74e6f5d9178f2470de8058e521d"
+   },
+   {
+    "file": "results/v1.3-gurren/je2be/je2be-core-8dfc4de_GURREN@1.0_b2j/results.jsonl.gz",
+    "strings_replaced": 83,
+    "graded_file_sha256": "7b60fb26339cabc0a9b0858614f520a88ab8dc0d368ef6e5da890ff7ed873ae6",
+    "published_file_sha256": "5d546428ac958f7b7e8124449899fab968f4dbd789a1ea7db872b154234c0edb"
+   },
+   {
+    "file": "results/v1.3-gurren/worldswitch/ws-0308840_GURREN@1.0_b2j/results.jsonl.gz",
+    "strings_replaced": 83,
+    "graded_file_sha256": "9203ab03b962eca9b8c76a109bb4c8922ec6a0e288156162bc8535aa65270fb4",
+    "published_file_sha256": "e4115bcce0f3daae87dc1427187866bf0b6ee8a9e8455b8167aef186134495ad"
+   },
+   {
+    "file": "results/v1.3-gurren/worldswitch/ws-fd9b735_GURREN@1.0_b2j/results.jsonl.gz",
+    "strings_replaced": 83,
+    "graded_file_sha256": "07621b28c9ed5c85f149947e2835681b7010eaddb19f57961ceabedf942561c6",
+    "published_file_sha256": "0cdc7c7fb34f6befc1d64c63a099853f3d002352f93e5651cdaca31482a0d4d9"
+   }
+  ]
+ }
+}

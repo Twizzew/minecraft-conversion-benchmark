@@ -1,0 +1,402 @@
+{
+ "schema": "mccb.worlds/1",
+ "updated": "2026-09-24",
+ "status_vocabulary": {
+  "ACTIVE": "Canonical input of the current benchmark version.",
+  "SUPERSEDED": "Replaced by a later revision. Kept online, byte-identical, so results made with it stay checkable. Never an input of a later benchmark version.",
+  "EXPERIMENTAL": "Not part of any published benchmark version. Never mixed into a statistic of ACTIVE worlds.",
+  "PRIVATE": "Measured locally only. Its file, fixtures and results are never published (third-party personal data); a sanitised derivative with its own hash is needed for publication."
+ },
+ "class_vocabulary": {
+  "LAB": "Synthetic world built by a generator (datapack or behaviour pack) to exercise chosen families systematically.",
+  "MANUAL_NATIVE": "World built by hand in the retail game, to capture engine-authentic state that commands cannot fabricate.",
+  "REAL_WORLD_SURVIVAL": "World actually played over a long period. Measures robustness on organic, multi-version content."
+ },
+ "benchmark_versions": [
+  {
+   "version": "1.0",
+   "status": "PUBLISHED",
+   "release_tag": "v1.0-source-worlds",
+   "release_url": "https://github.com/Twizzew/minecraft-conversion-benchmark/releases/tag/v1.0-source-worlds",
+   "published_at": "2026-09-15T17:27:35Z",
+   "checksums": "SHA256SUMS.txt",
+   "worlds": [
+    "J01@1.0",
+    "J02@1.0",
+    "J03@1.0",
+    "B01@1.0",
+    "B02@1.0",
+    "B03@1.0"
+   ]
+  },
+  {
+   "version": "1.1",
+   "status": "PREPARED_NOT_PUBLISHED",
+   "release_tag": null,
+   "proposed_release_tag": "v1.1-source-worlds",
+   "checksums": "checksums/MCCB-v1.1-source-worlds.sha256",
+   "worlds": [
+    "J01@1.1",
+    "J02@1.0",
+    "J03@1.0",
+    "J04@1.0",
+    "B01@1.0",
+    "B02@1.0",
+    "B03@1.0"
+   ],
+   "changes_from_previous": [
+    "J01 revision 1.1 replaces J01 revision 1.0 (J01@1.0 becomes SUPERSEDED).",
+    "J04 COMMANDS is added.",
+    "J02, J03, B01, B02, B03 are carried over byte-identical.",
+    "Methodology, fixture registry and oracles are introduced (v1.0 published source worlds only)."
+   ]
+  },
+  {
+   "version": "1.2",
+   "status": "PREPARED_NOT_PUBLISHED",
+   "release_tag": null,
+   "proposed_release_tag": "v1.2",
+   "checksums": "checksums/MCCB-v1.1-source-worlds.sha256",
+   "worlds": [
+    "J01@1.1",
+    "J02@1.0",
+    "J03@1.0",
+    "J04@1.0",
+    "B01@1.0",
+    "B02@1.0",
+    "B03@1.0"
+   ],
+   "changes_from_previous": [
+    "Same source worlds as v1.1, byte-identical.",
+    "Oracle rules 36-46 (docs/rules-changelog.md, section MCCB v1.2), written after Chunker 1.20.0 had been measured under v1.1.",
+    "Fixture registries rebuilt: B01 changes (rule 44, positional container slots); the other six are content-identical to their rules-36-43 build.",
+    "References added: docs/reference/bedrock-default-states.v1.json (rule 43), docs/reference/java-gamerule-defaults.v1.json (rule 45)."
+   ]
+  },
+  {
+   "version": "1.3",
+   "status": "PREPARED_NOT_PUBLISHED",
+   "release_tag": null,
+   "proposed_release_tag": "v1.3",
+   "checksums": "checksums/MCCB-v1.1-source-worlds.sha256",
+   "worlds": [
+    "J01@1.1",
+    "J02@1.0",
+    "J03@1.0",
+    "J04@1.0",
+    "B01@1.0",
+    "B02@1.0",
+    "B03@1.0"
+   ],
+   "changes_from_previous": [
+    "Same source worlds as v1.1 and v1.2, byte-identical.",
+    "Oracle rules 47-52 (docs/rules-changelog.md, section MCCB v1.3): defects F10 (player items), F11 (repair_cost/damage 0), F12 (double chests), F13 (no structure family, generation frontier), found after the v1.2 freeze.",
+    "New family `structure` (tools/families/structure.mjs, tools/lib/structures.mjs); Bedrock reader indexes chunk key 0x77.",
+    "Fixture registries rebuilt with tools 1.3.0."
+   ]
+  }
+ ],
+ "worlds": [
+  {
+   "id": "J01@1.0",
+   "world": "J01",
+   "revision": "1.0",
+   "theme": "STATIC",
+   "class": "LAB",
+   "edition": "java",
+   "game_version": "26.2",
+   "data_version": 4903,
+   "level_name": "MCCB J01 STATIC - Java 26.2",
+   "asset": {
+    "name": "MCCB_J01_STATIC_JAVA.zip",
+    "sha256": "47942eef4464f4e9435cd11292bd37113d0135421e3501d0454b55d05bee8cde",
+    "bytes": 7036006,
+    "release": "v1.0-source-worlds"
+   },
+   "original_filename": "MCCB J01 STATIC - Java 26_2.zip",
+   "frozen_at": "2026-09-08T17:08:10Z",
+   "freeze_evidence": "level.dat LastPlayed",
+   "status": "SUPERSEDED",
+   "superseded_by": "J01@1.1",
+   "predecessor": null,
+   "provenance": {
+    "generator": "datapack MCCB_J01_STATIC_JAVA26_2_R9_ITEM_REGISTRY_FIX.zip (sha256 5b9ddbf21fb7a1180d8888f2e85b5216a6b50b5a18d37012c9743528d35798ba), revision R9",
+    "runtime_certification": "scoreboard mccb26: #certified=1, #verify_fail=0, #items=1536, #variants=460, #matrix_tiles=144 (R9 verify run in game)",
+    "notes": "The embedded RUNTIME_STATUS.txt still says 'NOT YET RUNTIME-CERTIFIED' — it was written before the in-game run recorded in the scoreboard."
+   }
+  },
+  {
+   "id": "J01@1.1",
+   "world": "J01",
+   "revision": "1.1",
+   "theme": "STATIC",
+   "class": "LAB",
+   "edition": "java",
+   "game_version": "26.3",
+   "data_version": 5023,
+   "data_version_notes": "level.dat is 5023 (version_history [5023]); chunks not loaded in 26.3 keep DataVersion 4903 (Minecraft upgrades chunks lazily).",
+   "level_name": "MCCB J01 STATIC - Java 26.2",
+   "asset": {
+    "name": "MCCB_J01_STATIC_JAVA_v1.1.zip",
+    "sha256": "b28294c78bb7e3c755827153b8d52bbdb5f80a9a45b598d6608a141493d26cf3",
+    "bytes": 7912549,
+    "release": null
+   },
+   "original_filename": "MCCB J01 STATIC v1.1.zip",
+   "frozen_at": "2026-09-20T17:07:26Z",
+   "freeze_evidence": "level.dat LastPlayed",
+   "status": "ACTIVE",
+   "predecessor": "J01@1.0",
+   "revision_reason": "R10 patch: barrels of the 460 component-variant fixtures populated slot by slot, slot-by-slot verification added; world then opened and saved in Java 26.3.",
+   "provenance": {
+    "generator": "datapack revision R10 shipped under the unchanged filename MCCB_J01_STATIC_JAVA26_2_R9_ITEM_REGISTRY_FIX.zip (sha256 680a7ca39ab8c0c19c17ae02d954243ec4b7fda02135d41dd5c4273693543362)",
+    "external_edit": "QA_REPORT.txt: 'World barrels were surgically populated from the existing variant oracle definitions' — overworld region r.1.2.mca was edited outside the game (intermediate archive sha256 65043e6141d42b46b1b75e71f5d0b2378c2ed192ef471febcdfd5dbe443a2c79, 2026-09-20 13:34) and not re-saved by the game afterwards.",
+    "runtime_certification": "R10 verify NOT run in game: no #variants_phys / #variants_unexpected score exists. #certified=1 and #verify_fail=0 are carried over from the R9 run of J01@1.0."
+   }
+  },
+  {
+   "id": "J02@1.0",
+   "world": "J02",
+   "revision": "1.0",
+   "theme": "LIVING",
+   "class": "LAB",
+   "edition": "java",
+   "game_version": "26.2",
+   "data_version": 4903,
+   "level_name": "MCCB_J02_LIVING_JAVA26_2",
+   "asset": {
+    "name": "MCCB_J02_LIVING_JAVA.zip",
+    "sha256": "db97f7497094ed5681600b37a76ab81e975341280883dcf433b3d6c40e8f17a4",
+    "bytes": 3308679,
+    "release": "v1.0-source-worlds"
+   },
+   "original_filename": "MCCB_J02_LIVING_JAVA26_2 (2).zip",
+   "frozen_at": "2026-09-10T22:24:41Z",
+   "freeze_evidence": "level.dat LastPlayed",
+   "status": "ACTIVE",
+   "predecessor": null,
+   "provenance": {
+    "generator": "datapack MCCB_J02_LIVING_26_2_HARDENED_R3.zip (sha256 090b453c347b69d7ed84c8b24c20c539993b839c35e6dceb903147aae260da48)",
+    "runtime_certification": "none recorded (no verification score in the world)",
+    "look_alike": "confirmés/MCCB_J02_LIVING_JAVA26_2.zip (sha256 98d2664537c30bb28df18dea8100f2f9ecb3322c0d0bacad3c640ee94b33dee4) is a re-zip with identical file contents; it is not an input."
+   }
+  },
+  {
+   "id": "J03@1.0",
+   "world": "J03",
+   "revision": "1.0",
+   "theme": "SYSTEMS",
+   "class": "LAB",
+   "edition": "java",
+   "game_version": "26.2",
+   "data_version": 4903,
+   "level_name": "MCCB_J03_SYSTEMS_JAVA26",
+   "asset": {
+    "name": "MCCB_J03_SYSTEMS_JAVA.zip",
+    "sha256": "45c7ae7293ff1dfd3310757a8b56f1d094e6928aa20a82b68ff45428f55bbc50",
+    "bytes": 6325350,
+    "release": "v1.0-source-worlds"
+   },
+   "original_filename": "MCCB_J03_SYSTEMS_JAVA26.zip",
+   "frozen_at": "2026-09-13T21:19:18Z",
+   "freeze_evidence": "level.dat LastPlayed",
+   "status": "ACTIVE",
+   "predecessor": null,
+   "provenance": {
+    "generator": "datapack MCCB_J03_SYSTEMS_JAVA26_2_READY.zip (sha256 e524d3e30d714cb8d7d79119e02ce4446bc13f37977eb1f045d5cc69df4587be)",
+    "runtime_certification": "scoreboard mccb_verify: #pass=85, #expected=85, #verified=1, #fail=0"
+   }
+  },
+  {
+   "id": "J04@1.0",
+   "world": "J04",
+   "revision": "1.0",
+   "theme": "COMMANDS",
+   "class": "LAB",
+   "edition": "java",
+   "game_version": "26.3",
+   "data_version": 5023,
+   "level_name": "J04 COMMANDS",
+   "asset": {
+    "name": "MCCB_J04_COMMANDS_JAVA.zip",
+    "sha256": "44a58908bbf86554eb85c6c0fb6b8b060ed016965e943eab05e72145606a7b4c",
+    "bytes": 5986114,
+    "release": null
+   },
+   "original_filename": "J04 COMMANDS.zip",
+   "frozen_at": "2026-09-23T12:59:40Z",
+   "freeze_evidence": "level.dat LastPlayed; version_history [5023]",
+   "status": "ACTIVE",
+   "predecessor": null,
+   "provenance": {
+    "generator": "datapack MCCB_J04_COMMANDS_Java_26.3_V9_DATAPACK_READY.zip (sha256 a3460d331c164c6567c9acd0048662874ae938b842d79c1877bb6cbf0c19ffc8)",
+    "runtime_certification": "scoreboard mccb_j04_verify: #fail=0 (structural verify, 400/400 stations)",
+    "declared_classification": "each of the 400 stations carries its expected classification (book + sign): DIRECT 126, ADAPTABLE 185, NO_EQUIVALENT 71, ROUND_TRIP_ONLY 18"
+   }
+  },
+  {
+   "id": "B01@1.0",
+   "world": "B01",
+   "revision": "1.0",
+   "theme": "STATIC",
+   "class": "LAB",
+   "edition": "bedrock",
+   "game_version": "1.26.45.1",
+   "min_client": "1.26.40",
+   "level_name": "B01 STATIC Core",
+   "asset": {
+    "name": "MCCB_B01_STATIC_BEDROCK.mcworld",
+    "sha256": "83e8e9909a3d8915980df317073b80c11421152d8f7ed88714fd196e45c0a667",
+    "bytes": 119207,
+    "release": "v1.0-source-worlds"
+   },
+   "original_filename": "B01 STATIC Core.mcworld",
+   "frozen_at": "2026-09-10T17:48:33Z",
+   "freeze_evidence": "level.dat LastPlayed",
+   "status": "ACTIVE",
+   "predecessor": null,
+   "provenance": {
+    "generator": "behaviour pack MCCBB01STA revision R8 (tree sha256 398d8ae622768bfeb2c8ff3181b3b05c35b7af64e64d8b0ce4a33fe683352a72)",
+    "runtime_certification": "none recorded: SOURCE_MASTER_RECORD.md is an empty template",
+    "measured_content": "Only 6 of the 18 generator functions have their blocks in the world (block_entities 17/17, chaos_cubed 11/11, connections 20/25, manual_stations 7/7, multiblock 5/9, states 61/77); the other 12 (palette, recent_stable_blocks, states_extended, states_derived, r4_*, r5_*, r6_*, support_sensitive, block_entities_extended, items_extended_stations) have no block present — their chunks do not exist. The declared 702 cases therefore overstate the world: see reports/source-validation/."
+   }
+  },
+  {
+   "id": "B02@1.0",
+   "world": "B02",
+   "revision": "1.0",
+   "theme": "LIVING",
+   "class": "MANUAL_NATIVE",
+   "edition": "bedrock",
+   "game_version": "1.26.45.1",
+   "min_client": "1.26.40",
+   "level_name": "Benchmarck manuel v1",
+   "asset": {
+    "name": "MCCB_B02_LIVING_BEDROCK.mcworld",
+    "sha256": "34d9b5dfaff557ef5e3907cae8fba31fc5de8dc03cb49c145ab14b0e6f6ccd10",
+    "bytes": 159654,
+    "release": "v1.0-source-worlds"
+   },
+   "original_filename": "Benchmarck manuel v1.mcworld",
+   "frozen_at": "2026-09-10T16:38:44Z",
+   "freeze_evidence": "level.dat LastPlayed",
+   "status": "ACTIVE",
+   "predecessor": null,
+   "provenance": {
+    "generator": "none — built by hand in the retail client (the 'native manual Bedrock benchmark')",
+    "runtime_certification": "not applicable (no declared case list)",
+    "look_alikes": "Several other files named 'Benchmarck manuel v1.mcworld' exist locally with different bytes (earlier states or converter outputs); only this hash is B02."
+   }
+  },
+  {
+   "id": "B03@1.0",
+   "world": "B03",
+   "revision": "1.0",
+   "theme": "SYSTEMS",
+   "class": "LAB",
+   "edition": "bedrock",
+   "game_version": "1.26.45.1",
+   "min_client": "1.26.40",
+   "level_name": "BO3 SYSTEMS",
+   "asset": {
+    "name": "MCCB_B03_SYSTEMS_BEDROCK.mcworld",
+    "sha256": "fd16e5d795f6b707fb48bce821e09dcad5a8e15c87e101d6e080bb24c911a838",
+    "bytes": 779237,
+    "release": "v1.0-source-worlds"
+   },
+   "original_filename": "BO3 SYSTEMS.mcworld",
+   "frozen_at": "2026-09-15T16:21:28Z",
+   "freeze_evidence": "level.dat LastPlayed",
+   "status": "ACTIVE",
+   "predecessor": null,
+   "provenance": {
+    "generator": "behaviour pack MCCBB03SYS revision R17 (tree sha256 c0c1656a87d71aefdd06d9c4d521c9d0724ec436d8c4c83563584a4cb0cf7379)",
+    "runtime_certification": "none recorded: SOURCE_MASTER_RECORD.md is an empty template",
+    "measured_content": "Most generator functions are present; the Nether content laboratory (b03_nether_content) has 0 of its 29 blocks (lava or air at every position) and 2 of the 3 chunk-boundary markers of b03_chunks are in chunks that do not exist. See reports/source-validation/."
+   }
+  },
+  {
+   "id": "GURREN@1.0",
+   "world": "GURREN",
+   "revision": "1.0",
+   "theme": "SURVIVAL",
+   "class": "REAL_WORLD_SURVIVAL",
+   "edition": "bedrock",
+   "game_version": "1.26.21.1",
+   "min_client": "1.26.20",
+   "level_name": "withheld — private world, privacy review pending",
+   "asset": {
+    "name": "MCCB_GURREN_PRIVATE.mcworld",
+    "sha256": "ca618ebe86c29a5101748d44d7e0dcd4c2c93958c80781bce6483a1d095dee03",
+    "bytes": 576224370,
+    "release": null,
+    "local_dir": "_staging/private-sources"
+   },
+   "original_filename": "withheld — private world, privacy review pending",
+   "frozen_at": "2026-06-08T22:02:24Z",
+   "freeze_evidence": "level.dat LastPlayed (saved by the Bedrock client 1.26.21.1)",
+   "status": "PRIVATE",
+   "predecessor": null,
+   "provenance": {
+    "generator": "none — multiplayer survival world (Realm) played from 2025-11 to 2026-06",
+    "checked": "native game save: 0 of 111 256 actors carry a converter key (JavaSaveData), no sidecar file, lastOpenedWithVersion 1.26.21.1",
+    "size": "129 806 chunks, 1 068 978 sub-chunks, 111 256 actors (95 469 dropped items), 92 player records",
+    "earlier_state": "a4579208e64b4e7493b6745fec5d4b9a1cda839d245027d57408819380374bd5 (576 818 207 bytes, saved 2026-05-16): the same world three weeks earlier; not an input"
+   },
+   "publication_blockers": [
+    "personal data of other players: 92 player records with Xbox / platform identifiers (MsaId, PlatformOnlineId, SelfSignedId) and Realms story data keyed by account ids",
+    "consent of the players who built it",
+    "resource_packs/ folder of third-party packs (not enabled in the world) with unknown redistribution rights",
+    "no sanitised derivative exists yet"
+   ]
+  }
+ ],
+ "non_canonical_files": [
+  {
+   "file": "confirmés/MCCB_J02_LIVING_JAVA26_2.zip",
+   "sha256": "98d2664537c30bb28df18dea8100f2f9ecb3322c0d0bacad3c640ee94b33dee4",
+   "what": "re-zip of J02@1.0 (same 75 files, directory timestamps differ)"
+  },
+  {
+   "file": "Benchmarcks/MCCB J01 STATIC - Java 26_2 (2).zip",
+   "sha256": "65043e6141d42b46b1b75e71f5d0b2378c2ed192ef471febcdfd5dbe443a2c79",
+   "what": "intermediate state between J01@1.0 and J01@1.1"
+  },
+  {
+   "file": "Benchmarck manuel v1.mcworld (project root)",
+   "sha256": "f2c9f2a46a8e96ed0902b9e694ef2f928c706f377eb2160f613cd7f35b8a12cd",
+   "what": "later derivative of B02 (converter-written level.dat values)"
+  },
+  {
+   "file": "~/Downloads/Benchmarck manuel v1.mcworld",
+   "sha256": "83a96056aa10b40a62656070ff78ecaca0fba3d96236a01e880362d883e2cffe",
+   "what": "B02 three days before its freeze"
+  },
+  {
+   "file": "Benchmarcks/Mon monde.mcworld",
+   "sha256": "1bfb3aabf9cd97c44aab3d820e86651c09f97bfabdda9c6e33253e0d65534d1a",
+   "what": "B01 draft saved 7 minutes before B01"
+  },
+  {
+   "file": "~/Downloads/B03 SYSTEMS.mcworld",
+   "sha256": "fe82b1edc1343f7db3913fa51803cf08ad3f90fa68c5de3ec6b83099f0087fde",
+   "what": "earlier B03 revision"
+  },
+  {
+   "file": "~/Downloads/B03_SYSTEMS_R11_CLEAN.mcworld",
+   "sha256": "a6769b98e49f0b5f7829820d211d2ae0151736ab47a92c63bcbe23882cb76672",
+   "what": "earlier B03 revision (R11)"
+  },
+  {
+   "file": "private survival world, earlier copy (local)",
+   "sha256": "a4579208e64b4e7493b6745fec5d4b9a1cda839d245027d57408819380374bd5",
+   "what": "GURREN three weeks before GURREN@1.0"
+  }
+ ],
+ "private_measurements": {
+  "note": "Worlds measured locally with the same tools and rules, never part of a published statistic.",
+  "worlds": [
+   "GURREN@1.0"
+  ]
+ }
+}

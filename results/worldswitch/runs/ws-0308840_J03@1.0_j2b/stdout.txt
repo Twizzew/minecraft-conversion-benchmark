@@ -1,0 +1,78 @@
+[jtb] pré-vol : 222 chunks échantillonnés, 222 avec palette, palette lisible ✓
+[mca] entities/r.-1.-1.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.-1.0.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.-1.1.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.-2.-1.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.-2.0.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.-2.1.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.-2.2.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.-3.-1.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.-3.0.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.-3.1.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.-3.2.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.-4.1.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.-4.2.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.-4.3.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.-586.585.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.-586.586.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.0.1.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.1.-1.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.1.0.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.1.1.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.2.-1.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.2.0.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.3.3.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.3.4.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.4.3.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.4.4.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.-1.-1.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.-1.0.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.0.-1.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.0.0.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.-1.-1.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.-1.3.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.-2.3.mca : région vide (0 o) — normal, aucun chunk à lire.
+[jtb] entités inline (legacy) : 5 dans 5 chunk(s) sans liste dédiée
+[jtb] régions : 48 tâche(s) en 8 worker(s)
+[mca] entities/r.0.1.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.-4.1.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.-3.-1.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.0.0.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.-1.-1.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.-4.2.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.-4.3.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.-586.585.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.-586.586.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.1.-1.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.1.0.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.1.1.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.2.-1.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.2.0.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.3.3.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.3.4.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.-1.-1.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.4.3.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.-2.0.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.-3.0.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.-3.1.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.-3.2.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.-1.3.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.-2.3.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.-1.0.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.-1.1.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.-2.-1.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.4.4.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.-1.-1.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.-1.0.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.0.-1.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.-2.1.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.-2.2.mca : région vide (0 o) — normal, aucun chunk à lire.
+[jtb] entités inline (legacy) : 5 dans 5 chunk(s) sans liste dédiée
+[jtb] scoreboard → clé LevelDB
+[jtb] clés globales Bedrock (LevelChunkMetaDataDictionary + Overworld/mobevents/…) écrites
+[jtb] villageois : 10 lien(s) lit/cloche/poste → 1 clé(s) VILLAGE_*_POI
+[jtb] villageois : 10 DwellingUniqueID pose(s)
+[jtb] chunks forcés : 1 chunk(s) → 1 zone(s) de tick (1 chunk(s) couvert(s))
+[jtb] structures générées : 209 chunk(s) en clé 0x77 + 209 en 0x39 (apparitions propres à la structure), 71 hors du monde converti
+[jtb] 7379 sections, 16597 chunks, 84 BE, 33 entities, 0 maps, 0 structures, player=yes, legacy=0
+[jtb] java-sidecar : 166 enregistrements (dont 161 fichier(s) en flux, 65 BE)

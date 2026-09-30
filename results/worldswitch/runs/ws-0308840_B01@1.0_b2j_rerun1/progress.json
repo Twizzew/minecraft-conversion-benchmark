@@ -1,0 +1,67 @@
+[
+ {
+  "t_ms": 2,
+  "pct": 5,
+  "phase": "INIT"
+ },
+ {
+  "t_ms": 47,
+  "pct": 15,
+  "phase": "EXTRACT_MCWORLD"
+ },
+ {
+  "t_ms": 50,
+  "pct": 20,
+  "phase": "READ_LEVELDAT_BEDROCK"
+ },
+ {
+  "t_ms": 56,
+  "pct": 28,
+  "phase": "PREPARE_JAVA_DIR"
+ },
+ {
+  "t_ms": 202,
+  "pct": 62,
+  "phase": "CONVERT_ENTITIES"
+ },
+ {
+  "t_ms": 203,
+  "pct": 63,
+  "phase": "RECOMPUTE_BLOCK_LINKS"
+ },
+ {
+  "t_ms": 226,
+  "pct": 67,
+  "phase": "WRITE_JAVA_REGIONS"
+ },
+ {
+  "t_ms": 250,
+  "pct": 73,
+  "phase": "WRITE_JAVA_REGIONS"
+ },
+ {
+  "t_ms": 267,
+  "pct": 79,
+  "phase": "WRITE_JAVA_REGIONS"
+ },
+ {
+  "t_ms": 282,
+  "pct": 85,
+  "phase": "WRITE_JAVA_REGIONS"
+ },
+ {
+  "t_ms": 302,
+  "pct": 87,
+  "phase": "CONVERT_PLAYER_MAPS"
+ },
+ {
+  "t_ms": 311,
+  "pct": 93,
+  "phase": "CREATE_ZIP"
+ },
+ {
+  "t_ms": 344,
+  "pct": 100,
+  "phase": "DONE"
+ }
+]

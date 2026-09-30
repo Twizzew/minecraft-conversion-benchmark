@@ -1,0 +1,37 @@
+[
+ {
+  "t_ms": 6,
+  "pct": 5,
+  "phase": "INIT_TARGET"
+ },
+ {
+  "t_ms": 161,
+  "pct": 15,
+  "phase": "EXTRACT_ZIP"
+ },
+ {
+  "t_ms": 174,
+  "pct": 22,
+  "phase": "READ_LEVELDAT_JAVA"
+ },
+ {
+  "t_ms": 195,
+  "pct": 30,
+  "phase": "PREPARE_BEDROCK_DIR"
+ },
+ {
+  "t_ms": 4665,
+  "pct": 82,
+  "phase": "FINALIZE_LEVELDB"
+ },
+ {
+  "t_ms": 5280,
+  "pct": 93,
+  "phase": "CREATE_MCWORLD"
+ },
+ {
+  "t_ms": 5524,
+  "pct": 100,
+  "phase": "DONE"
+ }
+]

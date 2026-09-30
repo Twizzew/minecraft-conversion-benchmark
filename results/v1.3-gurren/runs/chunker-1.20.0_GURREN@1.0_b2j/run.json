@@ -1,0 +1,51 @@
+{
+  "schema": "mccb.run/1",
+  "run_id": "chunker-1.20.0_GURREN@1.0_b2j",
+  "converter": {
+    "name": "Chunker",
+    "slug": "chunker",
+    "version": "1.20.0",
+    "commit": "1.20.0",
+    "source_available": true,
+    "tool_file": "chunker-cli-1.20.0.jar",
+    "tool_sha256": "41efb80bba57c4eb08a810e5cc121211e2c0585aa8ff6eaf63d949782ecea502",
+    "command_template": "<JAVA> -jar <LOCAL>/chunker-cli-1.20.0.jar -i {input_dir} -o {output_dir} -f JAVA_26_3"
+  },
+  "direction": "bedrock_to_java",
+  "source": {
+    "ref": "GURREN@1.0",
+    "file": "MCCB_R01_SURVIVAL_BEDROCK.mcworld",
+    "sha256": "a640374228039cc6dd502c0192b472b30a0f9baa8588f886d2057990dcd1e1db",
+    "bytes": 654372052
+  },
+  "options": {
+    "outputFormat": "JAVA_26_3"
+  },
+  "environment": {
+    "node": "v22.22.2",
+    "platform": "linux",
+    "arch": "x64",
+    "os_release": "6.18.44-fc-v37",
+    "cpus": 4,
+    "cpu_model": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+    "total_mem_bytes": 16877547520
+  },
+  "started_at": "2026-09-29T23:41:54.673Z",
+  "finished_at": "2026-09-29T23:44:30.053Z",
+  "duration_ms": 155380,
+  "exit_status": 0,
+  "signal": null,
+  "error": null,
+  "output": {
+    "file": "output.zip",
+    "packed_by": "mccb (sorted entries, fixed timestamp)",
+    "sha256": "a095d69d8f59a1ed0fd293c63dc30511801ecda6f999e6cccf7e430d336a29a1",
+    "bytes": 599116440,
+    "tree_sha256": "2fbab20e7ee5887f6b734dfea7343a7deab8be10b3dbe962dc85c02181cb46f0",
+    "files": 3730
+  },
+  "logs": [
+    "stdout.log",
+    "stderr.log"
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "schema": "mccb.run/1",
+  "run_id": "ws-0308840_GURREN@1.0_b2j",
+  "converter": {
+    "name": "WorldSwitch",
+    "engine_package": "minecraft-world-converter",
+    "engine_package_version": "2.7.80",
+    "commit": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+    "working_tree_clean": true,
+    "working_tree_fingerprint": null,
+    "source_available": false,
+    "package_lock_sha256": "d4da5dbeaca80cca18233d6c938f47b9282634be2c9e30ccab13276bdf04a835",
+    "key_dependencies": {
+      "prismarine-nbt": "2.8.0",
+      "leveldb-zlib": "1.2.0",
+      "adm-zip": "0.6.1",
+      "unzipper": "0.8.14"
+    }
+  },
+  "direction": "bedrock_to_java",
+  "source": {
+    "ref": "GURREN@1.0",
+    "file": "MCCB_R01_SURVIVAL_BEDROCK.mcworld",
+    "sha256": "a640374228039cc6dd502c0192b472b30a0f9baa8588f886d2057990dcd1e1db",
+    "bytes": 654372052
+  },
+  "options": {
+    "recoverUnlinked": true,
+    "locale": "en"
+  },
+  "environment": {
+    "node": "v22.22.2",
+    "platform": "linux",
+    "arch": "x64",
+    "os_release": "6.18.44-fc-v37",
+    "cpus": 4,
+    "cpu_model": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+    "total_mem_bytes": 16877547520,
+    "engine_env_vars_removed": [
+      "WS_FD9B735",
+      "WS_0308840"
+    ]
+  },
+  "started_at": "2026-09-29T21:56:49.115Z",
+  "finished_at": "2026-09-29T22:03:31.140Z",
+  "duration_ms": 398478,
+  "exit_status": 0,
+  "signal": null,
+  "error": null,
+  "output": {
+    "file": "output.zip",
+    "engine_filename": "MCCB_R01_SURVIVAL_java.zip",
+    "sha256": "239758e07b89e345d6db58fc3a62a1dd05ccbd9efff3ebfceed97ec1e45c765d",
+    "bytes": 612028880
+  },
+  "logs": [
+    "stdout.log",
+    "stderr.log",
+    "progress.json",
+    "notices.json"
+  ],
+  "peak": {
+    "rss_bytes": 1271734272,
+    "max_rss_kb": 1933932
+  }
+}

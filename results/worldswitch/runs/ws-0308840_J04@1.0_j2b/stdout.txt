@@ -1,0 +1,12 @@
+[jtb] pré-vol : 235 chunks échantillonnés, 235 avec palette, palette lisible ✓
+[jtb] entités inline (legacy) : 30 dans 16 chunk(s) sans liste dédiée
+[jtb] régions : 23 tâche(s) en 8 worker(s)
+[jtb] entités inline (legacy) : 2 dans 1 chunk(s) sans liste dédiée
+[jtb] entités inline (legacy) : 5 dans 5 chunk(s) sans liste dédiée
+[jtb] entités inline (legacy) : 11 dans 4 chunk(s) sans liste dédiée
+[jtb] entités inline (legacy) : 12 dans 6 chunk(s) sans liste dédiée
+[jtb] scoreboard → clé LevelDB
+[jtb] clés globales Bedrock (LevelChunkMetaDataDictionary + Overworld/mobevents/…) écrites
+[jtb] chunks forcés : 5 chunk(s) → 5 zone(s) de tick (5 chunk(s) couvert(s))
+[jtb] 6310 sections, 10033 chunks, 4941 BE, 385 entities, 0 maps, 0 structures, player=yes, legacy=0
+[jtb] java-sidecar : 76 enregistrements (dont 71 fichier(s) en flux, 4886 BE)

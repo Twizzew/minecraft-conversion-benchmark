@@ -1,0 +1,287 @@
+[
+ {
+  "t_ms": 7,
+  "pct": 5,
+  "phase": "INIT_TARGET"
+ },
+ {
+  "t_ms": 12520,
+  "pct": 15,
+  "phase": "EXTRACT_ZIP"
+ },
+ {
+  "t_ms": 12557,
+  "pct": 22,
+  "phase": "READ_LEVELDAT_JAVA"
+ },
+ {
+  "t_ms": 12559,
+  "pct": 30,
+  "phase": "PREPARE_BEDROCK_DIR"
+ },
+ {
+  "t_ms": 312676,
+  "pct": 31,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 342856,
+  "pct": 32,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 382435,
+  "pct": 33,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 399892,
+  "pct": 34,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 429225,
+  "pct": 35,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 463630,
+  "pct": 36,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 492863,
+  "pct": 37,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 538076,
+  "pct": 38,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 671276,
+  "pct": 39,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 691545,
+  "pct": 40,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 709702,
+  "pct": 41,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 728927,
+  "pct": 42,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 739721,
+  "pct": 43,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 758081,
+  "pct": 44,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 842045,
+  "pct": 45,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 924238,
+  "pct": 46,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 1024623,
+  "pct": 47,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 1108741,
+  "pct": 48,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 1199851,
+  "pct": 49,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 1244419,
+  "pct": 50,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 1305787,
+  "pct": 51,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 1334424,
+  "pct": 52,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 1366851,
+  "pct": 53,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 1419026,
+  "pct": 54,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 1544546,
+  "pct": 55,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 1600461,
+  "pct": 56,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 1642591,
+  "pct": 57,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 1710807,
+  "pct": 58,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 1817664,
+  "pct": 59,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 1869047,
+  "pct": 60,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 1911508,
+  "pct": 61,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 1964226,
+  "pct": 62,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 2021623,
+  "pct": 63,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 2064695,
+  "pct": 64,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 2109393,
+  "pct": 65,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 2123405,
+  "pct": 66,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 2139187,
+  "pct": 67,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 2155106,
+  "pct": 68,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 2163217,
+  "pct": 69,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 2172884,
+  "pct": 70,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 2183666,
+  "pct": 71,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 2197973,
+  "pct": 72,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 2211781,
+  "pct": 73,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 2220530,
+  "pct": 74,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 2229748,
+  "pct": 75,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 2238743,
+  "pct": 76,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 2250023,
+  "pct": 77,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 2260947,
+  "pct": 78,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 2268854,
+  "pct": 79,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 2279332,
+  "pct": 80,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 2297102,
+  "pct": 82,
+  "phase": "FINALIZE_LEVELDB"
+ },
+ {
+  "t_ms": 2456303,
+  "pct": 93,
+  "phase": "CREATE_MCWORLD"
+ },
+ {
+  "t_ms": 2464451,
+  "pct": 100,
+  "phase": "DONE"
+ }
+]

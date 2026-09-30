@@ -1,0 +1,1713 @@
+{
+ "schema": "mccb.freeze/1",
+ "benchmark_version": "1.3",
+ "status": "PREPARED — becomes the freeze when published (commit + release)",
+ "statement": "Every item below is fixed for MCCB v1.3. A change to any of them is a new MCCB version. Results of v1.3 are never re-graded.",
+ "sources": [
+  {
+   "world": "J01@1.1",
+   "class": "LAB",
+   "edition": "java",
+   "file": "MCCB_J01_STATIC_JAVA_v1.1.zip",
+   "sha256": "b28294c78bb7e3c755827153b8d52bbdb5f80a9a45b598d6608a141493d26cf3",
+   "bytes": 7912549
+  },
+  {
+   "world": "J02@1.0",
+   "class": "LAB",
+   "edition": "java",
+   "file": "MCCB_J02_LIVING_JAVA.zip",
+   "sha256": "db97f7497094ed5681600b37a76ab81e975341280883dcf433b3d6c40e8f17a4",
+   "bytes": 3308679
+  },
+  {
+   "world": "J03@1.0",
+   "class": "LAB",
+   "edition": "java",
+   "file": "MCCB_J03_SYSTEMS_JAVA.zip",
+   "sha256": "45c7ae7293ff1dfd3310757a8b56f1d094e6928aa20a82b68ff45428f55bbc50",
+   "bytes": 6325350
+  },
+  {
+   "world": "J04@1.0",
+   "class": "LAB",
+   "edition": "java",
+   "file": "MCCB_J04_COMMANDS_JAVA.zip",
+   "sha256": "44a58908bbf86554eb85c6c0fb6b8b060ed016965e943eab05e72145606a7b4c",
+   "bytes": 5986114
+  },
+  {
+   "world": "B01@1.0",
+   "class": "LAB",
+   "edition": "bedrock",
+   "file": "MCCB_B01_STATIC_BEDROCK.mcworld",
+   "sha256": "83e8e9909a3d8915980df317073b80c11421152d8f7ed88714fd196e45c0a667",
+   "bytes": 119207
+  },
+  {
+   "world": "B02@1.0",
+   "class": "MANUAL_NATIVE",
+   "edition": "bedrock",
+   "file": "MCCB_B02_LIVING_BEDROCK.mcworld",
+   "sha256": "34d9b5dfaff557ef5e3907cae8fba31fc5de8dc03cb49c145ab14b0e6f6ccd10",
+   "bytes": 159654
+  },
+  {
+   "world": "B03@1.0",
+   "class": "LAB",
+   "edition": "bedrock",
+   "file": "MCCB_B03_SYSTEMS_BEDROCK.mcworld",
+   "sha256": "fd16e5d795f6b707fb48bce821e09dcad5a8e15c87e101d6e080bb24c911a838",
+   "bytes": 779237
+  }
+ ],
+ "fixtures": [
+  {
+   "world": "J01@1.1",
+   "file": "fixtures/J01_1.1.jsonl.gz",
+   "content_sha256": "f4dcaa14d493fc7b9f4bd40d0be5aaa57fb4a0adca815b0141aa85895f081904",
+   "file_sha256": "ab3c3abf3b83ac5ed7bad9c01755fb4ee77b782c18d94b53c3645c6b549db31c",
+   "subjects": 46934,
+   "built_from_source_sha256": "b28294c78bb7e3c755827153b8d52bbdb5f80a9a45b598d6608a141493d26cf3"
+  },
+  {
+   "world": "J02@1.0",
+   "file": "fixtures/J02_1.0.jsonl.gz",
+   "content_sha256": "3c7f38e79611d16cac73a1e2b8665c3aaaa2d7887c13afc196221e9a29b3b66b",
+   "file_sha256": "a1bb57043e17ead3b18a3ed58014ef1c025ad364da3d3f293836c663d6b9f971",
+   "subjects": 957,
+   "built_from_source_sha256": "db97f7497094ed5681600b37a76ab81e975341280883dcf433b3d6c40e8f17a4"
+  },
+  {
+   "world": "J03@1.0",
+   "file": "fixtures/J03_1.0.jsonl.gz",
+   "content_sha256": "814e2ae790f427c39b0ac62f5f59f2b818a3b09e4bb8e46307f62b993c01824a",
+   "file_sha256": "0007fd0ecca474869e2ea60a001dc98332adf989d378c74eb305d0cc1a61a7e3",
+   "subjects": 915,
+   "built_from_source_sha256": "45c7ae7293ff1dfd3310757a8b56f1d094e6928aa20a82b68ff45428f55bbc50"
+  },
+  {
+   "world": "J04@1.0",
+   "file": "fixtures/J04_1.0.jsonl.gz",
+   "content_sha256": "a3fdf4028c62350522602dfcb289cdec77cfe77049d734fdc87cb7c7c0596ef7",
+   "file_sha256": "3ff4584d60f0fefcfd9e970605b02029a683f452dfeb3bd110dea34168b50ccd",
+   "subjects": 13003,
+   "built_from_source_sha256": "44a58908bbf86554eb85c6c0fb6b8b060ed016965e943eab05e72145606a7b4c"
+  },
+  {
+   "world": "B01@1.0",
+   "file": "fixtures/B01_1.0.jsonl.gz",
+   "content_sha256": "780d5858bf7f1fab101cdbf64e6f1f3f0e9afa493a33526b37d76b33518cd048",
+   "file_sha256": "f97ed5173e7d774be71e0eed6bd4bde7b6ad53a6336756fdf848257a3ded8735",
+   "subjects": 405,
+   "built_from_source_sha256": "83e8e9909a3d8915980df317073b80c11421152d8f7ed88714fd196e45c0a667"
+  },
+  {
+   "world": "B02@1.0",
+   "file": "fixtures/B02_1.0.jsonl.gz",
+   "content_sha256": "0b356ad034d5c0fda55af79bf09fc347d755b238f6962c8dd58f76d895dde572",
+   "file_sha256": "4437ea021cb64ccda633fa8606e34af28ae6d4a146c2e9770c165469fe64432f",
+   "subjects": 482,
+   "built_from_source_sha256": "34d9b5dfaff557ef5e3907cae8fba31fc5de8dc03cb49c145ab14b0e6f6ccd10"
+  },
+  {
+   "world": "B03@1.0",
+   "file": "fixtures/B03_1.0.jsonl.gz",
+   "content_sha256": "c8d46069cf356838974759b71563a28b4cf9c10483ea083bfc1febde9c6097b6",
+   "file_sha256": "4d9afbf72eff63796277959cc77e4f7626e967d742ec822d5f818a0c00fed4d0",
+   "subjects": 1062,
+   "built_from_source_sha256": "fd16e5d795f6b707fb48bce821e09dcad5a8e15c87e101d6e080bb24c911a838"
+  }
+ ],
+ "rules": {
+  "METHODOLOGY.md": "5379a2c64910cdde95961a9417c26e04d85b94c714d30110e22e1eced18a1e7e",
+  "docs/fixture-rules.md": "3dd7b2aab1446554bbaf7444c974b3109d9a3b2025f19311ec6c6ac800cb9ed5",
+  "docs/rules-changelog.md": "71812423510e14e2bb7cf4e554aa8b6840cee9a3fde78688612f079e3670e547",
+  "KNOWN_LIMITATIONS.md": "1ce179576d3b04ccf2d07a94f971e982e9373f0f3a6916b188d131499bea81bd"
+ },
+ "manifests": {
+  "manifests/worlds.json": "82584a4a6029a1bbcf149fa6454bbf616a72930ea36cd2c6755aeb9f855a41b9"
+ },
+ "manifests_informative": {
+  "manifests/converters.json": "a3f14f7002d8f6e084d99518455506a32afd40d474e88abafcdb682f567e4afd"
+ },
+ "references": {
+  "identity_equivalence": {
+   "file": "docs/reference/identity-equivalence.v1.json",
+   "sha256": "5fd3bf2c718511b155dcb15a2491713cc76ab6fea21ea2a85831065347c14d50"
+  },
+  "java_game": {
+   "version": "26.3",
+   "jar_file": "26.3.jar",
+   "jar_sha256": "4508d006323f24fa02876310c192d739af56516eb259000ac50f0909a68c9a2d",
+   "note": "Official Minecraft Java client jar, used unmodified from the local launcher installation; never redistributed."
+  },
+  "java_normaliser_sha256": "bb60733e44265e1977b647e7eab9d50ed78bca9f7bb149edaebc32e5895c8ebf",
+  "bedrock_vanilla_data": {
+   "package": "@minecraft/vanilla-data",
+   "version": "1.26.40"
+  },
+  "bedrock_default_states": {
+   "file": "docs/reference/bedrock-default-states.v1.json",
+   "sha256": "e0bba36bb6e9aedfc5343aaa449eb3b3b78b1537922df1830a8d81ab766c0c55"
+  },
+  "java_gamerule_defaults": {
+   "file": "docs/reference/java-gamerule-defaults.v1.json",
+   "sha256": "21933ff46c06c769e67edf9e2c138e33169dee78b818d71eb684458f734d339f"
+  }
+ },
+ "tools": {
+  "tools/families/block_entity.mjs": "27723a7c90d24b9e8185e1ca24594e9f2ffaba0aeb72a525ef28eeeef12258c5",
+  "tools/families/block.mjs": "3cdcec3c57d51c82686b73488c8c2bf9cb210c28e14e17c2cf8b0abace73c1f1",
+  "tools/families/custom_dimension.mjs": "0163b6ceb6e35482926b6af8e90ebf0b13379dd51db1fde3402ce074451db596",
+  "tools/families/entity.mjs": "da91f5552c5fdd96a2d35f4a6e85d9bb14c7a7b7967b2aae55af0d1b47c3c896",
+  "tools/families/index.mjs": "9c8dcdd971378c6df3e0c374dc8799b46b4106d0a07c6606b83e08e9c85e3866",
+  "tools/families/item_stack.mjs": "40512b87bf46bc692e42afa6925076167b80198399ce2affa9c160ccfa13991e",
+  "tools/families/player.mjs": "2eedbeff7070d52f00697aac73e76a702f01714ec66678fe0384583990bbf920",
+  "tools/families/scoreboard.mjs": "024084df3e5070ce8e20fd58cfa998ce36b56e859ff6fe8400be555b8098dff1",
+  "tools/families/structure.mjs": "2eaf311702ad1d9a2d8fa07e94ac2b97dc98e2ba521202672fb2841c59d88244",
+  "tools/families/world.mjs": "25ca4c380a4f0a301ca152142ef12da54aadfca3578502cfc334627cc0c9a25a",
+  "tools/fixtures/build-fixtures.mjs": "7019f98b3ce60b9b9f84654bcc6b223ac4642eae5ead1d8293f9834d57ab6854",
+  "tools/fixtures/validate-sources.mjs": "c2cf4325a6d1d017818338297fca1ee1cd73c76be45cf024fac44d8649f92d0c",
+  "tools/fixtures/zones.mjs": "d5644c439bad4edab18435ddbc144b6227b0776b1cc19f6c31c66032292d4ee9",
+  "tools/java/classpath.mjs": "416e4a7491dc44c94a9059668104d6d882c95ddb7b70159e0c1a8512a255a262",
+  "tools/java/prepare-normalized.mjs": "af3969edd220c60fe8eb5b07127e3affb170f3a5729d2b7f3e7f91edd3e5f90f",
+  "tools/java/src/GameRuleDefaults.java": "b3841e0be4575ea2e3d444c2489c7308a5bfbf8c14d056371111781b5876203d",
+  "tools/java/src/MccbNormalize.java": "bb60733e44265e1977b647e7eab9d50ed78bca9f7bb149edaebc32e5895c8ebf",
+  "tools/lib/archive.mjs": "c74ad6253ba3b256f6719d714ea50007a13220cfb9125ee8ea4e10b8b653a462",
+  "tools/lib/bedrock/world.mjs": "4dc5e10c463dd2ea004a7c50ff542b95b2d37ee0f79ee56351fd97891a3b327d",
+  "tools/lib/chest-pairs.mjs": "241942d1640320f0e90fbdbebdf933576268d335d6f02d5817e7100a346ec303",
+  "tools/lib/facts.mjs": "c6f3417d4975a07e5e65eed4c25df913810a7e23d4bd7b44da4a4dfcb2f76c89",
+  "tools/lib/fixtures-io.mjs": "64fff09594bf3eb2c8f6b9144f9802f0cb617583d88320551acd4b78e84c1113",
+  "tools/lib/identity.mjs": "d6701c6b8c9634f0fb2bd7ae8ef436db2b573ec547c9dc52df6479ca9fa8eb03",
+  "tools/lib/java/world.mjs": "383101c9be2426b3cedc709e50f8f1b825b22097f774472372e9d95926fdb5a3",
+  "tools/lib/nbt.mjs": "894891343e726626067ecec5e6a9ac60aae254af511612edd5ac460b5a2eeede",
+  "tools/lib/open.mjs": "3b2950702de10a867a0ef05f40caf74f955091db5594fb0944ed635e344ead0f",
+  "tools/lib/registry.mjs": "d63d392fee9451422fc30eef3676c511fa2ede6f7b1daa85b7d76bcde25d3e88",
+  "tools/lib/status.mjs": "34f74c5424184ceeb882791b457e2542241d130ed41403adebde0a51150e780c",
+  "tools/lib/structures.mjs": "ebed0ba4d75d481f129734630f2b315c26a79064115404037e63cc61f9355482",
+  "tools/oracles/evaluate-suite.mjs": "d6fb5064d9bc1861aed70a84d9dc0c5a348e0dcd4da95ff732f9bcd29ca9e0b7",
+  "tools/oracles/evaluate.mjs": "eb2ee93d7c1a957804a360e8594ae4b4b603f60175dc2e4231d509803ad8399d",
+  "tools/oracles/target.mjs": "5b929e6c31988eb1752f82611db2cbc698c921649f92588dfea3aa671dee3b20",
+  "tools/package-lock.json": "cc1b0f88fa62217160ca61ec12631be9729f372c6356f00eacad49c450c4acf9",
+  "tools/package.json": "8dbb85583a8c1466448a5a2864dc3df196523f4fabcac0a0791a55694c09717e",
+  "tools/reference/build-bedrock-default-states.mjs": "027cf4c31b625128f872cd87dbd2a9633beec416d2b07eb551f67bc54e5abac5",
+  "tools/reference/build-identity.mjs": "ced3a054d2ad7685ff643bdb640d932a4522b82b14ffda12477a7dcfe8e28705",
+  "tools/reference/build-java-gamerule-defaults.mjs": "204b6a23e566847cae0661ba5ba54417975e829cfb8638ce6052050e86e877fc",
+  "tools/reference/gamerules.v1.mjs": "bf61c0616dc59af30ae7516d4c4f91af0867154c6b81af06e7ff92822d63417a",
+  "tools/reference/identity-rules.v1.mjs": "b506319b4e5d842251659a4f76d2c966daac1c6a3d73c4920509e5ccf6b7747e"
+ },
+ "packaging_tools_informative": {
+  "tools/manifests/build-freeze.mjs": "eb1a311f14146cff5bcc0fa67d6927de18f49a731bf3bc1620344a44bbc7df19",
+  "tools/manifests/build-manifests.mjs": "165cad7c0ffd6b3826726e1f76aede91bba2cf72fa3e23409418a3170d78d8e9",
+  "tools/manifests/build-world-cards.mjs": "281b3e327a6c03fae0585b0ff81fe898aad83ca6e7840ec705dfb25dccfc399e",
+  "tools/manifests/check-fixtures.mjs": "ade00874c61909a72733e199d9e56459db64f12fb4e7e9e9ce8b13396b340a19",
+  "tools/results/aggregate.mjs": "ac34938e77d5c18bf05aaba86503d809b334cf54e8983dd941f2c48b6179f3c3",
+  "tools/results/audit-accounting.mjs": "c1ab02133b5e8a8fbe8fa5256006d2beb815119b20017c80df74de3ddda92e71",
+  "tools/results/audit-ne-asymmetry.mjs": "a5f8b2c09e3a00a36fbc188597c52c4c28d3f1694af08f75a8e792bae24f8dec",
+  "tools/results/audit-rerun.mjs": "cb6c8acaeac1fb3ff3cb7ab33564c476fa43a61bfaa56a1d72a52fc5690107ca",
+  "tools/results/audit-spotcheck.mjs": "862013edaf40b0dde1240404859ec8e7f407210d8603ab509d0c2d9672fefc70",
+  "tools/results/compare.mjs": "76b193a6128df38a63edb8be6d245398b42f8305ecf239598f220dfcd026fbbd",
+  "tools/results/diff-summaries.mjs": "ea0f98d5e4fe82f4d56c1061367566b29610c9d60c16b421ea9d03d60769c962",
+  "tools/results/export-outputs.mjs": "aacc44fe71a878aa9367b12611856048b6ef344a5d9b307f96e2d0908e366ede",
+  "tools/results/failure-census.mjs": "f21acc524f893a6a801ce33c7abb0ddf3657c9b647fb34976a4286f47b9fe847",
+  "tools/results/roots.mjs": "6f101eb003e41bb2878744180cd5bce2b0e5bfaec951e28a018488bf92ea3eef",
+  "tools/results/show.mjs": "7ae3b3b2eaecc443082e3df10988b46b890d1c52bc73958b68b656b9a9af7d3d",
+  "tools/results/table-v13.mjs": "08ecd780a59eb71bd33716057dd7509140894a757b398bea662aa7c5764c3694",
+  "tools/results/totals.mjs": "1eb8d912a517bc467419ac170f825746c7983a7511dcad11a84c53edacb40c4b",
+  "tools/runners/generic/pack-output.mjs": "a84c06b73a93268fa3247939e921d24c0ed74eba9c1975376ff2fa7d782b0c69",
+  "tools/runners/generic/record-manual-run.mjs": "9d295f18e39ab793837fff8f20611dc76a129a1e72205538ec8b96c79dcfcb66",
+  "tools/runners/generic/run-command.mjs": "5cd6c69452f09405e3728edcf5fd64352c57339db9d2e0d288bd7b8c3c89dfea",
+  "tools/runners/generic/run-suite-command.mjs": "ad0fc0886b39b0f5b0818d64103bd52fe671dba95f804ecd20116a2157561f00",
+  "tools/runners/worldswitch/child.mjs": "9c3825098e3153aff2df93e1d678a688e32529c508bcdf680ea9df3ba480f821",
+  "tools/runners/worldswitch/fingerprint.mjs": "787b1a56e4a308e89d9c887de51ca90402aaf871fcb1f966a14f3bc343454a28",
+  "tools/runners/worldswitch/run-suite.mjs": "b4e0b7c4ba32dcb303cdcd82b436b93e27ba0bf8df90b59e3b65e04d6f7a5582",
+  "tools/runners/worldswitch/run.mjs": "d52509f72ec025c4ba7c3f9ddb2dbeff4e064eb930ee2b4fc9bd49b7efd601f7",
+  "tools/runners/worldswitch/suite-mccb-v1.1.json": "19c0a3e35bce50ac551dd9fb2a4c8efdc3a8f08bd3563346350d809aab58ff0b",
+  "tools/runners/worldswitch/suite-private-gurren.json": "28138a7538578f8a2e68135ac5cb7f8238cdfbbefab13047f8d35357ddf68ef5",
+  "tools/selftest/run-selftests.mjs": "dbeb0e852306192e7b3476472ff1974b30a758a04e7612608b98fe09e00a06c8",
+  "tools/verify.ps1": "eb57fcd3d052220a8e2854987c6e5d1e91a2c741ec1f76c3329544211b9103df",
+  "tools/verify.sh": "d8e5dae6dade012642e67f9b92df31dbe4a6377a1c2be6abafc0d5f64c0101e1",
+  "tools/worlds/sanitize-bedrock-survival.mjs": "d374d05c044862ec4a9793fa826a4a800f52486469f71d8ccc87231c6b6ba7e7",
+  "tools/worlds/text-review.mjs": "90cc9d3f7f60a1ef173d8f85c18c4aa9e171c8f49c33ed52bc70be68efdede63"
+ },
+ "measured_before_freeze": [],
+ "measured_after_freeze": [],
+ "not_run_before_freeze": [
+  "je2be (conversions not yet available)"
+ ],
+ "private_fixtures": [
+  {
+   "world": "GURREN@1.0",
+   "content_sha256": "7a8a76e6a4dd15f9f46190ef5f707b848fa272831da6301a84fee3e293024243",
+   "subjects": 2025895,
+   "built_from_source_sha256": "ca618ebe86c29a5101748d44d7e0dcd4c2c93958c80781bce6483a1d095dee03"
+  }
+ ],
+ "runs_to_grade": [
+  {
+   "run": "chunker-1.20.0_B01@1.0_b2j",
+   "converter": "Chunker",
+   "build": "1.20.0",
+   "source_sha256": "83e8e9909a3d8915980df317073b80c11421152d8f7ed88714fd196e45c0a667",
+   "output_sha256": "59c680d59445c007d44e980d8afed4cb530e4f6aaec084c1499d6246deae0fc5"
+  },
+  {
+   "run": "chunker-1.20.0_B01@1.0_b2j2b",
+   "converter": "Chunker",
+   "build": "1.20.0",
+   "source_sha256": "59c680d59445c007d44e980d8afed4cb530e4f6aaec084c1499d6246deae0fc5",
+   "output_sha256": "35a53742fc877a922f3e6b5405fd2953c16d037fe0726cf6d9db46c1543b677d"
+  },
+  {
+   "run": "chunker-1.20.0_B02@1.0_b2j",
+   "converter": "Chunker",
+   "build": "1.20.0",
+   "source_sha256": "34d9b5dfaff557ef5e3907cae8fba31fc5de8dc03cb49c145ab14b0e6f6ccd10",
+   "output_sha256": "9ac093121aca0e0ce548c22a8cfc0b20c2a9b23a1993d5d13ade48b580878c32"
+  },
+  {
+   "run": "chunker-1.20.0_B02@1.0_b2j2b",
+   "converter": "Chunker",
+   "build": "1.20.0",
+   "source_sha256": "9ac093121aca0e0ce548c22a8cfc0b20c2a9b23a1993d5d13ade48b580878c32",
+   "output_sha256": "9e3c0287779ae8f6d38ce0924c7765c7303e678d9d26215bc071f162cf737ce2"
+  },
+  {
+   "run": "chunker-1.20.0_B03@1.0_b2j",
+   "converter": "Chunker",
+   "build": "1.20.0",
+   "source_sha256": "fd16e5d795f6b707fb48bce821e09dcad5a8e15c87e101d6e080bb24c911a838",
+   "output_sha256": "6e4e18f245ea888621b659b336c89b5c2d045d7c08de215060cd20b53c35fb56"
+  },
+  {
+   "run": "chunker-1.20.0_B03@1.0_b2j2b",
+   "converter": "Chunker",
+   "build": "1.20.0",
+   "source_sha256": "6e4e18f245ea888621b659b336c89b5c2d045d7c08de215060cd20b53c35fb56",
+   "output_sha256": "2e91d01496bbf401edc57cd270ee3ef49132bc81942e0a346989af38d987d63e"
+  },
+  {
+   "run": "chunker-1.20.0_GURREN@1.0_b2j",
+   "converter": "Chunker",
+   "build": "1.20.0",
+   "source_sha256": "ca618ebe86c29a5101748d44d7e0dcd4c2c93958c80781bce6483a1d095dee03",
+   "output_sha256": "5e38f209e41619fdc2bfea06b1187a9d3ca259192ca2bc1d86ddeee2c048e449"
+  },
+  {
+   "run": "chunker-1.20.0_GURREN@1.0_b2j2b",
+   "converter": "Chunker",
+   "build": "1.20.0",
+   "source_sha256": "5e38f209e41619fdc2bfea06b1187a9d3ca259192ca2bc1d86ddeee2c048e449",
+   "output_sha256": "0c2628fd7cdb9e58916ab514828f84acebc9ec5dec1ab99935a00d009a36f940"
+  },
+  {
+   "run": "chunker-1.20.0_J01@1.1_j2b",
+   "converter": "Chunker",
+   "build": "1.20.0",
+   "source_sha256": "b28294c78bb7e3c755827153b8d52bbdb5f80a9a45b598d6608a141493d26cf3",
+   "output_sha256": "366fc6ccb48754d54404555173c73d319632f3bcf3e86d8ec89b2beeec091248"
+  },
+  {
+   "run": "chunker-1.20.0_J01@1.1_j2b2j",
+   "converter": "Chunker",
+   "build": "1.20.0",
+   "source_sha256": "366fc6ccb48754d54404555173c73d319632f3bcf3e86d8ec89b2beeec091248",
+   "output_sha256": "285ca24e98b5417f8885a8bcd98f9ec94ba394ea6676c42a0f3761fa500546ca"
+  },
+  {
+   "run": "chunker-1.20.0_J02@1.0_j2b",
+   "converter": "Chunker",
+   "build": "1.20.0",
+   "source_sha256": "db97f7497094ed5681600b37a76ab81e975341280883dcf433b3d6c40e8f17a4",
+   "output_sha256": "6235bc2d1ae61e879dbc35262d28f92d56f19ce04cd8d6bcbfe3b251a07950b2"
+  },
+  {
+   "run": "chunker-1.20.0_J02@1.0_j2b2j",
+   "converter": "Chunker",
+   "build": "1.20.0",
+   "source_sha256": "6235bc2d1ae61e879dbc35262d28f92d56f19ce04cd8d6bcbfe3b251a07950b2",
+   "output_sha256": "8c734af72e9a90ccc6c52d01813376c02075e131267b299e594af22ad114d21e"
+  },
+  {
+   "run": "chunker-1.20.0_J03@1.0_j2b",
+   "converter": "Chunker",
+   "build": "1.20.0",
+   "source_sha256": "45c7ae7293ff1dfd3310757a8b56f1d094e6928aa20a82b68ff45428f55bbc50",
+   "output_sha256": "a14131d3870398754485c2995112934a0b6fb4ceab232918ad21b238f0e47cd0"
+  },
+  {
+   "run": "chunker-1.20.0_J03@1.0_j2b2j",
+   "converter": "Chunker",
+   "build": "1.20.0",
+   "source_sha256": "a14131d3870398754485c2995112934a0b6fb4ceab232918ad21b238f0e47cd0",
+   "output_sha256": "143f5e6a027ea8750112a779b7b77bdf476cd3e9d6f33d6fe3bf139f03a15d72"
+  },
+  {
+   "run": "chunker-1.20.0_J04@1.0_j2b",
+   "converter": "Chunker",
+   "build": "1.20.0",
+   "source_sha256": "44a58908bbf86554eb85c6c0fb6b8b060ed016965e943eab05e72145606a7b4c",
+   "output_sha256": "5ecd53911db7a7fb7d4fea8200293412f5ff8a131628cd42781cb18398fcb319"
+  },
+  {
+   "run": "chunker-1.20.0_J04@1.0_j2b2j",
+   "converter": "Chunker",
+   "build": "1.20.0",
+   "source_sha256": "5ecd53911db7a7fb7d4fea8200293412f5ff8a131628cd42781cb18398fcb319",
+   "output_sha256": "3127e91bb0b73349bda953ce4122012a4f7c841b551b5877d37776ae572d8295"
+  },
+  {
+   "run": "ws-0308840+0969d1d_B01@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+0969d1d",
+   "source_sha256": "83e8e9909a3d8915980df317073b80c11421152d8f7ed88714fd196e45c0a667",
+   "output_sha256": "9055ee9936184f57049da50c58e64225f7f99a334b4b51e53ead5b436f747265"
+  },
+  {
+   "run": "ws-0308840+0969d1d_B01@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+0969d1d",
+   "source_sha256": "9055ee9936184f57049da50c58e64225f7f99a334b4b51e53ead5b436f747265",
+   "output_sha256": "245a7a9f24c671a0a65b34b4b1105c35d6880a4c5cbf282e534bfaade1d28565"
+  },
+  {
+   "run": "ws-0308840+0969d1d_B02@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+0969d1d",
+   "source_sha256": "34d9b5dfaff557ef5e3907cae8fba31fc5de8dc03cb49c145ab14b0e6f6ccd10",
+   "output_sha256": "1a2b32c14f4cffe9525e26ed1c6961e0dd74cce4709218ac64416bf1b56b135f"
+  },
+  {
+   "run": "ws-0308840+0969d1d_B02@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+0969d1d",
+   "source_sha256": "1a2b32c14f4cffe9525e26ed1c6961e0dd74cce4709218ac64416bf1b56b135f",
+   "output_sha256": "421fd25ed501ab5ce2c4a29162b6335d82df69dc65849977db0581673bf5e560"
+  },
+  {
+   "run": "ws-0308840+0969d1d_B03@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+0969d1d",
+   "source_sha256": "fd16e5d795f6b707fb48bce821e09dcad5a8e15c87e101d6e080bb24c911a838",
+   "output_sha256": "742f0f4dcd6ab7dea7a24f01a09b75090fc2048a371bb6a340ae5dff5d31f2ed"
+  },
+  {
+   "run": "ws-0308840+0969d1d_B03@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+0969d1d",
+   "source_sha256": "742f0f4dcd6ab7dea7a24f01a09b75090fc2048a371bb6a340ae5dff5d31f2ed",
+   "output_sha256": "b34521892c2c77d5f39bfea7d4296d984ead16324322c0db04d1758548e6885b"
+  },
+  {
+   "run": "ws-0308840+0969d1d_GURREN@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+0969d1d",
+   "source_sha256": "ca618ebe86c29a5101748d44d7e0dcd4c2c93958c80781bce6483a1d095dee03",
+   "output_sha256": "80f38f557a14ae54c7e090c38871a35e707a0b07609a81469b732e9d8d66eecc"
+  },
+  {
+   "run": "ws-0308840+0969d1d_GURREN@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+0969d1d",
+   "source_sha256": "80f38f557a14ae54c7e090c38871a35e707a0b07609a81469b732e9d8d66eecc",
+   "output_sha256": "95974e54c5752fe2592d89ae77736e1f48af1f9cd42e10bec71790991f1c2d2f"
+  },
+  {
+   "run": "ws-0308840+0969d1d_J01@1.1_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+0969d1d",
+   "source_sha256": "b28294c78bb7e3c755827153b8d52bbdb5f80a9a45b598d6608a141493d26cf3",
+   "output_sha256": "983ac868f1b334c86fce3588e3eba21228e2c61cc1f476aedf393fc5ded444f4"
+  },
+  {
+   "run": "ws-0308840+0969d1d_J01@1.1_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+0969d1d",
+   "source_sha256": "983ac868f1b334c86fce3588e3eba21228e2c61cc1f476aedf393fc5ded444f4",
+   "output_sha256": "7c5d2d0537a0151e9422e42e307413206970a9dd43756d29f64cf5338415f05b"
+  },
+  {
+   "run": "ws-0308840+0969d1d_J02@1.0_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+0969d1d",
+   "source_sha256": "db97f7497094ed5681600b37a76ab81e975341280883dcf433b3d6c40e8f17a4",
+   "output_sha256": "e7e475fc0524274a516f308bd348cba7e5092bbadfee39e798a5762778cc40ce"
+  },
+  {
+   "run": "ws-0308840+0969d1d_J02@1.0_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+0969d1d",
+   "source_sha256": "e7e475fc0524274a516f308bd348cba7e5092bbadfee39e798a5762778cc40ce",
+   "output_sha256": "d1e96c23ea769ae844918fdb33c694ece7427fba07efd879f36f94cfe9ffa14b"
+  },
+  {
+   "run": "ws-0308840+0969d1d_J03@1.0_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+0969d1d",
+   "source_sha256": "45c7ae7293ff1dfd3310757a8b56f1d094e6928aa20a82b68ff45428f55bbc50",
+   "output_sha256": "30929b402e9652336da8a6a4b6a548f83c35d7779c0fa074e5094a60ea1c44c3"
+  },
+  {
+   "run": "ws-0308840+0969d1d_J03@1.0_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+0969d1d",
+   "source_sha256": "30929b402e9652336da8a6a4b6a548f83c35d7779c0fa074e5094a60ea1c44c3",
+   "output_sha256": "f2f2f3156d428fa9d349af145b90912261a003f33bb4516a866a82a1ce0c4b98"
+  },
+  {
+   "run": "ws-0308840+0969d1d_J04@1.0_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+0969d1d",
+   "source_sha256": "44a58908bbf86554eb85c6c0fb6b8b060ed016965e943eab05e72145606a7b4c",
+   "output_sha256": "5217c7ef8f57272fcee3bc8cc2d308374ad7a90efdbf52c11ae9e61aa61a106e"
+  },
+  {
+   "run": "ws-0308840+0969d1d_J04@1.0_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+0969d1d",
+   "source_sha256": "5217c7ef8f57272fcee3bc8cc2d308374ad7a90efdbf52c11ae9e61aa61a106e",
+   "output_sha256": "d78bf24165769244a509f6d9ddc2f9abc7070f4e8fe347f740de2d5e07daea2d"
+  },
+  {
+   "run": "ws-0308840+11e127c_B01@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+11e127c",
+   "source_sha256": "83e8e9909a3d8915980df317073b80c11421152d8f7ed88714fd196e45c0a667",
+   "output_sha256": "db4ea1bcff6fb3768859137d2cbbb988e572133934d6fdd01cfaa959c9d91525"
+  },
+  {
+   "run": "ws-0308840+11e127c_B01@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+11e127c",
+   "source_sha256": "db4ea1bcff6fb3768859137d2cbbb988e572133934d6fdd01cfaa959c9d91525",
+   "output_sha256": "559ffba9e94c9352001101668cc273f67dfa0c6e5bb1cefc947b9b530e9e90ae"
+  },
+  {
+   "run": "ws-0308840+11e127c_B02@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+11e127c",
+   "source_sha256": "34d9b5dfaff557ef5e3907cae8fba31fc5de8dc03cb49c145ab14b0e6f6ccd10",
+   "output_sha256": "7ebe5a541998c6c246882c1d07567919b8385f4aa747894310628c01bf988c39"
+  },
+  {
+   "run": "ws-0308840+11e127c_B02@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+11e127c",
+   "source_sha256": "7ebe5a541998c6c246882c1d07567919b8385f4aa747894310628c01bf988c39",
+   "output_sha256": "7770720bf01f98972dc9a7e0e5d9624a69ed38e485a29db53389372502539050"
+  },
+  {
+   "run": "ws-0308840+11e127c_B03@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+11e127c",
+   "source_sha256": "fd16e5d795f6b707fb48bce821e09dcad5a8e15c87e101d6e080bb24c911a838",
+   "output_sha256": "15348eb5d155fb82ac3471d3c03d43ab25ceb3bc01883ca99c2140c657eb0d12"
+  },
+  {
+   "run": "ws-0308840+11e127c_B03@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+11e127c",
+   "source_sha256": "15348eb5d155fb82ac3471d3c03d43ab25ceb3bc01883ca99c2140c657eb0d12",
+   "output_sha256": "321115340efb856e2ecb9b9215987b5b689e916ae72965c7cbcd0465d7a5ef5e"
+  },
+  {
+   "run": "ws-0308840+11e127c_GURREN@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+11e127c",
+   "source_sha256": "ca618ebe86c29a5101748d44d7e0dcd4c2c93958c80781bce6483a1d095dee03",
+   "output_sha256": "b8572849b390d0598962941f5374fa27867fdadfa730ba88a7e4c9162f030f3c"
+  },
+  {
+   "run": "ws-0308840+11e127c_GURREN@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+11e127c",
+   "source_sha256": "b8572849b390d0598962941f5374fa27867fdadfa730ba88a7e4c9162f030f3c",
+   "output_sha256": "3964ff06dbd22aee403057050074459e0b51614e57ebff6f82af9fbea87f07a3"
+  },
+  {
+   "run": "ws-0308840+11e127c_J01@1.1_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+11e127c",
+   "source_sha256": "b28294c78bb7e3c755827153b8d52bbdb5f80a9a45b598d6608a141493d26cf3",
+   "output_sha256": "38aa71a2856d0d9477cdc825972e4e079674fd2b563be3dfd87fb1e51221d64a"
+  },
+  {
+   "run": "ws-0308840+11e127c_J01@1.1_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+11e127c",
+   "source_sha256": "38aa71a2856d0d9477cdc825972e4e079674fd2b563be3dfd87fb1e51221d64a",
+   "output_sha256": "c7311d54cc359d040f75ea4deccf1d077f447b4bd0598b638a958ff35f4a26ed"
+  },
+  {
+   "run": "ws-0308840+11e127c_J02@1.0_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+11e127c",
+   "source_sha256": "db97f7497094ed5681600b37a76ab81e975341280883dcf433b3d6c40e8f17a4",
+   "output_sha256": "52511f0f1b9a18196bf50171c3c3d815ef7dcf5e8295bd22371badf56cae8664"
+  },
+  {
+   "run": "ws-0308840+11e127c_J02@1.0_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+11e127c",
+   "source_sha256": "52511f0f1b9a18196bf50171c3c3d815ef7dcf5e8295bd22371badf56cae8664",
+   "output_sha256": "fc77fb1b48cd9e68ff31a13a3bfccf70a4c5d396513eff466d9e5fc5e27f0ad2"
+  },
+  {
+   "run": "ws-0308840+11e127c_J03@1.0_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+11e127c",
+   "source_sha256": "45c7ae7293ff1dfd3310757a8b56f1d094e6928aa20a82b68ff45428f55bbc50",
+   "output_sha256": "b35acb85ab339b33d49bbde660d6d4a63942e130934be8cd135a5aebe79f1a80"
+  },
+  {
+   "run": "ws-0308840+11e127c_J03@1.0_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+11e127c",
+   "source_sha256": "b35acb85ab339b33d49bbde660d6d4a63942e130934be8cd135a5aebe79f1a80",
+   "output_sha256": "ef439fee9333f57929ac56f68bade1fb4011e081d173f5ac61eb6c5da39327d7"
+  },
+  {
+   "run": "ws-0308840+11e127c_J04@1.0_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+11e127c",
+   "source_sha256": "44a58908bbf86554eb85c6c0fb6b8b060ed016965e943eab05e72145606a7b4c",
+   "output_sha256": "a6c1178c29cc4a4e1926e178a653d551c6fce1e072d0a66182ee824531f233b9"
+  },
+  {
+   "run": "ws-0308840+11e127c_J04@1.0_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+11e127c",
+   "source_sha256": "a6c1178c29cc4a4e1926e178a653d551c6fce1e072d0a66182ee824531f233b9",
+   "output_sha256": "7d176f205ae7935f7a450bff85f3ce9e03d0fe235f4c2c90566f742119e13c17"
+  },
+  {
+   "run": "ws-0308840+436ede8_B01@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+436ede8",
+   "source_sha256": "83e8e9909a3d8915980df317073b80c11421152d8f7ed88714fd196e45c0a667",
+   "output_sha256": "a981797210a838663c752963741d06b0fd3ba15e0c6021a2266ccf5b6fab5748"
+  },
+  {
+   "run": "ws-0308840+436ede8_B01@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+436ede8",
+   "source_sha256": "a981797210a838663c752963741d06b0fd3ba15e0c6021a2266ccf5b6fab5748",
+   "output_sha256": "bb5c038ba81a188a1d13b4ce5200c725c00aba1f66e8055547d2d01b91b3b580"
+  },
+  {
+   "run": "ws-0308840+436ede8_B02@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+436ede8",
+   "source_sha256": "34d9b5dfaff557ef5e3907cae8fba31fc5de8dc03cb49c145ab14b0e6f6ccd10",
+   "output_sha256": "969cff7022ac345a201eb532872b389bfd8cbf102ef1323501c14a64dcdb67a3"
+  },
+  {
+   "run": "ws-0308840+436ede8_B02@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+436ede8",
+   "source_sha256": "969cff7022ac345a201eb532872b389bfd8cbf102ef1323501c14a64dcdb67a3",
+   "output_sha256": "fc2b741fadd6360c405c268998147c1109e71cf0e72ee7446e920f07b855f04f"
+  },
+  {
+   "run": "ws-0308840+436ede8_B03@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+436ede8",
+   "source_sha256": "fd16e5d795f6b707fb48bce821e09dcad5a8e15c87e101d6e080bb24c911a838",
+   "output_sha256": "d7facac038051425cc500503a9c7a74b8d1901189bdc32ceb7bb00aff249b85e"
+  },
+  {
+   "run": "ws-0308840+436ede8_B03@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+436ede8",
+   "source_sha256": "d7facac038051425cc500503a9c7a74b8d1901189bdc32ceb7bb00aff249b85e",
+   "output_sha256": "49c4bbfdcd8c9d37ea9090195f8a4f06d74581802941b7264f9a9165eb1a98b0"
+  },
+  {
+   "run": "ws-0308840+436ede8_GURREN@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+436ede8",
+   "source_sha256": "ca618ebe86c29a5101748d44d7e0dcd4c2c93958c80781bce6483a1d095dee03",
+   "output_sha256": "ebb1161eedbf82308a34831a70ab28769cd47fab35be6ceab07d90eab83853f8"
+  },
+  {
+   "run": "ws-0308840+436ede8_GURREN@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+436ede8",
+   "source_sha256": "ebb1161eedbf82308a34831a70ab28769cd47fab35be6ceab07d90eab83853f8",
+   "output_sha256": "7b08a0ae903b796f1c552a669ac2c13283750d039eaabe6e4b63fb0880256119"
+  },
+  {
+   "run": "ws-0308840+436ede8_J01@1.1_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+436ede8",
+   "source_sha256": "b28294c78bb7e3c755827153b8d52bbdb5f80a9a45b598d6608a141493d26cf3",
+   "output_sha256": "9f63755fd78fd541d188f9d534ffb031d1480894839bf0ab5adf9ec626a56e24"
+  },
+  {
+   "run": "ws-0308840+436ede8_J01@1.1_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+436ede8",
+   "source_sha256": "9f63755fd78fd541d188f9d534ffb031d1480894839bf0ab5adf9ec626a56e24",
+   "output_sha256": "5effde690bb5afc75b0cb5f71c3633f6b5b57c710b74b4883ee9b75875cc8a06"
+  },
+  {
+   "run": "ws-0308840+436ede8_J02@1.0_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+436ede8",
+   "source_sha256": "db97f7497094ed5681600b37a76ab81e975341280883dcf433b3d6c40e8f17a4",
+   "output_sha256": "76fe2730c2298a6b748af2fd55a31718f3bef395d83ed0e6531c52ed1778688d"
+  },
+  {
+   "run": "ws-0308840+436ede8_J02@1.0_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+436ede8",
+   "source_sha256": "76fe2730c2298a6b748af2fd55a31718f3bef395d83ed0e6531c52ed1778688d",
+   "output_sha256": "d0303305b2ccbb3c246d720a79360e4e81aca0def1ad0cc96284447422606590"
+  },
+  {
+   "run": "ws-0308840+436ede8_J03@1.0_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+436ede8",
+   "source_sha256": "45c7ae7293ff1dfd3310757a8b56f1d094e6928aa20a82b68ff45428f55bbc50",
+   "output_sha256": "e6f9006f5ca4e7bb5c95138cbb5de7b655b7c32a3b7be509c80406a7f9204ddc"
+  },
+  {
+   "run": "ws-0308840+436ede8_J03@1.0_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+436ede8",
+   "source_sha256": "e6f9006f5ca4e7bb5c95138cbb5de7b655b7c32a3b7be509c80406a7f9204ddc",
+   "output_sha256": "7d1311b3517eb6223b615ef200087b6e039d91abe3e139c14cffa44675ea9154"
+  },
+  {
+   "run": "ws-0308840+436ede8_J04@1.0_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+436ede8",
+   "source_sha256": "44a58908bbf86554eb85c6c0fb6b8b060ed016965e943eab05e72145606a7b4c",
+   "output_sha256": "8d2359ff59ab22c146b4178786f619eeca98eb25dc2fb84b6ad64426c680ebe0"
+  },
+  {
+   "run": "ws-0308840+436ede8_J04@1.0_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+436ede8",
+   "source_sha256": "8d2359ff59ab22c146b4178786f619eeca98eb25dc2fb84b6ad64426c680ebe0",
+   "output_sha256": "d252ad406fd174fdf7b2b42f75ecbe13d4fd2ed1dba25acf4880c4ae2f19e326"
+  },
+  {
+   "run": "ws-0308840+6da882c_B01@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+6da882c",
+   "source_sha256": "83e8e9909a3d8915980df317073b80c11421152d8f7ed88714fd196e45c0a667",
+   "output_sha256": "974e8c3f382324669163a21b7249d8b45e3e80e648dab1406d79ff423c9f2f05"
+  },
+  {
+   "run": "ws-0308840+6da882c_B01@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+6da882c",
+   "source_sha256": "974e8c3f382324669163a21b7249d8b45e3e80e648dab1406d79ff423c9f2f05",
+   "output_sha256": "f696273e644071e45e29fe0c24927c98ab23db5d83d468e6a45085e6fe971726"
+  },
+  {
+   "run": "ws-0308840+6da882c_B02@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+6da882c",
+   "source_sha256": "34d9b5dfaff557ef5e3907cae8fba31fc5de8dc03cb49c145ab14b0e6f6ccd10",
+   "output_sha256": "db9eeb1c751eac13c79a07007a24fcec5a46e021e15af917253ea105ae34d796"
+  },
+  {
+   "run": "ws-0308840+6da882c_B02@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+6da882c",
+   "source_sha256": "db9eeb1c751eac13c79a07007a24fcec5a46e021e15af917253ea105ae34d796",
+   "output_sha256": "a5a9d8b9d0cb5e2ed139fcc6a12726e02f36e22bc1ca958f52d63a06d8e012a8"
+  },
+  {
+   "run": "ws-0308840+6da882c_B03@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+6da882c",
+   "source_sha256": "fd16e5d795f6b707fb48bce821e09dcad5a8e15c87e101d6e080bb24c911a838",
+   "output_sha256": "520fa9d73a14077e4ff552901ef17d1f9f0d4c335490cb8be5087de8c682d84e"
+  },
+  {
+   "run": "ws-0308840+6da882c_B03@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+6da882c",
+   "source_sha256": "520fa9d73a14077e4ff552901ef17d1f9f0d4c335490cb8be5087de8c682d84e",
+   "output_sha256": "5d865ccaa546ecc24addaa3f961465c7637cf1744c1dd6b3b64abed8ccbc8108"
+  },
+  {
+   "run": "ws-0308840+6da882c_GURREN@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+6da882c",
+   "source_sha256": "ca618ebe86c29a5101748d44d7e0dcd4c2c93958c80781bce6483a1d095dee03",
+   "output_sha256": "2618d9c15286136795cf62c657eb82c21883ecf59a4b1d4ae39473680f3754e6"
+  },
+  {
+   "run": "ws-0308840+6da882c_GURREN@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+6da882c",
+   "source_sha256": "2618d9c15286136795cf62c657eb82c21883ecf59a4b1d4ae39473680f3754e6",
+   "output_sha256": "16e15289696af0d707cd9208b7e58f1832b12d513bfdaba8d27ff489f79c5e57"
+  },
+  {
+   "run": "ws-0308840+6da882c_J01@1.1_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+6da882c",
+   "source_sha256": "b28294c78bb7e3c755827153b8d52bbdb5f80a9a45b598d6608a141493d26cf3",
+   "output_sha256": "0f66d83ed1699fcebf37cff9790e6112997327fdaeb1d187b83be489f8db7c03"
+  },
+  {
+   "run": "ws-0308840+6da882c_J01@1.1_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+6da882c",
+   "source_sha256": "0f66d83ed1699fcebf37cff9790e6112997327fdaeb1d187b83be489f8db7c03",
+   "output_sha256": "65a2e1bb120dd89dae684a4c299ca5fcd4f28a3d39bfb81a0502ee04b64b0c52"
+  },
+  {
+   "run": "ws-0308840+6da882c_J02@1.0_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+6da882c",
+   "source_sha256": "db97f7497094ed5681600b37a76ab81e975341280883dcf433b3d6c40e8f17a4",
+   "output_sha256": "d17aa52ce02e90f55a273021f20d4cc6ce4a0b647eec2c6bf064d0e3f639871e"
+  },
+  {
+   "run": "ws-0308840+6da882c_J02@1.0_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+6da882c",
+   "source_sha256": "d17aa52ce02e90f55a273021f20d4cc6ce4a0b647eec2c6bf064d0e3f639871e",
+   "output_sha256": "3e38975191159d37dd7b47ed6640453967edc0271641c4a51f5fc0400db5e000"
+  },
+  {
+   "run": "ws-0308840+6da882c_J03@1.0_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+6da882c",
+   "source_sha256": "45c7ae7293ff1dfd3310757a8b56f1d094e6928aa20a82b68ff45428f55bbc50",
+   "output_sha256": "b106e54e83792be55057488f3e9333e5f28eb3058ded57530f9956f7d795000f"
+  },
+  {
+   "run": "ws-0308840+6da882c_J03@1.0_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+6da882c",
+   "source_sha256": "b106e54e83792be55057488f3e9333e5f28eb3058ded57530f9956f7d795000f",
+   "output_sha256": "f96a503de238e178a2d9eb45be37fba20c4b5bc784d0d99ded6ff53ddd94029e"
+  },
+  {
+   "run": "ws-0308840+6da882c_J04@1.0_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+6da882c",
+   "source_sha256": "44a58908bbf86554eb85c6c0fb6b8b060ed016965e943eab05e72145606a7b4c",
+   "output_sha256": "6d943b0fd63dae4b627ca695adae4fcca700e07ae410d3e4dd2c5552629702d3"
+  },
+  {
+   "run": "ws-0308840+6da882c_J04@1.0_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+6da882c",
+   "source_sha256": "6d943b0fd63dae4b627ca695adae4fcca700e07ae410d3e4dd2c5552629702d3",
+   "output_sha256": "9f3f2f878614fddf2a881242c688244926ab9517e2c97906f2795173a46f91c0"
+  },
+  {
+   "run": "ws-0308840+7386ba0_B01@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+7386ba0",
+   "source_sha256": "83e8e9909a3d8915980df317073b80c11421152d8f7ed88714fd196e45c0a667",
+   "output_sha256": "afaf556e6fbd3c879344815de57f8b92044c3189801282ba69810e88154bd155"
+  },
+  {
+   "run": "ws-0308840+7386ba0_B01@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+7386ba0",
+   "source_sha256": "afaf556e6fbd3c879344815de57f8b92044c3189801282ba69810e88154bd155",
+   "output_sha256": "3bd12081a94c2bf0410195f043018bb9c91d4393ea6556b06a8ed10c51653caa"
+  },
+  {
+   "run": "ws-0308840+7386ba0_B02@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+7386ba0",
+   "source_sha256": "34d9b5dfaff557ef5e3907cae8fba31fc5de8dc03cb49c145ab14b0e6f6ccd10",
+   "output_sha256": "fe41651451e7650914625cf46d1669b31fbfa86375845a94995cbe30aa89b156"
+  },
+  {
+   "run": "ws-0308840+7386ba0_B02@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+7386ba0",
+   "source_sha256": "fe41651451e7650914625cf46d1669b31fbfa86375845a94995cbe30aa89b156",
+   "output_sha256": "b85e76d42f2b3d646e654c0d8bce56792c4547e083ecd71dec5e53ffc1ce142d"
+  },
+  {
+   "run": "ws-0308840+7386ba0_B03@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+7386ba0",
+   "source_sha256": "fd16e5d795f6b707fb48bce821e09dcad5a8e15c87e101d6e080bb24c911a838",
+   "output_sha256": "d51d5a2e11bd926dc8d458c40bf5201bc69c9440c42e25c60eb933af1da85da5"
+  },
+  {
+   "run": "ws-0308840+7386ba0_B03@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+7386ba0",
+   "source_sha256": "d51d5a2e11bd926dc8d458c40bf5201bc69c9440c42e25c60eb933af1da85da5",
+   "output_sha256": "b776a7066e85da4045ca73afb9b5ac253a327b4d97bc0266af63eb6a613f991c"
+  },
+  {
+   "run": "ws-0308840+7386ba0_GURREN@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+7386ba0",
+   "source_sha256": "ca618ebe86c29a5101748d44d7e0dcd4c2c93958c80781bce6483a1d095dee03",
+   "output_sha256": "3e8656e83deec037258c16d61ed8a4380c92a73c18c02030efb2a129ee42cf88"
+  },
+  {
+   "run": "ws-0308840+7386ba0_GURREN@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+0969d1d",
+   "source_sha256": "3e8656e83deec037258c16d61ed8a4380c92a73c18c02030efb2a129ee42cf88",
+   "output_sha256": "dccfc52975eb283ce48025555e233027c9f2dbdc5b184d164450e5beae1efe1d"
+  },
+  {
+   "run": "ws-0308840+7386ba0_J01@1.1_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+7386ba0",
+   "source_sha256": "b28294c78bb7e3c755827153b8d52bbdb5f80a9a45b598d6608a141493d26cf3",
+   "output_sha256": "5d5dd5e2c39b71f1be65e78a3b3ab971368db9b6c13dc4d2914a14f16db900f2"
+  },
+  {
+   "run": "ws-0308840+7386ba0_J01@1.1_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+7386ba0",
+   "source_sha256": "5d5dd5e2c39b71f1be65e78a3b3ab971368db9b6c13dc4d2914a14f16db900f2",
+   "output_sha256": "b76a7fb9dfc5361a02a80e432123fb57aa78e371abbb843681a4c4580d83c8e0"
+  },
+  {
+   "run": "ws-0308840+7386ba0_J02@1.0_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+7386ba0",
+   "source_sha256": "db97f7497094ed5681600b37a76ab81e975341280883dcf433b3d6c40e8f17a4",
+   "output_sha256": "f2a2a198798a24bb4c00ebe75608cb2fb8f367f31f644b1694b9d5799aaede82"
+  },
+  {
+   "run": "ws-0308840+7386ba0_J02@1.0_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+7386ba0",
+   "source_sha256": "f2a2a198798a24bb4c00ebe75608cb2fb8f367f31f644b1694b9d5799aaede82",
+   "output_sha256": "c79adc32ef34d074a6c4c716d09402f2908dc1818acc470630b62b95f6c5128d"
+  },
+  {
+   "run": "ws-0308840+7386ba0_J03@1.0_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+7386ba0",
+   "source_sha256": "45c7ae7293ff1dfd3310757a8b56f1d094e6928aa20a82b68ff45428f55bbc50",
+   "output_sha256": "4495b972faa0703dbf979be2a506d096fcb52129387a455b62c1124b3f4f3bbc"
+  },
+  {
+   "run": "ws-0308840+7386ba0_J03@1.0_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+7386ba0",
+   "source_sha256": "4495b972faa0703dbf979be2a506d096fcb52129387a455b62c1124b3f4f3bbc",
+   "output_sha256": "8d7b88e7758d8ae03dcc23ac45455faf037777e8b3abf523f48e46ce5519951f"
+  },
+  {
+   "run": "ws-0308840+7386ba0_J04@1.0_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+7386ba0",
+   "source_sha256": "44a58908bbf86554eb85c6c0fb6b8b060ed016965e943eab05e72145606a7b4c",
+   "output_sha256": "44e31fa1b6b74209b1a28548f84343f7383d948f37471bc7c8cec6d1288588cc"
+  },
+  {
+   "run": "ws-0308840+7386ba0_J04@1.0_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+7386ba0",
+   "source_sha256": "44e31fa1b6b74209b1a28548f84343f7383d948f37471bc7c8cec6d1288588cc",
+   "output_sha256": "af918bef3d504024d35c592d7f7ae2724c2547e09f31f43d9d204feb504dde45"
+  },
+  {
+   "run": "ws-0308840+73a0b64_B01@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+73a0b64",
+   "source_sha256": "83e8e9909a3d8915980df317073b80c11421152d8f7ed88714fd196e45c0a667",
+   "output_sha256": "8824e4e2db7e3e9fddbe6bcbec6d7dbeed2faef1d26cac9c04a4262bf20a04f5"
+  },
+  {
+   "run": "ws-0308840+73a0b64_B01@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+73a0b64",
+   "source_sha256": "8824e4e2db7e3e9fddbe6bcbec6d7dbeed2faef1d26cac9c04a4262bf20a04f5",
+   "output_sha256": "eb68d7e28209f48d53a377a244921f53c5cebe12f830057d0a98932300ed5147"
+  },
+  {
+   "run": "ws-0308840+73a0b64_B02@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+73a0b64",
+   "source_sha256": "34d9b5dfaff557ef5e3907cae8fba31fc5de8dc03cb49c145ab14b0e6f6ccd10",
+   "output_sha256": "cf205738fafb2d663ddc9a46356da905e82aad44d4b736fbbee5dce8d7cc6a16"
+  },
+  {
+   "run": "ws-0308840+73a0b64_B02@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+73a0b64",
+   "source_sha256": "cf205738fafb2d663ddc9a46356da905e82aad44d4b736fbbee5dce8d7cc6a16",
+   "output_sha256": "bedf6f6d3c36b093ec8f895d309f69e892f7f129a686f71e3f2dcf819a5e7c7d"
+  },
+  {
+   "run": "ws-0308840+73a0b64_B03@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+73a0b64",
+   "source_sha256": "fd16e5d795f6b707fb48bce821e09dcad5a8e15c87e101d6e080bb24c911a838",
+   "output_sha256": "59d450591c629731aa0db6e375078d7cee054d8446d7e36c8bdfc417aa78d61f"
+  },
+  {
+   "run": "ws-0308840+73a0b64_B03@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+73a0b64",
+   "source_sha256": "59d450591c629731aa0db6e375078d7cee054d8446d7e36c8bdfc417aa78d61f",
+   "output_sha256": "930f26ab5ebb2f8e3d6f6a86f986658a87a5a0ce6185e3a115b3fe196cbfbf64"
+  },
+  {
+   "run": "ws-0308840+73a0b64_GURREN@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+73a0b64",
+   "source_sha256": "ca618ebe86c29a5101748d44d7e0dcd4c2c93958c80781bce6483a1d095dee03",
+   "output_sha256": "cbbea15849e2404a2c7fa08f6106c50e7a2ace959d12674ea347c47e0ac997cd"
+  },
+  {
+   "run": "ws-0308840+73a0b64_GURREN@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+73a0b64",
+   "source_sha256": "cbbea15849e2404a2c7fa08f6106c50e7a2ace959d12674ea347c47e0ac997cd",
+   "output_sha256": "2ce19c330a9e94332a6ae961061d0f4c0ea299dee068504167475f8d57d21a27"
+  },
+  {
+   "run": "ws-0308840+73a0b64_J01@1.1_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+73a0b64",
+   "source_sha256": "b28294c78bb7e3c755827153b8d52bbdb5f80a9a45b598d6608a141493d26cf3",
+   "output_sha256": "dc78a5bb044395c9a0037c69354e1f0c90071a05d4e58892850c54e66c126b64"
+  },
+  {
+   "run": "ws-0308840+73a0b64_J01@1.1_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+73a0b64",
+   "source_sha256": "dc78a5bb044395c9a0037c69354e1f0c90071a05d4e58892850c54e66c126b64",
+   "output_sha256": "bb45b177e0497bdd0d7cecbd4c7d5b73581f4e49226cc77034ccf7f06f1ecf21"
+  },
+  {
+   "run": "ws-0308840+73a0b64_J02@1.0_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+73a0b64",
+   "source_sha256": "db97f7497094ed5681600b37a76ab81e975341280883dcf433b3d6c40e8f17a4",
+   "output_sha256": "aa0586db01a7eece91fcbec401a718bf363300d8a6816266d1bbab0fa29a6426"
+  },
+  {
+   "run": "ws-0308840+73a0b64_J02@1.0_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+73a0b64",
+   "source_sha256": "aa0586db01a7eece91fcbec401a718bf363300d8a6816266d1bbab0fa29a6426",
+   "output_sha256": "14fdf86c3406571242e30c38b04940b7dbfb36eef72a6729f681b27652738e64"
+  },
+  {
+   "run": "ws-0308840+73a0b64_J03@1.0_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+73a0b64",
+   "source_sha256": "45c7ae7293ff1dfd3310757a8b56f1d094e6928aa20a82b68ff45428f55bbc50",
+   "output_sha256": "f2460f8fdcefcb8b8226b40895dd6e53008f4cbd64530aa421f5d63dcd25734a"
+  },
+  {
+   "run": "ws-0308840+73a0b64_J03@1.0_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+73a0b64",
+   "source_sha256": "f2460f8fdcefcb8b8226b40895dd6e53008f4cbd64530aa421f5d63dcd25734a",
+   "output_sha256": "204d9493506a7359a5b8f239c2a6e5012603f9759a50000175282abce108a411"
+  },
+  {
+   "run": "ws-0308840+73a0b64_J04@1.0_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+73a0b64",
+   "source_sha256": "44a58908bbf86554eb85c6c0fb6b8b060ed016965e943eab05e72145606a7b4c",
+   "output_sha256": "793ae7a987d6329836b5b3cd142154a6fb6aee99396f280522ccde78d8ee8c5a"
+  },
+  {
+   "run": "ws-0308840+73a0b64_J04@1.0_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+73a0b64",
+   "source_sha256": "793ae7a987d6329836b5b3cd142154a6fb6aee99396f280522ccde78d8ee8c5a",
+   "output_sha256": "03b80706e34a746e70c413fce5ef9e8118c76b6f19dd9d0b4398afccd46fda67"
+  },
+  {
+   "run": "ws-0308840+74eaf29_B01@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+74eaf29",
+   "source_sha256": "83e8e9909a3d8915980df317073b80c11421152d8f7ed88714fd196e45c0a667",
+   "output_sha256": "7a18645f52c64c02b6db7470e60ddcfc9c2bbf929f1c0277fa4d7b7f0608f9a4"
+  },
+  {
+   "run": "ws-0308840+74eaf29_B01@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+74eaf29",
+   "source_sha256": "7a18645f52c64c02b6db7470e60ddcfc9c2bbf929f1c0277fa4d7b7f0608f9a4",
+   "output_sha256": "d43efd10afe70de609530ba364ab109ffd990c98b8cce75ea0d5a93810c8af63"
+  },
+  {
+   "run": "ws-0308840+74eaf29_B02@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+74eaf29",
+   "source_sha256": "34d9b5dfaff557ef5e3907cae8fba31fc5de8dc03cb49c145ab14b0e6f6ccd10",
+   "output_sha256": "f734eb0990235feabf07c673ba8393f1e0d9d2351a6f5f5bd56e0b451ae8a236"
+  },
+  {
+   "run": "ws-0308840+74eaf29_B02@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+74eaf29",
+   "source_sha256": "f734eb0990235feabf07c673ba8393f1e0d9d2351a6f5f5bd56e0b451ae8a236",
+   "output_sha256": "9c530fb93d839378df141282676df65e056b0aaab99b88928945b47534863405"
+  },
+  {
+   "run": "ws-0308840+74eaf29_B03@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+74eaf29",
+   "source_sha256": "fd16e5d795f6b707fb48bce821e09dcad5a8e15c87e101d6e080bb24c911a838",
+   "output_sha256": "6f742207b384f9c81e4a99bdb287c91989f40c89dd22fb4737808d6a7fa4ecc1"
+  },
+  {
+   "run": "ws-0308840+74eaf29_B03@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+74eaf29",
+   "source_sha256": "6f742207b384f9c81e4a99bdb287c91989f40c89dd22fb4737808d6a7fa4ecc1",
+   "output_sha256": "e62e754c0261708f926d8c2c445c76b613fee07bbb060a755b991e935baadb9f"
+  },
+  {
+   "run": "ws-0308840+74eaf29_GURREN@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+74eaf29",
+   "source_sha256": "ca618ebe86c29a5101748d44d7e0dcd4c2c93958c80781bce6483a1d095dee03",
+   "output_sha256": "24fb13b001c789b9a2416afce28657b35439f319bdae7a73828a10156bf6b6c0"
+  },
+  {
+   "run": "ws-0308840+74eaf29_GURREN@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+74eaf29",
+   "source_sha256": "24fb13b001c789b9a2416afce28657b35439f319bdae7a73828a10156bf6b6c0",
+   "output_sha256": "1d67c6c2133181022c46ca2179c7d82b891f72579591906094694d347d5e0847"
+  },
+  {
+   "run": "ws-0308840+74eaf29_J01@1.1_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+74eaf29",
+   "source_sha256": "b28294c78bb7e3c755827153b8d52bbdb5f80a9a45b598d6608a141493d26cf3",
+   "output_sha256": "bfa63e3399b6f0c68b3e166b557e3147a3fba012bda122cca0c7797a128299c3"
+  },
+  {
+   "run": "ws-0308840+74eaf29_J01@1.1_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+74eaf29",
+   "source_sha256": "bfa63e3399b6f0c68b3e166b557e3147a3fba012bda122cca0c7797a128299c3",
+   "output_sha256": "aa4d949488d57fc955fb54975e72e80db558d846c5d203732a2c86671ff86fda"
+  },
+  {
+   "run": "ws-0308840+74eaf29_J02@1.0_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+74eaf29",
+   "source_sha256": "db97f7497094ed5681600b37a76ab81e975341280883dcf433b3d6c40e8f17a4",
+   "output_sha256": "36c206392c6e6a9ff052c52762d6ebafc19794d9d14b801eaba7f7f5b08ade5e"
+  },
+  {
+   "run": "ws-0308840+74eaf29_J02@1.0_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+74eaf29",
+   "source_sha256": "36c206392c6e6a9ff052c52762d6ebafc19794d9d14b801eaba7f7f5b08ade5e",
+   "output_sha256": "94e26bace441bd47db5f1050619879bacb319dfbcdc5068493dbe290f14865b8"
+  },
+  {
+   "run": "ws-0308840+74eaf29_J03@1.0_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+74eaf29",
+   "source_sha256": "45c7ae7293ff1dfd3310757a8b56f1d094e6928aa20a82b68ff45428f55bbc50",
+   "output_sha256": "e6848785fbff9877ad8f3d2f545bb7280a9bbe0b0831444ba93f8a78f1782021"
+  },
+  {
+   "run": "ws-0308840+74eaf29_J03@1.0_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+74eaf29",
+   "source_sha256": "e6848785fbff9877ad8f3d2f545bb7280a9bbe0b0831444ba93f8a78f1782021",
+   "output_sha256": "afda82d815b39a5b28c986d72d91dbbed2a14168b833493b2a9de7b9520110b4"
+  },
+  {
+   "run": "ws-0308840+74eaf29_J04@1.0_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+74eaf29",
+   "source_sha256": "44a58908bbf86554eb85c6c0fb6b8b060ed016965e943eab05e72145606a7b4c",
+   "output_sha256": "89c6d4270a4a48c9291eb6d55b16169127ade3dd9f368fa16f1161fa4b5ef682"
+  },
+  {
+   "run": "ws-0308840+74eaf29_J04@1.0_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+74eaf29",
+   "source_sha256": "89c6d4270a4a48c9291eb6d55b16169127ade3dd9f368fa16f1161fa4b5ef682",
+   "output_sha256": "3d2e2ec7aa9b69e6240a7b8da6928b4ed3b58703bb6f794532de677aeefa475d"
+  },
+  {
+   "run": "ws-0308840+7c94a15_B01@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+7c94a15",
+   "source_sha256": "83e8e9909a3d8915980df317073b80c11421152d8f7ed88714fd196e45c0a667",
+   "output_sha256": "1c1fdc624a5f6329f1b7575bf18238f8a88e25a34d93bfdea2ab0b681722f9bc"
+  },
+  {
+   "run": "ws-0308840+7c94a15_B01@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+7c94a15",
+   "source_sha256": "1c1fdc624a5f6329f1b7575bf18238f8a88e25a34d93bfdea2ab0b681722f9bc",
+   "output_sha256": "b8ae9c3e486eea00a0b5279b0373c1445e5b8fcb55f962dbb24483bf62520c35"
+  },
+  {
+   "run": "ws-0308840+7c94a15_B02@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+7c94a15",
+   "source_sha256": "34d9b5dfaff557ef5e3907cae8fba31fc5de8dc03cb49c145ab14b0e6f6ccd10",
+   "output_sha256": "241df9858fbf7a2ae03c7dc7148ece74cae01782d6da29a5828ce6af56593c58"
+  },
+  {
+   "run": "ws-0308840+7c94a15_B02@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+7c94a15",
+   "source_sha256": "241df9858fbf7a2ae03c7dc7148ece74cae01782d6da29a5828ce6af56593c58",
+   "output_sha256": "62da2e970b78f99be8fec0ada503694c3bfc897460c30c824e1bb553af5920af"
+  },
+  {
+   "run": "ws-0308840+7c94a15_B03@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+7c94a15",
+   "source_sha256": "fd16e5d795f6b707fb48bce821e09dcad5a8e15c87e101d6e080bb24c911a838",
+   "output_sha256": "aaa55c3566dcb7273ebe8c54c2c6f17710d2cd5e5ef1a1536d8911812c463bfd"
+  },
+  {
+   "run": "ws-0308840+7c94a15_B03@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+7c94a15",
+   "source_sha256": "aaa55c3566dcb7273ebe8c54c2c6f17710d2cd5e5ef1a1536d8911812c463bfd",
+   "output_sha256": "71d5dabcb01b2c80e7348711058e35dcbe6b07c8bd4e0f15f1fc0db50f06df7b"
+  },
+  {
+   "run": "ws-0308840+7c94a15_GURREN@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+7c94a15",
+   "source_sha256": "ca618ebe86c29a5101748d44d7e0dcd4c2c93958c80781bce6483a1d095dee03",
+   "output_sha256": "180ee0234d2f78961d6616dc4188b9cd83ec10d511e2a4da5da9df133d644e4f"
+  },
+  {
+   "run": "ws-0308840+7c94a15_GURREN@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+7c94a15",
+   "source_sha256": "180ee0234d2f78961d6616dc4188b9cd83ec10d511e2a4da5da9df133d644e4f",
+   "output_sha256": "be3226f2ef2fe9f8d5884871447c6d882606ce654936e0e3a3d520b8e1393837"
+  },
+  {
+   "run": "ws-0308840+7c94a15_J01@1.1_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+7c94a15",
+   "source_sha256": "b28294c78bb7e3c755827153b8d52bbdb5f80a9a45b598d6608a141493d26cf3",
+   "output_sha256": "94200619587227df149852af9915c74e85b306351450cdca57f22b7e9ced69b6"
+  },
+  {
+   "run": "ws-0308840+7c94a15_J01@1.1_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+7c94a15",
+   "source_sha256": "94200619587227df149852af9915c74e85b306351450cdca57f22b7e9ced69b6",
+   "output_sha256": "0c0703d8a2d440fc6e983b53a6a7f4926d270c080955eb0031e545df4e4110e6"
+  },
+  {
+   "run": "ws-0308840+7c94a15_J02@1.0_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+7c94a15",
+   "source_sha256": "db97f7497094ed5681600b37a76ab81e975341280883dcf433b3d6c40e8f17a4",
+   "output_sha256": "62c808e71440ca2adeb128f57264d8718f90db44672779afd162000a723d4b31"
+  },
+  {
+   "run": "ws-0308840+7c94a15_J02@1.0_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+7c94a15",
+   "source_sha256": "62c808e71440ca2adeb128f57264d8718f90db44672779afd162000a723d4b31",
+   "output_sha256": "264b0a177a0fa4098940aa870be6c1cbb1b2765cedbca6725c06af56f7fe7319"
+  },
+  {
+   "run": "ws-0308840+7c94a15_J03@1.0_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+7c94a15",
+   "source_sha256": "45c7ae7293ff1dfd3310757a8b56f1d094e6928aa20a82b68ff45428f55bbc50",
+   "output_sha256": "15a76e385ff9a76d8e952337a3824fe07ded8744ac636d0ddcbc9e78a6914d22"
+  },
+  {
+   "run": "ws-0308840+7c94a15_J03@1.0_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+7c94a15",
+   "source_sha256": "15a76e385ff9a76d8e952337a3824fe07ded8744ac636d0ddcbc9e78a6914d22",
+   "output_sha256": "c13ce4ee30a865736a043c64cab678ce6ec7b5f66bbf474fb3e6b5638fad3d64"
+  },
+  {
+   "run": "ws-0308840+7c94a15_J04@1.0_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+7c94a15",
+   "source_sha256": "44a58908bbf86554eb85c6c0fb6b8b060ed016965e943eab05e72145606a7b4c",
+   "output_sha256": "acb448eae5b9031e559dd310cf8511fa5261db46a5b463d0e81accfae2f5877a"
+  },
+  {
+   "run": "ws-0308840+7c94a15_J04@1.0_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+7c94a15",
+   "source_sha256": "acb448eae5b9031e559dd310cf8511fa5261db46a5b463d0e81accfae2f5877a",
+   "output_sha256": "c2a5f1d8ab4075aab97a00a91023b0892bbe50cd3641b0a762a29064c77566fc"
+  },
+  {
+   "run": "ws-0308840+989c8b0_B01@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+989c8b0",
+   "source_sha256": "83e8e9909a3d8915980df317073b80c11421152d8f7ed88714fd196e45c0a667",
+   "output_sha256": "7026d9650a8d846c9e50fe455ef180848a348ac0bd7db08bdd69ec156373c7f2"
+  },
+  {
+   "run": "ws-0308840+989c8b0_B01@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+989c8b0",
+   "source_sha256": "7026d9650a8d846c9e50fe455ef180848a348ac0bd7db08bdd69ec156373c7f2",
+   "output_sha256": "bcb20a28c05bd2cf740acfd1a27b4504ead606dfe917957b0c8f0cdee3172cb1"
+  },
+  {
+   "run": "ws-0308840+989c8b0_B02@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+989c8b0",
+   "source_sha256": "34d9b5dfaff557ef5e3907cae8fba31fc5de8dc03cb49c145ab14b0e6f6ccd10",
+   "output_sha256": "e0ae6bd869548adbeabca69333e4d845dafb2757015a1f4d93a99ac5e5dd7fa7"
+  },
+  {
+   "run": "ws-0308840+989c8b0_B02@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+989c8b0",
+   "source_sha256": "e0ae6bd869548adbeabca69333e4d845dafb2757015a1f4d93a99ac5e5dd7fa7",
+   "output_sha256": "baad17707729e085d8b333f2ddf971821a7e6ad3106e57d517922c2b6bb4d337"
+  },
+  {
+   "run": "ws-0308840+989c8b0_B03@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+989c8b0",
+   "source_sha256": "fd16e5d795f6b707fb48bce821e09dcad5a8e15c87e101d6e080bb24c911a838",
+   "output_sha256": "5673bca43962b9e8e23f920f228d553a534f4e58d730f2870d85b0ffccd650e6"
+  },
+  {
+   "run": "ws-0308840+989c8b0_B03@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+989c8b0",
+   "source_sha256": "5673bca43962b9e8e23f920f228d553a534f4e58d730f2870d85b0ffccd650e6",
+   "output_sha256": "1aab1d9adc3902b70ad0376a0f0be9b759f6e38fd73f696e4122d952d33f9ed8"
+  },
+  {
+   "run": "ws-0308840+989c8b0_GURREN@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+989c8b0",
+   "source_sha256": "ca618ebe86c29a5101748d44d7e0dcd4c2c93958c80781bce6483a1d095dee03",
+   "output_sha256": "5132265c7d19855b66c4f881744732ce6d03ec91b82bc0b142fdd0b3ef8b2e81"
+  },
+  {
+   "run": "ws-0308840+989c8b0_GURREN@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+989c8b0",
+   "source_sha256": "5132265c7d19855b66c4f881744732ce6d03ec91b82bc0b142fdd0b3ef8b2e81",
+   "output_sha256": "7f27503d7008c20b96aa1a010769eeb9b7305ad3c9ab4e1c91fcbaa07dab2f01"
+  },
+  {
+   "run": "ws-0308840+989c8b0_J01@1.1_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+989c8b0",
+   "source_sha256": "b28294c78bb7e3c755827153b8d52bbdb5f80a9a45b598d6608a141493d26cf3",
+   "output_sha256": "1c0055a60baec9938f01627661585412f415c000c4ea4b4da0132a84d764478c"
+  },
+  {
+   "run": "ws-0308840+989c8b0_J01@1.1_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+989c8b0",
+   "source_sha256": "1c0055a60baec9938f01627661585412f415c000c4ea4b4da0132a84d764478c",
+   "output_sha256": "0a2cbb5b311d59d32cfa349136bf04b9ca6817874dd45a04b065caf63272739d"
+  },
+  {
+   "run": "ws-0308840+989c8b0_J02@1.0_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+989c8b0",
+   "source_sha256": "db97f7497094ed5681600b37a76ab81e975341280883dcf433b3d6c40e8f17a4",
+   "output_sha256": "d68648f972f0489663fc01fdeb9757ae396f82dcad17a0aa0e2c0a44dd621eb4"
+  },
+  {
+   "run": "ws-0308840+989c8b0_J02@1.0_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+989c8b0",
+   "source_sha256": "d68648f972f0489663fc01fdeb9757ae396f82dcad17a0aa0e2c0a44dd621eb4",
+   "output_sha256": "0d50732cf13ce46dfe5d7310c7357f44259fc828d7364008a505b913d1462952"
+  },
+  {
+   "run": "ws-0308840+989c8b0_J03@1.0_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+989c8b0",
+   "source_sha256": "45c7ae7293ff1dfd3310757a8b56f1d094e6928aa20a82b68ff45428f55bbc50",
+   "output_sha256": "13897b9f1df79ed68567f301fdd4ea157134d7bc029bc7276039844d1edc1ef7"
+  },
+  {
+   "run": "ws-0308840+989c8b0_J03@1.0_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+989c8b0",
+   "source_sha256": "13897b9f1df79ed68567f301fdd4ea157134d7bc029bc7276039844d1edc1ef7",
+   "output_sha256": "71f8bd98fa56e01a69ae02b3ce9151b25c4373ab9cdf54ebb5b163638fd74285"
+  },
+  {
+   "run": "ws-0308840+989c8b0_J04@1.0_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+989c8b0",
+   "source_sha256": "44a58908bbf86554eb85c6c0fb6b8b060ed016965e943eab05e72145606a7b4c",
+   "output_sha256": "f529bb5ae76cc94cdcac600cf403d8c98d63474b50536c41fd59205104d2dbba"
+  },
+  {
+   "run": "ws-0308840+989c8b0_J04@1.0_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+989c8b0",
+   "source_sha256": "f529bb5ae76cc94cdcac600cf403d8c98d63474b50536c41fd59205104d2dbba",
+   "output_sha256": "3eac1937513512601a5adfe1cc8bae4acc4b0c8835b625056bfdcd010a1b5c1c"
+  },
+  {
+   "run": "ws-0308840+f37da66_B01@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+f37da66",
+   "source_sha256": "83e8e9909a3d8915980df317073b80c11421152d8f7ed88714fd196e45c0a667",
+   "output_sha256": "ac1148fc5d2d2bd43c9c84686289da4cec40c970f077b856538cf2016c1dd97c"
+  },
+  {
+   "run": "ws-0308840+f37da66_B01@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+f37da66",
+   "source_sha256": "ac1148fc5d2d2bd43c9c84686289da4cec40c970f077b856538cf2016c1dd97c",
+   "output_sha256": "16d9aaa8319ed87d983396abe0d31ccb306e10848e5dacb60fc095a5d1a8d4c9"
+  },
+  {
+   "run": "ws-0308840+f37da66_B02@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+f37da66",
+   "source_sha256": "34d9b5dfaff557ef5e3907cae8fba31fc5de8dc03cb49c145ab14b0e6f6ccd10",
+   "output_sha256": "aea540d190797900914c0694adab6141cb9614bd924b933e5bbeb89103ed736f"
+  },
+  {
+   "run": "ws-0308840+f37da66_B02@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+f37da66",
+   "source_sha256": "aea540d190797900914c0694adab6141cb9614bd924b933e5bbeb89103ed736f",
+   "output_sha256": "94ade2913e9adec0add9226a70fa29d6bcef2eef2c86ea4e823be68a69da45f4"
+  },
+  {
+   "run": "ws-0308840+f37da66_B03@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+f37da66",
+   "source_sha256": "fd16e5d795f6b707fb48bce821e09dcad5a8e15c87e101d6e080bb24c911a838",
+   "output_sha256": "f0708a88acd6c9340732862c95a1f8c7dfefc2e26f907d8f687db9cbe759d25e"
+  },
+  {
+   "run": "ws-0308840+f37da66_B03@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+f37da66",
+   "source_sha256": "f0708a88acd6c9340732862c95a1f8c7dfefc2e26f907d8f687db9cbe759d25e",
+   "output_sha256": "3b1ac79a4fdd3e28b3447c44a950c30be68b897b5634c2296c9b82489fdc7f07"
+  },
+  {
+   "run": "ws-0308840+f37da66_GURREN@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+f37da66",
+   "source_sha256": "ca618ebe86c29a5101748d44d7e0dcd4c2c93958c80781bce6483a1d095dee03",
+   "output_sha256": "6e5230b1c32751a9a3d7afe696a568e09f7f0898a428a2878a25c7a1bc92202f"
+  },
+  {
+   "run": "ws-0308840+f37da66_GURREN@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+f37da66",
+   "source_sha256": "6e5230b1c32751a9a3d7afe696a568e09f7f0898a428a2878a25c7a1bc92202f",
+   "output_sha256": "28c4c207f5baa06282265e82b3d9f8e683c6690f7de6be26c5ee727f3d9575a8"
+  },
+  {
+   "run": "ws-0308840+f37da66_J01@1.1_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+f37da66",
+   "source_sha256": "b28294c78bb7e3c755827153b8d52bbdb5f80a9a45b598d6608a141493d26cf3",
+   "output_sha256": "297c1f8da512de5b3ba0829f13c70ce92a54913b1a26a2adf54cfee3c5c0547e"
+  },
+  {
+   "run": "ws-0308840+f37da66_J01@1.1_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+f37da66",
+   "source_sha256": "297c1f8da512de5b3ba0829f13c70ce92a54913b1a26a2adf54cfee3c5c0547e",
+   "output_sha256": "672657a53b80089017328680f9b7ab1658fb50153f355b168e232342e1c86f76"
+  },
+  {
+   "run": "ws-0308840+f37da66_J02@1.0_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+f37da66",
+   "source_sha256": "db97f7497094ed5681600b37a76ab81e975341280883dcf433b3d6c40e8f17a4",
+   "output_sha256": "0fc7d13a69c665023a99b10e6db64e264bf8944a0f0ba90438e832657ddb1911"
+  },
+  {
+   "run": "ws-0308840+f37da66_J02@1.0_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+f37da66",
+   "source_sha256": "0fc7d13a69c665023a99b10e6db64e264bf8944a0f0ba90438e832657ddb1911",
+   "output_sha256": "7711975124b72a297055772c2c74ce72203ed8fac40f24902ce15d906f5fa0fc"
+  },
+  {
+   "run": "ws-0308840+f37da66_J03@1.0_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+f37da66",
+   "source_sha256": "45c7ae7293ff1dfd3310757a8b56f1d094e6928aa20a82b68ff45428f55bbc50",
+   "output_sha256": "b944318c62d6351fb9f8546738ad224401ca1ce3376e207b35306089b934fb00"
+  },
+  {
+   "run": "ws-0308840+f37da66_J03@1.0_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+f37da66",
+   "source_sha256": "b944318c62d6351fb9f8546738ad224401ca1ce3376e207b35306089b934fb00",
+   "output_sha256": "d59e3f1f2fd873d039409db4054162732e1c9d0f9c8056f2993b7d335ec203f6"
+  },
+  {
+   "run": "ws-0308840+f37da66_J04@1.0_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840+f37da66",
+   "source_sha256": "44a58908bbf86554eb85c6c0fb6b8b060ed016965e943eab05e72145606a7b4c",
+   "output_sha256": "3b1a97f5c20e39486bba63e1caead66ca3eefa90dc1d1e5749bcdd2107a9543d"
+  },
+  {
+   "run": "ws-0308840+f37da66_J04@1.0_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840+f37da66",
+   "source_sha256": "3b1a97f5c20e39486bba63e1caead66ca3eefa90dc1d1e5749bcdd2107a9543d",
+   "output_sha256": "4c6719795709b357aef3723d40ced49755c2ed4662fd937b0c2babe12d880ca1"
+  },
+  {
+   "run": "ws-0308840_B01@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840",
+   "source_sha256": "83e8e9909a3d8915980df317073b80c11421152d8f7ed88714fd196e45c0a667",
+   "output_sha256": "f70e957454ea3245a46e25f20df137ecf29321353ee14e61b548a6acc4d0b799"
+  },
+  {
+   "run": "ws-0308840_B01@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840",
+   "source_sha256": "f70e957454ea3245a46e25f20df137ecf29321353ee14e61b548a6acc4d0b799",
+   "output_sha256": "334cd0df8e569d8591ba3f9ba50a1b3c7c163c619c73a35ed50ccace549e51ed"
+  },
+  {
+   "run": "ws-0308840_B02@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840",
+   "source_sha256": "34d9b5dfaff557ef5e3907cae8fba31fc5de8dc03cb49c145ab14b0e6f6ccd10",
+   "output_sha256": "c8fc90f6a2a7e600e13e4fb51ee9f6f30b07a32b1a646aec49acd67e1deae0f0"
+  },
+  {
+   "run": "ws-0308840_B02@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840",
+   "source_sha256": "c8fc90f6a2a7e600e13e4fb51ee9f6f30b07a32b1a646aec49acd67e1deae0f0",
+   "output_sha256": "eeb605e6796d3018731920a1375e964b942e63acc79eef66cc5bfae9d8a67571"
+  },
+  {
+   "run": "ws-0308840_B03@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840",
+   "source_sha256": "fd16e5d795f6b707fb48bce821e09dcad5a8e15c87e101d6e080bb24c911a838",
+   "output_sha256": "61fa3c0ce409c0cf10a704e24bfdf3bcc0bc19d515d5a6c214f700a4bc06a4b7"
+  },
+  {
+   "run": "ws-0308840_B03@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840",
+   "source_sha256": "61fa3c0ce409c0cf10a704e24bfdf3bcc0bc19d515d5a6c214f700a4bc06a4b7",
+   "output_sha256": "21920c6ea4fbfd43e900200656e508c09723ed889776ff8dc3a1e7e419d0879c"
+  },
+  {
+   "run": "ws-0308840_GURREN@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840",
+   "source_sha256": "ca618ebe86c29a5101748d44d7e0dcd4c2c93958c80781bce6483a1d095dee03",
+   "output_sha256": "b547a709394423ca69702530d760e361f6cf7ba9dde29944449b51b3806ca419"
+  },
+  {
+   "run": "ws-0308840_GURREN@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840",
+   "source_sha256": "b547a709394423ca69702530d760e361f6cf7ba9dde29944449b51b3806ca419",
+   "output_sha256": "7a426798dbd98dcb38abceec03583e13f707b0273c26334db38a4772d65d6f46"
+  },
+  {
+   "run": "ws-0308840_J01@1.1_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840",
+   "source_sha256": "b28294c78bb7e3c755827153b8d52bbdb5f80a9a45b598d6608a141493d26cf3",
+   "output_sha256": "0b186da09daf796a7270e917d832a6bc39208dcef6c8c152208b102dba232146"
+  },
+  {
+   "run": "ws-0308840_J01@1.1_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840",
+   "source_sha256": "0b186da09daf796a7270e917d832a6bc39208dcef6c8c152208b102dba232146",
+   "output_sha256": "7252b3b17e568ee1e47c5b90e7d4810e50d3ca442e5390876ae1ca9818edec10"
+  },
+  {
+   "run": "ws-0308840_J02@1.0_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840",
+   "source_sha256": "db97f7497094ed5681600b37a76ab81e975341280883dcf433b3d6c40e8f17a4",
+   "output_sha256": "88bf98ee693928a3ac1feea4caa50e8136c7d5689bb81b907ecbd4a16a1c86fd"
+  },
+  {
+   "run": "ws-0308840_J02@1.0_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840",
+   "source_sha256": "88bf98ee693928a3ac1feea4caa50e8136c7d5689bb81b907ecbd4a16a1c86fd",
+   "output_sha256": "d815d842822b90db4e16af16d9864da138baff47d36fa9cfe03bb3c2fcee71fc"
+  },
+  {
+   "run": "ws-0308840_J03@1.0_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840",
+   "source_sha256": "45c7ae7293ff1dfd3310757a8b56f1d094e6928aa20a82b68ff45428f55bbc50",
+   "output_sha256": "5fc8f695da40cc10c8b1ab69848522bb6fb9dfe175e49f5a9d990d388f4f128f"
+  },
+  {
+   "run": "ws-0308840_J03@1.0_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840",
+   "source_sha256": "5fc8f695da40cc10c8b1ab69848522bb6fb9dfe175e49f5a9d990d388f4f128f",
+   "output_sha256": "804794dbe8ff3c3fad879336d354ccc55435ceff074b5871b221aab3a9a7a0e6"
+  },
+  {
+   "run": "ws-0308840_J04@1.0_j2b",
+   "converter": "WorldSwitch",
+   "build": "0308840",
+   "source_sha256": "44a58908bbf86554eb85c6c0fb6b8b060ed016965e943eab05e72145606a7b4c",
+   "output_sha256": "7e8ee6870691644a6fc240d6f1ab3797a504dc3d5039d04c8f81f7ab22720fc7"
+  },
+  {
+   "run": "ws-0308840_J04@1.0_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "0308840",
+   "source_sha256": "7e8ee6870691644a6fc240d6f1ab3797a504dc3d5039d04c8f81f7ab22720fc7",
+   "output_sha256": "2975bda2afe105b1753eb0b6372d9182f50d88d16d8cd75e84cda13017657074"
+  },
+  {
+   "run": "ws-fd9b735_B01@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "fd9b735",
+   "source_sha256": "83e8e9909a3d8915980df317073b80c11421152d8f7ed88714fd196e45c0a667",
+   "output_sha256": "e513a66b5cad82e9ea08ed1f880b3ab0d4af0148faee337be3b4aa38e4e6a6d1"
+  },
+  {
+   "run": "ws-fd9b735_B01@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "fd9b735",
+   "source_sha256": "e513a66b5cad82e9ea08ed1f880b3ab0d4af0148faee337be3b4aa38e4e6a6d1",
+   "output_sha256": "d67a6cfc1d9517bc8f972249d97df631a4eef1867aa052a23a38c4fb640779a8"
+  },
+  {
+   "run": "ws-fd9b735_B02@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "fd9b735",
+   "source_sha256": "34d9b5dfaff557ef5e3907cae8fba31fc5de8dc03cb49c145ab14b0e6f6ccd10",
+   "output_sha256": "82f2fc50e562d51b1aef44aab50f69fec4abd729ace48fd9f4f75057a7c810d3"
+  },
+  {
+   "run": "ws-fd9b735_B02@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "fd9b735",
+   "source_sha256": "82f2fc50e562d51b1aef44aab50f69fec4abd729ace48fd9f4f75057a7c810d3",
+   "output_sha256": "ea977bf114fd2c3a67ffa80fb82a44a829b7bed48e461f92b0a8f0d2567ea2f3"
+  },
+  {
+   "run": "ws-fd9b735_B03@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "fd9b735",
+   "source_sha256": "fd16e5d795f6b707fb48bce821e09dcad5a8e15c87e101d6e080bb24c911a838",
+   "output_sha256": "57704b4475da80e13402fdd7247fd7e3214774dd9d20ad64b596a60e83e7ff4f"
+  },
+  {
+   "run": "ws-fd9b735_B03@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "fd9b735",
+   "source_sha256": "57704b4475da80e13402fdd7247fd7e3214774dd9d20ad64b596a60e83e7ff4f",
+   "output_sha256": "c02b5bd35c282221b2f6de69fc9cfae66aec533e537abe9979e53d756fb6949c"
+  },
+  {
+   "run": "ws-fd9b735_GURREN@1.0_b2j",
+   "converter": "WorldSwitch",
+   "build": "fd9b735",
+   "source_sha256": "ca618ebe86c29a5101748d44d7e0dcd4c2c93958c80781bce6483a1d095dee03",
+   "output_sha256": "3c10c7a8957592f8187e94084f433a03d995bfe209dfc63e7759ebaad4e42fe8"
+  },
+  {
+   "run": "ws-fd9b735_GURREN@1.0_b2j2b",
+   "converter": "WorldSwitch",
+   "build": "fd9b735",
+   "source_sha256": "3c10c7a8957592f8187e94084f433a03d995bfe209dfc63e7759ebaad4e42fe8",
+   "output_sha256": "1bc3d4e0f5b54b01de97b8493214565d3c7833873521cf9ae8884ac11ee2f07d"
+  },
+  {
+   "run": "ws-fd9b735_J01@1.1_j2b",
+   "converter": "WorldSwitch",
+   "build": "fd9b735",
+   "source_sha256": "b28294c78bb7e3c755827153b8d52bbdb5f80a9a45b598d6608a141493d26cf3",
+   "output_sha256": "46974e300462e6e796c7740ce03cba785f12832f221ef4e42b2d0efedb7c6a43"
+  },
+  {
+   "run": "ws-fd9b735_J01@1.1_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "fd9b735",
+   "source_sha256": "46974e300462e6e796c7740ce03cba785f12832f221ef4e42b2d0efedb7c6a43",
+   "output_sha256": "b3d3704b6c81c3b256e6a8c575386bdaadedb90f0c4d46d881f4c42c5a1061b2"
+  },
+  {
+   "run": "ws-fd9b735_J02@1.0_j2b",
+   "converter": "WorldSwitch",
+   "build": "fd9b735",
+   "source_sha256": "db97f7497094ed5681600b37a76ab81e975341280883dcf433b3d6c40e8f17a4",
+   "output_sha256": "df8ef7e847ce6d5fdfd7894999cb6e8e6bd669668ada10a500150297124e4520"
+  },
+  {
+   "run": "ws-fd9b735_J02@1.0_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "fd9b735",
+   "source_sha256": "df8ef7e847ce6d5fdfd7894999cb6e8e6bd669668ada10a500150297124e4520",
+   "output_sha256": "04593255aca9ab5e312cf1873abcc2890317507728e070445812d3bc644f6d82"
+  },
+  {
+   "run": "ws-fd9b735_J03@1.0_j2b",
+   "converter": "WorldSwitch",
+   "build": "fd9b735",
+   "source_sha256": "45c7ae7293ff1dfd3310757a8b56f1d094e6928aa20a82b68ff45428f55bbc50",
+   "output_sha256": "181b5fa5228ad18e17d6d8318113b5b94e4aed35e95e127d3fed033a6f4ed312"
+  },
+  {
+   "run": "ws-fd9b735_J03@1.0_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "fd9b735",
+   "source_sha256": "181b5fa5228ad18e17d6d8318113b5b94e4aed35e95e127d3fed033a6f4ed312",
+   "output_sha256": "dbc9331cd8df7c3ee736925b1d035645f2e10f5946fa81da33a85d6c37e652cc"
+  },
+  {
+   "run": "ws-fd9b735_J04@1.0_j2b",
+   "converter": "WorldSwitch",
+   "build": "fd9b735",
+   "source_sha256": "44a58908bbf86554eb85c6c0fb6b8b060ed016965e943eab05e72145606a7b4c",
+   "output_sha256": "d226030cbcb9255c8233ab0bd557f01ef5d1d03b731a49821c39a0c0eb0d9cf9"
+  },
+  {
+   "run": "ws-fd9b735_J04@1.0_j2b2j",
+   "converter": "WorldSwitch",
+   "build": "fd9b735",
+   "source_sha256": "d226030cbcb9255c8233ab0bd557f01ef5d1d03b731a49821c39a0c0eb0d9cf9",
+   "output_sha256": "e4f9f7b12438d709bf66ad68429c16f76e1e854277f05cf3ee810db650e3fb5b"
+  }
+ ],
+ "graded_before_freeze": "Rules 47-52 were written after WorldSwitch (0308840 and later working-tree builds) and Chunker 1.20.0 had been graded under v1.2. Their effects were measured under v1.3 on the recorded outputs of ws-0308840, ws-0308840+6da882c (same engine files as the release commit fd9b735) and chunker-1.20.0 before this file was written (docs/rules-changelog.md, section MCCB v1.3). No rule changes after this file.",
+ "final_comparison": {
+  "worldswitch_old": "ws-0308840",
+  "worldswitch_final": "ws-fd9b735 (engine 2.8.0, commit fd9b73568456efc0b772d958ebffbc5599aa8fac)",
+  "chunker": "chunker-1.20.0",
+  "je2be": "not run: its official binary has not been obtained (download needs the operator approval)"
+ },
+ "fixtures_match_results": true
+}

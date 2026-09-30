@@ -1,0 +1,57 @@
+{
+ "schema": "mccb.freeze-addendum/1",
+ "benchmark_version": "1.3",
+ "freeze_file_sha256": "8e317c7be305c990b6833657f9acbdba6076340fba9657960556610fbe4251a2",
+ "statement": "Pins the public GURREN source for MCCB v1.3 before any converter output of it exists. Rules and tools are those of FREEZE-v1.3.json, unchanged (checked below). Only manifests/worlds.json differs, in the GURREN@1.0 entry (overlay).",
+ "written_at": "2026-09-29T21:56:29.433Z",
+ "source": {
+  "world": "GURREN@1.0",
+  "class": "REAL_WORLD_SURVIVAL",
+  "file": "MCCB_R01_SURVIVAL_BEDROCK.mcworld",
+  "sha256": "a640374228039cc6dd502c0192b472b30a0f9baa8588f886d2057990dcd1e1db",
+  "bytes": 654372052
+ },
+ "fixtures": {
+  "file": "fixtures/GURREN_1.0.jsonl.gz",
+  "file_sha256": "fb56364e67d58931bae169e6de1df6249e492e6165c3e63c72c6f39e49304ef9",
+  "content_sha256": "9af167af59a6bb423baa64f688610a11ed26533f1ed9fc599f1b003d0fcd9e29"
+ },
+ "worlds_manifest_overlay": {
+  "id": "GURREN@1.0",
+  "world": "GURREN",
+  "revision": "1.0",
+  "theme": "SURVIVAL",
+  "class": "REAL_WORLD_SURVIVAL",
+  "edition": "bedrock",
+  "game_version": "1.26.21.1",
+  "min_client": "1.26.20",
+  "level_name": "MCCB R01 SURVIVAL",
+  "asset": {
+   "name": "MCCB_R01_SURVIVAL_BEDROCK.mcworld",
+   "sha256": "a640374228039cc6dd502c0192b472b30a0f9baa8588f886d2057990dcd1e1db",
+   "bytes": 654372052,
+   "release": null,
+   "local_dir": null
+  },
+  "original_filename": "MCCB_R01_SURVIVAL_BEDROCK.mcworld",
+  "frozen_at": "2026-06-08T22:02:24Z",
+  "freeze_evidence": "level.dat LastPlayed (saved by the Bedrock client 1.26.21.1)",
+  "status": "ACTIVE",
+  "predecessor": null,
+  "provenance": {
+   "generator": "none — multiplayer survival world (Realm) played from 2025-11 to 2026-06",
+   "checked": "native game save: 0 of 111 256 actors carry a converter key (JavaSaveData), no sidecar file, lastOpenedWithVersion 1.26.21.1",
+   "size": "129 806 chunks, 1 068 978 sub-chunks, 111 256 actors (95 469 dropped items), 92 player records",
+   "earlier_state": "a4579208e64b4e7493b6745fec5d4b9a1cda839d245027d57408819380374bd5 (576 818 207 bytes, saved 2026-05-16): the same world three weeks earlier; not an input",
+   "sanitised_from": "the private GURREN@1.0 file (not published); tools/worlds/sanitize-bedrock-survival.mjs + human text review"
+  },
+  "publication_blockers": [
+   "personal data of other players: 92 player records with Xbox / platform identifiers (MsaId, PlatformOnlineId, SelfSignedId) and Realms story data keyed by account ids",
+   "consent of the players who built it",
+   "resource_packs/ folder of third-party packs (not enabled in the world) with unknown redistribution rights",
+   "no sanitised derivative exists yet"
+  ]
+ },
+ "tools_checked_against_freeze": 39,
+ "private_results_not_reused": "results of the private file (source ca618ebe…) are never published nor mixed"
+}

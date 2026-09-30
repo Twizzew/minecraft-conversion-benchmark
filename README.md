@@ -1,115 +1,96 @@
 # Minecraft Conversion Compatibility Benchmark (MCCB)
 
-A public, hash-verifiable set of **source worlds** for measuring how faithfully a tool
-converts a Minecraft world between **Java Edition** and **Bedrock Edition**.
+MCCB measures how faithfully a tool converts a Minecraft world between Java Edition and
+Bedrock Edition. It consists of fixed source worlds, fixture registries derived from them,
+readers ("oracles") that inspect converted worlds without using any converter's code, and
+per-assertion results that anyone can recompute.
 
-MCCB is created and maintained by **[WorldSwitch](https://worldswitchapp.com)**.
+MCCB is written and maintained by [WorldSwitch](https://worldswitchapp.com), which sells a
+converter. Every input, rule, tool and result is therefore public and pinned by hash, and
+rule changes made while looking at WorldSwitch outputs are listed with their effect in
+[docs/rules-changelog.md](docs/rules-changelog.md).
 
----
+## Versions
 
-## What this repository is
+| Version | Content | State |
+|---|---|---|
+| v1.0 | Six source worlds and their hashes (`SHA256SUMS.txt`) | Released 2026-09-15 as `v1.0-source-worlds`; unchanged |
+| v1.1 | Seven source worlds (J01 revised, J04 added), methodology, fixtures, oracles, first WorldSwitch runs | Freeze `reports/freeze/FREEZE-v1.1.json` |
+| v1.2 | Same worlds; rules 36–46 | Freeze `reports/freeze/FREEZE-v1.2.json` |
+| v1.3 | Same worlds; rules 47–52; final comparison of four converter builds; the real survival world GURREN, reported separately | Freeze `reports/freeze/FREEZE-v1.3.json`, GURREN addendum `reports/freeze/FREEZE-v1.3-GURREN-ADDENDUM.json` |
 
-This repository publishes the **six SOURCE MASTER worlds** of MCCB v1.0 — three built in
-Java Edition, three built in Bedrock Edition — together with their SHA-256 hashes and the
-methodology used to build them.
+Changes per version: [CHANGELOG.md](CHANGELOG.md). The v1.0 documents are kept in
+[docs/history/](docs/history/).
 
-That is all it contains today. It contains **no conversion results and no comparison
-between converters.**
+## Source worlds
 
-## Why the source worlds are published first
+| ID | Edition | Theme | Class |
+|---|---|---|---|
+| J01@1.1 | Java 26.3 | Blocks, states, block entities, items | LAB |
+| J02@1.0 | Java 26.2 | Entities, inventories, trades | LAB |
+| J03@1.0 | Java 26.2 | World data, dimensions, redstone, scoreboards | LAB |
+| J04@1.0 | Java 26.3 | 400 command-block stations | LAB |
+| B01@1.0 | Bedrock 1.26.45 | Blocks, states, block entities, items | LAB |
+| B02@1.0 | Bedrock 1.26.45 | Entities, built by hand in the game | MANUAL_NATIVE |
+| B03@1.0 | Bedrock 1.26.45 | World data, dimensions, redstone | LAB |
+| GURREN@1.0 | Bedrock 1.26.21.1 | A multiplayer survival world played for seven months, with player identities removed | REAL_WORLD_SURVIVAL |
 
-A benchmark is only credible if the inputs cannot be changed after the results are known.
+World files are release assets, not stored in Git. Their hashes are in
+[checksums/MCCB-v1.1-source-worlds.sha256](checksums/MCCB-v1.1-source-worlds.sha256)
+(`SHA256SUMS.txt` for the v1.0 files). GURREN is published as
+`MCCB_R01_SURVIVAL_BEDROCK.mcworld`, SHA-256
+`4cc666cf1325caa53e26189558d09b2f8bc534b733f134c58dd485b3c9d461fa`: the graded file with the remaining account
+identifiers removed after grading
+([reports/freeze/FREEZE-v1.3-GURREN-PSEUDONYMISATION.json](reports/freeze/FREEZE-v1.3-GURREN-PSEUDONYMISATION.json)).
+What each world contains: [WORLDS.md](WORLDS.md) and [worlds/](worlds/).
 
-The six worlds below were frozen and their hashes published **before** any comparative
-result was produced. Anyone can download the same worlds, hash them, convert them with any
-tool, and check the outcome themselves. For MCCB v1.0 these six files will not be modified,
-re-exported or re-frozen — a change to the worlds requires a new benchmark version
-(MCCB v1.1, v2.0, …) published under a new release.
+## Method
 
-## Why WorldSwitch publishes it
+A converter receives the unmodified source file and its default settings. Its build,
+options, logs and output hash are recorded. The output is read by MCCB's own readers: Java
+worlds after Mojang's own world upgrade code for Java 26.3, Bedrock worlds as stored. Each
+assertion of the fixture registry is judged at the direct level (the converted world) and
+at the round-trip level (converted back with the same converter); a behaviour level exists
+but is barely automated. Results are counts of PASS, ADAPTED, PARTIAL, FAIL, NOT_APPLICABLE
+and NOT_EVALUATED per world and level. There is no score and no ranking, and world classes
+are never added together.
 
-WorldSwitch is a commercial Java ↔ Bedrock world converter, so it is an interested party.
-That is exactly why the inputs and the method are public: claims about conversion fidelity
-should be checkable by someone who does not trust the party making them.
+Rules: [METHODOLOGY.md](METHODOLOGY.md) and [docs/fixture-rules.md](docs/fixture-rules.md).
+Known limits: [KNOWN_LIMITATIONS.md](KNOWN_LIMITATIONS.md).
 
-When comparative results are published, they will be published in this repository with the
-exact commands and versions used, so they can be reproduced or contradicted.
+## Results
 
----
+The v1.3 comparison covers WorldSwitch `0308840`, WorldSwitch 2.8.0 (`fd9b735`), Chunker
+1.20.0 and je2be (je2be-core `8dfc4de`):
 
-## The six source worlds
+- seven synthetic worlds: [results/v1.3/](results/v1.3/README.md);
+- GURREN, reported on its own: [results/v1.3-gurren/](results/v1.3-gurren/README.md).
 
-| ID | Edition | Theme | File |
-|----|---------|-------|------|
-| **J01** | Java 26.2 | STATIC — blocks, block states, block entities, items | `MCCB_J01_STATIC_JAVA.zip` |
-| **J02** | Java 26.2 | LIVING — entities, mobs, inventories, persistence | `MCCB_J02_LIVING_JAVA.zip` |
-| **J03** | Java 26.2 | SYSTEMS — world, chunks, dimensions, redstone, commands, scoreboards | `MCCB_J03_SYSTEMS_JAVA.zip` |
-| **B01** | Bedrock 1.26.45 | STATIC — blocks, block states, block entities, items | `MCCB_B01_STATIC_BEDROCK.mcworld` |
-| **B02** | Bedrock 1.26.45 | LIVING — entities, mobs, trading, raids, persistence | `MCCB_B02_LIVING_BEDROCK.mcworld` |
-| **B03** | Bedrock 1.26.45 | SYSTEMS — world, chunks, dimensions, redstone, commands, scoreboards | `MCCB_B03_SYSTEMS_BEDROCK.mcworld` |
+The builds actually measured are listed in
+[results/v1.3/CONVERTERS-MEASURED.json](results/v1.3/CONVERTERS-MEASURED.json).
+`manifests/converters.json` is the register as it was frozen before those measurements
+(it still lists je2be as not run) and is kept unchanged because its hash is in the freeze.
 
-Full per-world description: **[WORLDS.md](WORLDS.md)**.
-How they were built and how to use them: **[METHODOLOGY.md](METHODOLOGY.md)**.
+Results graded under v1.1 and v1.2 are kept as they were graded, in `results/`,
+`results/v1.2/` and [results/COMPARISON-v1.1.md](results/COMPARISON-v1.1.md).
 
-The worlds themselves are **not stored in Git** (they are binary world data). They are
-attached to the release:
+## Reproducing
 
-**→ Download: [MCCB v1.0 — Source Worlds](../../releases/tag/v1.0-source-worlds)**
-
----
-
-## Verify what you downloaded
-
-`SHA256SUMS.txt` in this repository is the authoritative record for MCCB v1.0.
-
-Linux / macOS / Git Bash:
+[REPRODUCING.md](REPRODUCING.md) describes how to verify the sources, rebuild the fixtures,
+run each converter and grade its outputs. Quick check of downloaded worlds:
 
 ```bash
-sha256sum -c SHA256SUMS.txt
+sha256sum -c --ignore-missing checksums/MCCB-v1.1-source-worlds.sha256
 ```
 
-Windows PowerShell:
+## Licence
 
-```powershell
-./tools/verify.ps1
-```
+The synthetic source worlds (J01–J04, B01–B03) are dedicated to the public domain under
+[CC0 1.0](LICENSES/CC0-1.0.txt). The documentation is under [CC BY 4.0](LICENSE). GURREN is
+published with its contributors' permission under the terms in [NOTICE.md](NOTICE.md), which
+also covers code, converter outputs and third-party material.
 
-Every line must report `OK`. If a file does not match, it is not an MCCB v1.0 source world.
+Minecraft is a trademark of Mojang Studios / Microsoft. MCCB is not affiliated with or
+endorsed by Mojang Studios or Microsoft, and it redistributes no Mojang file.
 
----
-
-## What MCCB does **not** claim
-
-- It does not claim to cover every block, item, entity or mechanic in Minecraft.
-  Coverage is representative and documented per world, not exhaustive.
-- It does not claim that a world is "correct" — only that it is a fixed, published input.
-- It does not yet contain any measurement, score, ranking or comparison of WorldSwitch,
-  Chunker, je2be or any other converter.
-- Nothing in this repository has been produced by running a converter.
-
-## Status
-
-| Item | State |
-|------|-------|
-| Six SOURCE MASTER worlds frozen | Done |
-| SHA-256 published | Done |
-| Methodology published | Done |
-| Conversion runs | Not started |
-| Comparative results | Not published |
-
----
-
-## License and trademarks
-
-Documentation and world files in this benchmark are released under
-[CC BY 4.0](LICENSE) — you may redistribute and build on them, including commercially,
-with attribution to WorldSwitch. See [NOTICE.md](NOTICE.md) for the attribution format.
-
-Minecraft is a trademark of Mojang Studios / Microsoft. This project is not affiliated
-with, endorsed by, or sponsored by Mojang Studios or Microsoft. The world files contain
-only content created for this benchmark and world data generated by the game from a seed;
-they contain no Minecraft game assets, code or binaries.
-
-## Contact
-
-Issues and corrections: open a GitHub issue on this repository.
+Issues and corrections: open an issue on this repository.

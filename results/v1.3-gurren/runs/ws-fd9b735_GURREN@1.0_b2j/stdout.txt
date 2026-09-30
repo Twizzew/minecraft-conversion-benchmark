@@ -1,0 +1,10 @@
+[btj] 26 identite(s) de joueur secondaire enregistree(s)
+[btj] joueurs : 27 détecté(s), 0 rattaché(s) à un compte Java cible
+[btj] structures Bedrock : 1749 entrée(s) 0x77 + 4141 zone(s) 0x39 (fortress×3885, trial_chambers×1529, monument×366, pillager_outpost×90, trail_ruins×16, swamp_hut×3, igloo×1) → 2214 start(s) Java sur 2482 chunk(s)
+[btj] régions : 882 tâche(s) en 3 worker(s)
+[btj] 128130 charge(s) biome Bedrock reportée(s) au sidecar
+[btj] raids Overworld : 1 raid(s) → data/raids.dat
+[btj] sidecar : 781955 enregistrements Bedrock conservés
+[btj] 26 joueur(s) secondaire(s) → playerdata/
+[btj] copies de secours : 19/19 posée(s) dans le monde
+[btj] 1068978 subchunks, 41511 BE, 107516 entities, 2760 maps, player=yes, legacyB=0

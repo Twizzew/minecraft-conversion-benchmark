@@ -1,0 +1,9 @@
+# SHA-256 of every converter output graded on GURREN (MCCB v1.3). Format: sha256  run-id  output-file  converter-build
+a095d69d8f59a1ed0fd293c63dc30511801ecda6f999e6cccf7e430d336a29a1  chunker-1.20.0_GURREN@1.0_b2j  output.zip  Chunker 1.20.0
+80b959e8b652fab40861a80f6ee82f4106caa461fa00211d2523dfea6cd2941a  chunker-1.20.0_GURREN@1.0_b2j2b  output.mcworld  Chunker 1.20.0
+08766f663eeda1abafc9e6a0faf602f2fed0757493c3e913172f8691bfc7e79a  je2be-core-8dfc4de_GURREN@1.0_b2j  output.zip  je2be core-8dfc4de
+7cd88a2d0aae007b2a03f9fd75d01666509dcc4cb59f67a60b8a81d3b36513b5  je2be-core-8dfc4de_GURREN@1.0_b2j2b  output.mcworld  je2be core-8dfc4de
+239758e07b89e345d6db58fc3a62a1dd05ccbd9efff3ebfceed97ec1e45c765d  ws-0308840_GURREN@1.0_b2j  output.zip  WorldSwitch 0308840
+e563df66fa36a00af85a58db3c89ef333069f7cfb6cd8afd8be2172a779686dc  ws-0308840_GURREN@1.0_b2j2b  output.mcworld  WorldSwitch 0308840
+341929f072b711889624593c7e981e49d1a9460994b3079ab87b1ce702831132  ws-fd9b735_GURREN@1.0_b2j  output.zip  WorldSwitch fd9b735
+398f17064f02f3fb3bf4a3a552d829eafdc6fac7d04e83ed4df74c9ef6df31ec  ws-fd9b735_GURREN@1.0_b2j2b  output.mcworld  WorldSwitch fd9b735

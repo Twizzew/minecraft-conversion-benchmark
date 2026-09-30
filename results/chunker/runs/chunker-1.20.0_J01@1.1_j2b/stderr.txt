@@ -1,0 +1,105 @@
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::invokeCleaner has been called by org.iq80.leveldb.fileenv.ByteBufferSupport (file:/<LOCAL>/Benchmarcks/minecraft-conversion-benchmark/_staging/tools/chunker-cli-1.20.0.jar)
+WARNING: Please consider reporting this to the maintainers of class org.iq80.leveldb.fileenv.ByteBufferSupport
+WARNING: sun.misc.Unsafe::invokeCleaner will be removed in a future release
+Missing entity mapping for CHICKEN
+Missing entity mapping for SHEEP
+Missing block entity mapping for minecraft:test_block
+Missing entity mapping for VILLAGER
+Missing entity mapping for IRON_GOLEM
+Missing entity mapping for PIG
+Missing block entity mapping for minecraft:test_instance_block
+Missing entity mapping for ITEM
+Missing entity mapping for CAT
+Missing block mapping for ChunkerBlockIdentifier{type=TEST_BLOCK, states=waterlogged=FALSE,mode=START}
+Missing block mapping for ChunkerBlockIdentifier{type=TEST_BLOCK, states=waterlogged=FALSE,mode=LOG}
+Missing block mapping for ChunkerBlockIdentifier{type=TEST_BLOCK, states=waterlogged=FALSE,mode=FAIL}
+Missing block mapping for ChunkerBlockIdentifier{type=TEST_BLOCK, states=waterlogged=FALSE,mode=ACCEPT}
+Missing block mapping for ChunkerBlockIdentifier{type=TEST_INSTANCE_BLOCK, states=waterlogged=FALSE}
+Missing block mapping for ChunkerBlockIdentifier{type=TEST_BLOCK, states=waterlogged=FALSE}
+Missing entity mapping for COW
+Missing entity mapping for HORSE
+java.lang.Exception: Failed to process BlockEntity {components:{},keepPacked:0b,x:1012,y:79,Items:[{components:{minecraft:trim:{material:"minecraft:netherite",pattern:"minecraft:flow"}},count:1,Slot:0b,id:"minecraft:iron_chestplate"},{components:{minecraft:trim:{material:"minecraft:redstone",pattern:"minecraft:flow"}},count:1,Slot:1b,id:"minecraft:iron_chestplate"},{components:{minecraft:trim:{material:"minecraft:copper",pattern:"minecraft:flow"}},count:1,Slot:2b,id:"minecraft:iron_chestplate"},{components:{minecraft:trim:{material:"minecraft:gold",pattern:"minecraft:flow"}},count:1,Slot:3b,id:"minecraft:iron_chestplate"},{components:{minecraft:trim:{material:"minecraft:emerald",pattern:"minecraft:flow"}},count:1,Slot:4b,id:"minecraft:iron_chestplate"},{components:{minecraft:trim:{material:"minecraft:diamond",pattern:"minecraft:flow"}},count:1,Slot:5b,id:"minecraft:iron_chestplate"},{components:{minecraft:trim:{material:"minecraft:lapis",pattern:"minecraft:flow"}},count:1,Slot:6b,id:"minecraft:iron_chestplate"},{components:{minecraft:trim:{material:"minecraft:amethyst",pattern:"minecraft:flow"}},count:1,Slot:7b,id:"minecraft:iron_chestplate"},{components:{minecraft:trim:{material:"minecraft:resin",pattern:"minecraft:flow"}},count:1,Slot:8b,id:"minecraft:iron_chestplate"},{components:{minecraft:trim:{material:"minecraft:quartz",pattern:"minecraft:bolt"}},count:1,Slot:9b,id:"minecraft:iron_chestplate"},{components:{minecraft:trim:{material:"minecraft:iron",pattern:"minecraft:bolt"}},count:1,Slot:10b,id:"minecraft:iron_chestplate"},{components:{minecraft:trim:{material:"minecraft:netherite",pattern:"minecraft:bolt"}},count:1,Slot:11b,id:"minecraft:iron_chestplate"},{components:{minecraft:trim:{material:"minecraft:redstone",pattern:"minecraft:bolt"}},count:1,Slot:12b,id:"minecraft:iron_chestplate"},{components:{minecraft:trim:{material:"minecraft:copper",pattern:"minecraft:bolt"}},count:1,Slot:13b,id:"minecraft:iron_chestplate"},{components:{minecraft:trim:{material:"minecraft:gold",pattern:"minecraft:bolt"}},count:1,Slot:14b,id:"minecraft:iron_chestplate"},{components:{minecraft:trim:{material:"minecraft:emerald",pattern:"minecraft:bolt"}},count:1,Slot:15b,id:"minecraft:iron_chestplate"},{components:{minecraft:trim:{material:"minecraft:diamond",pattern:"minecraft:bolt"}},count:1,Slot:16b,id:"minecraft:iron_chestplate"},{components:{minecraft:trim:{material:"minecraft:lapis",pattern:"minecraft:bolt"}},count:1,Slot:17b,id:"minecraft:iron_chestplate"},{components:{minecraft:trim:{material:"minecraft:amethyst",pattern:"minecraft:bolt"}},count:1,Slot:18b,id:"minecraft:iron_chestplate"},{components:{minecraft:trim:{material:"minecraft:resin",pattern:"minecraft:bolt"}},count:1,Slot:19b,id:"minecraft:iron_chestplate"},{components:{minecraft:ominous_bottle_amplifier:0},count:1,Slot:20b,id:"minecraft:ominous_bottle"},{components:{minecraft:ominous_bottle_amplifier:1},count:1,Slot:21b,id:"minecraft:ominous_bottle"},{components:{minecraft:ominous_bottle_amplifier:2},count:1,Slot:22b,id:"minecraft:ominous_bottle"},{components:{minecraft:ominous_bottle_amplifier:3},count:1,Slot:23b,id:"minecraft:ominous_bottle"},{components:{minecraft:ominous_bottle_amplifier:4},count:1,Slot:24b,id:"minecraft:ominous_bottle"},{components:{minecraft:firework_explosion:{shape:"star",colors:[I;16711680,255],fade_colors:[I;16777215],has_trail:1b,has_twinkle:1b}},count:1,Slot:25b,id:"minecraft:firework_star"},{components:{minecraft:fireworks:{flight_duration:3,explosions:[{shape:"burst",colors:[I;65280],has_trail:1b,has_twinkle:0b}]}},count:1,Slot:26b,id:"minecraft:firework_rocket"}],z:1432,id:"minecraft:barrel"}
+	at com.hivemc.chunker.conversion.encoding.java.v1_18.reader.ColumnReader.readBlockEntities(ColumnReader.java:96)
+	at com.hivemc.chunker.scheduling.function.ThrowableConsumer.invoke(ThrowableConsumer.java:20)
+	at com.hivemc.chunker.scheduling.function.ThrowableConsumer.invoke(ThrowableConsumer.java:8)
+	at com.hivemc.chunker.scheduling.task.WrappedTask.apply(WrappedTask.java:84)
+	at com.hivemc.chunker.scheduling.task.WrappedTask$WrappedTaskConstant.apply(WrappedTask.java:129)
+	at com.hivemc.chunker.scheduling.task.WrappedTask.get(WrappedTask.java:77)
+	at com.hivemc.chunker.scheduling.task.executor.TaskExecutorSupplier.run(TaskExecutorSupplier.java:47)
+	at com.hivemc.chunker.scheduling.task.executor.TaskExecutor.threadLoop(TaskExecutor.java:177)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: java.lang.ClassCastException: Cannot cast com.hivemc.chunker.nbt.tags.primitive.IntTag to com.hivemc.chunker.nbt.tags.primitive.ByteTag
+	at java.base/java.lang.Class.cast(Class.java:3492)
+	at com.hivemc.chunker.nbt.tags.collection.CompoundTag.get(CompoundTag.java:328)
+	at com.hivemc.chunker.nbt.tags.collection.CompoundTag.getByte(CompoundTag.java:402)
+	at com.hivemc.chunker.conversion.encoding.java.base.resolver.itemstack.JavaComponentItemStackResolver$18.read(JavaComponentItemStackResolver.java:726)
+	at com.hivemc.chunker.conversion.encoding.java.base.resolver.itemstack.JavaComponentItemStackResolver$18.read(JavaComponentItemStackResolver.java:718)
+	at com.hivemc.chunker.resolver.property.PropertyBasedResolver$PropertyHandlerWrapper.readProperty(PropertyBasedResolver.java:163)
+	at com.hivemc.chunker.resolver.property.PropertyBasedResolver.to(PropertyBasedResolver.java:42)
+	at com.hivemc.chunker.conversion.encoding.java.base.resolver.JavaResolversBuilder$1.readItem(JavaResolversBuilder.java:141)
+	at com.hivemc.chunker.conversion.encoding.java.base.resolver.blockentity.handlers.JavaContainerBlockEntityHandler.read(JavaContainerBlockEntityHandler.java:38)
+	at com.hivemc.chunker.conversion.encoding.java.base.resolver.blockentity.handlers.JavaContainerBlockEntityHandler.read(JavaContainerBlockEntityHandler.java:22)
+	at com.hivemc.chunker.resolver.hierarchy.KeyedHierarchyBasedResolver.to(KeyedHierarchyBasedResolver.java:173)
+	at com.hivemc.chunker.conversion.encoding.base.resolver.blockentity.BlockEntityResolver.to(BlockEntityResolver.java:464)
+	at com.hivemc.chunker.conversion.encoding.java.base.reader.JavaColumnReader.readBlockEntity(JavaColumnReader.java:240)
+	at com.hivemc.chunker.conversion.encoding.java.v1_18.reader.ColumnReader.readBlockEntities(ColumnReader.java:94)
+	... 8 more
+java.lang.Exception: Failed to process BlockEntity {components:{},keepPacked:0b,x:1000,y:79,Items:[{components:{minecraft:axolotl/variant:"blue"},count:1,Slot:0b,id:"minecraft:axolotl_bucket"},{components:{minecraft:rabbit/variant:"evil"},count:1,Slot:1b,id:"minecraft:rabbit_spawn_egg"},{components:{minecraft:mooshroom/variant:"brown"},count:1,Slot:2b,id:"minecraft:mooshroom_spawn_egg"},{components:{minecraft:sheep/color:"magenta"},count:1,Slot:3b,id:"minecraft:sheep_spawn_egg"},{components:{minecraft:shulker/color:"cyan"},count:1,Slot:4b,id:"minecraft:shulker_spawn_egg"},{components:{minecraft:tropical_fish/pattern:"clayfish",minecraft:tropical_fish/base_color:"orange",minecraft:tropical_fish/pattern_color:"blue"},count:1,Slot:5b,id:"minecraft:tropical_fish_bucket"},{components:{minecraft:item_model:"minecraft:diamond"},count:1,Slot:6b,id:"minecraft:stick"},{components:{minecraft:item_name:{text:"MCCB item name",color:"aqua"}},count:1,Slot:7b,id:"minecraft:stick"},{components:{minecraft:enchantable:{value:15}},count:1,Slot:8b,id:"minecraft:stick"},{components:{minecraft:damage_resistant:{types:"#minecraft:is_fire"}},count:1,Slot:9b,id:"minecraft:stick"},{components:{minecraft:intangible_projectile:{}},count:1,Slot:10b,id:"minecraft:arrow"},{components:{minecraft:glider:{}},count:1,Slot:11b,id:"minecraft:stick"},{components:{minecraft:tool:{rules:[{blocks:"minecraft:stone",speed:2.0f,correct_for_drops:1b}]}},count:1,Slot:12b,id:"minecraft:stick"},{components:{minecraft:dye:"red"},count:1,Slot:13b,id:"minecraft:stick"},{components:{minecraft:use_effects:{can_sprint:1b,interact_vibrations:0b,speed_multiplier:1.0f}},count:1,Slot:14b,id:"minecraft:stick"},{components:{minecraft:minimum_attack_charge:0.75f},count:1,Slot:15b,id:"minecraft:stick"},{components:{minecraft:damage_type:"minecraft:spear"},count:1,Slot:16b,id:"minecraft:stick"},{components:{minecraft:weapon:{item_damage_per_attack:2}},count:1,Slot:17b,id:"minecraft:diamond_sword"},{components:{minecraft:attack_range:{min_reach:0.0f,max_reach:4.0f,hitbox_margin:0.3f}},count:1,Slot:18b,id:"minecraft:stick"},{components:{minecraft:swing_animation:{type:"stab",duration:20}},count:1,Slot:19b,id:"minecraft:stick"},{components:{minecraft:potion_contents:{potion:"minecraft:swiftness"},minecraft:potion_duration_scale:0.25f},count:1,Slot:20b,id:"minecraft:potion"},{components:{minecraft:food:{nutrition:4,saturation:0.6f,can_always_eat:1b}},count:1,Slot:21b,id:"minecraft:stick"},{components:{minecraft:consumable:{consume_seconds:0.5f}},count:1,Slot:22b,id:"minecraft:stick"},{components:{minecraft:use_remainder:{id:"minecraft:bowl",count:1}},count:1,Slot:23b,id:"minecraft:stick"},{components:{minecraft:use_cooldown:{seconds:1.5f,cooldown_group:"mccb:custom_weapon"}},count:1,Slot:24b,id:"minecraft:stick"},{components:{minecraft:repairable:{items:"minecraft:stick"}},count:1,Slot:25b,id:"minecraft:diamond_sword"},{components:{minecraft:profile:"MHF_Sheep"},count:1,Slot:26b,id:"minecraft:player_head"}],z:1434,id:"minecraft:barrel"}
+	at com.hivemc.chunker.conversion.encoding.java.v1_18.reader.ColumnReader.readBlockEntities(ColumnReader.java:96)
+	at com.hivemc.chunker.scheduling.function.ThrowableConsumer.invoke(ThrowableConsumer.java:20)
+	at com.hivemc.chunker.scheduling.function.ThrowableConsumer.invoke(ThrowableConsumer.java:8)
+	at com.hivemc.chunker.scheduling.task.WrappedTask.apply(WrappedTask.java:84)
+	at com.hivemc.chunker.scheduling.task.WrappedTask$WrappedTaskConstant.apply(WrappedTask.java:129)
+	at com.hivemc.chunker.scheduling.task.WrappedTask.get(WrappedTask.java:77)
+	at com.hivemc.chunker.scheduling.task.executor.TaskExecutorSupplier.run(TaskExecutorSupplier.java:47)
+	at com.hivemc.chunker.scheduling.task.executor.TaskExecutor.threadLoop(TaskExecutor.java:177)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: java.lang.ClassCastException: Cannot cast com.hivemc.chunker.nbt.tags.primitive.StringTag to com.hivemc.chunker.nbt.tags.collection.CompoundTag
+	at java.base/java.lang.Class.cast(Class.java:3492)
+	at com.hivemc.chunker.nbt.tags.collection.CompoundTag.get(CompoundTag.java:328)
+	at com.hivemc.chunker.nbt.tags.collection.CompoundTag.getCompound(CompoundTag.java:765)
+	at com.hivemc.chunker.conversion.encoding.java.base.resolver.blockentity.handlers.JavaSkullBlockEntityHandler.generateFromItemNBT(JavaSkullBlockEntityHandler.java:170)
+	at com.hivemc.chunker.conversion.encoding.java.base.resolver.blockentity.handlers.JavaSkullBlockEntityHandler.generateFromItemNBT(JavaSkullBlockEntityHandler.java:24)
+	at com.hivemc.chunker.conversion.encoding.base.resolver.blockentity.BlockEntityResolver.generateFromItemNBT(BlockEntityResolver.java:297)
+	at com.hivemc.chunker.conversion.encoding.java.base.resolver.itemstack.JavaComponentItemStackResolver$24.read(JavaComponentItemStackResolver.java:1103)
+	at com.hivemc.chunker.conversion.encoding.java.base.resolver.itemstack.JavaComponentItemStackResolver$24.read(JavaComponentItemStackResolver.java:1085)
+	at com.hivemc.chunker.resolver.property.PropertyBasedResolver$ContextualHandlerWrapper.readProperty(PropertyBasedResolver.java:202)
+	at com.hivemc.chunker.resolver.property.PropertyBasedResolver.to(PropertyBasedResolver.java:42)
+	at com.hivemc.chunker.conversion.encoding.java.base.resolver.JavaResolversBuilder$1.readItem(JavaResolversBuilder.java:141)
+	at com.hivemc.chunker.conversion.encoding.java.base.resolver.blockentity.handlers.JavaContainerBlockEntityHandler.read(JavaContainerBlockEntityHandler.java:38)
+	at com.hivemc.chunker.conversion.encoding.java.base.resolver.blockentity.handlers.JavaContainerBlockEntityHandler.read(JavaContainerBlockEntityHandler.java:22)
+	at com.hivemc.chunker.resolver.hierarchy.KeyedHierarchyBasedResolver.to(KeyedHierarchyBasedResolver.java:173)
+	at com.hivemc.chunker.conversion.encoding.base.resolver.blockentity.BlockEntityResolver.to(BlockEntityResolver.java:464)
+	at com.hivemc.chunker.conversion.encoding.java.base.reader.JavaColumnReader.readBlockEntity(JavaColumnReader.java:240)
+	at com.hivemc.chunker.conversion.encoding.java.v1_18.reader.ColumnReader.readBlockEntities(ColumnReader.java:94)
+	... 8 more
+java.lang.Exception: Failed to process BlockEntity {components:{},keepPacked:0b,x:1014,y:79,Items:[{components:{minecraft:written_book_content:{title:"MCCB",author:"MCCB",generation:0,resolved:1b,pages:[{raw:{text:"Page 1"}},{raw:{text:"Page 2"}}]}},count:1,Slot:0b,id:"minecraft:written_book"},{components:{minecraft:writable_book_content:{pages:[{raw:"Page A"},{raw:"Page B"}]}},count:1,Slot:1b,id:"minecraft:writable_book"},{components:{minecraft:suspicious_stew_effects:[{id:"minecraft:night_vision",duration:200}]},count:1,Slot:2b,id:"minecraft:suspicious_stew"},{components:{minecraft:dyed_color:16711935},count:1,Slot:3b,id:"minecraft:leather_chestplate"},{components:{minecraft:charged_projectiles:[{id:"minecraft:firework_rocket",count:1}]},count:1,Slot:4b,id:"minecraft:crossbow"},{components:{minecraft:bundle_contents:[{id:"minecraft:diamond",count:3},{id:"minecraft:apple",count:2}]},count:1,Slot:5b,id:"minecraft:bundle"},{components:{minecraft:container:[{slot:0,item:{id:"minecraft:diamond",count:7}},{slot:26,item:{id:"minecraft:apple",count:5}}]},count:1,Slot:6b,id:"minecraft:white_shulker_box"},{components:{minecraft:custom_data:{mccb_test:1b,nested:{value:42}}},count:1,Slot:7b,id:"minecraft:stick"},{components:{minecraft:max_damage:100,minecraft:damage:42},count:1,Slot:8b,id:"minecraft:diamond_sword"},{components:{minecraft:stored_enchantments:{minecraft:sharpness:5,minecraft:mending:1}},count:1,Slot:9b,id:"minecraft:enchanted_book"},{components:{minecraft:can_break:{blocks:"minecraft:stone"}},count:1,Slot:10b,id:"minecraft:diamond_pickaxe"},{components:{minecraft:can_place_on:[{blocks:"minecraft:stone"},{blocks:"minecraft:dirt"}]},count:1,Slot:11b,id:"minecraft:stone"},{components:{minecraft:banner_patterns:[{pattern:"minecraft:stripe_top",color:"red"},{pattern:"minecraft:cross",color:"blue"}]},count:1,Slot:12b,id:"minecraft:white_banner"},{components:{minecraft:base_color:"white",minecraft:banner_patterns:[{pattern:"minecraft:stripe_center",color:"black"}]},count:1,Slot:13b,id:"minecraft:shield"},{components:{minecraft:pot_decorations:["minecraft:arms_up_pottery_sherd","minecraft:angler_pottery_sherd","minecraft:danger_pottery_sherd","minecraft:shelter_pottery_sherd"]},count:1,Slot:14b,id:"minecraft:decorated_pot"},{components:{minecraft:bees:[{entity_data:{id:"minecraft:bee"},ticks_in_hive:3,min_ticks_in_hive:10}]},count:1,Slot:15b,id:"minecraft:beehive"},{components:{minecraft:block_state:{honey_level:"5"}},count:1,Slot:16b,id:"minecraft:bee_nest"},{components:{minecraft:map_id:0},count:1,Slot:17b,id:"minecraft:filled_map"},{components:{minecraft:sulfur_cube_content:"minecraft:green_wool"},count:1,Slot:18b,id:"minecraft:sulfur_cube_bucket"},{components:{minecraft:entity_data:{id:"minecraft:zombie",Health:7.0f,CustomName:{text:"MCCB"}}},count:1,Slot:19b,id:"minecraft:zombie_spawn_egg"},{components:{minecraft:bucket_entity_data:{Health:7.0f,Age:0}},count:1,Slot:20b,id:"minecraft:axolotl_bucket"},{components:{minecraft:villager/variant:"plains"},count:1,Slot:21b,id:"minecraft:villager_spawn_egg"},{components:{minecraft:fox/variant:"snow"},count:1,Slot:22b,id:"minecraft:fox_spawn_egg"},{components:{minecraft:salmon/size:"large"},count:1,Slot:23b,id:"minecraft:salmon_bucket"},{components:{minecraft:parrot/variant:"gray"},count:1,Slot:24b,id:"minecraft:parrot_spawn_egg"},{components:{minecraft:horse/variant:"black"},count:1,Slot:25b,id:"minecraft:horse_spawn_egg"},{components:{minecraft:llama/variant:"brown"},count:1,Slot:26b,id:"minecraft:llama_spawn_egg"}],z:1432,id:"minecraft:barrel"}
+	at com.hivemc.chunker.conversion.encoding.java.v1_18.reader.ColumnReader.readBlockEntities(ColumnReader.java:96)
+	at com.hivemc.chunker.scheduling.function.ThrowableConsumer.invoke(ThrowableConsumer.java:20)
+	at com.hivemc.chunker.scheduling.function.ThrowableConsumer.invoke(ThrowableConsumer.java:8)
+	at com.hivemc.chunker.scheduling.task.WrappedTask.apply(WrappedTask.java:84)
+	at com.hivemc.chunker.scheduling.task.WrappedTask$WrappedTaskConstant.apply(WrappedTask.java:129)
+	at com.hivemc.chunker.scheduling.task.WrappedTask.get(WrappedTask.java:77)
+	at com.hivemc.chunker.scheduling.task.executor.TaskExecutorSupplier.run(TaskExecutorSupplier.java:47)
+	at com.hivemc.chunker.scheduling.task.executor.TaskExecutor.threadLoop(TaskExecutor.java:177)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: java.lang.ClassCastException: Cannot cast com.hivemc.chunker.nbt.tags.primitive.StringTag to com.hivemc.chunker.nbt.tags.collection.CompoundTag
+	at java.base/java.lang.Class.cast(Class.java:3492)
+	at com.hivemc.chunker.nbt.tags.collection.CompoundTag.getOptional(CompoundTag.java:344)
+	at com.hivemc.chunker.conversion.encoding.java.base.resolver.itemstack.JavaComponentItemStackResolver$11.lambda$read$1(JavaComponentItemStackResolver.java:471)
+	at java.base/java.util.Optional.flatMap(Optional.java:289)
+	at com.hivemc.chunker.conversion.encoding.java.base.resolver.itemstack.JavaComponentItemStackResolver$11.read(JavaComponentItemStackResolver.java:471)
+	at com.hivemc.chunker.conversion.encoding.java.base.resolver.itemstack.JavaComponentItemStackResolver$11.read(JavaComponentItemStackResolver.java:462)
+	at com.hivemc.chunker.resolver.property.PropertyBasedResolver$ContextualHandlerWrapper.readProperty(PropertyBasedResolver.java:202)
+	at com.hivemc.chunker.resolver.property.PropertyBasedResolver.to(PropertyBasedResolver.java:42)
+	at com.hivemc.chunker.conversion.encoding.java.base.resolver.JavaResolversBuilder$1.readItem(JavaResolversBuilder.java:141)
+	at com.hivemc.chunker.conversion.encoding.java.base.resolver.blockentity.handlers.JavaContainerBlockEntityHandler.read(JavaContainerBlockEntityHandler.java:38)
+	at com.hivemc.chunker.conversion.encoding.java.base.resolver.blockentity.handlers.JavaContainerBlockEntityHandler.read(JavaContainerBlockEntityHandler.java:22)
+	at com.hivemc.chunker.resolver.hierarchy.KeyedHierarchyBasedResolver.to(KeyedHierarchyBasedResolver.java:173)
+	at com.hivemc.chunker.conversion.encoding.base.resolver.blockentity.BlockEntityResolver.to(BlockEntityResolver.java:464)
+	at com.hivemc.chunker.conversion.encoding.java.base.reader.JavaColumnReader.readBlockEntity(JavaColumnReader.java:240)
+	at com.hivemc.chunker.conversion.encoding.java.v1_18.reader.ColumnReader.readBlockEntities(ColumnReader.java:94)
+	... 8 more
+Missing item mapping for ChunkerItemStack{identifier=ChunkerBlockIdentifier{type=TEST_BLOCK, states=waterlogged=FALSE}, properties={ChunkerItemProperty{name='amount'}=>1}}
+Missing item mapping for ChunkerItemStack{identifier=ChunkerBlockIdentifier{type=TEST_INSTANCE_BLOCK, states=waterlogged=FALSE}, properties={ChunkerItemProperty{name='amount'}=>1}}

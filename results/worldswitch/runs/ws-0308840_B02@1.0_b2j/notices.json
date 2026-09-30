@@ -1,0 +1,54 @@
+[
+ {
+  "players": {
+   "total": 2,
+   "linked": 0,
+   "unlinked": 2,
+   "direction": "bedrock_to_java",
+   "accountLinking": null,
+   "registryFile": "worldswitch_player_recovery.json",
+   "entries": [
+    {
+     "label": "Joueur principal",
+     "sourceId": "~local_player",
+     "isHost": true,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "playerdata/f5a1c0de-0000-4000-8000-000000000001.dat",
+     "recovery": null,
+     "recoverySkippedReason": null,
+     "itemsCopied": null
+    },
+    {
+     "label": "Joueur 2",
+     "sourceId": "3209b036-5efa-4fe0-b7d9-72d4ddf2f00a",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "playerdata/3209b036-5efa-4fe0-b7d9-72d4ddf2f00a.dat",
+     "recovery": {
+      "dimension": "overworld",
+      "x": -2,
+      "y": -60,
+      "z": -2
+     },
+     "recoverySkippedReason": null,
+     "itemsCopied": 35
+    }
+   ]
+  },
+  "fidelity": {
+   "total": 39,
+   "families": 6,
+   "byCategory": {
+    "dropped": 31,
+    "approximated": 4,
+    "archived": 4
+   },
+   "detailed": 6,
+   "truncated": 0
+  }
+ }
+]

@@ -1,0 +1,33 @@
+(node:2014) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file://<ENGINE-fd9b735>/lib/converter.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to <ENGINE-fd9b735>/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:2014) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file://<ENGINE-fd9b735>/lib/converter.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to <ENGINE-fd9b735>/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:2014) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file://<ENGINE-fd9b735>/lib/converter.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to <ENGINE-fd9b735>/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:2014) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file://<ENGINE-fd9b735>/lib/converter.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to <ENGINE-fd9b735>/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[btj] 14 famille(s) de perte de fidélité :
+[btj]   ×3778 [dropped/block_entity] SporeBlossom — block-entity Bedrock sans équivalent Java connu (id CamelCase = Bedrock-only)
+[btj]   ×652 [dropped/block_entity] PistonArm — block-entity Bedrock sans équivalent Java connu (id CamelCase = Bedrock-only)
+[btj]   ×613 [dropped/block_entity] FlowerPot — block-entity Bedrock sans équivalent Java connu (id CamelCase = Bedrock-only)
+[btj]   ×208 [dropped/entity] minecraft:villager.lockedTrades — 7 echange(s) d'un palier NON ATTEINT (tier > 0) ecarte(s) : Bedrock pre-tire ses cinq paliers et les affiche VERROUILLES, Java ne sait pas verrouiller une offre — les garder les aurait rendus achetables d'emblee, et les marquer « epuises » les affichait barres puis les liberait au premier reapprovisionnement. Le villageois les regagnera en montant de niveau, tires de la table vanilla Java (leur contenu exact, notamment les livres enchantes deja tires cote Bedrock, n'est pas representable dans un monde Java).
+[btj]   ×154 [dropped/block_entity] Cauldron — block-entity Bedrock sans équivalent Java connu (id CamelCase = Bedrock-only)
+[btj]   ×48 [approximated/entity] minecraft:villager.curedDiscount — remise « villageois soigné » posée dans `specialPrice` : le prix barré est exact au chargement, mais Java efface ce champ dès que la fenêtre d'échange se referme et ne peut pas le recalculer sans ragot — or un ragot vise un UUID de joueur, et aucun compte Java n'a été fourni. Indiquer son UUID de compte Java à la conversion rend la remise PERMANENTE.
+[btj]   ×34 [dropped/entity] minecraft:zombie_villager.lockedTrades — 8 echange(s) mis de cote par Bedrock (`persistingOffers`) a un palier NON ATTEINT (tier > 0) ecarte(s) : une fois soigne, Java rendrait achetable tout ce que porte `Offers`. Le villageois les regagnera en montant de niveau, tires de la table vanilla Java.
+[btj]   ×28 [dropped/entity] minecraft:wandering_trader.HomePos — Le marchand ambulant Bedrock est ancre a un point (composant `minecraft:home`, rayon 16). Java 1.20.4 n'a aucun champ equivalent : sa destination `WanderTarget` est un but de deplacement, pas un ancrage. L'ancrage est donc perdu ; le marchand se deplacera librement cote Java.
+[btj]   ×17 [dropped/block_entity] Music — block-entity Bedrock sans équivalent Java connu (id CamelCase = Bedrock-only)
+[btj]   ×7 [dropped/item_component] potion Bedrock Potion of Decay — B→J (minecraft:arrow) : la potion de Dépérissement est exclusive à Bedrock : le registre Java n'a aucune potion équivalente. La fiole est conservée, sans type de potion — lui en inventer un changerait l'effet.
+[btj]   ×3 [approximated/world_data] biomes 4x4x4 (dim0) — Bedrock stocke un biome par BLOC, Java un par cube 4x4x4 : dans les zones ou plusieurs biomes se melangent a l'interieur d'un meme cube, la cellule Java garde le biome MAJORITAIRE. Perte de RESOLUTION inevitable entre les deux formats, releve une fois par dimension. Le terrain, les blocs et les constructions sont intacts ; la finesse d'origine est archivee pour un retour vers Bedrock.
+[btj]   ×3 [approximated/world_data] biomes 4x4x4 (dim1) — Bedrock stocke un biome par BLOC, Java un par cube 4x4x4 : dans les zones ou plusieurs biomes se melangent a l'interieur d'un meme cube, la cellule Java garde le biome MAJORITAIRE. Perte de RESOLUTION inevitable entre les deux formats, releve une fois par dimension. Le terrain, les blocs et les constructions sont intacts ; la finesse d'origine est archivee pour un retour vers Bedrock.
+[btj]   ×1 [archived/world_data] réglage Bedrock serverChunkTickRange — `serverChunkTickRange` = 4 (défaut 6) : rayon de chunks simulés (fermes, pousses, mobs) — côté Java c'est la distance de simulation, un réglage du client/serveur et non du monde. Le réglage ne peut pas être posé dans un monde Java ; il est conservé hors-jeu et revient à l'aller-retour.
+[btj]   ×1 [dropped/world_data] structures generees (partiel) — Une partie des structures generees n'a pas pu etre transcrite — Bedrock n'a enregistre que leur boite englobante, sans aucune piece, et un `start` Java tire SA boite de ses pieces : minecraft:fortress (4 instance(s)), minecraft:trial_chambers (26 instance(s)), minecraft:swamp_hut (1 instance(s)). Leurs blocs et leurs coffres sont convertis normalement ; ce sont les APPARITIONS DE MOBS propres a ces structures qui ne reprendront pas (sorciere d'une hutte, blaze d'une forteresse, gardien d'un monument).
+[btj] 12 objet(s) sans identifiant équivalent, 1 cas :
+[btj]   ×12 minecraft:chain (laissé tel quel) — aucun identifiant Java connu pour cet objet

@@ -1,0 +1,47 @@
+(node:21256) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of <LOCAL>/worldswitch/lib/converter.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to <LOCAL>\worldswitch\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:21256) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of <LOCAL>/worldswitch/lib/converter.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to <LOCAL>\worldswitch\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:21256) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of <LOCAL>/worldswitch/lib/converter.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to <LOCAL>\worldswitch\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:21256) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of <LOCAL>/worldswitch/lib/converter.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to <LOCAL>\worldswitch\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:21256) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of <LOCAL>/worldswitch/lib/converter.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to <LOCAL>\worldswitch\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:21256) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of <LOCAL>/worldswitch/lib/converter.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to <LOCAL>\worldswitch\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[jtb] 7 section(s) de minecraft:the_nether au-dessus de y=127 supprimée(s) (plus haute : y=128-143)
+[jtb] 190 famille(s) de perte de fidélité :
+[jtb]   ×170 [archived/entity] minecraft:armor_stand : NoGravity — Champs Java sans equivalent Bedrock (NoGravity) : conserves pour un retour IMMEDIAT vers Java seulement. Le moteur Bedrock les SUPPRIME des qu'il recharge l'entite, et le comportement correspondant n'existe pas sous Bedrock.
+[jtb]   ×24 [normalized/block_state] minecraft:<stairs>.shape — outer_left non écrit : Bedrock recalcule la forme d'angle depuis les voisins
+[jtb]   ×12 [archived/entity] minecraft:pig : sound_variant — Champs Java sans equivalent Bedrock (sound_variant) : conserves pour un retour IMMEDIAT vers Java seulement. Le moteur Bedrock les SUPPRIME des qu'il recharge l'entite, et le comportement correspondant n'existe pas sous Bedrock.
+[jtb]   ×11 [archived/entity] minecraft:villager : CanPickUpLoot — Champs Java sans equivalent Bedrock (CanPickUpLoot) : conserves pour un retour IMMEDIAT vers Java seulement. Le moteur Bedrock les SUPPRIME des qu'il recharge l'entite, et le comportement correspondant n'existe pas sous Bedrock.
+[jtb]   ×6 [dropped/world_data] horloge propre à une dimension — Java 26.x tient une horloge PAR DIMENSION et celle de minecraft:the_end diffère de l'Overworld. Bedrock n'a qu'une heure pour tout le monde : c'est celle de l'Overworld qui est reprise.
+[jtb]   ×6 [archived/entity] minecraft:cat : sound_variant — Champs Java sans equivalent Bedrock (sound_variant) : conserves pour un retour IMMEDIAT vers Java seulement. Le moteur Bedrock les SUPPRIME des qu'il recharge l'entite, et le comportement correspondant n'existe pas sous Bedrock.
+[jtb]   ×6 [archived/entity] minecraft:villager : NoAI, Silent — Champs Java sans equivalent Bedrock (NoAI, Silent) : conserves pour un retour IMMEDIAT vers Java seulement. Le moteur Bedrock les SUPPRIME des qu'il recharge l'entite, et le comportement correspondant n'existe pas sous Bedrock.
+[jtb]   ×6 [normalized/entity] minecraft:zombie_nautilus.definitions — état non relevé sur un monde Bedrock natif : groupes de composants non reposés
+[jtb]   ×6 [dropped/world_data] minuteur de beau temps — Le monde Java force le beau temps encore 141343 tick(s) (`clearWeatherTime`). Bedrock n'a pas ce minuteur : la météo actuelle est conservée, mais le cycle météo reprend normalement côté Bedrock.
+[jtb]   ×6 [dropped/world_data] planification du marchand ambulant — Java garde l'état du PROCHAIN marchand ambulant (prochain passage dans 21600 tick(s)). Bedrock gère cette planification en interne, sans réglage équivalent : le compteur repart de zéro. Un marchand DÉJÀ dans le monde, lui, est bien converti.
+[jtb]   ×6 [archived/world_data] suites aléatoires (butin déterministe) — 8 suite(s) aléatoire(s) enregistrée(s). Java s'en sert pour que le butin d'un coffre non encore ouvert soit reproductible ; Bedrock tire le sien autrement. Le contenu déjà généré ne bouge pas — ce qui reste à tirer peut différer.
+[jtb]   ×3 [archived/entity] minecraft:iron_golem : PlayerCreated — Champs Java sans equivalent Bedrock (PlayerCreated) : conserves pour un retour IMMEDIAT vers Java seulement. Le moteur Bedrock les SUPPRIME des qu'il recharge l'entite, et le comportement correspondant n'existe pas sous Bedrock.
+[jtb]   ×3 [normalized/entity] minecraft:iron_golem.definitions — groupes de composants reposés dans l’état natif par défaut : l’état exact de ce mob n’a pas été relevé
+[jtb]   ×3 [normalized/entity] minecraft:nautilus.definitions — état non relevé sur un monde Bedrock natif : groupes de composants non reposés
+[jtb]   ×3 [approximated/block_entity] minecraft:trial_spawner.spawn_data.entity — PersistenceRequired, NoAI : un générateur Bedrock ne retient que le TYPE du mob (spawn_data natif = {TypeId, Weight})
+[jtb]   ×2 [approximated/entity] entités d’un chunk non terminé — 1 entité(s) attendaient la fin de la génération du chunk (-16,11, `minecraft:initialize_light`) : Java ne les fait naître qu'au passage en `minecraft:full`. Bedrock n'a pas cet état d'attente — elles sont créées tout de suite, donc présentes plus tôt que dans le monde d'origine.
+[jtb]   ×2 [archived/entity] minecraft:sheep : LeftHanded — Champs Java sans equivalent Bedrock (LeftHanded) : conserves pour un retour IMMEDIAT vers Java seulement. Le moteur Bedrock les SUPPRIME des qu'il recharge l'entite, et le comportement correspondant n'existe pas sous Bedrock.
+[jtb]   ×2 [dropped/block_entity] minecraft:vault.shared_data — type connu, mais champ source jamais lu par la traduction
+[jtb]   ×2 [archived/entity] minecraft:wolf : sound_variant — Champs Java sans equivalent Bedrock (sound_variant) : conserves pour un retour IMMEDIAT vers Java seulement. Le moteur Bedrock les SUPPRIME des qu'il recharge l'entite, et le comportement correspondant n'existe pas sous Bedrock.
+[jtb]   ×1 [dropped/world_data] hauteur tronquée (minecraft:the_nether, y>127) — 7 non-empty 16x16x16 section(s) sat above y=127, the hard ceiling of the minecraft:the_nether in Bedrock Edition (the Java minecraft:the_nether is twice as tall); the highest was at y=128-143. Those blocks have no destination and are dropped; nothing is moved down, which would shift every coordinate around it
+[jtb]   … et 170 autre(s) famille(s)

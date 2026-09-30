@@ -8,3 +8,21 @@ SHA256SUMS.txt text eol=lf
 # World archives are binary and are never committed, but be explicit.
 *.mcworld binary
 *.zip binary
+*.gz binary
+
+# v1.1 checksum files: LF, for the same reason as SHA256SUMS.txt
+*.sha256 text eol=lf
+
+# Files whose SHA-256 is pinned by reports/freeze/FREEZE-v1.3.json and that were frozen with
+# CRLF line endings: stored byte for byte (no end-of-line conversion), so that a clone gives
+# the frozen hashes back.
+METHODOLOGY.md -text
+KNOWN_LIMITATIONS.md -text
+docs/fixture-rules.md -text
+docs/rules-changelog.md -text
+manifests/worlds.json -text
+tools/families/index.mjs -text
+tools/java/src/GameRuleDefaults.java -text
+tools/lib/structures.mjs -text
+tools/package.json -text
+tools/manifests/build-freeze.mjs -text

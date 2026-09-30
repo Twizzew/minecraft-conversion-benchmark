@@ -1,0 +1,34 @@
+(node:1490) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file://<ENGINE-0308840>/lib/converter.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to <ENGINE-0308840>/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:1490) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file://<ENGINE-0308840>/lib/converter.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to <ENGINE-0308840>/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:1490) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file://<ENGINE-0308840>/lib/converter.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to <ENGINE-0308840>/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[jtb] 33 famille(s) de perte de fidélité :
+[jtb]   ×613 [normalized/block_state] minecraft:<stairs>.shape — outer_left non écrit : Bedrock recalcule la forme d'angle depuis les voisins
+[jtb]   ×435 [normalized/entity] minecraft:piglin.definitions — groupes de composants reposés dans l’état natif par défaut : l’état exact de ce mob n’a pas été relevé
+[jtb]   ×364 [archived/entity] minecraft:arrow : Color — Champs Java sans equivalent Bedrock (Color) : conserves pour un retour IMMEDIAT vers Java seulement. Le moteur Bedrock les SUPPRIME des qu'il recharge l'entite, et le comportement correspondant n'existe pas sous Bedrock.
+[jtb]   ×275 [normalized/entity] minecraft:zombie.definitions — groupes de composants reposés dans l’état natif par défaut : l’état exact de ce mob n’a pas été relevé
+[jtb]   ×268 [dropped/entity] tireur d’un projectile non résolu — le propriétaire Java -1563118138,523925374,370546641,-1535487302 ne correspond à aucun joueur ni acteur du monde converti : le projectile reste en place mais sans tireur
+[jtb]   ×207 [normalized/entity] minecraft:drowned.definitions — groupes de composants reposés dans l’état natif par défaut : l’état exact de ce mob n’a pas été relevé
+[jtb]   ×53 [normalized/entity] minecraft:hoglin.definitions — groupes de composants reposés dans l’état natif par défaut : l’état exact de ce mob n’a pas été relevé
+[jtb]   ×36 [normalized/entity] minecraft:husk.definitions — groupes de composants reposés dans l’état natif par défaut : l’état exact de ce mob n’a pas été relevé
+[jtb]   ×31 [normalized/entity] minecraft:iron_golem.definitions — groupes de composants reposés dans l’état natif par défaut : l’état exact de ce mob n’a pas été relevé
+[jtb]   ×31 [archived/entity] minecraft:trident : DealtDamage — Champs Java sans equivalent Bedrock (DealtDamage) : conserves pour un retour IMMEDIAT vers Java seulement. Le moteur Bedrock les SUPPRIME des qu'il recharge l'entite, et le comportement correspondant n'existe pas sous Bedrock.
+[jtb]   ×29 [normalized/entity] minecraft:salmon.definitions — groupes de composants reposés dans l’état natif par défaut : l’état exact de ce mob n’a pas été relevé
+[jtb]   ×28 [normalized/entity] minecraft:wandering_trader.definitions — groupes de composants reposés dans l’état natif par défaut : l’état exact de ce mob n’a pas été relevé
+[jtb]   ×27 [approximated/entity] minecraft:villager.specialPrice — remises Java par recette (de -1 à -5) → une seule remise Bedrock (-5)
+[jtb]   ×26 [normalized/entity] minecraft:tropicalfish.definitions — groupes de composants reposés dans l’état natif par défaut : l’état exact de ce mob n’a pas été relevé
+[jtb]   ×22 [normalized/entity] minecraft:strider.definitions — groupes de composants reposés dans l’état natif par défaut : l’état exact de ce mob n’a pas été relevé
+[jtb]   ×22 [archived/entity] minecraft:trident : item, DealtDamage — Champs Java sans equivalent Bedrock (item, DealtDamage) : conserves pour un retour IMMEDIAT vers Java seulement. Le moteur Bedrock les SUPPRIME des qu'il recharge l'entite, et le comportement correspondant n'existe pas sous Bedrock.
+[jtb]   ×19 [normalized/entity] minecraft:sheep.definitions — groupes de composants reposés dans l’état natif par défaut : l’état exact de ce mob n’a pas été relevé
+[jtb]   ×18 [archived/entity] minecraft:arrow : Color, item — Champs Java sans equivalent Bedrock (Color, item) : conserves pour un retour IMMEDIAT vers Java seulement. Le moteur Bedrock les SUPPRIME des qu'il recharge l'entite, et le comportement correspondant n'existe pas sous Bedrock.
+[jtb]   ×18 [normalized/block_state] minecraft:big_dripleaf.tilt — unstable → none (état transitoire réarmé)
+[jtb]   ×14 [dropped/entity] minecraft:shulker_bullet.definitions — aucune liste de groupes de composants relevée pour cette espèce
+[jtb]   … et 13 autre(s) famille(s)

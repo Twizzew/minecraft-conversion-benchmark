@@ -1,0 +1,57 @@
+[
+ {
+  "t_ms": 4,
+  "pct": 5,
+  "phase": "INIT_TARGET"
+ },
+ {
+  "t_ms": 51,
+  "pct": 15,
+  "phase": "EXTRACT_ZIP"
+ },
+ {
+  "t_ms": 56,
+  "pct": 22,
+  "phase": "READ_LEVELDAT_JAVA"
+ },
+ {
+  "t_ms": 59,
+  "pct": 30,
+  "phase": "PREPARE_BEDROCK_DIR"
+ },
+ {
+  "t_ms": 292,
+  "pct": 42,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 361,
+  "pct": 55,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 406,
+  "pct": 67,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 442,
+  "pct": 80,
+  "phase": "CONVERT_CHUNKS"
+ },
+ {
+  "t_ms": 529,
+  "pct": 82,
+  "phase": "FINALIZE_LEVELDB"
+ },
+ {
+  "t_ms": 675,
+  "pct": 93,
+  "phase": "CREATE_MCWORLD"
+ },
+ {
+  "t_ms": 712,
+  "pct": 100,
+  "phase": "DONE"
+ }
+]

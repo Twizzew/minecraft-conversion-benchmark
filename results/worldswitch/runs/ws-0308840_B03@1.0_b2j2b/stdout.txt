@@ -1,0 +1,14 @@
+[jtb] pré-vol : 1 chunks échantillonnés, 1 avec palette, palette lisible ✓
+[jtb] 200 charge(s) biome Bedrock reportée(s) disponibles
+[jtb] régions : 17 tâche(s) en séquentiel
+[jtb] 2 entité(s) de chunks sans blocs récupérées (sweep)
+[jtb] 1 joueur(s) secondaire(s) → player_server_
+[jtb] scoreboard → clé LevelDB
+[jtb] clés globales Bedrock (LevelChunkMetaDataDictionary + Overworld/mobevents/…) écrites
+[jtb] sidecar : 254 champ(s) Bedrock-only greffé(s) sur 38 chunk(s) de block entities
+[jtb] sidecar : 651 enregistrements Bedrock-only restaurés, 8 instantané(s) périmé(s) écarté(s) (l'état Java courant fait foi)
+[jtb] villageois : 4 lien(s) lit/cloche/poste → 1 clé(s) VILLAGE_*_POI
+[jtb] villageois : 4 DwellingUniqueID pose(s)
+[jtb] chunks forcés : 34 chunk(s) → 7 zone(s) de tick (34 chunk(s) couvert(s))
+[jtb] 1529 sections, 200 chunks, 121 BE, 60 entities, 0 maps, 0 structures, player=yes, legacy=0
+[jtb] java-sidecar : enregistrements sans instantané seuls (monde venu de Bedrock)

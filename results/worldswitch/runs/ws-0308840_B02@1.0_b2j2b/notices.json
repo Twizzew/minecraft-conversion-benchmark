@@ -1,0 +1,63 @@
+[
+ {
+  "players": {
+   "total": 2,
+   "linked": 0,
+   "unlinked": 2,
+   "direction": "java_to_bedrock",
+   "accountLinking": {
+    "supported": false,
+    "reason": "aucun enregistrement `player_<XUID>` natif n'existe SEUL dans le corpus : rien n'établit qu'un client Bedrock résolve son profil par XUID plutôt que par un identifiant calculé localement (SelfSignedId / PlatformOfflineId), non dérivable d'un XUID. Le rattachement n'est donc pas RÉALISABLE DE FAÇON FIABLE avec ce que porte un monde ; ce n'est pas une impossibilité prouvée du format."
+   },
+   "registryFile": "worldswitch_player_recovery.json",
+   "entries": [
+    {
+     "label": "f5a1c0de-0000-4000-8000-000000000001",
+     "sourceId": "f5a1c0de-0000-4000-8000-000000000001",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "db:player_server_f5a1c0de-0000-4000-8000-000000000001",
+     "recovery": {
+      "dimension": "overworld",
+      "x": 0,
+      "y": -60,
+      "z": -2
+     },
+     "recoverySkippedReason": null,
+     "itemsCopied": 47
+    },
+    {
+     "label": "3209b036-5efa-4fe0-b7d9-72d4ddf2f00a",
+     "sourceId": "3209b036-5efa-4fe0-b7d9-72d4ddf2f00a",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "db:player_server_3209b036-5efa-4fe0-b7d9-72d4ddf2f00a",
+     "recovery": {
+      "dimension": "overworld",
+      "x": -2,
+      "y": -60,
+      "z": 2
+     },
+     "recoverySkippedReason": null,
+     "itemsCopied": 35
+    }
+   ]
+  },
+  "fidelity": {
+   "total": 16,
+   "families": 11,
+   "byCategory": {
+    "archived": 7,
+    "dropped": 3,
+    "approximated": 2,
+    "normalized": 4
+   },
+   "detailed": 11,
+   "truncated": 0
+  }
+ }
+]

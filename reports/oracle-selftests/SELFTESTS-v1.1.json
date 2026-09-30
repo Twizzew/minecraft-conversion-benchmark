@@ -1,0 +1,103 @@
+{
+ "schema": "mccb.selftests/1",
+ "tests": [
+  {
+   "name": "A.reader-vs-game J03@1.0",
+   "ok": true,
+   "summary": "54/54 block checks passed in game are read identically",
+   "failures": []
+  },
+  {
+   "name": "A.reader-vs-game J04@1.0",
+   "ok": true,
+   "summary": "2000/2000 block checks passed in game are read identically",
+   "failures": []
+  },
+  {
+   "name": "B.identity J02@1.0",
+   "ok": true,
+   "summary": "{\"PASS\":2182,\"NOT_EVALUATED\":4}",
+   "failures": []
+  },
+  {
+   "name": "B.identity J03@1.0",
+   "ok": true,
+   "summary": "{\"PASS\":940,\"NOT_EVALUATED\":17}",
+   "failures": []
+  },
+  {
+   "name": "B.identity J04@1.0",
+   "ok": true,
+   "summary": "{\"PASS\":34492,\"NOT_EVALUATED\":129}",
+   "failures": []
+  },
+  {
+   "name": "B.identity B01@1.0",
+   "ok": true,
+   "summary": "{\"PASS\":742,\"NOT_EVALUATED\":1}",
+   "failures": []
+  },
+  {
+   "name": "B.identity B02@1.0",
+   "ok": true,
+   "summary": "{\"PASS\":913,\"NOT_EVALUATED\":7}",
+   "failures": []
+  },
+  {
+   "name": "B.identity B03@1.0",
+   "ok": true,
+   "summary": "{\"PASS\":863,\"NOT_EVALUATED\":1303}",
+   "failures": []
+  },
+  {
+   "name": "B.identity J01@1.1",
+   "ok": true,
+   "summary": "{\"PASS\":110514}",
+   "failures": []
+  },
+  {
+   "name": "C.mutations J04@1.0",
+   "ok": true,
+   "summary": "3 mutated subjects, 3 failing; missed 0, unexpected 0",
+   "mutated": [
+    "J04@1.0/block/000083",
+    "J04@1.0/block_entity/000020",
+    "J04@1.0/entity/000001"
+   ],
+   "missed": [],
+   "unexpected": []
+  },
+  {
+   "name": "C.mutations B01@1.0",
+   "ok": true,
+   "summary": "2 mutated subjects, 2 failing; missed 0, unexpected 0",
+   "mutated": [
+    "B01@1.0/block/000001",
+    "B01@1.0/block_entity/000001"
+   ],
+   "missed": [],
+   "unexpected": []
+  },
+  {
+   "name": "C.mutations B02@1.0",
+   "ok": true,
+   "summary": "2 mutated subjects, 2 failing; missed 0, unexpected 0",
+   "mutated": [
+    "B02@1.0/block/000013",
+    "B02@1.0/entity/000009"
+   ],
+   "missed": [],
+   "unexpected": []
+  },
+  {
+   "name": "D.determinism ws-0308840_J04@1.0_j2b vs ws-0308840_J04@1.0_j2b_rerun1",
+   "ok": true,
+   "summary": "12452 subjects, direct level: 0 different (the output files differ byte-wise; their content is judged here)"
+  },
+  {
+   "name": "D.determinism ws-0308840_B01@1.0_b2j vs ws-0308840_B01@1.0_b2j_rerun1",
+   "ok": true,
+   "summary": "405 subjects, direct level: 0 different (the output files differ byte-wise; their content is judged here)"
+  }
+ ]
+}

@@ -1,0 +1,327 @@
+[
+ {
+  "t_ms": 7,
+  "pct": 5,
+  "phase": "INIT"
+ },
+ {
+  "t_ms": 8117,
+  "pct": 15,
+  "phase": "EXTRACT_MCWORLD"
+ },
+ {
+  "t_ms": 8124,
+  "pct": 20,
+  "phase": "READ_LEVELDAT_BEDROCK"
+ },
+ {
+  "t_ms": 8132,
+  "pct": 28,
+  "phase": "PREPARE_JAVA_DIR"
+ },
+ {
+  "t_ms": 9573,
+  "pct": 29,
+  "phase": "READ_BEDROCK_CHUNKS"
+ },
+ {
+  "t_ms": 10288,
+  "pct": 30,
+  "phase": "READ_BEDROCK_CHUNKS"
+ },
+ {
+  "t_ms": 10678,
+  "pct": 31,
+  "phase": "READ_BEDROCK_CHUNKS"
+ },
+ {
+  "t_ms": 11394,
+  "pct": 32,
+  "phase": "READ_BEDROCK_CHUNKS"
+ },
+ {
+  "t_ms": 11706,
+  "pct": 33,
+  "phase": "READ_BEDROCK_CHUNKS"
+ },
+ {
+  "t_ms": 12323,
+  "pct": 34,
+  "phase": "READ_BEDROCK_CHUNKS"
+ },
+ {
+  "t_ms": 12636,
+  "pct": 35,
+  "phase": "READ_BEDROCK_CHUNKS"
+ },
+ {
+  "t_ms": 13274,
+  "pct": 36,
+  "phase": "READ_BEDROCK_CHUNKS"
+ },
+ {
+  "t_ms": 14010,
+  "pct": 37,
+  "phase": "READ_BEDROCK_CHUNKS"
+ },
+ {
+  "t_ms": 14341,
+  "pct": 38,
+  "phase": "READ_BEDROCK_CHUNKS"
+ },
+ {
+  "t_ms": 14972,
+  "pct": 39,
+  "phase": "READ_BEDROCK_CHUNKS"
+ },
+ {
+  "t_ms": 15328,
+  "pct": 40,
+  "phase": "READ_BEDROCK_CHUNKS"
+ },
+ {
+  "t_ms": 15952,
+  "pct": 41,
+  "phase": "READ_BEDROCK_CHUNKS"
+ },
+ {
+  "t_ms": 16252,
+  "pct": 42,
+  "phase": "READ_BEDROCK_CHUNKS"
+ },
+ {
+  "t_ms": 16980,
+  "pct": 43,
+  "phase": "READ_BEDROCK_CHUNKS"
+ },
+ {
+  "t_ms": 17291,
+  "pct": 44,
+  "phase": "READ_BEDROCK_CHUNKS"
+ },
+ {
+  "t_ms": 17966,
+  "pct": 45,
+  "phase": "READ_BEDROCK_CHUNKS"
+ },
+ {
+  "t_ms": 18620,
+  "pct": 46,
+  "phase": "READ_BEDROCK_CHUNKS"
+ },
+ {
+  "t_ms": 18923,
+  "pct": 47,
+  "phase": "READ_BEDROCK_CHUNKS"
+ },
+ {
+  "t_ms": 19503,
+  "pct": 48,
+  "phase": "READ_BEDROCK_CHUNKS"
+ },
+ {
+  "t_ms": 19849,
+  "pct": 49,
+  "phase": "READ_BEDROCK_CHUNKS"
+ },
+ {
+  "t_ms": 20446,
+  "pct": 50,
+  "phase": "READ_BEDROCK_CHUNKS"
+ },
+ {
+  "t_ms": 20768,
+  "pct": 51,
+  "phase": "READ_BEDROCK_CHUNKS"
+ },
+ {
+  "t_ms": 21415,
+  "pct": 52,
+  "phase": "READ_BEDROCK_CHUNKS"
+ },
+ {
+  "t_ms": 22028,
+  "pct": 53,
+  "phase": "READ_BEDROCK_CHUNKS"
+ },
+ {
+  "t_ms": 22386,
+  "pct": 54,
+  "phase": "READ_BEDROCK_CHUNKS"
+ },
+ {
+  "t_ms": 23360,
+  "pct": 55,
+  "phase": "READ_BEDROCK_CHUNKS"
+ },
+ {
+  "t_ms": 23959,
+  "pct": 56,
+  "phase": "READ_BEDROCK_CHUNKS"
+ },
+ {
+  "t_ms": 24935,
+  "pct": 57,
+  "phase": "READ_BEDROCK_CHUNKS"
+ },
+ {
+  "t_ms": 25250,
+  "pct": 58,
+  "phase": "READ_BEDROCK_CHUNKS"
+ },
+ {
+  "t_ms": 26021,
+  "pct": 59,
+  "phase": "READ_BEDROCK_CHUNKS"
+ },
+ {
+  "t_ms": 26467,
+  "pct": 60,
+  "phase": "READ_BEDROCK_CHUNKS"
+ },
+ {
+  "t_ms": 103047,
+  "pct": 62,
+  "phase": "CONVERT_ENTITIES"
+ },
+ {
+  "t_ms": 103372,
+  "pct": 63,
+  "phase": "RECOMPUTE_BLOCK_LINKS"
+ },
+ {
+  "t_ms": 114625,
+  "pct": 62,
+  "phase": "WRITE_JAVA_REGIONS"
+ },
+ {
+  "t_ms": 172208,
+  "pct": 63,
+  "phase": "WRITE_JAVA_REGIONS"
+ },
+ {
+  "t_ms": 209402,
+  "pct": 64,
+  "phase": "WRITE_JAVA_REGIONS"
+ },
+ {
+  "t_ms": 238490,
+  "pct": 65,
+  "phase": "WRITE_JAVA_REGIONS"
+ },
+ {
+  "t_ms": 260887,
+  "pct": 66,
+  "phase": "WRITE_JAVA_REGIONS"
+ },
+ {
+  "t_ms": 278626,
+  "pct": 67,
+  "phase": "WRITE_JAVA_REGIONS"
+ },
+ {
+  "t_ms": 291551,
+  "pct": 68,
+  "phase": "WRITE_JAVA_REGIONS"
+ },
+ {
+  "t_ms": 300714,
+  "pct": 69,
+  "phase": "WRITE_JAVA_REGIONS"
+ },
+ {
+  "t_ms": 307838,
+  "pct": 70,
+  "phase": "WRITE_JAVA_REGIONS"
+ },
+ {
+  "t_ms": 314130,
+  "pct": 71,
+  "phase": "WRITE_JAVA_REGIONS"
+ },
+ {
+  "t_ms": 318896,
+  "pct": 72,
+  "phase": "WRITE_JAVA_REGIONS"
+ },
+ {
+  "t_ms": 322703,
+  "pct": 73,
+  "phase": "WRITE_JAVA_REGIONS"
+ },
+ {
+  "t_ms": 325872,
+  "pct": 74,
+  "phase": "WRITE_JAVA_REGIONS"
+ },
+ {
+  "t_ms": 328058,
+  "pct": 75,
+  "phase": "WRITE_JAVA_REGIONS"
+ },
+ {
+  "t_ms": 329700,
+  "pct": 76,
+  "phase": "WRITE_JAVA_REGIONS"
+ },
+ {
+  "t_ms": 331201,
+  "pct": 77,
+  "phase": "WRITE_JAVA_REGIONS"
+ },
+ {
+  "t_ms": 332713,
+  "pct": 78,
+  "phase": "WRITE_JAVA_REGIONS"
+ },
+ {
+  "t_ms": 333854,
+  "pct": 79,
+  "phase": "WRITE_JAVA_REGIONS"
+ },
+ {
+  "t_ms": 334606,
+  "pct": 80,
+  "phase": "WRITE_JAVA_REGIONS"
+ },
+ {
+  "t_ms": 335102,
+  "pct": 81,
+  "phase": "WRITE_JAVA_REGIONS"
+ },
+ {
+  "t_ms": 335456,
+  "pct": 82,
+  "phase": "WRITE_JAVA_REGIONS"
+ },
+ {
+  "t_ms": 337689,
+  "pct": 83,
+  "phase": "WRITE_JAVA_REGIONS"
+ },
+ {
+  "t_ms": 339602,
+  "pct": 84,
+  "phase": "WRITE_JAVA_REGIONS"
+ },
+ {
+  "t_ms": 340226,
+  "pct": 85,
+  "phase": "WRITE_JAVA_REGIONS"
+ },
+ {
+  "t_ms": 360470,
+  "pct": 87,
+  "phase": "CONVERT_PLAYER_MAPS"
+ },
+ {
+  "t_ms": 360779,
+  "pct": 93,
+  "phase": "CREATE_ZIP"
+ },
+ {
+  "t_ms": 398478,
+  "pct": 100,
+  "phase": "DONE"
+ }
+]

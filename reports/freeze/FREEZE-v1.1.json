@@ -1,0 +1,380 @@
+{
+ "schema": "mccb.freeze/1",
+ "benchmark_version": "1.1",
+ "status": "PREPARED — becomes the freeze when published (commit + release)",
+ "statement": "Every item below is fixed for MCCB v1.1. A change to any of them is a new MCCB version. Results of v1.1 are never re-graded.",
+ "sources": [
+  {
+   "world": "J01@1.1",
+   "class": "LAB",
+   "edition": "java",
+   "file": "MCCB_J01_STATIC_JAVA_v1.1.zip",
+   "sha256": "b28294c78bb7e3c755827153b8d52bbdb5f80a9a45b598d6608a141493d26cf3",
+   "bytes": 7912549
+  },
+  {
+   "world": "J02@1.0",
+   "class": "LAB",
+   "edition": "java",
+   "file": "MCCB_J02_LIVING_JAVA.zip",
+   "sha256": "db97f7497094ed5681600b37a76ab81e975341280883dcf433b3d6c40e8f17a4",
+   "bytes": 3308679
+  },
+  {
+   "world": "J03@1.0",
+   "class": "LAB",
+   "edition": "java",
+   "file": "MCCB_J03_SYSTEMS_JAVA.zip",
+   "sha256": "45c7ae7293ff1dfd3310757a8b56f1d094e6928aa20a82b68ff45428f55bbc50",
+   "bytes": 6325350
+  },
+  {
+   "world": "J04@1.0",
+   "class": "LAB",
+   "edition": "java",
+   "file": "MCCB_J04_COMMANDS_JAVA.zip",
+   "sha256": "44a58908bbf86554eb85c6c0fb6b8b060ed016965e943eab05e72145606a7b4c",
+   "bytes": 5986114
+  },
+  {
+   "world": "B01@1.0",
+   "class": "LAB",
+   "edition": "bedrock",
+   "file": "MCCB_B01_STATIC_BEDROCK.mcworld",
+   "sha256": "83e8e9909a3d8915980df317073b80c11421152d8f7ed88714fd196e45c0a667",
+   "bytes": 119207
+  },
+  {
+   "world": "B02@1.0",
+   "class": "MANUAL_NATIVE",
+   "edition": "bedrock",
+   "file": "MCCB_B02_LIVING_BEDROCK.mcworld",
+   "sha256": "34d9b5dfaff557ef5e3907cae8fba31fc5de8dc03cb49c145ab14b0e6f6ccd10",
+   "bytes": 159654
+  },
+  {
+   "world": "B03@1.0",
+   "class": "LAB",
+   "edition": "bedrock",
+   "file": "MCCB_B03_SYSTEMS_BEDROCK.mcworld",
+   "sha256": "fd16e5d795f6b707fb48bce821e09dcad5a8e15c87e101d6e080bb24c911a838",
+   "bytes": 779237
+  }
+ ],
+ "fixtures": [
+  {
+   "world": "J01@1.1",
+   "file": "fixtures/J01_1.1.jsonl.gz",
+   "content_sha256": "3ae79b00e625511407dc3c30629a1412a065a4d88ff0f18321d4e36d9a2d7ca0",
+   "file_sha256": "743b914f81a0b729d6e9a7b48bd568670b80bf57a8e59658659181558a999cbc",
+   "subjects": 46313,
+   "built_from_source_sha256": "b28294c78bb7e3c755827153b8d52bbdb5f80a9a45b598d6608a141493d26cf3"
+  },
+  {
+   "world": "J02@1.0",
+   "file": "fixtures/J02_1.0.jsonl.gz",
+   "content_sha256": "1e194bcaf9d72d983815db04c889cd3e72171d576344d51b6feda453ca6e11e5",
+   "file_sha256": "ecbf4f85774851d58f172001138230dac26c7e5d9c7eaaeebcd390e748be8baa",
+   "subjects": 600,
+   "built_from_source_sha256": "db97f7497094ed5681600b37a76ab81e975341280883dcf433b3d6c40e8f17a4"
+  },
+  {
+   "world": "J03@1.0",
+   "file": "fixtures/J03_1.0.jsonl.gz",
+   "content_sha256": "fb62a9cf6e6fbd6e67f775b9dc17c37f496c474cc73741dce07fec3a1cd7983f",
+   "file_sha256": "795dd936b4ee631630de24132b32a5e8bf295a4c137c940c513a206f8e8a8f1e",
+   "subjects": 552,
+   "built_from_source_sha256": "45c7ae7293ff1dfd3310757a8b56f1d094e6928aa20a82b68ff45428f55bbc50"
+  },
+  {
+   "world": "J04@1.0",
+   "file": "fixtures/J04_1.0.jsonl.gz",
+   "content_sha256": "5a26ef90526989517d21e9c9fb2510e038d1965ba1397a0dfbe66495e89a49a4",
+   "file_sha256": "6ca81890ca2f23cee699f23941049480b8ca76a4e0539eec88d6672b5ad8a08e",
+   "subjects": 12452,
+   "built_from_source_sha256": "44a58908bbf86554eb85c6c0fb6b8b060ed016965e943eab05e72145606a7b4c"
+  },
+  {
+   "world": "B01@1.0",
+   "file": "fixtures/B01_1.0.jsonl.gz",
+   "content_sha256": "94964c0b5e245ad768be694e82883987f3a9720167b782afacf43ac4fe194a98",
+   "file_sha256": "0721b7e4dccec92f0cf00c79c362dc7ee0553aebc4c9a4b74fb8f6027cd477ce",
+   "subjects": 405,
+   "built_from_source_sha256": "83e8e9909a3d8915980df317073b80c11421152d8f7ed88714fd196e45c0a667"
+  },
+  {
+   "world": "B02@1.0",
+   "file": "fixtures/B02_1.0.jsonl.gz",
+   "content_sha256": "dabcce1e42d7fbf639f7e940b3f7f89cedb19093be4085a338a560a091959f81",
+   "file_sha256": "316610bf10c2b895745c3dab285b61acb057e9386e5c43b7272f8a725f750ee6",
+   "subjects": 484,
+   "built_from_source_sha256": "34d9b5dfaff557ef5e3907cae8fba31fc5de8dc03cb49c145ab14b0e6f6ccd10"
+  },
+  {
+   "world": "B03@1.0",
+   "file": "fixtures/B03_1.0.jsonl.gz",
+   "content_sha256": "3f132f40167dc78908acf87750edcd2ce399a7c44f6cd22fcb61856230f3cf82",
+   "file_sha256": "729c2769ac15492251396e330992bd3de43fb7a18f8f9baa5e8233b693dd8833",
+   "subjects": 1061,
+   "built_from_source_sha256": "fd16e5d795f6b707fb48bce821e09dcad5a8e15c87e101d6e080bb24c911a838"
+  }
+ ],
+ "rules": {
+  "METHODOLOGY.md": "0dbd54132d08747fce7d0b5ab598994fe6ea84ac6712aed1a420fbfe1c697510",
+  "docs/fixture-rules.md": "f98fb254b118364e280f83fba941207ad7a0ebbecb77db2919c43d59610c1af0",
+  "docs/rules-changelog.md": "09c746c3e9c42a676b446ccb1675d299cd7e8beaabdfadeb6f4e1666eac288e8",
+  "KNOWN_LIMITATIONS.md": "278a0358f15d5870d5ab848fbc487064019aa054d202e64108fefc65737de653"
+ },
+ "manifests": {
+  "manifests/worlds.json": "7fcc88d3970ce160ef2f9965185e37e703f36187bd97eb2c201e3f2edb1b3132"
+ },
+ "manifests_informative": {
+  "manifests/converters.json": "a3f14f7002d8f6e084d99518455506a32afd40d474e88abafcdb682f567e4afd"
+ },
+ "references": {
+  "identity_equivalence": {
+   "file": "docs/reference/identity-equivalence.v1.json",
+   "sha256": "5fd3bf2c718511b155dcb15a2491713cc76ab6fea21ea2a85831065347c14d50"
+  },
+  "java_game": {
+   "version": "26.3",
+   "jar_file": "26.3.jar",
+   "jar_sha256": "4508d006323f24fa02876310c192d739af56516eb259000ac50f0909a68c9a2d",
+   "note": "Official Minecraft Java client jar, used unmodified from the local launcher installation; never redistributed."
+  },
+  "java_normaliser_sha256": "bb60733e44265e1977b647e7eab9d50ed78bca9f7bb149edaebc32e5895c8ebf",
+  "bedrock_vanilla_data": {
+   "package": "@minecraft/vanilla-data",
+   "version": "1.26.40"
+  }
+ },
+ "tools": {
+  "tools/families/block_entity.mjs": "f32e0d809d41242a1e12b9fbff220b45e2219ad2ceb9dab1323fc5a627493345",
+  "tools/families/block.mjs": "70702bfd83907f35fc768f35067d6e61305d032439fe17b1199d9f3e725c27b5",
+  "tools/families/custom_dimension.mjs": "0163b6ceb6e35482926b6af8e90ebf0b13379dd51db1fde3402ce074451db596",
+  "tools/families/entity.mjs": "4af45cc7e1ce511f9e4a1defb2ad1711281179cae35ce1a84d24d3c590b3fb27",
+  "tools/families/index.mjs": "35d3783f05634e9f5359c646f0917b9a7f834ee1799ec69689a60b69765bb7e1",
+  "tools/families/item_stack.mjs": "f296939bfcef59e6cc03aa85daf17febe8ea4224752e4f120c605ee5a797470f",
+  "tools/families/player.mjs": "8d1578a4afabd938cf5cb016e5951ad8f0a5ea171efba2ee913671a9babb5b62",
+  "tools/families/scoreboard.mjs": "024084df3e5070ce8e20fd58cfa998ce36b56e859ff6fe8400be555b8098dff1",
+  "tools/families/world.mjs": "c7e99b2f95ff8a781c4c6fff29467d2378d8a1c44552c7b1e409617b946484f7",
+  "tools/fixtures/build-fixtures.mjs": "06f06ef6961b7c64e9468e5230ec46091e8981e2eb2153abe07bd007687fb5cc",
+  "tools/fixtures/validate-sources.mjs": "c2cf4325a6d1d017818338297fca1ee1cd73c76be45cf024fac44d8649f92d0c",
+  "tools/fixtures/zones.mjs": "d5644c439bad4edab18435ddbc144b6227b0776b1cc19f6c31c66032292d4ee9",
+  "tools/java/classpath.mjs": "416e4a7491dc44c94a9059668104d6d882c95ddb7b70159e0c1a8512a255a262",
+  "tools/java/prepare-normalized.mjs": "af3969edd220c60fe8eb5b07127e3affb170f3a5729d2b7f3e7f91edd3e5f90f",
+  "tools/java/src/MccbNormalize.java": "bb60733e44265e1977b647e7eab9d50ed78bca9f7bb149edaebc32e5895c8ebf",
+  "tools/lib/archive.mjs": "c74ad6253ba3b256f6719d714ea50007a13220cfb9125ee8ea4e10b8b653a462",
+  "tools/lib/bedrock/world.mjs": "3e29b674efd520946fd9ff88fc3243da73b120b5aab591595de53902e97e6da6",
+  "tools/lib/facts.mjs": "9a3db644864304a71c7dbe7fe23f239908a6570409801cdfe23fed4b95502358",
+  "tools/lib/fixtures-io.mjs": "64fff09594bf3eb2c8f6b9144f9802f0cb617583d88320551acd4b78e84c1113",
+  "tools/lib/identity.mjs": "d6701c6b8c9634f0fb2bd7ae8ef436db2b573ec547c9dc52df6479ca9fa8eb03",
+  "tools/lib/java/world.mjs": "383101c9be2426b3cedc709e50f8f1b825b22097f774472372e9d95926fdb5a3",
+  "tools/lib/nbt.mjs": "689db21adf655065261387cb3ffcc6efcd42fccce4505f49150f7ff223c45eb5",
+  "tools/lib/open.mjs": "3b2950702de10a867a0ef05f40caf74f955091db5594fb0944ed635e344ead0f",
+  "tools/lib/registry.mjs": "d63d392fee9451422fc30eef3676c511fa2ede6f7b1daa85b7d76bcde25d3e88",
+  "tools/lib/status.mjs": "34f74c5424184ceeb882791b457e2542241d130ed41403adebde0a51150e780c",
+  "tools/oracles/evaluate-suite.mjs": "e7dbf353cb7fa5be81b3ed9e67449331fead733eee5deb30cfcf774c143355df",
+  "tools/oracles/evaluate.mjs": "eb2ee93d7c1a957804a360e8594ae4b4b603f60175dc2e4231d509803ad8399d",
+  "tools/oracles/target.mjs": "cf51ac4b728855b07093ad35f2bf654bb0becf0b74433039c6808fac8323b8c8",
+  "tools/package-lock.json": "cc1b0f88fa62217160ca61ec12631be9729f372c6356f00eacad49c450c4acf9",
+  "tools/package.json": "9460579ef1d88819ae6e4748c950985b9c11b80c43d181c78d5fe737614f72e0",
+  "tools/reference/build-identity.mjs": "ced3a054d2ad7685ff643bdb640d932a4522b82b14ffda12477a7dcfe8e28705",
+  "tools/reference/gamerules.v1.mjs": "bf61c0616dc59af30ae7516d4c4f91af0867154c6b81af06e7ff92822d63417a",
+  "tools/reference/identity-rules.v1.mjs": "b506319b4e5d842251659a4f76d2c966daac1c6a3d73c4920509e5ccf6b7747e"
+ },
+ "packaging_tools_informative": {
+  "tools/manifests/build-freeze.mjs": "fd44a224fc0bd9a3e33244e242859a12cb5a57c9c2b227a014d27de1857d2d17",
+  "tools/manifests/build-manifests.mjs": "165cad7c0ffd6b3826726e1f76aede91bba2cf72fa3e23409418a3170d78d8e9",
+  "tools/manifests/build-world-cards.mjs": "281b3e327a6c03fae0585b0ff81fe898aad83ca6e7840ec705dfb25dccfc399e",
+  "tools/manifests/check-fixtures.mjs": "ade00874c61909a72733e199d9e56459db64f12fb4e7e9e9ce8b13396b340a19",
+  "tools/results/aggregate.mjs": "ac34938e77d5c18bf05aaba86503d809b334cf54e8983dd941f2c48b6179f3c3",
+  "tools/results/compare.mjs": "76b193a6128df38a63edb8be6d245398b42f8305ecf239598f220dfcd026fbbd",
+  "tools/results/diff-summaries.mjs": "ea0f98d5e4fe82f4d56c1061367566b29610c9d60c16b421ea9d03d60769c962",
+  "tools/results/failure-census.mjs": "f21acc524f893a6a801ce33c7abb0ddf3657c9b647fb34976a4286f47b9fe847",
+  "tools/results/show.mjs": "7ae3b3b2eaecc443082e3df10988b46b890d1c52bc73958b68b656b9a9af7d3d",
+  "tools/runners/generic/pack-output.mjs": "a84c06b73a93268fa3247939e921d24c0ed74eba9c1975376ff2fa7d782b0c69",
+  "tools/runners/generic/record-manual-run.mjs": "9d295f18e39ab793837fff8f20611dc76a129a1e72205538ec8b96c79dcfcb66",
+  "tools/runners/generic/run-command.mjs": "5cd6c69452f09405e3728edcf5fd64352c57339db9d2e0d288bd7b8c3c89dfea",
+  "tools/runners/generic/run-suite-command.mjs": "ad0fc0886b39b0f5b0818d64103bd52fe671dba95f804ecd20116a2157561f00",
+  "tools/runners/worldswitch/child.mjs": "9c3825098e3153aff2df93e1d678a688e32529c508bcdf680ea9df3ba480f821",
+  "tools/runners/worldswitch/run-suite.mjs": "eaea3c697c10cf8b7f6320dce177e6daeb4fe6e59c1770c469fbb66153edf2b5",
+  "tools/runners/worldswitch/run.mjs": "b2d6b09fdb303ead928e398e78a31de8b556540b035ebd20d84d420467e35ffb",
+  "tools/runners/worldswitch/suite-mccb-v1.1.json": "19c0a3e35bce50ac551dd9fb2a4c8efdc3a8f08bd3563346350d809aab58ff0b",
+  "tools/runners/worldswitch/suite-private-gurren.json": "28138a7538578f8a2e68135ac5cb7f8238cdfbbefab13047f8d35357ddf68ef5",
+  "tools/selftest/run-selftests.mjs": "8b7f61af690a89af67e07261746602b1dad15e28e9ef445806b50856d611c612",
+  "tools/verify.ps1": "eb57fcd3d052220a8e2854987c6e5d1e91a2c741ec1f76c3329544211b9103df",
+  "tools/verify.sh": "d8e5dae6dade012642e67f9b92df31dbe4a6377a1c2be6abafc0d5f64c0101e1",
+  "tools/worlds/sanitize-bedrock-survival.mjs": "d374d05c044862ec4a9793fa826a4a800f52486469f71d8ccc87231c6b6ba7e7",
+  "tools/worlds/text-review.mjs": "90cc9d3f7f60a1ef173d8f85c18c4aa9e171c8f49c33ed52bc70be68efdede63"
+ },
+ "measured_before_freeze": [
+  {
+   "converter": "worldswitch",
+   "world": "B01@1.0",
+   "direct_run": "ws-0308840_B01@1.0_b2j",
+   "roundtrip_run": "ws-0308840_B01@1.0_b2j2b",
+   "build": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+   "results_file": "results/worldswitch/ws-0308840_B01@1.0_b2j/results.jsonl.gz",
+   "results_sha256": "d3f3b1661303cb324413c2f8a094a3ff248d8e004cea32806aca30b7dffe37e5",
+   "fixtures_content_sha256": "94964c0b5e245ad768be694e82883987f3a9720167b782afacf43ac4fe194a98"
+  },
+  {
+   "converter": "worldswitch",
+   "world": "B01@1.0",
+   "direct_run": "ws-0308840_B01@1.0_b2j_rerun1",
+   "roundtrip_run": null,
+   "build": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+   "results_file": "results/worldswitch/ws-0308840_B01@1.0_b2j_rerun1/results.jsonl.gz",
+   "results_sha256": "8df9b47386e47054018bc9b96fa27327ef857b37b3c8bbbfebce77c672b0fa88",
+   "fixtures_content_sha256": "94964c0b5e245ad768be694e82883987f3a9720167b782afacf43ac4fe194a98"
+  },
+  {
+   "converter": "worldswitch",
+   "world": "B02@1.0",
+   "direct_run": "ws-0308840_B02@1.0_b2j",
+   "roundtrip_run": "ws-0308840_B02@1.0_b2j2b",
+   "build": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+   "results_file": "results/worldswitch/ws-0308840_B02@1.0_b2j/results.jsonl.gz",
+   "results_sha256": "c45ae026ed9343ad34f72d1711897fdff580a19ac4507c9b59ee210086c6c798",
+   "fixtures_content_sha256": "dabcce1e42d7fbf639f7e940b3f7f89cedb19093be4085a338a560a091959f81"
+  },
+  {
+   "converter": "worldswitch",
+   "world": "B03@1.0",
+   "direct_run": "ws-0308840_B03@1.0_b2j",
+   "roundtrip_run": "ws-0308840_B03@1.0_b2j2b",
+   "build": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+   "results_file": "results/worldswitch/ws-0308840_B03@1.0_b2j/results.jsonl.gz",
+   "results_sha256": "fcda111050dc18df6a381e4f9e1ddecb8b8dd8554a8598599596b3c0caef54a2",
+   "fixtures_content_sha256": "3f132f40167dc78908acf87750edcd2ce399a7c44f6cd22fcb61856230f3cf82"
+  },
+  {
+   "converter": "worldswitch",
+   "world": "J01@1.1",
+   "direct_run": "ws-0308840_J01@1.1_j2b",
+   "roundtrip_run": "ws-0308840_J01@1.1_j2b2j",
+   "build": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+   "results_file": "results/worldswitch/ws-0308840_J01@1.1_j2b/results.jsonl.gz",
+   "results_sha256": "72dc371708ca479e875679511db70a801a833291a5ec526e66fe413a0806a484",
+   "fixtures_content_sha256": "3ae79b00e625511407dc3c30629a1412a065a4d88ff0f18321d4e36d9a2d7ca0"
+  },
+  {
+   "converter": "worldswitch",
+   "world": "J02@1.0",
+   "direct_run": "ws-0308840_J02@1.0_j2b",
+   "roundtrip_run": "ws-0308840_J02@1.0_j2b2j",
+   "build": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+   "results_file": "results/worldswitch/ws-0308840_J02@1.0_j2b/results.jsonl.gz",
+   "results_sha256": "8ae0f2acbc467a2ffef3cc012cdf8ef9b9d44bf433e3eeb25a2b65c4f444153a",
+   "fixtures_content_sha256": "1e194bcaf9d72d983815db04c889cd3e72171d576344d51b6feda453ca6e11e5"
+  },
+  {
+   "converter": "worldswitch",
+   "world": "J03@1.0",
+   "direct_run": "ws-0308840_J03@1.0_j2b",
+   "roundtrip_run": "ws-0308840_J03@1.0_j2b2j",
+   "build": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+   "results_file": "results/worldswitch/ws-0308840_J03@1.0_j2b/results.jsonl.gz",
+   "results_sha256": "5d20770a764b5a1a0d66177dccb65f8416cfa4941953f372fde1e4e46ffe16b2",
+   "fixtures_content_sha256": "fb62a9cf6e6fbd6e67f775b9dc17c37f496c474cc73741dce07fec3a1cd7983f"
+  },
+  {
+   "converter": "worldswitch",
+   "world": "J04@1.0",
+   "direct_run": "ws-0308840_J04@1.0_j2b",
+   "roundtrip_run": "ws-0308840_J04@1.0_j2b2j",
+   "build": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+   "results_file": "results/worldswitch/ws-0308840_J04@1.0_j2b/results.jsonl.gz",
+   "results_sha256": "e5e7cdbc3641bf2f2c45ce24740371b22e76f70881b1727808c450d671d370f9",
+   "fixtures_content_sha256": "5a26ef90526989517d21e9c9fb2510e038d1965ba1397a0dfbe66495e89a49a4"
+  },
+  {
+   "converter": "worldswitch",
+   "world": "J04@1.0",
+   "direct_run": "ws-0308840_J04@1.0_j2b_rerun1",
+   "roundtrip_run": null,
+   "build": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+   "results_file": "results/worldswitch/ws-0308840_J04@1.0_j2b_rerun1/results.jsonl.gz",
+   "results_sha256": "5e66a728a311960115c1881331333f85bc47889987227898b01f9604b2d861dc",
+   "fixtures_content_sha256": "5a26ef90526989517d21e9c9fb2510e038d1965ba1397a0dfbe66495e89a49a4"
+  }
+ ],
+ "measured_after_freeze": [
+  {
+   "converter": "chunker",
+   "world": "B01@1.0",
+   "direct_run": "chunker-1.20.0_B01@1.0_b2j",
+   "roundtrip_run": "chunker-1.20.0_B01@1.0_b2j2b",
+   "build": "1.20.0",
+   "results_file": "results/chunker/chunker-1.20.0_B01@1.0_b2j/results.jsonl.gz",
+   "results_sha256": "cc08ac5c7525b9208d5f810fa92b71abfe4cbbeeb1e8c747332c3c0273539108",
+   "fixtures_content_sha256": "94964c0b5e245ad768be694e82883987f3a9720167b782afacf43ac4fe194a98"
+  },
+  {
+   "converter": "chunker",
+   "world": "B02@1.0",
+   "direct_run": "chunker-1.20.0_B02@1.0_b2j",
+   "roundtrip_run": "chunker-1.20.0_B02@1.0_b2j2b",
+   "build": "1.20.0",
+   "results_file": "results/chunker/chunker-1.20.0_B02@1.0_b2j/results.jsonl.gz",
+   "results_sha256": "6550bb99a9e53e9428f031334045ff7b674f5bf4c5ff90782b28450fca30e438",
+   "fixtures_content_sha256": "dabcce1e42d7fbf639f7e940b3f7f89cedb19093be4085a338a560a091959f81"
+  },
+  {
+   "converter": "chunker",
+   "world": "B03@1.0",
+   "direct_run": "chunker-1.20.0_B03@1.0_b2j",
+   "roundtrip_run": "chunker-1.20.0_B03@1.0_b2j2b",
+   "build": "1.20.0",
+   "results_file": "results/chunker/chunker-1.20.0_B03@1.0_b2j/results.jsonl.gz",
+   "results_sha256": "85206b24880c8902c8dbb3ec8433eba77c536d7030b112bf9b9fa60b1c800712",
+   "fixtures_content_sha256": "3f132f40167dc78908acf87750edcd2ce399a7c44f6cd22fcb61856230f3cf82"
+  },
+  {
+   "converter": "chunker",
+   "world": "J01@1.1",
+   "direct_run": "chunker-1.20.0_J01@1.1_j2b",
+   "roundtrip_run": "chunker-1.20.0_J01@1.1_j2b2j",
+   "build": "1.20.0",
+   "results_file": "results/chunker/chunker-1.20.0_J01@1.1_j2b/results.jsonl.gz",
+   "results_sha256": "79a83ea2e60030362f1a04665951d11c24ab61b997aab4f8e9b8b6a4755b1672",
+   "fixtures_content_sha256": "3ae79b00e625511407dc3c30629a1412a065a4d88ff0f18321d4e36d9a2d7ca0"
+  },
+  {
+   "converter": "chunker",
+   "world": "J02@1.0",
+   "direct_run": "chunker-1.20.0_J02@1.0_j2b",
+   "roundtrip_run": "chunker-1.20.0_J02@1.0_j2b2j",
+   "build": "1.20.0",
+   "results_file": "results/chunker/chunker-1.20.0_J02@1.0_j2b/results.jsonl.gz",
+   "results_sha256": "72fbf604163bb12cb753f92c6808a354b5104e919184253b9294d3c396bb526a",
+   "fixtures_content_sha256": "1e194bcaf9d72d983815db04c889cd3e72171d576344d51b6feda453ca6e11e5"
+  },
+  {
+   "converter": "chunker",
+   "world": "J03@1.0",
+   "direct_run": "chunker-1.20.0_J03@1.0_j2b",
+   "roundtrip_run": "chunker-1.20.0_J03@1.0_j2b2j",
+   "build": "1.20.0",
+   "results_file": "results/chunker/chunker-1.20.0_J03@1.0_j2b/results.jsonl.gz",
+   "results_sha256": "d0ed070b60e861345e6bef112ddf0d73dad646f0d5f52d85ca2d5fd958b2ff63",
+   "fixtures_content_sha256": "fb62a9cf6e6fbd6e67f775b9dc17c37f496c474cc73741dce07fec3a1cd7983f"
+  },
+  {
+   "converter": "chunker",
+   "world": "J04@1.0",
+   "direct_run": "chunker-1.20.0_J04@1.0_j2b",
+   "roundtrip_run": "chunker-1.20.0_J04@1.0_j2b2j",
+   "build": "1.20.0",
+   "results_file": "results/chunker/chunker-1.20.0_J04@1.0_j2b/results.jsonl.gz",
+   "results_sha256": "c190450c8e9535dd2d87f187745d01d81719f1a3e65d30e8110ea60185fa0063",
+   "fixtures_content_sha256": "5a26ef90526989517d21e9c9fb2510e038d1965ba1397a0dfbe66495e89a49a4"
+  }
+ ],
+ "not_run_before_freeze": [
+  "Chunker",
+  "je2be"
+ ],
+ "fixtures_match_results": true
+}

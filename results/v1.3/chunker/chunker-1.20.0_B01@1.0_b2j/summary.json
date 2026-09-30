@@ -1,0 +1,1541 @@
+{
+ "schema": "mccb.results/1",
+ "world": "B01@1.0",
+ "world_class": "LAB",
+ "source_sha256": "83e8e9909a3d8915980df317073b80c11421152d8f7ed88714fd196e45c0a667",
+ "converter": "chunker",
+ "direct_run": "chunker-1.20.0_B01@1.0_b2j",
+ "roundtrip_run": "chunker-1.20.0_B01@1.0_b2j2b",
+ "direct_output_sha256": "59c680d59445c007d44e980d8afed4cb530e4f6aaec084c1499d6246deae0fc5",
+ "roundtrip_output_sha256": "35a53742fc877a922f3e6b5405fd2953c16d037fe0726cf6d9db46c1543b677d",
+ "converter_build": {
+  "name": "Chunker",
+  "slug": "chunker",
+  "version": "1.20.0",
+  "commit": "1.20.0",
+  "source_available": true,
+  "tool_file": "chunker-cli-1.20.0.jar",
+  "tool_sha256": "41efb80bba57c4eb08a810e5cc121211e2c0585aa8ff6eaf63d949782ecea502",
+  "command_template": "\"<HOME>\" -jar \"<LOCAL>/Benchmarcks/minecraft-conversion-benchmark/_staging/tools/chunker-cli-1.20.0.jar\" -i {input_dir} -o {output_dir} -f JAVA_26_3"
+ },
+ "direction": "bedrock_to_java",
+ "options": {
+  "outputFormat": "JAVA_26_3"
+ },
+ "target_opens": {
+  "direct": true,
+  "direct_normalize": {
+   "tool": "MccbNormalize",
+   "minecraft_data_version": 5023,
+   "minecraft_version": "26.3",
+   "level_data_version_before": 5017,
+   "level_data_version_after": 5023,
+   "file_fix": "not required",
+   "world_opens": true,
+   "units": {
+    "block_entity_loaded": 57,
+    "chunk": 41,
+    "level.dat": 1,
+    "player": 1,
+    "saved_data": 7
+   },
+   "legacy_paths_left": [],
+   "block_entities_dropped_by_game_load": [],
+   "block_entities_kept_as_stored": [],
+   "block_entities_loaded_with_problems": [],
+   "errors": []
+  },
+  "roundtrip": true,
+  "roundtrip_normalize": null
+ },
+ "fixtures": {
+  "file": "fixtures/B01_1.0.jsonl.gz",
+  "content_sha256": "780d5858bf7f1fab101cdbf64e6f1f3f0e9afa493a33526b37d76b33518cd048",
+  "file_sha256": "f97ed5173e7d774be71e0eed6bd4bde7b6ad53a6336756fdf848257a3ded8735"
+ },
+ "results_file": {
+  "file": "results.jsonl.gz",
+  "sha256": "233b6fc92b6229ae4fbb05d222b8a77477011c45f28da3ba99d73e8d840b5856",
+  "subjects": 405
+ },
+ "summary": [
+  {
+   "family": "block",
+   "aspect": "identity",
+   "level": "direct",
+   "counts": {
+    "PASS": 238,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "block",
+   "aspect": "identity",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 238,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 238
+   }
+  },
+  {
+   "family": "block",
+   "aspect": "identity",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 238,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "block",
+   "aspect": "state",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 152,
+   "reasons": {
+    "no-neutral-cross-edition-state-reference-in-v1.1": 152
+   }
+  },
+  {
+   "family": "block",
+   "aspect": "state",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 152,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 152
+   }
+  },
+  {
+   "family": "block",
+   "aspect": "state",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 143,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 9,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "block",
+   "aspect": "waterlog",
+   "level": "direct",
+   "counts": {
+    "PASS": 1,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 2
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "block",
+   "aspect": "waterlog",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 3,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 3
+   }
+  },
+  {
+   "family": "block",
+   "aspect": "waterlog",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 1,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 2,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "block_entity",
+   "aspect": "presence",
+   "level": "direct",
+   "counts": {
+    "PASS": 57,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 3
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "block_entity",
+   "aspect": "presence",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 60,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 60
+   }
+  },
+  {
+   "family": "block_entity",
+   "aspect": "presence",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 60,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "block_entity",
+   "aspect": "sign_text",
+   "level": "direct",
+   "counts": {
+    "PASS": 4,
+    "ADAPTED": 1,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "block_entity",
+   "aspect": "sign_text",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 5,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 5
+   }
+  },
+  {
+   "family": "block_entity",
+   "aspect": "sign_text",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 4,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "block_entity",
+   "aspect": "sign_flags",
+   "level": "direct",
+   "counts": {
+    "PASS": 5,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "block_entity",
+   "aspect": "sign_flags",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 5,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 5
+   }
+  },
+  {
+   "family": "block_entity",
+   "aspect": "sign_flags",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 5,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "block_entity",
+   "aspect": "sign_color",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 5,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 5
+   }
+  },
+  {
+   "family": "block_entity",
+   "aspect": "sign_color",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 5,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 5
+   }
+  },
+  {
+   "family": "block_entity",
+   "aspect": "sign_color",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 5,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "block_entity",
+   "aspect": "data",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 60,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 60
+   }
+  },
+  {
+   "family": "block_entity",
+   "aspect": "data",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 60,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 60
+   }
+  },
+  {
+   "family": "block_entity",
+   "aspect": "data",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 45,
+    "ADAPTED": 0,
+    "PARTIAL": 15,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "block_entity",
+   "aspect": "command",
+   "level": "direct",
+   "counts": {
+    "PASS": 1,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "block_entity",
+   "aspect": "command",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "block_entity",
+   "aspect": "command",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 1,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "block_entity",
+   "aspect": "command_flags",
+   "level": "direct",
+   "counts": {
+    "PASS": 1,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "block_entity",
+   "aspect": "command_flags",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "block_entity",
+   "aspect": "command_flags",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 1,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "block_entity",
+   "aspect": "lectern_book",
+   "level": "direct",
+   "counts": {
+    "PASS": 2,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "block_entity",
+   "aspect": "lectern_book",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 2,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 2
+   }
+  },
+  {
+   "family": "block_entity",
+   "aspect": "lectern_book",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 2,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "identity",
+   "level": "direct",
+   "counts": {
+    "PASS": 46,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "identity",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 46,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 46
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "identity",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 46,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "count",
+   "level": "direct",
+   "counts": {
+    "PASS": 46,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "count",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 46,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 46
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "count",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 46,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:writable_book_content",
+   "level": "direct",
+   "counts": {
+    "PASS": 4,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:writable_book_content",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 4,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 4
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:writable_book_content",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 4,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "tag",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 6,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 6
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "tag",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 6,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 6
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "tag",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 6,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "aux",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 7,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 7
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "aux",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 7,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 7
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "aux",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 7,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "entity",
+   "aspect": "identity",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 11,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "entity",
+   "aspect": "identity",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 11,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 11
+   }
+  },
+  {
+   "family": "entity",
+   "aspect": "identity",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 11,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "entity",
+   "aspect": "position",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 11,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "entity",
+   "aspect": "position",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 11,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 11
+   }
+  },
+  {
+   "family": "entity",
+   "aspect": "position",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 11,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "entity",
+   "aspect": "health",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 11,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "entity",
+   "aspect": "health",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 11,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 11
+   }
+  },
+  {
+   "family": "entity",
+   "aspect": "health",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 11,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "entity",
+   "aspect": "data",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 11,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 11
+   }
+  },
+  {
+   "family": "entity",
+   "aspect": "data",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 11,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 11
+   }
+  },
+  {
+   "family": "entity",
+   "aspect": "data",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 11,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "entity",
+   "aspect": "baby",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "entity",
+   "aspect": "baby",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "entity",
+   "aspect": "baby",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "entity",
+   "aspect": "trades",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "entity",
+   "aspect": "trades",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "entity",
+   "aspect": "trades",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "world",
+   "aspect": "opens",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "measured-at-behavior-level": 1
+   }
+  },
+  {
+   "family": "world",
+   "aspect": "opens",
+   "level": "behavior",
+   "counts": {
+    "PASS": 1,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "world",
+   "aspect": "opens",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-bedrock-runtime-in-v1.1": 1
+   }
+  },
+  {
+   "family": "world",
+   "aspect": "value",
+   "level": "direct",
+   "counts": {
+    "PASS": 35,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 8
+   },
+   "not_evaluated": 4,
+   "reasons": {
+    "gamerule-different-unit": 3,
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "world",
+   "aspect": "value",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 48,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 48
+   }
+  },
+  {
+   "family": "world",
+   "aspect": "value",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 35,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 13,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "player",
+   "aspect": "position",
+   "level": "direct",
+   "counts": {
+    "PASS": 1,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "player",
+   "aspect": "position",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "player",
+   "aspect": "position",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 1,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "player",
+   "aspect": "dimension",
+   "level": "direct",
+   "counts": {
+    "PASS": 1,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "player",
+   "aspect": "dimension",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "player",
+   "aspect": "dimension",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 1,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "player",
+   "aspect": "game_mode",
+   "level": "direct",
+   "counts": {
+    "PASS": 1,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "player",
+   "aspect": "game_mode",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "player",
+   "aspect": "game_mode",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 1,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "player",
+   "aspect": "health",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "player",
+   "aspect": "health",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "player",
+   "aspect": "health",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "player",
+   "aspect": "food",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "player",
+   "aspect": "food",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "player",
+   "aspect": "food",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "player",
+   "aspect": "xp_level",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "player",
+   "aspect": "xp_level",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "player",
+   "aspect": "xp_level",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "player",
+   "aspect": "inventory",
+   "level": "direct",
+   "counts": {
+    "PASS": 1,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "player",
+   "aspect": "inventory",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "player",
+   "aspect": "inventory",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 1,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  }
+ ],
+ "evaluated_with": {
+  "tools_version": "1.3.0",
+  "node": "v24.16.0"
+ }
+}

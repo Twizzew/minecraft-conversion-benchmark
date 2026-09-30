@@ -1,0 +1,16 @@
+[
+ {
+  "fidelity": {
+   "total": 450,
+   "families": 190,
+   "byCategory": {
+    "archived": 346,
+    "normalized": 57,
+    "dropped": 40,
+    "approximated": 7
+   },
+   "detailed": 190,
+   "truncated": 0
+  }
+ }
+]

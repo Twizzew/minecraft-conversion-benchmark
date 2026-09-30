@@ -1,0 +1,62 @@
+{
+  "schema": "mccb.run/1",
+  "run_id": "ws-0308840_J02@1.0_j2b2j",
+  "converter": {
+    "name": "WorldSwitch",
+    "engine_package": "minecraft-world-converter",
+    "engine_package_version": "2.7.80",
+    "commit": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+    "working_tree_clean": true,
+    "source_available": false,
+    "package_lock_sha256": "768190151a605671e126eb85165882a744956a3441ea03db666fde22c025340b",
+    "key_dependencies": {
+      "prismarine-nbt": "2.8.0",
+      "leveldb-zlib": "1.2.0",
+      "adm-zip": "0.6.1",
+      "unzipper": "0.8.14"
+    }
+  },
+  "direction": "bedrock_to_java",
+  "source": {
+    "ref": "ws-0308840_J02@1.0_j2b",
+    "file": "output.mcworld",
+    "sha256": "88bf98ee693928a3ac1feea4caa50e8136c7d5689bb81b907ecbd4a16a1c86fd",
+    "bytes": 4283906
+  },
+  "options": {
+    "recoverUnlinked": true,
+    "locale": "en"
+  },
+  "environment": {
+    "node": "v24.16.0",
+    "platform": "win32",
+    "arch": "x64",
+    "os_release": "10.0.26200",
+    "cpus": 16,
+    "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor             ",
+    "total_mem_bytes": 33456947200,
+    "engine_env_vars_removed": []
+  },
+  "started_at": "2026-09-23T22:33:08.025Z",
+  "finished_at": "2026-09-23T22:33:10.136Z",
+  "duration_ms": 1924,
+  "exit_status": 0,
+  "signal": null,
+  "error": null,
+  "output": {
+    "file": "output.zip",
+    "engine_filename": "MCCB_J02_LIVING_JAVA26_2_java.zip",
+    "sha256": "d815d842822b90db4e16af16d9864da138baff47d36fa9cfe03bb3c2fcee71fc",
+    "bytes": 2052419
+  },
+  "logs": [
+    "stdout.log",
+    "stderr.log",
+    "progress.json",
+    "notices.json"
+  ],
+  "peak": {
+    "rss_bytes": 226816000,
+    "max_rss_kb": 303192
+  }
+}

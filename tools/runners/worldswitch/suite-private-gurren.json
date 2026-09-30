@@ -1,0 +1,9 @@
+{
+  "schema": "mccb.suite/1",
+  "benchmark_version": "1.1",
+  "source_dir": "_staging/private-sources",
+  "note": "PRIVATE world, measured locally only. Never published as is (other players' identifiers, Realms data). A sanitised derivative is required before any publication.",
+  "worlds": [
+    { "id": "GURREN@1.0", "file": "MCCB_GURREN_PRIVATE.mcworld", "direction": "bedrock_to_java" }
+  ]
+}

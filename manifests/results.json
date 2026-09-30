@@ -1,0 +1,3814 @@
+{
+ "schema": "mccb.results-index/1",
+ "benchmark_version": "1.1",
+ "note": "Counts per level. No score. NOT_EVALUATED is not a status. Never add classes (LAB / MANUAL_NATIVE / REAL_WORLD_SURVIVAL) together.",
+ "results": [
+  {
+   "converter": "chunker",
+   "world": "B01@1.0",
+   "world_class": "LAB",
+   "direction": "bedrock_to_java",
+   "direct_run": "chunker-1.20.0_B01@1.0_b2j",
+   "roundtrip_run": "chunker-1.20.0_B01@1.0_b2j2b",
+   "build": "1.20.0",
+   "fixtures_content_sha256": "94964c0b5e245ad768be694e82883987f3a9720167b782afacf43ac4fe194a98",
+   "results_file": "results/chunker/chunker-1.20.0_B01@1.0_b2j/results.jsonl.gz",
+   "results_sha256": "cc08ac5c7525b9208d5f810fa92b71abfe4cbbeeb1e8c747332c3c0273539108",
+   "totals_by_level": {
+    "direct": {
+     "PASS": 432,
+     "ADAPTED": 1,
+     "PARTIAL": 0,
+     "FAIL": 51,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 13,
+     "NOT_EVALUATED": 246
+    },
+    "behavior": {
+     "PASS": 1,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 0,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 742
+    },
+    "roundtrip": {
+     "PASS": 607,
+     "ADAPTED": 0,
+     "PARTIAL": 60,
+     "FAIL": 75,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 1
+    }
+   },
+   "by_family": {
+    "block": {
+     "direct": {
+      "PASS": 239,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 2,
+      "NOT_EVALUATED": 152
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 393
+     },
+     "roundtrip": {
+      "PASS": 382,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 11,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "block_entity": {
+     "direct": {
+      "PASS": 70,
+      "ADAPTED": 1,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 3,
+      "NOT_EVALUATED": 65
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 139
+     },
+     "roundtrip": {
+      "PASS": 78,
+      "ADAPTED": 0,
+      "PARTIAL": 60,
+      "FAIL": 1,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "item_stack": {
+     "direct": {
+      "PASS": 96,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 13
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 109
+     },
+     "roundtrip": {
+      "PASS": 109,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "entity": {
+     "direct": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 35,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 11
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 46
+     },
+     "roundtrip": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 46,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "world": {
+     "direct": {
+      "PASS": 23,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 13,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 8,
+      "NOT_EVALUATED": 5
+     },
+     "behavior": {
+      "PASS": 1,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 48
+     },
+     "roundtrip": {
+      "PASS": 35,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 13,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 1
+     }
+    },
+    "player": {
+     "direct": {
+      "PASS": 4,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 3,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 7
+     },
+     "roundtrip": {
+      "PASS": 3,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 4,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    }
+   },
+   "detail": "results/chunker/chunker-1.20.0_B01@1.0_b2j/summary.json"
+  },
+  {
+   "converter": "chunker",
+   "world": "B02@1.0",
+   "world_class": "MANUAL_NATIVE",
+   "direction": "bedrock_to_java",
+   "direct_run": "chunker-1.20.0_B02@1.0_b2j",
+   "roundtrip_run": "chunker-1.20.0_B02@1.0_b2j2b",
+   "build": "1.20.0",
+   "fixtures_content_sha256": "dabcce1e42d7fbf639f7e940b3f7f89cedb19093be4085a338a560a091959f81",
+   "results_file": "results/chunker/chunker-1.20.0_B02@1.0_b2j/results.jsonl.gz",
+   "results_sha256": "6550bb99a9e53e9428f031334045ff7b674f5bf4c5ff90782b28450fca30e438",
+   "totals_by_level": {
+    "direct": {
+     "PASS": 373,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 253,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 51,
+     "NOT_EVALUATED": 249
+    },
+    "behavior": {
+     "PASS": 1,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 0,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 925
+    },
+    "roundtrip": {
+     "PASS": 524,
+     "ADAPTED": 0,
+     "PARTIAL": 52,
+     "FAIL": 349,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 1
+    }
+   },
+   "by_family": {
+    "block": {
+     "direct": {
+      "PASS": 297,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 95
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 392
+     },
+     "roundtrip": {
+      "PASS": 391,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 1,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "block_entity": {
+     "direct": {
+      "PASS": 10,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 42,
+      "NOT_EVALUATED": 52
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 104
+     },
+     "roundtrip": {
+      "PASS": 52,
+      "ADAPTED": 0,
+      "PARTIAL": 52,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "item_stack": {
+     "direct": {
+      "PASS": 38,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 12
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 50
+     },
+     "roundtrip": {
+      "PASS": 43,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 7,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "entity": {
+     "direct": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 235,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 1,
+      "NOT_EVALUATED": 76
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 312
+     },
+     "roundtrip": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 312,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "world": {
+     "direct": {
+      "PASS": 23,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 13,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 8,
+      "NOT_EVALUATED": 5
+     },
+     "behavior": {
+      "PASS": 1,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 48
+     },
+     "roundtrip": {
+      "PASS": 35,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 13,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 1
+     }
+    },
+    "player": {
+     "direct": {
+      "PASS": 5,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 5,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 9
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 19
+     },
+     "roundtrip": {
+      "PASS": 3,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 16,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    }
+   },
+   "detail": "results/chunker/chunker-1.20.0_B02@1.0_b2j/summary.json"
+  },
+  {
+   "converter": "chunker",
+   "world": "B03@1.0",
+   "world_class": "LAB",
+   "direction": "bedrock_to_java",
+   "direct_run": "chunker-1.20.0_B03@1.0_b2j",
+   "roundtrip_run": "chunker-1.20.0_B03@1.0_b2j2b",
+   "build": "1.20.0",
+   "fixtures_content_sha256": "3f132f40167dc78908acf87750edcd2ce399a7c44f6cd22fcb61856230f3cf82",
+   "results_file": "results/chunker/chunker-1.20.0_B03@1.0_b2j/results.jsonl.gz",
+   "results_sha256": "85206b24880c8902c8dbb3ec8433eba77c536d7030b112bf9b9fa60b1c800712",
+   "totals_by_level": {
+    "direct": {
+     "PASS": 335,
+     "ADAPTED": 1,
+     "PARTIAL": 0,
+     "FAIL": 213,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 42,
+     "NOT_EVALUATED": 1575
+    },
+    "behavior": {
+     "PASS": 1,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 0,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 2165
+    },
+    "roundtrip": {
+     "PASS": 481,
+     "ADAPTED": 0,
+     "PARTIAL": 139,
+     "FAIL": 1545,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 1
+    }
+   },
+   "by_family": {
+    "block": {
+     "direct": {
+      "PASS": 145,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 83
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 228
+     },
+     "roundtrip": {
+      "PASS": 226,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 2,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "block_entity": {
+     "direct": {
+      "PASS": 138,
+      "ADAPTED": 1,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 34,
+      "NOT_EVALUATED": 1424
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 1597
+     },
+     "roundtrip": {
+      "PASS": 191,
+      "ADAPTED": 0,
+      "PARTIAL": 139,
+      "FAIL": 1267,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "item_stack": {
+     "direct": {
+      "PASS": 26,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 2
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 28
+     },
+     "roundtrip": {
+      "PASS": 26,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 2,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "entity": {
+     "direct": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 176,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 60
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 236
+     },
+     "roundtrip": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 236,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "world": {
+     "direct": {
+      "PASS": 23,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 16,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 8,
+      "NOT_EVALUATED": 5
+     },
+     "behavior": {
+      "PASS": 1,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 51
+     },
+     "roundtrip": {
+      "PASS": 35,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 16,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 1
+     }
+    },
+    "scoreboard": {
+     "direct": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 18,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 1
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 19
+     },
+     "roundtrip": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 19,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "player": {
+     "direct": {
+      "PASS": 3,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 3,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 6
+     },
+     "roundtrip": {
+      "PASS": 3,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 3,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    }
+   },
+   "detail": "results/chunker/chunker-1.20.0_B03@1.0_b2j/summary.json"
+  },
+  {
+   "converter": "chunker",
+   "world": "J01@1.1",
+   "world_class": "LAB",
+   "direction": "java_to_bedrock",
+   "direct_run": "chunker-1.20.0_J01@1.1_j2b",
+   "roundtrip_run": "chunker-1.20.0_J01@1.1_j2b2j",
+   "build": "1.20.0",
+   "fixtures_content_sha256": "3ae79b00e625511407dc3c30629a1412a065a4d88ff0f18321d4e36d9a2d7ca0",
+   "results_file": "results/chunker/chunker-1.20.0_J01@1.1_j2b/results.jsonl.gz",
+   "results_sha256": "79a83ea2e60030362f1a04665951d11c24ab61b997aab4f8e9b8b6a4755b1672",
+   "totals_by_level": {
+    "direct": {
+     "PASS": 55731,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 634,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 15618,
+     "NOT_EVALUATED": 38531
+    },
+    "behavior": {
+     "PASS": 0,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 0,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 110514
+    },
+    "roundtrip": {
+     "PASS": 92313,
+     "ADAPTED": 10349,
+     "PARTIAL": 684,
+     "FAIL": 7168,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 0
+    }
+   },
+   "by_family": {
+    "block": {
+     "direct": {
+      "PASS": 44209,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 12,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 5,
+      "NOT_EVALUATED": 32102
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 76328
+     },
+     "roundtrip": {
+      "PASS": 59692,
+      "ADAPTED": 10349,
+      "PARTIAL": 0,
+      "FAIL": 6287,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "block_entity": {
+     "direct": {
+      "PASS": 7455,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 3,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 13288,
+      "NOT_EVALUATED": 6046
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 26792
+     },
+     "roundtrip": {
+      "PASS": 26610,
+      "ADAPTED": 0,
+      "PARTIAL": 156,
+      "FAIL": 26,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "item_stack": {
+     "direct": {
+      "PASS": 4035,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 189,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 12,
+      "NOT_EVALUATED": 257
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 4493
+     },
+     "roundtrip": {
+      "PASS": 4223,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 270,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "entity": {
+     "direct": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 374,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 121
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 495
+     },
+     "roundtrip": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 495,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "world": {
+     "direct": {
+      "PASS": 30,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 6,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 31,
+      "NOT_EVALUATED": 5
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 72
+     },
+     "roundtrip": {
+      "PASS": 32,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 40,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "scoreboard": {
+     "direct": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 47,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 47
+     },
+     "roundtrip": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 47,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "custom_dimension": {
+     "direct": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 2280,
+      "NOT_EVALUATED": 0
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 2280
+     },
+     "roundtrip": {
+      "PASS": 1752,
+      "ADAPTED": 0,
+      "PARTIAL": 528,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "player": {
+     "direct": {
+      "PASS": 2,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 3,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 2,
+      "NOT_EVALUATED": 0
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 7
+     },
+     "roundtrip": {
+      "PASS": 4,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 3,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    }
+   },
+   "detail": "results/chunker/chunker-1.20.0_J01@1.1_j2b/summary.json"
+  },
+  {
+   "converter": "chunker",
+   "world": "J02@1.0",
+   "world_class": "LAB",
+   "direction": "java_to_bedrock",
+   "direct_run": "chunker-1.20.0_J02@1.0_j2b",
+   "roundtrip_run": "chunker-1.20.0_J02@1.0_j2b2j",
+   "build": "1.20.0",
+   "fixtures_content_sha256": "1e194bcaf9d72d983815db04c889cd3e72171d576344d51b6feda453ca6e11e5",
+   "results_file": "results/chunker/chunker-1.20.0_J02@1.0_j2b/results.jsonl.gz",
+   "results_sha256": "72fbf604163bb12cb753f92c6808a354b5104e919184253b9294d3c396bb526a",
+   "totals_by_level": {
+    "direct": {
+     "PASS": 256,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 1386,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 68,
+     "NOT_EVALUATED": 470
+    },
+    "behavior": {
+     "PASS": 0,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 0,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 2180
+    },
+    "roundtrip": {
+     "PASS": 336,
+     "ADAPTED": 0,
+     "PARTIAL": 16,
+     "FAIL": 1828,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 0
+    }
+   },
+   "by_family": {
+    "block": {
+     "direct": {
+      "PASS": 54,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 49
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 103
+     },
+     "roundtrip": {
+      "PASS": 103,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "block_entity": {
+     "direct": {
+      "PASS": 48,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 41
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 89
+     },
+     "roundtrip": {
+      "PASS": 75,
+      "ADAPTED": 0,
+      "PARTIAL": 14,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "item_stack": {
+     "direct": {
+      "PASS": 118,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 118
+     },
+     "roundtrip": {
+      "PASS": 118,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "entity": {
+     "direct": {
+      "PASS": 2,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 1371,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 35,
+      "NOT_EVALUATED": 375
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 1783
+     },
+     "roundtrip": {
+      "PASS": 2,
+      "ADAPTED": 0,
+      "PARTIAL": 2,
+      "FAIL": 1779,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "world": {
+     "direct": {
+      "PASS": 29,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 10,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 33,
+      "NOT_EVALUATED": 5
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 77
+     },
+     "roundtrip": {
+      "PASS": 33,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 44,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "player": {
+     "direct": {
+      "PASS": 5,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 5,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 10
+     },
+     "roundtrip": {
+      "PASS": 5,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 5,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    }
+   },
+   "detail": "results/chunker/chunker-1.20.0_J02@1.0_j2b/summary.json"
+  },
+  {
+   "converter": "chunker",
+   "world": "J03@1.0",
+   "world_class": "LAB",
+   "direction": "java_to_bedrock",
+   "direct_run": "chunker-1.20.0_J03@1.0_j2b",
+   "roundtrip_run": "chunker-1.20.0_J03@1.0_j2b2j",
+   "build": "1.20.0",
+   "fixtures_content_sha256": "fb62a9cf6e6fbd6e67f775b9dc17c37f496c474cc73741dce07fec3a1cd7983f",
+   "results_file": "results/chunker/chunker-1.20.0_J03@1.0_j2b/results.jsonl.gz",
+   "results_sha256": "d0ed070b60e861345e6bef112ddf0d73dad646f0d5f52d85ca2d5fd958b2ff63",
+   "totals_by_level": {
+    "direct": {
+     "PASS": 394,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 168,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 90,
+     "NOT_EVALUATED": 305
+    },
+    "behavior": {
+     "PASS": 0,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 0,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 957
+    },
+    "roundtrip": {
+     "PASS": 684,
+     "ADAPTED": 2,
+     "PARTIAL": 20,
+     "FAIL": 251,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 0
+    }
+   },
+   "by_family": {
+    "block": {
+     "direct": {
+      "PASS": 229,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 52,
+      "NOT_EVALUATED": 165
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 446
+     },
+     "roundtrip": {
+      "PASS": 444,
+      "ADAPTED": 2,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "block_entity": {
+     "direct": {
+      "PASS": 87,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 89
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 176
+     },
+     "roundtrip": {
+      "PASS": 156,
+      "ADAPTED": 0,
+      "PARTIAL": 20,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "item_stack": {
+     "direct": {
+      "PASS": 48,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 3
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 51
+     },
+     "roundtrip": {
+      "PASS": 51,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "entity": {
+     "direct": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 70,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 43
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 113
+     },
+     "roundtrip": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 113,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "world": {
+     "direct": {
+      "PASS": 27,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 10,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 35,
+      "NOT_EVALUATED": 5
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 77
+     },
+     "roundtrip": {
+      "PASS": 30,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 47,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "scoreboard": {
+     "direct": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 85,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 3,
+      "NOT_EVALUATED": 0
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 88
+     },
+     "roundtrip": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 88,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "player": {
+     "direct": {
+      "PASS": 3,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 3,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 6
+     },
+     "roundtrip": {
+      "PASS": 3,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 3,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    }
+   },
+   "detail": "results/chunker/chunker-1.20.0_J03@1.0_j2b/summary.json"
+  },
+  {
+   "converter": "chunker",
+   "world": "J04@1.0",
+   "world_class": "LAB",
+   "direction": "java_to_bedrock",
+   "direct_run": "chunker-1.20.0_J04@1.0_j2b",
+   "roundtrip_run": "chunker-1.20.0_J04@1.0_j2b2j",
+   "build": "1.20.0",
+   "fixtures_content_sha256": "5a26ef90526989517d21e9c9fb2510e038d1965ba1397a0dfbe66495e89a49a4",
+   "results_file": "results/chunker/chunker-1.20.0_J04@1.0_j2b/results.jsonl.gz",
+   "results_sha256": "c190450c8e9535dd2d87f187745d01d81719f1a3e65d30e8110ea60185fa0063",
+   "totals_by_level": {
+    "direct": {
+     "PASS": 17233,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 2038,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 124,
+     "NOT_EVALUATED": 15226
+    },
+    "behavior": {
+     "PASS": 0,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 0,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 34621
+    },
+    "roundtrip": {
+     "PASS": 31249,
+     "ADAPTED": 0,
+     "PARTIAL": 409,
+     "FAIL": 2963,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 0
+    }
+   },
+   "by_family": {
+    "block": {
+     "direct": {
+      "PASS": 6170,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 5667
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 11837
+     },
+     "roundtrip": {
+      "PASS": 11837,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "block_entity": {
+     "direct": {
+      "PASS": 9795,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 90,
+      "NOT_EVALUATED": 9065
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 18950
+     },
+     "roundtrip": {
+      "PASS": 18541,
+      "ADAPTED": 0,
+      "PARTIAL": 409,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "item_stack": {
+     "direct": {
+      "PASS": 1235,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 1235
+     },
+     "roundtrip": {
+      "PASS": 835,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 400,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "entity": {
+     "direct": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 1332,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 470
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 1802
+     },
+     "roundtrip": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 1802,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "world": {
+     "direct": {
+      "PASS": 29,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 10,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 34,
+      "NOT_EVALUATED": 5
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 78
+     },
+     "roundtrip": {
+      "PASS": 32,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 46,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "scoreboard": {
+     "direct": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 692,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 19
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 711
+     },
+     "roundtrip": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 711,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "player": {
+     "direct": {
+      "PASS": 4,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 4,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 8
+     },
+     "roundtrip": {
+      "PASS": 4,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 4,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    }
+   },
+   "detail": "results/chunker/chunker-1.20.0_J04@1.0_j2b/summary.json"
+  },
+  {
+   "converter": "worldswitch",
+   "world": "B01@1.0",
+   "world_class": "LAB",
+   "direction": "bedrock_to_java",
+   "direct_run": "ws-0308840_B01@1.0_b2j",
+   "roundtrip_run": "ws-0308840_B01@1.0_b2j2b",
+   "build": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+   "fixtures_content_sha256": "94964c0b5e245ad768be694e82883987f3a9720167b782afacf43ac4fe194a98",
+   "results_file": "results/worldswitch/ws-0308840_B01@1.0_b2j/results.jsonl.gz",
+   "results_sha256": "d3f3b1661303cb324413c2f8a094a3ff248d8e004cea32806aca30b7dffe37e5",
+   "totals_by_level": {
+    "direct": {
+     "PASS": 480,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 4,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 13,
+     "NOT_EVALUATED": 246
+    },
+    "behavior": {
+     "PASS": 1,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 0,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 742
+    },
+    "roundtrip": {
+     "PASS": 706,
+     "ADAPTED": 0,
+     "PARTIAL": 22,
+     "FAIL": 13,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 2
+    }
+   },
+   "by_family": {
+    "block": {
+     "direct": {
+      "PASS": 239,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 2,
+      "NOT_EVALUATED": 152
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 393
+     },
+     "roundtrip": {
+      "PASS": 388,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 4,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 1
+     }
+    },
+    "block_entity": {
+     "direct": {
+      "PASS": 70,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 1,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 3,
+      "NOT_EVALUATED": 65
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 139
+     },
+     "roundtrip": {
+      "PASS": 121,
+      "ADAPTED": 0,
+      "PARTIAL": 10,
+      "FAIL": 8,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "item_stack": {
+     "direct": {
+      "PASS": 93,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 3,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 13
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 109
+     },
+     "roundtrip": {
+      "PASS": 109,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "entity": {
+     "direct": {
+      "PASS": 35,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 11
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 46
+     },
+     "roundtrip": {
+      "PASS": 35,
+      "ADAPTED": 0,
+      "PARTIAL": 11,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "world": {
+     "direct": {
+      "PASS": 36,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 8,
+      "NOT_EVALUATED": 5
+     },
+     "behavior": {
+      "PASS": 1,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 48
+     },
+     "roundtrip": {
+      "PASS": 47,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 1,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 1
+     }
+    },
+    "player": {
+     "direct": {
+      "PASS": 7,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 7
+     },
+     "roundtrip": {
+      "PASS": 6,
+      "ADAPTED": 0,
+      "PARTIAL": 1,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    }
+   },
+   "detail": "results/worldswitch/ws-0308840_B01@1.0_b2j/summary.json"
+  },
+  {
+   "converter": "worldswitch",
+   "world": "B01@1.0",
+   "world_class": "LAB",
+   "direction": "bedrock_to_java",
+   "direct_run": "ws-0308840_B01@1.0_b2j_rerun1",
+   "roundtrip_run": null,
+   "build": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+   "fixtures_content_sha256": "94964c0b5e245ad768be694e82883987f3a9720167b782afacf43ac4fe194a98",
+   "results_file": "results/worldswitch/ws-0308840_B01@1.0_b2j_rerun1/results.jsonl.gz",
+   "results_sha256": "8df9b47386e47054018bc9b96fa27327ef857b37b3c8bbbfebce77c672b0fa88",
+   "totals_by_level": {
+    "direct": {
+     "PASS": 480,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 4,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 13,
+     "NOT_EVALUATED": 246
+    },
+    "behavior": {
+     "PASS": 1,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 0,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 742
+    },
+    "roundtrip": {
+     "PASS": 0,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 0,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 743
+    }
+   },
+   "by_family": {
+    "block": {
+     "direct": {
+      "PASS": 239,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 2,
+      "NOT_EVALUATED": 152
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 393
+     },
+     "roundtrip": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 393
+     }
+    },
+    "block_entity": {
+     "direct": {
+      "PASS": 70,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 1,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 3,
+      "NOT_EVALUATED": 65
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 139
+     },
+     "roundtrip": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 139
+     }
+    },
+    "item_stack": {
+     "direct": {
+      "PASS": 93,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 3,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 13
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 109
+     },
+     "roundtrip": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 109
+     }
+    },
+    "entity": {
+     "direct": {
+      "PASS": 35,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 11
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 46
+     },
+     "roundtrip": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 46
+     }
+    },
+    "world": {
+     "direct": {
+      "PASS": 36,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 8,
+      "NOT_EVALUATED": 5
+     },
+     "behavior": {
+      "PASS": 1,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 48
+     },
+     "roundtrip": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 49
+     }
+    },
+    "player": {
+     "direct": {
+      "PASS": 7,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 7
+     },
+     "roundtrip": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 7
+     }
+    }
+   },
+   "detail": "results/worldswitch/ws-0308840_B01@1.0_b2j_rerun1/summary.json"
+  },
+  {
+   "converter": "worldswitch",
+   "world": "B02@1.0",
+   "world_class": "MANUAL_NATIVE",
+   "direction": "bedrock_to_java",
+   "direct_run": "ws-0308840_B02@1.0_b2j",
+   "roundtrip_run": "ws-0308840_B02@1.0_b2j2b",
+   "build": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+   "fixtures_content_sha256": "dabcce1e42d7fbf639f7e940b3f7f89cedb19093be4085a338a560a091959f81",
+   "results_file": "results/worldswitch/ws-0308840_B02@1.0_b2j/results.jsonl.gz",
+   "results_sha256": "c45ae026ed9343ad34f72d1711897fdff580a19ac4507c9b59ee210086c6c798",
+   "totals_by_level": {
+    "direct": {
+     "PASS": 623,
+     "ADAPTED": 0,
+     "PARTIAL": 1,
+     "FAIL": 2,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 51,
+     "NOT_EVALUATED": 249
+    },
+    "behavior": {
+     "PASS": 1,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 0,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 925
+    },
+    "roundtrip": {
+     "PASS": 798,
+     "ADAPTED": 0,
+     "PARTIAL": 105,
+     "FAIL": 22,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 1
+    }
+   },
+   "by_family": {
+    "block": {
+     "direct": {
+      "PASS": 297,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 95
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 392
+     },
+     "roundtrip": {
+      "PASS": 392,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "block_entity": {
+     "direct": {
+      "PASS": 10,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 42,
+      "NOT_EVALUATED": 52
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 104
+     },
+     "roundtrip": {
+      "PASS": 100,
+      "ADAPTED": 0,
+      "PARTIAL": 4,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "item_stack": {
+     "direct": {
+      "PASS": 38,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 12
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 50
+     },
+     "roundtrip": {
+      "PASS": 44,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 6,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "entity": {
+     "direct": {
+      "PASS": 232,
+      "ADAPTED": 0,
+      "PARTIAL": 1,
+      "FAIL": 2,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 1,
+      "NOT_EVALUATED": 76
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 312
+     },
+     "roundtrip": {
+      "PASS": 203,
+      "ADAPTED": 0,
+      "PARTIAL": 98,
+      "FAIL": 11,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "world": {
+     "direct": {
+      "PASS": 36,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 8,
+      "NOT_EVALUATED": 5
+     },
+     "behavior": {
+      "PASS": 1,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 48
+     },
+     "roundtrip": {
+      "PASS": 47,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 1,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 1
+     }
+    },
+    "player": {
+     "direct": {
+      "PASS": 10,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 9
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 19
+     },
+     "roundtrip": {
+      "PASS": 12,
+      "ADAPTED": 0,
+      "PARTIAL": 3,
+      "FAIL": 4,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    }
+   },
+   "detail": "results/worldswitch/ws-0308840_B02@1.0_b2j/summary.json"
+  },
+  {
+   "converter": "worldswitch",
+   "world": "B03@1.0",
+   "world_class": "LAB",
+   "direction": "bedrock_to_java",
+   "direct_run": "ws-0308840_B03@1.0_b2j",
+   "roundtrip_run": "ws-0308840_B03@1.0_b2j2b",
+   "build": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+   "fixtures_content_sha256": "3f132f40167dc78908acf87750edcd2ce399a7c44f6cd22fcb61856230f3cf82",
+   "results_file": "results/worldswitch/ws-0308840_B03@1.0_b2j/results.jsonl.gz",
+   "results_sha256": "fcda111050dc18df6a381e4f9e1ddecb8b8dd8554a8598599596b3c0caef54a2",
+   "totals_by_level": {
+    "direct": {
+     "PASS": 546,
+     "ADAPTED": 2,
+     "PARTIAL": 1,
+     "FAIL": 0,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 42,
+     "NOT_EVALUATED": 1575
+    },
+    "behavior": {
+     "PASS": 1,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 0,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 2165
+    },
+    "roundtrip": {
+     "PASS": 722,
+     "ADAPTED": 0,
+     "PARTIAL": 100,
+     "FAIL": 1338,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 6
+    }
+   },
+   "by_family": {
+    "block": {
+     "direct": {
+      "PASS": 145,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 83
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 228
+     },
+     "roundtrip": {
+      "PASS": 197,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 26,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 5
+     }
+    },
+    "block_entity": {
+     "direct": {
+      "PASS": 139,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 34,
+      "NOT_EVALUATED": 1424
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 1597
+     },
+     "roundtrip": {
+      "PASS": 255,
+      "ADAPTED": 0,
+      "PARTIAL": 40,
+      "FAIL": 1302,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "item_stack": {
+     "direct": {
+      "PASS": 26,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 2
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 28
+     },
+     "roundtrip": {
+      "PASS": 26,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 2,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "entity": {
+     "direct": {
+      "PASS": 176,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 60
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 236
+     },
+     "roundtrip": {
+      "PASS": 172,
+      "ADAPTED": 0,
+      "PARTIAL": 60,
+      "FAIL": 4,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "world": {
+     "direct": {
+      "PASS": 36,
+      "ADAPTED": 2,
+      "PARTIAL": 1,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 8,
+      "NOT_EVALUATED": 5
+     },
+     "behavior": {
+      "PASS": 1,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 51
+     },
+     "roundtrip": {
+      "PASS": 48,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 3,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 1
+     }
+    },
+    "scoreboard": {
+     "direct": {
+      "PASS": 18,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 1
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 19
+     },
+     "roundtrip": {
+      "PASS": 18,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 1,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "player": {
+     "direct": {
+      "PASS": 6,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 6
+     },
+     "roundtrip": {
+      "PASS": 6,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    }
+   },
+   "detail": "results/worldswitch/ws-0308840_B03@1.0_b2j/summary.json"
+  },
+  {
+   "converter": "worldswitch",
+   "world": "J01@1.1",
+   "world_class": "LAB",
+   "direction": "java_to_bedrock",
+   "direct_run": "ws-0308840_J01@1.1_j2b",
+   "roundtrip_run": "ws-0308840_J01@1.1_j2b2j",
+   "build": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+   "fixtures_content_sha256": "3ae79b00e625511407dc3c30629a1412a065a4d88ff0f18321d4e36d9a2d7ca0",
+   "results_file": "results/worldswitch/ws-0308840_J01@1.1_j2b/results.jsonl.gz",
+   "results_sha256": "72dc371708ca479e875679511db70a801a833291a5ec526e66fe413a0806a484",
+   "totals_by_level": {
+    "direct": {
+     "PASS": 56364,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 1,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 15618,
+     "NOT_EVALUATED": 38531
+    },
+    "behavior": {
+     "PASS": 0,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 0,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 110514
+    },
+    "roundtrip": {
+     "PASS": 98458,
+     "ADAPTED": 10246,
+     "PARTIAL": 160,
+     "FAIL": 1650,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 0
+    }
+   },
+   "by_family": {
+    "block": {
+     "direct": {
+      "PASS": 44221,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 5,
+      "NOT_EVALUATED": 32102
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 76328
+     },
+     "roundtrip": {
+      "PASS": 64458,
+      "ADAPTED": 10246,
+      "PARTIAL": 0,
+      "FAIL": 1624,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "block_entity": {
+     "direct": {
+      "PASS": 7458,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 13288,
+      "NOT_EVALUATED": 6046
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 26792
+     },
+     "roundtrip": {
+      "PASS": 26706,
+      "ADAPTED": 0,
+      "PARTIAL": 76,
+      "FAIL": 10,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "item_stack": {
+     "direct": {
+      "PASS": 4224,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 12,
+      "NOT_EVALUATED": 257
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 4493
+     },
+     "roundtrip": {
+      "PASS": 4479,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 14,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "entity": {
+     "direct": {
+      "PASS": 373,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 1,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 121
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 495
+     },
+     "roundtrip": {
+      "PASS": 411,
+      "ADAPTED": 0,
+      "PARTIAL": 84,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "world": {
+     "direct": {
+      "PASS": 36,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 31,
+      "NOT_EVALUATED": 5
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 72
+     },
+     "roundtrip": {
+      "PASS": 71,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 1,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "scoreboard": {
+     "direct": {
+      "PASS": 47,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 47
+     },
+     "roundtrip": {
+      "PASS": 47,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "custom_dimension": {
+     "direct": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 2280,
+      "NOT_EVALUATED": 0
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 2280
+     },
+     "roundtrip": {
+      "PASS": 2280,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "player": {
+     "direct": {
+      "PASS": 5,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 2,
+      "NOT_EVALUATED": 0
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 7
+     },
+     "roundtrip": {
+      "PASS": 6,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 1,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    }
+   },
+   "detail": "results/worldswitch/ws-0308840_J01@1.1_j2b/summary.json"
+  },
+  {
+   "converter": "worldswitch",
+   "world": "J02@1.0",
+   "world_class": "LAB",
+   "direction": "java_to_bedrock",
+   "direct_run": "ws-0308840_J02@1.0_j2b",
+   "roundtrip_run": "ws-0308840_J02@1.0_j2b2j",
+   "build": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+   "fixtures_content_sha256": "1e194bcaf9d72d983815db04c889cd3e72171d576344d51b6feda453ca6e11e5",
+   "results_file": "results/worldswitch/ws-0308840_J02@1.0_j2b/results.jsonl.gz",
+   "results_sha256": "8ae0f2acbc467a2ffef3cc012cdf8ef9b9d44bf433e3eeb25a2b65c4f444153a",
+   "totals_by_level": {
+    "direct": {
+     "PASS": 1637,
+     "ADAPTED": 3,
+     "PARTIAL": 0,
+     "FAIL": 1,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 68,
+     "NOT_EVALUATED": 471
+    },
+    "behavior": {
+     "PASS": 0,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 0,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 2180
+    },
+    "roundtrip": {
+     "PASS": 1914,
+     "ADAPTED": 0,
+     "PARTIAL": 179,
+     "FAIL": 86,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 1
+    }
+   },
+   "by_family": {
+    "block": {
+     "direct": {
+      "PASS": 54,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 49
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 103
+     },
+     "roundtrip": {
+      "PASS": 103,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "block_entity": {
+     "direct": {
+      "PASS": 48,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 41
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 89
+     },
+     "roundtrip": {
+      "PASS": 69,
+      "ADAPTED": 0,
+      "PARTIAL": 20,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "item_stack": {
+     "direct": {
+      "PASS": 118,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 118
+     },
+     "roundtrip": {
+      "PASS": 118,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "entity": {
+     "direct": {
+      "PASS": 1371,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 1,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 35,
+      "NOT_EVALUATED": 376
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 1783
+     },
+     "roundtrip": {
+      "PASS": 1537,
+      "ADAPTED": 0,
+      "PARTIAL": 159,
+      "FAIL": 86,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 1
+     }
+    },
+    "world": {
+     "direct": {
+      "PASS": 36,
+      "ADAPTED": 3,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 33,
+      "NOT_EVALUATED": 5
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 77
+     },
+     "roundtrip": {
+      "PASS": 77,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "player": {
+     "direct": {
+      "PASS": 10,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 10
+     },
+     "roundtrip": {
+      "PASS": 10,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    }
+   },
+   "detail": "results/worldswitch/ws-0308840_J02@1.0_j2b/summary.json"
+  },
+  {
+   "converter": "worldswitch",
+   "world": "J03@1.0",
+   "world_class": "LAB",
+   "direction": "java_to_bedrock",
+   "direct_run": "ws-0308840_J03@1.0_j2b",
+   "roundtrip_run": "ws-0308840_J03@1.0_j2b2j",
+   "build": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+   "fixtures_content_sha256": "fb62a9cf6e6fbd6e67f775b9dc17c37f496c474cc73741dce07fec3a1cd7983f",
+   "results_file": "results/worldswitch/ws-0308840_J03@1.0_j2b/results.jsonl.gz",
+   "results_sha256": "5d20770a764b5a1a0d66177dccb65f8416cfa4941953f372fde1e4e46ffe16b2",
+   "totals_by_level": {
+    "direct": {
+     "PASS": 560,
+     "ADAPTED": 1,
+     "PARTIAL": 0,
+     "FAIL": 0,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 90,
+     "NOT_EVALUATED": 306
+    },
+    "behavior": {
+     "PASS": 0,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 0,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 957
+    },
+    "roundtrip": {
+     "PASS": 878,
+     "ADAPTED": 1,
+     "PARTIAL": 23,
+     "FAIL": 55,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 0
+    }
+   },
+   "by_family": {
+    "block": {
+     "direct": {
+      "PASS": 229,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 52,
+      "NOT_EVALUATED": 165
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 446
+     },
+     "roundtrip": {
+      "PASS": 393,
+      "ADAPTED": 1,
+      "PARTIAL": 0,
+      "FAIL": 52,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "block_entity": {
+     "direct": {
+      "PASS": 86,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 90
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 176
+     },
+     "roundtrip": {
+      "PASS": 168,
+      "ADAPTED": 0,
+      "PARTIAL": 8,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "item_stack": {
+     "direct": {
+      "PASS": 48,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 3
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 51
+     },
+     "roundtrip": {
+      "PASS": 51,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "entity": {
+     "direct": {
+      "PASS": 70,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 43
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 113
+     },
+     "roundtrip": {
+      "PASS": 98,
+      "ADAPTED": 0,
+      "PARTIAL": 15,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "world": {
+     "direct": {
+      "PASS": 36,
+      "ADAPTED": 1,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 35,
+      "NOT_EVALUATED": 5
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 77
+     },
+     "roundtrip": {
+      "PASS": 74,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 3,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "scoreboard": {
+     "direct": {
+      "PASS": 85,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 3,
+      "NOT_EVALUATED": 0
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 88
+     },
+     "roundtrip": {
+      "PASS": 88,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "player": {
+     "direct": {
+      "PASS": 6,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 6
+     },
+     "roundtrip": {
+      "PASS": 6,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    }
+   },
+   "detail": "results/worldswitch/ws-0308840_J03@1.0_j2b/summary.json"
+  },
+  {
+   "converter": "worldswitch",
+   "world": "J04@1.0",
+   "world_class": "LAB",
+   "direction": "java_to_bedrock",
+   "direct_run": "ws-0308840_J04@1.0_j2b",
+   "roundtrip_run": "ws-0308840_J04@1.0_j2b2j",
+   "build": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+   "fixtures_content_sha256": "5a26ef90526989517d21e9c9fb2510e038d1965ba1397a0dfbe66495e89a49a4",
+   "results_file": "results/worldswitch/ws-0308840_J04@1.0_j2b/results.jsonl.gz",
+   "results_sha256": "e5e7cdbc3641bf2f2c45ce24740371b22e76f70881b1727808c450d671d370f9",
+   "totals_by_level": {
+    "direct": {
+     "PASS": 18554,
+     "ADAPTED": 3,
+     "PARTIAL": 0,
+     "FAIL": 32,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 124,
+     "NOT_EVALUATED": 15908
+    },
+    "behavior": {
+     "PASS": 0,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 0,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 34621
+    },
+    "roundtrip": {
+     "PASS": 34149,
+     "ADAPTED": 0,
+     "PARTIAL": 470,
+     "FAIL": 2,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 0
+    }
+   },
+   "by_family": {
+    "block": {
+     "direct": {
+      "PASS": 6170,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 5667
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 11837
+     },
+     "roundtrip": {
+      "PASS": 11837,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "block_entity": {
+     "direct": {
+      "PASS": 9081,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 32,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 90,
+      "NOT_EVALUATED": 9747
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 18950
+     },
+     "roundtrip": {
+      "PASS": 18537,
+      "ADAPTED": 0,
+      "PARTIAL": 413,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "item_stack": {
+     "direct": {
+      "PASS": 1235,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 1235
+     },
+     "roundtrip": {
+      "PASS": 1235,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "entity": {
+     "direct": {
+      "PASS": 1332,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 470
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 1802
+     },
+     "roundtrip": {
+      "PASS": 1745,
+      "ADAPTED": 0,
+      "PARTIAL": 57,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "world": {
+     "direct": {
+      "PASS": 36,
+      "ADAPTED": 3,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 34,
+      "NOT_EVALUATED": 5
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 78
+     },
+     "roundtrip": {
+      "PASS": 76,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 2,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "scoreboard": {
+     "direct": {
+      "PASS": 692,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 19
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 711
+     },
+     "roundtrip": {
+      "PASS": 711,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    },
+    "player": {
+     "direct": {
+      "PASS": 8,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 8
+     },
+     "roundtrip": {
+      "PASS": 8,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     }
+    }
+   },
+   "detail": "results/worldswitch/ws-0308840_J04@1.0_j2b/summary.json"
+  },
+  {
+   "converter": "worldswitch",
+   "world": "J04@1.0",
+   "world_class": "LAB",
+   "direction": "java_to_bedrock",
+   "direct_run": "ws-0308840_J04@1.0_j2b_rerun1",
+   "roundtrip_run": null,
+   "build": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+   "fixtures_content_sha256": "5a26ef90526989517d21e9c9fb2510e038d1965ba1397a0dfbe66495e89a49a4",
+   "results_file": "results/worldswitch/ws-0308840_J04@1.0_j2b_rerun1/results.jsonl.gz",
+   "results_sha256": "5e66a728a311960115c1881331333f85bc47889987227898b01f9604b2d861dc",
+   "totals_by_level": {
+    "direct": {
+     "PASS": 18554,
+     "ADAPTED": 3,
+     "PARTIAL": 0,
+     "FAIL": 32,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 124,
+     "NOT_EVALUATED": 15908
+    },
+    "behavior": {
+     "PASS": 0,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 0,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 34621
+    },
+    "roundtrip": {
+     "PASS": 0,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 0,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 34621
+    }
+   },
+   "by_family": {
+    "block": {
+     "direct": {
+      "PASS": 6170,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 5667
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 11837
+     },
+     "roundtrip": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 11837
+     }
+    },
+    "block_entity": {
+     "direct": {
+      "PASS": 9081,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 32,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 90,
+      "NOT_EVALUATED": 9747
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 18950
+     },
+     "roundtrip": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 18950
+     }
+    },
+    "item_stack": {
+     "direct": {
+      "PASS": 1235,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 1235
+     },
+     "roundtrip": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 1235
+     }
+    },
+    "entity": {
+     "direct": {
+      "PASS": 1332,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 470
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 1802
+     },
+     "roundtrip": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 1802
+     }
+    },
+    "world": {
+     "direct": {
+      "PASS": 36,
+      "ADAPTED": 3,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 34,
+      "NOT_EVALUATED": 5
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 78
+     },
+     "roundtrip": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 78
+     }
+    },
+    "scoreboard": {
+     "direct": {
+      "PASS": 692,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 19
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 711
+     },
+     "roundtrip": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 711
+     }
+    },
+    "player": {
+     "direct": {
+      "PASS": 8,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 0
+     },
+     "behavior": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 8
+     },
+     "roundtrip": {
+      "PASS": 0,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 8
+     }
+    }
+   },
+   "detail": "results/worldswitch/ws-0308840_J04@1.0_j2b_rerun1/summary.json"
+  }
+ ]
+}

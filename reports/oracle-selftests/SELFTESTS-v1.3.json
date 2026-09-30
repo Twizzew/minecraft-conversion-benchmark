@@ -1,0 +1,81 @@
+{
+ "schema": "mccb.selftests/1",
+ "tests": [
+  {
+   "name": "B.identity J02@1.0",
+   "ok": true,
+   "summary": "{\"PASS\":2535,\"NOT_EVALUATED\":7}",
+   "failures": []
+  },
+  {
+   "name": "B.identity J03@1.0",
+   "ok": true,
+   "summary": "{\"PASS\":1300,\"NOT_EVALUATED\":20}",
+   "failures": []
+  },
+  {
+   "name": "B.identity J04@1.0",
+   "ok": true,
+   "summary": "{\"PASS\":35040,\"NOT_EVALUATED\":132}",
+   "failures": []
+  },
+  {
+   "name": "B.identity B01@1.0",
+   "ok": true,
+   "summary": "{\"PASS\":742,\"NOT_EVALUATED\":1}",
+   "failures": []
+  },
+  {
+   "name": "B.identity B02@1.0",
+   "ok": true,
+   "summary": "{\"PASS\":913,\"NOT_EVALUATED\":7}",
+   "failures": []
+  },
+  {
+   "name": "B.identity B03@1.0",
+   "ok": true,
+   "summary": "{\"PASS\":864,\"NOT_EVALUATED\":1303}",
+   "failures": []
+  },
+  {
+   "name": "B.identity J01@1.1",
+   "ok": true,
+   "summary": "{\"PASS\":111134,\"NOT_EVALUATED\":1}",
+   "failures": []
+  },
+  {
+   "name": "C.mutations J04@1.0",
+   "ok": true,
+   "summary": "3 mutated subjects, 3 failing; missed 0, unexpected 0",
+   "mutated": [
+    "J04@1.0/block/000083",
+    "J04@1.0/block_entity/000020",
+    "J04@1.0/entity/000001"
+   ],
+   "missed": [],
+   "unexpected": []
+  },
+  {
+   "name": "C.mutations B01@1.0",
+   "ok": true,
+   "summary": "2 mutated subjects, 2 failing; missed 0, unexpected 0",
+   "mutated": [
+    "B01@1.0/block/000001",
+    "B01@1.0/block_entity/000001"
+   ],
+   "missed": [],
+   "unexpected": []
+  },
+  {
+   "name": "C.mutations B02@1.0",
+   "ok": true,
+   "summary": "2 mutated subjects, 2 failing; missed 0, unexpected 0",
+   "mutated": [
+    "B02@1.0/block/000013",
+    "B02@1.0/entity/000009"
+   ],
+   "missed": [],
+   "unexpected": []
+  }
+ ]
+}

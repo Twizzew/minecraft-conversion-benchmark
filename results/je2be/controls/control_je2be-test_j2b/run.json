@@ -1,0 +1,49 @@
+{
+  "schema": "mccb.run/1",
+  "run_id": "control_je2be-test_j2b",
+  "converter": {
+    "name": "je2be",
+    "slug": "je2be",
+    "version": "core-8dfc4de",
+    "commit": "8dfc4de1ba5c7f72e804abea8663380c0dbd5680",
+    "source_available": true,
+    "tool_file": "j2b",
+    "tool_sha256": "172652363a8db105f2cc3f740517fba1ec3d79db5fe6fe100538098bfb8dc293",
+    "command_template": "<BUILD>/j2b -i {input_dir} -o {output_dir}"
+  },
+  "direction": "java_to_bedrock",
+  "source": {
+    "ref": "je2be-core@8dfc4de:test/data/je2be-test",
+    "file": "je2be-test.zip",
+    "sha256": "782348363998c923df1bbf0857c6e28c5390c020c4bbda57e13211a78fc6bc92",
+    "bytes": 64227778
+  },
+  "options": {},
+  "environment": {
+    "node": "v22.22.2",
+    "platform": "linux",
+    "arch": "x64",
+    "os_release": "6.18.44-fc-v37",
+    "cpus": 4,
+    "cpu_model": "Intel(R) Xeon(R) Processor @ 2.80GHz",
+    "total_mem_bytes": 16877547520
+  },
+  "started_at": "2026-09-29T16:17:34.035Z",
+  "finished_at": "2026-09-29T16:17:55.136Z",
+  "duration_ms": 21101,
+  "exit_status": 0,
+  "signal": null,
+  "error": null,
+  "output": {
+    "file": "output.mcworld",
+    "packed_by": "mccb (sorted entries, fixed timestamp)",
+    "sha256": "f1d3643f789a144e5534f57ba5318793bbfa569f230b8f405690b630537c1476",
+    "bytes": 51271882,
+    "tree_sha256": "452a71921c0b34c5de6c9dc38a89ffa56340125b9305ce09d6c67833e3e7f502",
+    "files": 78
+  },
+  "logs": [
+    "stdout.log",
+    "stderr.log"
+  ]
+}

@@ -1,0 +1,444 @@
+[
+ {
+  "players": {
+   "total": 27,
+   "linked": 0,
+   "unlinked": 27,
+   "direction": "bedrock_to_java",
+   "accountLinking": null,
+   "registryFile": "worldswitch_player_recovery.json",
+   "entries": [
+    {
+     "label": "Joueur principal",
+     "sourceId": "~local_player",
+     "isHost": true,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "playerdata/f5a1c0de-0000-4000-8000-000000000001.dat",
+     "recovery": null,
+     "recoverySkippedReason": null,
+     "itemsCopied": null
+    },
+    {
+     "label": "Joueur 2",
+     "sourceId": "19c142b2-274f-4974-b176-29bf04de512b",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "playerdata/19c142b2-274f-4974-b176-29bf04de512b.dat",
+     "recovery": {
+      "dimension": "overworld",
+      "x": -10,
+      "y": 64,
+      "z": -1
+     },
+     "recoverySkippedReason": null,
+     "itemsCopied": 9
+    },
+    {
+     "label": "Joueur 3",
+     "sourceId": "8c5158c4-c6ee-4adc-9ecd-7c78680848f1",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "playerdata/8c5158c4-c6ee-4adc-9ecd-7c78680848f1.dat",
+     "recovery": {
+      "dimension": "overworld",
+      "x": -13,
+      "y": 70,
+      "z": -6
+     },
+     "recoverySkippedReason": null,
+     "itemsCopied": 62
+    },
+    {
+     "label": "Joueur 4",
+     "sourceId": "63fef28e-29f2-4e54-a05a-53b43c854a76",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "playerdata/63fef28e-29f2-4e54-a05a-53b43c854a76.dat",
+     "recovery": {
+      "dimension": "overworld",
+      "x": -9,
+      "y": 70,
+      "z": 3
+     },
+     "recoverySkippedReason": null,
+     "itemsCopied": 38
+    },
+    {
+     "label": "Joueur 5",
+     "sourceId": "412d2634-a84e-49e8-931d-3b3932b58d54",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "playerdata/412d2634-a84e-49e8-931d-3b3932b58d54.dat",
+     "recovery": {
+      "dimension": "overworld",
+      "x": -12,
+      "y": 70,
+      "z": 3
+     },
+     "recoverySkippedReason": null,
+     "itemsCopied": 45
+    },
+    {
+     "label": "Joueur 6",
+     "sourceId": "eac9fc72-affb-49ff-afc3-207bbfc95bab",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "playerdata/eac9fc72-affb-49ff-afc3-207bbfc95bab.dat",
+     "recovery": {
+      "dimension": "overworld",
+      "x": -3,
+      "y": 63,
+      "z": -2
+     },
+     "recoverySkippedReason": null,
+     "itemsCopied": 41
+    },
+    {
+     "label": "Joueur 7",
+     "sourceId": "2486826b-4882-4be5-9b27-edd5e0251811",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "playerdata/2486826b-4882-4be5-9b27-edd5e0251811.dat",
+     "recovery": {
+      "dimension": "overworld",
+      "x": -6,
+      "y": 64,
+      "z": -1
+     },
+     "recoverySkippedReason": null,
+     "itemsCopied": 40
+    },
+    {
+     "label": "Joueur 8",
+     "sourceId": "938aa99a-a2f5-4143-8f74-0b04b23ac2c8",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "playerdata/938aa99a-a2f5-4143-8f74-0b04b23ac2c8.dat",
+     "recovery": {
+      "dimension": "overworld",
+      "x": -7,
+      "y": 70,
+      "z": -6
+     },
+     "recoverySkippedReason": null,
+     "itemsCopied": 40
+    },
+    {
+     "label": "Joueur 9",
+     "sourceId": "0263f532-352d-4b72-8ea9-988baedae32a",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "playerdata/0263f532-352d-4b72-8ea9-988baedae32a.dat",
+     "recovery": {
+      "dimension": "overworld",
+      "x": -10,
+      "y": 64,
+      "z": -3
+     },
+     "recoverySkippedReason": null,
+     "itemsCopied": 33
+    },
+    {
+     "label": "Joueur 10",
+     "sourceId": "67ed41b6-e0cb-4f46-8a54-8469064ed42d",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "playerdata/67ed41b6-e0cb-4f46-8a54-8469064ed42d.dat",
+     "recovery": {
+      "dimension": "overworld",
+      "x": -6,
+      "y": 70,
+      "z": 3
+     },
+     "recoverySkippedReason": null,
+     "itemsCopied": 39
+    },
+    {
+     "label": "Joueur 11",
+     "sourceId": "a4515beb-6a6b-4f63-ac7f-46e6c53e93c0",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "playerdata/a4515beb-6a6b-4f63-ac7f-46e6c53e93c0.dat",
+     "recovery": {
+      "dimension": "overworld",
+      "x": -4,
+      "y": 68,
+      "z": -6
+     },
+     "recoverySkippedReason": null,
+     "itemsCopied": 33
+    },
+    {
+     "label": "Joueur 12",
+     "sourceId": "f8c7c3da-be6e-43b6-a85a-70578973f865",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "playerdata/f8c7c3da-be6e-43b6-a85a-70578973f865.dat",
+     "recovery": {
+      "dimension": "overworld",
+      "x": -3,
+      "y": 63,
+      "z": 0
+     },
+     "recoverySkippedReason": null,
+     "itemsCopied": 32
+    },
+    {
+     "label": "Joueur 13",
+     "sourceId": "b69fa182-1d1b-416b-b84c-9c27892a1b64",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "playerdata/b69fa182-1d1b-416b-b84c-9c27892a1b64.dat",
+     "recovery": {
+      "dimension": "overworld",
+      "x": -13,
+      "y": 64,
+      "z": -5
+     },
+     "recoverySkippedReason": null,
+     "itemsCopied": 25
+    },
+    {
+     "label": "Joueur 14",
+     "sourceId": "dc3d4846-308e-4cb0-8119-49fde9a548cb",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "playerdata/dc3d4846-308e-4cb0-8119-49fde9a548cb.dat",
+     "recovery": {
+      "dimension": "overworld",
+      "x": -13,
+      "y": 64,
+      "z": -3
+     },
+     "recoverySkippedReason": null,
+     "itemsCopied": 26
+    },
+    {
+     "label": "Joueur 15",
+     "sourceId": "1455d1c0-01a1-4254-a7ff-626d7bc7eaf7",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "playerdata/1455d1c0-01a1-4254-a7ff-626d7bc7eaf7.dat",
+     "recovery": {
+      "dimension": "overworld",
+      "x": -7,
+      "y": 64,
+      "z": -3
+     },
+     "recoverySkippedReason": null,
+     "itemsCopied": 10
+    },
+    {
+     "label": "Joueur 16",
+     "sourceId": "9365ac78-4545-4890-a5d6-52950ca84575",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "playerdata/9365ac78-4545-4890-a5d6-52950ca84575.dat",
+     "recovery": {
+      "dimension": "overworld",
+      "x": -10,
+      "y": 70,
+      "z": -6
+     },
+     "recoverySkippedReason": null,
+     "itemsCopied": 12
+    },
+    {
+     "label": "Joueur 17",
+     "sourceId": "efaf9253-4092-4493-88b7-e2b3654c8400",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "playerdata/efaf9253-4092-4493-88b7-e2b3654c8400.dat",
+     "recovery": {
+      "dimension": "overworld",
+      "x": -13,
+      "y": 64,
+      "z": -1
+     },
+     "recoverySkippedReason": null,
+     "itemsCopied": 7
+    },
+    {
+     "label": "Joueur 18",
+     "sourceId": "0a2aee6b-f274-45f8-b95a-0baf66569ba2",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "playerdata/0a2aee6b-f274-45f8-b95a-0baf66569ba2.dat",
+     "recovery": {
+      "dimension": "overworld",
+      "x": -10,
+      "y": 64,
+      "z": 1
+     },
+     "recoverySkippedReason": null,
+     "itemsCopied": 5
+    },
+    {
+     "label": "Joueur 19",
+     "sourceId": "160ce1b5-f5e0-457f-8b29-09f0f388f561",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "playerdata/160ce1b5-f5e0-457f-8b29-09f0f388f561.dat",
+     "recovery": {
+      "dimension": "overworld",
+      "x": -7,
+      "y": 64,
+      "z": 1
+     },
+     "recoverySkippedReason": null,
+     "itemsCopied": 3
+    },
+    {
+     "label": "Joueur 20",
+     "sourceId": "b905aaa2-8942-498d-9854-2e8b8218585b",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "playerdata/b905aaa2-8942-498d-9854-2e8b8218585b.dat",
+     "recovery": {
+      "dimension": "overworld",
+      "x": -3,
+      "y": 64,
+      "z": -4
+     },
+     "recoverySkippedReason": null,
+     "itemsCopied": 1
+    },
+    {
+     "label": "Joueur 21",
+     "sourceId": "59a7462b-6317-4ff6-933b-0555631fed52",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "playerdata/59a7462b-6317-4ff6-933b-0555631fed52.dat",
+     "recovery": null,
+     "recoverySkippedReason": null,
+     "itemsCopied": null
+    },
+    {
+     "label": "Joueur 22",
+     "sourceId": "66108713-73a3-4689-a07b-b2dea9a6ed41",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "playerdata/66108713-73a3-4689-a07b-b2dea9a6ed41.dat",
+     "recovery": null,
+     "recoverySkippedReason": null,
+     "itemsCopied": null
+    },
+    {
+     "label": "Joueur 23",
+     "sourceId": "7b3d04de-f267-4a1a-82a6-7d277c6178e9",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "playerdata/7b3d04de-f267-4a1a-82a6-7d277c6178e9.dat",
+     "recovery": null,
+     "recoverySkippedReason": null,
+     "itemsCopied": null
+    },
+    {
+     "label": "Joueur 24",
+     "sourceId": "7d6d2471-c6dd-4369-8fd7-3a3a642e303b",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "playerdata/7d6d2471-c6dd-4369-8fd7-3a3a642e303b.dat",
+     "recovery": null,
+     "recoverySkippedReason": null,
+     "itemsCopied": null
+    },
+    {
+     "label": "Joueur 25",
+     "sourceId": "b7127117-af1a-419e-a26a-4c33f73998ee",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "playerdata/b7127117-af1a-419e-a26a-4c33f73998ee.dat",
+     "recovery": null,
+     "recoverySkippedReason": null,
+     "itemsCopied": null
+    },
+    {
+     "label": "Joueur 26",
+     "sourceId": "f441ded9-eadd-4afc-85ae-d16e4d097995",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "playerdata/f441ded9-eadd-4afc-85ae-d16e4d097995.dat",
+     "recovery": null,
+     "recoverySkippedReason": null,
+     "itemsCopied": null
+    },
+    {
+     "label": "Joueur 27",
+     "sourceId": "ffbd1bdc-3372-4cc2-abbb-31b9a3fd72d2",
+     "isHost": false,
+     "linked": false,
+     "targetId": null,
+     "profilePreserved": true,
+     "profilePath": "playerdata/ffbd1bdc-3372-4cc2-abbb-31b9a3fd72d2.dat",
+     "recovery": null,
+     "recoverySkippedReason": null,
+     "itemsCopied": null
+    }
+   ]
+  },
+  "fidelity": {
+   "total": 22303,
+   "families": 19,
+   "byCategory": {
+    "dropped": 22233,
+    "approximated": 54,
+    "archived": 16
+   },
+   "detailed": 19,
+   "truncated": 0
+  }
+ }
+]

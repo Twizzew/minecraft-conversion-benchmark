@@ -12,3 +12,11 @@ MCCB_J0*.zip
 *.log
 .DS_Store
 Thumbs.db
+
+# Local staging (release candidates, conversion runs, scratch) — never committed
+_staging/
+node_modules/
+_work*/
+
+# Minecraft writes ./logs when its code runs (normaliser); never committed
+logs/

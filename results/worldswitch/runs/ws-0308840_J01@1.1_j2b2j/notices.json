@@ -1,0 +1,14 @@
+[
+ {
+  "fidelity": {
+   "total": 2467,
+   "families": 13,
+   "byCategory": {
+    "dropped": 1671,
+    "archived": 796
+   },
+   "detailed": 13,
+   "truncated": 0
+  }
+ }
+]
