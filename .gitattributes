@@ -26,3 +26,4 @@ tools/java/src/GameRuleDefaults.java -text
 tools/lib/structures.mjs -text
 tools/package.json -text
 tools/manifests/build-freeze.mjs -text
+tools/verify.ps1 -text
