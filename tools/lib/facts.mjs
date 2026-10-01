@@ -167,10 +167,12 @@ export function javaEntity(tag) {
   const e = get(tag, 'equipment');
   if (e && e.type === 'compound') for (const [slot, v] of Object.entries(e.value)) { const it = javaItem(v); if (it) eq.push({ slot, item: it }); }
   f.equipment = eq;
+  // Rule 53: each stack keeps its stored position (`Slot`; Java villager-like `Inventory`
+  // lists store none: null).
   const inv = [];
   for (const k of ['Inventory', 'Items']) {
     const l = get(tag, k);
-    if (l && l.type === 'list') for (const v of l.value.value || []) { const it = javaItem({ type: 'compound', value: v }); if (it) inv.push(it); }
+    if (l && l.type === 'list') for (const v of l.value.value || []) { const it = javaItem({ type: 'compound', value: v }); if (it) inv.push({ ...it, slot: v.Slot?.value ?? null }); }
   }
   f.inventory = inv;
   f.passengers = (p.Passengers || []).map((x) => x.id);
@@ -217,7 +219,7 @@ export function bedrockEntity(tag) {
       if (k === 'ChestItems' && EQUINE && slot === 0) { if (!has('saddle')) eq.push({ slot: 'saddle', item: it }); continue; }
       if (k === 'ChestItems' && EQUINE && slot === 1) { if (!has('body')) eq.push({ slot: 'body', item: it }); continue; }
       if (k === 'ChestItems' && LLAMA && slot === 0) { if (!has('body')) eq.push({ slot: 'body', item: it }); continue; }
-      inv.push(it);
+      inv.push({ ...it, slot: slot ?? null }); // rule 53: position kept
     }
   }
   if (p.Saddled && !has('saddle')) eq.push({ slot: 'saddle', item: { id: 'minecraft:saddle', count: 1, snbt: 'Saddled:1b', virtual: true } });

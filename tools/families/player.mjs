@@ -6,6 +6,8 @@ import { plain, snbt, get, parseNbt } from '../lib/nbt.mjs';
 import { javaItem, bedrockItem } from '../lib/facts.mjs';
 import { equivalents } from '../lib/identity.mjs';
 import { r, notEvaluated, PASS, PARTIAL, FAIL, NOT_APPLICABLE, REASON } from '../lib/status.mjs';
+import { zeroFree } from '../lib/nbt.mjs';
+import { compareByPosition, expectedSlot } from '../lib/slots.mjs';
 
 const BEDROCK_EYE = 1.62; // Bedrock stores the player's eye position, Java the feet
 const JAVA_GM = { 0: 0, 1: 1, 2: 2, 3: 6 };
@@ -13,7 +15,8 @@ const BEDROCK_DIM = { 0: 'minecraft:overworld', 1: 'minecraft:the_nether', 2: 'm
 
 const UNSET = -2147483648; // Bedrock's "no spawn point" sentinel
 
-const items = (tag, key, reader) => { const l = get(tag, key); return l && l.type === 'list' ? (l.value.value || []).map((v) => reader({ type: 'compound', value: v })).filter(Boolean) : []; };
+// Rule 53: each stack keeps its stored position (`Slot`).
+const items = (tag, key, reader) => { const l = get(tag, key); return l && l.type === 'list' ? (l.value.value || []).map((v) => { const it = reader({ type: 'compound', value: v }); return it && { ...it, slot: v.Slot?.value ?? null }; }).filter(Boolean) : []; };
 
 function javaPlayerFacts(tag, key) {
   const p = plain(tag);
@@ -85,7 +88,8 @@ export async function enumerate(ctx) {
     if (p.ender.length) aspects.ender_chest = { direct: dx || 'EQUIV_MULTISET', roundtrip: 'EQUAL' };
     if (p.armor.length) aspects.armor = { direct: dx || 'EQUIV_MULTISET', roundtrip: 'EQUAL' };
     if (p.spawn) aspects.spawn_point = { direct: dx || 'EQUAL_XZ', roundtrip: 'EQUAL' };
-    const brief = (l) => l.map((x) => ({ id: (x.item || x).id, count: (x.item || x).count, sem: (x.item || x).snbt, semx: (x.item || x).semantic }));
+    // Rule 53: the position is recorded (inventory / ender chest: `Slot`; armour: slot name).
+    const brief = (l) => l.map((x) => ({ slot: x.slot ?? null, id: (x.item || x).id, count: (x.item || x).count, sem: (x.item || x).snbt, semx: (x.item || x).semantic }));
     out.push({ family: 'player', locator: { key: p.key, host: p.host }, expected: { ...p, inventory: brief(p.inventory), ender: brief(p.ender), armor: brief(p.armor), snbt: undefined }, aspects });
   }
   return out;
@@ -95,30 +99,23 @@ export async function prepare(ctx) {
   for (const level of ['direct', 'roundtrip']) { const v = ctx[level]; if (v?.world) v._players = await players(v.edition, v.world); }
 }
 
-// Rule 47 (MCCB v1.3, defect F10 found after the v1.2 freeze): player items compared as the game reads them (rule 46: zero/empty = absent;
-// `Block.version` ignored), like the other families.
-const z46 = (v, k) => {
-  if (Array.isArray(v)) { const a = v.map((x) => z46(x)); return a.every((x) => x === undefined) ? undefined : a; }
-  if (v && typeof v === 'object') {
-    const o = {};
-    for (const kk of Object.keys(v).sort()) { if (k === 'Block' && kk === 'version') continue; const x = z46(v[kk], kk); if (x !== undefined) o[kk] = x; }
-    return Object.keys(o).length ? o : undefined;
-  }
-  if (v === 0 || v === '' || v === false || v === null) return undefined;
-  return v;
+// Rule 47 (MCCB v1.3, defect F10 found after the v1.2 freeze): player items compared as the
+// game reads them — rule 46 as narrowed by rule 54 (v1.3 closure) (zeroFree: only demonstrated
+// defaults; `Block.version` ignored), like the other families.
+// Rule 53 (v1.3 closure): compared POSITION BY POSITION — inventory / ender chest by `Slot`
+// (same numbering in both editions: hotbar 0–8, then 9–35; ender chest 0–26), armour and
+// offhand by slot name. A stack in another position is not the same state.
+const sameItem = (same, srcEd, e) => {
+  if (same) { const ez = e.semx ? zeroFree(e.semx) : null; return (g) => g.snbt === e.sem || (!!g.semantic && g.semantic === e.semx) || (!!ez && zeroFree(g.semantic) === ez); }
+  const targets = equivalents('item', srcEd, e.id).targets || [];
+  return (g) => targets.includes(g.id) && g.count === e.count;
 };
-const f10 = (s) => { try { return JSON.stringify(z46(JSON.parse(s)) ?? null); } catch { return null; } };
-function multiset(exp, got, same, srcEd) {
-  const pool = got.map((x) => ({ id: (x.item || x).id, count: (x.item || x).count, sem: (x.item || x).snbt, semx: (x.item || x).semantic }));
-  for (const g of pool) g.semz = g.semx ? f10(g.semx) : null;
-  let hit = 0;
-  for (const e of exp) {
-    const targets = same ? null : equivalents('item', srcEd, e.id).targets || [];
-    const ez = e.semx ? f10(e.semx) : null;
-    const k = pool.findIndex((g) => (same ? (g.sem === e.sem || (!!g.semx && g.semx === e.semx) || (!!g.semz && g.semz === ez)) : targets.includes(g.id) && g.count === e.count));
-    if (k >= 0) { hit++; pool.splice(k, 1); }
-  }
-  return { status: hit === exp.length ? PASS : hit ? PARTIAL : FAIL, hit, of: exp.length };
+function positional(exp, got, same, srcEd, armor) {
+  // armour entries of the frozen v1.3 fixtures carry no slot name: position unknown.
+  const key = (e) => (armor ? (e.slot ?? undefined) : expectedSlot(e));
+  const obs = got.map((x) => (x.item ? { slot: x.slot, item: x.item } : { slot: x.slot, item: x }));
+  const m = compareByPosition(exp, obs, key, (e, g) => sameItem(same, srcEd, e)(g));
+  return { ...m, hit: m.matched };
 }
 
 export async function evaluate(subject, ctx) {
@@ -160,8 +157,9 @@ export async function evaluate(subject, ctx) {
           case 'inventory': case 'ender_chest': case 'armor': {
             const src = aspect === 'inventory' ? e.inventory : aspect === 'ender_chest' ? e.ender : e.armor;
             const got = aspect === 'inventory' ? t.inventory : aspect === 'ender_chest' ? t.ender : t.armor;
-            const m = multiset(src, got, same, ctx.sourceEdition);
-            out = r(m.status, `player.${aspect}.${level}`, m.status === PASS ? {} : { matched: m.hit, expected: m.of }); break;
+            const m = positional(src, got, same, ctx.sourceEdition, aspect === 'armor');
+            if (m.status === null) { out = notEvaluated(m.reason, { matched_without_position: m.unverified, expected: m.of }); break; }
+            out = r(m.status, `player.${aspect}.${level}`, m.status === PASS ? {} : { matched: m.hit, expected: m.of, ...(m.unverified ? { matched_without_position: m.unverified } : {}), wrong: m.wrong.slice(0, 12) }); break;
           }
           case 'spawn_point': {
             const ok = t.spawn && (same ? JSON.stringify(t.spawn) === JSON.stringify(e.spawn) : t.spawn[0] === e.spawn[0] && t.spawn[2] === e.spawn[2]);

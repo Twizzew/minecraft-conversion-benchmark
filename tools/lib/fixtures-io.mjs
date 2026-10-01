@@ -36,8 +36,23 @@ export function parseJsonlBuffer(buf) {
 /** Rows of a .jsonl.gz file. */
 export const readJsonlGz = (file) => parseJsonlBuffer(zlib.gunzipSync(fs.readFileSync(file)));
 
-export function readFixtures(worldId) {
-  const file = fixtureFile(worldId);
+/**
+ * Fixture registry of a world. Routed by manifests/worlds.json: a PRIVATE world (GURREN@1.0)
+ * reads `_staging/private/fixtures/` — the registry of its HISTORICAL grading (graded file
+ * a6403742…, content 9af167af…, not distributed). The PUBLIC reproduction uses the registry
+ * rebuilt from the published file (4cc666cf…, content 2c107cc4…, `fixtures/`), either through
+ * reports/gurren/run-gurren.sh (an overlay copy of the repository) or by naming it: `{ file }`.
+ * The two are never substituted for each other silently.
+ */
+export function readFixtures(worldId, { file: explicit = null } = {}) {
+  const file = explicit ? path.resolve(explicit) : fixtureFile(worldId);
+  if (!fs.existsSync(file)) {
+    const pub = path.join(REPO_ROOT, 'fixtures', `${worldId.replace('@', '_')}.jsonl.gz`);
+    const hint = !explicit && isPrivateWorld(worldId) && fs.existsSync(pub)
+      ? ` — ${worldId} is PRIVATE: its historical (graded) registry is not distributed. For the public reproduction name the public registry explicitly (${path.relative(REPO_ROOT, pub)}) or use reports/gurren/run-gurren.sh.`
+      : '';
+    throw new Error(`fixture registry not found: ${file}${hint}`);
+  }
   const text = zlib.gunzipSync(fs.readFileSync(file));
   const rows = parseJsonlBuffer(text);
   return {

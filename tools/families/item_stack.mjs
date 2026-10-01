@@ -5,6 +5,7 @@ import { allBlockEntities } from './block_entity.mjs';
 import { r, notEvaluated, PASS, FAIL, NOT_APPLICABLE, REASON } from '../lib/status.mjs';
 import { bedrockRegistry } from '../lib/registry.mjs';
 import { chestPair, containerAsShown } from '../lib/chest-pairs.mjs';
+import { directSlot } from '../lib/slots.mjs';
 
 // Rule 40 (audit 2026-09-25): a Bedrock item stored under a LEGACY name that the current
 // Bedrock registry no longer has (`planks`, `sapling`, `red_flower`…, the variant sitting in
@@ -85,16 +86,22 @@ export async function enumerate(ctx) {
   return out;
 }
 
+// Rule 53 (v1.3 closure): the stack is looked for in ITS position only — the source slot (round
+// trip) or the slot holding the same role in the target edition (direct, lib/slots.mjs). The
+// v1.3 freeze also accepted the same item found in any other slot ("found in slot N"); a
+// stack in another slot is not the same container state. Where it was found is kept as
+// evidence. A source slot with no counterpart (null) or unknown is never a PASS.
 function findStack(obs, slot, targets, sameEdition, expId, legacy = false) {
   const items = obs?.facts?.items || [];
+  if (slot === null || slot === undefined) return { unknownSlot: true };
   const at = items.find((x) => x.slot === slot);
   // Legacy source name (rule 40): any stack in the same slot is the one to count.
   if (legacy && at) return { item: at.item, slot };
   const ok = (it) => (sameEdition ? it.id === expId : (targets || []).includes(it.id));
   if (at && ok(at.item)) return { item: at.item, slot };
-  const moved = items.find((x) => ok(x.item));
-  if (moved) return { item: moved.item, slot: moved.slot, moved: true };
-  return at ? { item: at.item, slot, wrong: true } : null;
+  const elsewhere = items.find((x) => x.slot !== slot && ok(x.item));
+  const where = elsewhere ? { found_in_slot: elsewhere.slot, expected_slot: slot } : {};
+  return at ? { item: at.item, slot, wrong: true, where } : { missing: true, where };
 }
 
 const eq = (a, b) => JSON.stringify(a) === JSON.stringify(b);
@@ -106,13 +113,14 @@ export async function evaluate(subject, ctx) {
   // Rule 49 (v1.3, F12): a stack of a source double chest is looked for in the target's
   // container AS SHOWN (both halves, combined slots) when the target also holds a double chest
   // there; otherwise in the block alone, as before.
-  const vue = async (v) => {
-    if (!v?.world) return { obs: null, slot: locator.slot };
-    if (e.pair_half === undefined) return { obs: await v.blockEntityAt(locator.dim, locator.pos), slot: locator.slot };
+  const vue = async (v, slot) => {
+    if (!v?.world) return { obs: null, slot };
+    if (e.pair_half === undefined) return { obs: await v.blockEntityAt(locator.dim, locator.pos), slot };
     const c = await containerAsShown(v, locator.dim, locator.pos);
-    return c.half === null ? { obs: c.obs, slot: locator.slot } : { obs: c.obs, slot: locator.slot + 27 * e.pair_half };
+    return c.half === null ? { obs: c.obs, slot } : { obs: c.obs, slot: slot + 27 * e.pair_half };
   };
-  const dV = await vue(d), rV = await vue(rt);
+  // direct: the target slot with the same role (brewing stand); round trip: the same slot
+  const dV = await vue(d, directSlot(e.container, ctx.sourceEdition, locator.slot)), rV = await vue(rt, locator.slot);
   const dObs = dV.obs, rObs = rV.obs;
   const dHit = findStack(dObs, dV.slot, e.targets, false, e.id, !!e.legacy);
   const rHit = findStack(rObs, rV.slot, null, true, e.id, !!e.legacy);
@@ -120,13 +128,14 @@ export async function evaluate(subject, ctx) {
     // direct
     let dr;
     if (!d.world) dr = r(FAIL, `item_stack.${aspect}.world-opens`, { observed: REASON.WORLD_DOES_NOT_OPEN });
-    else if (spec.direct.startsWith('NE:')) dr = notEvaluated(spec.direct.slice(3), dHit ? { observed: dHit.item.id } : {});
+    else if (spec.direct.startsWith('NE:')) dr = notEvaluated(spec.direct.slice(3), dHit?.item ? { observed: dHit.item.id } : {});
     else if (spec.direct.startsWith('NA:')) dr = r(NOT_APPLICABLE, `item_stack.${aspect}.${spec.direct.slice(3)}`, { observed: dHit?.item?.id ?? null });
     // A different item in the slot is only judgeable when the identity reference knows the
     // source item; otherwise MCCB cannot tell a wrong item from a correctly renamed one.
+    else if (dHit?.unknownSlot) dr = notEvaluated('no-cross-edition-slot-reference', { source_slot: locator.slot ?? null });
     else if (dHit?.wrong && !(e.targets || []).length) dr = notEvaluated(REASON.NO_IDENTITY_REFERENCE, { observed: dHit.item.id });
-    else if (!dHit || dHit.wrong) dr = r(FAIL, `item_stack.${aspect}`, { observed: dHit ? dHit.item.id : (dObs ? 'stack missing' : 'container missing') });
-    else if (aspect === 'identity') dr = r(PASS, 'item_stack.identity.equivalent', dHit.moved ? { note: `found in slot ${dHit.slot}` } : {});
+    else if (dHit?.wrong || dHit?.missing) dr = r(FAIL, `item_stack.${aspect}`, { observed: dHit.wrong ? dHit.item.id : (dObs ? 'stack missing' : 'container missing'), ...dHit.where });
+    else if (aspect === 'identity') dr = r(PASS, 'item_stack.identity.equivalent');
     else if (aspect === 'count') dr = dHit.item.count === e.count ? r(PASS, 'item_stack.count') : r(FAIL, 'item_stack.count', { observed: dHit.item.count });
     else if (aspect.startsWith('component:')) {
       const comp = aspect.slice(10);
@@ -142,9 +151,10 @@ export async function evaluate(subject, ctx) {
     if (!rt) rr = notEvaluated(REASON.NO_ROUNDTRIP);
     else if (!rt.world) rr = r(FAIL, `item_stack.${aspect}.world-opens`, { observed: REASON.WORLD_DOES_NOT_OPEN });
     // Round-trip codes of the fixture (rules 38, 40) — this family ignored them.
-    else if (String(spec.roundtrip || '').startsWith('NE:')) rr = notEvaluated(spec.roundtrip.slice(3), rHit ? { observed: rHit.item.id } : {});
-    else if (!rHit || rHit.wrong) rr = r(FAIL, `item_stack.${aspect}.roundtrip`, { observed: rHit ? rHit.item.id : (rObs ? 'stack missing' : 'container missing') });
-    else if (aspect === 'identity') rr = r(PASS, 'item_stack.identity.roundtrip', rHit.moved ? { note: `found in slot ${rHit.slot}` } : {});
+    else if (String(spec.roundtrip || '').startsWith('NE:')) rr = notEvaluated(spec.roundtrip.slice(3), rHit?.item ? { observed: rHit.item.id } : {});
+    else if (rHit?.unknownSlot) rr = notEvaluated('source-slot-unknown', { source_slot: locator.slot ?? null });
+    else if (rHit?.wrong || rHit?.missing) rr = r(FAIL, `item_stack.${aspect}.roundtrip`, { observed: rHit.wrong ? rHit.item.id : (rObs ? 'stack missing' : 'container missing'), ...rHit.where });
+    else if (aspect === 'identity') rr = r(PASS, 'item_stack.identity.roundtrip');
     else if (aspect === 'count') rr = rHit.item.count === e.count ? r(PASS, 'item_stack.count.roundtrip') : r(FAIL, 'item_stack.count.roundtrip', { observed: rHit.item.count });
     else if (aspect.startsWith('component:') && ctx.sourceEdition === 'java') {
       const comp = aspect.slice(10);

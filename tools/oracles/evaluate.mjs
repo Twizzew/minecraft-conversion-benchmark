@@ -3,6 +3,7 @@
 // fixture registry of the source world.
 //   node tools/oracles/evaluate.mjs --world J04@1.0 --direct <runId> [--roundtrip <runId>]
 //        [--converter worldswitch] [--out results/<converter>/<runId>]
+//        [--fixtures <registry .jsonl.gz>] [--expect-fixtures-content <sha256>]
 // Provenance is checked first: the direct run must have consumed the canonical source
 // (same SHA-256), and the return run must have consumed the direct run's output.
 import fs from 'node:fs';
@@ -14,6 +15,7 @@ import { FAMILIES } from '../families/index.mjs';
 import { readFixtures, isPrivateWorld, PRIVATE_DIR, joinLines } from '../lib/fixtures-io.mjs';
 import { TargetView } from './target.mjs';
 import { notEvaluated, REASON, STATUSES } from '../lib/status.mjs';
+import { scorerIdentity, rulesetIdentity } from '../lib/fingerprint.mjs';
 
 const arg = (n, d = null) => { const i = process.argv.indexOf(`--${n}`); return i > 0 ? process.argv[i + 1] : d; };
 const worldId = arg('world');
@@ -25,8 +27,12 @@ const onlyFam = arg('families')?.split(',');
 const out = path.resolve(arg('out', path.join(isPrivateWorld(worldId) ? path.join(PRIVATE_DIR, 'results') : path.join(REPO_ROOT, 'results'), converter, directId)));
 
 const entry = worldEntry(worldId);
-const fx = readFixtures(worldId);
+// The registry is the routed one (manifests/worlds.json status) unless named explicitly; a
+// named or expected registry is checked by its CONTENT hash (v1.3 closure, fixture routing).
+const fx = readFixtures(worldId, { file: arg('fixtures') });
 const { header, subjects } = fx;
+const expectFx = arg('expect-fixtures-content');
+if (expectFx && fx.content_sha256 !== expectFx) { console.error(`FIXTURE CHECK FAILED: ${fx.file} content ${fx.content_sha256}, expected ${expectFx}`); process.exit(2); }
 
 // ── provenance checks (a mismatch is fatal: never evaluate the wrong input) ──
 const dRun = runRecord(directId);
@@ -50,7 +56,11 @@ if (rtId) {
 }
 const ctx = { worldId, sourceEdition: entry.edition, direct, roundtrip, header };
 
-fs.mkdirSync(out, { recursive: true });
+// Written to a temporary folder first and swapped in only once complete: an interrupted or
+// failed evaluation never leaves a half-written or stale result under the final name.
+const tmpOut = `${out}.tmp-${process.pid}`;
+fs.rmSync(tmpOut, { recursive: true, force: true });
+fs.mkdirSync(tmpOut, { recursive: true });
 const rows = [];
 const summary = {};
 const bump = (fam, aspect, level, res) => {
@@ -85,7 +95,7 @@ for (const f of FAMILIES) {
   for (const r of famRows) rows.push(r);
   process.stderr.write(`[evaluate] ${f.name}: ${mine.length} subjects, ${((Date.now() - t0) / 1000).toFixed(0)} s elapsed\n`);
 }
-const resultsFile = path.join(out, 'results.jsonl.gz');
+const resultsFile = path.join(tmpOut, 'results.jsonl.gz');
 fs.writeFileSync(resultsFile, zlib.gzipSync(joinLines(rows), { level: 9 })); // bytes, not one giant string
 const doc = {
   schema: 'mccb.results/1',
@@ -95,12 +105,19 @@ const doc = {
   converter_build: dRun.converter, direction: dRun.direction, options: dRun.options,
   // The normalisation report minus its local source path (a machine-specific folder).
   target_opens: { direct: direct.opens, direct_normalize: dOut.normalize ? { ...dOut.normalize, source: undefined } : null, roundtrip: roundtrip ? roundtrip.opens : null, roundtrip_normalize: rOut?.normalize ? { ...rOut.normalize, source: undefined } : null },
-  fixtures: { file: fx.file, content_sha256: fx.content_sha256, file_sha256: fx.file_sha256 },
+  fixtures: { file: fx.file, content_sha256: fx.content_sha256, file_sha256: fx.file_sha256, built_from_source_sha256: header.source_sha256 ?? null },
   results_file: { file: 'results.jsonl.gz', sha256: sha256File(resultsFile), subjects: rows.length },
   summary: Object.values(summary),
   evaluated_with: { tools_version: header.tools_version, node: process.version },
+  // v1.3 closure: which scorer and which rules produced these rows (lib/fingerprint.mjs).
+  scorer: scorerIdentity(),
+  ruleset: rulesetIdentity(),
 };
-fs.writeFileSync(path.join(out, 'summary.json'), JSON.stringify(doc, null, 1) + '\n');
+fs.writeFileSync(path.join(tmpOut, 'summary.json'), JSON.stringify(doc, null, 1) + '\n');
+const oldOut = `${out}.old-${process.pid}`;
+if (fs.existsSync(out)) fs.renameSync(out, oldOut);
+fs.renameSync(tmpOut, out);
+fs.rmSync(oldOut, { recursive: true, force: true });
 for (const t of [direct, roundtrip]) if (t?.world?.cleanup) t.world.cleanup();
 console.log(`${worldId} ${directId}${rtId ? ' + ' + rtId : ''}: ${rows.length} subjects in ${((Date.now() - t0) / 1000).toFixed(1)} s`);
 for (const s of Object.values(summary)) {

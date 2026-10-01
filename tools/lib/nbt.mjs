@@ -108,37 +108,62 @@ function semVal(v) {
 }
 
 /**
- * Rule 46: a semantic value as the GAME reads it. A key whose value is zero, an empty
- * string, an empty list or an empty compound reads exactly like an absent key (the loaders
- * default absent scalars to 0/false/empty), at any depth of a compound; list elements are
- * kept (their position matters), but a list of zero elements only is itself zero. The block-state format stamp `version` of an item's
- * `Block` is a serialisation detail (the game upgrades the state from it). Returns the
- * canonical string, or null when nothing is left.
+ * Rule 46, narrowed by rule 54 (v1.3 closure, DEFAULT-DENY): a semantic value as the GAME reads it.
+ * The v1.3 freeze dropped EVERY key whose value was 0, "" or false, at any depth — but an
+ * absent key is read as the field's DEFAULT, and that default is not 0 for every field (a
+ * Java creeper without `Fuse` does not explode instantly). A zero-valued key now reads like an
+ * absent one ONLY where the default of that field in that context is demonstrated:
+ *  - an empty compound or list is no compound / list (§5.4, already applied by semantic());
+ *  - a Bedrock EMPTY item stack (`Name` "" or `Count` 0: the reader's own "no item", facts.mjs)
+ *    is an empty position; a list holding only empty stacks is no list (four empty armour
+ *    slots); list elements keep their position;
+ *  - item fields with a justified default of 0 (KNOWN_ZERO_DEFAULTS: rules 39 and 48);
+ *  - an item's `Block.version` is a block-state format stamp (the game upgrades from it).
+ * Everything else — `Fuse:0s`, `HasLeftHorn:0b` (NBT booleans are bytes), `Duration:0`, any
+ * unknown field — stays distinct from its absence. This table is NOT exhaustive: a field
+ * missing from it is compared as stored, never assumed to be a default.
+ * Returns the canonical string, or null when nothing is left.
  */
+// [where (predicate on the compound holding the key), key] — a value 0 there equals absent.
+const isBedrockItem = (o) => typeof o.Name === 'string' && 'Count' in o;
+const isJavaItemComponents = (o, parent) => parent === 'components';
+export const KNOWN_ZERO_DEFAULTS = [
+  // Rule 39: Bedrock item tag `Damage:0` / `RepairCost:0` — written on some stacks, not on others.
+  { where: (o, parent, grand) => parent === 'tag' && grand && isBedrockItem(grand), key: 'Damage' },
+  { where: (o, parent, grand) => parent === 'tag' && grand && isBedrockItem(grand), key: 'RepairCost' },
+  // Rule 48: Java components `damage` / `repair_cost` — not saved by the game at 0, read as 0.
+  { where: isJavaItemComponents, key: 'minecraft:damage' },
+  { where: isJavaItemComponents, key: 'minecraft:repair_cost' },
+];
+const isZeroScalar = (x) => x === 0 || x === '' || x === false;
+const isEmpty = (x) => (Array.isArray(x) && !x.length) || (x && typeof x === 'object' && !Array.isArray(x) && !Object.keys(x).length);
+const isEmptyBedrockStack = (x) => x && typeof x === 'object' && !Array.isArray(x) && typeof x.Name === 'string' && 'Count' in x && (x.Name === '' || !(Number(x.Count) > 0));
 export function zeroFree(s) {
   if (s == null) return null;
   let v;
   try { v = JSON.parse(s); } catch { return s; }
-  // A list whose elements are all zero (four empty armour slots) reads like no list.
-  const isZero = (x) => x === 0 || x === '' || x === false || (Array.isArray(x) && x.every(isZero))
-    || (x && typeof x === 'object' && !Array.isArray(x) && !Object.keys(x).length);
-  const walk = (x, parent) => {
-    if (Array.isArray(x)) return x.map((e) => walk(e, null));
+  const walk = (x, key, parent) => {
+    if (Array.isArray(x)) {
+      const a = x.map((e) => (isEmptyBedrockStack(e) ? {} : walk(e, null, null)));
+      return a.every(isEmpty) ? [] : a;
+    }
     if (x && typeof x === 'object') {
       const o = {};
       for (const k of Object.keys(x).sort()) {
-        if (parent === 'Block' && k === 'version') continue;
-        const y = walk(x[k], k);
-        if (!isZero(y)) o[k] = y;
+        if (key === 'Block' && k === 'version') continue;
+        const y = walk(x[k], k, x);
+        if (isEmpty(y)) continue;
+        if (isZeroScalar(y) && KNOWN_ZERO_DEFAULTS.some((d) => d.key === k && d.where(x, key, parent))) continue;
+        o[k] = y;
       }
       return o;
     }
     return x;
   };
-  const out = walk(v, null);
-  return isZero(out) ? null : JSON.stringify(out);
+  const out = walk(v, null, null);
+  return isEmpty(out) ? null : JSON.stringify(out);
 }
-/** Rule 46 applied to a {key: semantic} map: zero-valued keys are dropped. */
+/** Rule 46 (narrowed) applied to a {key: semantic} map: keys that read like absent ones are dropped. */
 export function zeroFreeMap(m) {
   const o = {};
   for (const [k, v] of Object.entries(m || {})) { const z = zeroFree(v); if (z !== null) o[k] = z; }

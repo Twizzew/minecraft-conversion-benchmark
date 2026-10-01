@@ -2,31 +2,101 @@
 // MCCB v1.3 final table and integrity checks, from the graded rows (results.jsonl.gz).
 //   node tools/results/table-v13.mjs --dir results/v1.3 [--private-dir _staging/private/results-v1.3]
 //        [--builds "WS 0308840=worldswitch/ws-0308840_,WS 2.8.0=worldswitch/ws-fd9b735_,Chunker 1.20.0=chunker/chunker-1.20.0_"]
-//        [--md out.md] [--json out.json]
+//        [--md out.md] [--json out.json] [--worlds J01@1.1,...] [--expect-scorer current|<sha256>]
+//        [--legacy-unfingerprinted] [--fixtures-ref reports/freeze/FREEZE-v1.3.json[,addendum.json]]
 // Checks, per world: every converter has exactly the same assertions (subject#aspect at each
 // level), each counted once; the status counts add up to the number of assertions; nothing
 // NOT_EVALUATED is counted as PASS. Counts only: no score, no ranking, worlds never added.
+//
+// v1.3 closure — a result is used only if it is the ONE result of that build for that world
+// and it is what it claims to be; otherwise the table is refused (exit 1, reasons on stderr):
+//  - exactly one result folder <prefix><world>_<j2b|b2j> (none = partial suite, more = ambiguous);
+//  - summary identity: world, converter, run ids (folder = direct run, return run = direct + 2x);
+//  - results.jsonl.gz hash and row count = those recorded in its summary.json;
+//  - fixture registry content = the reference (--fixtures-ref, or the registry read now);
+//  - direct / return output hashes = <dir>/OUTPUTS.sha256 when that file exists;
+//  - one converter build per label;
+//  - scorer and ruleset fingerprints: identical across the table, and the scorer = the tools on
+//    disk (or --expect-scorer <sha256>). Results without fingerprints (written before the v1.3
+//    closure) only with --legacy-unfingerprinted, and never mixed with fingerprinted ones.
 import fs from 'node:fs';
 import path from 'node:path';
 import zlib from 'node:zlib';
+import crypto from 'node:crypto';
 import { REPO_ROOT } from '../lib/archive.mjs';
+import { readFixtures } from '../lib/fixtures-io.mjs';
+import { scorerIdentity, rulesetIdentity } from '../lib/fingerprint.mjs';
 
 const arg = (n, d = null) => { const i = process.argv.indexOf(`--${n}`); return i > 0 ? process.argv[i + 1] : d; };
 const dir = path.resolve(REPO_ROOT, arg('dir', 'results/v1.3'));
 const pdir = arg('private-dir') ? path.resolve(REPO_ROOT, arg('private-dir')) : null;
 const BUILDS = arg('builds', 'WS 0308840=worldswitch/ws-0308840_,WS 2.8.0 (fd9b735)=worldswitch/ws-fd9b735_,Chunker 1.20.0=chunker/chunker-1.20.0_')
   .split(',').map((x) => { const [label, p] = x.split('='); const [conv, prefix] = p.split('/'); return { label, conv, prefix }; });
-const WORLDS = ['J01@1.1', 'J02@1.0', 'J03@1.0', 'J04@1.0', 'B01@1.0', 'B02@1.0', 'B03@1.0', ...(pdir ? ['GURREN@1.0'] : [])];
+const WORLDS = arg('worlds')?.split(',') ?? ['J01@1.1', 'J02@1.0', 'J03@1.0', 'J04@1.0', 'B01@1.0', 'B02@1.0', 'B03@1.0', ...(pdir ? ['GURREN@1.0'] : [])];
+const legacyOk = process.argv.includes('--legacy-unfingerprinted');
+const expectScorer = arg('expect-scorer', 'current');
+const problems = [];
+const bad = (m) => problems.push(m);
+// Reference fixture contents: the freeze file(s) given, else the registry readable now.
+const fxRef = new Map();
+for (const f of (arg('fixtures-ref') || '').split(',').filter(Boolean)) {
+  const j = JSON.parse(fs.readFileSync(path.resolve(REPO_ROOT, f), 'utf8'));
+  for (const x of j.fixtures?.length ? j.fixtures : []) fxRef.set(x.world, x.content_sha256);
+  if (j.fixtures?.content_sha256 && j.worlds_manifest_overlay?.id) fxRef.set(j.worlds_manifest_overlay.id, j.fixtures.content_sha256);
+}
+const fixtureContent = (world) => {
+  if (fxRef.size) return fxRef.get(world) ?? null;
+  try { return readFixtures(world).content_sha256; } catch { return null; }
+};
+const sha256 = (buf) => crypto.createHash('sha256').update(buf).digest('hex');
+const outputsList = (base) => {
+  const f = path.join(base, 'OUTPUTS.sha256');
+  if (!fs.existsSync(f)) return null;
+  const m = new Map();
+  for (const l of fs.readFileSync(f, 'utf8').split(/\r?\n/)) { const x = l.trim().split(/\s+/); if (/^[0-9a-f]{64}$/.test(x[0] || '')) m.set(x[1], x[0]); }
+  return m;
+};
+const outputsByRoot = new Map();
+const fingerprints = [];
+const buildOf = new Map();
 const ST = ['PASS', 'ADAPTED', 'PARTIAL', 'FAIL', 'UNSUPPORTED', 'NOT_APPLICABLE'];
 const LEVELS = ['direct', 'roundtrip'];
 
 function load(b, world) {
-  const base = path.join(world.startsWith('GURREN') ? pdir : dir, b.conv);
-  if (!fs.existsSync(base)) return null;
-  const d = fs.readdirSync(base).find((x) => x.startsWith(b.prefix + world));
-  if (!d) return null;
-  const summary = JSON.parse(fs.readFileSync(path.join(base, d, 'summary.json'), 'utf8'));
-  const buf = zlib.gunzipSync(fs.readFileSync(path.join(base, d, 'results.jsonl.gz')));
+  const root = world.startsWith('GURREN') ? pdir : dir;
+  const base = path.join(root, b.conv);
+  const tag = `${b.label} / ${world}`;
+  const cands = fs.existsSync(base) ? fs.readdirSync(base).filter((x) => x.startsWith(`${b.prefix}${world}_`)) : [];
+  if (!cands.length) { bad(`${tag}: result missing (partial suite)`); return null; }
+  if (cands.length > 1) { bad(`${tag}: ambiguous — ${cands.length} result folders: ${cands.join(', ')}`); return null; }
+  const d = cands[0];
+  const dirn = d.slice(`${b.prefix}${world}_`.length);
+  if (!['j2b', 'b2j'].includes(dirn)) { bad(`${tag}: unexpected result folder ${d}`); return null; }
+  let summary, raw;
+  try { summary = JSON.parse(fs.readFileSync(path.join(base, d, 'summary.json'), 'utf8')); raw = fs.readFileSync(path.join(base, d, 'results.jsonl.gz')); } catch (e) { bad(`${tag}: unreadable result (${e.message})`); return null; }
+  // identity of what was graded
+  if (summary.world !== world) bad(`${tag}: identity — summary is for world ${summary.world}`);
+  if (summary.converter !== b.conv) bad(`${tag}: identity — summary is for converter ${summary.converter}`);
+  if (summary.direct_run !== d) bad(`${tag}: identity — summary direct run ${summary.direct_run} ≠ folder ${d}`);
+  if (summary.roundtrip_run !== `${d}2${dirn[0]}`) bad(`${tag}: identity — return run ${summary.roundtrip_run} ≠ ${d}2${dirn[0]}`);
+  if (sha256(raw) !== summary.results_file?.sha256) bad(`${tag}: results.jsonl.gz sha256 ${sha256(raw)} ≠ summary ${summary.results_file?.sha256}`);
+  const wantFx = fixtureContent(world);
+  if (!wantFx) bad(`${tag}: no reference fixture content for ${world} (fixture registry not readable; give --fixtures-ref)`);
+  else if (summary.fixtures?.content_sha256 !== wantFx) bad(`${tag}: fixture registry content ${summary.fixtures?.content_sha256} ≠ reference ${wantFx}`);
+  if (!outputsByRoot.has(root)) outputsByRoot.set(root, outputsList(root));
+  const outs = outputsByRoot.get(root);
+  if (outs) {
+    if (outs.get(summary.direct_run) !== summary.direct_output_sha256) bad(`${tag}: direct output ${summary.direct_output_sha256} not the one listed in OUTPUTS.sha256 (${outs.get(summary.direct_run) ?? 'absent'})`);
+    if (outs.get(summary.roundtrip_run) !== summary.roundtrip_output_sha256) bad(`${tag}: return output ${summary.roundtrip_output_sha256} not the one listed in OUTPUTS.sha256 (${outs.get(summary.roundtrip_run) ?? 'absent'})`);
+  }
+  // one converter build per label (name / version / commit; per direction, the same tool file)
+  const cb = summary.converter_build || {};
+  for (const [k, v] of [[b.label, JSON.stringify([cb.name, cb.version, cb.commit])], [`${b.label}|${dirn}`, JSON.stringify([cb.tool_file ?? null, cb.tool_sha256 ?? null])]]) {
+    if (buildOf.has(k) && buildOf.get(k) !== v) bad(`${tag}: converter build differs from the other worlds of ${b.label}`);
+    buildOf.set(k, v);
+  }
+  fingerprints.push({ tag, scorer: summary.scorer?.fingerprint ?? null, ruleset: summary.ruleset?.fingerprint ?? null });
+  const buf = zlib.gunzipSync(raw);
   const c = Object.fromEntries(LEVELS.map((L) => [L, { ...Object.fromEntries(ST.map((s) => [s, 0])), NOT_EVALUATED: 0, total: 0, byFamily: {} }]));
   const ids = new Set(); let dup = 0; let nePass = 0;
   let start = 0;
@@ -43,6 +113,9 @@ function load(b, world) {
       f[s]++;
     }
   }
+  let rows = 0;
+  for (let i = buf.indexOf(10), st = 0; i !== -1; st = i + 1, i = buf.indexOf(10, st)) rows++;
+  if (rows !== summary.results_file?.subjects) bad(`${tag}: ${rows} result rows ≠ ${summary.results_file?.subjects} recorded`);
   return { run: d, summary, counts: c, ids, dup, nePass };
 }
 
@@ -51,11 +124,30 @@ const md = ['# MCCB v1.3 — final comparison (counts per assertion)', '',
   'Cell: PASS / ADAPTED / PARTIAL / **FAIL** — then NOT_EVALUATED (never counted as PASS). NOT_APPLICABLE and UNSUPPORTED are in the raw results.',
   'No score, no ranking; worlds are never added together.', '',
   `Builds: ${BUILDS.map((b) => b.label).join(' · ')}.`, ''];
+const loaded = new Map();
+for (const w of WORLDS) loaded.set(w, BUILDS.map((b) => load(b, w)));
+// fingerprints: one scorer, one rule set, the current scorer unless told otherwise
+const legacy = fingerprints.filter((f) => !f.scorer || !f.ruleset);
+if (legacy.length && legacy.length !== fingerprints.length) bad(`mixed results: ${legacy.length} without scorer/ruleset fingerprint (${legacy.slice(0, 3).map((f) => f.tag).join('; ')}…) next to ${fingerprints.length - legacy.length} with one — never mixed`);
+else if (legacy.length && !legacyOk) bad(`${legacy.length} result(s) without scorer/ruleset fingerprint (written before the v1.3 closure): refused unless --legacy-unfingerprinted`);
+if (!legacy.length && fingerprints.length) {
+  const sc = new Set(fingerprints.map((f) => f.scorer)), rs = new Set(fingerprints.map((f) => f.ruleset));
+  if (sc.size > 1) bad(`scorer fingerprints differ across the table: ${[...sc].join(', ')}`);
+  if (rs.size > 1) bad(`ruleset fingerprints differ across the table: ${[...rs].join(', ')}`);
+  const want = expectScorer === 'current' ? scorerIdentity().fingerprint : expectScorer;
+  if (sc.size === 1 && !sc.has(want)) bad(`stale results: scorer fingerprint ${[...sc][0]} ≠ ${expectScorer === 'current' ? 'the scorer on disk' : 'the expected one'} ${want}`);
+  const wantRules = rulesetIdentity().fingerprint;
+  if (rs.size === 1 && !rs.has(wantRules) && expectScorer === 'current') bad(`stale results: ruleset fingerprint ${[...rs][0]} ≠ the rules on disk ${wantRules}`);
+}
+if (problems.length) {
+  console.error(`TABLE REFUSED — ${problems.length} problem(s):\n  ${problems.join('\n  ')}`);
+  process.exit(1);
+}
 for (const L of LEVELS) {
   md.push(`## ${L === 'direct' ? 'Direct conversion' : 'Round trip'}`, '');
   md.push(`| World | assertions | ${BUILDS.map((b) => b.label).join(' | ')} |`, `|---|--:|${BUILDS.map(() => '---').join('|')}|`);
   for (const w of WORLDS) {
-    const got = BUILDS.map((b) => load(b, w));
+    const got = loaded.get(w);
     const ref = got.find(Boolean);
     if (!ref) continue;
     const tot = ref.counts[L].total;

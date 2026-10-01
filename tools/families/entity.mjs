@@ -7,6 +7,7 @@ import { keyClasses } from './block_entity.mjs';
 import { isLegacyBedrockItem, LEGACY_ITEM } from './item_stack.mjs';
 import { javaRegistry } from '../lib/registry.mjs';
 import { zeroFree, zeroFreeMap } from '../lib/nbt.mjs';
+import { compareByPosition, expectedSlot, positionalInventory, sameNumberingAcrossEditions } from '../lib/slots.mjs';
 
 export const MATCH_RADIUS = { direct: 2.0, roundtrip: 0.75 };
 export const POSITION_TOLERANCE = { direct: { horizontal: 0.5, vertical: 1.0 }, roundtrip: { horizontal: 0.01, vertical: 0.01 } };
@@ -25,7 +26,7 @@ function brief(e) {
   const f = e.facts;
   return {
     id: f.id, uuid: f.uuid, pos: f.pos, custom_name: f.custom_name, tags: f.tags?.length ? f.tags : undefined, baby: f.baby, health: f.health,
-    tamed: f.tamed, equipment: f.equipment.map((x) => ({ slot: x.slot, ...itemBrief(x.item), sem: x.item.snbt, semx: x.item.semantic })), inventory: f.inventory.map((x) => ({ ...itemBrief(x), sem: x.snbt, semx: x.semantic })),
+    tamed: f.tamed, equipment: f.equipment.map((x) => ({ slot: x.slot, ...itemBrief(x.item), sem: x.item.snbt, semx: x.item.semantic })), inventory: f.inventory.map((x) => ({ slot: x.slot ?? null, ...itemBrief(x), sem: x.snbt, semx: x.semantic })),
     offers: f.offers, trade_tier: f.trade_tier, data: f.data, sem: f.sem,
   };
 }
@@ -126,15 +127,22 @@ export async function prepare(ctx, subjects) {
   }
 }
 
-function setCompare(exp, got, same) {
+// Rule 53 (v1.3 closure): held items are compared POSITION BY POSITION — equipment by slot
+// name (both editions' readers name the slots: head … feet, body, mainhand, offhand, saddle),
+// inventories of containers a player opens by `Slot` (lib/slots.mjs). Inventories the player
+// never sees, stored without positions by Java (villager, piglin…), stay unordered.
+function heldCompare(aspect, entityId, sourceEdition, exp, got, same) {
   if (!exp.length) return null;
-  const pool = got.slice();
-  let hit = 0;
-  for (const e of exp) {
-    const k = pool.findIndex((g) => (same ? (g.sem === e.sem || (!!g.semx && zeroFree(g.semx) === zeroFree(e.semx))) : (e.targets || [e.id]).includes(g.id) && g.count === e.count));
-    if (k >= 0) { hit++; pool.splice(k, 1); }
+  const match = (e, g) => (same ? (g.sem === e.sem || (!!g.semx && zeroFree(g.semx) === zeroFree(e.semx))) : (e.targets || [e.id]).includes(g.id) && g.count === e.count);
+  if (aspect === 'equipment') return compareByPosition(exp, got, (e) => e.slot, match);
+  if (!positionalInventory(entityId)) {
+    const pool = got.slice();
+    let hit = 0;
+    for (const e of exp) { const k = pool.findIndex((g) => match(e, g.item)); if (k >= 0) { hit++; pool.splice(k, 1); } }
+    return { status: hit === exp.length ? PASS : hit ? PARTIAL : FAIL, matched: hit, of: exp.length, wrong: [] };
   }
-  return hit === exp.length ? PASS : hit ? PARTIAL : FAIL;
+  const known = same || sameNumberingAcrossEditions(entityId);
+  return compareByPosition(exp, got, (e) => (known ? expectedSlot(e) : null), match);
 }
 
 export async function evaluate(subject, ctx) {
@@ -184,14 +192,15 @@ export async function evaluate(subject, ctx) {
                 .filter((x) => !(ctx.sourceEdition === 'bedrock' && isLegacyBedrockItem(x.id)));
               if (!src.length) { out = notEvaluated(LEGACY_ITEM); break; }
               const exp = src.map((x) => ({ ...x, targets: same ? null : equivalents('item', ctx.sourceEdition, x.id).targets }));
-              let got = (aspect === 'equipment' ? g.equipment.map((x) => x.item) : g.inventory)
-                .map((x) => ({ id: x.id, count: x.count, sem: x.snbt, semx: x.semantic }));
+              let got = (aspect === 'equipment' ? g.equipment : g.inventory.map((x) => ({ slot: x.slot, item: x })))
+                .map((x) => ({ slot: x.slot, item: { id: x.item.id, count: x.item.count, sem: x.item.snbt, semx: x.item.semantic } }));
               // Rule 41 (audit 2026-09-25): entities are not loaded by the game in MCCB (only
               // upgraded), so an item id the Java 26.3 registry does not know was counted as
               // present — the game DELETES it. It is removed before comparing, as the game does.
-              if (view.edition === 'java') got = got.filter((x) => javaRegistry().items.has(x.id));
-              const st = setCompare(exp, got, same);
-              out = r(st, `entity.${aspect}.${level}`, st === PASS ? {} : { observed: got.slice(0, 12).map((x) => `${x.id}x${x.count}`) });
+              if (view.edition === 'java') got = got.filter((x) => javaRegistry().items.has(x.item.id));
+              const m = heldCompare(aspect, e.id, ctx.sourceEdition, exp, got, same);
+              if (m.status === null) { out = notEvaluated(m.reason, { matched_without_position: m.unverified, expected: m.of }); break; }
+              out = r(m.status, `entity.${aspect}.${level}`, m.status === PASS ? {} : { observed: got.slice(0, 12).map((x) => `${x.slot ?? '-'}:${x.item.id}x${x.item.count}`), ...(m.wrong?.length ? { wrong: m.wrong.slice(0, 12) } : {}) });
               break;
             }
             case 'trades': {

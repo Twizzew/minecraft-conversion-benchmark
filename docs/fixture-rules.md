@@ -152,7 +152,7 @@ Whether a translated command WORKS is a behaviour question; v1.1 does not run co
 
 | Aspect | Direct | Round trip |
 |---|---|---|
-| `identity` | an item of the equivalent set in the same container, same slot first, any slot otherwise (slot noted) | same id |
+| `identity` | an item of the equivalent set in the same container, in the slot holding the same role (rule 53: same slot number, except the brewing stand — Java 0–2 bottles / 3 ingredient / 4 fuel ↔ Bedrock 1–3 / 0 / 4); a stack in another slot is FAIL (where it was found is noted) | same id, same slot |
 | `count` | same count | same count |
 | `component:<name>` (one per stored Java component; for Bedrock sources, one per tag field with a rule) | rule below, else NOT_EVALUATED (`no-mccb-v1.1-rule-for-this-property`) | component equal (strict, then semantic) |
 | `tag`, `aux` (Bedrock sources) | NOT_EVALUATED | equal |
@@ -201,8 +201,8 @@ within 2.0 blocks (direct) / 0.75 block (round trip).
 | `baby` (babies) | target is a baby | same |
 | `health` (living entities only) | \|Δ\| ≤ 0.5; target storing no health value → NOT_EVALUATED | \|Δ\| ≤ 0.001 |
 | `tamed` (tamed) | target is tamed; a Bedrock species whose Java counterpart stores no tamed state → NOT_APPLICABLE (Java species that do: subclasses of `TamableAnimal` / `AbstractHorse` in the 26.3 jar — wolf, cat, parrot, nautilus, zombie nautilus, horse, donkey, mule, llama, trader llama, skeleton / zombie horse, camel, camel husk) | same |
-| `equipment` | every source item has an equivalent in the target equipment (PARTIAL if some) | identical items (strict, then semantic §4) |
-| `inventory` | multiset of equivalent items with counts (PARTIAL if some) | identical items (strict, then semantic §4) |
+| `equipment` | every source item has an equivalent in the SAME slot of the target equipment (rule 53: head … feet, body, mainhand, offhand, saddle; PARTIAL if some) | identical items in the same slots (strict, then semantic §4) |
+| `inventory` | containers a player opens (chest / hopper minecarts, chest boats, chested donkeys, mules, llamas): equivalent items with counts in the same `Slot` (rule 53; chested equines / llamas: numbering across editions not established, a full match is NOT_EVALUATED); other inventories (villager, piglin…, stored without positions by Java): multiset (PARTIAL if some) | identical items in the same slots; unordered for inventories without positions |
 | `trades` | every source offer exists (buy/sell identities and counts), any order; extra target offers noted, not penalised. Bedrock source: only the unlocked offers (`tier ≤ TradeTier`) are expected — Bedrock stores every tier in advance | identical offer list, in order |
 | `data` | NOT_EVALUATED | every stored key equal (volatile keys excluded: position, motion, rotation, UUID, air, fire, fall distance, hurt/death timers, brain memories…), strict then semantic; otherwise PARTIAL |
 
@@ -237,8 +237,10 @@ missing or all sections differ).
 ### 3.8 `player`
 
 Host player (Java: `singleplayer_uuid` file; Bedrock: `~local_player`): position, dimension,
-game mode, health, food, XP level, inventory / ender chest / armour (multisets; round
-trip strict then semantic §4), spawn point. Other stored players: round trip only
+game mode, health, food, XP level, inventory / ender chest / armour (rule 53: position by
+position — `Slot` 0–35 / 0–26, armour and offhand by slot name; round trip strict then
+semantic §4; armour of a v1.3 fixture, which did not record the slot name: a full match is
+NOT_EVALUATED), spawn point. Other stored players: round trip only
 (their identity cannot be mapped across editions).
 
 Game mode, direct: Bedrock `PlayerGameMode` 5 means "the world's default game mode" and is
@@ -251,8 +253,10 @@ FAIL. Bedrock also stores where the player reappears (`SpawnX/Y/Z`, e.g. above t
 foot); Java does not. Round trip: both Bedrock positions (or the Java one) identical.
 
 Items (rule 47, v1.3): inventory, ender chest and armour stacks are compared as the other
-families compare items (§4 and rule 46: a key whose value is 0, `""`, `false` or empty is
-absent; an item's `Block.version` is ignored).
+families compare items (§4 and rule 46 as narrowed by rule 54: a zero value equals an
+absent key only where the field's default is demonstrated — item `tag.Damage` /
+`tag.RepairCost`, components `damage` / `repair_cost`; an empty compound / list is absent;
+an item's `Block.version` is ignored).
 
 ### 3.9 `structure` (v1.3, rules 50–52)
 
