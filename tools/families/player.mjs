@@ -6,7 +6,7 @@ import { plain, snbt, get, parseNbt } from '../lib/nbt.mjs';
 import { javaItem, bedrockItem } from '../lib/facts.mjs';
 import { equivalents } from '../lib/identity.mjs';
 import { r, notEvaluated, PASS, PARTIAL, FAIL, NOT_APPLICABLE, REASON } from '../lib/status.mjs';
-import { zeroFree } from '../lib/nbt.mjs';
+import { gameRead } from '../lib/nbt.mjs';
 import { compareByPosition, expectedSlot } from '../lib/slots.mjs';
 
 const BEDROCK_EYE = 1.62; // Bedrock stores the player's eye position, Java the feet
@@ -100,13 +100,13 @@ export async function prepare(ctx) {
 }
 
 // Rule 47 (MCCB v1.3, defect F10 found after the v1.2 freeze): player items compared as the
-// game reads them — rule 46 as narrowed by rule 54 (v1.3 closure) (zeroFree: only demonstrated
-// defaults; `Block.version` ignored), like the other families.
+// game reads them — rule 54 (v1.3 closure, lib/nbt.mjs gameRead: typed data, only field-specific
+// demonstrated defaults; `Block.version` ignored), like the other families.
 // Rule 53 (v1.3 closure): compared POSITION BY POSITION — inventory / ender chest by `Slot`
 // (same numbering in both editions: hotbar 0–8, then 9–35; ender chest 0–26), armour and
 // offhand by slot name. A stack in another position is not the same state.
 const sameItem = (same, srcEd, e) => {
-  if (same) { const ez = e.semx ? zeroFree(e.semx) : null; return (g) => g.snbt === e.sem || (!!g.semantic && g.semantic === e.semx) || (!!ez && zeroFree(g.semantic) === ez); }
+  if (same) { const ez = gameRead(e.sem); return (g) => g.snbt === e.sem || gameRead(g.snbt) === ez; }
   const targets = equivalents('item', srcEd, e.id).targets || [];
   return (g) => targets.includes(g.id) && g.count === e.count;
 };

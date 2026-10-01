@@ -150,3 +150,16 @@ test('evaluate: an expected fixture content that does not match is fatal and wri
   assert.match(r.stderr, /FIXTURE CHECK FAILED/);
   assert.equal(fs.existsSync(out), false);
 });
+
+test('a second complete suite moves the old results to .superseded, which the table never reads', { skip }, () => {
+  setup();
+  assert.equal(suite().status, 0);
+  assert.equal(suite().status, 0);
+  const sup = path.join(RES, '.superseded');
+  assert.ok(fs.existsSync(sup), '.superseded created');
+  const t = table();
+  assert.equal(t.status, 0, t.stdout + t.stderr);
+  // even a copy of a result next to the active ones under another name is refused, never merged
+  fs.cpSync(dirOf('B02@1.0'), path.join(RES, 't', '.superseded-copy_B02@1.0_b2j'), { recursive: true });
+  assert.equal(table().status, 0, 'a folder not named <prefix><world>_ is not a candidate');
+});

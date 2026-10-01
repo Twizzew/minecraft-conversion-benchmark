@@ -108,65 +108,106 @@ function semVal(v) {
 }
 
 /**
- * Rule 46, narrowed by rule 54 (v1.3 closure, DEFAULT-DENY): a semantic value as the GAME reads it.
- * The v1.3 freeze dropped EVERY key whose value was 0, "" or false, at any depth — but an
- * absent key is read as the field's DEFAULT, and that default is not 0 for every field (a
- * Java creeper without `Fuse` does not explode instantly). A zero-valued key now reads like an
- * absent one ONLY where the default of that field in that context is demonstrated:
- *  - an empty compound or list is no compound / list (§5.4, already applied by semantic());
- *  - a Bedrock EMPTY item stack (`Name` "" or `Count` 0: the reader's own "no item", facts.mjs)
- *    is an empty position; a list holding only empty stacks is no list (four empty armour
- *    slots); list elements keep their position;
- *  - item fields with a justified default of 0 (KNOWN_ZERO_DEFAULTS: rules 39 and 48);
- *  - an item's `Block.version` is a block-state format stamp (the game upgrades from it).
- * Everything else — `Fuse:0s`, `HasLeftHorn:0b` (NBT booleans are bytes), `Duration:0`, any
- * unknown field — stays distinct from its absence. This table is NOT exhaustive: a field
- * missing from it is compared as stored, never assumed to be a default.
- * Returns the canonical string, or null when nothing is left.
+ * Rule 54 (v1.3 closure; replaces rule 46 and the empty-container part of rule 2 in the
+ * round-trip comparisons): a stored value AS THE GAME READS IT, built from the TYPED snbt
+ * (not from semantic(), which drops every empty compound / list). DEFAULT-DENY: nothing is
+ * equal to its absence unless the field, in its context, is listed in KNOWN_DEFAULTS.
+ * Kept from rule 2 (representation, not absence): numeric width ignored (1b ≡ 1), a text
+ * component that is only {text:"x"} ≡ "x", compound keys sorted. Item specifics: an item's
+ * `Block.version` (block-state format stamp) is ignored; a Bedrock EMPTY item stack (`Name`
+ * "" or `Count` 0 — the reader's own "no item", facts.mjs) is one value whatever its other
+ * keys. An empty list, an empty compound, 0, "" and false are values: `Tags:[]`, `x:{}`,
+ * `Fuse:0s`, `HasLeftHorn:0b` (NBT booleans are bytes) all differ from an absent key.
+ * KNOWN_DEFAULTS is NOT exhaustive; a field missing from it is compared as stored.
+ * Returns the canonical JSON string, or null for an absent value.
  */
-// [where (predicate on the compound holding the key), key] — a value 0 there equals absent.
+// Context of a compound, from its own keys and from where it sits.
 const isBedrockItem = (o) => typeof o.Name === 'string' && 'Count' in o;
-const isJavaItemComponents = (o, parent) => parent === 'components';
-export const KNOWN_ZERO_DEFAULTS = [
-  // Rule 39: Bedrock item tag `Damage:0` / `RepairCost:0` — written on some stacks, not on others.
-  { where: (o, parent, grand) => parent === 'tag' && grand && isBedrockItem(grand), key: 'Damage' },
-  { where: (o, parent, grand) => parent === 'tag' && grand && isBedrockItem(grand), key: 'RepairCost' },
-  // Rule 48: Java components `damage` / `repair_cost` — not saved by the game at 0, read as 0.
-  { where: isJavaItemComponents, key: 'minecraft:damage' },
-  { where: isJavaItemComponents, key: 'minecraft:repair_cost' },
+const isJavaItem = (o) => typeof o.id === 'string' && ('count' in o || 'components' in o);
+const ctxOf = (o, key, parentCtx) => {
+  if (key === 'tag' && parentCtx === 'bedrock-item') return 'bedrock-item-tag';
+  if (key === 'components' && parentCtx === 'java-item') return 'java-item-components';
+  if (isBedrockItem(o)) return 'bedrock-item';
+  if (isJavaItem(o)) return 'java-item';
+  return null;
+};
+const isEmptyObj = (x) => x && typeof x === 'object' && !Array.isArray(x) && !Object.keys(x).length;
+/** Field-specific defaults: in a compound of context `ctx`, key `key` holding `value` reads like no key. */
+export const KNOWN_DEFAULTS = [
+  { ctx: 'bedrock-item-tag', key: 'Damage', value: 0, why: 'rule 39: the Bedrock game writes tag.Damage:0 on some stacks and not on others (native stacks)' },
+  { ctx: 'bedrock-item-tag', key: 'RepairCost', value: 0, why: 'rule 39: same observation for tag.RepairCost:0' },
+  { ctx: 'bedrock-item', key: 'tag', value: {}, why: 'rule 39: a tag left empty once its default values are read is no tag' },
+  { ctx: 'java-item-components', key: 'minecraft:damage', value: 0, why: 'rule 48 / rule 24: the 26.3 item codec does not save damage 0 (Mojang code run by the normaliser)' },
+  { ctx: 'java-item-components', key: 'minecraft:repair_cost', value: 0, why: 'rule 48 / rule 24: same for repair_cost 0' },
+  { ctx: 'java-item', key: 'components', value: {}, why: 'rule 2 / rule 24: an empty component patch is not saved by the 26.3 item codec' },
+  { ctx: 'bedrock-block-entity', key: 'BlockEntityVersion', value: 0, why: 'rule 54: optional with default 0 in the best public Bedrock schema; native data hold both forms (B01–B03 write 0 on every block entity, GURREN never writes it)' },
 ];
-const isZeroScalar = (x) => x === 0 || x === '' || x === false;
-const isEmpty = (x) => (Array.isArray(x) && !x.length) || (x && typeof x === 'object' && !Array.isArray(x) && !Object.keys(x).length);
-const isEmptyBedrockStack = (x) => x && typeof x === 'object' && !Array.isArray(x) && typeof x.Name === 'string' && 'Count' in x && (x.Name === '' || !(Number(x.Count) > 0));
-export function zeroFree(s) {
+const sameVal = (a, b) => JSON.stringify(a) === JSON.stringify(b);
+/** Parse MCCB's canonical typed text (snbt() above) into plain values; numeric width dropped, longs as strings. */
+export function parseSnbt(text) {
+  let i = 0;
+  const ws = () => { while (/\s/.test(text[i])) i++; };
+  const value = () => {
+    ws();
+    const c = text[i];
+    if (c === '{') {
+      i++; const o = {}; ws();
+      if (text[i] === '}') { i++; return o; }
+      for (;;) { ws(); const k = str(); ws(); if (text[i++] !== ':') throw new Error(`snbt: ':' expected at ${i}`); o[k] = value(); ws(); const d = text[i++]; if (d === '}') return o; if (d !== ',') throw new Error(`snbt: ',' expected at ${i}`); }
+    }
+    if (c === '[') {
+      i++;
+      if (/[BIL]/.test(text[i]) && text[i + 1] === ';') i += 2;
+      const a = []; ws();
+      if (text[i] === ']') { i++; return a; }
+      for (;;) { a.push(value()); ws(); const d = text[i++]; if (d === ']') return a; if (d !== ',') throw new Error(`snbt: ',' expected at ${i}`); }
+    }
+    if (c === '"') return str();
+    if (text.startsWith('null', i)) { i += 4; return null; }
+    const m = /^(-?(?:\d+(?:\.\d*)?(?:[eE][+-]?\d+)?|Infinity|NaN))([bslLfd]?)/.exec(text.slice(i, i + 64));
+    if (!m) throw new Error(`snbt: value expected at ${i}`);
+    i += m[0].length;
+    return m[2] === 'L' ? m[1] : Number(m[1]);
+  };
+  const str = () => { const m = /^"(?:[^"\\]|\\.)*"/.exec(text.slice(i)); if (!m) throw new Error(`snbt: string expected at ${i}`); i += m[0].length; return JSON.parse(m[0]); };
+  const v = value(); ws();
+  if (i !== text.length) throw new Error(`snbt: trailing data at ${i}`);
+  return v;
+}
+export function gameRead(s, { root = null } = {}) {
   if (s == null) return null;
   let v;
-  try { v = JSON.parse(s); } catch { return s; }
-  const walk = (x, key, parent) => {
-    if (Array.isArray(x)) {
-      const a = x.map((e) => (isEmptyBedrockStack(e) ? {} : walk(e, null, null)));
-      return a.every(isEmpty) ? [] : a;
-    }
+  try { v = parseSnbt(s); } catch { return `?${s}`; }
+  const walk = (x, key, parentCtx, forcedCtx) => {
+    if (Array.isArray(x)) return x.map((e) => (e && typeof e === 'object' && !Array.isArray(e) && isBedrockItem(e) && (e.Name === '' || !(Number(e.Count) > 0)) ? '<empty-bedrock-stack>' : walk(e, null, null, null)));
     if (x && typeof x === 'object') {
+      const keys = Object.keys(x);
+      if (keys.length === 1 && keys[0] === 'text' && typeof x.text === 'string') return x.text; // rule 2
+      const here = forcedCtx || ctxOf(x, key, parentCtx);
       const o = {};
-      for (const k of Object.keys(x).sort()) {
-        if (key === 'Block' && k === 'version') continue;
-        const y = walk(x[k], k, x);
-        if (isEmpty(y)) continue;
-        if (isZeroScalar(y) && KNOWN_ZERO_DEFAULTS.some((d) => d.key === k && d.where(x, key, parent))) continue;
+      for (const k of keys.sort()) {
+        if (key === 'Block' && k === 'version' && (parentCtx === 'bedrock-item' || parentCtx === 'java-item')) continue;
+        const y = walk(x[k], k, here, null);
+        if (KNOWN_DEFAULTS.some((d) => d.ctx === here && d.key === k && sameVal(d.value, y))) continue;
         o[k] = y;
       }
       return o;
     }
     return x;
   };
-  const out = walk(v, null, null);
-  return isEmpty(out) ? null : JSON.stringify(out);
+  const out = walk(v, null, null, root);
+  // A root that IS a defaultable container (a Bedrock item tag) reads like none when empty.
+  if (root === 'bedrock-item-tag' && isEmptyObj(out)) return null;
+  return JSON.stringify(out);
 }
-/** Rule 46 (narrowed) applied to a {key: semantic} map: keys that read like absent ones are dropped. */
-export function zeroFreeMap(m) {
+/** gameRead over a {key: snbt} map of a block entity / entity (root context given). */
+export function gameReadMap(m, { root = null } = {}) {
   const o = {};
-  for (const [k, v] of Object.entries(m || {})) { const z = zeroFree(v); if (z !== null) o[k] = z; }
+  for (const [k, v] of Object.entries(m || {})) {
+    const y = gameRead(v);
+    if (root && KNOWN_DEFAULTS.some((d) => d.ctx === root && d.key === k && JSON.stringify(d.value) === y)) continue;
+    o[k] = y;
+  }
   return o;
 }
 

@@ -12,6 +12,10 @@
 //     on the LEAD chest only; the other half is found as the neighbour pointing to it.
 // Applies identically to every converter and to the source. A chest that is not a double chest
 // in the world being read is read on its own, exactly as before.
+// v1.3 closure (rule 49, D): a Bedrock pair whose LEAD is not unique (no chest with
+// pairlead = 1, or both, or two neighbours claiming the same chest) shows its halves in an
+// order MCCB cannot tell: { half: null, ambiguous: true } — never a combined order invented
+// from the side the pair is read from. Java: the two halves must also face the same way.
 import { DIM_NUM } from '../families/block.mjs';
 
 const CW = { north: 'east', east: 'south', south: 'west', west: 'north' };
@@ -32,7 +36,7 @@ export async function chestPair(edition, world, dim, pos) {
     if (!d) return null;
     const pp = [x + d[0], y, z + d[1]];
     const pb = await world.blockAt(dim, ...pp);
-    if (!pb || pb.name !== b.name || pb.props?.type !== (t === 'left' ? 'right' : 'left')) return null;
+    if (!pb || pb.name !== b.name || pb.props?.type !== (t === 'left' ? 'right' : 'left') || pb.props?.facing !== b.props.facing) return null;
     return { half: t === 'right' ? 0 : 1, partner: pp };
   }
   const dn = DIM_NUM[dim];
@@ -41,19 +45,25 @@ export async function chestPair(edition, world, dim, pos) {
   const v = be?.value;
   if (!v || v.id?.value !== 'Chest') return null;
   const px = plainNum(v.pairx), pz = plainNum(v.pairz);
+  const lead = (c) => plainNum(c.pairlead) === 1;
   if (px !== null && pz !== null) {
     if (Math.abs(px - x) + Math.abs(pz - z) !== 1) return null;
-    const p = world.blockEntityAt(dn, px, y, pz);
-    if (p?.value?.id?.value !== 'Chest') return null;
-    return { half: plainNum(v.pairlead) === 1 ? 0 : 1, partner: [px, y, pz] };
+    const p = world.blockEntityAt(dn, px, y, pz)?.value;
+    if (p?.id?.value !== 'Chest') return null;
+    const pPair = plainNum(p.pairx) !== null || plainNum(p.pairz) !== null;
+    if (pPair && (plainNum(p.pairx) !== x || plainNum(p.pairz) !== z)) return { half: null, ambiguous: true, partner: [px, y, pz] };
+    const leads = Number(lead(v)) + Number(pPair && lead(p));
+    if (leads !== 1) return { half: null, ambiguous: true, partner: [px, y, pz] };
+    return { half: lead(v) ? 0 : 1, partner: [px, y, pz] };
   }
+  const claim = [];
   for (const [dx, dz] of [[1, 0], [-1, 0], [0, 1], [0, -1]]) {
     const p = world.blockEntityAt(dn, x + dx, y, z + dz)?.value;
-    if (p?.id?.value === 'Chest' && plainNum(p.pairx) === x && plainNum(p.pairz) === z) {
-      return { half: plainNum(p.pairlead) === 1 ? 1 : 0, partner: [x + dx, y, z + dz] };
-    }
+    if (p?.id?.value === 'Chest' && plainNum(p.pairx) === x && plainNum(p.pairz) === z) claim.push([p, [x + dx, y, z + dz]]);
   }
-  return null;
+  if (!claim.length) return null;
+  if (claim.length > 1 || !lead(claim[0][0])) return { half: null, ambiguous: true, partner: claim[0][1] };
+  return { half: 1, partner: claim[0][1] };
 }
 
 /**
@@ -67,7 +77,9 @@ export async function containerAsShown(view, dim, pos) {
   if (!p) return { obs: own, half: null };
   const other = await view.blockEntityAt(dim, p.partner);
   const shift = (list, h) => (list || []).map((s) => ({ ...s, slot: s.slot === null || s.slot === undefined ? s.slot : s.slot + 27 * h }));
-  const items = [...shift(own?.facts?.items, p.half), ...shift(other?.facts?.items, 1 - p.half)];
-  if (!own && !other) return { obs: null, half: p.half };
-  return { obs: { ...(own || {}), facts: { ...(own?.facts || other.facts), items } }, half: p.half };
+  // ambiguous order: the chest read at (dim, pos) is put first; the caller must accept either half
+  const h = p.ambiguous ? 0 : p.half;
+  const items = [...shift(own?.facts?.items, h), ...shift(other?.facts?.items, 1 - h)];
+  if (!own && !other) return { obs: null, half: p.half, ambiguous: !!p.ambiguous };
+  return { obs: { ...(own || {}), facts: { ...(own?.facts || other.facts), items } }, half: p.half, ambiguous: !!p.ambiguous };
 }

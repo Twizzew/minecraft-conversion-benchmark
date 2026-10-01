@@ -53,9 +53,13 @@ Expectation codes:
   Blocks: sub-chunk format 8/9, layer 0 = block, layer 1 = water-logging layer.
   Entities: `actorprefix` + `digp` records, and legacy `0x32` records.
 - **Representations normalised on reading** (same code for every converter):
-  - Bedrock mount saddles: the `Saddled` flag, and equine `ChestItems` slot 0 (saddle) /
-    slot 1 (armour) — llama: carpet in slot 0 — are read as the Java equipment slots
-    `saddle` / `body` (observed in the hand-built B02 world).
+  - Bedrock mount saddles: the `Saddled` flag, and the first `ChestItems` slots, read as the
+    Java equipment slots `saddle` / `body` by species (rule 55): horse (and skeleton / zombie
+    horse) slot 0 saddle, slot 1 armour (observed in the hand-built B02 world); donkey and
+    mule slot 0 saddle, slots 1–15 the chest (B02 donkey: 16 entries); llama / trader llama
+    slot 0 carpet; camel slot 0 saddle, slot 1 `body` (no native example).
+  - Bedrock campfires keep their four positions as `Item1`…`Item4` (no `Items` list): read as
+    slots 0–3, Java slot i ↔ `Item(i+1)` (rule 56).
   - Bedrock player position: `Pos.y − 1.62` (Bedrock stores the eye position).
   - Java parrots on a player's shoulder (`ShoulderEntityLeft/Right`, stored inside the
     player data) are read as entities at the player's position + 1.4 (Bedrock stores them
@@ -169,7 +173,14 @@ the chest whose block entity has `pairlead` = 1 (recent Bedrock keeps `pairx`/`p
 `pairlead` on that chest only; the other half is the neighbour pointing to it). When the
 source stack is in one half of a double chest, and the chest at the same position in the
 observed world is also one half of a double chest, the stack is looked for in the combined
-container at slot `slot + 27 × half`. Otherwise a chest is read on its own, as before. A
+container at slot `slot + 27 × half`. Otherwise a chest is read on its own, as before. The
+order in which the two block entities are stored or read is not state: the same 54 slots
+shown are equal whatever block holds which half. A Bedrock pair with no unique lead (no
+chest with `pairlead` = 1, or both, or two chests claiming the same partner) shows its
+halves in an order MCCB cannot tell: a stack found in its local slot of either half is
+NOT_EVALUATED (`double-chest-half-order-undetermined`), never PASS; elsewhere it is FAIL.
+Java halves must face the same way to form a pair. A stack found in the same local slot of
+the other half is a FAIL with the evidence `double-chest-halves-shown-in-other-order`. A
 block-entity kind with no counterpart in the target edition (item frames, flower pots…)
 has its `custom_name` NOT_EVALUATED in direct (the name moves to another family). When
 the identity reference does not know the source item, a different item in the slot is
@@ -253,10 +264,10 @@ FAIL. Bedrock also stores where the player reappears (`SpawnX/Y/Z`, e.g. above t
 foot); Java does not. Round trip: both Bedrock positions (or the Java one) identical.
 
 Items (rule 47, v1.3): inventory, ender chest and armour stacks are compared as the other
-families compare items (§4 and rule 46 as narrowed by rule 54: a zero value equals an
-absent key only where the field's default is demonstrated — item `tag.Damage` /
-`tag.RepairCost`, components `damage` / `repair_cost`; an empty compound / list is absent;
-an item's `Block.version` is ignored).
+families compare items (§4, rule 54: a zero or empty value equals an absent key only where
+the field's default is demonstrated — item `tag.Damage` / `tag.RepairCost` and an empty
+`tag`, components `damage` / `repair_cost` and an empty `components`; an item's
+`Block.version` is ignored).
 
 ### 3.9 `structure` (v1.3, rules 50–52)
 
@@ -293,8 +304,16 @@ fit the format is one subject, NOT_EVALUATED at both levels.
 ## 4. Semantic equality (second chance, round trip)
 
 Applied only after strict typed equality failed, and reported with the rule suffix
-`.semantic-equal`: a text compound that is only `{text:"x"}` ≡ `"x"`; an empty compound or
-list ≡ an absent key; numeric width ignored (`1b` ≡ `1`); key order ignored.
+`.semantic-equal`: a text compound that is only `{text:"x"}` ≡ `"x"`; numeric width ignored
+(`1b` ≡ `1`); key order ignored. Rule 54 (v1.3 closure): it is computed from the TYPED stored
+value (`lib/nbt.mjs` `gameRead`) and is DEFAULT-DENY — an empty compound, an empty list, 0,
+`""` and `false` are values, never equal to an absent key, except the field-specific defaults
+of `KNOWN_DEFAULTS` (exhaustive list): Bedrock item `tag.Damage` 0 and `tag.RepairCost` 0
+and a `tag` left empty (rule 39); Java item components `minecraft:damage` 0 and
+`minecraft:repair_cost` 0 and an empty `components` (rules 2, 24, 48); Bedrock block entity
+`BlockEntityVersion` 0. An item's `Block.version` is ignored; two encodings of an EMPTY
+Bedrock stack (`Name` "" or `Count` 0) are one value. (Exception: `world` saved data are still
+compared with the v1.1 semantic form, empties dropped — their fixtures keep only that form.)
 
 ## 5. What is never done
 

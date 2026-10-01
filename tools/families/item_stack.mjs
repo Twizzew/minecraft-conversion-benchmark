@@ -6,6 +6,7 @@ import { r, notEvaluated, PASS, FAIL, NOT_APPLICABLE, REASON } from '../lib/stat
 import { bedrockRegistry } from '../lib/registry.mjs';
 import { chestPair, containerAsShown } from '../lib/chest-pairs.mjs';
 import { directSlot } from '../lib/slots.mjs';
+import { gameRead, parseSnbt } from '../lib/nbt.mjs';
 
 // Rule 40 (audit 2026-09-25): a Bedrock item stored under a LEGACY name that the current
 // Bedrock registry no longer has (`planks`, `sapling`, `red_flower`…, the variant sitting in
@@ -100,7 +101,9 @@ function findStack(obs, slot, targets, sameEdition, expId, legacy = false) {
   const ok = (it) => (sameEdition ? it.id === expId : (targets || []).includes(it.id));
   if (at && ok(at.item)) return { item: at.item, slot };
   const elsewhere = items.find((x) => x.slot !== slot && ok(x.item));
-  const where = elsewhere ? { found_in_slot: elsewhere.slot, expected_slot: slot } : {};
+  // evidence only: the same local slot in the other half of a double chest = the two halves are
+  // SHOWN in the other order (rule 49), not a stack moved inside its half
+  const where = elsewhere ? { found_in_slot: elsewhere.slot, expected_slot: slot, ...(slot >= 0 && Math.abs(elsewhere.slot - slot) === 27 ? { cause: 'double-chest-halves-shown-in-other-order' } : {}) } : {};
   return at ? { item: at.item, slot, wrong: true, where } : { missing: true, where };
 }
 
@@ -113,17 +116,28 @@ export async function evaluate(subject, ctx) {
   // Rule 49 (v1.3, F12): a stack of a source double chest is looked for in the target's
   // container AS SHOWN (both halves, combined slots) when the target also holds a double chest
   // there; otherwise in the block alone, as before.
+  // A pair whose display order is undetermined (source half null, or target pair without a
+  // unique lead) is never a PASS: the stack is only looked for in its local slot of either half
+  // (`alt`), and finding it there is NOT_EVALUATED (rule 49, D).
   const vue = async (v, slot) => {
     if (!v?.world) return { obs: null, slot };
     if (e.pair_half === undefined) return { obs: await v.blockEntityAt(locator.dim, locator.pos), slot };
     const c = await containerAsShown(v, locator.dim, locator.pos);
+    if (slot === null || slot === undefined) return { obs: c.obs, slot };
+    if (c.ambiguous || (e.pair_half === null && c.half !== null)) return { obs: c.obs, slot, alt: slot + 27, undetermined: true };
     return c.half === null ? { obs: c.obs, slot } : { obs: c.obs, slot: slot + 27 * e.pair_half };
   };
   // direct: the target slot with the same role (brewing stand); round trip: the same slot
   const dV = await vue(d, directSlot(e.container, ctx.sourceEdition, locator.slot)), rV = await vue(rt, locator.slot);
   const dObs = dV.obs, rObs = rV.obs;
-  const dHit = findStack(dObs, dV.slot, e.targets, false, e.id, !!e.legacy);
-  const rHit = findStack(rObs, rV.slot, null, true, e.id, !!e.legacy);
+  const look = (V, targets, same) => {
+    const h = findStack(V.obs, V.slot, targets, same, e.id, !!e.legacy);
+    if (!V.undetermined) return h;
+    const h2 = h?.item && !h.wrong ? h : findStack(V.obs, V.alt, targets, same, e.id, !!e.legacy);
+    return h2?.item && !h2.wrong ? { halfUndetermined: true, item: h2.item } : h;
+  };
+  const dHit = look(dV, e.targets, false);
+  const rHit = look(rV, null, true);
   for (const [aspect, spec] of Object.entries(subject.aspects)) {
     // direct
     let dr;
@@ -133,6 +147,7 @@ export async function evaluate(subject, ctx) {
     // A different item in the slot is only judgeable when the identity reference knows the
     // source item; otherwise MCCB cannot tell a wrong item from a correctly renamed one.
     else if (dHit?.unknownSlot) dr = notEvaluated('no-cross-edition-slot-reference', { source_slot: locator.slot ?? null });
+    else if (dHit?.halfUndetermined) dr = notEvaluated('double-chest-half-order-undetermined', { observed: dHit.item.id });
     else if (dHit?.wrong && !(e.targets || []).length) dr = notEvaluated(REASON.NO_IDENTITY_REFERENCE, { observed: dHit.item.id });
     else if (dHit?.wrong || dHit?.missing) dr = r(FAIL, `item_stack.${aspect}`, { observed: dHit.wrong ? dHit.item.id : (dObs ? 'stack missing' : 'container missing'), ...dHit.where });
     else if (aspect === 'identity') dr = r(PASS, 'item_stack.identity.equivalent');
@@ -153,15 +168,20 @@ export async function evaluate(subject, ctx) {
     // Round-trip codes of the fixture (rules 38, 40) — this family ignored them.
     else if (String(spec.roundtrip || '').startsWith('NE:')) rr = notEvaluated(spec.roundtrip.slice(3), rHit?.item ? { observed: rHit.item.id } : {});
     else if (rHit?.unknownSlot) rr = notEvaluated('source-slot-unknown', { source_slot: locator.slot ?? null });
+    else if (rHit?.halfUndetermined) rr = notEvaluated('double-chest-half-order-undetermined', { observed: rHit.item.id });
     else if (rHit?.wrong || rHit?.missing) rr = r(FAIL, `item_stack.${aspect}.roundtrip`, { observed: rHit.wrong ? rHit.item.id : (rObs ? 'stack missing' : 'container missing'), ...rHit.where });
     else if (aspect === 'identity') rr = r(PASS, 'item_stack.identity.roundtrip');
     else if (aspect === 'count') rr = rHit.item.count === e.count ? r(PASS, 'item_stack.count.roundtrip') : r(FAIL, 'item_stack.count.roundtrip', { observed: rHit.item.count });
     else if (aspect.startsWith('component:') && ctx.sourceEdition === 'java') {
       const comp = aspect.slice(10);
-      rr = rHit.item.components?.[comp] === e.components[comp] ? r(PASS, 'item_stack.component.roundtrip')
-        : rHit.item.components_sem?.[comp] === e.components_sem[comp] ? r(PASS, 'item_stack.component.roundtrip.semantic-equal')
-        : JAVA_DEFAULT_ZERO.has(comp) && Number(rHit.item.components_sem?.[comp] ?? 0) === 0 && Number(e.components_sem?.[comp] ?? 0) === 0 ? r(PASS, 'item_stack.component.roundtrip.default-0') // Rule 48 (v1.3, F11)
-        : r(FAIL, 'item_stack.component.roundtrip', { observed: (rHit.item.components_sem?.[comp] ?? 'absent').slice(0, 300), expected: (e.components_sem[comp] || '').slice(0, 300) });
+      // Rule 54: second chance = the component as the game reads it (gameRead: numeric width,
+      // {text:"x"} ≡ "x"; an empty list / compound is NOT an absent one).
+      const gotC = rHit.item.components?.[comp], expC = e.components[comp];
+      const num0 = (x) => { try { return x == null ? 0 : Number(parseSnbt(x)); } catch { return NaN; } };
+      rr = gotC === expC ? r(PASS, 'item_stack.component.roundtrip')
+        : gotC !== undefined && gameRead(gotC) === gameRead(expC) ? r(PASS, 'item_stack.component.roundtrip.semantic-equal')
+        : JAVA_DEFAULT_ZERO.has(comp) && num0(gotC) === 0 && num0(expC) === 0 ? r(PASS, 'item_stack.component.roundtrip.default-0') // Rule 48 (v1.3, F11)
+        : r(FAIL, 'item_stack.component.roundtrip', { observed: (gameRead(gotC) ?? 'absent').slice(0, 300), expected: (gameRead(expC) || '').slice(0, 300) });
     } else if (aspect.startsWith('component:')) {
       const comp = aspect.slice(10);
       const got = COMPONENT_RULES[comp](rHit.item);
@@ -169,9 +189,10 @@ export async function evaluate(subject, ctx) {
       const zero0 = JAVA_DEFAULT_ZERO.has(comp) && Number(got ?? 0) === 0 && Number(e.ruled[comp] ?? 0) === 0;
       rr = eq(got, e.ruled[comp]) ? r(PASS, 'item_stack.component.roundtrip') : zero0 ? r(PASS, 'item_stack.component.roundtrip.default-0') : r(FAIL, 'item_stack.component.roundtrip', { observed: got ?? null });
     } else if (aspect === 'tag') {
-      // Rule 39: exact bytes first, then the tag as the game reads it (defaults removed).
+      // Rule 39 as narrowed by rule 54: exact bytes first, then the tag as the game reads it
+      // (only tag.Damage:0 / tag.RepairCost:0 and an empty tag read like absent).
       rr = rHit.item.tag === e.tag ? r(PASS, 'item_stack.tag.roundtrip')
-        : e.tag_sem !== undefined && (rHit.item.tag_sem ?? null) === (e.tag_sem ?? null) ? r(PASS, 'item_stack.tag.roundtrip.default-values-equal')
+        : gameRead(rHit.item.tag, { root: 'bedrock-item-tag' }) === gameRead(e.tag, { root: 'bedrock-item-tag' }) ? r(PASS, 'item_stack.tag.roundtrip.default-values-equal')
         : r(FAIL, 'item_stack.tag.roundtrip', { observed: (rHit.item.tag || '').slice(0, 300) });
     }
     else if (aspect === 'aux') rr = rHit.item.aux === e.aux ? r(PASS, 'item_stack.aux.roundtrip') : r(FAIL, 'item_stack.aux.roundtrip', { observed: rHit.item.aux });

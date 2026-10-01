@@ -1,9 +1,11 @@
-// v1.3 closure — B. rule 46: "zero / false / empty ≡ absent" only where the default of THAT
-// field in THAT context is demonstrated. Everything else: DEFAULT-DENY.
+// v1.3 closure — B. rule 46 → rule 54: "zero / false / empty ≡ absent" only where the default of
+// THAT field in THAT context is demonstrated (lib/nbt.mjs KNOWN_DEFAULTS). Everything else —
+// including an empty list or compound — is DEFAULT-DENY.
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { T, jItem, bItem, bEmpty, javaWorld, bedrockWorld, view, run, status, useSyntheticJavaReports } from './helpers.mjs';
-import { zeroFree } from '../../lib/nbt.mjs';
+import { gameRead, KNOWN_DEFAULTS } from '../../lib/nbt.mjs';
+import { snbt } from '../../lib/nbt.mjs';
 
 useSyntheticJavaReports(['minecraft:diamond', 'minecraft:iron_sword']);
 
@@ -50,34 +52,53 @@ test('an unknown zero-valued field stays distinct from its absence (Java and Bed
   assert.equal(await dataRT(bEnt('minecraft:zombie', { MccbUnknownField: T.str('') }), bEnt('minecraft:zombie', {}), 'bedrock'), 'PARTIAL');
 });
 
-test('kept: an empty list / compound reads like no list (§5.4, already in semantic())', async () => {
-  assert.equal(await dataRT(jEnt('minecraft:zombie', { Tags: T.ls([]) }), jEnt('minecraft:zombie', {})), 'PASS');
+test('unknown / nested EMPTY list and compound vs absent: distinct (no global [] ≈ absent, {} ≈ absent)', async () => {
+  assert.equal(await dataRT(jEnt('minecraft:zombie', { MccbList: T.ls([]) }), jEnt('minecraft:zombie', {})), 'PARTIAL');
+  assert.equal(await dataRT(jEnt('minecraft:zombie', { MccbObj: T.c({}) }), jEnt('minecraft:zombie', {})), 'PARTIAL');
+  assert.equal(await dataRT(jEnt('minecraft:zombie', { Nest: T.c({ a: T.i(1), l: T.ls([]) }) }), jEnt('minecraft:zombie', { Nest: T.c({ a: T.i(1) }) })), 'PARTIAL');
+  assert.equal(await dataRT(jEnt('minecraft:zombie', { Nest: T.c({ a: T.i(1), o: T.c({}) }) }), jEnt('minecraft:zombie', { Nest: T.c({ a: T.i(1) }) })), 'PARTIAL');
+  assert.equal(await dataRT(jEnt('minecraft:zombie', { Tags: T.ls([]) }), jEnt('minecraft:zombie', {})), 'PARTIAL');
+  assert.equal(await dataRT(bEnt('minecraft:zombie', { MccbObj: T.c({}) }), bEnt('minecraft:zombie', {}), 'bedrock'), 'PARTIAL');
+  // the same empty value on both sides is of course equal
+  assert.equal(await dataRT(jEnt('minecraft:zombie', { MccbList: T.ls([]) }), jEnt('minecraft:zombie', { MccbList: T.ls([]) })), 'PASS');
 });
 
-test('kept, narrow: a Bedrock list of EMPTY item stacks (Count 0, Name "") reads like no list', async () => {
+test('a Bedrock list of EMPTY item stacks is NOT an absent list; two encodings of an empty stack are one value', async () => {
   const empty4 = T.lc([bEmpty(), bEmpty(), bEmpty(), bEmpty()]);
-  assert.equal(await dataRT(bEnt('minecraft:zombie', { Armor: empty4 }), bEnt('minecraft:zombie', {}), 'bedrock'), 'PASS');
-  // …but a list of zero NUMBERS is not an empty item list
+  assert.equal(await dataRT(bEnt('minecraft:zombie', { Armor: empty4 }), bEnt('minecraft:zombie', {}), 'bedrock'), 'PARTIAL');
+  const short4 = T.lc([0, 1, 2, 3].map(() => T.c({ Count: T.b(0), Name: T.str('') })));
+  assert.equal(await dataRT(bEnt('minecraft:zombie', { Armor: empty4 }), bEnt('minecraft:zombie', { Armor: short4 }), 'bedrock'), 'PASS');
   const zeros = { type: 'list', value: { type: 'int', value: [0, 0, 0, 0] } };
   assert.equal(await dataRT(bEnt('minecraft:zombie', { Numbers: zeros }), bEnt('minecraft:zombie', {}), 'bedrock'), 'PARTIAL');
 });
 
-test('kept, narrow item exceptions: Bedrock tag Damage:0 / RepairCost:0 and Block.version', () => {
-  const a = JSON.stringify({ Count: 1, Name: 'minecraft:diamond_sword', tag: { Damage: 0, RepairCost: 0 } });
-  const b = JSON.stringify({ Count: 1, Name: 'minecraft:diamond_sword' });
-  assert.equal(zeroFree(a, { kind: 'item', edition: 'bedrock' }), zeroFree(b, { kind: 'item', edition: 'bedrock' }));
-  const c = JSON.stringify({ Count: 1, Name: 'minecraft:stone', Block: { name: 'minecraft:stone', states: {}, version: 18168865 } });
-  const d = JSON.stringify({ Count: 1, Name: 'minecraft:stone', Block: { name: 'minecraft:stone', states: {}, version: 17959425 } });
-  assert.equal(zeroFree(c, { kind: 'item', edition: 'bedrock' }), zeroFree(d, { kind: 'item', edition: 'bedrock' }));
-  // an unknown zero field of an item is NOT dropped
-  const e = JSON.stringify({ Count: 1, Name: 'minecraft:diamond', MccbUnknown: 0 });
-  assert.notEqual(zeroFree(e, { kind: 'item', edition: 'bedrock' }), zeroFree(JSON.stringify({ Count: 1, Name: 'minecraft:diamond' }), { kind: 'item', edition: 'bedrock' }));
+const s = (o) => snbt(o);
+test('kept, narrow item exceptions: Bedrock tag Damage:0 / RepairCost:0 (and the tag left empty), Block.version', () => {
+  const a = s(T.c({ Count: T.b(1), Name: T.str('minecraft:diamond_sword'), tag: T.c({ Damage: T.i(0), RepairCost: T.i(0) }) }));
+  const b = s(T.c({ Count: T.b(1), Name: T.str('minecraft:diamond_sword') }));
+  assert.equal(gameRead(a), gameRead(b));
+  const c = s(T.c({ Count: T.b(1), Name: T.str('minecraft:stone'), Block: T.c({ name: T.str('minecraft:stone'), states: T.c({}), version: T.i(18168865) }) }));
+  const d = s(T.c({ Count: T.b(1), Name: T.str('minecraft:stone'), Block: T.c({ name: T.str('minecraft:stone'), states: T.c({}), version: T.i(17959425) }) }));
+  assert.equal(gameRead(c), gameRead(d));
+  // an unknown zero field, an unknown empty list in the tag: NOT dropped
+  assert.notEqual(gameRead(s(T.c({ Count: T.b(1), Name: T.str('minecraft:diamond'), MccbUnknown: T.b(0) }))), gameRead(s(T.c({ Count: T.b(1), Name: T.str('minecraft:diamond') }))));
+  assert.notEqual(gameRead(s(T.c({ Count: T.b(1), Name: T.str('minecraft:firework_rocket'), tag: T.c({ Fireworks: T.c({ Explosions: T.lc([]), Flight: T.b(1) }) }) }))),
+    gameRead(s(T.c({ Count: T.b(1), Name: T.str('minecraft:firework_rocket'), tag: T.c({ Fireworks: T.c({ Flight: T.b(1) }) }) }))));
+  // Damage 0 outside an item tag is not covered
+  assert.notEqual(gameRead(s(T.c({ Damage: T.i(0), x: T.i(1) }))), gameRead(s(T.c({ x: T.i(1) }))));
 });
 
-test('kept, narrow item exceptions: Java components damage / repair_cost 0 (rule 48)', () => {
-  const a = JSON.stringify({ count: 1, id: 'minecraft:iron_sword', components: { 'minecraft:damage': 0, 'minecraft:repair_cost': 0 } });
-  const b = JSON.stringify({ count: 1, id: 'minecraft:iron_sword' });
-  assert.equal(zeroFree(a, { kind: 'item', edition: 'java' }), zeroFree(b, { kind: 'item', edition: 'java' }));
+test('kept, narrow item exceptions: Java components damage / repair_cost 0 (rule 48) and an empty patch', () => {
+  const a = s(T.c({ count: T.i(1), id: T.str('minecraft:iron_sword'), components: T.c({ 'minecraft:damage': T.i(0), 'minecraft:repair_cost': T.i(0) }) }));
+  const b = s(T.c({ count: T.i(1), id: T.str('minecraft:iron_sword') }));
+  assert.equal(gameRead(a), gameRead(b));
+  assert.notEqual(gameRead(s(T.c({ count: T.i(1), id: T.str('minecraft:iron_sword'), components: T.c({ 'minecraft:custom_data': T.c({}) }) }))), gameRead(b));
+});
+
+test('the exception table is exactly the documented one', () => {
+  assert.deepEqual(KNOWN_DEFAULTS.map((d) => `${d.ctx}.${d.key}=${JSON.stringify(d.value)}`).sort(), [
+    'bedrock-block-entity.BlockEntityVersion=0', 'bedrock-item-tag.Damage=0', 'bedrock-item-tag.RepairCost=0', 'bedrock-item.tag={}',
+    'java-item-components.minecraft:damage=0', 'java-item-components.minecraft:repair_cost=0', 'java-item.components={}']);
 });
 
 test('held items (round trip): an unknown zero key on the item is a difference', async () => {

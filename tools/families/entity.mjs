@@ -6,7 +6,7 @@ import { readBlock } from './block.mjs';
 import { keyClasses } from './block_entity.mjs';
 import { isLegacyBedrockItem, LEGACY_ITEM } from './item_stack.mjs';
 import { javaRegistry } from '../lib/registry.mjs';
-import { zeroFree, zeroFreeMap } from '../lib/nbt.mjs';
+import { gameRead, gameReadMap } from '../lib/nbt.mjs';
 import { compareByPosition, expectedSlot, positionalInventory, sameNumberingAcrossEditions } from '../lib/slots.mjs';
 
 export const MATCH_RADIUS = { direct: 2.0, roundtrip: 0.75 };
@@ -133,7 +133,7 @@ export async function prepare(ctx, subjects) {
 // never sees, stored without positions by Java (villager, piglin…), stay unordered.
 function heldCompare(aspect, entityId, sourceEdition, exp, got, same) {
   if (!exp.length) return null;
-  const match = (e, g) => (same ? (g.sem === e.sem || (!!g.semx && zeroFree(g.semx) === zeroFree(e.semx))) : (e.targets || [e.id]).includes(g.id) && g.count === e.count);
+  const match = (e, g) => (same ? (g.sem === e.sem || gameRead(g.sem) === gameRead(e.sem)) : (e.targets || [e.id]).includes(g.id) && g.count === e.count);
   if (aspect === 'equipment') return compareByPosition(exp, got, (e) => e.slot, match);
   if (!positionalInventory(entityId)) {
     const pool = got.slice();
@@ -224,8 +224,9 @@ export async function evaluate(subject, ctx) {
             case 'data': {
               const strict = [...new Set([...Object.keys(e.data), ...Object.keys(g.data)])].filter((k) => e.data[k] !== g.data[k]);
               if (!strict.length) { out = r(PASS, 'entity.data.roundtrip'); break; }
-              // Rule 46: zero-valued keys read like absent ones (zeroFree).
-              const es = zeroFreeMap(e.sem), gs = zeroFreeMap(g.sem);
+              // Rule 54: stored values as the game reads them, from the typed data (lib/nbt.mjs
+              // gameRead): only field-specific demonstrated defaults read like absent keys.
+              const es = gameReadMap(e.data), gs = gameReadMap(g.data);
               const keys = [...new Set([...Object.keys(es), ...Object.keys(gs)])].filter((k) => es[k] !== gs[k]).sort();
               out = keys.length ? r(PARTIAL, 'entity.data.roundtrip', { differing_keys: keys.slice(0, 25), differing_count: keys.length, ...keyClasses(keys, es, gs) }) : r(PASS, 'entity.data.roundtrip.semantic-equal');
               break;

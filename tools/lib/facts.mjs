@@ -134,6 +134,11 @@ export function bedrockBlockEntity(tag) {
     const positional = !list.some((v) => v.Slot);
     f.items = list.map((v, i) => ({ slot: v.Slot?.value ?? (positional ? i : null), item: bedrockItem({ type: 'compound', value: v }) })).filter((x) => x.item);
   }
+  // Rule 56: a Bedrock campfire keeps its four positions as Item1..Item4 (no Items list);
+  // position i+1 is Java slot i (je2be-core 8dfc4de, both directions).
+  if ((p.id === 'Campfire' || p.id === 'SoulCampfire') && !items) {
+    f.items = [1, 2, 3, 4].map((n) => ({ slot: n - 1, item: bedrockItem(get(tag, `Item${n}`)) })).filter((x) => x.item);
+  }
   if (p.id === 'Sign' || p.id === 'HangingSign') {
     const face = (t) => (t ? String(t.Text ?? '').split('\n') : []);
     f.sign = {
@@ -203,10 +208,17 @@ export function bedrockEntity(tag) {
     if (l && l.type === 'list') (l.value.value || []).forEach((v, i) => { const it = bedrockItem({ type: 'compound', value: v }); if (it) eq.push({ slot: names[i] || `${k}${i}`, item: it }); });
   }
   // REPRESENTATION (docs/fixture-rules.md §3.4): Bedrock keeps a mount's saddle as the
-  // Saddled flag, and an equine's saddle / armour in ChestItems slots 0 / 1 (llama: carpet
-  // in slot 0). They are read back as the Java equipment slots 'saddle' and 'body'.
-  const EQUINE = /(horse|donkey|mule|camel)/.test(p.identifier || '');
-  const LLAMA = /llama/.test(p.identifier || '');
+  // Saddled flag, and the mount's equipment in the first ChestItems slots — read back as the
+  // Java equipment slots 'saddle' / 'body'. The layout depends on the species (rule 55):
+  //   horse (and skeleton / zombie horse): 0 saddle, 1 armour (B02, built in the retail client);
+  //   donkey, mule: 0 saddle, 1–15 = the 15 chest slots (B02 donkey: 16 entries) — slot 1 is
+  //     NOT armour (a donkey wears none);
+  //   llama, trader llama: 0 carpet ('body'), then the chest slots;
+  //   camel, camel husk: 0 saddle, 1 'body' (unchanged, no native example).
+  const id = p.identifier || '';
+  const layout = /^minecraft:(donkey|mule)$/.test(id) ? { 0: 'saddle' }
+    : /llama/.test(id) ? { 0: 'body' }
+    : /(horse|camel)/.test(id) ? { 0: 'saddle', 1: 'body' } : {};
   const inv = [];
   const has = (slot) => eq.some((x) => x.slot === slot);
   for (const k of ['ChestItems', 'Inventory']) {
@@ -216,9 +228,8 @@ export function bedrockEntity(tag) {
       const it = bedrockItem({ type: 'compound', value: v });
       if (!it) continue;
       const slot = v.Slot?.value;
-      if (k === 'ChestItems' && EQUINE && slot === 0) { if (!has('saddle')) eq.push({ slot: 'saddle', item: it }); continue; }
-      if (k === 'ChestItems' && EQUINE && slot === 1) { if (!has('body')) eq.push({ slot: 'body', item: it }); continue; }
-      if (k === 'ChestItems' && LLAMA && slot === 0) { if (!has('body')) eq.push({ slot: 'body', item: it }); continue; }
+      const as = k === 'ChestItems' ? layout[slot] : undefined;
+      if (as) { if (!has(as)) eq.push({ slot: as, item: it }); continue; }
       inv.push({ ...it, slot: slot ?? null }); // rule 53: position kept
     }
   }

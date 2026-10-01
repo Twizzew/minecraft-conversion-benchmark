@@ -5,7 +5,7 @@ import { javaBlockEntity, bedrockBlockEntity } from '../lib/facts.mjs';
 import { equivalents } from '../lib/identity.mjs';
 import { DIM_NAME } from './block.mjs';
 import { r, notEvaluated, PASS, ADAPTED, PARTIAL, FAIL, NOT_APPLICABLE, REASON } from '../lib/status.mjs';
-import { textOf, plain, zeroFreeMap } from '../lib/nbt.mjs';
+import { textOf, plain, gameReadMap } from '../lib/nbt.mjs';
 
 // Block entities that exist in one edition only: the other edition keeps the same
 // information in a block state or an entity (judged by the block / entity families).
@@ -97,6 +97,8 @@ export async function enumerate(ctx) {
 }
 
 const withoutItems = (data) => Object.fromEntries(Object.entries(data || {}).filter(([k]) => k !== 'Items'));
+// `sem` stays in the fixture for continuity; no verdict reads it since rule 54 (data are compared as
+// the game reads the TYPED values, lib/nbt.mjs gameRead).
 const nonEmpty = (sem) => Object.fromEntries(Object.entries(sem || {}).filter(([, v]) => v !== '{}' && v !== '[]'));
 
 function signFlags(s) { return s ? { front_glowing: s.front_glowing, back_glowing: s.back_glowing, waxed: s.waxed } : null; }
@@ -157,7 +159,7 @@ function directAspect(aspect, spec, exp, obs, d) {
   }
 }
 
-function roundtripAspect(aspect, exp, obs) {
+function roundtripAspect(aspect, exp, obs, edition) {
   if (aspect === 'presence') return obs && obs.facts.id === exp.id ? r(PASS, 'block_entity.presence.roundtrip') : r(FAIL, 'block_entity.presence.roundtrip', { observed: obs ? obs.facts.id : 'no block entity' });
   if (!obs) return r(FAIL, `block_entity.${aspect}.roundtrip`, { observed: 'no block entity' });
   const o = obs.facts;
@@ -175,11 +177,13 @@ function roundtripAspect(aspect, exp, obs) {
     case 'lectern_book': return o.lectern_book && eq(o.lectern_book.written_book || o.lectern_book.writable_book, exp.lectern_book.written_book || exp.lectern_book.writable_book) ? r(PASS, 'block_entity.lectern_book.roundtrip') : r(FAIL, 'block_entity.lectern_book.roundtrip');
     case 'record': return o.record && o.record.id === exp.record.id ? r(PASS, 'block_entity.record.roundtrip') : r(FAIL, 'block_entity.record.roundtrip', { observed: o.record?.id ?? null });
     case 'data': {
-      const got = withoutItems(o.data), gotSem = nonEmpty(withoutItems(o.sem));
+      const got = withoutItems(o.data);
       const strict = [...new Set([...Object.keys(exp.data), ...Object.keys(got)])].filter((k) => exp.data[k] !== got[k]).sort();
       if (!strict.length) return r(PASS, 'block_entity.data.roundtrip');
-      // Rule 46: zero-valued keys read like absent ones (zeroFree).
-      const es = zeroFreeMap(exp.sem), gs = zeroFreeMap(gotSem);
+      // Rule 54: stored values as the game reads them, from the typed data (lib/nbt.mjs gameRead);
+      // only field-specific demonstrated defaults (Bedrock `BlockEntityVersion:0`) read like absent.
+      const root = edition === 'bedrock' ? 'bedrock-block-entity' : null;
+      const es = gameReadMap(exp.data, { root }), gs = gameReadMap(got, { root });
       const keys = [...new Set([...Object.keys(es), ...Object.keys(gs)])].filter((k) => es[k] !== gs[k]).sort();
       if (!keys.length) return r(PASS, 'block_entity.data.roundtrip.semantic-equal', { strict_differing_keys: strict.slice(0, 20) });
       return r(PARTIAL, 'block_entity.data.roundtrip', { differing_keys: keys.slice(0, 20), differing_count: keys.length, ...keyClasses(keys, es, gs), sample: Object.fromEntries(keys.slice(0, 3).map((k) => [k, [es[k] ?? null, gs[k] ?? null].map((x) => x && x.slice(0, 160))])) });
@@ -199,7 +203,7 @@ export async function evaluate(subject, ctx) {
       roundtrip: !rt ? notEvaluated(REASON.NO_ROUNDTRIP) : !rt.world ? r(FAIL, `block_entity.${aspect}.world-opens`, { observed: REASON.WORLD_DOES_NOT_OPEN })
         : String(spec.roundtrip || '').startsWith('NE:') ? notEvaluated(spec.roundtrip.slice(3))
         : String(spec.roundtrip || '').startsWith('NA:') ? r(NOT_APPLICABLE, `block_entity.${aspect}.${spec.roundtrip.slice(3)}`)
-        : roundtripAspect(aspect, subject.expected, rObs),
+        : roundtripAspect(aspect, subject.expected, rObs, rt.edition),
     };
   }
   return res;
