@@ -3,7 +3,11 @@
 //   node tools/results/table-v13.mjs --dir results/v1.3 [--private-dir _staging/private/results-v1.3]
 //        [--builds "WS 0308840=worldswitch/ws-0308840_,WS 2.8.0=worldswitch/ws-fd9b735_,Chunker 1.20.0=chunker/chunker-1.20.0_"]
 //        [--md out.md] [--json out.json] [--worlds J01@1.1,...] [--expect-scorer current|<sha256>]
-//        [--legacy-unfingerprinted] [--fixtures-ref reports/freeze/FREEZE-v1.3.json[,addendum.json]]
+//        [--legacy-unfingerprinted]  --freeze reports/freeze/FREEZE-v1.3.json[,addendum.json] | --dev
+// OFFICIAL table (v1.3 closure, pass 3): `--freeze` is REQUIRED — every result must have been
+// graded with exactly the fixture content its freeze recorded, and every fingerprinted result
+// must say it was graded officially against that freeze. `--dev` builds a table against the
+// registries on disk; it is marked DEV, never an official table. Neither option → refused.
 // Checks, per world: every converter has exactly the same assertions (subject#aspect at each
 // level), each counted once; the status counts add up to the number of assertions; nothing
 // NOT_EVALUATED is counted as PASS. Counts only: no score, no ranking, worlds never added.
@@ -13,7 +17,7 @@
 //  - exactly one result folder <prefix><world>_<j2b|b2j> (none = partial suite, more = ambiguous);
 //  - summary identity: world, converter, run ids (folder = direct run, return run = direct + 2x);
 //  - results.jsonl.gz hash and row count = those recorded in its summary.json;
-//  - fixture registry content = the reference (--fixtures-ref, or the registry read now);
+//  - fixture registry content = the freeze's (--freeze), or the registry on disk (--dev only);
 //  - direct / return output hashes = <dir>/OUTPUTS.sha256 when that file exists;
 //  - one converter build per label;
 //  - scorer and ruleset fingerprints: identical across the table, and the scorer = the tools on
@@ -26,6 +30,7 @@ import crypto from 'node:crypto';
 import { REPO_ROOT } from '../lib/archive.mjs';
 import { readFixtures } from '../lib/fixtures-io.mjs';
 import { scorerIdentity, rulesetIdentity } from '../lib/fingerprint.mjs';
+import { freezeFixtureRefs } from '../lib/freeze-ref.mjs';
 
 const arg = (n, d = null) => { const i = process.argv.indexOf(`--${n}`); return i > 0 ? process.argv[i + 1] : d; };
 const dir = path.resolve(REPO_ROOT, arg('dir', 'results/v1.3'));
@@ -37,17 +42,17 @@ const legacyOk = process.argv.includes('--legacy-unfingerprinted');
 const expectScorer = arg('expect-scorer', 'current');
 const problems = [];
 const bad = (m) => problems.push(m);
-// Reference fixture contents: the freeze file(s) given, else the registry readable now.
-const fxRef = new Map();
-for (const f of (arg('fixtures-ref') || '').split(',').filter(Boolean)) {
-  const j = JSON.parse(fs.readFileSync(path.resolve(REPO_ROOT, f), 'utf8'));
-  for (const x of j.fixtures?.length ? j.fixtures : []) fxRef.set(x.world, x.content_sha256);
-  if (j.fixtures?.content_sha256 && j.worlds_manifest_overlay?.id) fxRef.set(j.worlds_manifest_overlay.id, j.fixtures.content_sha256);
-}
+// Reference fixture contents: the freeze (official), or the registries on disk (--dev).
+const freezeArg = arg('freeze') ?? arg('fixtures-ref');
+const dev = process.argv.includes('--dev');
+if (!!freezeArg === dev) { console.error(`TABLE REFUSED — give --freeze <FREEZE.json[,addendum]> for an official table, or --dev for a non-official one${dev ? ' (not both)' : ''}`); process.exit(1); }
+let freeze = null;
+if (freezeArg) { try { freeze = freezeFixtureRefs(freezeArg); } catch (e) { console.error(`TABLE REFUSED — ${e.message}`); process.exit(1); } }
 const fixtureContent = (world) => {
-  if (fxRef.size) return fxRef.get(world) ?? null;
+  if (freeze) return freeze.fixtures.get(world) ?? null;
   try { return readFixtures(world).content_sha256; } catch { return null; }
 };
+const freezeShas = freeze ? freeze.files.map((f) => f.sha256).sort().join(',') : null;
 const sha256 = (buf) => crypto.createHash('sha256').update(buf).digest('hex');
 const outputsList = (base) => {
   const f = path.join(base, 'OUTPUTS.sha256');
@@ -81,7 +86,7 @@ function load(b, world) {
   if (summary.roundtrip_run !== `${d}2${dirn[0]}`) bad(`${tag}: identity — return run ${summary.roundtrip_run} ≠ ${d}2${dirn[0]}`);
   if (sha256(raw) !== summary.results_file?.sha256) bad(`${tag}: results.jsonl.gz sha256 ${sha256(raw)} ≠ summary ${summary.results_file?.sha256}`);
   const wantFx = fixtureContent(world);
-  if (!wantFx) bad(`${tag}: no reference fixture content for ${world} (fixture registry not readable; give --fixtures-ref)`);
+  if (!wantFx) bad(`${tag}: no reference fixture content for ${world} (${freeze ? 'the freeze files given do not record this world' : 'fixture registry not readable'})`);
   else if (summary.fixtures?.content_sha256 !== wantFx) bad(`${tag}: fixture registry content ${summary.fixtures?.content_sha256} ≠ reference ${wantFx}`);
   if (!outputsByRoot.has(root)) outputsByRoot.set(root, outputsList(root));
   const outs = outputsByRoot.get(root);
@@ -96,6 +101,13 @@ function load(b, world) {
     buildOf.set(k, v);
   }
   fingerprints.push({ tag, scorer: summary.scorer?.fingerprint ?? null, ruleset: summary.ruleset?.fingerprint ?? null });
+  // official table: a result written by the v1.3-closure evaluator must have been graded
+  // OFFICIALLY against the same freeze files (results written before carry no grading record)
+  if (freeze && summary.scorer) {
+    const g = summary.grading;
+    if (g?.mode !== 'official') bad(`${tag}: graded in ${g?.mode ?? 'unknown'} mode, not an official grading against the freeze`);
+    else if ((g.freeze || []).map((f) => f.sha256).sort().join(',') !== freezeShas) bad(`${tag}: graded against other freeze files (${(g.freeze || []).map((f) => f.file).join(', ')})`);
+  }
   const buf = zlib.gunzipSync(raw);
   const c = Object.fromEntries(LEVELS.map((L) => [L, { ...Object.fromEntries(ST.map((s) => [s, 0])), NOT_EVALUATED: 0, total: 0, byFamily: {} }]));
   const ids = new Set(); let dup = 0; let nePass = 0;
@@ -120,7 +132,7 @@ function load(b, world) {
 }
 
 const out = { worlds: {}, checks: [] };
-const md = ['# MCCB v1.3 — final comparison (counts per assertion)', '',
+const md = ['# MCCB v1.3 — final comparison (counts per assertion)', '', ...(dev ? ['**DEV TABLE — not an official MCCB table: graded against the fixture registries on disk, not locked on a freeze.**', ''] : []),
   'Cell: PASS / ADAPTED / PARTIAL / **FAIL** — then NOT_EVALUATED (never counted as PASS). NOT_APPLICABLE and UNSUPPORTED are in the raw results.',
   'No score, no ranking; worlds are never added together.', '',
   `Builds: ${BUILDS.map((b) => b.label).join(' · ')}.`, ''];
@@ -173,3 +185,4 @@ const text = md.join('\n') + '\n';
 if (arg('md')) fs.writeFileSync(path.resolve(REPO_ROOT, arg('md')), text);
 if (arg('json')) fs.writeFileSync(path.resolve(REPO_ROOT, arg('json')), JSON.stringify(out, null, 1) + '\n');
 process.stdout.write(text);
+if (dev) console.error("DEV TABLE — not an official MCCB table (no freeze lock).");

@@ -93,7 +93,8 @@ grade)
   done
   # table-v13.mjs itself, with only its world list (and the private-dir switch) changed
   sed -e "s/^const WORLDS = .*/const WORLDS = ['GURREN@1.0'];/" -e "s/world.startsWith('GURREN') ? pdir : dir/dir/" results/table-v13.mjs > results/table-gurren.mjs
-  node results/table-gurren.mjs --dir "$OUT" --builds "WS 0308840=worldswitch/ws-0308840_,WS 2.8.0 (fd9b735)=worldswitch/ws-fd9b735_,Chunker 1.20.0=chunker/chunker-1.20.0_,je2be core-8dfc4de=je2be/je2be-core-8dfc4de_" --md "$OUT/COMPARISON-v1.3-GURREN.md" --json "$OUT/COMPARISON-v1.3-GURREN.json"
+  # public reproduction: graded on the PUBLIC registry (2c107cc4…), not the graded one — a dev table
+  node results/table-gurren.mjs --dev --dir "$OUT" --builds "WS 0308840=worldswitch/ws-0308840_,WS 2.8.0 (fd9b735)=worldswitch/ws-fd9b735_,Chunker 1.20.0=chunker/chunker-1.20.0_,je2be core-8dfc4de=je2be/je2be-core-8dfc4de_" --md "$OUT/COMPARISON-v1.3-GURREN.md" --json "$OUT/COMPARISON-v1.3-GURREN.json"
   rm results/table-gurren.mjs
   echo "Results in $W/repo/$OUT — copy that folder, the run records and OUTPUTS hashes into the repository." ;;
 *) echo "phase: review | freeze | convert | grade"; exit 2 ;;

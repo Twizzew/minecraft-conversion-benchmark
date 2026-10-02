@@ -106,7 +106,7 @@ export async function prepare(ctx) {
 // (same numbering in both editions: hotbar 0–8, then 9–35; ender chest 0–26), armour and
 // offhand by slot name. A stack in another position is not the same state.
 const sameItem = (same, srcEd, e) => {
-  if (same) { const ez = gameRead(e.sem); return (g) => g.snbt === e.sem || gameRead(g.snbt) === ez; }
+  if (same) { const root = `${srcEd}-item`; const ez = gameRead(e.sem, { root }); return (g) => g.snbt === e.sem || gameRead(g.snbt, { root }) === ez; }
   const targets = equivalents('item', srcEd, e.id).targets || [];
   return (g) => targets.includes(g.id) && g.count === e.count;
 };

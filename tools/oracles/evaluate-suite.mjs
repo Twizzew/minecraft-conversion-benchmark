@@ -3,6 +3,13 @@
 //   node tools/oracles/evaluate-suite.mjs [--converter worldswitch] [--commit 0308840] [--prefix ws-0308840]
 //        [--suite tools/runners/worldswitch/suite-mccb-v1.1.json] [--only J04@1.0,...]
 //        [--results-dir results/v1.2] [--heap 12288]
+//        --freeze reports/freeze/FREEZE-v1.3.json[,addendum.json] | --dev
+//
+// v1.3 closure, pass 3: an OFFICIAL suite is locked on its freeze (--freeze, required): before
+// anything is graded, every world's fixture registry must have the content hash the freeze
+// recorded — one mismatch or one world missing from the freeze refuses the WHOLE suite. Each
+// evaluation gets --freeze too and records it. `--dev` grades against the registries on disk
+// and is recorded as such; the official table refuses those results. Neither → refused.
 //
 // v1.3 closure: every pair is evaluated into a STAGING folder; the results replace the final
 // ones only when EVERY pair succeeded (a child exiting non-zero fails the suite, exit 1, and
@@ -12,6 +19,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
+import { readFixtures } from '../lib/fixtures-io.mjs';
+import { freezeFixtureRefs } from '../lib/freeze-ref.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(HERE, '..', '..');
@@ -33,6 +42,22 @@ for (const w of suite.worlds) {
 }
 if (only && pairs.length !== only.length) { console.error(`--only names worlds that are not in the suite: ${only.filter((x) => !pairs.some((p) => p.world === x)).join(', ')}`); process.exit(1); }
 if (!pairs.length) { console.error('empty suite'); process.exit(1); }
+const freezeArg = arg('freeze');
+const dev = process.argv.includes('--dev');
+if (!!freezeArg === dev) { console.error(`SUITE REFUSED — give --freeze <FREEZE.json[,addendum]> for an official grading, or --dev for a non-official one${dev ? ' (not both)' : ''}`); process.exit(1); }
+if (freezeArg) {
+  let refs;
+  try { refs = freezeFixtureRefs(freezeArg); } catch (e) { console.error(`SUITE REFUSED — ${e.message}`); process.exit(1); }
+  const wrong = [];
+  for (const p of pairs) {
+    const want = refs.fixtures.get(p.world);
+    let got = null;
+    try { got = readFixtures(p.world).content_sha256; } catch (e) { got = `unreadable (${e.message.split('\n')[0]})`; }
+    if (!want) wrong.push(`${p.world}: no fixture registry recorded in ${freezeArg}`);
+    else if (got !== want) wrong.push(`${p.world}: fixture registry content ${got}, freeze records ${want}`);
+  }
+  if (wrong.length) { console.error(`SUITE REFUSED — fixture registries do not match the freeze (nothing graded):\n  ${wrong.join('\n  ')}`); process.exit(1); }
+}
 
 const stamp = new Date().toISOString().replace(/[:.]/g, '-');
 const staging = path.join(resultsDir, '.staging', `${converter}-${prefix}-${stamp}-${process.pid}`);
@@ -41,7 +66,7 @@ for (const p of pairs) {
   const t0 = Date.now();
   const out = path.join(staging, p.direct);
   const r = spawnSync(process.execPath, [`--max-old-space-size=${heap}`, path.join(HERE, 'evaluate.mjs'), '--world', p.world, '--direct', p.direct, '--roundtrip', p.roundtrip,
-    '--converter', converter, '--out', out], { encoding: 'utf8', maxBuffer: 1 << 28 });
+    '--converter', converter, '--out', out, ...(freezeArg ? ['--freeze', freezeArg] : [])], { encoding: 'utf8', maxBuffer: 1 << 28 });
   process.stdout.write(`== ${p.world} (${((Date.now() - t0) / 1000).toFixed(0)} s, exit ${r.status})\n${r.stdout}${r.stderr ? r.stderr.slice(-3000) : ''}\n`);
   // a child that did not exit 0, or exited 0 without a complete result, is a failure
   const ok = r.status === 0 && ['summary.json', 'results.jsonl.gz'].every((f) => fs.existsSync(path.join(out, f)));

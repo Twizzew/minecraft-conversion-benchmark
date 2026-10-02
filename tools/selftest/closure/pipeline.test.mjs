@@ -36,8 +36,8 @@ function setup() {
   for (const [w, [f, sha]] of Object.entries(SRC)) { const file = path.join(SRC_DIR, f); mkRun(`t-1_${w}_b2j`, sha, file, sha); mkRun(`t-1_${w}_b2j2b`, sha, file, sha); }
   fs.writeFileSync(suiteFile, JSON.stringify({ worlds: Object.keys(SRC).map((id) => ({ id, direction: 'bedrock_to_java' })) }));
 }
-const suite = () => spawnSync(process.execPath, [path.join(TOOLS, 'oracles', 'evaluate-suite.mjs'), '--converter', 't', '--prefix', 't-1', '--suite', suiteFile, '--results-dir', RES, '--heap', '2048'], { env, encoding: 'utf8' });
-const table = (...extra) => spawnSync(process.execPath, [path.join(TOOLS, 'results', 'table-v13.mjs'), '--dir', RES, '--builds', 'T=t/t-1_', '--worlds', 'B01@1.0,B02@1.0', ...extra], { env, encoding: 'utf8' });
+const suite = () => spawnSync(process.execPath, [path.join(TOOLS, 'oracles', 'evaluate-suite.mjs'), '--converter', 't', '--prefix', 't-1', '--suite', suiteFile, '--results-dir', RES, '--heap', '2048', '--dev'], { env, encoding: 'utf8' }); // generic mechanics; the freeze lock is tested in pass3
+const table = (...extra) => spawnSync(process.execPath, [path.join(TOOLS, 'results', 'table-v13.mjs'), '--dir', RES, '--builds', 'T=t/t-1_', '--worlds', 'B01@1.0,B02@1.0', '--dev', ...extra], { env, encoding: 'utf8' });
 const dirOf = (w) => path.join(RES, 't', `t-1_${w}_b2j`);
 const summaryOf = (w) => JSON.parse(fs.readFileSync(path.join(dirOf(w), 'summary.json'), 'utf8'));
 const writeSummary = (w, s) => fs.writeFileSync(path.join(dirOf(w), 'summary.json'), JSON.stringify(s, null, 1) + '\n');

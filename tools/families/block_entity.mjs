@@ -181,8 +181,9 @@ function roundtripAspect(aspect, exp, obs, edition) {
       const strict = [...new Set([...Object.keys(exp.data), ...Object.keys(got)])].filter((k) => exp.data[k] !== got[k]).sort();
       if (!strict.length) return r(PASS, 'block_entity.data.roundtrip');
       // Rule 54: stored values as the game reads them, from the typed data (lib/nbt.mjs gameRead);
-      // only field-specific demonstrated defaults (Bedrock `BlockEntityVersion:0`) read like absent.
-      const root = edition === 'bedrock' ? 'bedrock-block-entity' : null;
+      // only field-specific demonstrated defaults (Bedrock `BlockEntityVersion:0`; item defaults only
+      // inside the item keys of lib/nbt.mjs ITEM_PATHS) read like absent.
+      const root = `${edition}-block-entity`;
       const es = gameReadMap(exp.data, { root }), gs = gameReadMap(got, { root });
       const keys = [...new Set([...Object.keys(es), ...Object.keys(gs)])].filter((k) => es[k] !== gs[k]).sort();
       if (!keys.length) return r(PASS, 'block_entity.data.roundtrip.semantic-equal', { strict_differing_keys: strict.slice(0, 20) });

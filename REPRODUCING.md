@@ -84,7 +84,7 @@ give the same content hashes as `manifests/fixtures.json` and `reports/freeze/FR
 
 ```bash
 node oracles/evaluate.mjs --world J04@1.0 --direct <direct run id> --roundtrip <return run id> --converter <name>
-node oracles/evaluate-suite.mjs --converter worldswitch --commit 0308840   # all seven pairs
+node oracles/evaluate-suite.mjs --converter worldswitch --commit 0308840 --dev   # all seven pairs (not locked on a freeze)
 node manifests/build-manifests.mjs                                       # manifests/*.json, checksums/
 node results/aggregate.mjs                                               # results/<converter>/SUMMARY.md
 node results/show.mjs results/worldswitch/<run id> --status FAIL          # inspect evidence
@@ -128,15 +128,23 @@ Same source worlds and steps as above; tools version 1.3.0 (`tools/package.json`
 ```bash
 node fixtures/build-fixtures.mjs                                   # v1.3 registries (content hashes: reports/freeze/FREEZE-v1.3.json)
 node manifests/build-freeze.mjs --version 1.3 --check              # every frozen hash
-node oracles/evaluate-suite.mjs --prefix ws-0308840      --results-dir results/v1.3
-node oracles/evaluate-suite.mjs --prefix ws-fd9b735      --results-dir results/v1.3
-node oracles/evaluate-suite.mjs --converter chunker --prefix chunker-1.20.0 --results-dir results/v1.3
-node oracles/evaluate-suite.mjs --converter je2be --prefix je2be-core-8dfc4de --results-dir results/v1.3
-node results/table-v13.mjs --dir results/v1.3 \
+node oracles/evaluate-suite.mjs --prefix ws-0308840      --results-dir results/v1.3 --freeze reports/freeze/FREEZE-v1.3.json
+node oracles/evaluate-suite.mjs --prefix ws-fd9b735      --results-dir results/v1.3 --freeze reports/freeze/FREEZE-v1.3.json
+node oracles/evaluate-suite.mjs --converter chunker --prefix chunker-1.20.0 --results-dir results/v1.3 --freeze reports/freeze/FREEZE-v1.3.json
+node oracles/evaluate-suite.mjs --converter je2be --prefix je2be-core-8dfc4de --results-dir results/v1.3 --freeze reports/freeze/FREEZE-v1.3.json
+node results/table-v13.mjs --dir results/v1.3 --freeze reports/freeze/FREEZE-v1.3.json --legacy-unfingerprinted \
   --builds "WS 0308840=worldswitch/ws-0308840_,WS 2.8.0 (fd9b735)=worldswitch/ws-fd9b735_,Chunker 1.20.0=chunker/chunker-1.20.0_,je2be core-8dfc4de=je2be/je2be-core-8dfc4de_" \
   --md results/v1.3/COMPARISON-v1.3.md --json results/v1.3/COMPARISON-v1.3.json
 node selftest/run-selftests.mjs B C                                # reports/oracle-selftests/SELFTESTS-v1.3.*
 ```
+
+Since the v1.3 closure (`docs/rules-changelog.md`, rules 53–56): an official grading is locked on
+the freeze — `evaluate-suite` and `table-v13` refuse to run without `--freeze` (or the explicit,
+non-official `--dev`), and refuse any world whose fixture registry is not the one the freeze
+recorded. `--legacy-unfingerprinted` is needed only to rebuild the table from the results
+published before the closure, which carry no scorer fingerprint. The closure tools grade
+differently from the frozen v1.3 tools: write a new grading to a NEW results directory, never
+over `results/v1.3`.
 
 Converters of the final comparison:
 

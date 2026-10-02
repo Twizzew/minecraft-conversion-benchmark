@@ -4,6 +4,10 @@
 //   node tools/oracles/evaluate.mjs --world J04@1.0 --direct <runId> [--roundtrip <runId>]
 //        [--converter worldswitch] [--out results/<converter>/<runId>]
 //        [--fixtures <registry .jsonl.gz>] [--expect-fixtures-content <sha256>]
+//        [--freeze reports/freeze/FREEZE-v1.3.json[,addendum.json]]
+// With --freeze the grading is OFFICIAL: the registry's content hash must be the one the freeze
+// recorded for this world (no entry, or another hash → refused, exit 2) and the summary records
+// the freeze files. Without it the grading is recorded as `dev` (not usable in an official table).
 // Provenance is checked first: the direct run must have consumed the canonical source
 // (same SHA-256), and the return run must have consumed the direct run's output.
 import fs from 'node:fs';
@@ -16,6 +20,7 @@ import { readFixtures, isPrivateWorld, PRIVATE_DIR, joinLines } from '../lib/fix
 import { TargetView } from './target.mjs';
 import { notEvaluated, REASON, STATUSES } from '../lib/status.mjs';
 import { scorerIdentity, rulesetIdentity } from '../lib/fingerprint.mjs';
+import { freezeFixtureRefs } from '../lib/freeze-ref.mjs';
 
 const arg = (n, d = null) => { const i = process.argv.indexOf(`--${n}`); return i > 0 ? process.argv[i + 1] : d; };
 const worldId = arg('world');
@@ -33,6 +38,15 @@ const fx = readFixtures(worldId, { file: arg('fixtures') });
 const { header, subjects } = fx;
 const expectFx = arg('expect-fixtures-content');
 if (expectFx && fx.content_sha256 !== expectFx) { console.error(`FIXTURE CHECK FAILED: ${fx.file} content ${fx.content_sha256}, expected ${expectFx}`); process.exit(2); }
+let grading = { mode: 'dev' };
+if (arg('freeze')) {
+  let refs;
+  try { refs = freezeFixtureRefs(arg('freeze')); } catch (e) { console.error(`FREEZE CHECK FAILED: ${e.message}`); process.exit(2); }
+  const want = refs.fixtures.get(worldId);
+  if (!want) { console.error(`FREEZE CHECK FAILED: the freeze files given record no fixture registry for ${worldId}`); process.exit(2); }
+  if (fx.content_sha256 !== want) { console.error(`FIXTURE CHECK FAILED: ${worldId} ${fx.file} content ${fx.content_sha256}, freeze records ${want}`); process.exit(2); }
+  grading = { mode: 'official', freeze: refs.files, fixtures_content_expected: want };
+}
 
 // ── provenance checks (a mismatch is fatal: never evaluate the wrong input) ──
 const dRun = runRecord(directId);
@@ -110,6 +124,7 @@ const doc = {
   summary: Object.values(summary),
   evaluated_with: { tools_version: header.tools_version, node: process.version },
   // v1.3 closure: which scorer and which rules produced these rows (lib/fingerprint.mjs).
+  grading,
   scorer: scorerIdentity(),
   ruleset: rulesetIdentity(),
 };

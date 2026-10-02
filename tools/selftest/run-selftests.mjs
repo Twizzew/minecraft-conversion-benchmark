@@ -29,10 +29,12 @@ const AdmZip = require('adm-zip');
 const V = 'v' + JSON.parse(fs.readFileSync(path.join(REPO_ROOT, 'tools', 'package.json'), 'utf8')).version.split('.').slice(0, 2).join('.');
 const report = { schema: 'mccb.selftests/1', tests: [] };
 const log = (t) => { report.tests.push(t); console.log(`${t.skipped ? 'SKIP' : t.ok ? 'PASS' : 'FAIL'}  ${t.name}: ${t.summary}`); };
-// A missing input (source asset, Java reference / runtime) skips the test instead of aborting the run.
+// An input missing BEFORE the test ran (source asset, Minecraft installation, Java executable:
+// errors tagged MCCB_INPUT_MISSING by lib/open.mjs) skips the test. Anything that fails once
+// it ran — a normaliser that started and failed, an unexpected ENOENT — is a FAIL.
 async function guarded(name, fn) {
   try { await fn(); } catch (e) {
-    const env = /source asset missing|ENOENT|MccbNormalize failed|classpath/.test(String(e.message));
+    const env = e?.code === 'MCCB_INPUT_MISSING';
     log({ name, ok: false, skipped: env, summary: env ? `skipped — input not available here: ${String(e.message).split('\n')[0].slice(0, 200)}` : `error: ${String(e.stack || e).slice(0, 500)}` });
   }
 }

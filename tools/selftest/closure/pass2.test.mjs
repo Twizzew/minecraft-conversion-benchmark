@@ -60,7 +60,7 @@ test('double chest D: no unique lead (both / none / two claimants) → never PAS
   assert.match(at(rows, P, 0, 'identity', 'roundtrip'), /^NE:/);
   const noLeadMoved = bedrockWorld({ blockEntities: [chest(P, [bItem('minecraft:diamond', 1, 4)], pairTo(Q, 0)), chest(Q, [bItem('minecraft:emerald', 1, 0)])] });
   assert.equal(at(await rt(noLeadMoved), P, 0, 'identity', 'roundtrip'), 'FAIL');
-  // Java: halves with different `facing` do not form a pair; each chest is read on its own
+  // Java: halves with different `facing` do not form a valid pair (order undetermined, never PASS)
   const jb = (pos, items) => T.c({ id: T.str('minecraft:chest'), x: T.i(pos[0]), y: T.i(pos[1]), z: T.i(pos[2]), Items: T.lc(items) });
   const jw = javaWorld({ blockEntities: [jb(P, [jItem('minecraft:emerald', 1, 0)]), jb(Q, [jItem('minecraft:diamond', 1, 0)])],
     blocks: { [P.join()]: { name: 'minecraft:chest', props: { type: 'left', facing: 'south' } }, [Q.join()]: { name: 'minecraft:chest', props: { type: 'right', facing: 'north' } } } });

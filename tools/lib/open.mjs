@@ -34,7 +34,8 @@ export function javaExecutable() {
 }
 export function minecraftClasspath(version = JAVA_REFERENCE_VERSION) {
   const r = spawnSync(process.execPath, [path.join(REPO_ROOT, 'tools', 'java', 'classpath.mjs'), version], { encoding: 'utf8' });
-  if (r.status !== 0) throw new Error(`classpath: ${r.stderr}`);
+  // the Minecraft installation is not there: an input missing BEFORE anything ran
+  if (r.status !== 0) throw Object.assign(new Error(`classpath: ${r.stderr}`), { code: 'MCCB_INPUT_MISSING' });
   return r.stdout;
 }
 
@@ -51,6 +52,8 @@ export function normalizeJava(worldRoot, cacheKey) {
     fs.mkdirSync(cwd, { recursive: true });
     const r = spawnSync(javaExecutable(), ['-cp', minecraftClasspath(), NORMALIZER_FILE, worldRoot, tmp],
       { encoding: 'utf8', maxBuffer: 1 << 28, cwd });
+    // the Java executable itself is missing: an input missing before the normaliser ran
+    if (r.error?.code === 'ENOENT') throw Object.assign(new Error(`java executable not found: ${javaExecutable()}`), { code: 'MCCB_INPUT_MISSING' });
     // exit 3 = Mojang's own world upgrade refused the world: a RESULT, cached like a success
     if (r.status !== 0 && r.status !== 3) {
       const err = new Error(`MccbNormalize failed (${r.status}) for ${worldRoot}`);
@@ -86,7 +89,7 @@ export async function openArchive(file, { expectSha256 } = {}) {
 export async function openSource(worldId) {
   const w = worldEntry(worldId);
   const file = path.join(w.asset.local_dir ? path.join(REPO_ROOT, w.asset.local_dir) : sourcesDir(), w.asset.name);
-  if (!fs.existsSync(file)) throw new Error(`source asset missing: ${file}`);
+  if (!fs.existsSync(file)) throw Object.assign(new Error(`source asset missing: ${file}`), { code: 'MCCB_INPUT_MISSING' });
   const o = await openArchive(file, { expectSha256: w.asset.sha256 });
   return { ...o, entry: w, file };
 }

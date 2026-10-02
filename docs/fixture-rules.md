@@ -177,9 +177,12 @@ container at slot `slot + 27 × half`. Otherwise a chest is read on its own, as 
 order in which the two block entities are stored or read is not state: the same 54 slots
 shown are equal whatever block holds which half. A Bedrock pair with no unique lead (no
 chest with `pairlead` = 1, or both, or two chests claiming the same partner) shows its
-halves in an order MCCB cannot tell: a stack found in its local slot of either half is
+halves in an order MCCB cannot tell; so does a chest that CARRIES pair markers whose pair is
+not valid (Java `type` left / right with the partner missing, of another block, of the same
+type or facing another way; Bedrock `pairx` / `pairz` pointing to a missing, non-adjacent or
+non-chest block) — such a chest is never read as a single chest: a stack found in its local slot of either half is
 NOT_EVALUATED (`double-chest-half-order-undetermined`), never PASS; elsewhere it is FAIL.
-Java halves must face the same way to form a pair. A stack found in the same local slot of
+Only a chest with no pair marker (and not claimed by a neighbour) is a single chest. A stack found in the same local slot of
 the other half is a FAIL with the evidence `double-chest-halves-shown-in-other-order`. A
 block-entity kind with no counterpart in the target edition (item frames, flower pots…)
 has its `custom_name` NOT_EVALUATED in direct (the name moves to another family). When
@@ -304,15 +307,24 @@ fit the format is one subject, NOT_EVALUATED at both levels.
 ## 4. Semantic equality (second chance, round trip)
 
 Applied only after strict typed equality failed, and reported with the rule suffix
-`.semantic-equal`: a text compound that is only `{text:"x"}` ≡ `"x"`; numeric width ignored
-(`1b` ≡ `1`); key order ignored. Rule 54 (v1.3 closure): it is computed from the TYPED stored
-value (`lib/nbt.mjs` `gameRead`) and is DEFAULT-DENY — an empty compound, an empty list, 0,
+`.semantic-equal`: a text compound that is only `{text:"x"}` ≡ `"x"`; the width of a numeric
+SCALAR ignored for equal values (`1b` ≡ `1s` ≡ `1` ≡ `1L`, `1.0f` ≡ `1.0d`) — but a byte, int or
+long ARRAY is never equal to a list (structural types kept); key order ignored. Rule 54 (v1.3
+closure): it is computed from the TYPED stored value (`lib/nbt.mjs` `gameRead`) and is DEFAULT-DENY — an empty compound, an empty list, 0,
 `""` and `false` are values, never equal to an absent key, except the field-specific defaults
 of `KNOWN_DEFAULTS` (exhaustive list): Bedrock item `tag.Damage` 0 and `tag.RepairCost` 0
 and a `tag` left empty (rule 39); Java item components `minecraft:damage` 0 and
 `minecraft:repair_cost` 0 and an empty `components` (rules 2, 24, 48); Bedrock block entity
 `BlockEntityVersion` 0. An item's `Block.version` is ignored; two encodings of an EMPTY
-Bedrock stack (`Name` "" or `Count` 0) are one value. (Exception: `world` saved data are still
+Bedrock stack (`Name` "" or `Count` 0) in a list of items are one value. The item rules apply
+only where the extraction path says the value IS an item, never because a compound looks like
+one (`minecraft:custom_data`, a marker's `data` may hold anything): the held / player / stored
+items themselves, and in entity or block-entity data the keys of `ITEM_PATHS` — Java entity
+`equipment.*`, `Inventory[]`, `Items[]`, `Item` (and riders in `Passengers[]`); Bedrock actor
+`Armor[]`, `Mainhand[]`, `Offhand[]`, `ChestItems[]`, `Inventory[]`, `Item`; Java block entity
+`Items[]`, `Book`, `RecordItem`, `item`; Bedrock block entity `Items[]`, `book`, `RecordItem`,
+`item`, `Item1`…`Item4`. An item anywhere else (trade offers, an item inside another item) gets
+no item rule: it is compared as stored. (Exception: `world` saved data are still
 compared with the v1.1 semantic form, empties dropped — their fixtures keep only that form.)
 
 ## 5. What is never done

@@ -73,17 +73,18 @@ test('a Bedrock list of EMPTY item stacks is NOT an absent list; two encodings o
 });
 
 const s = (o) => snbt(o);
+const BI = { root: 'bedrock-item' }, JI = { root: 'java-item' }; // the caller states that these ARE items
 test('kept, narrow item exceptions: Bedrock tag Damage:0 / RepairCost:0 (and the tag left empty), Block.version', () => {
   const a = s(T.c({ Count: T.b(1), Name: T.str('minecraft:diamond_sword'), tag: T.c({ Damage: T.i(0), RepairCost: T.i(0) }) }));
   const b = s(T.c({ Count: T.b(1), Name: T.str('minecraft:diamond_sword') }));
-  assert.equal(gameRead(a), gameRead(b));
+  assert.equal(gameRead(a, BI), gameRead(b, BI));
   const c = s(T.c({ Count: T.b(1), Name: T.str('minecraft:stone'), Block: T.c({ name: T.str('minecraft:stone'), states: T.c({}), version: T.i(18168865) }) }));
   const d = s(T.c({ Count: T.b(1), Name: T.str('minecraft:stone'), Block: T.c({ name: T.str('minecraft:stone'), states: T.c({}), version: T.i(17959425) }) }));
-  assert.equal(gameRead(c), gameRead(d));
+  assert.equal(gameRead(c, BI), gameRead(d, BI));
   // an unknown zero field, an unknown empty list in the tag: NOT dropped
-  assert.notEqual(gameRead(s(T.c({ Count: T.b(1), Name: T.str('minecraft:diamond'), MccbUnknown: T.b(0) }))), gameRead(s(T.c({ Count: T.b(1), Name: T.str('minecraft:diamond') }))));
-  assert.notEqual(gameRead(s(T.c({ Count: T.b(1), Name: T.str('minecraft:firework_rocket'), tag: T.c({ Fireworks: T.c({ Explosions: T.lc([]), Flight: T.b(1) }) }) }))),
-    gameRead(s(T.c({ Count: T.b(1), Name: T.str('minecraft:firework_rocket'), tag: T.c({ Fireworks: T.c({ Flight: T.b(1) }) }) }))));
+  assert.notEqual(gameRead(s(T.c({ Count: T.b(1), Name: T.str('minecraft:diamond'), MccbUnknown: T.b(0) })), BI), gameRead(s(T.c({ Count: T.b(1), Name: T.str('minecraft:diamond') })), BI));
+  assert.notEqual(gameRead(s(T.c({ Count: T.b(1), Name: T.str('minecraft:firework_rocket'), tag: T.c({ Fireworks: T.c({ Explosions: T.lc([]), Flight: T.b(1) }) }) })), BI),
+    gameRead(s(T.c({ Count: T.b(1), Name: T.str('minecraft:firework_rocket'), tag: T.c({ Fireworks: T.c({ Flight: T.b(1) }) }) })), BI));
   // Damage 0 outside an item tag is not covered
   assert.notEqual(gameRead(s(T.c({ Damage: T.i(0), x: T.i(1) }))), gameRead(s(T.c({ x: T.i(1) }))));
 });
@@ -91,8 +92,8 @@ test('kept, narrow item exceptions: Bedrock tag Damage:0 / RepairCost:0 (and the
 test('kept, narrow item exceptions: Java components damage / repair_cost 0 (rule 48) and an empty patch', () => {
   const a = s(T.c({ count: T.i(1), id: T.str('minecraft:iron_sword'), components: T.c({ 'minecraft:damage': T.i(0), 'minecraft:repair_cost': T.i(0) }) }));
   const b = s(T.c({ count: T.i(1), id: T.str('minecraft:iron_sword') }));
-  assert.equal(gameRead(a), gameRead(b));
-  assert.notEqual(gameRead(s(T.c({ count: T.i(1), id: T.str('minecraft:iron_sword'), components: T.c({ 'minecraft:custom_data': T.c({}) }) }))), gameRead(b));
+  assert.equal(gameRead(a, JI), gameRead(b, JI));
+  assert.notEqual(gameRead(s(T.c({ count: T.i(1), id: T.str('minecraft:iron_sword'), components: T.c({ 'minecraft:custom_data': T.c({}) }) })), JI), gameRead(b, JI));
 });
 
 test('the exception table is exactly the documented one', () => {
