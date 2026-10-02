@@ -146,7 +146,6 @@ function childCtx(parentCtx, key) {
   const ed = editionOf(parentCtx);
   return kind === 'entity-list' ? `list:${ed}-entity` : kind === 'item-list' ? `list:${ed}-item` : kind === 'item-map' ? `map:${ed}-item` : `${ed}-item`;
 }
-const isEmptyObj = (x) => x && typeof x === 'object' && !Array.isArray(x) && !Object.keys(x).length;
 /** Field-specific defaults: in a compound of context `ctx`, key `key` holding `value` reads like no key. */
 export const KNOWN_DEFAULTS = [
   { ctx: 'bedrock-item-tag', key: 'Damage', value: 0, why: 'rule 39: the Bedrock game writes tag.Damage:0 on some stacks and not on others (native stacks)' },
@@ -157,15 +156,25 @@ export const KNOWN_DEFAULTS = [
   { ctx: 'java-item', key: 'components', value: {}, why: 'rule 2 / rule 24: an empty component patch is not saved by the 26.3 item codec' },
   { ctx: 'bedrock-block-entity', key: 'BlockEntityVersion', value: 0, why: 'rule 54: optional with default 0 in the best public Bedrock schema; native data hold both forms (B01–B03 write 0 on every block entity, GURREN never writes it)' },
 ];
-const sameVal = (a, b) => JSON.stringify(a) === JSON.stringify(b);
-// Canonical values: a numeric SCALAR is its value (width ignored: 1b ≈ 1s ≈ 1 ≈ 1L, 1.0f ≈
-// 1.0d); a long beyond 2^53 keeps its exact digits in a marked string; the STRUCTURAL types
-// stay apart: a byte / int / long array is {"\u0000B"|"\u0000I"|"\u0000L": [...]}, a list a plain array.
-const BIG = '\u0000long:';
-const ARR = { B: '\u0000B', I: '\u0000I', L: '\u0000L' };
-const longValue = (digits) => { const n = Number(digits); return Number.isSafeInteger(n) ? n : BIG + BigInt(digits).toString(); };
-/** Parse MCCB's canonical typed text (snbt() above) into canonical values. */
-export function parseSnbt(text) {
+// Canonical form (v1.3 closure, pass 4): every value is a TAGGED pair — ['c', {k: v}] compound,
+// ['l', [...]] list, ['B'|'I'|'L', [...]] byte / int / long array, ['n', exact decimal] number,
+// ['s', text] string, plus ['null'], ['empty-stack'] (an empty Bedrock stack in a list of items)
+// and ['raw', text] (unparsable). No user value can take another value's form: a compound
+// whose key is "B", a string "9007199254740993" or "<empty>" all stay what they are.
+// Numbers: the width of a SCALAR is ignored and the comparison is EXACT — integers (and
+// integral floats / doubles) are compared by their exact integer value (a long keeps all its
+// digits: 2^53 + 1 L is not the double 2^53), other floats / doubles by their exact shortest
+// decimal form.
+const enc = (x) => (x === 0 ? ['n', '0'] : x && typeof x === 'object' && !Array.isArray(x) && !Object.keys(x).length ? ['c', {}] : x);
+const sameVal = (a, b) => JSON.stringify(enc(a)) === JSON.stringify(b);
+const exactNumber = (text, suffix) => {
+  if (/^(NaN|-?Infinity)$/.test(text)) return text;
+  if (suffix === 'L' || /^-?\d+$/.test(text)) return BigInt(text).toString();
+  const n = Number(text);
+  return Number.isInteger(n) ? BigInt(n).toString() : String(n);
+};
+/** Parse MCCB's canonical typed text (snbt() above) into tagged nodes {k, v}. */
+function parseNodes(text) {
   let i = 0;
   const ws = () => { while (/\s/.test(text[i])) i++; };
   const value = () => {
@@ -173,52 +182,57 @@ export function parseSnbt(text) {
     const c = text[i];
     if (c === '{') {
       i++; const o = {}; ws();
-      if (text[i] === '}') { i++; return o; }
-      for (;;) { ws(); const k = str(); ws(); if (text[i++] !== ':') throw new Error(`snbt: ':' expected at ${i}`); o[k] = value(); ws(); const d = text[i++]; if (d === '}') return o; if (d !== ',') throw new Error(`snbt: ',' expected at ${i}`); }
+      if (text[i] === '}') { i++; return { k: 'c', v: o }; }
+      for (;;) { ws(); const key = str(); ws(); if (text[i++] !== ':') throw new Error(`snbt: ':' expected at ${i}`); o[key] = value(); ws(); const d = text[i++]; if (d === '}') return { k: 'c', v: o }; if (d !== ',') throw new Error(`snbt: ',' expected at ${i}`); }
     }
     if (c === '[') {
       i++;
-      let typed = null;
-      if (/[BIL]/.test(text[i]) && text[i + 1] === ';') { typed = ARR[text[i]]; i += 2; }
+      let kind = 'l';
+      if (/[BIL]/.test(text[i]) && text[i + 1] === ';') { kind = text[i]; i += 2; }
       const a = []; ws();
-      if (text[i] === ']') { i++; return typed ? { [typed]: a } : a; }
-      for (;;) { a.push(value()); ws(); const d = text[i++]; if (d === ']') return typed ? { [typed]: a } : a; if (d !== ',') throw new Error(`snbt: ',' expected at ${i}`); }
+      if (text[i] === ']') { i++; return { k: kind, v: a }; }
+      for (;;) { a.push(value()); ws(); const d = text[i++]; if (d === ']') return { k: kind, v: a }; if (d !== ',') throw new Error(`snbt: ',' expected at ${i}`); }
     }
-    if (c === '"') return str();
-    if (text.startsWith('null', i)) { i += 4; return null; }
-    const m = /^(-?(?:\d+(?:\.\d*)?(?:[eE][+-]?\d+)?|Infinity|NaN))([bslLfd]?)/.exec(text.slice(i, i + 64));
+    if (c === '"') return { k: 's', v: str() };
+    if (text.startsWith('null', i)) { i += 4; return { k: 'null' }; }
+    const m = /^(-?(?:\d+(?:\.\d*)?(?:[eE][+-]?\d+)?|Infinity|NaN))([bslLfd]?)/.exec(text.slice(i, i + 400));
     if (!m) throw new Error(`snbt: value expected at ${i}`);
     i += m[0].length;
-    return m[2] === 'L' ? longValue(m[1]) : Number(m[1]);
+    return { k: 'n', v: exactNumber(m[1], m[2]) };
   };
   const str = () => { const m = /^"(?:[^"\\]|\\.)*"/.exec(text.slice(i)); if (!m) throw new Error(`snbt: string expected at ${i}`); i += m[0].length; return JSON.parse(m[0]); };
   const v = value(); ws();
   if (i !== text.length) throw new Error(`snbt: trailing data at ${i}`);
   return v;
 }
-const isTypedArray = (x) => x && typeof x === 'object' && !Array.isArray(x) && Object.keys(x).length === 1 && Object.values(ARR).includes(Object.keys(x)[0]);
-const isBedrockStack = (o) => o && typeof o === 'object' && !Array.isArray(o) && typeof o.Name === 'string' && 'Count' in o;
-// one value read under context `ctx` (null = arbitrary data: no item rule applies)
-function readValue(x, ctx) {
-  if (Array.isArray(x)) {
+/** The numeric value of a stored scalar (NaN when it is not a number). */
+export function numberOf(text) {
+  try { const n = parseNodes(text); return n.k === 'n' ? Number(n.v) : NaN; } catch { return NaN; }
+}
+const isEmptyBedrockStack = (n) => n?.k === 'c' && n.v.Name?.k === 's' && n.v.Count?.k === 'n' && (n.v.Name.v === '' || !(Number(n.v.Count.v) > 0));
+// one node read under context `ctx` (null = arbitrary data: no item rule applies)
+function readValue(n, ctx) {
+  if (n.k === 'l') {
     const el = ctx && ctx.startsWith('list:') ? ctx.slice(5) : null;
     // an EMPTY Bedrock stack is one value whatever its other keys — only in a list of items
-    return x.map((e) => (el === 'bedrock-item' && isBedrockStack(e) && (e.Name === '' || !(Number(e.Count) > 0)) ? '<empty-bedrock-stack>' : readValue(e, el)));
+    return ['l', n.v.map((e) => (el === 'bedrock-item' && isEmptyBedrockStack(e) ? ['empty-stack'] : readValue(e, el)))];
   }
-  if (x && typeof x === 'object' && !isTypedArray(x)) {
-    const keys = Object.keys(x);
-    if (keys.length === 1 && keys[0] === 'text' && typeof x.text === 'string') return x.text; // rule 2
+  if (n.k === 'B' || n.k === 'I' || n.k === 'L') return [n.k, n.v.map((e) => readValue(e, null))];
+  if (n.k === 'c') {
+    const keys = Object.keys(n.v);
+    if (keys.length === 1 && keys[0] === 'text' && n.v.text.k === 's') return ['s', n.v.text.v]; // rule 2
     const here = ctx && ctx.startsWith('map:') ? null : ctx;
     const o = {};
     for (const k of keys.sort()) {
-      if ((here === 'bedrock-item' || here === 'java-item') && k === 'Block') { const b = readValue(x[k], null); if (b && typeof b === 'object') delete b.version; o[k] = b; continue; }
-      const y = readValue(x[k], ctx && ctx.startsWith('map:') ? ctx.slice(4) : childCtx(here, k));
+      if ((here === 'bedrock-item' || here === 'java-item') && k === 'Block') { const b = readValue(n.v[k], null); if (b[0] === 'c') delete b[1].version; o[k] = b; continue; }
+      const y = readValue(n.v[k], ctx && ctx.startsWith('map:') ? ctx.slice(4) : childCtx(here, k));
       if (here && KNOWN_DEFAULTS.some((d) => d.ctx === here && d.key === k && sameVal(d.value, y))) continue;
       o[k] = y;
     }
-    return o;
+    return ['c', o];
   }
-  return x;
+  if (n.k === 'null') return ['null'];
+  return [n.k, n.v];
 }
 /**
  * The stored value `s` (snbt) as the game reads it. `root` = the context the CALLER knows the
@@ -227,10 +241,10 @@ function readValue(x, ctx) {
 export function gameRead(s, { root = null } = {}) {
   if (s == null) return null;
   let v;
-  try { v = parseSnbt(s); } catch { return `?${s}`; }
+  try { v = parseNodes(s); } catch { return JSON.stringify(['raw', s]); }
   const out = readValue(v, root);
   // A root that IS a defaultable container (a Bedrock item tag) reads like none when empty.
-  if (root === 'bedrock-item-tag' && isEmptyObj(out)) return null;
+  if (root === 'bedrock-item-tag' && out[0] === 'c' && !Object.keys(out[1]).length) return null;
   return JSON.stringify(out);
 }
 /** gameRead over the {key: snbt} map of a block entity / entity whose context `root` is known. */
@@ -238,9 +252,9 @@ export function gameReadMap(m, { root = null } = {}) {
   const o = {};
   for (const [k, v] of Object.entries(m || {})) {
     let y;
-    try { y = JSON.stringify(readValue(parseSnbt(v), childCtx(root, k))); } catch { y = `?${v}`; }
-    if (root && KNOWN_DEFAULTS.some((d) => d.ctx === root && d.key === k && JSON.stringify(d.value) === y)) continue;
-    o[k] = y;
+    try { y = readValue(parseNodes(v), childCtx(root, k)); } catch { y = ['raw', v]; }
+    if (root && KNOWN_DEFAULTS.some((d) => d.ctx === root && d.key === k && sameVal(d.value, y))) continue;
+    o[k] = JSON.stringify(y);
   }
   return o;
 }

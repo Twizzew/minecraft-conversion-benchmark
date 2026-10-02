@@ -48,25 +48,38 @@ export async function chestPair(edition, world, dim, pos) {
   const be = world.blockEntityAt(dn, x, y, z);
   const v = be?.value;
   if (!v || v.id?.value !== 'Chest') return null;
-  const px = plainNum(v.pairx), pz = plainNum(v.pairz);
+  // v1.3 closure, pass 4: three states — SINGLE (no pair marker anywhere: null), VALID pair,
+  // UNDETERMINED pair (any marker that does not make one consistent pair with a unique lead).
+  const has = (c, k) => !!c && c[k] !== undefined;
+  const markers = (c) => has(c, 'pairx') || has(c, 'pairz') || has(c, 'pairlead');
+  const coords = (c) => (plainNum(c?.pairx) !== null && plainNum(c?.pairz) !== null ? [plainNum(c.pairx), plainNum(c.pairz)] : null);
   const lead = (c) => plainNum(c.pairlead) === 1;
-  if (px !== null && pz !== null) {
-    if (Math.abs(px - x) + Math.abs(pz - z) !== 1) return { half: null, ambiguous: true, partner: null };
+  const undetermined = (partner) => ({ half: null, ambiguous: true, partner });
+  const own = coords(v);
+  if (own) {
+    const [px, pz] = own;
+    if (Math.abs(px - x) + Math.abs(pz - z) !== 1) return undetermined(null);
     const p = world.blockEntityAt(dn, px, y, pz)?.value;
-    if (p?.id?.value !== 'Chest') return { half: null, ambiguous: true, partner: [px, y, pz] };
-    const pPair = plainNum(p.pairx) !== null || plainNum(p.pairz) !== null;
-    if (pPair && (plainNum(p.pairx) !== x || plainNum(p.pairz) !== z)) return { half: null, ambiguous: true, partner: [px, y, pz] };
-    const leads = Number(lead(v)) + Number(pPair && lead(p));
-    if (leads !== 1) return { half: null, ambiguous: true, partner: [px, y, pz] };
+    if (p?.id?.value !== 'Chest') return undetermined([px, y, pz]);
+    if (markers(p)) {
+      // a partner that carries markers must point back with both coordinates (old format)
+      const back = coords(p);
+      if (!back || back[0] !== x || back[1] !== z) return undetermined([px, y, pz]);
+    }
+    const leads = Number(lead(v)) + Number(markers(p) && lead(p));
+    if (leads !== 1) return undetermined([px, y, pz]);
     return { half: lead(v) ? 0 : 1, partner: [px, y, pz] };
   }
+  // markers without a complete pair position (pairx only, pairz only, pairlead only…)
   const claim = [];
   for (const [dx, dz] of [[1, 0], [-1, 0], [0, 1], [0, -1]]) {
     const p = world.blockEntityAt(dn, x + dx, y, z + dz)?.value;
-    if (p?.id?.value === 'Chest' && plainNum(p.pairx) === x && plainNum(p.pairz) === z) claim.push([p, [x + dx, y, z + dz]]);
+    const c = p?.id?.value === 'Chest' ? coords(p) : null;
+    if (c && c[0] === x && c[1] === z) claim.push([p, [x + dx, y, z + dz]]);
   }
+  if (markers(v)) return undetermined(claim[0]?.[1] ?? null);
   if (!claim.length) return null;
-  if (claim.length > 1 || !lead(claim[0][0])) return { half: null, ambiguous: true, partner: claim[0][1] };
+  if (claim.length > 1 || !lead(claim[0][0])) return undetermined(claim[0][1]);
   return { half: 1, partner: claim[0][1] };
 }
 

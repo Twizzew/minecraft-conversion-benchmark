@@ -6,7 +6,7 @@ import { r, notEvaluated, PASS, FAIL, NOT_APPLICABLE, REASON } from '../lib/stat
 import { bedrockRegistry } from '../lib/registry.mjs';
 import { chestPair, containerAsShown } from '../lib/chest-pairs.mjs';
 import { directSlot } from '../lib/slots.mjs';
-import { gameRead, parseSnbt } from '../lib/nbt.mjs';
+import { gameRead, numberOf } from '../lib/nbt.mjs';
 
 // Rule 40 (audit 2026-09-25): a Bedrock item stored under a LEGACY name that the current
 // Bedrock registry no longer has (`planks`, `sapling`, `red_flower`…, the variant sitting in
@@ -119,12 +119,17 @@ export async function evaluate(subject, ctx) {
   // A pair whose display order is undetermined (source half null, or target pair without a
   // unique lead) is never a PASS: the stack is only looked for in its local slot of either half
   // (`alt`), and finding it there is NOT_EVALUATED (rule 49, D).
+  // v1.3 closure, pass 4: an UNDETERMINED pair on either side (source `pair_half` null, or a
+  // target chest whose pair markers make no consistent pair) is never read as a single chest.
+  const chestLike = /(^|:)(trapped_)?chest$|copper_chest$|^Chest$/.test(e.container || '');
   const vue = async (v, slot) => {
     if (!v?.world) return { obs: null, slot };
-    if (e.pair_half === undefined) return { obs: await v.blockEntityAt(locator.dim, locator.pos), slot };
+    if (e.pair_half === undefined && !chestLike) return { obs: await v.blockEntityAt(locator.dim, locator.pos), slot };
     const c = await containerAsShown(v, locator.dim, locator.pos);
     if (slot === null || slot === undefined) return { obs: c.obs, slot };
-    if (c.ambiguous || (e.pair_half === null && c.half !== null)) return { obs: c.obs, slot, alt: slot + 27, undetermined: true };
+    if (c.ambiguous || e.pair_half === null) return { obs: c.obs, slot, alt: slot + 27, undetermined: true };
+    // source single chest: read the target block on its own (rule 49 as before), unless undetermined (above)
+    if (e.pair_half === undefined) return { obs: await v.blockEntityAt(locator.dim, locator.pos), slot };
     return c.half === null ? { obs: c.obs, slot } : { obs: c.obs, slot: slot + 27 * e.pair_half };
   };
   // direct: the target slot with the same role (brewing stand); round trip: the same slot
@@ -177,7 +182,7 @@ export async function evaluate(subject, ctx) {
       // Rule 54: second chance = the component as the game reads it (gameRead: numeric width,
       // {text:"x"} ≡ "x"; an empty list / compound is NOT an absent one).
       const gotC = rHit.item.components?.[comp], expC = e.components[comp];
-      const num0 = (x) => { try { return x == null ? 0 : Number(parseSnbt(x)); } catch { return NaN; } };
+      const num0 = (x) => (x == null ? 0 : numberOf(x));
       rr = gotC === expC ? r(PASS, 'item_stack.component.roundtrip')
         : gotC !== undefined && gameRead(gotC) === gameRead(expC) ? r(PASS, 'item_stack.component.roundtrip.semantic-equal')
         : JAVA_DEFAULT_ZERO.has(comp) && num0(gotC) === 0 && num0(expC) === 0 ? r(PASS, 'item_stack.component.roundtrip.default-0') // Rule 48 (v1.3, F11)

@@ -180,9 +180,14 @@ chest with `pairlead` = 1, or both, or two chests claiming the same partner) sho
 halves in an order MCCB cannot tell; so does a chest that CARRIES pair markers whose pair is
 not valid (Java `type` left / right with the partner missing, of another block, of the same
 type or facing another way; Bedrock `pairx` / `pairz` pointing to a missing, non-adjacent or
-non-chest block) — such a chest is never read as a single chest: a stack found in its local slot of either half is
-NOT_EVALUATED (`double-chest-half-order-undetermined`), never PASS; elsewhere it is FAIL.
-Only a chest with no pair marker (and not claimed by a neighbour) is a single chest. A stack found in the same local slot of
+non-chest block; or Bedrock markers that do not form one consistent pair: `pairx` or `pairz`
+alone, `pairlead` alone, a partner carrying markers that do not point back, two leads, no
+lead, two claimants) — such a chest is never read as a single chest. Three states are kept
+apart: single chest (no pair marker), valid pair, undetermined pair. A stack whose source
+chest was an undetermined pair, or whose target chest is one (whatever the source), is
+NOT_EVALUATED (`double-chest-half-order-undetermined`) when found in its local slot of either
+half, never PASS; elsewhere it is FAIL. Only a chest with no pair marker (and not claimed by a
+neighbour) is a single chest. A stack found in the same local slot of
 the other half is a FAIL with the evidence `double-chest-halves-shown-in-other-order`. A
 block-entity kind with no counterpart in the target edition (item frames, flower pots…)
 has its `custom_name` NOT_EVALUATED in direct (the name moves to another family). When
@@ -308,8 +313,11 @@ fit the format is one subject, NOT_EVALUATED at both levels.
 
 Applied only after strict typed equality failed, and reported with the rule suffix
 `.semantic-equal`: a text compound that is only `{text:"x"}` ≡ `"x"`; the width of a numeric
-SCALAR ignored for equal values (`1b` ≡ `1s` ≡ `1` ≡ `1L`, `1.0f` ≡ `1.0d`) — but a byte, int or
-long ARRAY is never equal to a list (structural types kept); key order ignored. Rule 54 (v1.3
+SCALAR ignored for equal values (`1b` ≡ `1s` ≡ `1` ≡ `1L`, `1.0f` ≡ `1.0d`), compared EXACTLY (integers by their exact value — a
+long keeps all its digits: 2^53 + 1 is not the double 2^53 — other numbers by their exact
+shortest decimal form) — but a byte, int or long ARRAY is never equal to a list (structural
+types kept); key order ignored. The canonical form tags every value with its kind (compound,
+list, each array type, number, string), so no stored value can be read as another kind. Rule 54 (v1.3
 closure): it is computed from the TYPED stored value (`lib/nbt.mjs` `gameRead`) and is DEFAULT-DENY — an empty compound, an empty list, 0,
 `""` and `false` are values, never equal to an absent key, except the field-specific defaults
 of `KNOWN_DEFAULTS` (exhaustive list): Bedrock item `tag.Damage` 0 and `tag.RepairCost` 0

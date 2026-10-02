@@ -125,26 +125,46 @@ never reuses an old cache.
 
 Same source worlds and steps as above; tools version 1.3.0 (`tools/package.json`).
 
+**Check the published v1.3 table** (the results in `results/v1.3` are never rewritten): rebuild
+it from the published rows, locked on the freeze; `--legacy-unfingerprinted` is needed because
+those rows were written before the v1.3 closure and carry no scorer fingerprint. The output
+must be byte-identical to `results/v1.3/COMPARISON-v1.3.{md,json}`.
+
 ```bash
-node fixtures/build-fixtures.mjs                                   # v1.3 registries (content hashes: reports/freeze/FREEZE-v1.3.json)
-node manifests/build-freeze.mjs --version 1.3 --check              # every frozen hash
-node oracles/evaluate-suite.mjs --prefix ws-0308840      --results-dir results/v1.3 --freeze reports/freeze/FREEZE-v1.3.json
-node oracles/evaluate-suite.mjs --prefix ws-fd9b735      --results-dir results/v1.3 --freeze reports/freeze/FREEZE-v1.3.json
-node oracles/evaluate-suite.mjs --converter chunker --prefix chunker-1.20.0 --results-dir results/v1.3 --freeze reports/freeze/FREEZE-v1.3.json
-node oracles/evaluate-suite.mjs --converter je2be --prefix je2be-core-8dfc4de --results-dir results/v1.3 --freeze reports/freeze/FREEZE-v1.3.json
+B="WS 0308840=worldswitch/ws-0308840_,WS 2.8.0 (fd9b735)=worldswitch/ws-fd9b735_,Chunker 1.20.0=chunker/chunker-1.20.0_,je2be core-8dfc4de=je2be/je2be-core-8dfc4de_"
 node results/table-v13.mjs --dir results/v1.3 --freeze reports/freeze/FREEZE-v1.3.json --legacy-unfingerprinted \
-  --builds "WS 0308840=worldswitch/ws-0308840_,WS 2.8.0 (fd9b735)=worldswitch/ws-fd9b735_,Chunker 1.20.0=chunker/chunker-1.20.0_,je2be core-8dfc4de=je2be/je2be-core-8dfc4de_" \
-  --md results/v1.3/COMPARISON-v1.3.md --json results/v1.3/COMPARISON-v1.3.json
-node selftest/run-selftests.mjs B C                                # reports/oracle-selftests/SELFTESTS-v1.3.*
+  --builds "$B" --md /tmp/COMPARISON-v1.3.md --json /tmp/COMPARISON-v1.3.json
+cmp /tmp/COMPARISON-v1.3.md ../results/v1.3/COMPARISON-v1.3.md && cmp /tmp/COMPARISON-v1.3.json ../results/v1.3/COMPARISON-v1.3.json
 ```
 
-Since the v1.3 closure (`docs/rules-changelog.md`, rules 53–56): an official grading is locked on
-the freeze — `evaluate-suite` and `table-v13` refuse to run without `--freeze` (or the explicit,
-non-official `--dev`), and refuse any world whose fixture registry is not the one the freeze
-recorded. `--legacy-unfingerprinted` is needed only to rebuild the table from the results
-published before the closure, which carry no scorer fingerprint. The closure tools grade
-differently from the frozen v1.3 tools: write a new grading to a NEW results directory, never
-over `results/v1.3`.
+**Grade again with the closure tools** (rules 53–56, `docs/rules-changelog.md`) — into a NEW
+directory, never `results/v1.3`. An official grading is locked on the freeze: `evaluate-suite`
+and `table-v13` refuse to run without `--freeze` (or the explicit, non-official `--dev`) and
+refuse any world whose fixture registry is not the one the freeze records; the freeze file
+itself is authenticated (`tools/lib/freeze-ref.mjs`).
+
+```bash
+node manifests/build-freeze.mjs --version 1.3 --check              # every frozen hash
+F=reports/freeze/FREEZE-v1.3.json; OUT=results/v1.3-closure
+node oracles/evaluate-suite.mjs --prefix ws-0308840      --results-dir $OUT --freeze $F
+node oracles/evaluate-suite.mjs --prefix ws-fd9b735      --results-dir $OUT --freeze $F
+node oracles/evaluate-suite.mjs --converter chunker --prefix chunker-1.20.0 --results-dir $OUT --freeze $F
+node oracles/evaluate-suite.mjs --converter je2be --prefix je2be-core-8dfc4de --results-dir $OUT --freeze $F
+node results/table-v13.mjs --dir $OUT --freeze $F --builds "$B" --md $OUT/COMPARISON.md --json $OUT/COMPARISON.json
+```
+
+**Self-tests**, all sections — `U` (the closure tests, `selftest/closure/*.test.mjs`), `A`, `B`,
+`C`, `D` — written outside the published report:
+
+```bash
+MCCB_SELFTEST_REPORT_DIR=../results/v1.3-closure/selftests node selftest/run-selftests.mjs U A B C D
+```
+
+Each line is `PASS`, `FAIL` or `SKIP`; the last line counts them. `SKIP` means an input was
+missing BEFORE the test ran (a source asset, the Minecraft 26.3 installation, the Java
+executable) — it is not a validation. A test that ran and failed (including a normaliser or
+`classpath.mjs` that started and failed) is `FAIL`. The exit code is 1 when any test FAILS, 0
+otherwise — check the SKIP count as well.
 
 Converters of the final comparison:
 

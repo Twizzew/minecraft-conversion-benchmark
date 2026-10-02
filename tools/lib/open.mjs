@@ -34,8 +34,10 @@ export function javaExecutable() {
 }
 export function minecraftClasspath(version = JAVA_REFERENCE_VERSION) {
   const r = spawnSync(process.execPath, [path.join(REPO_ROOT, 'tools', 'java', 'classpath.mjs'), version], { encoding: 'utf8' });
-  // the Minecraft installation is not there: an input missing BEFORE anything ran
-  if (r.status !== 0) throw Object.assign(new Error(`classpath: ${r.stderr}`), { code: 'MCCB_INPUT_MISSING' });
+  // exit 3 = the Minecraft installation is not there: an input missing BEFORE anything ran.
+  // Any other failure of classpath.mjs (corrupt manifest, bug) is an error, not a missing input.
+  if (r.status === 3) throw Object.assign(new Error(`classpath: ${r.stderr}`), { code: 'MCCB_INPUT_MISSING' });
+  if (r.status !== 0) throw new Error(`classpath.mjs failed (${r.status ?? r.signal}): ${r.stderr}`);
   return r.stdout;
 }
 

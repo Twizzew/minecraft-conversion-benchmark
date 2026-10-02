@@ -230,6 +230,7 @@ test('B6: a normaliser that STARTS and fails is FAIL, not SKIP; a missing source
   const mc = path.join(tmp, '.minecraft', 'versions', '26.3');
   fs.mkdirSync(mc, { recursive: true });
   fs.writeFileSync(path.join(mc, '26.3.json'), JSON.stringify({ libraries: [] }));
+  fs.writeFileSync(path.join(mc, '26.3.jar'), ''); // an installation that is present: the normaliser does start
   const java = path.join(tmp, 'java');
   fs.writeFileSync(java, '#!/bin/sh\necho "internal normaliser failure" >&2\nexit 1\n', { mode: 0o755 });
   const r = spawnSync(process.execPath, [path.join(TOOLS, 'selftest', 'run-selftests.mjs'), 'B'], {
