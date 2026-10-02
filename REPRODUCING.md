@@ -136,7 +136,7 @@ must be byte-identical to `results/v1.3/COMPARISON-v1.3.{md,json}`.
 
 ```bash
 B="WS 0308840=worldswitch/ws-0308840_,WS 2.8.0 (fd9b735)=worldswitch/ws-fd9b735_,Chunker 1.20.0=chunker/chunker-1.20.0_,je2be core-8dfc4de=je2be/je2be-core-8dfc4de_"
-node results/table-v13.mjs --dir results/v1.3 --freeze reports/freeze/FREEZE-v1.3.json --legacy-unfingerprinted \
+node results/table-v13.mjs --dir results/v1.3 --freeze reports/freeze/FREEZE-v1.3.json --outputs results/v1.3/OUTPUTS.sha256 --legacy-unfingerprinted \
   --builds "$B" --md /tmp/COMPARISON-v1.3.md --json /tmp/COMPARISON-v1.3.json
 cmp /tmp/COMPARISON-v1.3.md ../results/v1.3/COMPARISON-v1.3.md && cmp /tmp/COMPARISON-v1.3.json ../results/v1.3/COMPARISON-v1.3.json
 ```
@@ -145,7 +145,15 @@ cmp /tmp/COMPARISON-v1.3.md ../results/v1.3/COMPARISON-v1.3.md && cmp /tmp/COMPA
 directory, never `results/v1.3`. An official grading is locked on the freeze: `evaluate-suite`
 and `table-v13` refuse to run without `--freeze` (or the explicit, non-official `--dev`) and
 refuse any world whose fixture registry is not the one the freeze records; the freeze file
-itself is authenticated (`tools/lib/freeze-ref.mjs`).
+itself is authenticated (`tools/lib/freeze-ref.mjs`). An official grading is also pinned on the
+HISTORICAL OUTPUTS: `--outputs` is required and must be a published output registry,
+authenticated by its SHA-256 (`tools/lib/output-registry.mjs`: `results/v1.3/OUTPUTS.sha256`,
+`results/v1.3-gurren/OUTPUTS.sha256`); every run must be listed there with exactly the hash of
+its run record, and each archive's bytes are checked against that hash when it is opened. The
+outputs are the release assets listed in those files; nothing else can be graded officially.
+The table refuses any result whose integrity checks fail (same assertions for every converter,
+each counted once, rows adding up to the counts the evaluation recorded, no NOT_EVALUATED
+assertion carrying a status).
 
 **Historical freeze integrity is a separate check.** `reports/freeze/FREEZE-v1.3.json` is never
 rewritten: its SHA-256 stays `8e317c7be305c990b6833657f9acbdba6076340fba9657960556610fbe4251a2`
@@ -169,12 +177,12 @@ git checkout 2e7bc0925ea554f5c34d9b4516d2201455d53555 && node manifests/build-fr
 Then, back on the closure commit:
 
 ```bash
-F=reports/freeze/FREEZE-v1.3.json; OUT=results/v1.3-closure
-node oracles/evaluate-suite.mjs --prefix ws-0308840      --results-dir $OUT --freeze $F
-node oracles/evaluate-suite.mjs --prefix ws-fd9b735      --results-dir $OUT --freeze $F
-node oracles/evaluate-suite.mjs --converter chunker --prefix chunker-1.20.0 --results-dir $OUT --freeze $F
-node oracles/evaluate-suite.mjs --converter je2be --prefix je2be-core-8dfc4de --results-dir $OUT --freeze $F
-node results/table-v13.mjs --dir $OUT --freeze $F --builds "$B" --md $OUT/COMPARISON.md --json $OUT/COMPARISON.json
+F=reports/freeze/FREEZE-v1.3.json; O=results/v1.3/OUTPUTS.sha256; OUT=results/v1.3-closure
+node oracles/evaluate-suite.mjs --prefix ws-0308840      --results-dir $OUT --freeze $F --outputs $O
+node oracles/evaluate-suite.mjs --prefix ws-fd9b735      --results-dir $OUT --freeze $F --outputs $O
+node oracles/evaluate-suite.mjs --converter chunker --prefix chunker-1.20.0 --results-dir $OUT --freeze $F --outputs $O
+node oracles/evaluate-suite.mjs --converter je2be --prefix je2be-core-8dfc4de --results-dir $OUT --freeze $F --outputs $O
+node results/table-v13.mjs --dir $OUT --freeze $F --outputs $O --builds "$B" --md $OUT/COMPARISON.md --json $OUT/COMPARISON.json
 ```
 
 **Self-tests**, all sections — `U` (the closure tests, `selftest/closure/*.test.mjs`), `A`, `B`,

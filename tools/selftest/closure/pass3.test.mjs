@@ -145,6 +145,8 @@ function sandbox() {
   fs.cpSync(TOOLS, path.join(root, 'tools'), { recursive: true, filter: (s) => !s.includes(`${path.sep}node_modules`) });
   fs.symlinkSync(path.join(TOOLS, 'node_modules'), path.join(root, 'tools', 'node_modules'));
   for (const d of ['manifests', 'docs', path.join('reports', 'freeze')]) fs.cpSync(path.join(REPO, d), path.join(root, d), { recursive: true });
+  fs.mkdirSync(path.join(root, 'results', 'v1.3'), { recursive: true });
+  fs.copyFileSync(path.join(REPO, 'results', 'v1.3', 'OUTPUTS.sha256'), path.join(root, 'results', 'v1.3', 'OUTPUTS.sha256'));
   fs.mkdirSync(path.join(root, 'fixtures'));
   for (const w of Object.keys(SOURCES)) fs.copyFileSync(path.join(REPO, 'fixtures', `${w.replace('@', '_')}.jsonl.gz`), path.join(root, 'fixtures', `${w.replace('@', '_')}.jsonl.gz`));
   const runs = path.join(root, 'runs');
@@ -166,17 +168,18 @@ function sandbox() {
   };
 }
 const FREEZE = 'reports/freeze/FREEZE-v1.3.json';
+const OUTPUTS = 'results/v1.3/OUTPUTS.sha256';
 const skipB = haveB ? false : `public Bedrock sources not found in ${SRCDIR}`;
 
-test('B4: freeze H1 + fixtures H1 → official suite and table accepted; summaries record the freeze', { skip: skipB }, () => {
+// (pass 6) an official grading is ALSO pinned on the historical outputs: these stand-in runs
+// are not historical, so the official suite now passes the freeze lock and stops at the output
+// pin (pass6.test.mjs); a positive official grading needs the published outputs themselves.
+test('B4: freeze H1 + fixtures H1 → the fixture lock passes (the suite then stops at the historical-output pin)', { skip: skipB }, () => {
   const s = sandbox();
-  const r = s.suite('--freeze', FREEZE);
-  assert.equal(r.status, 0, r.stdout + r.stderr);
-  const sm = JSON.parse(fs.readFileSync(s.summary('B01@1.0'), 'utf8'));
-  assert.equal(sm.grading?.mode, 'official');
-  assert.equal(sm.grading?.freeze?.[0]?.sha256, '8e317c7be305c990b6833657f9acbdba6076340fba9657960556610fbe4251a2');
-  const t = s.table('--freeze', FREEZE);
-  assert.equal(t.status, 0, t.stdout + t.stderr);
+  const r = s.suite('--freeze', FREEZE, '--outputs', OUTPUTS);
+  assert.notEqual(r.status, 0);
+  assert.doesNotMatch(r.stderr, /fixture registries do not match/);
+  assert.match(r.stderr, /not a historical output/);
 });
 
 test('B4: one world at H2 with freeze H1 → the whole official suite is refused, nothing graded or promoted', { skip: skipB }, () => {
@@ -198,7 +201,7 @@ test('B4: an official workflow without a freeze reference is refused (suite and 
   assert.notEqual(t.status, 0);
   assert.match(t.stderr, /--freeze|--dev/);
   // dev results are never accepted as official
-  const t2 = s.table('--freeze', FREEZE);
+  const t2 = s.table('--freeze', FREEZE, '--outputs', OUTPUTS);
   assert.notEqual(t2.status, 0);
   assert.match(t2.stderr, /dev|official/i);
 });
@@ -207,7 +210,7 @@ test('B4: a summary graded on H2 is refused by the official table even if H2 is 
   const s = sandbox();
   s.tamper('B02@1.0');
   assert.equal(s.suite('--dev').status, 0);
-  const t = s.table('--freeze', FREEZE);
+  const t = s.table('--freeze', FREEZE, '--outputs', OUTPUTS);
   assert.notEqual(t.status, 0);
   assert.match(t.stderr, /B02@1\.0.*fixture/s);
 });

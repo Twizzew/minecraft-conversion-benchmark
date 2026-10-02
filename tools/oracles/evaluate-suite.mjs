@@ -3,7 +3,12 @@
 //   node tools/oracles/evaluate-suite.mjs [--converter worldswitch] [--commit 0308840] [--prefix ws-0308840]
 //        [--suite tools/runners/worldswitch/suite-mccb-v1.1.json] [--only J04@1.0,...]
 //        [--results-dir results/v1.2] [--heap 12288]
-//        --freeze reports/freeze/FREEZE-v1.3.json[,addendum.json] | --dev
+//        --freeze reports/freeze/FREEZE-v1.3.json[,addendum.json] --outputs results/v1.3/OUTPUTS.sha256[,…] | --dev
+//
+// v1.3 closure, pass 6: an OFFICIAL suite is also pinned on the historical outputs (--outputs,
+// required with --freeze): every run of the suite must be a run id of an authenticated output
+// registry and its run record must carry exactly that output hash — checked before anything is
+// graded (each evaluation then refuses an output file whose bytes are not that hash).
 //
 // v1.3 closure, pass 3: an OFFICIAL suite is locked on its freeze (--freeze, required): before
 // anything is graded, every world's fixture registry must have the content hash the freeze
@@ -21,6 +26,8 @@ import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { readFixtures } from '../lib/fixtures-io.mjs';
 import { freezeFixtureRefs } from '../lib/freeze-ref.mjs';
+import { outputRegistry } from '../lib/output-registry.mjs';
+import { runRecord } from '../lib/open.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(HERE, '..', '..');
@@ -57,6 +64,18 @@ if (freezeArg) {
     else if (got !== want) wrong.push(`${p.world}: fixture registry content ${got}, freeze records ${want}`);
   }
   if (wrong.length) { console.error(`SUITE REFUSED — fixture registries do not match the freeze (nothing graded):\n  ${wrong.join('\n  ')}`); process.exit(1); }
+  if (!arg('outputs')) { console.error('SUITE REFUSED — an official grading needs --outputs <published OUTPUTS.sha256[,…]>: the historical outputs it must judge'); process.exit(1); }
+  let reg;
+  try { reg = outputRegistry(arg('outputs')); } catch (e) { console.error(`SUITE REFUSED — ${e.message}`); process.exit(1); }
+  const notHist = [];
+  for (const p of pairs) for (const id of [p.direct, p.roundtrip]) {
+    const want = reg.outputs.get(id);
+    let got = null;
+    try { got = runRecord(id).output?.sha256 ?? null; } catch (e) { got = `no run record (${e.code || e.message})`; }
+    if (!want) notHist.push(`${id}: not a historical output (absent from the output registry)`);
+    else if (got !== want) notHist.push(`${id}: run record output ${got}, the registry records ${want}`);
+  }
+  if (notHist.length) { console.error(`SUITE REFUSED — not the historical outputs (nothing graded):\n  ${notHist.join('\n  ')}`); process.exit(1); }
 }
 
 const stamp = new Date().toISOString().replace(/[:.]/g, '-');
@@ -66,7 +85,7 @@ for (const p of pairs) {
   const t0 = Date.now();
   const out = path.join(staging, p.direct);
   const r = spawnSync(process.execPath, [`--max-old-space-size=${heap}`, path.join(HERE, 'evaluate.mjs'), '--world', p.world, '--direct', p.direct, '--roundtrip', p.roundtrip,
-    '--converter', converter, '--out', out, ...(freezeArg ? ['--freeze', freezeArg] : [])], { encoding: 'utf8', maxBuffer: 1 << 28 });
+    '--converter', converter, '--out', out, ...(freezeArg ? ['--freeze', freezeArg, '--outputs', arg('outputs')] : [])], { encoding: 'utf8', maxBuffer: 1 << 28 });
   process.stdout.write(`== ${p.world} (${((Date.now() - t0) / 1000).toFixed(0)} s, exit ${r.status})\n${r.stdout}${r.stderr ? r.stderr.slice(-3000) : ''}\n`);
   // a child that did not exit 0, or exited 0 without a complete result, is a failure
   const ok = r.status === 0 && ['summary.json', 'results.jsonl.gz'].every((f) => fs.existsSync(path.join(out, f)));

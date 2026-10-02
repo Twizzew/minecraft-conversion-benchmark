@@ -18,7 +18,8 @@
 //  - summary identity: world, converter, run ids (folder = direct run, return run = direct + 2x);
 //  - results.jsonl.gz hash and row count = those recorded in its summary.json;
 //  - fixture registry content = the freeze's (--freeze), or the registry on disk (--dev only);
-//  - direct / return output hashes = <dir>/OUTPUTS.sha256 when that file exists;
+//  - direct / return output hashes = an AUTHENTICATED output registry (--outputs, REQUIRED in the
+//    official mode: the historical outputs); in --dev, <dir>/OUTPUTS.sha256 when that file exists;
 //  - one converter build per label;
 //  - scorer and ruleset fingerprints: identical across the table, and the scorer = the tools on
 //    disk (or --expect-scorer <sha256>). Results without fingerprints (written before the v1.3
@@ -31,6 +32,7 @@ import { REPO_ROOT } from '../lib/archive.mjs';
 import { readFixtures } from '../lib/fixtures-io.mjs';
 import { scorerIdentity, rulesetIdentity } from '../lib/fingerprint.mjs';
 import { freezeFixtureRefs } from '../lib/freeze-ref.mjs';
+import { outputRegistry } from '../lib/output-registry.mjs';
 
 const arg = (n, d = null) => { const i = process.argv.indexOf(`--${n}`); return i > 0 ? process.argv[i + 1] : d; };
 const dir = path.resolve(REPO_ROOT, arg('dir', 'results/v1.3'));
@@ -53,6 +55,13 @@ const fixtureContent = (world) => {
   try { return readFixtures(world).content_sha256; } catch { return null; }
 };
 const freezeShas = freeze ? freeze.files.map((f) => f.sha256).sort().join(',') : null;
+// official: the outputs must be the historical ones — an authenticated registry is REQUIRED
+let registry = null;
+if (freeze) {
+  if (!arg('outputs')) { console.error('TABLE REFUSED — an official table needs --outputs <published OUTPUTS.sha256[,…]>: the historical outputs the results must have judged'); process.exit(1); }
+  try { registry = outputRegistry(arg('outputs')); } catch (e) { console.error(`TABLE REFUSED — ${e.message}`); process.exit(1); }
+}
+const registryShas = registry ? registry.files.map((f) => f.sha256).sort().join(',') : null;
 const sha256 = (buf) => crypto.createHash('sha256').update(buf).digest('hex');
 const outputsList = (base) => {
   const f = path.join(base, 'OUTPUTS.sha256');
@@ -88,8 +97,9 @@ function load(b, world) {
   const wantFx = fixtureContent(world);
   if (!wantFx) bad(`${tag}: no reference fixture content for ${world} (${freeze ? 'the freeze files given do not record this world' : 'fixture registry not readable'})`);
   else if (summary.fixtures?.content_sha256 !== wantFx) bad(`${tag}: fixture registry content ${summary.fixtures?.content_sha256} ≠ reference ${wantFx}`);
-  if (!outputsByRoot.has(root)) outputsByRoot.set(root, outputsList(root));
+  if (!outputsByRoot.has(root)) outputsByRoot.set(root, registry ? registry.outputs : outputsList(root));
   const outs = outputsByRoot.get(root);
+  if (registry && summary.scorer && (summary.grading?.outputs || []).map((f) => f.sha256).sort().join(',') !== registryShas) bad(`${tag}: not graded against the output registry given (${(summary.grading?.outputs || []).map((f) => f.file).join(', ') || 'none recorded'})`);
   if (outs) {
     if (outs.get(summary.direct_run) !== summary.direct_output_sha256) bad(`${tag}: direct output ${summary.direct_output_sha256} not the one listed in OUTPUTS.sha256 (${outs.get(summary.direct_run) ?? 'absent'})`);
     if (outs.get(summary.roundtrip_run) !== summary.roundtrip_output_sha256) bad(`${tag}: return output ${summary.roundtrip_output_sha256} not the one listed in OUTPUTS.sha256 (${outs.get(summary.roundtrip_run) ?? 'absent'})`);
@@ -110,16 +120,27 @@ function load(b, world) {
   }
   const buf = zlib.gunzipSync(raw);
   const c = Object.fromEntries(LEVELS.map((L) => [L, { ...Object.fromEntries(ST.map((s) => [s, 0])), NOT_EVALUATED: 0, total: 0, byFamily: {} }]));
-  const ids = new Set(); let dup = 0; let nePass = 0;
+  const ids = new Set(); let dup = 0; let nePass = 0; let badStatus = 0;
+  // the rows must add up to the counts the evaluation recorded in its summary (every level)
+  const agg = new Map();
+  const ALL = ['direct', 'behavior', 'roundtrip'];
   let start = 0;
   for (let i = buf.indexOf(10); i !== -1; start = i + 1, i = buf.indexOf(10, start)) {
     const row = JSON.parse(buf.toString('utf8', start, i));
-    for (const [asp, lv] of Object.entries(row.aspects)) for (const L of LEVELS) {
+    for (const [asp, lv] of Object.entries(row.aspects)) for (const L of ALL) {
+      const x = lv[L];
+      if (!x) { if (L !== 'behavior') badStatus++; continue; }
+      const k = `${row.family}|${asp}|${L}`;
+      const a = agg.get(k) || agg.set(k, { counts: Object.fromEntries(ST.map((t) => [t, 0])), not_evaluated: 0 }).get(k);
+      // the same tally as evaluate.mjs's summary (status validity is checked separately below)
+      if (x.evaluated) a.counts[x.status] = (a.counts[x.status] || 0) + 1; else a.not_evaluated++;
+      // a status is one of the six, carried by an EVALUATED assertion only (every level)
+      if (x.evaluated === false && x.status != null) { nePass++; continue; }
+      if (!(x.evaluated === true && ST.includes(x.status)) && !(x.evaluated === false && typeof x.reason === 'string')) { badStatus++; continue; }
+      if (!LEVELS.includes(L)) continue;
       const key = `${row.id}#${asp}#${L}`;
       if (ids.has(key)) dup++; ids.add(key);
-      const x = lv[L];
       const s = x.evaluated ? x.status : 'NOT_EVALUATED';
-      if (!x.evaluated && x.status) nePass++;
       c[L][s]++; c[L].total++;
       const f = (c[L].byFamily[row.family] ||= Object.fromEntries([...ST, 'NOT_EVALUATED'].map((k) => [k, 0])));
       f[s]++;
@@ -128,6 +149,12 @@ function load(b, world) {
   let rows = 0;
   for (let i = buf.indexOf(10), st = 0; i !== -1; st = i + 1, i = buf.indexOf(10, st)) rows++;
   if (rows !== summary.results_file?.subjects) bad(`${tag}: ${rows} result rows ≠ ${summary.results_file?.subjects} recorded`);
+  if (nePass) bad(`${tag}: ${nePass} NOT_EVALUATED assertion(s) carry a status`);
+  if (badStatus) bad(`${tag}: ${badStatus} assertion level(s) with no valid status / reason`);
+  const recorded = new Map((summary.summary || []).map((x) => [`${x.family}|${x.aspect}|${x.level}`, x]));
+  const keys = new Set([...agg.keys(), ...recorded.keys()]);
+  const off = [...keys].filter((k) => { const a = agg.get(k), r = recorded.get(k); return !a || !r || a.not_evaluated !== r.not_evaluated || [...new Set([...ST, ...Object.keys(a.counts), ...Object.keys(r.counts || {})])].some((t) => (a.counts[t] || 0) !== (r.counts?.[t] || 0)); });
+  if (off.length) bad(`${tag}: rows do not add up to the counts recorded in summary.json (${off.length} family/aspect/level, e.g. ${off.slice(0, 3).join(', ')})`);
   return { run: d, summary, counts: c, ids, dup, nePass };
 }
 
@@ -181,6 +208,16 @@ for (const L of LEVELS) {
 }
 md.push('## Integrity checks', '', '| World | converters | same assertions | same fixture registry | sums exact | each once | NE never PASS | assertions / level |', '|---|--:|---|---|---|---|---|--:|');
 for (const c of out.checks) md.push(`| ${c.world} | ${c.converters} | ${c.same_assertions} | ${c.same_fixture_registry} | ${c.sums_exact} | ${c.each_counted_once} | ${c.not_evaluated_never_pass} | ${c.assertions_per_level} |`);
+// the integrity checks are FATAL: no table is written when one of them fails
+for (const ck of out.checks) {
+  for (const [k, label] of [['same_assertions', 'not the same assertions for every converter'], ['same_fixture_registry', 'not the same fixture registry'], ['sums_exact', 'status counts do not add up'], ['each_counted_once', 'an assertion is counted more than once (duplicate)'], ['not_evaluated_never_pass', 'a NOT_EVALUATED assertion carries a status']]) {
+    if (ck[k] !== true) bad(`${ck.world}: integrity check failed — ${label} (${k})`);
+  }
+}
+if (problems.length) {
+  console.error(`TABLE REFUSED — ${problems.length} problem(s):\n  ${problems.join('\n  ')}`);
+  process.exit(1);
+}
 const text = md.join('\n') + '\n';
 if (arg('md')) fs.writeFileSync(path.resolve(REPO_ROOT, arg('md')), text);
 if (arg('json')) fs.writeFileSync(path.resolve(REPO_ROOT, arg('json')), JSON.stringify(out, null, 1) + '\n');

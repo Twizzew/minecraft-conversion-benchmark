@@ -21,6 +21,7 @@ import { TargetView } from './target.mjs';
 import { notEvaluated, REASON, STATUSES } from '../lib/status.mjs';
 import { scorerIdentity, rulesetIdentity } from '../lib/fingerprint.mjs';
 import { freezeFixtureRefs } from '../lib/freeze-ref.mjs';
+import { outputRegistry } from '../lib/output-registry.mjs';
 
 const arg = (n, d = null) => { const i = process.argv.indexOf(`--${n}`); return i > 0 ? process.argv[i + 1] : d; };
 const worldId = arg('world');
@@ -59,6 +60,16 @@ if (rtId) {
   if (!dRun.output || rRun.source.sha256 !== dRun.output.sha256) problems.push(`return run consumed ${rRun.source.sha256}, direct output is ${dRun.output?.sha256}`);
 }
 if (problems.length) { console.error('PROVENANCE CHECK FAILED:\n  ' + problems.join('\n  ')); process.exit(2); }
+// official grading: the outputs must be the historical ones (authenticated output registry);
+// the archive's bytes are then checked against that hash when it is opened (extractArchive)
+if (grading.mode === 'official') {
+  if (!arg('outputs')) { console.error('OUTPUT CHECK FAILED: an official grading (--freeze) needs --outputs <published OUTPUTS.sha256[,…]>'); process.exit(2); }
+  let reg;
+  try { reg = outputRegistry(arg('outputs')); } catch (e) { console.error(`OUTPUT CHECK FAILED: ${e.message}`); process.exit(2); }
+  const wrong = [[directId, dRun], ...(rtId ? [[rtId, rRun]] : [])].filter(([id, run]) => !reg.outputs.get(id) || run.output?.sha256 !== reg.outputs.get(id));
+  if (wrong.length) { console.error(`OUTPUT CHECK FAILED: not the historical outputs: ${wrong.map(([id, run]) => `${id} (${run.output?.sha256 ?? 'no output'} vs ${reg.outputs.get(id) ?? 'not in the registry'})`).join('; ')}`); process.exit(2); }
+  grading.outputs = reg.files;
+}
 
 const t0 = Date.now();
 const dOut = await openRunOutput(directId);
