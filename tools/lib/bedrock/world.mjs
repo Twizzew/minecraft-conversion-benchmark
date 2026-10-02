@@ -8,7 +8,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { createRequire } from 'node:module';
-import { parseAllLittle, parseOneLittle, parseNbt, get, plain, prismarine as _nbt } from '../nbt.mjs';
+import { parseAllLittle, parseOneLittle, parseNbt, get, plain, put, restoreProtoKeys, prismarine as _nbt } from '../nbt.mjs';
 const require = createRequire(import.meta.url);
 const { LevelDB } = require('leveldb-zlib');
 
@@ -244,11 +244,11 @@ export function decodeSubChunk(buf) {
 
 function nbtLittleAt(buf, off) {
   const r = _nbt.protos.little.parsePacketBuffer('nbt', buf, off);
-  return { data: r.data, size: r.metadata.size };
+  return { data: restoreProtoKeys(r.data), size: r.metadata.size };
 }
 function statesOf(t) {
   const o = {};
-  if (t && t.type === 'compound') for (const [k, v] of Object.entries(t.value)) o[k] = v.type === 'byte' ? v.value : v.value;
+  if (t && t.type === 'compound') for (const [k, v] of Object.entries(t.value)) put(o, k, v.value);
   return o;
 }
 

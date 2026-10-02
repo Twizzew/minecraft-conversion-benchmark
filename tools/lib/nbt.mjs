@@ -9,12 +9,36 @@ import { createRequire } from 'node:module';
 const require = createRequire(import.meta.url);
 const nbt = require('prismarine-nbt');
 
+/**
+ * An own key, whatever the key ("__proto__" included): an NBT compound key is data, never a
+ * property of the JavaScript object model (v1.3 closure, pass 5).
+ */
+export const put = (o, k, v) => { Object.defineProperty(o, k, { value: v, enumerable: true, writable: true, configurable: true }); return o; };
+/**
+ * prismarine-nbt stores a compound key with `obj[name] = value`: a key "__proto__" does not
+ * become a key — the tag becomes the object's PROTOTYPE. The tag is still there, exactly: it is
+ * put back as an own key "__proto__" and the prototype restored, at every depth.
+ */
+export function restoreProtoKeys(tag) {
+  if (!tag || typeof tag !== 'object') return tag;
+  if (tag.type === 'compound' && tag.value && typeof tag.value === 'object') {
+    const v = tag.value;
+    const p = Object.getPrototypeOf(v);
+    if (p !== Object.prototype && p !== null && typeof p === 'object' && typeof p.type === 'string') { Object.setPrototypeOf(v, Object.prototype); put(v, '__proto__', p); }
+    for (const k of Object.keys(v)) restoreProtoKeys(v[k]);
+  } else if (tag.type === 'list' && tag.value) {
+    const { type, value } = tag.value;
+    if (type === 'compound' || type === 'list') for (const e of value || []) restoreProtoKeys({ type, value: e });
+  }
+  return tag;
+}
+
 /** Parse one NBT document (auto-detects gzip / zlib / raw). */
 export async function parseNbt(buf, endian = 'big') {
   let raw = buf;
   if (buf[0] === 0x1f && buf[1] === 0x8b) raw = zlib.gunzipSync(buf);
   else if (buf[0] === 0x78 && (buf[1] === 0x9c || buf[1] === 0x01 || buf[1] === 0xda || buf[1] === 0x5e)) raw = zlib.inflateSync(buf);
-  return nbt.parseUncompressed(raw, endian);
+  return restoreProtoKeys(nbt.parseUncompressed(raw, endian));
 }
 
 /** Parse every little-endian NBT compound concatenated in a Bedrock value. */
@@ -23,7 +47,7 @@ export function parseAllLittle(buf) {
   let off = 0;
   while (off < buf.length) {
     const r = nbt.protos.little.parsePacketBuffer('nbt', buf, off);
-    out.push(r.data);
+    out.push(restoreProtoKeys(r.data));
     if (!r.metadata.size) break;
     off += r.metadata.size;
   }
@@ -31,7 +55,7 @@ export function parseAllLittle(buf) {
 }
 
 export function parseOneLittle(buf) {
-  return nbt.protos.little.parsePacketBuffer('nbt', buf, 0).data;
+  return restoreProtoKeys(nbt.protos.little.parsePacketBuffer('nbt', buf, 0).data);
 }
 
 const longToString = (v) => {
@@ -74,7 +98,7 @@ export function plain(tag) {
     case 'list': return (value.value || []).map((v) => plain({ type: value.type, value: v }));
     case 'compound': {
       const o = {};
-      for (const k of Object.keys(value)) o[k] = plain(value[k]);
+      for (const k of Object.keys(value)) put(o, k, plain(value[k]));
       return o;
     }
     default: return value;
@@ -100,7 +124,7 @@ function semVal(v) {
       const x = semVal(v[k]);
       if (x && typeof x === 'object' && !Array.isArray(x) && !Object.keys(x).length) continue;
       if (Array.isArray(x) && !x.length) continue;
-      o[k] = x;
+      put(o, k, x);
     }
     return o;
   }
@@ -183,7 +207,7 @@ function parseNodes(text) {
     if (c === '{') {
       i++; const o = {}; ws();
       if (text[i] === '}') { i++; return { k: 'c', v: o }; }
-      for (;;) { ws(); const key = str(); ws(); if (text[i++] !== ':') throw new Error(`snbt: ':' expected at ${i}`); o[key] = value(); ws(); const d = text[i++]; if (d === '}') return { k: 'c', v: o }; if (d !== ',') throw new Error(`snbt: ',' expected at ${i}`); }
+      for (;;) { ws(); const key = str(); ws(); if (text[i++] !== ':') throw new Error(`snbt: ':' expected at ${i}`); put(o, key, value()); ws(); const d = text[i++]; if (d === '}') return { k: 'c', v: o }; if (d !== ',') throw new Error(`snbt: ',' expected at ${i}`); }
     }
     if (c === '[') {
       i++;
@@ -224,10 +248,10 @@ function readValue(n, ctx) {
     const here = ctx && ctx.startsWith('map:') ? null : ctx;
     const o = {};
     for (const k of keys.sort()) {
-      if ((here === 'bedrock-item' || here === 'java-item') && k === 'Block') { const b = readValue(n.v[k], null); if (b[0] === 'c') delete b[1].version; o[k] = b; continue; }
+      if ((here === 'bedrock-item' || here === 'java-item') && k === 'Block') { const b = readValue(n.v[k], null); if (b[0] === 'c') delete b[1].version; put(o, k, b); continue; }
       const y = readValue(n.v[k], ctx && ctx.startsWith('map:') ? ctx.slice(4) : childCtx(here, k));
       if (here && KNOWN_DEFAULTS.some((d) => d.ctx === here && d.key === k && sameVal(d.value, y))) continue;
-      o[k] = y;
+      put(o, k, y);
     }
     return ['c', o];
   }
@@ -254,7 +278,7 @@ export function gameReadMap(m, { root = null } = {}) {
     let y;
     try { y = readValue(parseNodes(v), childCtx(root, k)); } catch { y = ['raw', v]; }
     if (root && KNOWN_DEFAULTS.some((d) => d.ctx === root && d.key === k && sameVal(d.value, y))) continue;
-    o[k] = JSON.stringify(y);
+    put(o, k, JSON.stringify(y));
   }
   return o;
 }

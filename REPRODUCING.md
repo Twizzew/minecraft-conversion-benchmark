@@ -114,6 +114,10 @@ evaluation). Report: `reports/oracle-selftests/`.
 node manifests/build-freeze.mjs --check
 ```
 
+Run it on the commit of the freeze being checked. On a commit carrying the v1.3 closure
+scorer it reports `FREEZE DIFFERS` by design (see §8): the scorer and two rule texts changed
+after every freeze; no freeze is rewritten.
+
 Recomputes every hash listed in `reports/freeze/FREEZE-v1.1.json` (sources, fixtures,
 rules, references, every tool file, measured results) and reports any difference.
 
@@ -143,8 +147,28 @@ and `table-v13` refuse to run without `--freeze` (or the explicit, non-official 
 refuse any world whose fixture registry is not the one the freeze records; the freeze file
 itself is authenticated (`tools/lib/freeze-ref.mjs`).
 
+**Historical freeze integrity is a separate check.** `reports/freeze/FREEZE-v1.3.json` is never
+rewritten: its SHA-256 stays `8e317c7be305c990b6833657f9acbdba6076340fba9657960556610fbe4251a2`
+(the closure tools authenticate it by that hash). `build-freeze --check` rebuilds the WHOLE
+freeze from the current tree and compares text: on the closure commit it reports `FREEZE
+DIFFERS` (exit 1) BY DESIGN — the scorer files (`tools/lib`, `tools/families`, `tools/oracles`,
+`tools/java/classpath.mjs`) and two rule texts (`docs/fixture-rules.md`,
+`docs/rules-changelog.md`) were changed on purpose, three tool files were added. That is not a
+failure of the freeze and must never be "fixed" by rewriting it. It also needs the Minecraft
+26.3 installation (it stops with `classpath: … not installed` without it) and the recorded
+runs (`_staging/runs`), and it differs on any machine but the freeze machine for the sections
+the freeze marks as machine-dependent. To check the historical integrity:
+
 ```bash
-node manifests/build-freeze.mjs --version 1.3 --check              # every frozen hash
+sha256sum ../reports/freeze/FREEZE-v1.3.json                       # 8e317c7b…51a2, unchanged
+git diff --stat 2e7bc0925ea554f5c34d9b4516d2201455d53555 -- ../fixtures ../worlds ../manifests ../docs/reference ../reports/freeze ../results   # empty: no frozen input changed
+# the frozen tools and rules themselves: on the v1.3 commit, not on the closure commit
+git checkout 2e7bc0925ea554f5c34d9b4516d2201455d53555 && node manifests/build-freeze.mjs --version 1.3 --check
+```
+
+Then, back on the closure commit:
+
+```bash
 F=reports/freeze/FREEZE-v1.3.json; OUT=results/v1.3-closure
 node oracles/evaluate-suite.mjs --prefix ws-0308840      --results-dir $OUT --freeze $F
 node oracles/evaluate-suite.mjs --prefix ws-fd9b735      --results-dir $OUT --freeze $F
@@ -184,7 +208,9 @@ files that are not public: `runs_to_grade` (the recorded converter outputs of th
 machine, published as release assets with their hashes in `results/v1.3/OUTPUTS.sha256`),
 `private_fixtures` (GURREN) and `packaging_tools_informative` (grows with reading aids that
 never decide a verdict). On another machine these three differ; every section that decides
-a verdict (sources, fixtures, rules, references, `tools`, normaliser) must be identical.
+a verdict (sources, fixtures, rules, references, `tools`, normaliser) must be identical — on
+the v1.3 commit `2e7bc09`. The command only prints `FREEZE UNCHANGED` / `FREEZE DIFFERS` (exit
+0 / 1), not which section differs: compare the JSON sections to see which ones.
 
 Mojang components used for the Java reference (from Mojang's servers, never redistributed):
 `versions/26.3/26.3.jar` SHA-256 `4508d006323f24fa02876310c192d739af56516eb259000ac50f0909a68c9a2d`

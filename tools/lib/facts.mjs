@@ -1,7 +1,7 @@
 // Canonical FACTS extracted from each edition's stored data. Families compare facts,
 // never raw bytes. Everything a rule needs is extracted here, in one place, so the
 // same reading is applied to every converter's output.
-import { get, plain, snbt, textOf, semantic } from './nbt.mjs';
+import { get, plain, snbt, textOf, semantic, put } from './nbt.mjs';
 import { fullJavaState } from './registry.mjs';
 
 // Keys that change on every save or tick and carry no world state a player would miss.
@@ -25,7 +25,7 @@ export function javaItem(tag) {
   const comps = {};
   const ct = get(tag, 'components');
   const compsSem = {};
-  if (ct && ct.type === 'compound') for (const [k, v] of Object.entries(ct.value)) { comps[k] = snbt(v); compsSem[k] = semantic(v); }
+  if (ct && ct.type === 'compound') for (const [k, v] of Object.entries(ct.value)) { put(comps, k, snbt(v)); put(compsSem, k, semantic(v)); }
   const pc = p.components || {};
   return {
     id, count: Number(count), components: comps, components_sem: compsSem,
@@ -85,7 +85,7 @@ function tagSemantic(t) {
       for (const [k, x] of Object.entries(v.value)) {
         if (top && (k === 'Damage' || k === 'RepairCost') && Number(x?.value) === 0) continue;
         const y = strip(x, false);
-        if (y !== undefined) o[k] = y;
+        if (y !== undefined) put(o, k, y);
       }
       return { type: 'compound', value: o };
     }
@@ -102,7 +102,7 @@ const lines4 = (a) => (Array.isArray(a) ? a.map((x) => textOf(x)) : []);
 export function javaBlockEntity(tag) {
   const p = plain(tag);
   const f = { id: p.id, pos: [p.x, p.y, p.z], data: {}, sem: {} };
-  for (const [k, v] of Object.entries(tag.value)) if (!VOLATILE_JAVA_BE_KEYS.has(k)) { f.data[k] = snbt(v); f.sem[k] = semantic(v); }
+  for (const [k, v] of Object.entries(tag.value)) if (!VOLATILE_JAVA_BE_KEYS.has(k)) { put(f.data, k, snbt(v)); put(f.sem, k, semantic(v)); }
   if (p.CustomName !== undefined) f.custom_name = textOf(p.CustomName);
   const items = get(tag, 'Items');
   if (items) f.items = (items.value.value || []).map((v) => ({ slot: v.Slot?.value ?? null, item: javaItem({ type: 'compound', value: v }) })).filter((x) => x.item);
@@ -123,7 +123,7 @@ export function javaBlockEntity(tag) {
 export function bedrockBlockEntity(tag) {
   const p = plain(tag);
   const f = { id: p.id, pos: [p.x, p.y, p.z], data: {}, sem: {} };
-  for (const [k, v] of Object.entries(tag.value)) if (!VOLATILE_BEDROCK_BE_KEYS.has(k)) { f.data[k] = snbt(v); f.sem[k] = semantic(v); }
+  for (const [k, v] of Object.entries(tag.value)) if (!VOLATILE_BEDROCK_BE_KEYS.has(k)) { put(f.data, k, snbt(v)); put(f.sem, k, semantic(v)); }
   if (p.CustomName !== undefined) f.custom_name = stripSection(p.CustomName);
   const items = get(tag, 'Items');
   // Rule 44: a POSITIONAL list (no entry carries `Slot`, e.g. ChiseledBookshelf's six
@@ -159,7 +159,7 @@ const num = (v) => (v === undefined || v === null ? undefined : Number(v));
 export function javaEntity(tag) {
   const p = plain(tag);
   const f = { id: p.id, pos: (p.Pos || []).map(Number), data: {}, sem: {} };
-  for (const [k, v] of Object.entries(tag.value)) if (!VOLATILE_JAVA_ENTITY_KEYS.has(k)) { f.data[k] = snbt(v); f.sem[k] = semantic(v); }
+  for (const [k, v] of Object.entries(tag.value)) if (!VOLATILE_JAVA_ENTITY_KEYS.has(k)) { put(f.data, k, snbt(v)); put(f.sem, k, semantic(v)); }
   f.tags = p.Tags || [];
   f.uuid = Array.isArray(p.UUID) ? p.UUID.map((x) => (x >>> 0).toString(16).padStart(8, '0')).join('') : undefined;
   if (p.CustomName !== undefined) f.custom_name = textOf(p.CustomName);
@@ -190,7 +190,7 @@ export function javaEntity(tag) {
 export function bedrockEntity(tag) {
   const p = plain(tag);
   const f = { id: p.identifier, pos: (p.Pos || []).map(Number), data: {}, sem: {} };
-  for (const [k, v] of Object.entries(tag.value)) if (!VOLATILE_BEDROCK_ENTITY_KEYS.has(k)) { f.data[k] = snbt(v); f.sem[k] = semantic(v); }
+  for (const [k, v] of Object.entries(tag.value)) if (!VOLATILE_BEDROCK_ENTITY_KEYS.has(k)) { put(f.data, k, snbt(v)); put(f.sem, k, semantic(v)); }
   f.tags = p.Tags || [];
   f.uuid = p.UniqueID !== undefined ? String(p.UniqueID) : undefined;
   if (p.CustomName !== undefined && p.CustomName !== '') f.custom_name = stripSection(p.CustomName);
