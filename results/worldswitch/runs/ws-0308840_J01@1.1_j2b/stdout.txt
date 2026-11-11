@@ -1,0 +1,18 @@
+[jtb] pré-vol : 244 chunks échantillonnés, 244 avec palette, palette lisible ✓
+[mca] entities/r.1.1.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.1.3.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.2.3.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.3.1.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.3.2.mca : région vide (0 o) — normal, aucun chunk à lire.
+[jtb] régions : 13 tâche(s) en 8 worker(s)
+[mca] entities/r.2.3.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.1.3.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.1.1.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.3.1.mca : région vide (0 o) — normal, aucun chunk à lire.
+[mca] entities/r.3.2.mca : région vide (0 o) — normal, aucun chunk à lire.
+[jtb] scoreboard → clé LevelDB
+[jtb] clés globales Bedrock (LevelChunkMetaDataDictionary + Overworld/mobevents/…) écrites
+[jtb] villageois : 30 lien(s) lit/cloche/poste → 6 clé(s) VILLAGE_*_POI
+[jtb] villageois : 30 DwellingUniqueID pose(s)
+[jtb] 5355 sections, 8147 chunks, 6690 BE, 121 entities, 0 maps, 0 structures, player=yes, legacy=0
+[jtb] java-sidecar : 97 enregistrements (dont 92 fichier(s) en flux, 4702 BE)

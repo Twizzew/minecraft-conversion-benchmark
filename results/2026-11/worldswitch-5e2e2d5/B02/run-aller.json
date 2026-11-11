@@ -1,0 +1,253 @@
+{
+ "schema": "mccb.run/1",
+ "run_id": "B02_aller",
+ "converter": {
+  "name": "WorldSwitch",
+  "engine_package": "worldswitch",
+  "engine_package_version": "2.8.0",
+  "commit": "5e2e2d528d469eb3fdd90dd318073304fa46fa25",
+  "working_tree_clean": true,
+  "build": "docker image mccb-ws:5e2e2d5 (sha256:6056b0f06d32a23b6df03d9c29faf18e494fe688e3a5ed5e6d90eb5667942ec8), Dockerfile du dépôt, git archive du commit",
+  "source_available": false
+ },
+ "direction": "bedrock_to_java",
+ "source": {
+  "ref": "source",
+  "file": "MCCB_B02_LIVING_BEDROCK.mcworld",
+  "sha256": "34d9b5dfaff557ef5e3907cae8fba31fc5de8dc03cb49c145ab14b0e6f6ccd10",
+  "bytes": 159654
+ },
+ "options": {
+  "recoverUnlinked": true,
+  "locale": "en",
+  "javaUuid": null,
+  "playerMap": null
+ },
+ "environment": {
+  "kind": "labo prod-like (docker-compose.yml)",
+  "limits": {
+   "converter": "cpus 4, memory 5632m, swap 0, read-only, network none, cap-drop ALL, pids 512",
+   "worker": "cpus 0.75, memory 512m, swap 0"
+  },
+  "host": {
+   "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor",
+   "nproc": 8,
+   "kernel": "6.18.54.1-microsoft-standard-WSL2",
+   "mem_total_kb": 8134332
+  }
+ },
+ "started_at": "2026-11-01T01:57:01.557Z",
+ "finished_at": "2026-11-01T01:57:02.331Z",
+ "duration_ms": 774,
+ "exit_status": 0,
+ "error": null,
+ "output": {
+  "file": "output.zip",
+  "sha256": "a19b14b4043da3b398eba37352eec1f89f81d19b9876d6df8569812c8f8169e3",
+  "bytes": 277230,
+  "engine_filename": "Benchmarck_manuel_v1_java.zip"
+ },
+ "logs": [
+  "converter.log",
+  "worker.log",
+  "prep.log"
+ ],
+ "peak": {
+  "converter_memory_bytes": 192045056,
+  "worker_memory_bytes": 50581504
+ },
+ "lab": {
+  "job_id": "2a839e47-91f7-4cdb-9121-946c394684e7",
+  "final_status": "done",
+  "attempts": 1,
+  "notice": {
+   "players": {
+    "total": 2,
+    "linked": 0,
+    "entries": [
+     {
+      "label": "Joueur principal",
+      "isHost": true,
+      "linked": false,
+      "recovery": null,
+      "sourceId": "~local_player",
+      "targetId": "f5a1c0de-0000-4000-8000-000000000001",
+      "itemsCopied": null,
+      "profilePath": "playerdata/f5a1c0de-0000-4000-8000-000000000001.dat",
+      "recoveryError": null,
+      "profilePreserved": true,
+      "uiItemsRecovered": 0,
+      "preservationError": null,
+      "preservationState": "current",
+      "staleFallbackPath": null,
+      "directlyAccessible": true,
+      "uiOverflowLocation": null,
+      "recoverySkippedReason": null,
+      "staleFallbackRestored": false,
+      "inventoryRecoveryRequested": false
+     },
+     {
+      "label": "Joueur 2",
+      "isHost": false,
+      "linked": false,
+      "recovery": {
+       "x": -2,
+       "y": -60,
+       "z": -2,
+       "dimension": "overworld"
+      },
+      "sourceId": "3209b036-5efa-4fe0-b7d9-72d4ddf2f00a",
+      "targetId": "3209b036-5efa-4fe0-b7d9-72d4ddf2f00a",
+      "itemsCopied": 35,
+      "profilePath": "playerdata/3209b036-5efa-4fe0-b7d9-72d4ddf2f00a.dat",
+      "recoveryError": null,
+      "profilePreserved": true,
+      "uiItemsRecovered": 0,
+      "preservationError": null,
+      "preservationState": "current",
+      "staleFallbackPath": null,
+      "directlyAccessible": false,
+      "uiOverflowLocation": null,
+      "recoverySkippedReason": null,
+      "staleFallbackRestored": false,
+      "inventoryRecoveryRequested": true
+     }
+    ],
+    "unlinked": 2,
+    "direction": "bedrock_to_java",
+    "registryFile": "worldswitch_player_recovery.json",
+    "accountLinking": null
+   },
+   "fidelity": {
+    "total": 36,
+    "impacts": [
+     {
+      "en": "Dropped — entity `minecraft:villager.lockedTrades` (×29)",
+      "fr": "Supprimé — entité `minecraft:villager.lockedTrades` (×29)",
+      "category": "dropped"
+     },
+     {
+      "en": "Approximated — entity `minecraft:villager.curedDiscount` (×4)",
+      "fr": "Approximé — entité `minecraft:villager.curedDiscount` (×4)",
+      "category": "approximated"
+     },
+     {
+      "en": "Dropped — entity `minecraft:wandering_trader.HomePos`",
+      "fr": "Supprimé — entité `minecraft:wandering_trader.HomePos`",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — world data `generated structures`",
+      "fr": "Supprimé — donnée de monde `structures generees`",
+      "category": "dropped"
+     },
+     {
+      "en": "Archived — world data `Bedrock setting serverChunkTickRange`",
+      "fr": "Archivé — donnée de monde `réglage Bedrock serverChunkTickRange`",
+      "category": "archived"
+     }
+    ],
+    "detailed": 5,
+    "families": 5,
+    "truncated": 0,
+    "byCategory": {
+     "dropped": 31,
+     "archived": 1,
+     "approximated": 4
+    }
+   }
+  },
+  "upload_ms": 30,
+  "analysis_ms": 209,
+  "analysis": {
+   "detectedType": "Bedrock",
+   "version": "Bedrock 1.26.45",
+   "sizeBytes": 159654,
+   "sizeFormatted": "156 Ko",
+   "uncompressedBytes": 170501,
+   "chunkCount": 3,
+   "levelName": "Benchmarck manuel v1",
+   "valid": true,
+   "gameMode": "survival",
+   "difficulty": "easy",
+   "spawn": "0, auto, 0",
+   "worldRootPrefix": "",
+   "worldCount": 1,
+   "players": [
+    {
+     "sourceId": "~local_player",
+     "isHost": true,
+     "sourceLabel": "Joueur principal",
+     "labelSource": "host",
+     "displayIndex": 1,
+     "xuid": null,
+     "msaId": null,
+     "identifiers": [],
+     "profile": {
+      "items": 34,
+      "armor": 4,
+      "ender": 9,
+      "xpLevel": 18,
+      "dimension": "overworld",
+      "pos": [
+       0,
+       -58,
+       -6
+      ],
+      "nameHints": [],
+      "empty": false
+     },
+     "profileReadable": true,
+     "sharesAccountWith": 0
+    },
+    {
+     "sourceId": "3209b036-5efa-4fe0-b7d9-72d4ddf2f00a",
+     "isHost": false,
+     "sourceLabel": "Joueur 2",
+     "labelSource": "index",
+     "displayIndex": 2,
+     "xuid": null,
+     "msaId": "5c4d40ee-3fe9-3a4c-9572-0c18ee8b6445",
+     "identifiers": [
+      {
+       "kind": "msa",
+       "value": "5c4d40ee-3fe9-3a4c-9572-0c18ee8b6445"
+      }
+     ],
+     "profile": {
+      "items": 31,
+      "armor": 4,
+      "ender": 0,
+      "xpLevel": 0,
+      "dimension": "overworld",
+      "pos": [
+       8,
+       -58,
+       -6
+      ],
+      "nameHints": [],
+      "empty": false
+     },
+     "profileReadable": true,
+     "sharesAccountWith": 0
+    }
+   ],
+   "playersScanned": true,
+   "playersSkippedReason": null,
+   "curedVillagers": 4
+  },
+  "queue_to_done_ms": 1731,
+  "wall_s_worker_start_to_terminal": 2.823581469,
+  "converter": {
+   "memory_peak_bytes": 192045056,
+   "cpu_usec": 1403980,
+   "oom_kills": 0,
+   "scratch_peak_bytes_sampled_2s": 0
+  },
+  "worker": {
+   "memory_peak_bytes": 50581504,
+   "cpu_usec": 414206,
+   "scratch_peak_bytes_sampled_2s": 0
+  }
+ }
+}

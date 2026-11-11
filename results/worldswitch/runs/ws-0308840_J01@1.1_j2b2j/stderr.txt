@@ -1,0 +1,18 @@
+(node:18568) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of <LOCAL>/worldswitch/lib/converter.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to <LOCAL>\worldswitch\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[btj] 13 famille(s) de perte de fidélité :
+[btj]   ×1350 [dropped/block_entity] Music — block-entity Bedrock sans équivalent Java connu (id CamelCase = Bedrock-only)
+[btj]   ×384 [archived/block_entity] minecraft:calibrated_sculk_sensor — recopiée verbatim faute de schéma Java relevé : l'aller-retour la retrouve, le jeu non
+[btj]   ×256 [dropped/block_entity] CopperGolemStatue — block-entity Bedrock sans équivalent Java connu (id CamelCase = Bedrock-only)
+[btj]   ×256 [archived/block_entity] minecraft:copper_golem_statue — recopiée verbatim faute de schéma Java relevé : l'aller-retour la retrouve, le jeu non
+[btj]   ×96 [archived/block_entity] minecraft:sculk_sensor — recopiée verbatim faute de schéma Java relevé : l'aller-retour la retrouve, le jeu non
+[btj]   ×39 [dropped/block_entity] FlowerPot — block-entity Bedrock sans équivalent Java connu (id CamelCase = Bedrock-only)
+[btj]   ×32 [archived/block_entity] minecraft:daylight_detector — recopiée verbatim faute de schéma Java relevé : l'aller-retour la retrouve, le jeu non
+[btj]   ×24 [dropped/block_entity] PistonArm — block-entity Bedrock sans équivalent Java connu (id CamelCase = Bedrock-only)
+[btj]   ×18 [archived/block_entity] minecraft:creaking_heart — recopiée verbatim faute de schéma Java relevé : l'aller-retour la retrouve, le jeu non
+[btj]   ×8 [archived/block_entity] minecraft:sculk_shrieker — recopiée verbatim faute de schéma Java relevé : l'aller-retour la retrouve, le jeu non
+[btj]   ×2 [archived/block_entity] minecraft:sculk_catalyst — recopiée verbatim faute de schéma Java relevé : l'aller-retour la retrouve, le jeu non
+[btj]   ×1 [dropped/item_component] minecraft:max_damage — sur minecraft:diamond_sword : conservé dans le monde Bedrock, mais NON restitué au retour Java — l'objet porte aussi des données legacy (durabilité, potion, enchantements…) et le DataFixer de Mojang remplace alors les composants posés
+[btj]   ×1 [dropped/item_component] minecraft:potion_duration_scale — sur minecraft:potion : conservé dans le monde Bedrock, mais NON restitué au retour Java — l'objet porte aussi des données legacy (durabilité, potion, enchantements…) et le DataFixer de Mojang remplace alors les composants posés

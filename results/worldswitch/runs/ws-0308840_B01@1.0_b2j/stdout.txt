@@ -1,0 +1,5 @@
+[btj] joueurs : 1 détecté(s), 0 rattaché(s) à un compte Java cible
+[btj] régions : 4 tâche(s) en séquentiel
+[btj] 41 charge(s) biome Bedrock reportée(s) au sidecar
+[btj] sidecar : 274 enregistrements Bedrock conservés
+[btj] 67 subchunks, 56 BE, 11 entities, 0 maps, player=yes, legacyB=0

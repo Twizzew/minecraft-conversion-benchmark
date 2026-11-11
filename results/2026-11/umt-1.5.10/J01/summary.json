@@ -1,0 +1,6959 @@
+{
+ "schema": "mccb.results/1",
+ "world": "J01@2.0",
+ "world_class": "LAB",
+ "source_sha256": "44369b2c6d9ecd3dab25f8fe9b18ff92dfd7a120e96db46066a244e134a63331",
+ "converter": "umt-1.5.10",
+ "direct_run": "J01_aller",
+ "roundtrip_run": "J01_retour",
+ "direct_output_sha256": "3bdaecd42c0c27216e1024fa26e87def265c6068024aed14fc80c9ba7261464a",
+ "roundtrip_output_sha256": "bcad128100ebd196baecab07b62ddfbeb7aa3f1fc74adde9e7afe7f4ccbced97",
+ "converter_build": {
+  "name": "Universal Minecraft Tool",
+  "slug": "umt",
+  "version": "1.5.10",
+  "release": "v1.5.10, © 2023 Pryze Software LLC (Settings › About & Licenses) ; application Windows payante, abonnement de l'utilisateur",
+  "app_settings": "Converter : Copy Bedrock Worlds = oui (UMT travaille sur une copie), Copy Java Worlds = non, Remember Conversion Options = oui ; Auto Update = oui",
+  "tool_file": "UniversalMinecraftTool.exe",
+  "tool_sha256": "9c35ed26d7b49abed4c0448bea674e428f8481554fa925c298985f8564c0dc51",
+  "runtime": "Windows 11 (PC de l'utilisateur), interface graphique pilotée à l'écran",
+  "formats": {
+   "java_to_bedrock": "Bedrock 26.50 (Latest)",
+   "bedrock_to_java": "Java 26.3 (Latest)"
+  },
+  "source_available": false,
+  "build": "installateur officiel, C:\\Program Files (x86)\\Universal Minecraft Tool",
+  "command_template": "Converter : Input (dossier du monde) → Output (édition, version « Latest ») → Options (défauts) → Start Conversion → Save World"
+ },
+ "direction": "java_to_bedrock",
+ "options": {
+  "dimensions": "Overworld, Nether, The End",
+  "tile_entities": true,
+  "entities": true,
+  "ticks": true,
+  "skip_partially_generated_chunks": true,
+  "allow_older_chunk_versions": true,
+  "game_mode": "No Change",
+  "difficulty": "No Change",
+  "depth_fixer": "Clip + Bedrock",
+  "new_world_center": "Coords X 0 Z 0",
+  "note": "réglages par défaut d'UMT, aucun modifié"
+ },
+ "target_opens": {
+  "direct": true,
+  "direct_normalize": null,
+  "roundtrip": true,
+  "roundtrip_normalize": {
+   "tool": "MccbNormalize",
+   "minecraft_data_version": 5023,
+   "minecraft_version": "26.3",
+   "level_data_version_before": 5023,
+   "level_data_version_after": 5023,
+   "file_fix": "not required",
+   "world_opens": true,
+   "units": {
+    "block_entity_dropped": 328,
+    "block_entity_loaded": 7395,
+    "block_entity_loaded_with_problems": 2,
+    "chunk": 13564,
+    "entities": 806,
+    "level.dat": 1,
+    "saved_data": 8
+   },
+   "legacy_paths_left": [],
+   "block_entities_dropped_by_game_load": [
+    "minecraft:overworld r.2.1.mca #963 minecraft:hanging_sign @1083,305,1007 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.1.mca #963 minecraft:hanging_sign @1081,305,1007 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.1.mca #963 minecraft:hanging_sign @1081,305,1005 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.1.mca #963 minecraft:hanging_sign @1081,305,1003 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.1.mca #995 minecraft:hanging_sign @1083,305,1013 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.1.mca #995 minecraft:hanging_sign @1085,305,1011 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.1.mca #995 minecraft:hanging_sign @1081,305,1013 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.1.mca #995 minecraft:hanging_sign @1083,305,1011 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.1.mca #995 minecraft:hanging_sign @1081,305,1011 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.1.mca #995 minecraft:hanging_sign @1083,305,1009 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.1.mca #995 minecraft:hanging_sign @1081,305,1009 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.1.mca #995 minecraft:hanging_sign @1087,305,1023 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.1.mca #995 minecraft:hanging_sign @1087,305,1021 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.1.mca #995 minecraft:hanging_sign @1083,305,1023 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.1.mca #995 minecraft:hanging_sign @1085,305,1021 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.1.mca #995 minecraft:hanging_sign @1087,305,1019 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.1.mca #995 minecraft:hanging_sign @1085,305,1019 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.1.mca #995 minecraft:hanging_sign @1081,305,1023 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.1.mca #995 minecraft:hanging_sign @1087,305,1017 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.1.mca #995 minecraft:hanging_sign @1085,305,1017 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.1.mca #995 minecraft:hanging_sign @1081,305,1021 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.1.mca #995 minecraft:hanging_sign @1087,305,1015 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.1.mca #995 minecraft:hanging_sign @1081,305,1019 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.1.mca #995 minecraft:hanging_sign @1083,305,1017 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.1.mca #995 minecraft:hanging_sign @1085,305,1015 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.1.mca #995 minecraft:hanging_sign @1085,305,1013 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.1.mca #995 minecraft:hanging_sign @1083,305,1015 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #3 minecraft:hanging_sign @1087,305,1025 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #3 minecraft:hanging_sign @1085,305,1027 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #3 minecraft:hanging_sign @1083,305,1029 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #3 minecraft:hanging_sign @1081,305,1029 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #3 minecraft:hanging_sign @1083,305,1027 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #3 minecraft:hanging_sign @1081,305,1027 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #3 minecraft:hanging_sign @1083,305,1025 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #3 minecraft:hanging_sign @1081,305,1025 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #3 minecraft:hanging_sign @1087,305,1039 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #3 minecraft:hanging_sign @1087,305,1037 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #3 minecraft:hanging_sign @1085,305,1037 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #3 minecraft:hanging_sign @1083,305,1039 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #3 minecraft:hanging_sign @1087,305,1035 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #3 minecraft:hanging_sign @1085,305,1035 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #3 minecraft:hanging_sign @1081,305,1039 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #3 minecraft:hanging_sign @1087,305,1033 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #3 minecraft:hanging_sign @1087,305,1031 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #3 minecraft:hanging_sign @1081,305,1037 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #3 minecraft:hanging_sign @1085,305,1033 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #3 minecraft:hanging_sign @1081,305,1035 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #3 minecraft:hanging_sign @1085,305,1031 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #3 minecraft:hanging_sign @1083,305,1033 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #3 minecraft:hanging_sign @1083,305,1031 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #3 minecraft:hanging_sign @1085,305,1029 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #35 minecraft:hanging_sign @1087,305,1055 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #35 minecraft:hanging_sign @1087,305,1053 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #35 minecraft:hanging_sign @1087,305,1051 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #35 minecraft:hanging_sign @1083,305,1055 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #35 minecraft:hanging_sign @1085,305,1053 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #35 minecraft:hanging_sign @1087,305,1049 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #35 minecraft:hanging_sign @1081,305,1055 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #35 minecraft:hanging_sign @1085,305,1051 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #35 minecraft:hanging_sign @1087,305,1047 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #35 minecraft:hanging_sign @1081,305,1053 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #35 minecraft:hanging_sign @1085,305,1049 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #35 minecraft:hanging_sign @1083,305,1049 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #35 minecraft:hanging_sign @1085,305,1047 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #35 minecraft:hanging_sign @1081,305,1051 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #35 minecraft:hanging_sign @1085,305,1045 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #35 minecraft:hanging_sign @1083,305,1047 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #35 minecraft:hanging_sign @1083,305,1045 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #35 minecraft:hanging_sign @1085,305,1043 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #35 minecraft:hanging_sign @1087,305,1041 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #35 minecraft:hanging_sign @1081,305,1045 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #35 minecraft:hanging_sign @1083,305,1043 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #35 minecraft:hanging_sign @1083,305,1041 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #35 minecraft:hanging_sign @1081,305,1043 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #35 minecraft:hanging_sign @1081,305,1041 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #67 minecraft:hanging_sign @1087,305,1057 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #67 minecraft:hanging_sign @1085,305,1059 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #67 minecraft:hanging_sign @1083,305,1061 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #67 minecraft:hanging_sign @1083,305,1059 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #67 minecraft:hanging_sign @1081,305,1061 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #67 minecraft:hanging_sign @1083,305,1057 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #67 minecraft:hanging_sign @1081,305,1059 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #67 minecraft:hanging_sign @1081,305,1057 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #67 minecraft:hanging_sign @1087,305,1071 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #67 minecraft:hanging_sign @1087,305,1069 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #67 minecraft:hanging_sign @1087,305,1067 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #67 minecraft:hanging_sign @1085,305,1069 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #67 minecraft:hanging_sign @1087,305,1065 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #67 minecraft:hanging_sign @1085,305,1067 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #67 minecraft:hanging_sign @1085,305,1065 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #67 minecraft:hanging_sign @1087,305,1063 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #67 minecraft:hanging_sign @1085,305,1063 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #67 minecraft:hanging_sign @1083,305,1065 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #67 minecraft:hanging_sign @1083,305,1063 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #67 minecraft:hanging_sign @1085,305,1061 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #99 minecraft:hanging_sign @1087,305,1073 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #129 minecraft:shelf @1045,305,1101 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #129 minecraft:shelf @1045,305,1103 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #167 minecraft:chest @1137,305,1117 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #167 minecraft:chest @1137,305,1119 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #193 minecraft:shelf @1045,305,1133 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #193 minecraft:shelf @1045,305,1135 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #195 minecraft:hanging_sign @1081,305,1131 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #195 minecraft:hanging_sign @1081,305,1133 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #195 minecraft:hanging_sign @1081,305,1135 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #195 minecraft:hanging_sign @1083,305,1135 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #199 minecraft:chest @1137,305,1129 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #199 minecraft:chest @1137,305,1131 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #227 minecraft:hanging_sign @1081,305,1137 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #227 minecraft:hanging_sign @1081,305,1139 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #227 minecraft:hanging_sign @1083,305,1137 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #227 minecraft:hanging_sign @1083,305,1139 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #227 minecraft:hanging_sign @1081,305,1141 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #227 minecraft:hanging_sign @1085,305,1139 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #227 minecraft:hanging_sign @1083,305,1141 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #227 minecraft:hanging_sign @1085,305,1141 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #227 minecraft:hanging_sign @1083,305,1143 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #227 minecraft:hanging_sign @1085,305,1143 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #227 minecraft:hanging_sign @1081,305,1147 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #227 minecraft:hanging_sign @1083,305,1145 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #227 minecraft:hanging_sign @1081,305,1149 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #227 minecraft:hanging_sign @1087,305,1143 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #227 minecraft:hanging_sign @1085,305,1145 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #227 minecraft:hanging_sign @1081,305,1151 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #227 minecraft:hanging_sign @1085,305,1147 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #227 minecraft:hanging_sign @1087,305,1145 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #227 minecraft:hanging_sign @1083,305,1151 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #227 minecraft:hanging_sign @1085,305,1149 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #227 minecraft:hanging_sign @1087,305,1147 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #227 minecraft:hanging_sign @1087,305,1149 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #227 minecraft:hanging_sign @1087,305,1151 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #231 minecraft:chest @1137,305,1141 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #231 minecraft:chest @1137,305,1143 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #257 minecraft:shelf @1045,305,1165 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #257 minecraft:shelf @1045,305,1167 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #259 minecraft:hanging_sign @1085,305,1157 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #259 minecraft:hanging_sign @1083,305,1159 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #259 minecraft:hanging_sign @1085,305,1159 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #259 minecraft:hanging_sign @1083,305,1161 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #259 minecraft:hanging_sign @1081,305,1163 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #259 minecraft:hanging_sign @1085,305,1161 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #259 minecraft:hanging_sign @1087,305,1159 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #259 minecraft:hanging_sign @1081,305,1165 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #259 minecraft:hanging_sign @1081,305,1167 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #259 minecraft:hanging_sign @1087,305,1161 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #259 minecraft:hanging_sign @1085,305,1163 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #259 minecraft:hanging_sign @1083,305,1167 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #259 minecraft:hanging_sign @1087,305,1163 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #259 minecraft:hanging_sign @1085,305,1165 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #259 minecraft:hanging_sign @1087,305,1165 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #259 minecraft:hanging_sign @1087,305,1167 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #259 minecraft:hanging_sign @1081,305,1153 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #259 minecraft:hanging_sign @1083,305,1153 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #259 minecraft:hanging_sign @1081,305,1155 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #259 minecraft:hanging_sign @1081,305,1157 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #259 minecraft:hanging_sign @1083,305,1155 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #259 minecraft:hanging_sign @1087,305,1153 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #259 minecraft:hanging_sign @1085,305,1155 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #259 minecraft:hanging_sign @1083,305,1157 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #263 minecraft:chest @1137,305,1153 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #263 minecraft:chest @1137,305,1155 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #291 minecraft:hanging_sign @1085,305,1173 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #291 minecraft:hanging_sign @1083,305,1175 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #291 minecraft:hanging_sign @1085,305,1175 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #291 minecraft:hanging_sign @1081,305,1179 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #291 minecraft:hanging_sign @1083,305,1177 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #291 minecraft:hanging_sign @1087,305,1175 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #291 minecraft:hanging_sign @1085,305,1177 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #291 minecraft:hanging_sign @1081,305,1181 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #291 minecraft:hanging_sign @1085,305,1179 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #291 minecraft:hanging_sign @1087,305,1177 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #291 minecraft:hanging_sign @1081,305,1183 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #291 minecraft:hanging_sign @1085,305,1181 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #291 minecraft:hanging_sign @1087,305,1179 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #291 minecraft:hanging_sign @1083,305,1183 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #291 minecraft:hanging_sign @1087,305,1181 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #291 minecraft:hanging_sign @1087,305,1183 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #291 minecraft:hanging_sign @1081,305,1169 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #291 minecraft:hanging_sign @1081,305,1171 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #291 minecraft:hanging_sign @1083,305,1169 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #291 minecraft:hanging_sign @1083,305,1171 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #291 minecraft:hanging_sign @1081,305,1173 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #291 minecraft:hanging_sign @1083,305,1173 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #291 minecraft:hanging_sign @1085,305,1171 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #291 minecraft:hanging_sign @1087,305,1169 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #321 minecraft:shelf @1045,305,1197 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #321 minecraft:shelf @1045,305,1199 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #323 minecraft:hanging_sign @1083,305,1191 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #323 minecraft:hanging_sign @1085,305,1189 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #323 minecraft:hanging_sign @1085,305,1191 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #323 minecraft:hanging_sign @1083,305,1193 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #323 minecraft:hanging_sign @1085,305,1193 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #323 minecraft:hanging_sign @1087,305,1191 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #323 minecraft:hanging_sign @1087,305,1193 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #323 minecraft:hanging_sign @1085,305,1195 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #323 minecraft:hanging_sign @1087,305,1195 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #323 minecraft:hanging_sign @1085,305,1197 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #323 minecraft:hanging_sign @1087,305,1197 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #323 minecraft:hanging_sign @1087,305,1199 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #323 minecraft:hanging_sign @1081,305,1185 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #323 minecraft:hanging_sign @1083,305,1185 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #323 minecraft:hanging_sign @1081,305,1187 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #323 minecraft:hanging_sign @1081,305,1189 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #323 minecraft:hanging_sign @1083,305,1187 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #323 minecraft:hanging_sign @1083,305,1189 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #323 minecraft:hanging_sign @1087,305,1185 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #323 minecraft:hanging_sign @1085,305,1187 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #355 minecraft:hanging_sign @1087,305,1201 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #451 minecraft:hanging_sign @1081,305,1259 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #451 minecraft:hanging_sign @1079,305,1261 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #451 minecraft:hanging_sign @1079,305,1259 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #451 minecraft:hanging_sign @1081,305,1263 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #451 minecraft:hanging_sign @1081,305,1261 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #451 minecraft:hanging_sign @1079,305,1263 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #451 minecraft:hanging_sign @1083,305,1263 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #451 minecraft:hanging_sign @1079,305,1257 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #451 minecraft:hanging_sign @1079,305,1255 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #483 minecraft:hanging_sign @1079,305,1265 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #483 minecraft:hanging_sign @1081,305,1267 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #483 minecraft:hanging_sign @1083,305,1265 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #483 minecraft:hanging_sign @1081,305,1265 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #483 minecraft:hanging_sign @1085,305,1267 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #483 minecraft:hanging_sign @1083,305,1269 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #483 minecraft:hanging_sign @1079,305,1273 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #483 minecraft:hanging_sign @1083,305,1267 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #483 minecraft:hanging_sign @1081,305,1269 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #483 minecraft:hanging_sign @1079,305,1271 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #483 minecraft:hanging_sign @1085,305,1271 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #483 minecraft:hanging_sign @1079,305,1277 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #483 minecraft:hanging_sign @1081,305,1275 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #483 minecraft:hanging_sign @1083,305,1273 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #483 minecraft:hanging_sign @1085,305,1269 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #483 minecraft:hanging_sign @1079,305,1275 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #483 minecraft:hanging_sign @1083,305,1271 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #483 minecraft:hanging_sign @1081,305,1279 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #483 minecraft:hanging_sign @1085,305,1275 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #483 minecraft:hanging_sign @1087,305,1273 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #483 minecraft:hanging_sign @1081,305,1277 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #483 minecraft:hanging_sign @1079,305,1279 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #483 minecraft:hanging_sign @1087,305,1271 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #483 minecraft:hanging_sign @1085,305,1273 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #483 minecraft:hanging_sign @1087,305,1277 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #483 minecraft:hanging_sign @1083,305,1279 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #483 minecraft:hanging_sign @1085,305,1277 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #483 minecraft:hanging_sign @1087,305,1275 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #483 minecraft:hanging_sign @1087,305,1279 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #515 minecraft:hanging_sign @1085,305,1287 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #515 minecraft:hanging_sign @1079,305,1293 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #515 minecraft:hanging_sign @1083,305,1289 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #515 minecraft:hanging_sign @1081,305,1291 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #515 minecraft:hanging_sign @1085,305,1285 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #515 minecraft:hanging_sign @1083,305,1287 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #515 minecraft:hanging_sign @1079,305,1291 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #515 minecraft:hanging_sign @1081,305,1295 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #515 minecraft:hanging_sign @1087,305,1289 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #515 minecraft:hanging_sign @1085,305,1291 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #515 minecraft:hanging_sign @1085,305,1289 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #515 minecraft:hanging_sign @1087,305,1287 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #515 minecraft:hanging_sign @1079,305,1295 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #515 minecraft:hanging_sign @1081,305,1293 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #515 minecraft:hanging_sign @1087,305,1293 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #515 minecraft:hanging_sign @1083,305,1295 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #515 minecraft:hanging_sign @1087,305,1291 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #515 minecraft:hanging_sign @1085,305,1293 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #515 minecraft:hanging_sign @1087,305,1295 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #515 minecraft:hanging_sign @1079,305,1281 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #515 minecraft:hanging_sign @1083,305,1281 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #515 minecraft:hanging_sign @1081,305,1283 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #515 minecraft:hanging_sign @1081,305,1281 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #515 minecraft:hanging_sign @1083,305,1285 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #515 minecraft:hanging_sign @1079,305,1289 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #515 minecraft:hanging_sign @1087,305,1281 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #515 minecraft:hanging_sign @1085,305,1283 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #515 minecraft:hanging_sign @1079,305,1287 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #515 minecraft:hanging_sign @1081,305,1285 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #515 minecraft:hanging_sign @1083,305,1283 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #547 minecraft:hanging_sign @1085,305,1303 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #547 minecraft:hanging_sign @1081,305,1307 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #547 minecraft:hanging_sign @1083,305,1305 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #547 minecraft:hanging_sign @1079,305,1309 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #547 minecraft:hanging_sign @1085,305,1301 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #547 minecraft:hanging_sign @1083,305,1303 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #547 minecraft:hanging_sign @1079,305,1307 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #547 minecraft:hanging_sign @1085,305,1307 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #547 minecraft:hanging_sign @1087,305,1305 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #547 minecraft:hanging_sign @1081,305,1311 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #547 minecraft:hanging_sign @1087,305,1303 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #547 minecraft:hanging_sign @1085,305,1305 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #547 minecraft:hanging_sign @1079,305,1311 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #547 minecraft:hanging_sign @1081,305,1309 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #547 minecraft:hanging_sign @1087,305,1309 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #547 minecraft:hanging_sign @1085,305,1309 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #547 minecraft:hanging_sign @1087,305,1307 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #547 minecraft:hanging_sign @1083,305,1311 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #547 minecraft:hanging_sign @1087,305,1311 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #547 minecraft:hanging_sign @1079,305,1297 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #547 minecraft:hanging_sign @1081,305,1299 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #547 minecraft:hanging_sign @1083,305,1297 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #547 minecraft:hanging_sign @1081,305,1297 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #547 minecraft:hanging_sign @1079,305,1305 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #547 minecraft:hanging_sign @1083,305,1301 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #547 minecraft:hanging_sign @1085,305,1299 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #547 minecraft:hanging_sign @1087,305,1297 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #547 minecraft:hanging_sign @1079,305,1303 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #547 minecraft:hanging_sign @1083,305,1299 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #547 minecraft:hanging_sign @1081,305,1301 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #579 minecraft:hanging_sign @1085,305,1319 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #579 minecraft:hanging_sign @1083,305,1321 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #579 minecraft:hanging_sign @1083,305,1319 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #579 minecraft:hanging_sign @1085,305,1317 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #579 minecraft:hanging_sign @1087,305,1321 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #579 minecraft:hanging_sign @1085,305,1323 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #579 minecraft:hanging_sign @1085,305,1321 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #579 minecraft:hanging_sign @1087,305,1319 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #579 minecraft:hanging_sign @1087,305,1325 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #579 minecraft:hanging_sign @1087,305,1323 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #579 minecraft:hanging_sign @1085,305,1325 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #579 minecraft:hanging_sign @1087,305,1327 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #579 minecraft:hanging_sign @1079,305,1313 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #579 minecraft:hanging_sign @1083,305,1313 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #579 minecraft:hanging_sign @1081,305,1315 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #579 minecraft:hanging_sign @1081,305,1313 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #579 minecraft:hanging_sign @1083,305,1317 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #579 minecraft:hanging_sign @1087,305,1313 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #579 minecraft:hanging_sign @1085,305,1315 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #579 minecraft:hanging_sign @1081,305,1317 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #579 minecraft:hanging_sign @1083,305,1315 (block Block{minecraft:air} is not valid for this type)",
+    "minecraft:overworld r.2.2.mca #611 minecraft:hanging_sign @1087,305,1329 (block Block{minecraft:air} is not valid for this type)"
+   ],
+   "block_entities_kept_as_stored": [],
+   "block_entities_loaded_with_problems": [
+    "minecraft:overworld r.1.2.mca #799 minecraft:barrel @1012,304,1410 ( at : Failed to decode value '{Slot:14b,count:1,id:\"minecraft:bucket_of_cod\"}' from field 'Items' at index 14': Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: minecraft:bucket_of_cod)",
+    "minecraft:overworld r.2.2.mca #486 minecraft:beacon @1123,305,1265 ( at : Failed to decode value '\"\"' from field 'secondary_effect': Unknown registry key in ResourceKey[minecraft:root / minecraft:mob_effect]: minecraft:; Failed to decode value '\"\"' from field 'primary_effect': Unknown registry key in ResourceKey[minecraft:root / minecraft:mob_effect]: minecraft:)"
+   ],
+   "errors": []
+  }
+ },
+ "fixtures": {
+  "file": "fixtures/J01_2.0-r113.jsonl.gz",
+  "content_sha256": "183d2efa298c4357d8fc740477aba6c790753770f4991d59e62f8eb3e59008b2",
+  "file_sha256": "d2ced6d96b47ec0c4cf55c9712b95d5673e698d80269661585d7b02bbefec493",
+  "built_from_source_sha256": "44369b2c6d9ecd3dab25f8fe9b18ff92dfd7a120e96db46066a244e134a63331"
+ },
+ "results_file": {
+  "file": "results.jsonl.gz",
+  "sha256": "91bf709738c1a4697b3557414197d80a2068f5cbc1fefcc60bd870fd8e93be5f",
+  "subjects": 168078
+ },
+ "summary": [
+  {
+   "family": "block",
+   "aspect": "identity",
+   "level": "direct",
+   "counts": {
+    "PASS": 128070,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 619,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 1315
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "block",
+   "aspect": "identity",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 130004,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 130004
+   }
+  },
+  {
+   "family": "block",
+   "aspect": "identity",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 129345,
+    "ADAPTED": 5,
+    "PARTIAL": 0,
+    "FAIL": 654,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "block",
+   "aspect": "state",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 129505,
+   "reasons": {
+    "no-neutral-cross-edition-state-reference-in-v1.1": 129505
+   }
+  },
+  {
+   "family": "block",
+   "aspect": "state",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 129505,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 129505
+   }
+  },
+  {
+   "family": "block",
+   "aspect": "state",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 106486,
+    "ADAPTED": 11361,
+    "PARTIAL": 0,
+    "FAIL": 11638,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 20,
+   "reasons": {
+    "state-key-omitted-engine-default-unknown": 20
+   }
+  },
+  {
+   "family": "block",
+   "aspect": "waterlog",
+   "level": "direct",
+   "counts": {
+    "PASS": 12050,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "block",
+   "aspect": "waterlog",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 12050,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 12050
+   }
+  },
+  {
+   "family": "block",
+   "aspect": "waterlog",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 11816,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 234,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "block_entity",
+   "aspect": "presence",
+   "level": "direct",
+   "counts": {
+    "PASS": 7723,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 577,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 4736
+   },
+   "not_evaluated": 187,
+   "reasons": {
+    "natural-content-in-incomplete-chunk": 187
+   }
+  },
+  {
+   "family": "block_entity",
+   "aspect": "presence",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 13223,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 13223
+   }
+  },
+  {
+   "family": "block_entity",
+   "aspect": "presence",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 7395,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 5641,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 187,
+   "reasons": {
+    "natural-content-in-incomplete-chunk": 187
+   }
+  },
+  {
+   "family": "block_entity",
+   "aspect": "data",
+   "level": "direct",
+   "counts": {
+    "PASS": 1353,
+    "ADAPTED": 0,
+    "PARTIAL": 396,
+    "FAIL": 692,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 4731
+   },
+   "not_evaluated": 6051,
+   "reasons": {
+    "natural-content-in-incomplete-chunk": 187,
+    "no-mccb-v1.1-rule-for-this-property": 5864
+   }
+  },
+  {
+   "family": "block_entity",
+   "aspect": "data",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 13223,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 13223
+   }
+  },
+  {
+   "family": "block_entity",
+   "aspect": "data",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 4962,
+    "ADAPTED": 0,
+    "PARTIAL": 2433,
+    "FAIL": 5641,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 187,
+   "reasons": {
+    "natural-content-in-incomplete-chunk": 187
+   }
+  },
+  {
+   "family": "block_entity",
+   "aspect": "sign_text",
+   "level": "direct",
+   "counts": {
+    "PASS": 1383,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 1456
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "block_entity",
+   "aspect": "sign_text",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 2839,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 2839
+   }
+  },
+  {
+   "family": "block_entity",
+   "aspect": "sign_text",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 1071,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1768,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "block_entity",
+   "aspect": "sign_flags",
+   "level": "direct",
+   "counts": {
+    "PASS": 1383,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 1456
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "block_entity",
+   "aspect": "sign_flags",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 2839,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 2839
+   }
+  },
+  {
+   "family": "block_entity",
+   "aspect": "sign_flags",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 1071,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1768,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "block_entity",
+   "aspect": "sign_color",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 1456
+   },
+   "not_evaluated": 1383,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1383
+   }
+  },
+  {
+   "family": "block_entity",
+   "aspect": "sign_color",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 2839,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 2839
+   }
+  },
+  {
+   "family": "block_entity",
+   "aspect": "sign_color",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 1071,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1768,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "block_entity",
+   "aspect": "command",
+   "level": "direct",
+   "counts": {
+    "PASS": 36,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 36
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "block_entity",
+   "aspect": "command",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 72,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 72
+   }
+  },
+  {
+   "family": "block_entity",
+   "aspect": "command",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 36,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 36,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "block_entity",
+   "aspect": "command_flags",
+   "level": "direct",
+   "counts": {
+    "PASS": 36,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 36
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "block_entity",
+   "aspect": "command_flags",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 72,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 72
+   }
+  },
+  {
+   "family": "block_entity",
+   "aspect": "command_flags",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 36,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 36,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "block_entity",
+   "aspect": "record",
+   "level": "direct",
+   "counts": {
+    "PASS": 1,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "block_entity",
+   "aspect": "record",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "block_entity",
+   "aspect": "record",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 1,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "identity",
+   "level": "direct",
+   "counts": {
+    "PASS": 2614,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 57,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 43
+   },
+   "not_evaluated": 76,
+   "reasons": {
+    "double-chest-half-order-undetermined": 76
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "identity",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 2790,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 2790
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "identity",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 2610,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 112,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 68,
+   "reasons": {
+    "double-chest-half-order-undetermined": 68
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "count",
+   "level": "direct",
+   "counts": {
+    "PASS": 2614,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 57,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 43
+   },
+   "not_evaluated": 76,
+   "reasons": {
+    "double-chest-half-order-undetermined": 76
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "count",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 2790,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 2790
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "count",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 2610,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 112,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 68,
+   "reasons": {
+    "double-chest-half-order-undetermined": 68
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:break_sound",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 3,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 3
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:break_sound",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 3,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 3
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:break_sound",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 3,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:mccb:couleur",
+   "level": "direct",
+   "counts": {
+    "PASS": 35,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:mccb:couleur",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 35,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 35
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:mccb:couleur",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 35,
+   "reasons": {
+    "roundtrip-judged-by-tag-aux-or-identity": 35
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:damage",
+   "level": "direct",
+   "counts": {
+    "PASS": 117,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 4,
+   "reasons": {
+    "double-chest-half-order-undetermined": 4
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:damage",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 121,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 121
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:damage",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 117,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 4,
+   "reasons": {
+    "double-chest-half-order-undetermined": 4
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:custom_name",
+   "level": "direct",
+   "counts": {
+    "PASS": 4,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 5,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 1
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "double-chest-half-order-undetermined": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:custom_name",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 11,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 11
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:custom_name",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 10,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "double-chest-half-order-undetermined": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:lore",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 4,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:lore",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 4,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 4
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:lore",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 4,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:enchantments",
+   "level": "direct",
+   "counts": {
+    "PASS": 103,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 5,
+   "reasons": {
+    "detail-absent-from-source": 3,
+    "double-chest-half-order-undetermined": 2
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:enchantments",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 108,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 108
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:enchantments",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 98,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 8,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 2,
+   "reasons": {
+    "double-chest-half-order-undetermined": 2
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:unbreakable",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 2,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:unbreakable",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 2,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 2
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:unbreakable",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 2,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:custom_model_data",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 2,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 2
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:custom_model_data",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 2,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 2
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:custom_model_data",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 2,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:max_stack_size",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 2,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 2
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:max_stack_size",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 2,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 2
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:max_stack_size",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 2,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:rarity",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:rarity",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:rarity",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:enchantment_glint_override",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:enchantment_glint_override",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:enchantment_glint_override",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:repair_cost",
+   "level": "direct",
+   "counts": {
+    "PASS": 2,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:repair_cost",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 2,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 2
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:repair_cost",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 2,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:tooltip_display",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:tooltip_display",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:tooltip_display",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:potion_contents",
+   "level": "direct",
+   "counts": {
+    "PASS": 138,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 48,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "double-chest-half-order-undetermined": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:potion_contents",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 187,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 187
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:potion_contents",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 138,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 48,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "double-chest-half-order-undetermined": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:trim",
+   "level": "direct",
+   "counts": {
+    "PASS": 200,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:trim",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 200,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 200
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:trim",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 200,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:axolotl/variant",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:axolotl/variant",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:axolotl/variant",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:rabbit/variant",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:rabbit/variant",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:rabbit/variant",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:mooshroom/variant",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:mooshroom/variant",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:mooshroom/variant",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:sheep/color",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:sheep/color",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:sheep/color",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:shulker/color",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:shulker/color",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:shulker/color",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:tropical_fish/pattern_color",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:tropical_fish/pattern_color",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:tropical_fish/pattern_color",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:tropical_fish/base_color",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:tropical_fish/base_color",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:tropical_fish/base_color",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:tropical_fish/pattern",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:tropical_fish/pattern",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:tropical_fish/pattern",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:item_model",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:item_model",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:item_model",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:item_name",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:item_name",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:item_name",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:enchantable",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:enchantable",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:enchantable",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:damage_resistant",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:damage_resistant",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:damage_resistant",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:intangible_projectile",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:intangible_projectile",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:intangible_projectile",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:glider",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:glider",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:glider",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:tool",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:tool",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:tool",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:dye",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:dye",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:dye",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:use_effects",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:use_effects",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:use_effects",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:minimum_attack_charge",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:minimum_attack_charge",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:minimum_attack_charge",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:damage_type",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:damage_type",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:damage_type",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:weapon",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:weapon",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:weapon",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:attack_range",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:attack_range",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:attack_range",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:attack_animation",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 2,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 2
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:attack_animation",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 2,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 2
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:attack_animation",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 2,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:potion_duration_scale",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:potion_duration_scale",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:potion_duration_scale",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:food",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:food",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:food",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:consumable",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 2,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 2
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:consumable",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 2,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 2
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:consumable",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 2,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:use_remainder",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:use_remainder",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:use_remainder",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:use_cooldown",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:use_cooldown",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:use_cooldown",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:repairable",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:repairable",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:repairable",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:profile",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 2,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 2
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:profile",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 2,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 2
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:profile",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 2,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:container",
+   "level": "direct",
+   "counts": {
+    "PASS": 18,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 3,
+   "reasons": {
+    "double-chest-half-order-undetermined": 3
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:container",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 21,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 21
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:container",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 17,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 3,
+   "reasons": {
+    "double-chest-half-order-undetermined": 3
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:bundle_contents",
+   "level": "direct",
+   "counts": {
+    "PASS": 19,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "double-chest-half-order-undetermined": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:bundle_contents",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 20,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 20
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:bundle_contents",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 19,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "double-chest-half-order-undetermined": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:note_block_sound",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:note_block_sound",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:note_block_sound",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:interact_animation",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:interact_animation",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:interact_animation",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:provides_pottery_pattern",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:provides_pottery_pattern",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:provides_pottery_pattern",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:cooking_fuel",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:cooking_fuel",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:cooking_fuel",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:brewing_fuel",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:brewing_fuel",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:brewing_fuel",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:sign_text_front",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 3,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 3
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:sign_text_front",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 3,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 3
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:sign_text_front",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 3,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:sign_text_back",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 3,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 3
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:sign_text_back",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 3,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 3
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:sign_text_back",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 3,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:waxed",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 3,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 3
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:waxed",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 3,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 3
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:waxed",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 3,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:cushion/color",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:cushion/color",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:cushion/color",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:compostable",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:compostable",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:compostable",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:villager_food",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:villager_food",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:villager_food",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:mob_visibility",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:mob_visibility",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:mob_visibility",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:pot_decorations",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 4,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 4
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:pot_decorations",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 4,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 4
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:pot_decorations",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 4,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:map_decorations",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 2,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 2
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:map_decorations",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 2,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 2
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:map_decorations",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 2,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:debug_stick_state",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 2
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:debug_stick_state",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 2,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 2
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:debug_stick_state",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 2,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:block_entity_data",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 2,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 2
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:block_entity_data",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 2,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 2
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:block_entity_data",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 2,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:provides_banner_patterns",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:provides_banner_patterns",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:provides_banner_patterns",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:recipes",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 2
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:recipes",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 2,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 2
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:recipes",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 2,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:lodestone_tracker",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 2,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 2
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:lodestone_tracker",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 2,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 2
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:lodestone_tracker",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 2,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:lock",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:lock",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:lock",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:container_loot",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:container_loot",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:container_loot",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:stored_enchantments",
+   "level": "direct",
+   "counts": {
+    "PASS": 4,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "double-chest-half-order-undetermined": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:stored_enchantments",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 5,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 5
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:stored_enchantments",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 4,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "double-chest-half-order-undetermined": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:dyed_color",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 2,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "double-chest-half-order-undetermined": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:dyed_color",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 3,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 3
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:dyed_color",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 2,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "double-chest-half-order-undetermined": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:base_color",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 3,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "double-chest-half-order-undetermined": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:base_color",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 4,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 4
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:base_color",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 3,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "double-chest-half-order-undetermined": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:banner_patterns",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 6,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "double-chest-half-order-undetermined": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:banner_patterns",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 7,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 7
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:banner_patterns",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 6,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "double-chest-half-order-undetermined": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:written_book_content",
+   "level": "direct",
+   "counts": {
+    "PASS": 5,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 2,
+   "reasons": {
+    "double-chest-half-order-undetermined": 2
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:written_book_content",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 7,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 7
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:written_book_content",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 5,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 2,
+   "reasons": {
+    "double-chest-half-order-undetermined": 2
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:ominous_bottle_amplifier",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 4,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:ominous_bottle_amplifier",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 4,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 4
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:ominous_bottle_amplifier",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 4,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:firework_explosion",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 2,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:firework_explosion",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 2,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 2
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:firework_explosion",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 2,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:fireworks",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 2,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:fireworks",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 2,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 2
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:fireworks",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 2,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:instrument",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 7,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:instrument",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 7,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 7
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:instrument",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 7,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:writable_book_content",
+   "level": "direct",
+   "counts": {
+    "PASS": 4,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:writable_book_content",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 4,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 4
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:writable_book_content",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 4,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:suspicious_stew_effects",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 2,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 2
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:suspicious_stew_effects",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 2,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 2
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:suspicious_stew_effects",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 2,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:charged_projectiles",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:charged_projectiles",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:charged_projectiles",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:custom_data",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 2,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 2
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:custom_data",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 2,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 2
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:custom_data",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 2,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:max_damage",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 2,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 2
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:max_damage",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 2,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 2
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:max_damage",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 2,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:can_break",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:can_break",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:can_break",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:can_place_on",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:can_place_on",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:can_place_on",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:bees",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:bees",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:bees",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:block_state",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:block_state",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:block_state",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:map_id",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 2,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 2
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:map_id",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 2,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 2
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:map_id",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 2,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:sulfur_cube_content",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:sulfur_cube_content",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:sulfur_cube_content",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:entity_data",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:entity_data",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:entity_data",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:bucket_entity_data",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:bucket_entity_data",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:bucket_entity_data",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:villager/variant",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:villager/variant",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:villager/variant",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:fox/variant",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:fox/variant",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:fox/variant",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:salmon/size",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:salmon/size",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:salmon/size",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:parrot/variant",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:parrot/variant",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:parrot/variant",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:horse/variant",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:horse/variant",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:horse/variant",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:llama/variant",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:llama/variant",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "item_stack",
+   "aspect": "component:minecraft:llama/variant",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "entity",
+   "aspect": "identity",
+   "level": "direct",
+   "counts": {
+    "PASS": 1865,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 45,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 18,
+   "reasons": {
+    "natural-content-in-incomplete-chunk": 18
+   }
+  },
+  {
+   "family": "entity",
+   "aspect": "identity",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1928,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1928
+   }
+  },
+  {
+   "family": "entity",
+   "aspect": "identity",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 1865,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 45,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 18,
+   "reasons": {
+    "natural-content-in-incomplete-chunk": 18
+   }
+  },
+  {
+   "family": "entity",
+   "aspect": "position",
+   "level": "direct",
+   "counts": {
+    "PASS": 1865,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 45,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 18,
+   "reasons": {
+    "natural-content-in-incomplete-chunk": 18
+   }
+  },
+  {
+   "family": "entity",
+   "aspect": "position",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1928,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1928
+   }
+  },
+  {
+   "family": "entity",
+   "aspect": "position",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 1809,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 101,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 18,
+   "reasons": {
+    "natural-content-in-incomplete-chunk": 18
+   }
+  },
+  {
+   "family": "entity",
+   "aspect": "health",
+   "level": "direct",
+   "counts": {
+    "PASS": 124,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1456,
+   "reasons": {
+    "target-stores-no-health-value": 1456
+   }
+  },
+  {
+   "family": "entity",
+   "aspect": "health",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1580,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1580
+   }
+  },
+  {
+   "family": "entity",
+   "aspect": "health",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 1528,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 52,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "entity",
+   "aspect": "data",
+   "level": "direct",
+   "counts": {
+    "PASS": 1865,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 45,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 18,
+   "reasons": {
+    "natural-content-in-incomplete-chunk": 18
+   }
+  },
+  {
+   "family": "entity",
+   "aspect": "data",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1928,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1928
+   }
+  },
+  {
+   "family": "entity",
+   "aspect": "data",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 1865,
+    "FAIL": 45,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 18,
+   "reasons": {
+    "natural-content-in-incomplete-chunk": 18
+   }
+  },
+  {
+   "family": "entity",
+   "aspect": "baby",
+   "level": "direct",
+   "counts": {
+    "PASS": 52,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "entity",
+   "aspect": "baby",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 52,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 52
+   }
+  },
+  {
+   "family": "entity",
+   "aspect": "baby",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 52,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "entity",
+   "aspect": "tamed",
+   "level": "direct",
+   "counts": {
+    "PASS": 1,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "entity",
+   "aspect": "tamed",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "entity",
+   "aspect": "tamed",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 1,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "entity_extra",
+   "aspect": "extra",
+   "level": "direct",
+   "counts": {
+    "PASS": 3,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "entity_extra",
+   "aspect": "extra",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 3,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 3
+   }
+  },
+  {
+   "family": "entity_extra",
+   "aspect": "extra",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 3,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "world",
+   "aspect": "opens",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "measured-at-behavior-level": 1
+   }
+  },
+  {
+   "family": "world",
+   "aspect": "opens",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "no-bedrock-runtime-in-v1.1": 1
+   }
+  },
+  {
+   "family": "world",
+   "aspect": "opens",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 1,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "world",
+   "aspect": "value",
+   "level": "direct",
+   "counts": {
+    "PASS": 33,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 3,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 31
+   },
+   "not_evaluated": 4,
+   "reasons": {
+    "gamerule-different-unit": 3,
+    "no-mccb-v1.1-rule-for-this-property": 1
+   }
+  },
+  {
+   "family": "world",
+   "aspect": "value",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 71,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 71
+   }
+  },
+  {
+   "family": "world",
+   "aspect": "value",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 64,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 7,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "scoreboard",
+   "aspect": "presence",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "scoreboard",
+   "aspect": "presence",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "scoreboard",
+   "aspect": "presence",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "scoreboard",
+   "aspect": "display_name",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "scoreboard",
+   "aspect": "display_name",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "scoreboard",
+   "aspect": "display_name",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "scoreboard",
+   "aspect": "value",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 49,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "scoreboard",
+   "aspect": "value",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 49,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 49
+   }
+  },
+  {
+   "family": "scoreboard",
+   "aspect": "value",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 49,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "custom_dimension",
+   "aspect": "blocks",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 841
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "custom_dimension",
+   "aspect": "blocks",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 841,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 841
+   }
+  },
+  {
+   "family": "custom_dimension",
+   "aspect": "blocks",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 841,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "player",
+   "aspect": "position",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "player",
+   "aspect": "position",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "player",
+   "aspect": "position",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "player",
+   "aspect": "dimension",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "player",
+   "aspect": "dimension",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "player",
+   "aspect": "dimension",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "player",
+   "aspect": "game_mode",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "player",
+   "aspect": "game_mode",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "player",
+   "aspect": "game_mode",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "player",
+   "aspect": "health",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "player",
+   "aspect": "health",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "player",
+   "aspect": "health",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "player",
+   "aspect": "food",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "player",
+   "aspect": "food",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "player",
+   "aspect": "food",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "player",
+   "aspect": "xp_level",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "player",
+   "aspect": "xp_level",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "player",
+   "aspect": "xp_level",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "player",
+   "aspect": "inventory",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "player",
+   "aspect": "inventory",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "player",
+   "aspect": "inventory",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "player",
+   "aspect": "armor",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "player",
+   "aspect": "armor",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "player",
+   "aspect": "armor",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "player",
+   "aspect": "details",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  },
+  {
+   "family": "player",
+   "aspect": "details",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 1
+   }
+  },
+  {
+   "family": "player",
+   "aspect": "details",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "roundtrip-judged-by-inventory-armor-ender": 1
+   }
+  },
+  {
+   "family": "structure",
+   "aspect": "generation_frontier",
+   "level": "direct",
+   "counts": {
+    "PASS": 1,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "natural-content-in-incomplete-chunk": 1
+   }
+  },
+  {
+   "family": "structure",
+   "aspect": "generation_frontier",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 2,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 2
+   }
+  },
+  {
+   "family": "structure",
+   "aspect": "generation_frontier",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 1,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 1,
+   "reasons": {
+    "natural-content-in-incomplete-chunk": 1
+   }
+  },
+  {
+   "family": "structure",
+   "aspect": "spawn_zone",
+   "level": "direct",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 4572,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 14592,
+   "reasons": {
+    "no-native-bedrock-structure-data-in-corpus": 14592
+   }
+  },
+  {
+   "family": "structure",
+   "aspect": "spawn_zone",
+   "level": "behavior",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 19164,
+   "reasons": {
+    "requires-in-game-runtime-not-automated-in-v1.1": 19164
+   }
+  },
+  {
+   "family": "structure",
+   "aspect": "spawn_zone",
+   "level": "roundtrip",
+   "counts": {
+    "PASS": 0,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 19164,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0
+   },
+   "not_evaluated": 0,
+   "reasons": {}
+  }
+ ],
+ "evaluated_with": {
+  "tools_version": "1.3.0",
+  "node": "v24.16.0"
+ },
+ "grading": {
+  "mode": "dev"
+ },
+ "java_oracle": {
+  "reports": {
+   "blocks_json_sha256": "7a0de8aaf7b04d00c40b8ffdc4cfe75184cff2e821d336a020573201867105a4",
+   "registries_json_sha256": "51f62d56f8bd0e9134ee88dd9226b64e9e56cf6a32377540d44291bf47ecdac6"
+  },
+  "game": {
+   "jar_file": "26.3.jar",
+   "jar_sha256": "4508d006323f24fa02876310c192d739af56516eb259000ac50f0909a68c9a2d",
+   "manifest_sha256": "a1831b3e5ffa479c02d88a441794ff0a69813215e5d0e945edf03a99c7608c2e",
+   "libraries": 74,
+   "library_problems": [
+    "40 manifest libraries not on the classpath"
+   ],
+   "java_runtime": "openjdk version \"25.0.1\" 2025-10-21 LTS | OpenJDK Runtime Environment Microsoft-12574223 (build 25.0.1+8-LTS)"
+  },
+  "authenticated": false,
+  "problems": [
+   "no reference for the Java game jar",
+   "library 40 manifest libraries not on the classpath"
+  ]
+ },
+ "scorer": {
+  "fingerprint": "03879be03d65df5f5e0851ac7f57830fe36b913abeaf5557f5fa1bb10934fef7",
+  "files": {
+   "docs/reference/bedrock-default-states.v1.json": "e0bba36bb6e9aedfc5343aaa449eb3b3b78b1537922df1830a8d81ab766c0c55",
+   "docs/reference/identity-equivalence.v1.json": "5fd3bf2c718511b155dcb15a2491713cc76ab6fea21ea2a85831065347c14d50",
+   "docs/reference/impact-classes.v1.json": "c4da81e6ea4e79043004b153a848b29570b16f4aa67fb7de30b623d3ec71d56e",
+   "docs/reference/java-default-max-health.v1.json": "8d5c9aae38a39a65a129df41d08e35cd6c4ec20a3314a4857783a7e3375c9379",
+   "docs/reference/java-gamerule-defaults.v1.json": "21933ff46c06c769e67edf9e2c138e33169dee78b818d71eb684458f734d339f",
+   "manifests/worlds.json": "a7b9aefebd956eb5020a705e035f4cfd846b8b7bfde143f374a8480cae848baa",
+   "tools/families/block.mjs": "620f31f85eda9010ea78a9ae7269d25639d7cba8af453779ff3587f74020e836",
+   "tools/families/block_entity.mjs": "c3c4c388fdc4f5da57caca2ade875d3eb6a759dcf9454b829d29cdcee770e5a1",
+   "tools/families/custom_dimension.mjs": "0163b6ceb6e35482926b6af8e90ebf0b13379dd51db1fde3402ce074451db596",
+   "tools/families/entity.mjs": "cd7023a2162160a4b9e2ac0e4723c694697d6144cd6e66543123274a7f068481",
+   "tools/families/entity_extra.mjs": "1ada4f046ad156c5774366970c8d3157df003c1c6b5a85e0c45ea891e4b8b8af",
+   "tools/families/index.mjs": "2743869cd2c0b0d20fb4f5c2107f6b196b5eff4a64f180b34e487c5be5cea5af",
+   "tools/families/item_stack.mjs": "b3b628b34150c90fdccf308842eda27c391c2ea36c7152f868e60629464154ce",
+   "tools/families/player.mjs": "41ea3653672c1686b68e9376057b6658e555f6740a0f399c63c9abfd908f44ce",
+   "tools/families/scoreboard.mjs": "024084df3e5070ce8e20fd58cfa998ce36b56e859ff6fe8400be555b8098dff1",
+   "tools/families/structure.mjs": "1f75bf363a6c3d465c51cab2547840a80ef1e5cf9f4098866a757473a6bf9296",
+   "tools/families/world.mjs": "25ca4c380a4f0a301ca152142ef12da54aadfca3578502cfc334627cc0c9a25a",
+   "tools/fixtures/zones.mjs": "844820b4ad1cff2cabc5afa218d7a79e45ddd2b2ca02c13371a21b426d2079b4",
+   "tools/java/classpath.mjs": "6f350ec1c2c7d0531269933384008f04f303c594ce215823bfba2774fba32d0d",
+   "tools/java/src/GameRuleDefaults.java": "b3841e0be4575ea2e3d444c2489c7308a5bfbf8c14d056371111781b5876203d",
+   "tools/java/src/MccbMaxHealth.java": "e3d6377e324ffab5fa3eef4d7d354e229fd043acd48c887b26a8c5239344b702",
+   "tools/java/src/MccbNormalize.java": "bb60733e44265e1977b647e7eab9d50ed78bca9f7bb149edaebc32e5895c8ebf",
+   "tools/lib/archive.mjs": "c74ad6253ba3b256f6719d714ea50007a13220cfb9125ee8ea4e10b8b653a462",
+   "tools/lib/bedrock/world.mjs": "af6b0cb28d9d685504e1a6e873c75e60e7d53dd0ef963e18f4960267944a416f",
+   "tools/lib/chest-pairs.mjs": "42b68fc3a3b7121426c0106b2bbc9bd64f506f9e5d53b39c1257b910d4638b56",
+   "tools/lib/cross-data.mjs": "a32611b111aba04aa8201b2c8a0532c984c444b7df46238e24213c001970cf85",
+   "tools/lib/details-objet.mjs": "c81d2a72eb5c30a9a7e9fc6064ef882406059712952fa8bed36493c15e5c6b08",
+   "tools/lib/facts.mjs": "bc7acab30e0b75ae8108fdec27e5a0bffdc4c8096804d5b6279695eac23b1e5a",
+   "tools/lib/fingerprint.mjs": "0bf6bf5b14945b6fe5ddc08701fd16e494e7e246864a8d8d7fe47d0a1f2f8cb3",
+   "tools/lib/fixtures-io.mjs": "3b81f610d590ee8a91a33242efb93bbaa57364c28e5baa7e8a282e66ea5efeaa",
+   "tools/lib/freeze-ref.mjs": "5bcbbf43103a10967fad28621f5ec8b21cdeb0913017485d96094ae83cceba2e",
+   "tools/lib/identity.mjs": "d6701c6b8c9634f0fb2bd7ae8ef436db2b573ec547c9dc52df6479ca9fa8eb03",
+   "tools/lib/java-oracle.mjs": "64228467a923bd1a4cc9ea825bf0f57f538d8c303f4d1c427034dffc7a58aba2",
+   "tools/lib/java/world.mjs": "8fbce911ecf2d4a7278beb9fd0c04b5fd052f81eb25997c91843ec1ef3b43406",
+   "tools/lib/key-detail.mjs": "52714eb0f3f5777e17b0674c2e94ed244ae069cf050bb30a6b43d8e8e79c1519",
+   "tools/lib/nbt-fast.mjs": "288593247e5573b00337344a6445cd6fefca4cf6db7ee29e87600313f0976765",
+   "tools/lib/nbt.mjs": "cdfe065a1315fe76e0be1f77bf5de5d3a5fd25cdb3c3c3f3b7436c5e59593c47",
+   "tools/lib/open.mjs": "a4a2b558d46beeb5d8a8d7de171ae29f5d8cbe7f3e488e2d35b1e3a43d0a3db8",
+   "tools/lib/output-registry.mjs": "5e6eb76ccec7b0cc3d33275adbe367902c2ccc2a04e9eaca8d40452b5e35c64c",
+   "tools/lib/registry.mjs": "7ed1d956fde579606a82bf3aba1ee524b8624c6aadd8e7f697757d41440e9614",
+   "tools/lib/slots.mjs": "1843b11f562327b57ec1fddf4da6a1452f51191f77f60ba2a19178499cd2e350",
+   "tools/lib/status.mjs": "34f74c5424184ceeb882791b457e2542241d130ed41403adebde0a51150e780c",
+   "tools/lib/structures.mjs": "68087e8de90fb47117434364eb565f7c0df51326229169be4df1e12d509c3734",
+   "tools/oracles/evaluate-suite.mjs": "f3759d5f9aca26016722da38434f4fcd28b5f614a17e51453078fabfd075ea69",
+   "tools/oracles/evaluate.mjs": "f56426f01d96ae7a1e476bf96c7f0317aafe9feec095f267d83198dfdd5f283d",
+   "tools/oracles/target.mjs": "1433e659026ef1542e7bb436493b0c2798e189d0e5eb156c8f0e1aac7b8a2bcb",
+   "tools/package-lock.json": "cc1b0f88fa62217160ca61ec12631be9729f372c6356f00eacad49c450c4acf9",
+   "tools/package.json": "8dbb85583a8c1466448a5a2864dc3df196523f4fabcac0a0791a55694c09717e",
+   "tools/reference/bedrock-effect-ids.v1.json": "b7274cd518f3e355b3e7f52d1cc3bed9db99edbc493c37fb6344f31664299522",
+   "tools/reference/build-bedrock-default-states.mjs": "027cf4c31b625128f872cd87dbd2a9633beec416d2b07eb551f67bc54e5abac5",
+   "tools/reference/build-identity.mjs": "ced3a054d2ad7685ff643bdb640d932a4522b82b14ffda12477a7dcfe8e28705",
+   "tools/reference/build-java-gamerule-defaults.mjs": "204b6a23e566847cae0661ba5ba54417975e829cfb8638ce6052050e86e877fc",
+   "tools/reference/gamerules.v1.mjs": "bf61c0616dc59af30ae7516d4c4f91af0867154c6b81af06e7ff92822d63417a",
+   "tools/reference/identity-rules.v1.mjs": "b506319b4e5d842251659a4f76d2c966daac1c6a3d73c4920509e5ccf6b7747e",
+   "tools/reference/j04-commandes-decisions.v1.json": "776a85568c9ea63ed1bac6ef9d70288f792790ad5cd473ac3669d378df5e8ded",
+   "tools/results/impact-report.mjs": "e3eeb491b9df083bbec8ce31389ea914febefee42931263f9966aca0c933c9a6",
+   "tools/results/table-v13.mjs": "5e239d400dc00ecd646a8381394a17ede120758aee5f18ab13dc8710ec78704d"
+  }
+ },
+ "ruleset": {
+  "fingerprint": "98aa7077d09ea62d54c47066add6e30adfa344266b37926337d3530ea02e36d1",
+  "files": {
+   "docs/fixture-rules.md": "1e9e4ff1950749da41187c555425931b7d69ed75c4213a21c6ccef89743f7271",
+   "docs/reference/bedrock-default-states.v1.json": "e0bba36bb6e9aedfc5343aaa449eb3b3b78b1537922df1830a8d81ab766c0c55",
+   "docs/reference/identity-equivalence.v1.json": "5fd3bf2c718511b155dcb15a2491713cc76ab6fea21ea2a85831065347c14d50",
+   "docs/reference/java-gamerule-defaults.v1.json": "21933ff46c06c769e67edf9e2c138e33169dee78b818d71eb684458f734d339f",
+   "tools/reference/gamerules.v1.mjs": "bf61c0616dc59af30ae7516d4c4f91af0867154c6b81af06e7ff92822d63417a",
+   "tools/reference/identity-rules.v1.mjs": "b506319b4e5d842251659a4f76d2c966daac1c6a3d73c4920509e5ccf6b7747e"
+  }
+ }
+}

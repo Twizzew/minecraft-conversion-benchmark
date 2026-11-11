@@ -1,0 +1,82 @@
+{
+  "schema": "mccb.converters/1",
+  "note": "One entry per converter build that produced (or will produce) MCCB runs. A comparison with an unidentified or untraceable build is not accepted.",
+  "converters": [
+    {
+      "name": "WorldSwitch",
+      "slug": "worldswitch",
+      "publisher": "WorldSwitch (maintainer of MCCB — conflict of interest, see METHODOLOGY §8)",
+      "homepage": "https://worldswitchapp.com",
+      "source_available": false,
+      "builds": [
+        {
+          "build": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+          "short": "0308840",
+          "engine_package": "minecraft-world-converter 2.7.80",
+          "commit_date": "2026-09-23T23:29:51+02:00",
+          "working_tree_clean": true,
+          "ci": "GitHub Actions 'security' workflow green on this commit (private repository)",
+          "deployed_on_web_service": "unknown — the service exposes no build identifier",
+          "how_run": "tools/runners/worldswitch/run-suite.mjs: engine library called in a fresh Node.js process per conversion, as the web service's conversion child process does",
+          "options": {
+            "java_to_bedrock": {
+              "targetVersion": "latest",
+              "recoverUnlinked": true,
+              "locale": "en"
+            },
+            "bedrock_to_java": {
+              "recoverUnlinked": true,
+              "locale": "en"
+            }
+          },
+          "options_rationale": "Defaults of the public upload form: target 'latest' (Bedrock 1.26.40 profile) unless the user picks 1.21.60; no Java account UUID unless typed; recovery of unlinked player inventories on. locale only changes texts written by the engine.",
+          "output_formats": {
+            "java": "DataVersion 3700 (Java 1.20.4 layout), upgraded by the game on first open",
+            "bedrock": "level.dat version 1.26.40, LevelDB"
+          },
+          "sidecars": "Outputs embed java_sidecar.bin (Bedrock worlds) / bedrock_sidecar.bin (Java worlds) used to restore data on a return conversion; they are not read by the games and do not count for direct fidelity."
+        }
+      ]
+    },
+    {
+      "name": "Chunker",
+      "slug": "chunker",
+      "homepage": "https://github.com/HiveGamesOSS/Chunker",
+      "source_available": true,
+      "builds": [
+        {
+          "build": "1.20.0",
+          "short": "1.20.0",
+          "release_url": "https://github.com/HiveGamesOSS/Chunker/releases/tag/1.20.0",
+          "tool_file": "chunker-cli-1.20.0.jar",
+          "tool_bytes": 31832317,
+          "tool_sha256": "41efb80bba57c4eb08a810e5cc121211e2c0585aa8ff6eaf63d949782ecea502",
+          "licence": "MIT",
+          "runtime": "Java 25 (Minecraft launcher runtime)",
+          "how_run": "tools/runners/generic/run-suite-command.mjs → run-command.mjs: java -jar chunker-cli-1.20.0.jar -i <world> -o <out> -f <format>",
+          "options": {
+            "java_to_bedrock": {
+              "outputFormat": "BEDROCK_R26_40"
+            },
+            "bedrock_to_java": {
+              "outputFormat": "JAVA_26_3"
+            }
+          },
+          "options_rationale": "Output formats matching the MCCB references (Java 26.3, Bedrock 1.26.40); every other setting left at its default.",
+          "declared_limitations": "README: \"Entities (excluding paintings / item frames)\" are listed among currently unsupported features.",
+          "measured_after": "reports/freeze/ATTESTATION-before-competitors.md"
+        }
+      ],
+      "status": "MEASURED"
+    },
+    {
+      "name": "je2be",
+      "slug": "je2be",
+      "homepage": "https://github.com/kbinani/je2be-core",
+      "source_available": true,
+      "builds": [],
+      "status": "NOT_RUN",
+      "note": "Same procedure as Chunker."
+    }
+  ]
+}

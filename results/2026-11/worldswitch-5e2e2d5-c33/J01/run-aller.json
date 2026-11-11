@@ -1,0 +1,211 @@
+{
+ "schema": "mccb.run/1",
+ "run_id": "J01_aller",
+ "converter": {
+  "name": "WorldSwitch",
+  "engine_package": "worldswitch",
+  "engine_package_version": "2.8.0",
+  "commit": "5e2e2d528d469eb3fdd90dd318073304fa46fa25",
+  "working_tree_clean": false,
+  "patch": "arbre /srv/mccb-2026-11/src-c33 du labo (corrections non commitées du dépôt, voir 05-rapports)",
+  "build": "docker image mccb-ws:5e2e2d5-c33 (sha256:d198d4c6c42bf0a89e09c6c0588beddacc87674848132e456b16eb09fd17c9b2), Dockerfile du dépôt, git archive du commit",
+  "source_available": false
+ },
+ "direction": "java_to_bedrock",
+ "source": {
+  "ref": "source",
+  "file": "MCCB_J01_JAVA_26.3.zip",
+  "sha256": "44369b2c6d9ecd3dab25f8fe9b18ff92dfd7a120e96db46066a244e134a63331",
+  "bytes": 122198330
+ },
+ "options": {
+  "targetVersion": "latest",
+  "recoverUnlinked": true,
+  "locale": "en"
+ },
+ "environment": {
+  "kind": "labo prod-like (docker-compose.yml)",
+  "limits": {
+   "converter": "cpus 4, memory 5632m, swap 0, read-only, network none, cap-drop ALL, pids 512",
+   "worker": "cpus 0.75, memory 512m, swap 0"
+  },
+  "host": {
+   "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor",
+   "nproc": 8,
+   "kernel": "6.18.58.1-microsoft-standard-WSL2",
+   "mem_total_kb": 8134304
+  }
+ },
+ "started_at": "2026-11-10T15:31:01.071Z",
+ "finished_at": "2026-11-10T15:31:30.85Z",
+ "duration_ms": 29779,
+ "exit_status": 0,
+ "error": null,
+ "output": {
+  "file": "output.mcworld",
+  "sha256": "69aea9ea2bc44f1a91d58f815664724061934f02f6c1446858a42151fba50536",
+  "bytes": 210239561,
+  "engine_filename": "J01_bedrock.mcworld"
+ },
+ "logs": [
+  "converter.log",
+  "worker.log",
+  "prep.log"
+ ],
+ "peak": {
+  "converter_memory_bytes": 3150688256,
+  "worker_memory_bytes": 92733440
+ },
+ "lab": {
+  "job_id": "eb5f4c48-3750-44ce-a0b5-62e4a0e9fd29",
+  "final_status": "done",
+  "attempts": 1,
+  "notice": {
+   "fidelity": {
+    "total": 9072,
+    "impacts": [
+     {
+      "en": "Dropped — block entity `minecraft:copper_golem_statue` (×246)",
+      "fr": "Supprimé — block entity `minecraft:copper_golem_statue` (×246)",
+      "category": "dropped"
+     },
+     {
+      "en": "Approximated — entity `entities of an unfinished chunk` (×17)",
+      "fr": "Approximé — entité `entités d’un chunk non terminé` (×17)",
+      "category": "approximated"
+     },
+     {
+      "en": "Dropped — item property `enchantment minecraft:sweeping_edge` (×11)",
+      "fr": "Supprimé — propriété d’objet `enchantement minecraft:sweeping_edge` (×11)",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — block entity `minecraft:vault.shared_data` (×10)",
+      "fr": "Supprimé — block entity `minecraft:vault.shared_data` (×10)",
+      "category": "dropped"
+     },
+     {
+      "en": "Approximated — item property `firework colour` (×8)",
+      "fr": "Approximé — propriété d’objet `couleur de feu d’artifice` (×8)",
+      "category": "approximated"
+     },
+     {
+      "en": "Approximated — block entity `minecraft:trial_spawner.spawn_data.entity` (×6)",
+      "fr": "Approximé — block entity `minecraft:trial_spawner.spawn_data.entity` (×6)",
+      "category": "approximated"
+     },
+     {
+      "en": "Dropped — block entity `minecraft:test_block` (×4)",
+      "fr": "Supprimé — block entity `minecraft:test_block` (×4)",
+      "category": "dropped"
+     },
+     {
+      "en": "Approximated — item `minecraft:debug_stick` (×3)",
+      "fr": "Approximé — objet `minecraft:debug_stick` (×3)",
+      "category": "approximated"
+     },
+     {
+      "en": "Approximated — item `minecraft:knowledge_book` (×3)",
+      "fr": "Approximé — objet `minecraft:knowledge_book` (×3)",
+      "category": "approximated"
+     },
+     {
+      "en": "Dropped — world data `clear-weather timer` (×3)",
+      "fr": "Supprimé — donnée de monde `minuteur de beau temps` (×3)",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — world data `wandering trader schedule` (×3)",
+      "fr": "Supprimé — donnée de monde `planification du marchand ambulant` (×3)",
+      "category": "dropped"
+     },
+     {
+      "en": "Approximated — item `minecraft:blue_concrete_stairs` (×2)",
+      "fr": "Approximé — objet `minecraft:blue_concrete_stairs` (×2)",
+      "category": "approximated"
+     }
+    ],
+    "detailed": 156,
+    "families": 156,
+    "truncated": 0,
+    "byCategory": {
+     "dropped": 297,
+     "archived": 1634,
+     "cosmetic": 13,
+     "normalized": 7054,
+     "approximated": 74
+    }
+   }
+  },
+  "upload_ms": 690,
+  "analysis_ms": 735,
+  "analysis": {
+   "detectedType": "Java",
+   "version": "Java 26.3",
+   "sizeBytes": 122198330,
+   "sizeFormatted": "116.5 Mo",
+   "uncompressedBytes": 179589593,
+   "chunkCount": 43805,
+   "levelName": "J01",
+   "valid": true,
+   "gameMode": "creative",
+   "difficulty": "peaceful",
+   "spawn": "0, 70, 0",
+   "worldRootPrefix": "J01",
+   "worldCount": 1,
+   "players": [
+    {
+     "sourceId": "5bcbe855-323c-4f1e-a587-5f348834b848",
+     "isHost": true,
+     "sourceLabel": "Joueur principal",
+     "labelSource": "host",
+     "displayIndex": 1,
+     "identifiers": [],
+     "profile": {
+      "items": 18,
+      "armor": 4,
+      "ender": 0,
+      "xpLevel": 7,
+      "dimension": "overworld",
+      "pos": [
+       991,
+       353,
+       1459
+      ],
+      "nameHints": [],
+      "empty": false
+     },
+     "profileReadable": true,
+     "sharesAccountWith": 0
+    }
+   ],
+   "playersScanned": true,
+   "playersSkippedReason": null,
+   "playerLinkingSupported": false,
+   "terrainScan": {
+    "total": 21075,
+    "unreadable": 0,
+    "truncatedRegions": 0,
+    "complete": true
+   },
+   "terrainDimensions": {
+    "overworld": 21075,
+    "nether": 0,
+    "end": 0
+   }
+  },
+  "queue_to_done_ms": 30631,
+  "wall_s_worker_start_to_terminal": 28.715,
+  "converter": {
+   "memory_peak_bytes": 3150688256,
+   "cpu_usec": 66215003,
+   "oom_kills": 0,
+   "scratch_peak_bytes_sampled_2s": 740495777
+  },
+  "worker": {
+   "memory_peak_bytes": 92733440,
+   "cpu_usec": 1883570,
+   "scratch_peak_bytes_sampled_2s": 0
+  }
+ }
+}

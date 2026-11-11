@@ -1,0 +1,149 @@
+{
+ "schema": "mccb.provenance/reconstructed-run-records/1",
+ "status": "RECONSTRUCTED provenance, not the original run records (lost)",
+ "build": "WorldSwitch 2.8.0 fd9b73568456efc0b772d958ebffbc5599aa8fac",
+ "generator": "reports/provenance/reconstruct-ws-fd9b735-runs.mjs",
+ "reconstructed_on": "2026-10-03",
+ "records": [
+  {
+   "run_id": "ws-fd9b735_B01@1.0_b2j",
+   "file": "results/worldswitch/runs/ws-fd9b735_B01@1.0_b2j/run.json",
+   "file_sha256": "1463b75446ecc707f1c83b565ae0407b07194cd67f3607ff74e30331bfc49245",
+   "direction": "bedrock_to_java",
+   "source_sha256": "83e8e9909a3d8915980df317073b80c11421152d8f7ed88714fd196e45c0a667",
+   "output_file": "output.zip",
+   "output_sha256": "e513a66b5cad82e9ea08ed1f880b3ab0d4af0148faee337be3b4aa38e4e6a6d1",
+   "converter_commit": "fd9b73568456efc0b772d958ebffbc5599aa8fac"
+  },
+  {
+   "run_id": "ws-fd9b735_B01@1.0_b2j2b",
+   "file": "results/worldswitch/runs/ws-fd9b735_B01@1.0_b2j2b/run.json",
+   "file_sha256": "b983801e781a2a5f928161a82eb18e7b403c9ecb483f587bcb2b01e02dada80e",
+   "direction": "java_to_bedrock",
+   "source_sha256": "e513a66b5cad82e9ea08ed1f880b3ab0d4af0148faee337be3b4aa38e4e6a6d1",
+   "output_file": "output.mcworld",
+   "output_sha256": "d67a6cfc1d9517bc8f972249d97df631a4eef1867aa052a23a38c4fb640779a8",
+   "converter_commit": null
+  },
+  {
+   "run_id": "ws-fd9b735_B02@1.0_b2j",
+   "file": "results/worldswitch/runs/ws-fd9b735_B02@1.0_b2j/run.json",
+   "file_sha256": "f620ff0bffaac94504edf2f16a52c5187c4a137c539885577bb546861ea22555",
+   "direction": "bedrock_to_java",
+   "source_sha256": "34d9b5dfaff557ef5e3907cae8fba31fc5de8dc03cb49c145ab14b0e6f6ccd10",
+   "output_file": "output.zip",
+   "output_sha256": "82f2fc50e562d51b1aef44aab50f69fec4abd729ace48fd9f4f75057a7c810d3",
+   "converter_commit": "fd9b73568456efc0b772d958ebffbc5599aa8fac"
+  },
+  {
+   "run_id": "ws-fd9b735_B02@1.0_b2j2b",
+   "file": "results/worldswitch/runs/ws-fd9b735_B02@1.0_b2j2b/run.json",
+   "file_sha256": "738c406864e176151d0c80c13155e6d538e4bde88e14719188de34b5e001f337",
+   "direction": "java_to_bedrock",
+   "source_sha256": "82f2fc50e562d51b1aef44aab50f69fec4abd729ace48fd9f4f75057a7c810d3",
+   "output_file": "output.mcworld",
+   "output_sha256": "ea977bf114fd2c3a67ffa80fb82a44a829b7bed48e461f92b0a8f0d2567ea2f3",
+   "converter_commit": null
+  },
+  {
+   "run_id": "ws-fd9b735_B03@1.0_b2j",
+   "file": "results/worldswitch/runs/ws-fd9b735_B03@1.0_b2j/run.json",
+   "file_sha256": "fcd63ab3cd6132f24fa8844466db6f8cde5808d66171b7920a2fa6b586df4de6",
+   "direction": "bedrock_to_java",
+   "source_sha256": "fd16e5d795f6b707fb48bce821e09dcad5a8e15c87e101d6e080bb24c911a838",
+   "output_file": "output.zip",
+   "output_sha256": "57704b4475da80e13402fdd7247fd7e3214774dd9d20ad64b596a60e83e7ff4f",
+   "converter_commit": "fd9b73568456efc0b772d958ebffbc5599aa8fac"
+  },
+  {
+   "run_id": "ws-fd9b735_B03@1.0_b2j2b",
+   "file": "results/worldswitch/runs/ws-fd9b735_B03@1.0_b2j2b/run.json",
+   "file_sha256": "2f918ac3726b77b152d50d94d8e0c5ed9af28ac0c212f2e2a91a5ade900c4dcf",
+   "direction": "java_to_bedrock",
+   "source_sha256": "57704b4475da80e13402fdd7247fd7e3214774dd9d20ad64b596a60e83e7ff4f",
+   "output_file": "output.mcworld",
+   "output_sha256": "c02b5bd35c282221b2f6de69fc9cfae66aec533e537abe9979e53d756fb6949c",
+   "converter_commit": null
+  },
+  {
+   "run_id": "ws-fd9b735_J01@1.1_j2b",
+   "file": "results/worldswitch/runs/ws-fd9b735_J01@1.1_j2b/run.json",
+   "file_sha256": "258071005507555236b3870fa8be10bbbfd16703d53b17bf398ea646884d7423",
+   "direction": "java_to_bedrock",
+   "source_sha256": "b28294c78bb7e3c755827153b8d52bbdb5f80a9a45b598d6608a141493d26cf3",
+   "output_file": "output.mcworld",
+   "output_sha256": "46974e300462e6e796c7740ce03cba785f12832f221ef4e42b2d0efedb7c6a43",
+   "converter_commit": "fd9b73568456efc0b772d958ebffbc5599aa8fac"
+  },
+  {
+   "run_id": "ws-fd9b735_J01@1.1_j2b2j",
+   "file": "results/worldswitch/runs/ws-fd9b735_J01@1.1_j2b2j/run.json",
+   "file_sha256": "3df33200e0cbe6a3cfe0506fe9691d25f5a561139340199e8fbb04a9cf1d3476",
+   "direction": "bedrock_to_java",
+   "source_sha256": "46974e300462e6e796c7740ce03cba785f12832f221ef4e42b2d0efedb7c6a43",
+   "output_file": "output.zip",
+   "output_sha256": "b3d3704b6c81c3b256e6a8c575386bdaadedb90f0c4d46d881f4c42c5a1061b2",
+   "converter_commit": null
+  },
+  {
+   "run_id": "ws-fd9b735_J02@1.0_j2b",
+   "file": "results/worldswitch/runs/ws-fd9b735_J02@1.0_j2b/run.json",
+   "file_sha256": "c034de0d7fb03b1baccfa81e15518a55cabeb0c0dd8b0685f26576c3063921bf",
+   "direction": "java_to_bedrock",
+   "source_sha256": "db97f7497094ed5681600b37a76ab81e975341280883dcf433b3d6c40e8f17a4",
+   "output_file": "output.mcworld",
+   "output_sha256": "df8ef7e847ce6d5fdfd7894999cb6e8e6bd669668ada10a500150297124e4520",
+   "converter_commit": "fd9b73568456efc0b772d958ebffbc5599aa8fac"
+  },
+  {
+   "run_id": "ws-fd9b735_J02@1.0_j2b2j",
+   "file": "results/worldswitch/runs/ws-fd9b735_J02@1.0_j2b2j/run.json",
+   "file_sha256": "a2b8fdda4f79d191877e10d68d55c2c2ff96386748186c95e4ec81df386d7957",
+   "direction": "bedrock_to_java",
+   "source_sha256": "df8ef7e847ce6d5fdfd7894999cb6e8e6bd669668ada10a500150297124e4520",
+   "output_file": "output.zip",
+   "output_sha256": "04593255aca9ab5e312cf1873abcc2890317507728e070445812d3bc644f6d82",
+   "converter_commit": null
+  },
+  {
+   "run_id": "ws-fd9b735_J03@1.0_j2b",
+   "file": "results/worldswitch/runs/ws-fd9b735_J03@1.0_j2b/run.json",
+   "file_sha256": "f2ceab5744fbfff029ecd752ecbec437a57fa0b277ecda9b89af0abf820d16a4",
+   "direction": "java_to_bedrock",
+   "source_sha256": "45c7ae7293ff1dfd3310757a8b56f1d094e6928aa20a82b68ff45428f55bbc50",
+   "output_file": "output.mcworld",
+   "output_sha256": "181b5fa5228ad18e17d6d8318113b5b94e4aed35e95e127d3fed033a6f4ed312",
+   "converter_commit": "fd9b73568456efc0b772d958ebffbc5599aa8fac"
+  },
+  {
+   "run_id": "ws-fd9b735_J03@1.0_j2b2j",
+   "file": "results/worldswitch/runs/ws-fd9b735_J03@1.0_j2b2j/run.json",
+   "file_sha256": "e171e47fe782cd0a0093d919c3206ae8c494983b73f8cde823ca99015572bf24",
+   "direction": "bedrock_to_java",
+   "source_sha256": "181b5fa5228ad18e17d6d8318113b5b94e4aed35e95e127d3fed033a6f4ed312",
+   "output_file": "output.zip",
+   "output_sha256": "dbc9331cd8df7c3ee736925b1d035645f2e10f5946fa81da33a85d6c37e652cc",
+   "converter_commit": null
+  },
+  {
+   "run_id": "ws-fd9b735_J04@1.0_j2b",
+   "file": "results/worldswitch/runs/ws-fd9b735_J04@1.0_j2b/run.json",
+   "file_sha256": "c1c6096e8972a986876295a552cec922d445ba5573647909980d82c03fc3c61a",
+   "direction": "java_to_bedrock",
+   "source_sha256": "44a58908bbf86554eb85c6c0fb6b8b060ed016965e943eab05e72145606a7b4c",
+   "output_file": "output.mcworld",
+   "output_sha256": "d226030cbcb9255c8233ab0bd557f01ef5d1d03b731a49821c39a0c0eb0d9cf9",
+   "converter_commit": "fd9b73568456efc0b772d958ebffbc5599aa8fac"
+  },
+  {
+   "run_id": "ws-fd9b735_J04@1.0_j2b2j",
+   "file": "results/worldswitch/runs/ws-fd9b735_J04@1.0_j2b2j/run.json",
+   "file_sha256": "f8e553917d7041616e10ff8a77417750333dd2bef79832f4ad11c414f0ec914b",
+   "direction": "bedrock_to_java",
+   "source_sha256": "d226030cbcb9255c8233ab0bd557f01ef5d1d03b731a49821c39a0c0eb0d9cf9",
+   "output_file": "output.zip",
+   "output_sha256": "e4f9f7b12438d709bf66ad68429c16f76e1e854277f05cf3ee810db650e3fb5b",
+   "converter_commit": null
+  }
+ ]
+}

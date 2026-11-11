@@ -1,0 +1,277 @@
+{
+ "schema": "mccb.run/1",
+ "run_id": "B02_retour",
+ "converter": {
+  "name": "WorldSwitch",
+  "engine_package": "worldswitch",
+  "engine_package_version": "2.8.0",
+  "commit": "5e2e2d528d469eb3fdd90dd318073304fa46fa25",
+  "working_tree_clean": true,
+  "build": "docker image mccb-ws:5e2e2d5 (sha256:6056b0f06d32a23b6df03d9c29faf18e494fe688e3a5ed5e6d90eb5667942ec8), Dockerfile du dépôt, git archive du commit",
+  "source_available": false
+ },
+ "direction": "java_to_bedrock",
+ "source": {
+  "ref": "B02_aller",
+  "file": "output.zip",
+  "sha256": "a19b14b4043da3b398eba37352eec1f89f81d19b9876d6df8569812c8f8169e3",
+  "bytes": 277230
+ },
+ "options": {
+  "targetVersion": "latest",
+  "recoverUnlinked": true,
+  "locale": "en"
+ },
+ "environment": {
+  "kind": "labo prod-like (docker-compose.yml)",
+  "limits": {
+   "converter": "cpus 4, memory 5632m, swap 0, read-only, network none, cap-drop ALL, pids 512",
+   "worker": "cpus 0.75, memory 512m, swap 0"
+  },
+  "host": {
+   "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor",
+   "nproc": 8,
+   "kernel": "6.18.54.1-microsoft-standard-WSL2",
+   "mem_total_kb": 8134332
+  }
+ },
+ "started_at": "2026-11-01T01:57:09.374Z",
+ "finished_at": "2026-11-01T01:57:10.271Z",
+ "duration_ms": 897,
+ "exit_status": 0,
+ "error": null,
+ "output": {
+  "file": "output.mcworld",
+  "sha256": "dc74967c7e15704a6ceaac1f6908a7c305ee4ca56afa4a0e69b9cfddb478dd25",
+  "bytes": 128721,
+  "engine_filename": "Benchmarck_manuel_v1_bedrock.mcworld"
+ },
+ "logs": [
+  "converter.log",
+  "worker.log",
+  "prep.log"
+ ],
+ "peak": {
+  "converter_memory_bytes": 222474240,
+  "worker_memory_bytes": 51195904
+ },
+ "lab": {
+  "job_id": "6f1d8b49-da51-41de-a09f-ea1aa2ae12a9",
+  "final_status": "done",
+  "attempts": 1,
+  "notice": {
+   "players": {
+    "total": 2,
+    "linked": 2,
+    "entries": [
+     {
+      "label": "3209b036-5efa-4fe0-b7d9-72d4ddf2f00a",
+      "isHost": false,
+      "linked": true,
+      "recovery": null,
+      "sourceId": "3209b036-5efa-4fe0-b7d9-72d4ddf2f00a",
+      "targetId": "player_server_3209b036-5efa-4fe0-b7d9-72d4ddf2f00a",
+      "itemsCopied": null,
+      "profilePath": "db:player_server_3209b036-5efa-4fe0-b7d9-72d4ddf2f00a",
+      "recoveryError": null,
+      "profilePreserved": true,
+      "uiItemsRecovered": 0,
+      "preservationError": null,
+      "preservationState": "current",
+      "staleFallbackPath": null,
+      "directlyAccessible": true,
+      "uiOverflowLocation": null,
+      "recoverySkippedReason": null,
+      "staleFallbackRestored": false,
+      "inventoryRecoveryRequested": false
+     },
+     {
+      "label": "Joueur principal",
+      "isHost": true,
+      "linked": true,
+      "recovery": null,
+      "sourceId": "f5a1c0de-0000-4000-8000-000000000001",
+      "targetId": "~local_player",
+      "itemsCopied": null,
+      "profilePath": "db:~local_player",
+      "recoveryError": null,
+      "profilePreserved": true,
+      "uiItemsRecovered": 0,
+      "preservationError": null,
+      "preservationState": "current",
+      "staleFallbackPath": null,
+      "directlyAccessible": true,
+      "uiOverflowLocation": null,
+      "recoverySkippedReason": null,
+      "staleFallbackRestored": false,
+      "inventoryRecoveryRequested": false
+     }
+    ],
+    "unlinked": 0,
+    "direction": "java_to_bedrock",
+    "registryFile": "worldswitch_player_recovery.json",
+    "accountLinking": {
+     "reason": "aucun enregistrement `player_<XUID>` natif n'existe SEUL dans le corpus : rien n'établit qu'un client Bedrock résolve son profil par XUID plutôt que par un identifiant calculé localement (SelfSignedId / PlatformOfflineId), non dérivable d'un XUID. Le rattachement n'est donc pas RÉALISABLE DE FAÇON FIABLE avec ce que porte un monde ; ce n'est pas une impossibilité prouvée du format.",
+     "supported": false
+    }
+   },
+   "fidelity": {
+    "total": 22,
+    "impacts": [
+     {
+      "en": "Dropped — block entity `minecraft:chest.Items.tag.BlockEntityTag.id` (×2)",
+      "fr": "Supprimé — block entity `minecraft:chest.Items.tag.BlockEntityTag.id` (×2)",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — block entity `minecraft:chest.Items.tag.Charged`",
+      "fr": "Supprimé — block entity `minecraft:chest.Items.tag.Charged`",
+      "category": "dropped"
+     },
+     {
+      "en": "Archived — entity `minecraft:arrow : Color, item: fields with no equivalent` (×3)",
+      "fr": "Archivé — entité `minecraft:arrow : Color, item : champs sans équivalent` (×3)",
+      "category": "archived"
+     },
+     {
+      "en": "Archived — entity `minecraft:wolf : sound_variant: fields with no equivalent` (×3)",
+      "fr": "Archivé — entité `minecraft:wolf : sound_variant : champs sans équivalent` (×3)",
+      "category": "archived"
+     },
+     {
+      "en": "Archived — entity `minecraft:arrow : Color: fields with no equivalent` (×2)",
+      "fr": "Archivé — entité `minecraft:arrow : Color : champs sans équivalent` (×2)",
+      "category": "archived"
+     },
+     {
+      "en": "Archived — entity `minecraft:cat : sound_variant: fields with no equivalent` (×2)",
+      "fr": "Archivé — entité `minecraft:cat : sound_variant : champs sans équivalent` (×2)",
+      "category": "archived"
+     },
+     {
+      "en": "Archived — entity `minecraft:pig : sound_variant: fields with no equivalent` (×2)",
+      "fr": "Archivé — entité `minecraft:pig : sound_variant : champs sans équivalent` (×2)",
+      "category": "archived"
+     },
+     {
+      "en": "Archived — entity `minecraft:cow : sound_variant: fields with no equivalent`",
+      "fr": "Archivé — entité `minecraft:cow : sound_variant : champs sans équivalent`",
+      "category": "archived"
+     },
+     {
+      "en": "Archived — entity `minecraft:happy_ghast : drop_chances, home_pos: fields with no equivalent`",
+      "fr": "Archivé — entité `minecraft:happy_ghast : drop_chances, home_pos : champs sans équivalent`",
+      "category": "archived"
+     },
+     {
+      "en": "Archived — entity `minecraft:trident : item, DealtDamage: fields with no equivalent`",
+      "fr": "Archivé — entité `minecraft:trident : item, DealtDamage : champs sans équivalent`",
+      "category": "archived"
+     }
+    ],
+    "detailed": 14,
+    "families": 14,
+    "truncated": 0,
+    "byCategory": {
+     "dropped": 3,
+     "archived": 15,
+     "normalized": 4
+    }
+   }
+  },
+  "upload_ms": 30,
+  "analysis_ms": 270,
+  "analysis": {
+   "detectedType": "Java",
+   "version": "Java 1.20.4",
+   "sizeBytes": 277230,
+   "sizeFormatted": "271 Ko",
+   "uncompressedBytes": 6259571,
+   "chunkCount": 107,
+   "levelName": "Benchmarck manuel v1",
+   "valid": true,
+   "gameMode": "survival",
+   "difficulty": "easy",
+   "spawn": "0, 64, 0",
+   "worldRootPrefix": "",
+   "worldCount": 1,
+   "players": [
+    {
+     "sourceId": "f5a1c0de-0000-4000-8000-000000000001",
+     "isHost": true,
+     "sourceLabel": "Joueur principal",
+     "labelSource": "host",
+     "displayIndex": 1,
+     "identifiers": [],
+     "profile": {
+      "items": 34,
+      "armor": 4,
+      "ender": 9,
+      "xpLevel": 18,
+      "dimension": "overworld",
+      "pos": [
+       0,
+       -60,
+       -6
+      ],
+      "nameHints": [],
+      "empty": false
+     },
+     "profileReadable": true,
+     "sharesAccountWith": 0
+    },
+    {
+     "sourceId": "3209b036-5efa-4fe0-b7d9-72d4ddf2f00a",
+     "isHost": false,
+     "sourceLabel": "3209b036-5efa-4fe0-b7d9-72d4ddf2f00a",
+     "labelSource": "java_uuid",
+     "displayIndex": 2,
+     "identifiers": [],
+     "profile": {
+      "items": 31,
+      "armor": 4,
+      "ender": 0,
+      "xpLevel": 0,
+      "dimension": "overworld",
+      "pos": [
+       8,
+       -60,
+       -6
+      ],
+      "nameHints": [],
+      "empty": false
+     },
+     "profileReadable": true,
+     "sharesAccountWith": 0
+    }
+   ],
+   "playersScanned": true,
+   "playersSkippedReason": null,
+   "playerLinkingSupported": false,
+   "terrainScan": {
+    "total": 67,
+    "unreadable": 0,
+    "truncatedRegions": 0,
+    "complete": true
+   },
+   "terrainDimensions": {
+    "overworld": 67,
+    "nether": 0,
+    "end": 0
+   }
+  },
+  "queue_to_done_ms": 1876,
+  "wall_s_worker_start_to_terminal": 2.822687629,
+  "converter": {
+   "memory_peak_bytes": 222474240,
+   "cpu_usec": 1694751,
+   "oom_kills": 0,
+   "scratch_peak_bytes_sampled_2s": 0
+  },
+  "worker": {
+   "memory_peak_bytes": 51195904,
+   "cpu_usec": 438900,
+   "scratch_peak_bytes_sampled_2s": 0
+  }
+ }
+}

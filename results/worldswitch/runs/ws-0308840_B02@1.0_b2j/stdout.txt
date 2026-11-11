@@ -1,0 +1,9 @@
+[btj] 1 identite(s) de joueur secondaire enregistree(s)
+[btj] joueurs : 2 détecté(s), 0 rattaché(s) à un compte Java cible
+[btj] régions : 4 tâche(s) en séquentiel
+[btj] 67 charge(s) biome Bedrock reportée(s) au sidecar
+[btj] raids Overworld : 1 raid(s) → data/raids.dat
+[btj] sidecar : 545 enregistrements Bedrock conservés
+[btj] 1 joueur(s) secondaire(s) → playerdata/
+[btj] copies de secours : 1/1 posée(s) dans le monde
+[btj] 67 subchunks, 52 BE, 67 entities, 80 maps, player=yes, legacyB=0

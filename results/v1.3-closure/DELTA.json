@@ -1,0 +1,1734 @@
+{
+ "schema": "mccb.closure-delta/1",
+ "worlds": [
+  "J01@1.1",
+  "J02@1.0",
+  "J03@1.0",
+  "J04@1.0",
+  "B01@1.0",
+  "B02@1.0",
+  "B03@1.0"
+ ],
+ "cells": {
+  "WS 0308840 | J01@1.1": {
+   "direct": {
+    "corrected": {
+     "PASS": 56364,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 2,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 15618,
+     "NOT_EVALUATED": 39151
+    },
+    "historical": {
+     "PASS": 56364,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 2,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 15618,
+     "NOT_EVALUATED": 39151
+    },
+    "total": 111135,
+    "total_historical": 111135
+   },
+   "roundtrip": {
+    "corrected": {
+     "PASS": 99078,
+     "ADAPTED": 10246,
+     "PARTIAL": 160,
+     "FAIL": 1650,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 1
+    },
+    "historical": {
+     "PASS": 99078,
+     "ADAPTED": 10246,
+     "PARTIAL": 160,
+     "FAIL": 1650,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 1
+    },
+    "total": 111135,
+    "total_historical": 111135
+   }
+  },
+  "WS 2.8.0 (fd9b735) | J01@1.1": {
+   "direct": {
+    "corrected": {
+     "PASS": 56366,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 0,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 15618,
+     "NOT_EVALUATED": 39151
+    },
+    "historical": {
+     "PASS": 56366,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 0,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 15618,
+     "NOT_EVALUATED": 39151
+    },
+    "total": 111135,
+    "total_historical": 111135
+   },
+   "roundtrip": {
+    "corrected": {
+     "PASS": 99083,
+     "ADAPTED": 10246,
+     "PARTIAL": 160,
+     "FAIL": 1645,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 1
+    },
+    "historical": {
+     "PASS": 99083,
+     "ADAPTED": 10246,
+     "PARTIAL": 160,
+     "FAIL": 1645,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 1
+    },
+    "total": 111135,
+    "total_historical": 111135
+   }
+  },
+  "Chunker 1.20.0 | J01@1.1": {
+   "direct": {
+    "corrected": {
+     "PASS": 55732,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 634,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 15618,
+     "NOT_EVALUATED": 39151
+    },
+    "historical": {
+     "PASS": 55732,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 634,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 15618,
+     "NOT_EVALUATED": 39151
+    },
+    "total": 111135,
+    "total_historical": 111135
+   },
+   "roundtrip": {
+    "corrected": {
+     "PASS": 92325,
+     "ADAPTED": 10349,
+     "PARTIAL": 709,
+     "FAIL": 7751,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 1
+    },
+    "historical": {
+     "PASS": 92352,
+     "ADAPTED": 10349,
+     "PARTIAL": 682,
+     "FAIL": 7751,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 1
+    },
+    "total": 111135,
+    "total_historical": 111135
+   }
+  },
+  "je2be core-8dfc4de | J01@1.1": {
+   "direct": {
+    "corrected": {
+     "PASS": 34,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 56332,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 15618,
+     "NOT_EVALUATED": 39151
+    },
+    "historical": {
+     "PASS": 34,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 56332,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 15618,
+     "NOT_EVALUATED": 39151
+    },
+    "total": 111135,
+    "total_historical": 111135
+   },
+   "roundtrip": {
+    "corrected": {
+     "PASS": 64,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 111070,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 1
+    },
+    "historical": {
+     "PASS": 64,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 111070,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 1
+    },
+    "total": 111135,
+    "total_historical": 111135
+   }
+  },
+  "WS 0308840 | J02@1.0": {
+   "direct": {
+    "corrected": {
+     "PASS": 1640,
+     "ADAPTED": 3,
+     "PARTIAL": 0,
+     "FAIL": 5,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 68,
+     "NOT_EVALUATED": 826
+    },
+    "historical": {
+     "PASS": 1642,
+     "ADAPTED": 3,
+     "PARTIAL": 0,
+     "FAIL": 4,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 68,
+     "NOT_EVALUATED": 825
+    },
+    "total": 2542,
+    "total_historical": 2542
+   },
+   "roundtrip": {
+    "corrected": {
+     "PASS": 2263,
+     "ADAPTED": 0,
+     "PARTIAL": 181,
+     "FAIL": 89,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 9
+    },
+    "historical": {
+     "PASS": 2283,
+     "ADAPTED": 0,
+     "PARTIAL": 162,
+     "FAIL": 89,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 8
+    },
+    "total": 2542,
+    "total_historical": 2542
+   }
+  },
+  "WS 2.8.0 (fd9b735) | J02@1.0": {
+   "direct": {
+    "corrected": {
+     "PASS": 1643,
+     "ADAPTED": 3,
+     "PARTIAL": 0,
+     "FAIL": 2,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 68,
+     "NOT_EVALUATED": 826
+    },
+    "historical": {
+     "PASS": 1645,
+     "ADAPTED": 3,
+     "PARTIAL": 0,
+     "FAIL": 1,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 68,
+     "NOT_EVALUATED": 825
+    },
+    "total": 2542,
+    "total_historical": 2542
+   },
+   "roundtrip": {
+    "corrected": {
+     "PASS": 2315,
+     "ADAPTED": 0,
+     "PARTIAL": 181,
+     "FAIL": 37,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 9
+    },
+    "historical": {
+     "PASS": 2338,
+     "ADAPTED": 0,
+     "PARTIAL": 159,
+     "FAIL": 37,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 8
+    },
+    "total": 2542,
+    "total_historical": 2542
+   }
+  },
+  "Chunker 1.20.0 | J02@1.0": {
+   "direct": {
+    "corrected": {
+     "PASS": 258,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 1391,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 68,
+     "NOT_EVALUATED": 825
+    },
+    "historical": {
+     "PASS": 259,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 1391,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 68,
+     "NOT_EVALUATED": 824
+    },
+    "total": 2542,
+    "total_historical": 2542
+   },
+   "roundtrip": {
+    "corrected": {
+     "PASS": 373,
+     "ADAPTED": 0,
+     "PARTIAL": 16,
+     "FAIL": 2145,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 8
+    },
+    "historical": {
+     "PASS": 374,
+     "ADAPTED": 0,
+     "PARTIAL": 16,
+     "FAIL": 2145,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 7
+    },
+    "total": 2542,
+    "total_historical": 2542
+   }
+  },
+  "je2be core-8dfc4de | J02@1.0": {
+   "direct": {
+    "corrected": {
+     "PASS": 32,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 1618,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 68,
+     "NOT_EVALUATED": 824
+    },
+    "historical": {
+     "PASS": 32,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 1618,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 68,
+     "NOT_EVALUATED": 824
+    },
+    "total": 2542,
+    "total_historical": 2542
+   },
+   "roundtrip": {
+    "corrected": {
+     "PASS": 61,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 2474,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 7
+    },
+    "historical": {
+     "PASS": 61,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 2474,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 7
+    },
+    "total": 2542,
+    "total_historical": 2542
+   }
+  },
+  "WS 0308840 | J03@1.0": {
+   "direct": {
+    "corrected": {
+     "PASS": 706,
+     "ADAPTED": 1,
+     "PARTIAL": 0,
+     "FAIL": 7,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 90,
+     "NOT_EVALUATED": 516
+    },
+    "historical": {
+     "PASS": 710,
+     "ADAPTED": 1,
+     "PARTIAL": 0,
+     "FAIL": 3,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 90,
+     "NOT_EVALUATED": 516
+    },
+    "total": 1320,
+    "total_historical": 1320
+   },
+   "roundtrip": {
+    "corrected": {
+     "PASS": 1224,
+     "ADAPTED": 1,
+     "PARTIAL": 17,
+     "FAIL": 58,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 20
+    },
+    "historical": {
+     "PASS": 1230,
+     "ADAPTED": 1,
+     "PARTIAL": 11,
+     "FAIL": 58,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 20
+    },
+    "total": 1320,
+    "total_historical": 1320
+   }
+  },
+  "WS 2.8.0 (fd9b735) | J03@1.0": {
+   "direct": {
+    "corrected": {
+     "PASS": 713,
+     "ADAPTED": 1,
+     "PARTIAL": 0,
+     "FAIL": 0,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 90,
+     "NOT_EVALUATED": 516
+    },
+    "historical": {
+     "PASS": 713,
+     "ADAPTED": 1,
+     "PARTIAL": 0,
+     "FAIL": 0,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 90,
+     "NOT_EVALUATED": 516
+    },
+    "total": 1320,
+    "total_historical": 1320
+   },
+   "roundtrip": {
+    "corrected": {
+     "PASS": 1227,
+     "ADAPTED": 1,
+     "PARTIAL": 17,
+     "FAIL": 55,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 20
+    },
+    "historical": {
+     "PASS": 1233,
+     "ADAPTED": 1,
+     "PARTIAL": 11,
+     "FAIL": 55,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 20
+    },
+    "total": 1320,
+    "total_historical": 1320
+   }
+  },
+  "Chunker 1.20.0 | J03@1.0": {
+   "direct": {
+    "corrected": {
+     "PASS": 397,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 318,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 90,
+     "NOT_EVALUATED": 515
+    },
+    "historical": {
+     "PASS": 397,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 318,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 90,
+     "NOT_EVALUATED": 515
+    },
+    "total": 1320,
+    "total_historical": 1320
+   },
+   "roundtrip": {
+    "corrected": {
+     "PASS": 720,
+     "ADAPTED": 2,
+     "PARTIAL": 19,
+     "FAIL": 559,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 20
+    },
+    "historical": {
+     "PASS": 720,
+     "ADAPTED": 2,
+     "PARTIAL": 19,
+     "FAIL": 559,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 20
+    },
+    "total": 1320,
+    "total_historical": 1320
+   }
+  },
+  "je2be core-8dfc4de | J03@1.0": {
+   "direct": {
+    "corrected": {
+     "PASS": 26,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 712,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 90,
+     "NOT_EVALUATED": 492
+    },
+    "historical": {
+     "PASS": 26,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 712,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 90,
+     "NOT_EVALUATED": 492
+    },
+    "total": 1320,
+    "total_historical": 1320
+   },
+   "roundtrip": {
+    "corrected": {
+     "PASS": 54,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 1246,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 20
+    },
+    "historical": {
+     "PASS": 54,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 1246,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 20
+    },
+    "total": 1320,
+    "total_historical": 1320
+   }
+  },
+  "WS 0308840 | J04@1.0": {
+   "direct": {
+    "corrected": {
+     "PASS": 18477,
+     "ADAPTED": 3,
+     "PARTIAL": 0,
+     "FAIL": 35,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 124,
+     "NOT_EVALUATED": 16533
+    },
+    "historical": {
+     "PASS": 18477,
+     "ADAPTED": 3,
+     "PARTIAL": 0,
+     "FAIL": 35,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 124,
+     "NOT_EVALUATED": 16533
+    },
+    "total": 35172,
+    "total_historical": 35172
+   },
+   "roundtrip": {
+    "corrected": {
+     "PASS": 34585,
+     "ADAPTED": 0,
+     "PARTIAL": 451,
+     "FAIL": 4,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 132
+    },
+    "historical": {
+     "PASS": 34591,
+     "ADAPTED": 0,
+     "PARTIAL": 445,
+     "FAIL": 4,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 132
+    },
+    "total": 35172,
+    "total_historical": 35172
+   }
+  },
+  "WS 2.8.0 (fd9b735) | J04@1.0": {
+   "direct": {
+    "corrected": {
+     "PASS": 18483,
+     "ADAPTED": 3,
+     "PARTIAL": 0,
+     "FAIL": 29,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 124,
+     "NOT_EVALUATED": 16533
+    },
+    "historical": {
+     "PASS": 18483,
+     "ADAPTED": 3,
+     "PARTIAL": 0,
+     "FAIL": 29,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 124,
+     "NOT_EVALUATED": 16533
+    },
+    "total": 35172,
+    "total_historical": 35172
+   },
+   "roundtrip": {
+    "corrected": {
+     "PASS": 34589,
+     "ADAPTED": 0,
+     "PARTIAL": 451,
+     "FAIL": 0,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 132
+    },
+    "historical": {
+     "PASS": 34594,
+     "ADAPTED": 0,
+     "PARTIAL": 446,
+     "FAIL": 0,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 132
+    },
+    "total": 35172,
+    "total_historical": 35172
+   }
+  },
+  "Chunker 1.20.0 | J04@1.0": {
+   "direct": {
+    "corrected": {
+     "PASS": 17109,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 2038,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 124,
+     "NOT_EVALUATED": 15901
+    },
+    "historical": {
+     "PASS": 17109,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 2038,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 124,
+     "NOT_EVALUATED": 15901
+    },
+    "total": 35172,
+    "total_historical": 35172
+   },
+   "roundtrip": {
+    "corrected": {
+     "PASS": 31278,
+     "ADAPTED": 0,
+     "PARTIAL": 405,
+     "FAIL": 3357,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 132
+    },
+    "historical": {
+     "PASS": 31278,
+     "ADAPTED": 0,
+     "PARTIAL": 405,
+     "FAIL": 3357,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 132
+    },
+    "total": 35172,
+    "total_historical": 35172
+   }
+  },
+  "je2be core-8dfc4de | J04@1.0": {
+   "direct": {
+    "corrected": {
+     "PASS": 33,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 23013,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 124,
+     "NOT_EVALUATED": 12002
+    },
+    "historical": {
+     "PASS": 33,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 23013,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 124,
+     "NOT_EVALUATED": 12002
+    },
+    "total": 35172,
+    "total_historical": 35172
+   },
+   "roundtrip": {
+    "corrected": {
+     "PASS": 63,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 34977,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 132
+    },
+    "historical": {
+     "PASS": 63,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 34977,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 132
+    },
+    "total": 35172,
+    "total_historical": 35172
+   }
+  },
+  "WS 0308840 | B01@1.0": {
+   "direct": {
+    "corrected": {
+     "PASS": 480,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 4,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 13,
+     "NOT_EVALUATED": 246
+    },
+    "historical": {
+     "PASS": 480,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 4,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 13,
+     "NOT_EVALUATED": 246
+    },
+    "total": 743,
+    "total_historical": 743
+   },
+   "roundtrip": {
+    "corrected": {
+     "PASS": 703,
+     "ADAPTED": 0,
+     "PARTIAL": 26,
+     "FAIL": 13,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 1
+    },
+    "historical": {
+     "PASS": 707,
+     "ADAPTED": 0,
+     "PARTIAL": 22,
+     "FAIL": 13,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 1
+    },
+    "total": 743,
+    "total_historical": 743
+   }
+  },
+  "WS 2.8.0 (fd9b735) | B01@1.0": {
+   "direct": {
+    "corrected": {
+     "PASS": 484,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 0,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 13,
+     "NOT_EVALUATED": 246
+    },
+    "historical": {
+     "PASS": 484,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 0,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 13,
+     "NOT_EVALUATED": 246
+    },
+    "total": 743,
+    "total_historical": 743
+   },
+   "roundtrip": {
+    "corrected": {
+     "PASS": 713,
+     "ADAPTED": 0,
+     "PARTIAL": 26,
+     "FAIL": 3,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 1
+    },
+    "historical": {
+     "PASS": 717,
+     "ADAPTED": 0,
+     "PARTIAL": 22,
+     "FAIL": 3,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 1
+    },
+    "total": 743,
+    "total_historical": 743
+   }
+  },
+  "Chunker 1.20.0 | B01@1.0": {
+   "direct": {
+    "corrected": {
+     "PASS": 444,
+     "ADAPTED": 1,
+     "PARTIAL": 0,
+     "FAIL": 39,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 13,
+     "NOT_EVALUATED": 246
+    },
+    "historical": {
+     "PASS": 444,
+     "ADAPTED": 1,
+     "PARTIAL": 0,
+     "FAIL": 39,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 13,
+     "NOT_EVALUATED": 246
+    },
+    "total": 743,
+    "total_historical": 743
+   },
+   "roundtrip": {
+    "corrected": {
+     "PASS": 621,
+     "ADAPTED": 0,
+     "PARTIAL": 46,
+     "FAIL": 75,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 1
+    },
+    "historical": {
+     "PASS": 652,
+     "ADAPTED": 0,
+     "PARTIAL": 16,
+     "FAIL": 74,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 1
+    },
+    "total": 743,
+    "total_historical": 743
+   }
+  },
+  "je2be core-8dfc4de | B01@1.0": {
+   "direct": {
+    "corrected": {
+     "PASS": 476,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 8,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 13,
+     "NOT_EVALUATED": 246
+    },
+    "historical": {
+     "PASS": 476,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 8,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 13,
+     "NOT_EVALUATED": 246
+    },
+    "total": 743,
+    "total_historical": 743
+   },
+   "roundtrip": {
+    "corrected": {
+     "PASS": 696,
+     "ADAPTED": 0,
+     "PARTIAL": 25,
+     "FAIL": 21,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 1
+    },
+    "historical": {
+     "PASS": 700,
+     "ADAPTED": 0,
+     "PARTIAL": 21,
+     "FAIL": 21,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 1
+    },
+    "total": 743,
+    "total_historical": 743
+   }
+  },
+  "WS 0308840 | B02@1.0": {
+   "direct": {
+    "corrected": {
+     "PASS": 587,
+     "ADAPTED": 0,
+     "PARTIAL": 1,
+     "FAIL": 34,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 51,
+     "NOT_EVALUATED": 247
+    },
+    "historical": {
+     "PASS": 623,
+     "ADAPTED": 0,
+     "PARTIAL": 1,
+     "FAIL": 0,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 51,
+     "NOT_EVALUATED": 245
+    },
+    "total": 920,
+    "total_historical": 920
+   },
+   "roundtrip": {
+    "corrected": {
+     "PASS": 796,
+     "ADAPTED": 0,
+     "PARTIAL": 103,
+     "FAIL": 13,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 8
+    },
+    "historical": {
+     "PASS": 800,
+     "ADAPTED": 0,
+     "PARTIAL": 103,
+     "FAIL": 10,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 7
+    },
+    "total": 920,
+    "total_historical": 920
+   }
+  },
+  "WS 2.8.0 (fd9b735) | B02@1.0": {
+   "direct": {
+    "corrected": {
+     "PASS": 622,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 0,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 51,
+     "NOT_EVALUATED": 247
+    },
+    "historical": {
+     "PASS": 624,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 0,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 51,
+     "NOT_EVALUATED": 245
+    },
+    "total": 920,
+    "total_historical": 920
+   },
+   "roundtrip": {
+    "corrected": {
+     "PASS": 803,
+     "ADAPTED": 0,
+     "PARTIAL": 104,
+     "FAIL": 5,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 8
+    },
+    "historical": {
+     "PASS": 805,
+     "ADAPTED": 0,
+     "PARTIAL": 104,
+     "FAIL": 4,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 7
+    },
+    "total": 920,
+    "total_historical": 920
+   }
+  },
+  "Chunker 1.20.0 | B02@1.0": {
+   "direct": {
+    "corrected": {
+     "PASS": 350,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 273,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 51,
+     "NOT_EVALUATED": 246
+    },
+    "historical": {
+     "PASS": 385,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 239,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 51,
+     "NOT_EVALUATED": 245
+    },
+    "total": 920,
+    "total_historical": 920
+   },
+   "roundtrip": {
+    "corrected": {
+     "PASS": 528,
+     "ADAPTED": 0,
+     "PARTIAL": 9,
+     "FAIL": 376,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 7
+    },
+    "historical": {
+     "PASS": 572,
+     "ADAPTED": 0,
+     "PARTIAL": 6,
+     "FAIL": 335,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 7
+    },
+    "total": 920,
+    "total_historical": 920
+   }
+  },
+  "je2be core-8dfc4de | B02@1.0": {
+   "direct": {
+    "corrected": {
+     "PASS": 601,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 22,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 51,
+     "NOT_EVALUATED": 246
+    },
+    "historical": {
+     "PASS": 602,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 22,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 51,
+     "NOT_EVALUATED": 245
+    },
+    "total": 920,
+    "total_historical": 920
+   },
+   "roundtrip": {
+    "corrected": {
+     "PASS": 811,
+     "ADAPTED": 0,
+     "PARTIAL": 71,
+     "FAIL": 31,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 7
+    },
+    "historical": {
+     "PASS": 815,
+     "ADAPTED": 0,
+     "PARTIAL": 67,
+     "FAIL": 31,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 7
+    },
+    "total": 920,
+    "total_historical": 920
+   }
+  },
+  "WS 0308840 | B03@1.0": {
+   "direct": {
+    "corrected": {
+     "PASS": 547,
+     "ADAPTED": 2,
+     "PARTIAL": 1,
+     "FAIL": 0,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 42,
+     "NOT_EVALUATED": 1575
+    },
+    "historical": {
+     "PASS": 547,
+     "ADAPTED": 2,
+     "PARTIAL": 1,
+     "FAIL": 0,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 42,
+     "NOT_EVALUATED": 1575
+    },
+    "total": 2167,
+    "total_historical": 2167
+   },
+   "roundtrip": {
+    "corrected": {
+     "PASS": 721,
+     "ADAPTED": 0,
+     "PARTIAL": 100,
+     "FAIL": 43,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 1303
+    },
+    "historical": {
+     "PASS": 725,
+     "ADAPTED": 0,
+     "PARTIAL": 100,
+     "FAIL": 39,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 1303
+    },
+    "total": 2167,
+    "total_historical": 2167
+   }
+  },
+  "WS 2.8.0 (fd9b735) | B03@1.0": {
+   "direct": {
+    "corrected": {
+     "PASS": 547,
+     "ADAPTED": 2,
+     "PARTIAL": 1,
+     "FAIL": 0,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 42,
+     "NOT_EVALUATED": 1575
+    },
+    "historical": {
+     "PASS": 547,
+     "ADAPTED": 2,
+     "PARTIAL": 1,
+     "FAIL": 0,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 42,
+     "NOT_EVALUATED": 1575
+    },
+    "total": 2167,
+    "total_historical": 2167
+   },
+   "roundtrip": {
+    "corrected": {
+     "PASS": 763,
+     "ADAPTED": 0,
+     "PARTIAL": 97,
+     "FAIL": 4,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 1303
+    },
+    "historical": {
+     "PASS": 763,
+     "ADAPTED": 0,
+     "PARTIAL": 97,
+     "FAIL": 4,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 1303
+    },
+    "total": 2167,
+    "total_historical": 2167
+   }
+  },
+  "Chunker 1.20.0 | B03@1.0": {
+   "direct": {
+    "corrected": {
+     "PASS": 347,
+     "ADAPTED": 1,
+     "PARTIAL": 0,
+     "FAIL": 202,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 42,
+     "NOT_EVALUATED": 1575
+    },
+    "historical": {
+     "PASS": 347,
+     "ADAPTED": 1,
+     "PARTIAL": 0,
+     "FAIL": 202,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 42,
+     "NOT_EVALUATED": 1575
+    },
+    "total": 2167,
+    "total_historical": 2167
+   },
+   "roundtrip": {
+    "corrected": {
+     "PASS": 498,
+     "ADAPTED": 0,
+     "PARTIAL": 86,
+     "FAIL": 280,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 1303
+    },
+    "historical": {
+     "PASS": 512,
+     "ADAPTED": 0,
+     "PARTIAL": 72,
+     "FAIL": 280,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 1303
+    },
+    "total": 2167,
+    "total_historical": 2167
+   }
+  },
+  "je2be core-8dfc4de | B03@1.0": {
+   "direct": {
+    "corrected": {
+     "PASS": 516,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 34,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 42,
+     "NOT_EVALUATED": 1575
+    },
+    "historical": {
+     "PASS": 516,
+     "ADAPTED": 0,
+     "PARTIAL": 0,
+     "FAIL": 34,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 42,
+     "NOT_EVALUATED": 1575
+    },
+    "total": 2167,
+    "total_historical": 2167
+   },
+   "roundtrip": {
+    "corrected": {
+     "PASS": 739,
+     "ADAPTED": 0,
+     "PARTIAL": 88,
+     "FAIL": 37,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 1303
+    },
+    "historical": {
+     "PASS": 746,
+     "ADAPTED": 0,
+     "PARTIAL": 81,
+     "FAIL": 37,
+     "UNSUPPORTED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 1303
+    },
+    "total": 2167,
+    "total_historical": 2167
+   }
+  }
+ },
+ "totals": {
+  "WS 0308840": {
+   "direct": {
+    "PASS": 78801,
+    "ADAPTED": 9,
+    "PARTIAL": 2,
+    "FAIL": 87,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 16006,
+    "NOT_EVALUATED": 59094
+   },
+   "roundtrip": {
+    "PASS": 139370,
+    "ADAPTED": 10247,
+    "PARTIAL": 1038,
+    "FAIL": 1870,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0,
+    "NOT_EVALUATED": 1474
+   }
+  },
+  "WS 2.8.0 (fd9b735)": {
+   "direct": {
+    "PASS": 78858,
+    "ADAPTED": 9,
+    "PARTIAL": 1,
+    "FAIL": 31,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 16006,
+    "NOT_EVALUATED": 59094
+   },
+   "roundtrip": {
+    "PASS": 139493,
+    "ADAPTED": 10247,
+    "PARTIAL": 1036,
+    "FAIL": 1749,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0,
+    "NOT_EVALUATED": 1474
+   }
+  },
+  "Chunker 1.20.0": {
+   "direct": {
+    "PASS": 74637,
+    "ADAPTED": 2,
+    "PARTIAL": 0,
+    "FAIL": 4895,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 16006,
+    "NOT_EVALUATED": 58459
+   },
+   "roundtrip": {
+    "PASS": 126343,
+    "ADAPTED": 10351,
+    "PARTIAL": 1290,
+    "FAIL": 14543,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0,
+    "NOT_EVALUATED": 1472
+   }
+  },
+  "je2be core-8dfc4de": {
+   "direct": {
+    "PASS": 1718,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 81739,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 16006,
+    "NOT_EVALUATED": 54536
+   },
+   "roundtrip": {
+    "PASS": 2488,
+    "ADAPTED": 0,
+    "PARTIAL": 184,
+    "FAIL": 149856,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0,
+    "NOT_EVALUATED": 1471
+   }
+  }
+ },
+ "totals_historical": {
+  "WS 0308840": {
+   "direct": {
+    "PASS": 78843,
+    "ADAPTED": 9,
+    "PARTIAL": 2,
+    "FAIL": 48,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 16006,
+    "NOT_EVALUATED": 59091
+   },
+   "roundtrip": {
+    "PASS": 139414,
+    "ADAPTED": 10247,
+    "PARTIAL": 1003,
+    "FAIL": 1863,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0,
+    "NOT_EVALUATED": 1472
+   }
+  },
+  "WS 2.8.0 (fd9b735)": {
+   "direct": {
+    "PASS": 78862,
+    "ADAPTED": 9,
+    "PARTIAL": 1,
+    "FAIL": 30,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 16006,
+    "NOT_EVALUATED": 59091
+   },
+   "roundtrip": {
+    "PASS": 139533,
+    "ADAPTED": 10247,
+    "PARTIAL": 999,
+    "FAIL": 1748,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0,
+    "NOT_EVALUATED": 1472
+   }
+  },
+  "Chunker 1.20.0": {
+   "direct": {
+    "PASS": 74673,
+    "ADAPTED": 2,
+    "PARTIAL": 0,
+    "FAIL": 4861,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 16006,
+    "NOT_EVALUATED": 58457
+   },
+   "roundtrip": {
+    "PASS": 126460,
+    "ADAPTED": 10351,
+    "PARTIAL": 1216,
+    "FAIL": 14501,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0,
+    "NOT_EVALUATED": 1471
+   }
+  },
+  "je2be core-8dfc4de": {
+   "direct": {
+    "PASS": 1719,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 81739,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 16006,
+    "NOT_EVALUATED": 54535
+   },
+   "roundtrip": {
+    "PASS": 2503,
+    "ADAPTED": 0,
+    "PARTIAL": 169,
+    "FAIL": 149856,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0,
+    "NOT_EVALUATED": 1471
+   }
+  }
+ },
+ "delta": {
+  "WS 0308840": {
+   "direct": {
+    "PASS": -42,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 39,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0,
+    "NOT_EVALUATED": 3
+   },
+   "roundtrip": {
+    "PASS": -44,
+    "ADAPTED": 0,
+    "PARTIAL": 35,
+    "FAIL": 7,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0,
+    "NOT_EVALUATED": 2
+   }
+  },
+  "WS 2.8.0 (fd9b735)": {
+   "direct": {
+    "PASS": -4,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0,
+    "NOT_EVALUATED": 3
+   },
+   "roundtrip": {
+    "PASS": -40,
+    "ADAPTED": 0,
+    "PARTIAL": 37,
+    "FAIL": 1,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0,
+    "NOT_EVALUATED": 2
+   }
+  },
+  "Chunker 1.20.0": {
+   "direct": {
+    "PASS": -36,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 34,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0,
+    "NOT_EVALUATED": 2
+   },
+   "roundtrip": {
+    "PASS": -117,
+    "ADAPTED": 0,
+    "PARTIAL": 74,
+    "FAIL": 42,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0,
+    "NOT_EVALUATED": 1
+   }
+  },
+  "je2be core-8dfc4de": {
+   "direct": {
+    "PASS": -1,
+    "ADAPTED": 0,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0,
+    "NOT_EVALUATED": 1
+   },
+   "roundtrip": {
+    "PASS": -15,
+    "ADAPTED": 0,
+    "PARTIAL": 15,
+    "FAIL": 0,
+    "UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0,
+    "NOT_EVALUATED": 0
+   }
+  }
+ },
+ "transitions": {
+  "WS 0308840": {
+   "block_entity.data | roundtrip | PASS -> PARTIAL": 4,
+   "entity.data | roundtrip | PASS -> PARTIAL": 30,
+   "entity.equipment | direct | PASS -> FAIL": 1,
+   "entity.equipment | roundtrip | PASS -> PARTIAL": 1,
+   "entity.inventory | direct | PASS -> NOT_EVALUATED": 1,
+   "item_stack.component:minecraft:custom_name | direct | PASS -> FAIL": 1,
+   "item_stack.component:minecraft:damage | direct | PASS -> FAIL": 3,
+   "item_stack.component:minecraft:repair_cost | direct | PASS -> FAIL": 6,
+   "item_stack.count | direct | PASS -> FAIL": 14,
+   "item_stack.count | roundtrip | PASS -> FAIL": 2,
+   "item_stack.identity | direct | PASS -> FAIL": 14,
+   "item_stack.identity | roundtrip | PASS -> FAIL": 5,
+   "player.armor | direct | PASS -> NOT_EVALUATED": 2,
+   "player.armor | roundtrip | PASS -> NOT_EVALUATED": 2
+  },
+  "WS 2.8.0 (fd9b735)": {
+   "block_entity.data | roundtrip | PASS -> PARTIAL": 4,
+   "entity.data | roundtrip | PASS -> PARTIAL": 32,
+   "entity.equipment | direct | PASS -> FAIL": 1,
+   "entity.equipment | roundtrip | PASS -> FAIL": 1,
+   "entity.equipment | roundtrip | PASS -> PARTIAL": 1,
+   "entity.inventory | direct | PASS -> NOT_EVALUATED": 1,
+   "player.armor | direct | PASS -> NOT_EVALUATED": 2,
+   "player.armor | roundtrip | PASS -> NOT_EVALUATED": 2
+  },
+  "Chunker 1.20.0": {
+   "block_entity.data | roundtrip | PASS -> PARTIAL": 77,
+   "item_stack.aux | roundtrip | PASS -> FAIL": 1,
+   "item_stack.component:minecraft:custom_name | direct | PASS -> FAIL": 1,
+   "item_stack.component:minecraft:custom_name | roundtrip | PASS -> FAIL": 1,
+   "item_stack.component:minecraft:damage | direct | PASS -> FAIL": 3,
+   "item_stack.component:minecraft:damage | roundtrip | PASS -> FAIL": 3,
+   "item_stack.component:minecraft:repair_cost | direct | PASS -> FAIL": 6,
+   "item_stack.component:minecraft:repair_cost | roundtrip | PASS -> FAIL": 6,
+   "item_stack.count | direct | PASS -> FAIL": 12,
+   "item_stack.count | roundtrip | PASS -> FAIL": 12,
+   "item_stack.identity | direct | PASS -> FAIL": 12,
+   "item_stack.identity | roundtrip | PASS -> FAIL": 12,
+   "item_stack.tag | roundtrip | PASS -> FAIL": 4,
+   "player.armor | direct | PASS -> NOT_EVALUATED": 2,
+   "player.armor | roundtrip | PARTIAL -> FAIL": 1,
+   "player.armor | roundtrip | PASS -> NOT_EVALUATED": 1,
+   "player.inventory | roundtrip | PARTIAL -> FAIL": 2
+  },
+  "je2be core-8dfc4de": {
+   "block_entity.data | roundtrip | PASS -> PARTIAL": 5,
+   "entity.data | roundtrip | PASS -> PARTIAL": 10,
+   "entity.inventory | direct | PASS -> NOT_EVALUATED": 1
+  }
+ },
+ "assertion_set_changes": {},
+ "assertion_set_sha256": {
+  "J01@1.1": [
+   [
+    "WS 0308840",
+    "09e267d29f9f8a2377ad9de52a2fa8ea62402b7131c1cc237c234f4166b7bb48"
+   ],
+   [
+    "WS 2.8.0 (fd9b735)",
+    "09e267d29f9f8a2377ad9de52a2fa8ea62402b7131c1cc237c234f4166b7bb48"
+   ],
+   [
+    "Chunker 1.20.0",
+    "09e267d29f9f8a2377ad9de52a2fa8ea62402b7131c1cc237c234f4166b7bb48"
+   ],
+   [
+    "je2be core-8dfc4de",
+    "09e267d29f9f8a2377ad9de52a2fa8ea62402b7131c1cc237c234f4166b7bb48"
+   ]
+  ],
+  "J02@1.0": [
+   [
+    "WS 0308840",
+    "bc2af1f3ce6a1ced0c4eb3f2e209e7acca5155ef605f1b70ab252a36a7a98a44"
+   ],
+   [
+    "WS 2.8.0 (fd9b735)",
+    "bc2af1f3ce6a1ced0c4eb3f2e209e7acca5155ef605f1b70ab252a36a7a98a44"
+   ],
+   [
+    "Chunker 1.20.0",
+    "bc2af1f3ce6a1ced0c4eb3f2e209e7acca5155ef605f1b70ab252a36a7a98a44"
+   ],
+   [
+    "je2be core-8dfc4de",
+    "bc2af1f3ce6a1ced0c4eb3f2e209e7acca5155ef605f1b70ab252a36a7a98a44"
+   ]
+  ],
+  "J03@1.0": [
+   [
+    "WS 0308840",
+    "8c758407f22ab9d5a5a05787b13e44149e3bde89ec93d5efa86947849e9d70a5"
+   ],
+   [
+    "WS 2.8.0 (fd9b735)",
+    "8c758407f22ab9d5a5a05787b13e44149e3bde89ec93d5efa86947849e9d70a5"
+   ],
+   [
+    "Chunker 1.20.0",
+    "8c758407f22ab9d5a5a05787b13e44149e3bde89ec93d5efa86947849e9d70a5"
+   ],
+   [
+    "je2be core-8dfc4de",
+    "8c758407f22ab9d5a5a05787b13e44149e3bde89ec93d5efa86947849e9d70a5"
+   ]
+  ],
+  "J04@1.0": [
+   [
+    "WS 0308840",
+    "89592a096ad7dc1779f442c05c0c0eda2ae50a38c71815eafff19828f0130dda"
+   ],
+   [
+    "WS 2.8.0 (fd9b735)",
+    "89592a096ad7dc1779f442c05c0c0eda2ae50a38c71815eafff19828f0130dda"
+   ],
+   [
+    "Chunker 1.20.0",
+    "89592a096ad7dc1779f442c05c0c0eda2ae50a38c71815eafff19828f0130dda"
+   ],
+   [
+    "je2be core-8dfc4de",
+    "89592a096ad7dc1779f442c05c0c0eda2ae50a38c71815eafff19828f0130dda"
+   ]
+  ],
+  "B01@1.0": [
+   [
+    "WS 0308840",
+    "9b660da980f739b64d0594d5aa4fb954b04e89bfcdb3f74fc4d476acf40d1e22"
+   ],
+   [
+    "WS 2.8.0 (fd9b735)",
+    "9b660da980f739b64d0594d5aa4fb954b04e89bfcdb3f74fc4d476acf40d1e22"
+   ],
+   [
+    "Chunker 1.20.0",
+    "9b660da980f739b64d0594d5aa4fb954b04e89bfcdb3f74fc4d476acf40d1e22"
+   ],
+   [
+    "je2be core-8dfc4de",
+    "9b660da980f739b64d0594d5aa4fb954b04e89bfcdb3f74fc4d476acf40d1e22"
+   ]
+  ],
+  "B02@1.0": [
+   [
+    "WS 0308840",
+    "ba53aa5345aa86fadd4e4b28d0611cfacc4e18b40df9a36e8017ebbc68e6ab53"
+   ],
+   [
+    "WS 2.8.0 (fd9b735)",
+    "ba53aa5345aa86fadd4e4b28d0611cfacc4e18b40df9a36e8017ebbc68e6ab53"
+   ],
+   [
+    "Chunker 1.20.0",
+    "ba53aa5345aa86fadd4e4b28d0611cfacc4e18b40df9a36e8017ebbc68e6ab53"
+   ],
+   [
+    "je2be core-8dfc4de",
+    "ba53aa5345aa86fadd4e4b28d0611cfacc4e18b40df9a36e8017ebbc68e6ab53"
+   ]
+  ],
+  "B03@1.0": [
+   [
+    "WS 0308840",
+    "e5e885b0510dec5dea8ab80994c0ede0290e7c66909b28667cde30df0f06d9b9"
+   ],
+   [
+    "WS 2.8.0 (fd9b735)",
+    "e5e885b0510dec5dea8ab80994c0ede0290e7c66909b28667cde30df0f06d9b9"
+   ],
+   [
+    "Chunker 1.20.0",
+    "e5e885b0510dec5dea8ab80994c0ede0290e7c66909b28667cde30df0f06d9b9"
+   ],
+   [
+    "je2be core-8dfc4de",
+    "e5e885b0510dec5dea8ab80994c0ede0290e7c66909b28667cde30df0f06d9b9"
+   ]
+  ]
+ },
+ "scorer_ruleset_mode_oracle": [
+  "df6247a67714c7ae936fe78686139ccaa00234be19761d45ea5aab067e4587d8|e2030dcdb8f47c41a3263305301004551e9429ddca87e42a6798a2975c1dd105|official|true"
+ ],
+ "notes": [],
+ "problems": []
+}

@@ -1,0 +1,14 @@
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::invokeCleaner has been called by org.iq80.leveldb.fileenv.ByteBufferSupport (file:/<LOCAL>/Benchmarcks/minecraft-conversion-benchmark/_staging/tools/chunker-cli-1.20.0.jar)
+WARNING: Please consider reporting this to the maintainers of class org.iq80.leveldb.fileenv.ByteBufferSupport
+WARNING: sun.misc.Unsafe::invokeCleaner will be removed in a future release
+Missing entity mapping for END_CRYSTAL
+Missing biome mapping for END_BARRENS
+Missing biome mapping for END_MIDLANDS
+Missing biome mapping for SMALL_END_ISLANDS
+Missing entity mapping for VILLAGER
+Missing entity mapping for CAT
+Missing entity mapping for IRON_GOLEM
+Missing entity mapping for ITEM
+Missing entity mapping for MINECART
+Missing biome mapping for END_HIGHLANDS

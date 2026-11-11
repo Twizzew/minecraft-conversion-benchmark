@@ -1,0 +1,15 @@
+{
+  "schema": "mccb.suite/1",
+  "benchmark_version": "1.1",
+  "source_dir": "_staging/v1.1-source-worlds",
+  "note": "Every ACTIVE source world of MCCB v1.1, converted once to the other edition (direct leg) and back (return leg). Files are the published asset names; their SHA-256 must match manifests/worlds.json before a run is accepted.",
+  "worlds": [
+    { "id": "J01@1.1", "file": "MCCB_J01_STATIC_JAVA_v1.1.zip",   "direction": "java_to_bedrock" },
+    { "id": "J02@1.0", "file": "MCCB_J02_LIVING_JAVA.zip",        "direction": "java_to_bedrock" },
+    { "id": "J03@1.0", "file": "MCCB_J03_SYSTEMS_JAVA.zip",       "direction": "java_to_bedrock" },
+    { "id": "J04@1.0", "file": "MCCB_J04_COMMANDS_JAVA.zip",      "direction": "java_to_bedrock" },
+    { "id": "B01@1.0", "file": "MCCB_B01_STATIC_BEDROCK.mcworld", "direction": "bedrock_to_java" },
+    { "id": "B02@1.0", "file": "MCCB_B02_LIVING_BEDROCK.mcworld", "direction": "bedrock_to_java" },
+    { "id": "B03@1.0", "file": "MCCB_B03_SYSTEMS_BEDROCK.mcworld", "direction": "bedrock_to_java" }
+  ]
+}

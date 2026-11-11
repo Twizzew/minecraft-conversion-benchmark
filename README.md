@@ -1,115 +1,117 @@
 # Minecraft Conversion Compatibility Benchmark (MCCB)
 
-A public, hash-verifiable set of **source worlds** for measuring how faithfully a tool
-converts a Minecraft world between **Java Edition** and **Bedrock Edition**.
+MCCB measures how faithfully a tool converts a Minecraft world between Java Edition and
+Bedrock Edition. It consists of fixed source worlds, fixture registries derived from them,
+readers ("oracles") that inspect converted worlds without using any converter's code, and
+per-assertion results that anyone can recompute.
 
-MCCB is created and maintained by **[WorldSwitch](https://worldswitchapp.com)**.
+MCCB is written and maintained by [WorldSwitch](https://worldswitchapp.com), which sells a
+converter. Every input, rule, tool and result is therefore public and pinned by hash, and
+rule changes made while looking at WorldSwitch outputs are listed with their effect in
+[docs/rules-changelog.md](docs/rules-changelog.md).
 
----
+**Current edition: MCCB 2026-11** — results and tables in [results/2026-11/README.md](results/2026-11/README.md),
+source worlds in the release `v2026.11-source-worlds`, converted worlds in `v2026.11-results`.
 
-## What this repository is
+Older reports name some R01 files (`fixtures/R01_1.0.jsonl.gz`, `results/v1.3-r01*/`, `reports/r01/`,
+`reports/freeze/FREEZE-v1.3-R01-*`); they are kept offline with the world.
 
-This repository publishes the **six SOURCE MASTER worlds** of MCCB v1.0 — three built in
-Java Edition, three built in Bedrock Edition — together with their SHA-256 hashes and the
-methodology used to build them.
+## Versions
 
-That is all it contains today. It contains **no conversion results and no comparison
-between converters.**
+| Version | Content | State |
+|---|---|---|
+| v1.0 | Six source worlds and their hashes (`SHA256SUMS.txt`) | Released 2026-09-15 as `v1.0-source-worlds`; unchanged |
+| v1.1 | Seven source worlds (J01 revised, J04 added), methodology, fixtures, oracles, first WorldSwitch runs | Freeze `reports/freeze/FREEZE-v1.1.json` |
+| v1.2 | Same worlds; rules 36–46 | Freeze `reports/freeze/FREEZE-v1.2.json` |
+| v1.3 | Same worlds; rules 47–52; final comparison of four converter builds; the real survival world R01, reported separately | Freeze `reports/freeze/FREEZE-v1.3.json`, R01 addendum `reports/freeze/FREEZE-v1.3-R01-ADDENDUM.json` |
+| v1.3 closure | Same worlds, fixtures and outputs; scorer corrected (rules 53–60), the same 64 historical outputs graded again, nothing converted again | Same freeze; results `results/v1.3-closure/` (R01: kept offline) |
+| 2026-11 | Java worlds rebuilt for Java 26.3 (J01-J04 @2.0, new J05), B01-B03 unchanged; scorer revision 1.13; five columns: WorldSwitch before/now, Chunker 1.21.0, je2be, UMT 1.5.10 | Results [`results/2026-11/`](results/2026-11/README.md); worlds: release `v2026.11-source-worlds` |
 
-## Why the source worlds are published first
+Changes per version: [CHANGELOG.md](CHANGELOG.md). The v1.0 documents are kept in
+[docs/history/](docs/history/).
 
-A benchmark is only credible if the inputs cannot be changed after the results are known.
+## Source worlds
 
-The six worlds below were frozen and their hashes published **before** any comparative
-result was produced. Anyone can download the same worlds, hash them, convert them with any
-tool, and check the outcome themselves. For MCCB v1.0 these six files will not be modified,
-re-exported or re-frozen — a change to the worlds requires a new benchmark version
-(MCCB v1.1, v2.0, …) published under a new release.
+Current edition, MCCB 2026-11:
 
-## Why WorldSwitch publishes it
+| ID | Edition | Theme | Class | File |
+|---|---|---|---|---|
+| J01@2.0 | Java 26.3 | Blocks, states, block entities, items | LAB | `MCCB_J01_JAVA_26.3.zip` (122.2 MB) |
+| J02@2.0 | Java 26.3 | Entities, inventories, trades | LAB | `MCCB_J02_JAVA_26.3.zip` (4.8 MB) |
+| J03@2.0 | Java 26.3 | World data, dimensions, redstone, scoreboards | LAB | `MCCB_J03_JAVA_26.3.zip` (78.2 MB) |
+| J04@2.0 | Java 26.3 | 400 command-block stations | LAB | `MCCB_J04_JAVA_26.3.zip` (11.5 MB) |
+| J05@1.0 | Java 26.3 | Things in progress: lit TNT, moving pistons, lit furnaces, a zombie villager being cured | MANUAL_NATIVE | `MCCB_J05_JAVA_26.3.zip` (1.2 MB) |
+| B01@1.0 | Bedrock 1.26.45.1 | Blocks, states, block entities, items | LAB | `MCCB_B01_STATIC_BEDROCK.mcworld` (0.1 MB) |
+| B02@1.0 | Bedrock 1.26.45.1 | Entities, inventories, trades | MANUAL_NATIVE | `MCCB_B02_LIVING_BEDROCK.mcworld` (0.2 MB) |
+| B03@1.0 | Bedrock 1.26.45.1 | World data, dimensions, redstone, scoreboards | LAB | `MCCB_B03_SYSTEMS_BEDROCK.mcworld` (0.8 MB) |
 
-WorldSwitch is a commercial Java ↔ Bedrock world converter, so it is an interested party.
-That is exactly why the inputs and the method are public: claims about conversion fidelity
-should be checkable by someone who does not trust the party making them.
+The files are assets of the release
+[`v2026.11-source-worlds`](https://github.com/Twizzew/minecraft-conversion-benchmark/releases/tag/v2026.11-source-worlds),
+not stored in Git. Their hashes are in
+[checksums/MCCB-2026-11-source-worlds.sha256](checksums/MCCB-2026-11-source-worlds.sha256); check them on any system with
+`node tools/verify-checksums.mjs checksums/MCCB-2026-11-source-worlds.sha256 <folder>`.
+Earlier editions: `SHA256SUMS.txt` (v1.0, release `v1.0-source-worlds`) and
+`checksums/MCCB-v1.1-source-worlds.sha256` (v1.1 to v1.3, never released as files).
 
-When comparative results are published, they will be published in this repository with the
-exact commands and versions used, so they can be reproduced or contradicted.
+R01 is a multiplayer survival world played for more than four years (moved to a PC, still in Bedrock, in November
+2025, which is why the save itself only keeps dates from then on). It is graded locally but not
+distributed: it holds the data of other players. Only its counts are published.
+What each world contains: [WORLDS.md](WORLDS.md) and [worlds/](worlds/).
 
----
+## Method
 
-## The six source worlds
+A converter receives the unmodified source file and its default settings. Its build,
+options, logs and output hash are recorded. The output is read by MCCB's own readers: Java
+worlds after Mojang's own world upgrade code for Java 26.3, Bedrock worlds as stored. Each
+assertion of the fixture registry is judged at the direct level (the converted world) and
+at the round-trip level (converted back with the same converter); a behaviour level exists
+but is barely automated. Results are counts of PASS, ADAPTED, PARTIAL, FAIL, NOT_APPLICABLE
+and NOT_EVALUATED per world and level. There is no score and no ranking, and world classes
+are never added together.
 
-| ID | Edition | Theme | File |
-|----|---------|-------|------|
-| **J01** | Java 26.2 | STATIC — blocks, block states, block entities, items | `MCCB_J01_STATIC_JAVA.zip` |
-| **J02** | Java 26.2 | LIVING — entities, mobs, inventories, persistence | `MCCB_J02_LIVING_JAVA.zip` |
-| **J03** | Java 26.2 | SYSTEMS — world, chunks, dimensions, redstone, commands, scoreboards | `MCCB_J03_SYSTEMS_JAVA.zip` |
-| **B01** | Bedrock 1.26.45 | STATIC — blocks, block states, block entities, items | `MCCB_B01_STATIC_BEDROCK.mcworld` |
-| **B02** | Bedrock 1.26.45 | LIVING — entities, mobs, trading, raids, persistence | `MCCB_B02_LIVING_BEDROCK.mcworld` |
-| **B03** | Bedrock 1.26.45 | SYSTEMS — world, chunks, dimensions, redstone, commands, scoreboards | `MCCB_B03_SYSTEMS_BEDROCK.mcworld` |
+Rules: [METHODOLOGY.md](METHODOLOGY.md) and [docs/fixture-rules.md](docs/fixture-rules.md).
+Known limits: [KNOWN_LIMITATIONS.md](KNOWN_LIMITATIONS.md).
 
-Full per-world description: **[WORLDS.md](WORLDS.md)**.
-How they were built and how to use them: **[METHODOLOGY.md](METHODOLOGY.md)**.
+## Results
 
-The worlds themselves are **not stored in Git** (they are binary world data). They are
-attached to the release:
+The v1.3 comparison covers WorldSwitch `0308840`, WorldSwitch 2.8.0 (`fd9b735`), Chunker
+1.20.0 and je2be (je2be-core `8dfc4de`, run after the freeze with the unchanged method). The
+current results are the **corrected grading** of the v1.3 closure: the same outputs, graded again
+with the scorer corrected after an audit (rules 53–60), into separate folders:
 
-**→ Download: [MCCB v1.0 — Source Worlds](../../releases/tag/v1.0-source-worlds)**
+- seven synthetic worlds: [results/v1.3-closure/](results/v1.3-closure/README.md);
+- R01, the real-world validation, reported on its own (kept offline with the world).
 
----
+What the correction changed, assertion by assertion, is in each folder's `DELTA.md`; how it was
+done and checked is in [reports/closure-rescore/](reports/closure-rescore/README.md). The first
+v1.3 grading is kept unchanged as the historical record: [results/v1.3/](results/v1.3/README.md).
+The converted worlds it graded are in the release `v1.3-outputs` (42 of the 56; see that release for je2be).
 
-## Verify what you downloaded
+The builds actually measured are listed in
+[results/v1.3/CONVERTERS-MEASURED.json](results/v1.3/CONVERTERS-MEASURED.json).
+`manifests/converters.json` is the register as it was frozen before those measurements
+(it still lists je2be as not run) and is kept unchanged because its hash is in the freeze.
 
-`SHA256SUMS.txt` in this repository is the authoritative record for MCCB v1.0.
+Results graded under v1.1 and v1.2 are kept as they were graded, in `results/`,
+`results/v1.2/` and [results/COMPARISON-v1.1.md](results/COMPARISON-v1.1.md).
 
-Linux / macOS / Git Bash:
+## Reproducing
+
+[REPRODUCING.md](REPRODUCING.md) describes how to verify the sources, rebuild the fixtures,
+run each converter and grade its outputs. Quick check of downloaded worlds:
 
 ```bash
-sha256sum -c SHA256SUMS.txt
+sha256sum -c --ignore-missing checksums/MCCB-v1.1-source-worlds.sha256
 ```
 
-Windows PowerShell:
+## Licence
 
-```powershell
-./tools/verify.ps1
-```
+The synthetic source worlds (J01–J04, B01–B03) are dedicated to the public domain under
+[CC0 1.0](LICENSES/CC0-1.0.txt). The documentation is under [CC BY 4.0](LICENSE). R01 is
+published with its contributors' permission under the terms in [NOTICE.md](NOTICE.md), which
+also covers code, converter outputs and third-party material.
 
-Every line must report `OK`. If a file does not match, it is not an MCCB v1.0 source world.
+Minecraft is a trademark of Mojang Studios / Microsoft. MCCB is not affiliated with or
+endorsed by Mojang Studios or Microsoft, and it redistributes no Mojang file.
 
----
-
-## What MCCB does **not** claim
-
-- It does not claim to cover every block, item, entity or mechanic in Minecraft.
-  Coverage is representative and documented per world, not exhaustive.
-- It does not claim that a world is "correct" — only that it is a fixed, published input.
-- It does not yet contain any measurement, score, ranking or comparison of WorldSwitch,
-  Chunker, je2be or any other converter.
-- Nothing in this repository has been produced by running a converter.
-
-## Status
-
-| Item | State |
-|------|-------|
-| Six SOURCE MASTER worlds frozen | Done |
-| SHA-256 published | Done |
-| Methodology published | Done |
-| Conversion runs | Not started |
-| Comparative results | Not published |
-
----
-
-## License and trademarks
-
-Documentation and world files in this benchmark are released under
-[CC BY 4.0](LICENSE) — you may redistribute and build on them, including commercially,
-with attribution to WorldSwitch. See [NOTICE.md](NOTICE.md) for the attribution format.
-
-Minecraft is a trademark of Mojang Studios / Microsoft. This project is not affiliated
-with, endorsed by, or sponsored by Mojang Studios or Microsoft. The world files contain
-only content created for this benchmark and world data generated by the game from a seed;
-they contain no Minecraft game assets, code or binaries.
-
-## Contact
-
-Issues and corrections: open a GitHub issue on this repository.
+Issues and corrections: open an issue on this repository.

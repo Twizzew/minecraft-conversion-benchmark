@@ -1,0 +1,209 @@
+{
+ "schema": "mccb.run/1",
+ "run_id": "J05_aller",
+ "converter": {
+  "name": "WorldSwitch",
+  "engine_package": "worldswitch",
+  "engine_package_version": "2.8.0",
+  "commit": "5e2e2d528d469eb3fdd90dd318073304fa46fa25",
+  "working_tree_clean": true,
+  "build": "docker image mccb-ws:5e2e2d5 (sha256:6056b0f06d32a23b6df03d9c29faf18e494fe688e3a5ed5e6d90eb5667942ec8), Dockerfile du dépôt, git archive du commit",
+  "source_available": false
+ },
+ "direction": "java_to_bedrock",
+ "source": {
+  "ref": "source",
+  "file": "MCCB_J05_JAVA_26.3.zip",
+  "sha256": "9170fde88fbd7286782c3c3216ec0e23087b40ece3f41c2e511d934e1d6031d8",
+  "bytes": 1186933
+ },
+ "options": {
+  "targetVersion": "latest",
+  "recoverUnlinked": true,
+  "locale": "en"
+ },
+ "environment": {
+  "kind": "labo prod-like (docker-compose.yml)",
+  "limits": {
+   "converter": "cpus 4, memory 5632m, swap 0, read-only, network none, cap-drop ALL, pids 512",
+   "worker": "cpus 0.75, memory 512m, swap 0"
+  },
+  "host": {
+   "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor",
+   "nproc": 8,
+   "kernel": "6.18.54.1-microsoft-standard-WSL2",
+   "mem_total_kb": 8134332
+  }
+ },
+ "started_at": "2026-11-01T01:56:11.536Z",
+ "finished_at": "2026-11-01T01:56:13.933Z",
+ "duration_ms": 2397,
+ "exit_status": 0,
+ "error": null,
+ "output": {
+  "file": "output.mcworld",
+  "sha256": "ad94cc139cc1a2356c7ac613b7b545fe43194f9fa08bfe99f7702ffe537cdab6",
+  "bytes": 1582064,
+  "engine_filename": "MCCB_J05_bedrock.mcworld"
+ },
+ "logs": [
+  "converter.log",
+  "worker.log",
+  "prep.log"
+ ],
+ "peak": {
+  "converter_memory_bytes": 870539264,
+  "worker_memory_bytes": 53415936
+ },
+ "lab": {
+  "job_id": "51bfa948-1c46-4731-a8ef-f3bd03d92850",
+  "final_status": "done",
+  "attempts": 1,
+  "notice": {
+   "fidelity": {
+    "total": 1975,
+    "impacts": [
+     {
+      "en": "Dropped — world data `structure generation disabled` (×3)",
+      "fr": "Supprimé — donnée de monde `génération des structures désactivée` (×3)",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — world data `per-dimension clock` (×3)",
+      "fr": "Supprimé — donnée de monde `horloge propre à une dimension` (×3)",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — world data `clear-weather timer` (×3)",
+      "fr": "Supprimé — donnée de monde `minuteur de beau temps` (×3)",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — world data `wandering trader schedule` (×3)",
+      "fr": "Supprimé — donnée de monde `planification du marchand ambulant` (×3)",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — block entity `minecraft:smoker.speed_multiplier` (×2)",
+      "fr": "Supprimé — block entity `minecraft:smoker.speed_multiplier` (×2)",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — block entity `minecraft:blast_furnace.speed_multiplier`",
+      "fr": "Supprimé — block entity `minecraft:blast_furnace.speed_multiplier`",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — block entity `minecraft:lectern.Book.components.minecraft:written_book_content.resolved`",
+      "fr": "Supprimé — block entity `minecraft:lectern.Book.components.minecraft:written_book_content.resolved`",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — entity `minecraft:marker`",
+      "fr": "Supprimé — entité `minecraft:marker`",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — block entity `minecraft:sculk_sensor.listener`",
+      "fr": "Supprimé — block entity `minecraft:sculk_sensor.listener`",
+      "category": "dropped"
+     },
+     {
+      "en": "Normalized — world data `unfinished Java chunks` (×1920)",
+      "fr": "Normalisé — donnée de monde `chunks Java non terminés` (×1920)",
+      "category": "normalized"
+     },
+     {
+      "en": "Normalized — block entity `minecraft:smoker.cooking_total_time` (×2)",
+      "fr": "Normalisé — block entity `minecraft:smoker.cooking_total_time` (×2)",
+      "category": "normalized"
+     },
+     {
+      "en": "Normalized — block entity `minecraft:blast_furnace.cooking_total_time`",
+      "fr": "Normalisé — block entity `minecraft:blast_furnace.cooking_total_time`",
+      "category": "normalized"
+     }
+    ],
+    "detailed": 26,
+    "families": 26,
+    "truncated": 0,
+    "byCategory": {
+     "dropped": 18,
+     "archived": 30,
+     "cosmetic": 4,
+     "normalized": 1923
+    }
+   }
+  },
+  "upload_ms": 41,
+  "analysis_ms": 346,
+  "analysis": {
+   "detectedType": "Java",
+   "version": "Java 26.3",
+   "sizeBytes": 1186933,
+   "sizeFormatted": "1.1 Mo",
+   "uncompressedBytes": 14065124,
+   "chunkCount": 3429,
+   "levelName": "MCCB_J05",
+   "valid": true,
+   "gameMode": "creative",
+   "difficulty": "normal",
+   "spawn": "0, -60, 0",
+   "worldRootPrefix": "J05",
+   "worldCount": 1,
+   "players": [
+    {
+     "sourceId": "c7361fde-4983-4733-b2dc-3be58cc7762b",
+     "isHost": true,
+     "sourceLabel": "Joueur principal",
+     "labelSource": "host",
+     "displayIndex": 1,
+     "identifiers": [],
+     "profile": {
+      "items": 2,
+      "armor": 0,
+      "ender": 0,
+      "xpLevel": 2,
+      "dimension": "overworld",
+      "pos": [
+       5,
+       -41,
+       1
+      ],
+      "nameHints": [],
+      "empty": false
+     },
+     "profileReadable": true,
+     "sharesAccountWith": 0
+    }
+   ],
+   "playersScanned": true,
+   "playersSkippedReason": null,
+   "playerLinkingSupported": false,
+   "terrainScan": {
+    "total": 3337,
+    "unreadable": 0,
+    "truncatedRegions": 0,
+    "complete": true
+   },
+   "terrainDimensions": {
+    "overworld": 3337,
+    "nether": 0,
+    "end": 0
+   }
+  },
+  "queue_to_done_ms": 3439,
+  "wall_s_worker_start_to_terminal": 5.093553044,
+  "converter": {
+   "memory_peak_bytes": 870539264,
+   "cpu_usec": 5403495,
+   "oom_kills": 0,
+   "scratch_peak_bytes_sampled_2s": 2488371
+  },
+  "worker": {
+   "memory_peak_bytes": 53415936,
+   "cpu_usec": 457830,
+   "scratch_peak_bytes_sampled_2s": 0
+  }
+ }
+}

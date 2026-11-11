@@ -1,0 +1,16 @@
+(node:23000) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of <LOCAL>/worldswitch/lib/converter.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to <LOCAL>\worldswitch\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[jtb] 11 famille(s) de perte de fidélité :
+[jtb]   ×3 [archived/entity] minecraft:arrow : Color, item — Champs Java sans equivalent Bedrock (Color, item) : conserves pour un retour IMMEDIAT vers Java seulement. Le moteur Bedrock les SUPPRIME des qu'il recharge l'entite, et le comportement correspondant n'existe pas sous Bedrock.
+[jtb]   ×2 [archived/entity] minecraft:arrow : Color — Champs Java sans equivalent Bedrock (Color) : conserves pour un retour IMMEDIAT vers Java seulement. Le moteur Bedrock les SUPPRIME des qu'il recharge l'entite, et le comportement correspondant n'existe pas sous Bedrock.
+[jtb]   ×2 [dropped/block_entity] minecraft:chest.Items.tag.BlockEntityTag.id — type connu, mais champ source jamais lu par la traduction
+[jtb]   ×2 [approximated/entity] minecraft:villager.specialPrice — remises Java par recette (de -1 à -5) → une seule remise Bedrock (-5)
+[jtb]   ×1 [dropped/block_entity] minecraft:chest.Items.tag.Charged — type connu, mais champ source jamais lu par la traduction
+[jtb]   ×1 [archived/entity] minecraft:happy_ghast : home_pos — Champs Java sans equivalent Bedrock (home_pos) : conserves pour un retour IMMEDIAT vers Java seulement. Le moteur Bedrock les SUPPRIME des qu'il recharge l'entite, et le comportement correspondant n'existe pas sous Bedrock.
+[jtb]   ×1 [normalized/entity] minecraft:happy_ghast.definitions — groupes de composants reposés dans l’état natif par défaut : l’état exact de ce mob n’a pas été relevé
+[jtb]   ×1 [normalized/entity] minecraft:iron_golem.definitions — groupes de composants reposés dans l’état natif par défaut : l’état exact de ce mob n’a pas été relevé
+[jtb]   ×1 [normalized/entity] minecraft:parrot.definitions — groupes de composants reposés dans l’état natif par défaut : l’état exact de ce mob n’a pas été relevé
+[jtb]   ×1 [archived/entity] minecraft:trident : item, DealtDamage — Champs Java sans equivalent Bedrock (item, DealtDamage) : conserves pour un retour IMMEDIAT vers Java seulement. Le moteur Bedrock les SUPPRIME des qu'il recharge l'entite, et le comportement correspondant n'existe pas sous Bedrock.
+[jtb]   ×1 [normalized/entity] minecraft:wandering_trader.definitions — groupes de composants reposés dans l’état natif par défaut : l’état exact de ce mob n’a pas été relevé

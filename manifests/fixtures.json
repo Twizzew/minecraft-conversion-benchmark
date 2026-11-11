@@ -1,0 +1,523 @@
+{
+ "schema": "mccb.fixtures-index/1",
+ "benchmark_version": "1.1",
+ "rules": {
+  "docs/fixture-rules.md": "f98fb254b118364e280f83fba941207ad7a0ebbecb77db2919c43d59610c1af0",
+  "docs/reference/identity-equivalence.v1.json": "5fd3bf2c718511b155dcb15a2491713cc76ab6fea21ea2a85831065347c14d50",
+  "tools/reference/identity-rules.v1.mjs": "b506319b4e5d842251659a4f76d2c966daac1c6a3d73c4920509e5ccf6b7747e",
+  "tools/reference/gamerules.v1.mjs": "bf61c0616dc59af30ae7516d4c4f91af0867154c6b81af06e7ff92822d63417a"
+ },
+ "worlds": [
+  {
+   "world": "J01@1.1",
+   "file": "fixtures/J01_1.1.jsonl.gz",
+   "content_sha256": "3ae79b00e625511407dc3c30629a1412a065a4d88ff0f18321d4e36d9a2d7ca0",
+   "file_sha256": "743b914f81a0b729d6e9a7b48bd568670b80bf57a8e59658659181558a999cbc",
+   "source_sha256": "b28294c78bb7e3c755827153b8d52bbdb5f80a9a45b598d6608a141493d26cf3",
+   "families": {
+    "block": {
+     "subjects": 32498,
+     "assertions": 76328
+    },
+    "block_entity": {
+     "subjects": 9281,
+     "assertions": 26792
+    },
+    "item_stack": {
+     "subjects": 2014,
+     "assertions": 4493
+    },
+    "entity": {
+     "subjects": 121,
+     "assertions": 495
+    },
+    "world": {
+     "subjects": 72,
+     "assertions": 72
+    },
+    "scoreboard": {
+     "subjects": 46,
+     "assertions": 47
+    },
+    "custom_dimension": {
+     "subjects": 2280,
+     "assertions": 2280
+    },
+    "player": {
+     "subjects": 1,
+     "assertions": 7
+    }
+   },
+   "subjects": 46313,
+   "assertions": 110514,
+   "predeclared_expectations": {
+    "direct": {
+     "EVALUATED": 56365,
+     "NOT_APPLICABLE": 15618,
+     "NOT_EVALUATED": 38531
+    },
+    "roundtrip": {
+     "EVALUATED": 110514,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 0
+    },
+    "behavior": {
+     "EVALUATED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 1
+    }
+   },
+   "identity_reference": {
+    "file": "docs/reference/identity-equivalence.v1.json",
+    "sha256": "5fd3bf2c718511b155dcb15a2491713cc76ab6fea21ea2a85831065347c14d50"
+   },
+   "java_reference": {
+    "version": "26.3",
+    "source": "Mojang data generator reports, Java 26.3",
+    "blocks_json_sha256": "7a0de8aaf7b04d00c40b8ffdc4cfe75184cff2e821d336a020573201867105a4",
+    "registries_json_sha256": "51f62d56f8bd0e9134ee88dd9226b64e9e56cf6a32377540d44291bf47ecdac6"
+   },
+   "bedrock_reference": {
+    "source": "@minecraft/vanilla-data 1.26.40 (Mojang, MIT)"
+   }
+  },
+  {
+   "world": "J02@1.0",
+   "file": "fixtures/J02_1.0.jsonl.gz",
+   "content_sha256": "1e194bcaf9d72d983815db04c889cd3e72171d576344d51b6feda453ca6e11e5",
+   "file_sha256": "ecbf4f85774851d58f172001138230dac26c7e5d9c7eaaeebcd390e748be8baa",
+   "source_sha256": "db97f7497094ed5681600b37a76ab81e975341280883dcf433b3d6c40e8f17a4",
+   "families": {
+    "block": {
+     "subjects": 54,
+     "assertions": 103
+    },
+    "block_entity": {
+     "subjects": 41,
+     "assertions": 89
+    },
+    "item_stack": {
+     "subjects": 59,
+     "assertions": 118
+    },
+    "entity": {
+     "subjects": 368,
+     "assertions": 1783
+    },
+    "world": {
+     "subjects": 77,
+     "assertions": 77
+    },
+    "scoreboard": {
+     "subjects": 0,
+     "assertions": 0
+    },
+    "custom_dimension": {
+     "subjects": 0,
+     "assertions": 0
+    },
+    "player": {
+     "subjects": 1,
+     "assertions": 10
+    }
+   },
+   "subjects": 600,
+   "assertions": 2180,
+   "predeclared_expectations": {
+    "direct": {
+     "EVALUATED": 1642,
+     "NOT_APPLICABLE": 68,
+     "NOT_EVALUATED": 470
+    },
+    "roundtrip": {
+     "EVALUATED": 2180,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 0
+    },
+    "behavior": {
+     "EVALUATED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 1
+    }
+   },
+   "identity_reference": {
+    "file": "docs/reference/identity-equivalence.v1.json",
+    "sha256": "5fd3bf2c718511b155dcb15a2491713cc76ab6fea21ea2a85831065347c14d50"
+   },
+   "java_reference": {
+    "version": "26.3",
+    "source": "Mojang data generator reports, Java 26.3",
+    "blocks_json_sha256": "7a0de8aaf7b04d00c40b8ffdc4cfe75184cff2e821d336a020573201867105a4",
+    "registries_json_sha256": "51f62d56f8bd0e9134ee88dd9226b64e9e56cf6a32377540d44291bf47ecdac6"
+   },
+   "bedrock_reference": {
+    "source": "@minecraft/vanilla-data 1.26.40 (Mojang, MIT)"
+   }
+  },
+  {
+   "world": "J03@1.0",
+   "file": "fixtures/J03_1.0.jsonl.gz",
+   "content_sha256": "fb62a9cf6e6fbd6e67f775b9dc17c37f496c474cc73741dce07fec3a1cd7983f",
+   "file_sha256": "795dd936b4ee631630de24132b32a5e8bf295a4c137c940c513a206f8e8a8f1e",
+   "source_sha256": "45c7ae7293ff1dfd3310757a8b56f1d094e6928aa20a82b68ff45428f55bbc50",
+   "families": {
+    "block": {
+     "subjects": 269,
+     "assertions": 446
+    },
+    "block_entity": {
+     "subjects": 65,
+     "assertions": 176
+    },
+    "item_stack": {
+     "subjects": 24,
+     "assertions": 51
+    },
+    "entity": {
+     "subjects": 33,
+     "assertions": 113
+    },
+    "world": {
+     "subjects": 77,
+     "assertions": 77
+    },
+    "scoreboard": {
+     "subjects": 83,
+     "assertions": 88
+    },
+    "custom_dimension": {
+     "subjects": 0,
+     "assertions": 0
+    },
+    "player": {
+     "subjects": 1,
+     "assertions": 6
+    }
+   },
+   "subjects": 552,
+   "assertions": 957,
+   "predeclared_expectations": {
+    "direct": {
+     "EVALUATED": 585,
+     "NOT_APPLICABLE": 90,
+     "NOT_EVALUATED": 282
+    },
+    "roundtrip": {
+     "EVALUATED": 957,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 0
+    },
+    "behavior": {
+     "EVALUATED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 1
+    }
+   },
+   "identity_reference": {
+    "file": "docs/reference/identity-equivalence.v1.json",
+    "sha256": "5fd3bf2c718511b155dcb15a2491713cc76ab6fea21ea2a85831065347c14d50"
+   },
+   "java_reference": {
+    "version": "26.3",
+    "source": "Mojang data generator reports, Java 26.3",
+    "blocks_json_sha256": "7a0de8aaf7b04d00c40b8ffdc4cfe75184cff2e821d336a020573201867105a4",
+    "registries_json_sha256": "51f62d56f8bd0e9134ee88dd9226b64e9e56cf6a32377540d44291bf47ecdac6"
+   },
+   "bedrock_reference": {
+    "source": "@minecraft/vanilla-data 1.26.40 (Mojang, MIT)"
+   }
+  },
+  {
+   "world": "J04@1.0",
+   "file": "fixtures/J04_1.0.jsonl.gz",
+   "content_sha256": "5a26ef90526989517d21e9c9fb2510e038d1965ba1397a0dfbe66495e89a49a4",
+   "file_sha256": "6ca81890ca2f23cee699f23941049480b8ca76a4e0539eec88d6672b5ad8a08e",
+   "source_sha256": "44a58908bbf86554eb85c6c0fb6b8b060ed016965e943eab05e72145606a7b4c",
+   "families": {
+    "block": {
+     "subjects": 6170,
+     "assertions": 11837
+    },
+    "block_entity": {
+     "subjects": 4886,
+     "assertions": 18950
+    },
+    "item_stack": {
+     "subjects": 417,
+     "assertions": 1235
+    },
+    "entity": {
+     "subjects": 385,
+     "assertions": 1802
+    },
+    "world": {
+     "subjects": 78,
+     "assertions": 78
+    },
+    "scoreboard": {
+     "subjects": 515,
+     "assertions": 711
+    },
+    "custom_dimension": {
+     "subjects": 0,
+     "assertions": 0
+    },
+    "player": {
+     "subjects": 1,
+     "assertions": 8
+    }
+   },
+   "subjects": 12452,
+   "assertions": 34621,
+   "predeclared_expectations": {
+    "direct": {
+     "EVALUATED": 23043,
+     "NOT_APPLICABLE": 124,
+     "NOT_EVALUATED": 11454
+    },
+    "roundtrip": {
+     "EVALUATED": 34621,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 0
+    },
+    "behavior": {
+     "EVALUATED": 0,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 1
+    }
+   },
+   "identity_reference": {
+    "file": "docs/reference/identity-equivalence.v1.json",
+    "sha256": "5fd3bf2c718511b155dcb15a2491713cc76ab6fea21ea2a85831065347c14d50"
+   },
+   "java_reference": {
+    "version": "26.3",
+    "source": "Mojang data generator reports, Java 26.3",
+    "blocks_json_sha256": "7a0de8aaf7b04d00c40b8ffdc4cfe75184cff2e821d336a020573201867105a4",
+    "registries_json_sha256": "51f62d56f8bd0e9134ee88dd9226b64e9e56cf6a32377540d44291bf47ecdac6"
+   },
+   "bedrock_reference": {
+    "source": "@minecraft/vanilla-data 1.26.40 (Mojang, MIT)"
+   }
+  },
+  {
+   "world": "B01@1.0",
+   "file": "fixtures/B01_1.0.jsonl.gz",
+   "content_sha256": "94964c0b5e245ad768be694e82883987f3a9720167b782afacf43ac4fe194a98",
+   "file_sha256": "0721b7e4dccec92f0cf00c79c362dc7ee0553aebc4c9a4b74fb8f6027cd477ce",
+   "source_sha256": "83e8e9909a3d8915980df317073b80c11421152d8f7ed88714fd196e45c0a667",
+   "families": {
+    "block": {
+     "subjects": 238,
+     "assertions": 393
+    },
+    "block_entity": {
+     "subjects": 60,
+     "assertions": 139
+    },
+    "item_stack": {
+     "subjects": 46,
+     "assertions": 109
+    },
+    "entity": {
+     "subjects": 11,
+     "assertions": 46
+    },
+    "world": {
+     "subjects": 49,
+     "assertions": 49
+    },
+    "scoreboard": {
+     "subjects": 0,
+     "assertions": 0
+    },
+    "custom_dimension": {
+     "subjects": 0,
+     "assertions": 0
+    },
+    "player": {
+     "subjects": 1,
+     "assertions": 7
+    }
+   },
+   "subjects": 405,
+   "assertions": 743,
+   "predeclared_expectations": {
+    "direct": {
+     "EVALUATED": 486,
+     "NOT_APPLICABLE": 11,
+     "NOT_EVALUATED": 246
+    },
+    "roundtrip": {
+     "EVALUATED": 742,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 1
+    },
+    "behavior": {
+     "EVALUATED": 1,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 0
+    }
+   },
+   "identity_reference": {
+    "file": "docs/reference/identity-equivalence.v1.json",
+    "sha256": "5fd3bf2c718511b155dcb15a2491713cc76ab6fea21ea2a85831065347c14d50"
+   },
+   "java_reference": {
+    "version": "26.3",
+    "source": "Mojang data generator reports, Java 26.3",
+    "blocks_json_sha256": "7a0de8aaf7b04d00c40b8ffdc4cfe75184cff2e821d336a020573201867105a4",
+    "registries_json_sha256": "51f62d56f8bd0e9134ee88dd9226b64e9e56cf6a32377540d44291bf47ecdac6"
+   },
+   "bedrock_reference": {
+    "source": "@minecraft/vanilla-data 1.26.40 (Mojang, MIT)"
+   }
+  },
+  {
+   "world": "B02@1.0",
+   "file": "fixtures/B02_1.0.jsonl.gz",
+   "content_sha256": "dabcce1e42d7fbf639f7e940b3f7f89cedb19093be4085a338a560a091959f81",
+   "file_sha256": "316610bf10c2b895745c3dab285b61acb057e9386e5c43b7272f8a725f750ee6",
+   "source_sha256": "34d9b5dfaff557ef5e3907cae8fba31fc5de8dc03cb49c145ab14b0e6f6ccd10",
+   "families": {
+    "block": {
+     "subjects": 297,
+     "assertions": 392
+    },
+    "block_entity": {
+     "subjects": 52,
+     "assertions": 104
+    },
+    "item_stack": {
+     "subjects": 14,
+     "assertions": 50
+    },
+    "entity": {
+     "subjects": 70,
+     "assertions": 312
+    },
+    "world": {
+     "subjects": 49,
+     "assertions": 49
+    },
+    "scoreboard": {
+     "subjects": 0,
+     "assertions": 0
+    },
+    "custom_dimension": {
+     "subjects": 0,
+     "assertions": 0
+    },
+    "player": {
+     "subjects": 2,
+     "assertions": 19
+    }
+   },
+   "subjects": 484,
+   "assertions": 926,
+   "predeclared_expectations": {
+    "direct": {
+     "EVALUATED": 626,
+     "NOT_APPLICABLE": 51,
+     "NOT_EVALUATED": 249
+    },
+    "roundtrip": {
+     "EVALUATED": 925,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 1
+    },
+    "behavior": {
+     "EVALUATED": 1,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 0
+    }
+   },
+   "identity_reference": {
+    "file": "docs/reference/identity-equivalence.v1.json",
+    "sha256": "5fd3bf2c718511b155dcb15a2491713cc76ab6fea21ea2a85831065347c14d50"
+   },
+   "java_reference": {
+    "version": "26.3",
+    "source": "Mojang data generator reports, Java 26.3",
+    "blocks_json_sha256": "7a0de8aaf7b04d00c40b8ffdc4cfe75184cff2e821d336a020573201867105a4",
+    "registries_json_sha256": "51f62d56f8bd0e9134ee88dd9226b64e9e56cf6a32377540d44291bf47ecdac6"
+   },
+   "bedrock_reference": {
+    "source": "@minecraft/vanilla-data 1.26.40 (Mojang, MIT)"
+   }
+  },
+  {
+   "world": "B03@1.0",
+   "file": "fixtures/B03_1.0.jsonl.gz",
+   "content_sha256": "3f132f40167dc78908acf87750edcd2ce399a7c44f6cd22fcb61856230f3cf82",
+   "file_sha256": "729c2769ac15492251396e330992bd3de43fb7a18f8f9baa5e8233b693dd8833",
+   "source_sha256": "fd16e5d795f6b707fb48bce821e09dcad5a8e15c87e101d6e080bb24c911a838",
+   "families": {
+    "block": {
+     "subjects": 145,
+     "assertions": 228
+    },
+    "block_entity": {
+     "subjects": 772,
+     "assertions": 1597
+    },
+    "item_stack": {
+     "subjects": 14,
+     "assertions": 28
+    },
+    "entity": {
+     "subjects": 60,
+     "assertions": 236
+    },
+    "world": {
+     "subjects": 52,
+     "assertions": 52
+    },
+    "scoreboard": {
+     "subjects": 17,
+     "assertions": 19
+    },
+    "custom_dimension": {
+     "subjects": 0,
+     "assertions": 0
+    },
+    "player": {
+     "subjects": 1,
+     "assertions": 6
+    }
+   },
+   "subjects": 1061,
+   "assertions": 2166,
+   "predeclared_expectations": {
+    "direct": {
+     "EVALUATED": 550,
+     "NOT_APPLICABLE": 42,
+     "NOT_EVALUATED": 1574
+    },
+    "roundtrip": {
+     "EVALUATED": 2165,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 1
+    },
+    "behavior": {
+     "EVALUATED": 1,
+     "NOT_APPLICABLE": 0,
+     "NOT_EVALUATED": 0
+    }
+   },
+   "identity_reference": {
+    "file": "docs/reference/identity-equivalence.v1.json",
+    "sha256": "5fd3bf2c718511b155dcb15a2491713cc76ab6fea21ea2a85831065347c14d50"
+   },
+   "java_reference": {
+    "version": "26.3",
+    "source": "Mojang data generator reports, Java 26.3",
+    "blocks_json_sha256": "7a0de8aaf7b04d00c40b8ffdc4cfe75184cff2e821d336a020573201867105a4",
+    "registries_json_sha256": "51f62d56f8bd0e9134ee88dd9226b64e9e56cf6a32377540d44291bf47ecdac6"
+   },
+   "bedrock_reference": {
+    "source": "@minecraft/vanilla-data 1.26.40 (Mojang, MIT)"
+   }
+  }
+ ]
+}

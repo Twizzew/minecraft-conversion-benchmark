@@ -1,0 +1,10 @@
+(node:9104) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of <LOCAL>/worldswitch/lib/converter.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to <LOCAL>\worldswitch\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[btj] 5 famille(s) de perte de fidélité :
+[btj]   ×3 [dropped/block_entity] Cauldron — block-entity Bedrock sans équivalent Java connu (id CamelCase = Bedrock-only)
+[btj]   ×1 [dropped/block_entity] SculkShrieker — block-entity Bedrock sans équivalent Java connu (id CamelCase = Bedrock-only)
+[btj]   ×1 [dropped/entity] minecraft:wandering_trader.HomePos — Le marchand ambulant Bedrock est ancre a un point (composant `minecraft:home`, rayon 16). Java 1.20.4 n'a aucun champ equivalent : sa destination `WanderTarget` est un but de deplacement, pas un ancrage. L'ancrage est donc perdu ; le marchand se deplacera librement cote Java.
+[btj]   ×1 [archived/world_data] réglage Bedrock serverChunkTickRange — `serverChunkTickRange` = 4 (défaut 6) : rayon de chunks simulés (fermes, pousses, mobs) — côté Java c'est la distance de simulation, un réglage du client/serveur et non du monde. Le réglage ne peut pas être posé dans un monde Java ; il est conservé hors-jeu et revient à l'aller-retour.
+[btj]   ×1 [dropped/world_data] structures generees — Aucune metadonnee de structure n'a pu etre transcrite : les chunks Java produits sortent sans `starts` ni `References`. Les batiments et leurs coffres sont convertis normalement, mais les APPARITIONS DE MOBS propres a une structure ne reprendront pas cote Java (blazes d'une forteresse, gardiens d'un monument, sorcieres d'une hutte).

@@ -1,0 +1,175 @@
+{
+ "schema": "mccb.run/1",
+ "run_id": "J01_retour",
+ "converter": {
+  "name": "WorldSwitch",
+  "engine_package": "worldswitch",
+  "engine_package_version": "2.8.0",
+  "commit": "5e2e2d528d469eb3fdd90dd318073304fa46fa25",
+  "working_tree_clean": false,
+  "patch": "arbre /srv/mccb-2026-11/src-c33 du labo (corrections non commitées du dépôt, voir 05-rapports)",
+  "build": "docker image mccb-ws:5e2e2d5-c33 (sha256:d198d4c6c42bf0a89e09c6c0588beddacc87674848132e456b16eb09fd17c9b2), Dockerfile du dépôt, git archive du commit",
+  "source_available": false
+ },
+ "direction": "bedrock_to_java",
+ "source": {
+  "ref": "J01_aller",
+  "file": "output.mcworld",
+  "sha256": "69aea9ea2bc44f1a91d58f815664724061934f02f6c1446858a42151fba50536",
+  "bytes": 210239561
+ },
+ "options": {
+  "recoverUnlinked": true,
+  "locale": "en",
+  "javaUuid": null,
+  "playerMap": null
+ },
+ "environment": {
+  "kind": "labo prod-like (docker-compose.yml)",
+  "limits": {
+   "converter": "cpus 4, memory 5632m, swap 0, read-only, network none, cap-drop ALL, pids 512",
+   "worker": "cpus 0.75, memory 512m, swap 0"
+  },
+  "host": {
+   "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor",
+   "nproc": 8,
+   "kernel": "6.18.58.1-microsoft-standard-WSL2",
+   "mem_total_kb": 8134304
+  }
+ },
+ "started_at": "2026-11-10T15:31:35.484Z",
+ "finished_at": "2026-11-10T15:31:59.544Z",
+ "duration_ms": 24060,
+ "exit_status": 0,
+ "error": null,
+ "output": {
+  "file": "output.zip",
+  "sha256": "5d9c7113554b3d6d2fc0e54e1760dbc5982989e759d9972502f53e1fc223d5f4",
+  "bytes": 104184743,
+  "engine_filename": "J01_java.zip"
+ },
+ "logs": [
+  "converter.log",
+  "worker.log",
+  "prep.log"
+ ],
+ "peak": {
+  "converter_memory_bytes": 2538876928,
+  "worker_memory_bytes": 123432960
+ },
+ "lab": {
+  "job_id": "8713f5a8-11fb-4e39-a1d9-b7f5c1c8fc22",
+  "final_status": "done",
+  "attempts": 1,
+  "notice": {
+   "fidelity": {
+    "total": 1776,
+    "impacts": [
+     {
+      "en": "Dropped — block entity `Music` (×1280)",
+      "fr": "Supprimé — block entity `Music` (×1280)",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — block entity `SporeBlossom` (×254)",
+      "fr": "Supprimé — block entity `SporeBlossom` (×254)",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — block entity `FlowerPot` (×205)",
+      "fr": "Supprimé — block entity `FlowerPot` (×205)",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — block entity `PistonArm` (×27)",
+      "fr": "Supprimé — block entity `PistonArm` (×27)",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — block entity `Cauldron` (×7)",
+      "fr": "Supprimé — block entity `Cauldron` (×7)",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — block entity `Lodestone` (×2)",
+      "fr": "Supprimé — block entity `Lodestone` (×2)",
+      "category": "dropped"
+     },
+     {
+      "en": "Normalized — world data `biome sulfur_caves : Java 26.2 or newer`",
+      "fr": "Normalisé — donnée de monde `biome sulfur_caves : Java 26.2 ou plus récent`",
+      "category": "normalized"
+     }
+    ],
+    "detailed": 7,
+    "families": 7,
+    "truncated": 0,
+    "byCategory": {
+     "dropped": 1775,
+     "normalized": 1
+    }
+   }
+  },
+  "upload_ms": 970,
+  "analysis_ms": 623,
+  "analysis": {
+   "detectedType": "Bedrock",
+   "version": "Bedrock 1.26.50",
+   "sizeBytes": 210239561,
+   "sizeFormatted": "200.5 Mo",
+   "uncompressedBytes": 277000548,
+   "chunkCount": 2343,
+   "levelName": "J01",
+   "valid": true,
+   "gameMode": "creative",
+   "difficulty": "peaceful",
+   "spawn": "0, 70, 0",
+   "worldRootPrefix": "",
+   "worldCount": 1,
+   "players": [
+    {
+     "sourceId": "~local_player",
+     "isHost": true,
+     "sourceLabel": "Joueur principal",
+     "labelSource": "host",
+     "displayIndex": 1,
+     "xuid": null,
+     "msaId": null,
+     "identifiers": [],
+     "profile": {
+      "items": 18,
+      "armor": 4,
+      "ender": 0,
+      "xpLevel": 7,
+      "dimension": "overworld",
+      "pos": [
+       991,
+       355,
+       1459
+      ],
+      "nameHints": [],
+      "empty": false
+     },
+     "profileReadable": true,
+     "sharesAccountWith": 0
+    }
+   ],
+   "playersScanned": true,
+   "playersSkippedReason": null,
+   "curedVillagers": 0
+  },
+  "queue_to_done_ms": 24919,
+  "wall_s_worker_start_to_terminal": 24.524,
+  "converter": {
+   "memory_peak_bytes": 2538876928,
+   "cpu_usec": 56961188,
+   "oom_kills": 0,
+   "scratch_peak_bytes_sampled_2s": 675724917
+  },
+  "worker": {
+   "memory_peak_bytes": 123432960,
+   "cpu_usec": 1610545,
+   "scratch_peak_bytes_sampled_2s": 0
+  }
+ }
+}

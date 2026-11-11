@@ -1,0 +1,14 @@
+[
+ {
+  "fidelity": {
+   "total": 3,
+   "families": 3,
+   "byCategory": {
+    "dropped": 2,
+    "normalized": 1
+   },
+   "detailed": 3,
+   "truncated": 0
+  }
+ }
+]

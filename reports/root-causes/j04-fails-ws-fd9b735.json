@@ -1,0 +1,292 @@
+[
+ {
+  "id": "000046",
+  "case": "CMD-J-001",
+  "cls": "ADAPTABLE",
+  "role": "test",
+  "pos": "20,64,30",
+  "cmd": "execute as @e[tag=mccb_j04_001_target,limit=1] run data merge entity @s {Glowing:1b}",
+  "ws_out": "",
+  "ws_reason": "data"
+ },
+ {
+  "id": "000062",
+  "case": "CMD-J-179",
+  "cls": "ADAPTABLE",
+  "role": "test",
+  "pos": "20,64,450",
+  "cmd": "item modify block 24 64 454 container.0 {type:\"minecraft:set_count\",count:2}",
+  "ws_out": "",
+  "ws_reason": "item modify (item modifier) has no Bedrock equivalent (Java-only)"
+ },
+ {
+  "id": "000112",
+  "case": "CMD-J-156",
+  "cls": "ADAPTABLE",
+  "role": "test",
+  "pos": "42,64,410",
+  "cmd": "summon minecraft:falling_block 45 65 414 {Tags:[\"mccb_j04_156_target\"],BlockState:{id:\"minecraft:sand\"},Time:1}",
+  "ws_out": "",
+  "ws_reason": "entities id minecraft:falling_block is not available in bedrock 1.21.60 (id is absent from the official bedrock 1.21.60 registry)"
+ },
+ {
+  "id": "000116",
+  "case": "CMD-J-180",
+  "cls": "ADAPTABLE",
+  "role": "test",
+  "pos": "42,64,450",
+  "cmd": "item replace entity @p weapon.offhand from entity @p weapon.mainhand",
+  "ws_out": "",
+  "ws_reason": "item replace ... from <source slot> has no Bedrock equivalent (Java-only)"
+ },
+ {
+  "id": "000118",
+  "case": "CMD-J-192",
+  "cls": "ADAPTABLE",
+  "role": "test",
+  "pos": "42,64,470",
+  "cmd": "item replace entity @p hotbar.1 from entity @p hotbar.0",
+  "ws_out": "",
+  "ws_reason": "item replace ... from <source slot> has no Bedrock equivalent (Java-only)"
+ },
+ {
+  "id": "000177",
+  "case": "CMD-J-193",
+  "cls": "ADAPTABLE",
+  "role": "test",
+  "pos": "64,64,470",
+  "cmd": "item override block 67 64 474 container.* with minecraft:stone 1",
+  "ws_out": "",
+  "ws_reason": "item override (fills or overrides a whole slot range, Java 26.x) has no Bedrock equivalent (replaceitem sets one slot)"
+ },
+ {
+  "id": "000227",
+  "case": "CMD-J-170",
+  "cls": "ADAPTABLE",
+  "role": "test",
+  "pos": "86,64,430",
+  "cmd": "summon minecraft:falling_block 90 65 434 {Tags:[\"mccb_j04_170_target\"],BlockState:{id:\"minecraft:sand\"},Time:1}",
+  "ws_out": "",
+  "ws_reason": "entities id minecraft:falling_block is not available in bedrock 1.21.60 (id is absent from the official bedrock 1.21.60 registry)"
+ },
+ {
+  "id": "000229",
+  "case": "CMD-J-182",
+  "cls": "ADAPTABLE",
+  "role": "test",
+  "pos": "86,64,450",
+  "cmd": "give @p minecraft:written_book[minecraft:written_book_content={title:{raw:\"CMD-J-182\"},author:\"MCCB\",pages:[{raw:{text:\"Test book CMD-J-182\"}}],generation:0,resolved:true}] 1",
+  "ws_out": "",
+  "ws_reason": "give item component written_book_content has no Bedrock command equivalent"
+ },
+ {
+  "id": "000343",
+  "case": "CMD-J-184",
+  "cls": "ADAPTABLE",
+  "role": "test",
+  "pos": "130,64,450",
+  "cmd": "item fill block 133 64 454 container.* with minecraft:stone 1",
+  "ws_out": "",
+  "ws_reason": "item fill (fills or overrides a whole slot range, Java 26.x) has no Bedrock equivalent (replaceitem sets one slot)"
+ },
+ {
+  "id": "000401",
+  "case": "CMD-J-222",
+  "cls": "ADAPTABLE",
+  "role": "test",
+  "pos": "152,64,490",
+  "cmd": "item fill block 155 64 494 container.* from block 156 64 494 container.0",
+  "ws_out": "",
+  "ws_reason": "item fill (fills or overrides a whole slot range, Java 26.x) has no Bedrock equivalent (replaceitem sets one slot)"
+ },
+ {
+  "id": "000448",
+  "case": "CMD-J-051",
+  "cls": "ADAPTABLE",
+  "role": "test",
+  "pos": "174,64,130",
+  "cmd": "execute store success score #success j04051 if entity @e[tag=mccb_j04_051_target,limit=1]",
+  "ws_out": "",
+  "ws_reason": "Bedrock execute has no \"store result/success\" (Java-only)"
+ },
+ {
+  "id": "000450",
+  "case": "CMD-J-150",
+  "cls": "ADAPTABLE",
+  "role": "test",
+  "pos": "174,64,390",
+  "cmd": "summon minecraft:item 177 65 394 {Tags:[\"mccb_j04_150_target\"],Item:{id:\"minecraft:diamond\",count:1}}",
+  "ws_out": "",
+  "ws_reason": "entities id minecraft:item is not available in bedrock 1.21.60 (id is absent from the official bedrock 1.21.60 registry)"
+ },
+ {
+  "id": "000551",
+  "case": "CMD-J-164",
+  "cls": "ADAPTABLE",
+  "role": "test",
+  "pos": "218,64,410",
+  "cmd": "summon minecraft:item 222 65 414 {Tags:[\"mccb_j04_164_target\"],Item:{id:\"minecraft:diamond\",count:1}}",
+  "ws_out": "",
+  "ws_reason": "entities id minecraft:item is not available in bedrock 1.21.60 (id is absent from the official bedrock 1.21.60 registry)"
+ },
+ {
+  "id": "000557",
+  "case": "CMD-J-213",
+  "cls": "DIRECT",
+  "role": "test",
+  "pos": "218,64,470",
+  "cmd": "effect give @e[tag=mccb_j04_213_target,limit=1] minecraft:glowing 5 0 true",
+  "ws_out": "",
+  "ws_reason": "effects id minecraft:glowing is not available in bedrock 1.21.60 (id is absent from the official bedrock 1.21.60 registry)"
+ },
+ {
+  "id": "000597",
+  "case": "CMD-J-214",
+  "cls": "DIRECT",
+  "role": "test",
+  "pos": "240,64,470",
+  "cmd": "effect clear @e[tag=mccb_j04_214_target,limit=1] minecraft:glowing",
+  "ws_out": "",
+  "ws_reason": "effects id minecraft:glowing is not available in bedrock 1.21.60 (id is absent from the official bedrock 1.21.60 registry)"
+ },
+ {
+  "id": "000691",
+  "case": "CMD-J-074",
+  "cls": "ADAPTABLE",
+  "role": "test",
+  "pos": "362,64,70",
+  "cmd": "execute as @e[tag=mccb_j04_074_target,limit=1] run data merge entity @s {Silent:1b}",
+  "ws_out": "",
+  "ws_reason": "data"
+ },
+ {
+  "id": "000693",
+  "case": "CMD-J-086",
+  "cls": "ADAPTABLE",
+  "role": "test",
+  "pos": "362,64,90",
+  "cmd": "execute as @e[tag=mccb_j04_086_target,sort=nearest,limit=1] run data merge entity @s {Silent:1b}",
+  "ws_out": "",
+  "ws_reason": "data"
+ },
+ {
+  "id": "000701",
+  "case": "CMD-J-329",
+  "cls": "ADAPTABLE",
+  "role": "test",
+  "pos": "362,64,790",
+  "cmd": "worldborder get",
+  "ws_out": "",
+  "ws_reason": "worldborder"
+ },
+ {
+  "id": "000723",
+  "case": "CMD-J-075",
+  "cls": "DIRECT",
+  "role": "test",
+  "pos": "384,64,70",
+  "cmd": "execute as @e[tag=mccb_j04_075_target,limit=1] if entity @s run data merge entity @s {Silent:1b}",
+  "ws_out": "",
+  "ws_reason": "data"
+ },
+ {
+  "id": "000749",
+  "case": "CMD-J-065",
+  "cls": "ADAPTABLE",
+  "role": "test",
+  "pos": "406,64,50",
+  "cmd": "execute as @e[tag=mccb_j04_065_target,sort=nearest,limit=1] run data merge entity @s {Glowing:1b}",
+  "ws_out": "",
+  "ws_reason": "data"
+ },
+ {
+  "id": "000779",
+  "case": "CMD-J-055",
+  "cls": "DIRECT",
+  "role": "test",
+  "pos": "428,64,30",
+  "cmd": "execute as @e[tag=mccb_j04_055_target,limit=1] if entity @s run data merge entity @s {Glowing:1b}",
+  "ws_out": "",
+  "ws_reason": "data"
+ },
+ {
+  "id": "001023",
+  "case": "CMD-J-384",
+  "cls": "ADAPTABLE",
+  "role": "test",
+  "pos": "660,64,830",
+  "cmd": "item fill block 663 64 834 {type:\"minecraft:slot_range\",slots:\"container.*\"} with minecraft:stone 1",
+  "ws_out": "",
+  "ws_reason": "item fill (fills or overrides a whole slot range, Java 26.x) has no Bedrock equivalent (replaceitem sets one slot)"
+ },
+ {
+  "id": "001063",
+  "case": "CMD-J-337",
+  "cls": "ADAPTABLE",
+  "role": "test",
+  "pos": "682,64,750",
+  "cmd": "execute as @e[tag=mccb_j04_337_target,limit=1] at @s unless block ~ ~-1 ~ minecraft:bedrock if entity @p[distance=..32] run effect give @s minecraft:glowing 5 0 true",
+  "ws_out": "",
+  "ws_reason": "effects id minecraft:glowing is not available in bedrock 1.21.60 (id is absent from the official bedrock 1.21.60 registry)"
+ },
+ {
+  "id": "001071",
+  "case": "CMD-J-385",
+  "cls": "ADAPTABLE",
+  "role": "test",
+  "pos": "682,64,830",
+  "cmd": "swing @p mainhand stab 10t",
+  "ws_out": "",
+  "ws_reason": "swing"
+ },
+ {
+  "id": "001112",
+  "case": "CMD-J-301",
+  "cls": "ADAPTABLE",
+  "role": "test",
+  "pos": "704,64,430",
+  "cmd": "data modify storage mccb_j04:cmd-j-301 ticks set value 1b",
+  "ws_out": "",
+  "ws_reason": "data"
+ },
+ {
+  "id": "001120",
+  "case": "CMD-J-374",
+  "cls": "ADAPTABLE",
+  "role": "test",
+  "pos": "704,64,810",
+  "cmd": "execute as @e[tag=mccb_j04_374_target,limit=1] at @s unless block ~ ~-1 ~ minecraft:bedrock if entity @p[distance=..32] run effect give @s minecraft:glowing 6 0 true",
+  "ws_out": "",
+  "ws_reason": "effects id minecraft:glowing is not available in bedrock 1.21.60 (id is absent from the official bedrock 1.21.60 registry)"
+ },
+ {
+  "id": "001359",
+  "case": "CMD-J-344",
+  "cls": "ADAPTABLE",
+  "role": "test",
+  "pos": "836,64,750",
+  "cmd": "execute as @e[type=minecraft:armor_stand,tag=mccb_j04_344_target,scores={j04344=5..},sort=nearest,limit=1] at @s if entity @p[distance=..32] run effect give @s minecraft:glowing 5 0 true",
+  "ws_out": "",
+  "ws_reason": "effects id minecraft:glowing is not available in bedrock 1.21.60 (id is absent from the official bedrock 1.21.60 registry)"
+ },
+ {
+  "id": "001436",
+  "case": "CMD-J-370",
+  "cls": "ADAPTABLE",
+  "role": "test",
+  "pos": "880,64,790",
+  "cmd": "execute as @e[tag=mccb_j04_370_target,x=880,y=63,z=790,dx=8,dy=6,dz=8,scores={j04370=5..},limit=1] run effect give @s minecraft:glowing 5 0 true",
+  "ws_out": "",
+  "ws_reason": "effects id minecraft:glowing is not available in bedrock 1.21.60 (id is absent from the official bedrock 1.21.60 registry)"
+ },
+ {
+  "id": "001465",
+  "case": "CMD-J-298",
+  "cls": "ADAPTABLE",
+  "role": "test",
+  "pos": "902,64,410",
+  "cmd": "effect give @e[tag=mccb_j04_298_target,limit=1] minecraft:glowing 1 0 true",
+  "ws_out": "",
+  "ws_reason": "effects id minecraft:glowing is not available in bedrock 1.21.60 (id is absent from the official bedrock 1.21.60 registry)"
+ }
+]

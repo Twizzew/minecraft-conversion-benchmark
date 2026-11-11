@@ -1,0 +1,70 @@
+{
+ "schema": "mccb.run/1",
+ "run_id": "ws-fd9b735_J03@1.0_j2b",
+ "reconstructed": {
+  "original": false,
+  "status": "RECONSTRUCTED provenance — the original run.json is lost (never committed, not found on 2026-10-03); this is not the original file",
+  "reconstructed_on": "2026-10-03",
+  "method": "reports/provenance/reconstruct-ws-fd9b735-runs.mjs (see reports/provenance/ws-fd9b735-run-records.md)",
+  "fields_from_sources": {
+   "source.sha256": "FREEZE runs_to_grade = summary.source_sha256 = manifests/worlds.json = source registry",
+   "output.sha256": "FREEZE runs_to_grade = OUTPUTS.sha256 = fd9b735 checksums = summary.direct_output_sha256",
+   "output.file": "OUTPUTS.sha256 (3rd column)",
+   "converter": "summary.converter_build (verbatim)",
+   "direction": "summary.direction",
+   "options": "summary.options"
+  },
+  "not_recovered": [
+   "started_at",
+   "finished_at",
+   "duration_ms",
+   "exit_status",
+   "signal",
+   "error",
+   "environment",
+   "logs",
+   "peak",
+   "output.engine_filename",
+   "output.bytes"
+  ],
+  "sources": {
+   "reports/freeze/FREEZE-v1.3.json": "8e317c7be305c990b6833657f9acbdba6076340fba9657960556610fbe4251a2",
+   "results/v1.3/OUTPUTS.sha256": "ac767c66831e7cf2124f8b92be8cdf46c7d20bffe59bf4ded667dbd20d4dafb4",
+   "checksums/MCCB-v1.3-runs-worldswitch-fd9b735.sha256": "53c182fd3a2e22bf5068f2c1023cc18b5a793b734af01fd0418f9730e2f1b7b1",
+   "results/v1.3/worldswitch/ws-fd9b735_J03@1.0_j2b/summary.json": "611099a72240baf18b8b7a214fa9b7ad164d2cd9b3b1b7a9ca5ceb9117249fe1",
+   "manifests/worlds.json": "82584a4a6029a1bbcf149fa6454bbf616a72930ea36cd2c6755aeb9f855a41b9",
+   "checksums/MCCB-v1.1-source-worlds.sha256": "3f0f4f6e0f3401d02ba3e8c8d94b3a560a86dd20e83cb15b30ad537cc152cf90"
+  }
+ },
+ "converter": {
+  "name": "WorldSwitch",
+  "engine_package": "minecraft-world-converter",
+  "engine_package_version": "2.8.0",
+  "commit": "fd9b73568456efc0b772d958ebffbc5599aa8fac",
+  "working_tree_clean": true,
+  "working_tree_fingerprint": null,
+  "source_available": false,
+  "package_lock_sha256": "7d6db05318e54bc1303c68f35a3c9204116e8682987a78ea99edc648a565070b",
+  "key_dependencies": {
+   "prismarine-nbt": "2.8.0",
+   "leveldb-zlib": "1.2.0",
+   "adm-zip": "0.6.1",
+   "unzipper": "0.8.14"
+  }
+ },
+ "direction": "java_to_bedrock",
+ "source": {
+  "ref": "J03@1.0",
+  "file": "MCCB_J03_SYSTEMS_JAVA.zip",
+  "sha256": "45c7ae7293ff1dfd3310757a8b56f1d094e6928aa20a82b68ff45428f55bbc50"
+ },
+ "options": {
+  "targetVersion": "latest",
+  "recoverUnlinked": true,
+  "locale": "en"
+ },
+ "output": {
+  "file": "output.mcworld",
+  "sha256": "181b5fa5228ad18e17d6d8318113b5b94e4aed35e95e127d3fed033a6f4ed312"
+ }
+}

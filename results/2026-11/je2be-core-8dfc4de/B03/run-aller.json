@@ -1,0 +1,48 @@
+{
+ "schema": "mccb.run/1",
+ "run_id": "B03_aller",
+ "converter": {
+  "name": "je2be",
+  "slug": "je2be",
+  "version": "core-8dfc4de",
+  "commit": "8dfc4de1ba5c7f72e804abea8663380c0dbd5680",
+  "tool_file": "j2b / b2j (example/ de je2be-core, non modifiés)",
+  "tool_sha256": {
+   "j2b": "42fa73a76f2ecf0f5a5876d695771cc3e0ad01b06e837659a69b2aca77150028"
+  },
+  "build_deviation": "CMAKE_CXX_STANDARD_LIBRARIES=libz.a (ordre d édition de liens), sources non modifiées",
+  "source_available": true,
+  "build": "docker image mccb-je2be:8dfc4de (sha256:baa583b3b9a964880a7e1fae036af099fb3bbec78309a75b58bb17aed642acf3)",
+  "command_template": "S=$(date +%s%N); b2j -i /in -o /out; E=$?; echo MCCB_MS=$(( ($(date +%s%N) - S) / 1000000 )) >&2; exit $E"
+ },
+ "direction": "bedrock_to_java",
+ "source": {
+  "ref": "source",
+  "file": "MCCB_B03_SYSTEMS_BEDROCK.mcworld",
+  "sha256": "fd16e5d795f6b707fb48bce821e09dcad5a8e15c87e101d6e080bb24c911a838",
+  "bytes": 779237
+ },
+ "options": {},
+ "environment": {
+  "kind": "labo prod-like, conteneur identique au convertisseur WorldSwitch",
+  "limits": "--cpus 4 --memory 5632m --memory-swap 5632m --network none"
+ },
+ "started_at": "2026-11-06T11:19:49.138297575Z",
+ "finished_at": "2026-11-06T11:19:50.242559069Z",
+ "duration_ms": 999,
+ "exit_status": 0,
+ "oom_killed": false,
+ "error": null,
+ "output": {
+  "file": "output.zip",
+  "sha256": "2fe8392d5edb1bc04f93571bca6f6431574c10a3dfa7bb7128c63bd6234df402",
+  "bytes": 872562
+ },
+ "logs": [
+  "stdout.log",
+  "stderr.log"
+ ],
+ "peak": {
+  "converter_memory_bytes": 106061824
+ }
+}

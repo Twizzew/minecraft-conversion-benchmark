@@ -1,0 +1,4730 @@
+{
+ "worlds": {
+  "J01@1.1": {
+   "WS 0308840": {
+    "run": "ws-0308840_J01@1.1_j2b",
+    "fixtures_content_sha256": "f4dcaa14d493fc7b9f4bd40d0be5aaa57fb4a0adca815b0141aa85895f081904",
+    "direct_output_sha256": "0b186da09daf796a7270e917d832a6bc39208dcef6c8c152208b102dba232146",
+    "roundtrip_output_sha256": "7252b3b17e568ee1e47c5b90e7d4810e50d3ca442e5390876ae1ca9818edec10",
+    "counts": {
+     "direct": {
+      "PASS": 56364,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 2,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 15618,
+      "NOT_EVALUATED": 39151,
+      "total": 111135,
+      "byFamily": {
+       "block": {
+        "PASS": 44221,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 5,
+        "NOT_EVALUATED": 32102
+       },
+       "block_entity": {
+        "PASS": 7458,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 13288,
+        "NOT_EVALUATED": 6046
+       },
+       "item_stack": {
+        "PASS": 4224,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 12,
+        "NOT_EVALUATED": 257
+       },
+       "entity": {
+        "PASS": 373,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 1,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 121
+       },
+       "world": {
+        "PASS": 36,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 31,
+        "NOT_EVALUATED": 5
+       },
+       "scoreboard": {
+        "PASS": 47,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "custom_dimension": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 2280,
+        "NOT_EVALUATED": 0
+       },
+       "player": {
+        "PASS": 5,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 2,
+        "NOT_EVALUATED": 0
+       },
+       "structure": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 1,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 620
+       }
+      }
+     },
+     "roundtrip": {
+      "PASS": 99078,
+      "ADAPTED": 10246,
+      "PARTIAL": 160,
+      "FAIL": 1650,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 1,
+      "total": 111135,
+      "byFamily": {
+       "block": {
+        "PASS": 64458,
+        "ADAPTED": 10246,
+        "PARTIAL": 0,
+        "FAIL": 1624,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "block_entity": {
+        "PASS": 26706,
+        "ADAPTED": 0,
+        "PARTIAL": 76,
+        "FAIL": 10,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "item_stack": {
+        "PASS": 4479,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 14,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "entity": {
+        "PASS": 411,
+        "ADAPTED": 0,
+        "PARTIAL": 84,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "world": {
+        "PASS": 72,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "scoreboard": {
+        "PASS": 47,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "custom_dimension": {
+        "PASS": 2280,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "player": {
+        "PASS": 6,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 1,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "structure": {
+        "PASS": 619,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 1,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 1
+       }
+      }
+     }
+    }
+   },
+   "WS 2.8.0 (fd9b735)": {
+    "run": "ws-fd9b735_J01@1.1_j2b",
+    "fixtures_content_sha256": "f4dcaa14d493fc7b9f4bd40d0be5aaa57fb4a0adca815b0141aa85895f081904",
+    "direct_output_sha256": "46974e300462e6e796c7740ce03cba785f12832f221ef4e42b2d0efedb7c6a43",
+    "roundtrip_output_sha256": "b3d3704b6c81c3b256e6a8c575386bdaadedb90f0c4d46d881f4c42c5a1061b2",
+    "counts": {
+     "direct": {
+      "PASS": 56366,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 15618,
+      "NOT_EVALUATED": 39151,
+      "total": 111135,
+      "byFamily": {
+       "block": {
+        "PASS": 44221,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 5,
+        "NOT_EVALUATED": 32102
+       },
+       "block_entity": {
+        "PASS": 7458,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 13288,
+        "NOT_EVALUATED": 6046
+       },
+       "item_stack": {
+        "PASS": 4224,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 12,
+        "NOT_EVALUATED": 257
+       },
+       "entity": {
+        "PASS": 374,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 121
+       },
+       "world": {
+        "PASS": 36,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 31,
+        "NOT_EVALUATED": 5
+       },
+       "scoreboard": {
+        "PASS": 47,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "custom_dimension": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 2280,
+        "NOT_EVALUATED": 0
+       },
+       "player": {
+        "PASS": 5,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 2,
+        "NOT_EVALUATED": 0
+       },
+       "structure": {
+        "PASS": 1,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 620
+       }
+      }
+     },
+     "roundtrip": {
+      "PASS": 99083,
+      "ADAPTED": 10246,
+      "PARTIAL": 160,
+      "FAIL": 1645,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 1,
+      "total": 111135,
+      "byFamily": {
+       "block": {
+        "PASS": 64461,
+        "ADAPTED": 10246,
+        "PARTIAL": 0,
+        "FAIL": 1621,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "block_entity": {
+        "PASS": 26706,
+        "ADAPTED": 0,
+        "PARTIAL": 76,
+        "FAIL": 10,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "item_stack": {
+        "PASS": 4480,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 13,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "entity": {
+        "PASS": 411,
+        "ADAPTED": 0,
+        "PARTIAL": 84,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "world": {
+        "PASS": 72,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "scoreboard": {
+        "PASS": 47,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "custom_dimension": {
+        "PASS": 2280,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "player": {
+        "PASS": 6,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 1,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "structure": {
+        "PASS": 620,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 1
+       }
+      }
+     }
+    }
+   },
+   "Chunker 1.20.0": {
+    "run": "chunker-1.20.0_J01@1.1_j2b",
+    "fixtures_content_sha256": "f4dcaa14d493fc7b9f4bd40d0be5aaa57fb4a0adca815b0141aa85895f081904",
+    "direct_output_sha256": "366fc6ccb48754d54404555173c73d319632f3bcf3e86d8ec89b2beeec091248",
+    "roundtrip_output_sha256": "285ca24e98b5417f8885a8bcd98f9ec94ba394ea6676c42a0f3761fa500546ca",
+    "counts": {
+     "direct": {
+      "PASS": 55732,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 634,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 15618,
+      "NOT_EVALUATED": 39151,
+      "total": 111135,
+      "byFamily": {
+       "block": {
+        "PASS": 44209,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 12,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 5,
+        "NOT_EVALUATED": 32102
+       },
+       "block_entity": {
+        "PASS": 7455,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 3,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 13288,
+        "NOT_EVALUATED": 6046
+       },
+       "item_stack": {
+        "PASS": 4035,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 189,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 12,
+        "NOT_EVALUATED": 257
+       },
+       "entity": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 374,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 121
+       },
+       "world": {
+        "PASS": 30,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 6,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 31,
+        "NOT_EVALUATED": 5
+       },
+       "scoreboard": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 47,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "custom_dimension": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 2280,
+        "NOT_EVALUATED": 0
+       },
+       "player": {
+        "PASS": 2,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 3,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 2,
+        "NOT_EVALUATED": 0
+       },
+       "structure": {
+        "PASS": 1,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 620
+       }
+      }
+     },
+     "roundtrip": {
+      "PASS": 92352,
+      "ADAPTED": 10349,
+      "PARTIAL": 682,
+      "FAIL": 7751,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 1,
+      "total": 111135,
+      "byFamily": {
+       "block": {
+        "PASS": 59692,
+        "ADAPTED": 10349,
+        "PARTIAL": 0,
+        "FAIL": 6287,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "block_entity": {
+        "PASS": 26612,
+        "ADAPTED": 0,
+        "PARTIAL": 154,
+        "FAIL": 26,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "item_stack": {
+        "PASS": 4223,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 270,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "entity": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 495,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "world": {
+        "PASS": 68,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 4,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "scoreboard": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 47,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "custom_dimension": {
+        "PASS": 1752,
+        "ADAPTED": 0,
+        "PARTIAL": 528,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "player": {
+        "PASS": 4,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 3,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "structure": {
+        "PASS": 1,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 619,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 1
+       }
+      }
+     }
+    }
+   },
+   "je2be core-8dfc4de": {
+    "run": "je2be-core-8dfc4de_J01@1.1_j2b",
+    "fixtures_content_sha256": "f4dcaa14d493fc7b9f4bd40d0be5aaa57fb4a0adca815b0141aa85895f081904",
+    "direct_output_sha256": "e04091d87ea832a4e35737a84f362e4296751ec2ba2fdca7c09d86fb76149c5a",
+    "roundtrip_output_sha256": "87550cfa4b3603d4911dbfcfcb7db16bf8483b51de68238de6e0e89bb1ba0905",
+    "counts": {
+     "direct": {
+      "PASS": 34,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 56332,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 15618,
+      "NOT_EVALUATED": 39151,
+      "total": 111135,
+      "byFamily": {
+       "block": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 44221,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 5,
+        "NOT_EVALUATED": 32102
+       },
+       "block_entity": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 7458,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 13288,
+        "NOT_EVALUATED": 6046
+       },
+       "item_stack": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 4224,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 12,
+        "NOT_EVALUATED": 257
+       },
+       "entity": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 374,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 121
+       },
+       "world": {
+        "PASS": 33,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 3,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 31,
+        "NOT_EVALUATED": 5
+       },
+       "scoreboard": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 47,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "custom_dimension": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 2280,
+        "NOT_EVALUATED": 0
+       },
+       "player": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 5,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 2,
+        "NOT_EVALUATED": 0
+       },
+       "structure": {
+        "PASS": 1,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 620
+       }
+      }
+     },
+     "roundtrip": {
+      "PASS": 64,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 111070,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 1,
+      "total": 111135,
+      "byFamily": {
+       "block": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 76328,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "block_entity": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 26792,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "item_stack": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 4493,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "entity": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 495,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "world": {
+        "PASS": 63,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 9,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "scoreboard": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 47,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "custom_dimension": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 2280,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "player": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 7,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "structure": {
+        "PASS": 1,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 619,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 1
+       }
+      }
+     }
+    }
+   }
+  },
+  "J02@1.0": {
+   "WS 0308840": {
+    "run": "ws-0308840_J02@1.0_j2b",
+    "fixtures_content_sha256": "3c7f38e79611d16cac73a1e2b8665c3aaaa2d7887c13afc196221e9a29b3b66b",
+    "direct_output_sha256": "88bf98ee693928a3ac1feea4caa50e8136c7d5689bb81b907ecbd4a16a1c86fd",
+    "roundtrip_output_sha256": "d815d842822b90db4e16af16d9864da138baff47d36fa9cfe03bb3c2fcee71fc",
+    "counts": {
+     "direct": {
+      "PASS": 1642,
+      "ADAPTED": 3,
+      "PARTIAL": 0,
+      "FAIL": 4,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 68,
+      "NOT_EVALUATED": 825,
+      "total": 2542,
+      "byFamily": {
+       "block": {
+        "PASS": 54,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 49
+       },
+       "block_entity": {
+        "PASS": 48,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 41
+       },
+       "item_stack": {
+        "PASS": 118,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "entity": {
+        "PASS": 1376,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 1,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 35,
+        "NOT_EVALUATED": 377
+       },
+       "world": {
+        "PASS": 36,
+        "ADAPTED": 3,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 33,
+        "NOT_EVALUATED": 5
+       },
+       "player": {
+        "PASS": 10,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "structure": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 3,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 353
+       }
+      }
+     },
+     "roundtrip": {
+      "PASS": 2283,
+      "ADAPTED": 0,
+      "PARTIAL": 162,
+      "FAIL": 89,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 8,
+      "total": 2542,
+      "byFamily": {
+       "block": {
+        "PASS": 103,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "block_entity": {
+        "PASS": 69,
+        "ADAPTED": 0,
+        "PARTIAL": 20,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "item_stack": {
+        "PASS": 118,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "entity": {
+        "PASS": 1556,
+        "ADAPTED": 0,
+        "PARTIAL": 142,
+        "FAIL": 86,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 5
+       },
+       "world": {
+        "PASS": 77,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "player": {
+        "PASS": 10,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "structure": {
+        "PASS": 350,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 3,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 3
+       }
+      }
+     }
+    }
+   },
+   "WS 2.8.0 (fd9b735)": {
+    "run": "ws-fd9b735_J02@1.0_j2b",
+    "fixtures_content_sha256": "3c7f38e79611d16cac73a1e2b8665c3aaaa2d7887c13afc196221e9a29b3b66b",
+    "direct_output_sha256": "df8ef7e847ce6d5fdfd7894999cb6e8e6bd669668ada10a500150297124e4520",
+    "roundtrip_output_sha256": "04593255aca9ab5e312cf1873abcc2890317507728e070445812d3bc644f6d82",
+    "counts": {
+     "direct": {
+      "PASS": 1645,
+      "ADAPTED": 3,
+      "PARTIAL": 0,
+      "FAIL": 1,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 68,
+      "NOT_EVALUATED": 825,
+      "total": 2542,
+      "byFamily": {
+       "block": {
+        "PASS": 54,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 49
+       },
+       "block_entity": {
+        "PASS": 48,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 41
+       },
+       "item_stack": {
+        "PASS": 118,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "entity": {
+        "PASS": 1376,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 1,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 35,
+        "NOT_EVALUATED": 377
+       },
+       "world": {
+        "PASS": 36,
+        "ADAPTED": 3,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 33,
+        "NOT_EVALUATED": 5
+       },
+       "player": {
+        "PASS": 10,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "structure": {
+        "PASS": 3,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 353
+       }
+      }
+     },
+     "roundtrip": {
+      "PASS": 2338,
+      "ADAPTED": 0,
+      "PARTIAL": 159,
+      "FAIL": 37,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 8,
+      "total": 2542,
+      "byFamily": {
+       "block": {
+        "PASS": 103,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "block_entity": {
+        "PASS": 69,
+        "ADAPTED": 0,
+        "PARTIAL": 20,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "item_stack": {
+        "PASS": 118,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "entity": {
+        "PASS": 1608,
+        "ADAPTED": 0,
+        "PARTIAL": 139,
+        "FAIL": 37,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 5
+       },
+       "world": {
+        "PASS": 77,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "player": {
+        "PASS": 10,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "structure": {
+        "PASS": 353,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 3
+       }
+      }
+     }
+    }
+   },
+   "Chunker 1.20.0": {
+    "run": "chunker-1.20.0_J02@1.0_j2b",
+    "fixtures_content_sha256": "3c7f38e79611d16cac73a1e2b8665c3aaaa2d7887c13afc196221e9a29b3b66b",
+    "direct_output_sha256": "6235bc2d1ae61e879dbc35262d28f92d56f19ce04cd8d6bcbfe3b251a07950b2",
+    "roundtrip_output_sha256": "8c734af72e9a90ccc6c52d01813376c02075e131267b299e594af22ad114d21e",
+    "counts": {
+     "direct": {
+      "PASS": 259,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 1391,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 68,
+      "NOT_EVALUATED": 824,
+      "total": 2542,
+      "byFamily": {
+       "block": {
+        "PASS": 54,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 49
+       },
+       "block_entity": {
+        "PASS": 48,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 41
+       },
+       "item_stack": {
+        "PASS": 118,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "entity": {
+        "PASS": 2,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 1376,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 35,
+        "NOT_EVALUATED": 376
+       },
+       "world": {
+        "PASS": 29,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 10,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 33,
+        "NOT_EVALUATED": 5
+       },
+       "player": {
+        "PASS": 5,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 5,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "structure": {
+        "PASS": 3,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 353
+       }
+      }
+     },
+     "roundtrip": {
+      "PASS": 374,
+      "ADAPTED": 0,
+      "PARTIAL": 16,
+      "FAIL": 2145,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 7,
+      "total": 2542,
+      "byFamily": {
+       "block": {
+        "PASS": 103,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "block_entity": {
+        "PASS": 75,
+        "ADAPTED": 0,
+        "PARTIAL": 14,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "item_stack": {
+        "PASS": 118,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "entity": {
+        "PASS": 2,
+        "ADAPTED": 0,
+        "PARTIAL": 2,
+        "FAIL": 1781,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 4
+       },
+       "world": {
+        "PASS": 68,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 9,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "player": {
+        "PASS": 5,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 5,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "structure": {
+        "PASS": 3,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 350,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 3
+       }
+      }
+     }
+    }
+   },
+   "je2be core-8dfc4de": {
+    "run": "je2be-core-8dfc4de_J02@1.0_j2b",
+    "fixtures_content_sha256": "3c7f38e79611d16cac73a1e2b8665c3aaaa2d7887c13afc196221e9a29b3b66b",
+    "direct_output_sha256": "c0119b96a225312b94a8e38b6d5866a288f7a088e4d24a83e0298061432d8d33",
+    "roundtrip_output_sha256": "ad8941de4c5f05e0d909a36d8908fb57c293f9ac6878b74f1a8533aab739a646",
+    "counts": {
+     "direct": {
+      "PASS": 32,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 1618,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 68,
+      "NOT_EVALUATED": 824,
+      "total": 2542,
+      "byFamily": {
+       "block": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 54,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 49
+       },
+       "block_entity": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 48,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 41
+       },
+       "item_stack": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 118,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "entity": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 1378,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 35,
+        "NOT_EVALUATED": 376
+       },
+       "world": {
+        "PASS": 29,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 10,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 33,
+        "NOT_EVALUATED": 5
+       },
+       "player": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 10,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "structure": {
+        "PASS": 3,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 353
+       }
+      }
+     },
+     "roundtrip": {
+      "PASS": 61,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 2474,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 7,
+      "total": 2542,
+      "byFamily": {
+       "block": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 103,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "block_entity": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 89,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "item_stack": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 118,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "entity": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 1785,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 4
+       },
+       "world": {
+        "PASS": 58,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 19,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "player": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 10,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "structure": {
+        "PASS": 3,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 350,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 3
+       }
+      }
+     }
+    }
+   }
+  },
+  "J03@1.0": {
+   "WS 0308840": {
+    "run": "ws-0308840_J03@1.0_j2b",
+    "fixtures_content_sha256": "814e2ae790f427c39b0ac62f5f59f2b818a3b09e4bb8e46307f62b993c01824a",
+    "direct_output_sha256": "5fc8f695da40cc10c8b1ab69848522bb6fb9dfe175e49f5a9d990d388f4f128f",
+    "roundtrip_output_sha256": "804794dbe8ff3c3fad879336d354ccc55435ceff074b5871b221aab3a9a7a0e6",
+    "counts": {
+     "direct": {
+      "PASS": 710,
+      "ADAPTED": 1,
+      "PARTIAL": 0,
+      "FAIL": 3,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 90,
+      "NOT_EVALUATED": 516,
+      "total": 1320,
+      "byFamily": {
+       "block": {
+        "PASS": 229,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 52,
+        "NOT_EVALUATED": 165
+       },
+       "block_entity": {
+        "PASS": 86,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 90
+       },
+       "item_stack": {
+        "PASS": 48,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 3
+       },
+       "entity": {
+        "PASS": 70,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 43
+       },
+       "world": {
+        "PASS": 36,
+        "ADAPTED": 1,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 35,
+        "NOT_EVALUATED": 5
+       },
+       "scoreboard": {
+        "PASS": 85,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 3,
+        "NOT_EVALUATED": 0
+       },
+       "player": {
+        "PASS": 6,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "structure": {
+        "PASS": 150,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 3,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 210
+       }
+      }
+     },
+     "roundtrip": {
+      "PASS": 1230,
+      "ADAPTED": 1,
+      "PARTIAL": 11,
+      "FAIL": 58,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 20,
+      "total": 1320,
+      "byFamily": {
+       "block": {
+        "PASS": 393,
+        "ADAPTED": 1,
+        "PARTIAL": 0,
+        "FAIL": 52,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "block_entity": {
+        "PASS": 167,
+        "ADAPTED": 0,
+        "PARTIAL": 7,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 2
+       },
+       "item_stack": {
+        "PASS": 51,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "entity": {
+        "PASS": 94,
+        "ADAPTED": 0,
+        "PARTIAL": 4,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 15
+       },
+       "world": {
+        "PASS": 74,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 3,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "scoreboard": {
+        "PASS": 88,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "player": {
+        "PASS": 6,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "structure": {
+        "PASS": 357,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 3,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 3
+       }
+      }
+     }
+    }
+   },
+   "WS 2.8.0 (fd9b735)": {
+    "run": "ws-fd9b735_J03@1.0_j2b",
+    "fixtures_content_sha256": "814e2ae790f427c39b0ac62f5f59f2b818a3b09e4bb8e46307f62b993c01824a",
+    "direct_output_sha256": "181b5fa5228ad18e17d6d8318113b5b94e4aed35e95e127d3fed033a6f4ed312",
+    "roundtrip_output_sha256": "dbc9331cd8df7c3ee736925b1d035645f2e10f5946fa81da33a85d6c37e652cc",
+    "counts": {
+     "direct": {
+      "PASS": 713,
+      "ADAPTED": 1,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 90,
+      "NOT_EVALUATED": 516,
+      "total": 1320,
+      "byFamily": {
+       "block": {
+        "PASS": 229,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 52,
+        "NOT_EVALUATED": 165
+       },
+       "block_entity": {
+        "PASS": 86,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 90
+       },
+       "item_stack": {
+        "PASS": 48,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 3
+       },
+       "entity": {
+        "PASS": 70,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 43
+       },
+       "world": {
+        "PASS": 36,
+        "ADAPTED": 1,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 35,
+        "NOT_EVALUATED": 5
+       },
+       "scoreboard": {
+        "PASS": 85,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 3,
+        "NOT_EVALUATED": 0
+       },
+       "player": {
+        "PASS": 6,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "structure": {
+        "PASS": 153,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 210
+       }
+      }
+     },
+     "roundtrip": {
+      "PASS": 1233,
+      "ADAPTED": 1,
+      "PARTIAL": 11,
+      "FAIL": 55,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 20,
+      "total": 1320,
+      "byFamily": {
+       "block": {
+        "PASS": 393,
+        "ADAPTED": 1,
+        "PARTIAL": 0,
+        "FAIL": 52,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "block_entity": {
+        "PASS": 167,
+        "ADAPTED": 0,
+        "PARTIAL": 7,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 2
+       },
+       "item_stack": {
+        "PASS": 51,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "entity": {
+        "PASS": 94,
+        "ADAPTED": 0,
+        "PARTIAL": 4,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 15
+       },
+       "world": {
+        "PASS": 74,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 3,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "scoreboard": {
+        "PASS": 88,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "player": {
+        "PASS": 6,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "structure": {
+        "PASS": 360,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 3
+       }
+      }
+     }
+    }
+   },
+   "Chunker 1.20.0": {
+    "run": "chunker-1.20.0_J03@1.0_j2b",
+    "fixtures_content_sha256": "814e2ae790f427c39b0ac62f5f59f2b818a3b09e4bb8e46307f62b993c01824a",
+    "direct_output_sha256": "a14131d3870398754485c2995112934a0b6fb4ceab232918ad21b238f0e47cd0",
+    "roundtrip_output_sha256": "143f5e6a027ea8750112a779b7b77bdf476cd3e9d6f33d6fe3bf139f03a15d72",
+    "counts": {
+     "direct": {
+      "PASS": 397,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 318,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 90,
+      "NOT_EVALUATED": 515,
+      "total": 1320,
+      "byFamily": {
+       "block": {
+        "PASS": 229,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 52,
+        "NOT_EVALUATED": 165
+       },
+       "block_entity": {
+        "PASS": 87,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 89
+       },
+       "item_stack": {
+        "PASS": 48,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 3
+       },
+       "entity": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 70,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 43
+       },
+       "world": {
+        "PASS": 27,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 10,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 35,
+        "NOT_EVALUATED": 5
+       },
+       "scoreboard": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 85,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 3,
+        "NOT_EVALUATED": 0
+       },
+       "player": {
+        "PASS": 3,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 3,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "structure": {
+        "PASS": 3,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 150,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 210
+       }
+      }
+     },
+     "roundtrip": {
+      "PASS": 720,
+      "ADAPTED": 2,
+      "PARTIAL": 19,
+      "FAIL": 559,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 20,
+      "total": 1320,
+      "byFamily": {
+       "block": {
+        "PASS": 444,
+        "ADAPTED": 2,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "block_entity": {
+        "PASS": 155,
+        "ADAPTED": 0,
+        "PARTIAL": 19,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 2
+       },
+       "item_stack": {
+        "PASS": 51,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "entity": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 98,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 15
+       },
+       "world": {
+        "PASS": 64,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 13,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "scoreboard": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 88,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "player": {
+        "PASS": 3,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 3,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "structure": {
+        "PASS": 3,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 357,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 3
+       }
+      }
+     }
+    }
+   },
+   "je2be core-8dfc4de": {
+    "run": "je2be-core-8dfc4de_J03@1.0_j2b",
+    "fixtures_content_sha256": "814e2ae790f427c39b0ac62f5f59f2b818a3b09e4bb8e46307f62b993c01824a",
+    "direct_output_sha256": "c526eb21f63133002d30e65d72dca54d9f7c6c09e7f6e5c509c978fd5b556322",
+    "roundtrip_output_sha256": "44e3cb741c60a2af9ba672f0d648b6eef02b037973868f4bbdaac269d719b5e4",
+    "counts": {
+     "direct": {
+      "PASS": 26,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 712,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 90,
+      "NOT_EVALUATED": 492,
+      "total": 1320,
+      "byFamily": {
+       "block": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 229,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 52,
+        "NOT_EVALUATED": 165
+       },
+       "block_entity": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 110,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 66
+       },
+       "item_stack": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 48,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 3
+       },
+       "entity": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 70,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 43
+       },
+       "world": {
+        "PASS": 23,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 14,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 35,
+        "NOT_EVALUATED": 5
+       },
+       "scoreboard": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 85,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 3,
+        "NOT_EVALUATED": 0
+       },
+       "player": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 6,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "structure": {
+        "PASS": 3,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 150,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 210
+       }
+      }
+     },
+     "roundtrip": {
+      "PASS": 54,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 1246,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 20,
+      "total": 1320,
+      "byFamily": {
+       "block": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 446,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "block_entity": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 174,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 2
+       },
+       "item_stack": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 51,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "entity": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 98,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 15
+       },
+       "world": {
+        "PASS": 51,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 26,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "scoreboard": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 88,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "player": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 6,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "structure": {
+        "PASS": 3,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 357,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 3
+       }
+      }
+     }
+    }
+   }
+  },
+  "J04@1.0": {
+   "WS 0308840": {
+    "run": "ws-0308840_J04@1.0_j2b",
+    "fixtures_content_sha256": "a3fdf4028c62350522602dfcb289cdec77cfe77049d734fdc87cb7c7c0596ef7",
+    "direct_output_sha256": "7e8ee6870691644a6fc240d6f1ab3797a504dc3d5039d04c8f81f7ab22720fc7",
+    "roundtrip_output_sha256": "2975bda2afe105b1753eb0b6372d9182f50d88d16d8cd75e84cda13017657074",
+    "counts": {
+     "direct": {
+      "PASS": 18477,
+      "ADAPTED": 3,
+      "PARTIAL": 0,
+      "FAIL": 35,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 124,
+      "NOT_EVALUATED": 16533,
+      "total": 35172,
+      "byFamily": {
+       "block": {
+        "PASS": 6170,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 5667
+       },
+       "block_entity": {
+        "PASS": 9004,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 32,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 90,
+        "NOT_EVALUATED": 9824
+       },
+       "item_stack": {
+        "PASS": 1235,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "entity": {
+        "PASS": 1332,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 470
+       },
+       "world": {
+        "PASS": 36,
+        "ADAPTED": 3,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 34,
+        "NOT_EVALUATED": 5
+       },
+       "scoreboard": {
+        "PASS": 692,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 19
+       },
+       "player": {
+        "PASS": 8,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "structure": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 3,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 548
+       }
+      }
+     },
+     "roundtrip": {
+      "PASS": 34591,
+      "ADAPTED": 0,
+      "PARTIAL": 445,
+      "FAIL": 4,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 132,
+      "total": 35172,
+      "byFamily": {
+       "block": {
+        "PASS": 11837,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "block_entity": {
+        "PASS": 18527,
+        "ADAPTED": 0,
+        "PARTIAL": 409,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 14
+       },
+       "item_stack": {
+        "PASS": 1235,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "entity": {
+        "PASS": 1651,
+        "ADAPTED": 0,
+        "PARTIAL": 36,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 115
+       },
+       "world": {
+        "PASS": 77,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 1,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "scoreboard": {
+        "PASS": 711,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "player": {
+        "PASS": 8,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "structure": {
+        "PASS": 545,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 3,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 3
+       }
+      }
+     }
+    }
+   },
+   "WS 2.8.0 (fd9b735)": {
+    "run": "ws-fd9b735_J04@1.0_j2b",
+    "fixtures_content_sha256": "a3fdf4028c62350522602dfcb289cdec77cfe77049d734fdc87cb7c7c0596ef7",
+    "direct_output_sha256": "d226030cbcb9255c8233ab0bd557f01ef5d1d03b731a49821c39a0c0eb0d9cf9",
+    "roundtrip_output_sha256": "e4f9f7b12438d709bf66ad68429c16f76e1e854277f05cf3ee810db650e3fb5b",
+    "counts": {
+     "direct": {
+      "PASS": 18483,
+      "ADAPTED": 3,
+      "PARTIAL": 0,
+      "FAIL": 29,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 124,
+      "NOT_EVALUATED": 16533,
+      "total": 35172,
+      "byFamily": {
+       "block": {
+        "PASS": 6170,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 5667
+       },
+       "block_entity": {
+        "PASS": 9007,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 29,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 90,
+        "NOT_EVALUATED": 9824
+       },
+       "item_stack": {
+        "PASS": 1235,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "entity": {
+        "PASS": 1332,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 470
+       },
+       "world": {
+        "PASS": 36,
+        "ADAPTED": 3,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 34,
+        "NOT_EVALUATED": 5
+       },
+       "scoreboard": {
+        "PASS": 692,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 19
+       },
+       "player": {
+        "PASS": 8,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "structure": {
+        "PASS": 3,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 548
+       }
+      }
+     },
+     "roundtrip": {
+      "PASS": 34594,
+      "ADAPTED": 0,
+      "PARTIAL": 446,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 132,
+      "total": 35172,
+      "byFamily": {
+       "block": {
+        "PASS": 11837,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "block_entity": {
+        "PASS": 18527,
+        "ADAPTED": 0,
+        "PARTIAL": 409,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 14
+       },
+       "item_stack": {
+        "PASS": 1235,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "entity": {
+        "PASS": 1650,
+        "ADAPTED": 0,
+        "PARTIAL": 37,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 115
+       },
+       "world": {
+        "PASS": 78,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "scoreboard": {
+        "PASS": 711,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "player": {
+        "PASS": 8,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "structure": {
+        "PASS": 548,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 3
+       }
+      }
+     }
+    }
+   },
+   "Chunker 1.20.0": {
+    "run": "chunker-1.20.0_J04@1.0_j2b",
+    "fixtures_content_sha256": "a3fdf4028c62350522602dfcb289cdec77cfe77049d734fdc87cb7c7c0596ef7",
+    "direct_output_sha256": "5ecd53911db7a7fb7d4fea8200293412f5ff8a131628cd42781cb18398fcb319",
+    "roundtrip_output_sha256": "3127e91bb0b73349bda953ce4122012a4f7c841b551b5877d37776ae572d8295",
+    "counts": {
+     "direct": {
+      "PASS": 17109,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 2038,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 124,
+      "NOT_EVALUATED": 15901,
+      "total": 35172,
+      "byFamily": {
+       "block": {
+        "PASS": 6170,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 5667
+       },
+       "block_entity": {
+        "PASS": 9668,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 90,
+        "NOT_EVALUATED": 9192
+       },
+       "item_stack": {
+        "PASS": 1235,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "entity": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 1332,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 470
+       },
+       "world": {
+        "PASS": 29,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 10,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 34,
+        "NOT_EVALUATED": 5
+       },
+       "scoreboard": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 692,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 19
+       },
+       "player": {
+        "PASS": 4,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 4,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "structure": {
+        "PASS": 3,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 548
+       }
+      }
+     },
+     "roundtrip": {
+      "PASS": 31278,
+      "ADAPTED": 0,
+      "PARTIAL": 405,
+      "FAIL": 3357,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 132,
+      "total": 35172,
+      "byFamily": {
+       "block": {
+        "PASS": 11837,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "block_entity": {
+        "PASS": 18531,
+        "ADAPTED": 0,
+        "PARTIAL": 405,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 14
+       },
+       "item_stack": {
+        "PASS": 835,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 400,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "entity": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 1687,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 115
+       },
+       "world": {
+        "PASS": 68,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 10,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "scoreboard": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 711,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "player": {
+        "PASS": 4,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 4,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "structure": {
+        "PASS": 3,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 545,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 3
+       }
+      }
+     }
+    }
+   },
+   "je2be core-8dfc4de": {
+    "run": "je2be-core-8dfc4de_J04@1.0_j2b",
+    "fixtures_content_sha256": "a3fdf4028c62350522602dfcb289cdec77cfe77049d734fdc87cb7c7c0596ef7",
+    "direct_output_sha256": "3f87a557009d1960f3b3d35f80d61d1f30cdc5db806ecc3faed15a8346d46c48",
+    "roundtrip_output_sha256": "8575f74e0caa1cc8ec924eebe8e390ca84e06d3480689372b98828f316dbba2c",
+    "counts": {
+     "direct": {
+      "PASS": 33,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 23013,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 124,
+      "NOT_EVALUATED": 12002,
+      "total": 35172,
+      "byFamily": {
+       "block": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 6170,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 5667
+       },
+       "block_entity": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 13567,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 90,
+        "NOT_EVALUATED": 5293
+       },
+       "item_stack": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 1235,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "entity": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 1332,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 470
+       },
+       "world": {
+        "PASS": 30,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 9,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 34,
+        "NOT_EVALUATED": 5
+       },
+       "scoreboard": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 692,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 19
+       },
+       "player": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 8,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "structure": {
+        "PASS": 3,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 548
+       }
+      }
+     },
+     "roundtrip": {
+      "PASS": 63,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 34977,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 132,
+      "total": 35172,
+      "byFamily": {
+       "block": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 11837,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "block_entity": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 18936,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 14
+       },
+       "item_stack": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 1235,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "entity": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 1687,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 115
+       },
+       "world": {
+        "PASS": 60,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 18,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "scoreboard": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 711,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "player": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 8,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "structure": {
+        "PASS": 3,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 545,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 3
+       }
+      }
+     }
+    }
+   }
+  },
+  "B01@1.0": {
+   "WS 0308840": {
+    "run": "ws-0308840_B01@1.0_b2j",
+    "fixtures_content_sha256": "780d5858bf7f1fab101cdbf64e6f1f3f0e9afa493a33526b37d76b33518cd048",
+    "direct_output_sha256": "f70e957454ea3245a46e25f20df137ecf29321353ee14e61b548a6acc4d0b799",
+    "roundtrip_output_sha256": "334cd0df8e569d8591ba3f9ba50a1b3c7c163c619c73a35ed50ccace549e51ed",
+    "counts": {
+     "direct": {
+      "PASS": 480,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 4,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 13,
+      "NOT_EVALUATED": 246,
+      "total": 743,
+      "byFamily": {
+       "block": {
+        "PASS": 239,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 2,
+        "NOT_EVALUATED": 152
+       },
+       "block_entity": {
+        "PASS": 70,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 1,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 3,
+        "NOT_EVALUATED": 65
+       },
+       "item_stack": {
+        "PASS": 93,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 3,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 13
+       },
+       "entity": {
+        "PASS": 35,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 11
+       },
+       "world": {
+        "PASS": 36,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 8,
+        "NOT_EVALUATED": 5
+       },
+       "player": {
+        "PASS": 7,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       }
+      }
+     },
+     "roundtrip": {
+      "PASS": 707,
+      "ADAPTED": 0,
+      "PARTIAL": 22,
+      "FAIL": 13,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 1,
+      "total": 743,
+      "byFamily": {
+       "block": {
+        "PASS": 389,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 4,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "block_entity": {
+        "PASS": 121,
+        "ADAPTED": 0,
+        "PARTIAL": 10,
+        "FAIL": 8,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "item_stack": {
+        "PASS": 109,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "entity": {
+        "PASS": 35,
+        "ADAPTED": 0,
+        "PARTIAL": 11,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "world": {
+        "PASS": 47,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 1,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 1
+       },
+       "player": {
+        "PASS": 6,
+        "ADAPTED": 0,
+        "PARTIAL": 1,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       }
+      }
+     }
+    }
+   },
+   "WS 2.8.0 (fd9b735)": {
+    "run": "ws-fd9b735_B01@1.0_b2j",
+    "fixtures_content_sha256": "780d5858bf7f1fab101cdbf64e6f1f3f0e9afa493a33526b37d76b33518cd048",
+    "direct_output_sha256": "e513a66b5cad82e9ea08ed1f880b3ab0d4af0148faee337be3b4aa38e4e6a6d1",
+    "roundtrip_output_sha256": "d67a6cfc1d9517bc8f972249d97df631a4eef1867aa052a23a38c4fb640779a8",
+    "counts": {
+     "direct": {
+      "PASS": 484,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 13,
+      "NOT_EVALUATED": 246,
+      "total": 743,
+      "byFamily": {
+       "block": {
+        "PASS": 239,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 2,
+        "NOT_EVALUATED": 152
+       },
+       "block_entity": {
+        "PASS": 71,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 3,
+        "NOT_EVALUATED": 65
+       },
+       "item_stack": {
+        "PASS": 96,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 13
+       },
+       "entity": {
+        "PASS": 35,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 11
+       },
+       "world": {
+        "PASS": 36,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 8,
+        "NOT_EVALUATED": 5
+       },
+       "player": {
+        "PASS": 7,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       }
+      }
+     },
+     "roundtrip": {
+      "PASS": 717,
+      "ADAPTED": 0,
+      "PARTIAL": 22,
+      "FAIL": 3,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 1,
+      "total": 743,
+      "byFamily": {
+       "block": {
+        "PASS": 390,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 3,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "block_entity": {
+        "PASS": 129,
+        "ADAPTED": 0,
+        "PARTIAL": 10,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "item_stack": {
+        "PASS": 109,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "entity": {
+        "PASS": 35,
+        "ADAPTED": 0,
+        "PARTIAL": 11,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "world": {
+        "PASS": 48,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 1
+       },
+       "player": {
+        "PASS": 6,
+        "ADAPTED": 0,
+        "PARTIAL": 1,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       }
+      }
+     }
+    }
+   },
+   "Chunker 1.20.0": {
+    "run": "chunker-1.20.0_B01@1.0_b2j",
+    "fixtures_content_sha256": "780d5858bf7f1fab101cdbf64e6f1f3f0e9afa493a33526b37d76b33518cd048",
+    "direct_output_sha256": "59c680d59445c007d44e980d8afed4cb530e4f6aaec084c1499d6246deae0fc5",
+    "roundtrip_output_sha256": "35a53742fc877a922f3e6b5405fd2953c16d037fe0726cf6d9db46c1543b677d",
+    "counts": {
+     "direct": {
+      "PASS": 444,
+      "ADAPTED": 1,
+      "PARTIAL": 0,
+      "FAIL": 39,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 13,
+      "NOT_EVALUATED": 246,
+      "total": 743,
+      "byFamily": {
+       "block": {
+        "PASS": 239,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 2,
+        "NOT_EVALUATED": 152
+       },
+       "block_entity": {
+        "PASS": 70,
+        "ADAPTED": 1,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 3,
+        "NOT_EVALUATED": 65
+       },
+       "item_stack": {
+        "PASS": 96,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 13
+       },
+       "entity": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 35,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 11
+       },
+       "world": {
+        "PASS": 35,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 1,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 8,
+        "NOT_EVALUATED": 5
+       },
+       "player": {
+        "PASS": 4,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 3,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       }
+      }
+     },
+     "roundtrip": {
+      "PASS": 652,
+      "ADAPTED": 0,
+      "PARTIAL": 16,
+      "FAIL": 74,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 1,
+      "total": 743,
+      "byFamily": {
+       "block": {
+        "PASS": 382,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 11,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "block_entity": {
+        "PASS": 123,
+        "ADAPTED": 0,
+        "PARTIAL": 15,
+        "FAIL": 1,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "item_stack": {
+        "PASS": 109,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "entity": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 46,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "world": {
+        "PASS": 35,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 13,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 1
+       },
+       "player": {
+        "PASS": 3,
+        "ADAPTED": 0,
+        "PARTIAL": 1,
+        "FAIL": 3,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       }
+      }
+     }
+    }
+   },
+   "je2be core-8dfc4de": {
+    "run": "je2be-core-8dfc4de_B01@1.0_b2j",
+    "fixtures_content_sha256": "780d5858bf7f1fab101cdbf64e6f1f3f0e9afa493a33526b37d76b33518cd048",
+    "direct_output_sha256": "6b93a551a4abe37483208a7b937c7d86d0f9389ff5a19671d8ecf6d9ff1b356b",
+    "roundtrip_output_sha256": "c8eac67cd198378e93be227d41369b7f3ff5e6f204f517c125f76839ddf78510",
+    "counts": {
+     "direct": {
+      "PASS": 476,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 8,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 13,
+      "NOT_EVALUATED": 246,
+      "total": 743,
+      "byFamily": {
+       "block": {
+        "PASS": 239,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 2,
+        "NOT_EVALUATED": 152
+       },
+       "block_entity": {
+        "PASS": 70,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 1,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 3,
+        "NOT_EVALUATED": 65
+       },
+       "item_stack": {
+        "PASS": 96,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 13
+       },
+       "entity": {
+        "PASS": 35,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 11
+       },
+       "world": {
+        "PASS": 36,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 8,
+        "NOT_EVALUATED": 5
+       },
+       "player": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 7,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       }
+      }
+     },
+     "roundtrip": {
+      "PASS": 700,
+      "ADAPTED": 0,
+      "PARTIAL": 21,
+      "FAIL": 21,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 1,
+      "total": 743,
+      "byFamily": {
+       "block": {
+        "PASS": 376,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 17,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "block_entity": {
+        "PASS": 127,
+        "ADAPTED": 0,
+        "PARTIAL": 10,
+        "FAIL": 2,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "item_stack": {
+        "PASS": 109,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "entity": {
+        "PASS": 35,
+        "ADAPTED": 0,
+        "PARTIAL": 11,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "world": {
+        "PASS": 46,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 2,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 1
+       },
+       "player": {
+        "PASS": 7,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       }
+      }
+     }
+    }
+   }
+  },
+  "B02@1.0": {
+   "WS 0308840": {
+    "run": "ws-0308840_B02@1.0_b2j",
+    "fixtures_content_sha256": "0b356ad034d5c0fda55af79bf09fc347d755b238f6962c8dd58f76d895dde572",
+    "direct_output_sha256": "c8fc90f6a2a7e600e13e4fb51ee9f6f30b07a32b1a646aec49acd67e1deae0f0",
+    "roundtrip_output_sha256": "eeb605e6796d3018731920a1375e964b942e63acc79eef66cc5bfae9d8a67571",
+    "counts": {
+     "direct": {
+      "PASS": 623,
+      "ADAPTED": 0,
+      "PARTIAL": 1,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 51,
+      "NOT_EVALUATED": 245,
+      "total": 920,
+      "byFamily": {
+       "block": {
+        "PASS": 297,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 95
+       },
+       "block_entity": {
+        "PASS": 10,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 42,
+        "NOT_EVALUATED": 52
+       },
+       "item_stack": {
+        "PASS": 38,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 12
+       },
+       "entity": {
+        "PASS": 232,
+        "ADAPTED": 0,
+        "PARTIAL": 1,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 1,
+        "NOT_EVALUATED": 72
+       },
+       "world": {
+        "PASS": 36,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 8,
+        "NOT_EVALUATED": 5
+       },
+       "player": {
+        "PASS": 10,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 9
+       }
+      }
+     },
+     "roundtrip": {
+      "PASS": 800,
+      "ADAPTED": 0,
+      "PARTIAL": 103,
+      "FAIL": 10,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 7,
+      "total": 920,
+      "byFamily": {
+       "block": {
+        "PASS": 392,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "block_entity": {
+        "PASS": 100,
+        "ADAPTED": 0,
+        "PARTIAL": 4,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "item_stack": {
+        "PASS": 49,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 1,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "entity": {
+        "PASS": 199,
+        "ADAPTED": 0,
+        "PARTIAL": 96,
+        "FAIL": 5,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 6
+       },
+       "world": {
+        "PASS": 47,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 1,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 1
+       },
+       "player": {
+        "PASS": 13,
+        "ADAPTED": 0,
+        "PARTIAL": 3,
+        "FAIL": 3,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       }
+      }
+     }
+    }
+   },
+   "WS 2.8.0 (fd9b735)": {
+    "run": "ws-fd9b735_B02@1.0_b2j",
+    "fixtures_content_sha256": "0b356ad034d5c0fda55af79bf09fc347d755b238f6962c8dd58f76d895dde572",
+    "direct_output_sha256": "82f2fc50e562d51b1aef44aab50f69fec4abd729ace48fd9f4f75057a7c810d3",
+    "roundtrip_output_sha256": "ea977bf114fd2c3a67ffa80fb82a44a829b7bed48e461f92b0a8f0d2567ea2f3",
+    "counts": {
+     "direct": {
+      "PASS": 624,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 51,
+      "NOT_EVALUATED": 245,
+      "total": 920,
+      "byFamily": {
+       "block": {
+        "PASS": 297,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 95
+       },
+       "block_entity": {
+        "PASS": 10,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 42,
+        "NOT_EVALUATED": 52
+       },
+       "item_stack": {
+        "PASS": 38,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 12
+       },
+       "entity": {
+        "PASS": 233,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 1,
+        "NOT_EVALUATED": 72
+       },
+       "world": {
+        "PASS": 36,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 8,
+        "NOT_EVALUATED": 5
+       },
+       "player": {
+        "PASS": 10,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 9
+       }
+      }
+     },
+     "roundtrip": {
+      "PASS": 805,
+      "ADAPTED": 0,
+      "PARTIAL": 104,
+      "FAIL": 4,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 7,
+      "total": 920,
+      "byFamily": {
+       "block": {
+        "PASS": 392,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "block_entity": {
+        "PASS": 100,
+        "ADAPTED": 0,
+        "PARTIAL": 4,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "item_stack": {
+        "PASS": 49,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 1,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "entity": {
+        "PASS": 203,
+        "ADAPTED": 0,
+        "PARTIAL": 96,
+        "FAIL": 1,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 6
+       },
+       "world": {
+        "PASS": 48,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 1
+       },
+       "player": {
+        "PASS": 13,
+        "ADAPTED": 0,
+        "PARTIAL": 4,
+        "FAIL": 2,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       }
+      }
+     }
+    }
+   },
+   "Chunker 1.20.0": {
+    "run": "chunker-1.20.0_B02@1.0_b2j",
+    "fixtures_content_sha256": "0b356ad034d5c0fda55af79bf09fc347d755b238f6962c8dd58f76d895dde572",
+    "direct_output_sha256": "9ac093121aca0e0ce548c22a8cfc0b20c2a9b23a1993d5d13ade48b580878c32",
+    "roundtrip_output_sha256": "9e3c0287779ae8f6d38ce0924c7765c7303e678d9d26215bc071f162cf737ce2",
+    "counts": {
+     "direct": {
+      "PASS": 385,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 239,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 51,
+      "NOT_EVALUATED": 245,
+      "total": 920,
+      "byFamily": {
+       "block": {
+        "PASS": 297,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 95
+       },
+       "block_entity": {
+        "PASS": 10,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 42,
+        "NOT_EVALUATED": 52
+       },
+       "item_stack": {
+        "PASS": 38,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 12
+       },
+       "entity": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 233,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 1,
+        "NOT_EVALUATED": 72
+       },
+       "world": {
+        "PASS": 35,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 1,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 8,
+        "NOT_EVALUATED": 5
+       },
+       "player": {
+        "PASS": 5,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 5,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 9
+       }
+      }
+     },
+     "roundtrip": {
+      "PASS": 572,
+      "ADAPTED": 0,
+      "PARTIAL": 6,
+      "FAIL": 335,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 7,
+      "total": 920,
+      "byFamily": {
+       "block": {
+        "PASS": 391,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 1,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "block_entity": {
+        "PASS": 100,
+        "ADAPTED": 0,
+        "PARTIAL": 4,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "item_stack": {
+        "PASS": 43,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 7,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "entity": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 300,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 6
+       },
+       "world": {
+        "PASS": 35,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 13,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 1
+       },
+       "player": {
+        "PASS": 3,
+        "ADAPTED": 0,
+        "PARTIAL": 2,
+        "FAIL": 14,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       }
+      }
+     }
+    }
+   },
+   "je2be core-8dfc4de": {
+    "run": "je2be-core-8dfc4de_B02@1.0_b2j",
+    "fixtures_content_sha256": "0b356ad034d5c0fda55af79bf09fc347d755b238f6962c8dd58f76d895dde572",
+    "direct_output_sha256": "653787da355d2c7d57afb7cf9994e5bdee08028778f0bf070fb4d8ded63218dc",
+    "roundtrip_output_sha256": "c70eb2e7e84ddb23bc94fdfeb90ababb4da66f417546b2d9a1f3723765163e6e",
+    "counts": {
+     "direct": {
+      "PASS": 602,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 22,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 51,
+      "NOT_EVALUATED": 245,
+      "total": 920,
+      "byFamily": {
+       "block": {
+        "PASS": 297,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 95
+       },
+       "block_entity": {
+        "PASS": 10,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 42,
+        "NOT_EVALUATED": 52
+       },
+       "item_stack": {
+        "PASS": 38,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 12
+       },
+       "entity": {
+        "PASS": 221,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 12,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 1,
+        "NOT_EVALUATED": 72
+       },
+       "world": {
+        "PASS": 36,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 8,
+        "NOT_EVALUATED": 5
+       },
+       "player": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 10,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 9
+       }
+      }
+     },
+     "roundtrip": {
+      "PASS": 815,
+      "ADAPTED": 0,
+      "PARTIAL": 67,
+      "FAIL": 31,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 7,
+      "total": 920,
+      "byFamily": {
+       "block": {
+        "PASS": 392,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "block_entity": {
+        "PASS": 100,
+        "ADAPTED": 0,
+        "PARTIAL": 4,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "item_stack": {
+        "PASS": 41,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 9,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "entity": {
+        "PASS": 229,
+        "ADAPTED": 0,
+        "PARTIAL": 61,
+        "FAIL": 10,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 6
+       },
+       "world": {
+        "PASS": 46,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 2,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 1
+       },
+       "player": {
+        "PASS": 7,
+        "ADAPTED": 0,
+        "PARTIAL": 2,
+        "FAIL": 10,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       }
+      }
+     }
+    }
+   }
+  },
+  "B03@1.0": {
+   "WS 0308840": {
+    "run": "ws-0308840_B03@1.0_b2j",
+    "fixtures_content_sha256": "c8d46069cf356838974759b71563a28b4cf9c10483ea083bfc1febde9c6097b6",
+    "direct_output_sha256": "61fa3c0ce409c0cf10a704e24bfdf3bcc0bc19d515d5a6c214f700a4bc06a4b7",
+    "roundtrip_output_sha256": "21920c6ea4fbfd43e900200656e508c09723ed889776ff8dc3a1e7e419d0879c",
+    "counts": {
+     "direct": {
+      "PASS": 547,
+      "ADAPTED": 2,
+      "PARTIAL": 1,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 42,
+      "NOT_EVALUATED": 1575,
+      "total": 2167,
+      "byFamily": {
+       "block": {
+        "PASS": 145,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 83
+       },
+       "block_entity": {
+        "PASS": 139,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 34,
+        "NOT_EVALUATED": 1424
+       },
+       "item_stack": {
+        "PASS": 26,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 2
+       },
+       "entity": {
+        "PASS": 176,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 60
+       },
+       "world": {
+        "PASS": 36,
+        "ADAPTED": 2,
+        "PARTIAL": 1,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 8,
+        "NOT_EVALUATED": 5
+       },
+       "scoreboard": {
+        "PASS": 18,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 1
+       },
+       "player": {
+        "PASS": 6,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "structure": {
+        "PASS": 1,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       }
+      }
+     },
+     "roundtrip": {
+      "PASS": 725,
+      "ADAPTED": 0,
+      "PARTIAL": 100,
+      "FAIL": 39,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 1303,
+      "total": 2167,
+      "byFamily": {
+       "block": {
+        "PASS": 200,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 28,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "block_entity": {
+        "PASS": 252,
+        "ADAPTED": 0,
+        "PARTIAL": 39,
+        "FAIL": 6,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 1300
+       },
+       "item_stack": {
+        "PASS": 26,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 2
+       },
+       "entity": {
+        "PASS": 174,
+        "ADAPTED": 0,
+        "PARTIAL": 61,
+        "FAIL": 1,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "world": {
+        "PASS": 48,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 3,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 1
+       },
+       "scoreboard": {
+        "PASS": 18,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 1,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "player": {
+        "PASS": 6,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "structure": {
+        "PASS": 1,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       }
+      }
+     }
+    }
+   },
+   "WS 2.8.0 (fd9b735)": {
+    "run": "ws-fd9b735_B03@1.0_b2j",
+    "fixtures_content_sha256": "c8d46069cf356838974759b71563a28b4cf9c10483ea083bfc1febde9c6097b6",
+    "direct_output_sha256": "57704b4475da80e13402fdd7247fd7e3214774dd9d20ad64b596a60e83e7ff4f",
+    "roundtrip_output_sha256": "c02b5bd35c282221b2f6de69fc9cfae66aec533e537abe9979e53d756fb6949c",
+    "counts": {
+     "direct": {
+      "PASS": 547,
+      "ADAPTED": 2,
+      "PARTIAL": 1,
+      "FAIL": 0,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 42,
+      "NOT_EVALUATED": 1575,
+      "total": 2167,
+      "byFamily": {
+       "block": {
+        "PASS": 145,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 83
+       },
+       "block_entity": {
+        "PASS": 139,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 34,
+        "NOT_EVALUATED": 1424
+       },
+       "item_stack": {
+        "PASS": 26,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 2
+       },
+       "entity": {
+        "PASS": 176,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 60
+       },
+       "world": {
+        "PASS": 36,
+        "ADAPTED": 2,
+        "PARTIAL": 1,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 8,
+        "NOT_EVALUATED": 5
+       },
+       "scoreboard": {
+        "PASS": 18,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 1
+       },
+       "player": {
+        "PASS": 6,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "structure": {
+        "PASS": 1,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       }
+      }
+     },
+     "roundtrip": {
+      "PASS": 763,
+      "ADAPTED": 0,
+      "PARTIAL": 97,
+      "FAIL": 4,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 1303,
+      "total": 2167,
+      "byFamily": {
+       "block": {
+        "PASS": 226,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 2,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "block_entity": {
+        "PASS": 258,
+        "ADAPTED": 0,
+        "PARTIAL": 37,
+        "FAIL": 2,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 1300
+       },
+       "item_stack": {
+        "PASS": 26,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 2
+       },
+       "entity": {
+        "PASS": 176,
+        "ADAPTED": 0,
+        "PARTIAL": 60,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "world": {
+        "PASS": 51,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 1
+       },
+       "scoreboard": {
+        "PASS": 19,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "player": {
+        "PASS": 6,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "structure": {
+        "PASS": 1,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       }
+      }
+     }
+    }
+   },
+   "Chunker 1.20.0": {
+    "run": "chunker-1.20.0_B03@1.0_b2j",
+    "fixtures_content_sha256": "c8d46069cf356838974759b71563a28b4cf9c10483ea083bfc1febde9c6097b6",
+    "direct_output_sha256": "6e4e18f245ea888621b659b336c89b5c2d045d7c08de215060cd20b53c35fb56",
+    "roundtrip_output_sha256": "2e91d01496bbf401edc57cd270ee3ef49132bc81942e0a346989af38d987d63e",
+    "counts": {
+     "direct": {
+      "PASS": 347,
+      "ADAPTED": 1,
+      "PARTIAL": 0,
+      "FAIL": 202,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 42,
+      "NOT_EVALUATED": 1575,
+      "total": 2167,
+      "byFamily": {
+       "block": {
+        "PASS": 145,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 83
+       },
+       "block_entity": {
+        "PASS": 138,
+        "ADAPTED": 1,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 34,
+        "NOT_EVALUATED": 1424
+       },
+       "item_stack": {
+        "PASS": 26,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 2
+       },
+       "entity": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 176,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 60
+       },
+       "world": {
+        "PASS": 35,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 4,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 8,
+        "NOT_EVALUATED": 5
+       },
+       "scoreboard": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 18,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 1
+       },
+       "player": {
+        "PASS": 3,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 3,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "structure": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 1,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       }
+      }
+     },
+     "roundtrip": {
+      "PASS": 512,
+      "ADAPTED": 0,
+      "PARTIAL": 72,
+      "FAIL": 280,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 1303,
+      "total": 2167,
+      "byFamily": {
+       "block": {
+        "PASS": 226,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 2,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "block_entity": {
+        "PASS": 222,
+        "ADAPTED": 0,
+        "PARTIAL": 72,
+        "FAIL": 3,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 1300
+       },
+       "item_stack": {
+        "PASS": 26,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 2
+       },
+       "entity": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 236,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "world": {
+        "PASS": 35,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 16,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 1
+       },
+       "scoreboard": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 19,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "player": {
+        "PASS": 3,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 3,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "structure": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 1,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       }
+      }
+     }
+    }
+   },
+   "je2be core-8dfc4de": {
+    "run": "je2be-core-8dfc4de_B03@1.0_b2j",
+    "fixtures_content_sha256": "c8d46069cf356838974759b71563a28b4cf9c10483ea083bfc1febde9c6097b6",
+    "direct_output_sha256": "9de13caf0bf1c39aefd0cd643a3fecdd5bf9755837a74068936684c463b93812",
+    "roundtrip_output_sha256": "a3b48f974005ff88af1cf4b7389ff7b6147435f8fe0ea3a5e4425d9193e5656f",
+    "counts": {
+     "direct": {
+      "PASS": 516,
+      "ADAPTED": 0,
+      "PARTIAL": 0,
+      "FAIL": 34,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 42,
+      "NOT_EVALUATED": 1575,
+      "total": 2167,
+      "byFamily": {
+       "block": {
+        "PASS": 145,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 83
+       },
+       "block_entity": {
+        "PASS": 139,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 34,
+        "NOT_EVALUATED": 1424
+       },
+       "item_stack": {
+        "PASS": 26,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 2
+       },
+       "entity": {
+        "PASS": 170,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 6,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 60
+       },
+       "world": {
+        "PASS": 36,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 3,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 8,
+        "NOT_EVALUATED": 5
+       },
+       "scoreboard": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 18,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 1
+       },
+       "player": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 6,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "structure": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 1,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       }
+      }
+     },
+     "roundtrip": {
+      "PASS": 746,
+      "ADAPTED": 0,
+      "PARTIAL": 81,
+      "FAIL": 37,
+      "UNSUPPORTED": 0,
+      "NOT_APPLICABLE": 0,
+      "NOT_EVALUATED": 1303,
+      "total": 2167,
+      "byFamily": {
+       "block": {
+        "PASS": 226,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 2,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "block_entity": {
+        "PASS": 265,
+        "ADAPTED": 0,
+        "PARTIAL": 30,
+        "FAIL": 2,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 1300
+       },
+       "item_stack": {
+        "PASS": 26,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 2
+       },
+       "entity": {
+        "PASS": 177,
+        "ADAPTED": 0,
+        "PARTIAL": 51,
+        "FAIL": 8,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "world": {
+        "PASS": 46,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 5,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 1
+       },
+       "scoreboard": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 19,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "player": {
+        "PASS": 6,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 0,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       },
+       "structure": {
+        "PASS": 0,
+        "ADAPTED": 0,
+        "PARTIAL": 0,
+        "FAIL": 1,
+        "UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "NOT_EVALUATED": 0
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "checks": [
+  {
+   "world": "J01@1.1",
+   "converters": 4,
+   "same_assertions": true,
+   "same_fixture_registry": true,
+   "sums_exact": true,
+   "each_counted_once": true,
+   "not_evaluated_never_pass": true,
+   "assertions_per_level": 111135
+  },
+  {
+   "world": "J02@1.0",
+   "converters": 4,
+   "same_assertions": true,
+   "same_fixture_registry": true,
+   "sums_exact": true,
+   "each_counted_once": true,
+   "not_evaluated_never_pass": true,
+   "assertions_per_level": 2542
+  },
+  {
+   "world": "J03@1.0",
+   "converters": 4,
+   "same_assertions": true,
+   "same_fixture_registry": true,
+   "sums_exact": true,
+   "each_counted_once": true,
+   "not_evaluated_never_pass": true,
+   "assertions_per_level": 1320
+  },
+  {
+   "world": "J04@1.0",
+   "converters": 4,
+   "same_assertions": true,
+   "same_fixture_registry": true,
+   "sums_exact": true,
+   "each_counted_once": true,
+   "not_evaluated_never_pass": true,
+   "assertions_per_level": 35172
+  },
+  {
+   "world": "B01@1.0",
+   "converters": 4,
+   "same_assertions": true,
+   "same_fixture_registry": true,
+   "sums_exact": true,
+   "each_counted_once": true,
+   "not_evaluated_never_pass": true,
+   "assertions_per_level": 743
+  },
+  {
+   "world": "B02@1.0",
+   "converters": 4,
+   "same_assertions": true,
+   "same_fixture_registry": true,
+   "sums_exact": true,
+   "each_counted_once": true,
+   "not_evaluated_never_pass": true,
+   "assertions_per_level": 920
+  },
+  {
+   "world": "B03@1.0",
+   "converters": 4,
+   "same_assertions": true,
+   "same_fixture_registry": true,
+   "sums_exact": true,
+   "each_counted_once": true,
+   "not_evaluated_never_pass": true,
+   "assertions_per_level": 2167
+  }
+ ]
+}

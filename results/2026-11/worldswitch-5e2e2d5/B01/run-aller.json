@@ -1,0 +1,168 @@
+{
+ "schema": "mccb.run/1",
+ "run_id": "B01_aller",
+ "converter": {
+  "name": "WorldSwitch",
+  "engine_package": "worldswitch",
+  "engine_package_version": "2.8.0",
+  "commit": "5e2e2d528d469eb3fdd90dd318073304fa46fa25",
+  "working_tree_clean": true,
+  "build": "docker image mccb-ws:5e2e2d5 (sha256:6056b0f06d32a23b6df03d9c29faf18e494fe688e3a5ed5e6d90eb5667942ec8), Dockerfile du dépôt, git archive du commit",
+  "source_available": false
+ },
+ "direction": "bedrock_to_java",
+ "source": {
+  "ref": "source",
+  "file": "MCCB_B01_STATIC_BEDROCK.mcworld",
+  "sha256": "83e8e9909a3d8915980df317073b80c11421152d8f7ed88714fd196e45c0a667",
+  "bytes": 119207
+ },
+ "options": {
+  "recoverUnlinked": true,
+  "locale": "en",
+  "javaUuid": null,
+  "playerMap": null
+ },
+ "environment": {
+  "kind": "labo prod-like (docker-compose.yml)",
+  "limits": {
+   "converter": "cpus 4, memory 5632m, swap 0, read-only, network none, cap-drop ALL, pids 512",
+   "worker": "cpus 0.75, memory 512m, swap 0"
+  },
+  "host": {
+   "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor",
+   "nproc": 8,
+   "kernel": "6.18.54.1-microsoft-standard-WSL2",
+   "mem_total_kb": 8134332
+  }
+ },
+ "started_at": "2026-11-01T01:56:45.933Z",
+ "finished_at": "2026-11-01T01:56:46.399Z",
+ "duration_ms": 466,
+ "exit_status": 0,
+ "error": null,
+ "output": {
+  "file": "output.zip",
+  "sha256": "2bf8590b128c970922c18ecd7a3b2437266287b116a9c1cbcc47704f23fe2a96",
+  "bytes": 164214,
+  "engine_filename": "B01_STATIC_Core_java.zip"
+ },
+ "logs": [
+  "converter.log",
+  "worker.log",
+  "prep.log"
+ ],
+ "peak": {
+  "converter_memory_bytes": 153759744,
+  "worker_memory_bytes": 49844224
+ },
+ "lab": {
+  "job_id": "63dcb005-57d9-4394-80bb-7fc3b0e68443",
+  "final_status": "done",
+  "attempts": 1,
+  "notice": {
+   "commands": {
+    "total": 1,
+    "byKind": {
+     "approximate_translation": 1
+    },
+    "disabled": 0,
+    "reportFile": "worldswitch_command_report.json",
+    "approximated": 1
+   },
+   "fidelity": {
+    "total": 6,
+    "impacts": [
+     {
+      "en": "Dropped — block entity `Cauldron` (×3)",
+      "fr": "Supprimé — block entity `Cauldron` (×3)",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — entity `minecraft:wandering_trader.HomePos`",
+      "fr": "Supprimé — entité `minecraft:wandering_trader.HomePos`",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — world data `generated structures`",
+      "fr": "Supprimé — donnée de monde `structures generees`",
+      "category": "dropped"
+     },
+     {
+      "en": "Archived — world data `Bedrock setting serverChunkTickRange`",
+      "fr": "Archivé — donnée de monde `réglage Bedrock serverChunkTickRange`",
+      "category": "archived"
+     }
+    ],
+    "detailed": 4,
+    "families": 4,
+    "truncated": 0,
+    "byCategory": {
+     "dropped": 5,
+     "archived": 1
+    }
+   }
+  },
+  "upload_ms": 33,
+  "analysis_ms": 215,
+  "analysis": {
+   "detectedType": "Bedrock",
+   "version": "Bedrock 1.26.45",
+   "sizeBytes": 119207,
+   "sizeFormatted": "116 Ko",
+   "uncompressedBytes": 676626,
+   "chunkCount": 1,
+   "levelName": "B01 STATIC Core",
+   "valid": true,
+   "gameMode": "creative",
+   "difficulty": "normal",
+   "spawn": "0, auto, 0",
+   "worldRootPrefix": "",
+   "worldCount": 1,
+   "players": [
+    {
+     "sourceId": "~local_player",
+     "isHost": true,
+     "sourceLabel": "Joueur principal",
+     "labelSource": "host",
+     "displayIndex": 1,
+     "xuid": null,
+     "msaId": null,
+     "identifiers": [],
+     "profile": {
+      "items": 17,
+      "armor": 0,
+      "ender": 0,
+      "xpLevel": 0,
+      "dimension": "overworld",
+      "pos": [
+       -9,
+       70,
+       -61
+      ],
+      "nameHints": [],
+      "empty": false
+     },
+     "profileReadable": true,
+     "sharesAccountWith": 0
+    }
+   ],
+   "playersScanned": true,
+   "playersSkippedReason": null,
+   "curedVillagers": 0
+  },
+  "queue_to_done_ms": 1481,
+  "wall_s_worker_start_to_terminal": 2.893534027,
+  "converter": {
+   "memory_peak_bytes": 153759744,
+   "cpu_usec": 1098088,
+   "oom_kills": 0,
+   "scratch_peak_bytes_sampled_2s": 0
+  },
+  "worker": {
+   "memory_peak_bytes": 49844224,
+   "cpu_usec": 405020,
+   "scratch_peak_bytes_sampled_2s": 0
+  }
+ }
+}

@@ -1,0 +1,11 @@
+[btj] 224 chunk(s) : métadonnées de structure Java restaurées
+[btj] java-sidecar : enregistrements d'etat ignores (source Bedrock actuelle prioritaire)
+[btj] joueurs : 1 détecté(s), 0 rattaché(s) à un compte Java cible
+[btj] régions : 17 tâche(s) en séquentiel
+[btj] 5842 charge(s) biome Bedrock reportée(s) au sidecar
+[btj] zones de tick : 5 zone(s) → 258 chunk(s) forcé(s) dans 3 dimension(s) (data/chunks.dat)
+[btj] sidecar : 12325 enregistrements Bedrock conservés
+[btj] état Java seul restitué : 29 règle(s) de jeu Java, liste des datapacks, réglages du superflat
+[btj] 3712 subchunks, 81 BE, 360 entities, 0 maps, player=yes, legacyB=0
+[btj] java-sidecar : 9 fichiers Java restaurés verbatim
+[btj] java-sidecar : 65 fichier(s) d'etat ignores (source Bedrock actuelle prioritaire)

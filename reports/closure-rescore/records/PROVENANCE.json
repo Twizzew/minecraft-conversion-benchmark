@@ -1,0 +1,107 @@
+{
+ "schema": "mccb.closure-rescore-provenance/1",
+ "scorer_commit": "97acbe72ca6088a09c75549ea04d48975eaf2a57",
+ "scorer_code_commit": "2027179a5538f26ebc46167aa96ceb1ed937939c",
+ "freeze": {
+  "file": "reports/freeze/FREEZE-v1.3.json",
+  "sha256": "8e317c7be305c990b6833657f9acbdba6076340fba9657960556610fbe4251a2"
+ },
+ "r01_addendum": {
+  "file": "reports/freeze/FREEZE-v1.3-R01-ADDENDUM.json",
+  "sha256": "7d9cbe6c0bd7795f576ee9f15c0c93fdb26ce1c5e372fd377fad08cc605f1046"
+ },
+ "java_oracle": {
+  "jar_sha256": "4508d006323f24fa02876310c192d739af56516eb259000ac50f0909a68c9a2d",
+  "libraries": 114,
+  "blocks_json_sha256": "7a0de8aaf7b04d00c40b8ffdc4cfe75184cff2e821d336a020573201867105a4",
+  "registries_json_sha256": "51f62d56f8bd0e9134ee88dd9226b64e9e56cf6a32377540d44291bf47ecdac6",
+  "java_runtime": "java-runtime-epsilon 25.0.1"
+ },
+ "public": {
+  "outputs_registry": {
+   "file": "results/v1.3/OUTPUTS.sha256",
+   "sha256": "ac767c66831e7cf2124f8b92be8cdf46c7d20bffe59bf4ded667dbd20d4dafb4"
+  },
+  "outputs": 56,
+  "cells": 28,
+  "scorer_fingerprint": "df6247a67714c7ae936fe78686139ccaa00234be19761d45ea5aab067e4587d8",
+  "ruleset_fingerprint": "e2030dcdb8f47c41a3263305301004551e9429ddca87e42a6798a2975c1dd105",
+  "graded": "2026-10-03T21:48:31Z/2026-10-03T22:18:56Z",
+  "exits": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "preflight": {
+   "present": 56,
+   "bytes_exact": 56,
+   "run_records": 56,
+   "links": 28,
+   "fixtures": 7,
+   "java_oracle": "OK"
+  },
+  "post_run": {
+   "historical_files": 545,
+   "runs_files": 140,
+   "identical": true
+  },
+  "results": "results/v1.3-closure",
+  "table_identical_to_graded_rows": true
+ },
+ "r01": {
+  "outputs_registry": {
+   "file": "results/v1.3-r01/OUTPUTS.sha256",
+   "sha256": "0e20c5b2e67f4f55a2c48236eda778a8396debd88b32bc146a9ea084a050c252"
+  },
+  "outputs": 8,
+  "cells": 4,
+  "graded_source_sha256": "a640374228039cc6dd502c0192b472b30a0f9baa8588f886d2057990dcd1e1db",
+  "published_source_sha256_not_used": "4cc666cf1325caa53e26189558d09b2f8bc534b733f134c58dd485b3c9d461fa",
+  "graded_fixture": {
+   "file_sha256": "fb56364e67d58931bae169e6de1df6249e492e6165c3e63c72c6f39e49304ef9",
+   "content_sha256": "9af167af59a6bb423baa64f688610a11ed26533f1ed9fc599f1b003d0fcd9e29"
+  },
+  "working_copy": {
+   "base_commit": "97acbe72ca6088a09c75549ea04d48975eaf2a57",
+   "differs_by": [
+    "fixtures/R01_1.0.jsonl.gz",
+    "manifests/worlds.json"
+   ],
+   "manifest_sha256": "21852efff8ef816c17414af3f2e88784265398b8079c89ca5ebd7425c96fbc96",
+   "r01_entry_equals_addendum_overlay": true,
+   "other_scorer_files_identical": 45,
+   "scorer_files": 46
+  },
+  "scorer_fingerprint": "b5e94f7f76a52e0b865bca72fb16238eeea9d460f6c9c1f224ce9bb36e1dd893",
+  "ruleset_fingerprint": "e2030dcdb8f47c41a3263305301004551e9429ddca87e42a6798a2975c1dd105",
+  "graded": "2026-10-03T22:52:48Z/2026-10-04T08:16:11Z",
+  "exits": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "interruption": "2026-10-04T00:52Z harness job limit during ws-fd9b735_R01@1.0_b2j; nothing promoted; resumed 00:53:29Z (README.md)",
+  "post_run": {
+   "historical_files": 545,
+   "runs_and_source_files": 41,
+   "working_copy_files": 695,
+   "identical": true
+  },
+  "privacy": {
+   "xuid_like_values": 0,
+   "graded_account_ids_found": 0,
+   "substitution_needed": false
+  },
+  "results": "results/v1.3-r01-closure",
+  "table_identical_to_graded_rows": true
+ },
+ "selftests": {
+  "report": "results/v1.3-closure/selftests/SELFTESTS-v1.3.md",
+  "pass": 15,
+  "fail": 0,
+  "skip": 0,
+  "closure_tests": "122/122 (116 + 6 run with MCCB_JAVA_REPORTS_REAL and the je2be run records)"
+ }
+}

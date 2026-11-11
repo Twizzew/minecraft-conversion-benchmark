@@ -1,0 +1,210 @@
+{
+ "schema": "mccb.run/1",
+ "run_id": "J02_aller",
+ "converter": {
+  "name": "WorldSwitch",
+  "engine_package": "worldswitch",
+  "engine_package_version": "2.8.0",
+  "commit": "5e2e2d528d469eb3fdd90dd318073304fa46fa25",
+  "working_tree_clean": false,
+  "patch": "arbre /srv/mccb-2026-11/src-c33 du labo (corrections non commitées du dépôt, voir 05-rapports)",
+  "build": "docker image mccb-ws:5e2e2d5-c33 (sha256:d198d4c6c42bf0a89e09c6c0588beddacc87674848132e456b16eb09fd17c9b2), Dockerfile du dépôt, git archive du commit",
+  "source_available": false
+ },
+ "direction": "java_to_bedrock",
+ "source": {
+  "ref": "source",
+  "file": "MCCB_J02_JAVA_26.3.zip",
+  "sha256": "998d1dda72edc12cba52da7ade9cad909dcc5bcba8e51df81086a7c9d31718e9",
+  "bytes": 4818638
+ },
+ "options": {
+  "targetVersion": "latest",
+  "recoverUnlinked": true,
+  "locale": "en"
+ },
+ "environment": {
+  "kind": "labo prod-like (docker-compose.yml)",
+  "limits": {
+   "converter": "cpus 4, memory 5632m, swap 0, read-only, network none, cap-drop ALL, pids 512",
+   "worker": "cpus 0.75, memory 512m, swap 0"
+  },
+  "host": {
+   "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor",
+   "nproc": 8,
+   "kernel": "6.18.58.1-microsoft-standard-WSL2",
+   "mem_total_kb": 8134304
+  }
+ },
+ "started_at": "2026-11-10T15:29:32.799Z",
+ "finished_at": "2026-11-10T15:29:38.915Z",
+ "duration_ms": 6116,
+ "exit_status": 0,
+ "error": null,
+ "output": {
+  "file": "output.mcworld",
+  "sha256": "4194c997c7a4030eec2655e2401389eedd772881028e1c30ed9795c4ac867324",
+  "bytes": 5984121,
+  "engine_filename": "J02_bedrock.mcworld"
+ },
+ "logs": [
+  "converter.log",
+  "worker.log",
+  "prep.log"
+ ],
+ "peak": {
+  "converter_memory_bytes": 1512898560,
+  "worker_memory_bytes": 67014656
+ },
+ "lab": {
+  "job_id": "21129f75-8bb7-489c-8232-9a0e6c9f2f4f",
+  "final_status": "done",
+  "attempts": 1,
+  "notice": {
+   "fidelity": {
+    "total": 6128,
+    "impacts": [
+     {
+      "en": "Approximated — block entity `minecraft:trial_spawner.spawn_data.entity` (×6)",
+      "fr": "Approximé — block entity `minecraft:trial_spawner.spawn_data.entity` (×6)",
+      "category": "approximated"
+     },
+     {
+      "en": "Dropped — world data `per-dimension clock` (×3)",
+      "fr": "Supprimé — donnée de monde `horloge propre à une dimension` (×3)",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — world data `clear-weather timer` (×3)",
+      "fr": "Supprimé — donnée de monde `minuteur de beau temps` (×3)",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — entity `minecraft:block_display` (×2)",
+      "fr": "Supprimé — entité `minecraft:block_display` (×2)",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — entity `minecraft:item_display` (×2)",
+      "fr": "Supprimé — entité `minecraft:item_display` (×2)",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — entity `minecraft:text_display` (×2)",
+      "fr": "Supprimé — entité `minecraft:text_display` (×2)",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — block entity `minecraft:vault.shared_data` (×2)",
+      "fr": "Supprimé — block entity `minecraft:vault.shared_data` (×2)",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — world data `truncated height (minecraft:the_nether, y>127)`",
+      "fr": "Supprimé — donnée de monde `hauteur tronquée (minecraft:the_nether, y>127)`",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — entity `minecraft:giant`",
+      "fr": "Supprimé — entité `minecraft:giant`",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — entity `minecraft:illusioner`",
+      "fr": "Supprimé — entité `minecraft:illusioner`",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — entity `minecraft:interaction`",
+      "fr": "Supprimé — entité `minecraft:interaction`",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — entity `minecraft:mannequin`",
+      "fr": "Supprimé — entité `minecraft:mannequin`",
+      "category": "dropped"
+     }
+    ],
+    "detailed": 200,
+    "families": 224,
+    "truncated": 24,
+    "byCategory": {
+     "dropped": 22,
+     "archived": 572,
+     "normalized": 5527,
+     "approximated": 7
+    }
+   }
+  },
+  "upload_ms": 58,
+  "analysis_ms": 465,
+  "analysis": {
+   "detectedType": "Java",
+   "version": "Java 26.3",
+   "sizeBytes": 4818638,
+   "sizeFormatted": "4.6 Mo",
+   "uncompressedBytes": 56403249,
+   "chunkCount": 13753,
+   "levelName": "J02",
+   "valid": true,
+   "gameMode": "creative",
+   "difficulty": "normal",
+   "spawn": "0, -60, 0",
+   "worldRootPrefix": "J02",
+   "worldCount": 1,
+   "players": [
+    {
+     "sourceId": "5bcbe855-323c-4f1e-a587-5f348834b848",
+     "isHost": true,
+     "sourceLabel": "Joueur principal",
+     "labelSource": "host",
+     "displayIndex": 1,
+     "identifiers": [],
+     "profile": {
+      "items": 0,
+      "armor": 0,
+      "ender": 0,
+      "xpLevel": 0,
+      "dimension": "overworld",
+      "pos": [
+       -37,
+       221,
+       2
+      ],
+      "nameHints": [],
+      "empty": true
+     },
+     "profileReadable": true,
+     "sharesAccountWith": 0
+    }
+   ],
+   "playersScanned": true,
+   "playersSkippedReason": null,
+   "playerLinkingSupported": false,
+   "terrainScan": {
+    "total": 13405,
+    "unreadable": 0,
+    "truncatedRegions": 0,
+    "complete": true
+   },
+   "terrainDimensions": {
+    "overworld": 11723,
+    "nether": 841,
+    "end": 841
+   }
+  },
+  "queue_to_done_ms": 6939,
+  "wall_s_worker_start_to_terminal": 7.031,
+  "converter": {
+   "memory_peak_bytes": 1512898560,
+   "cpu_usec": 13375765,
+   "oom_kills": 0,
+   "scratch_peak_bytes_sampled_2s": 7560732
+  },
+  "worker": {
+   "memory_peak_bytes": 67014656,
+   "cpu_usec": 498560,
+   "scratch_peak_bytes_sampled_2s": 0
+  }
+ }
+}

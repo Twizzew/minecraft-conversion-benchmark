@@ -1,0 +1,18 @@
+(node:32168) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of <LOCAL>/worldswitch/lib/converter.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to <LOCAL>\worldswitch\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[btj] 13 famille(s) de perte de fidélité :
+[btj]   ×75 [dropped/block_entity] SporeBlossom — block-entity Bedrock sans équivalent Java connu (id CamelCase = Bedrock-only)
+[btj]   ×29 [dropped/block_entity] FlowerPot — block-entity Bedrock sans équivalent Java connu (id CamelCase = Bedrock-only)
+[btj]   ×11 [dropped/block_entity] SculkSensor — block-entity Bedrock sans équivalent Java connu (id CamelCase = Bedrock-only)
+[btj]   ×2 [dropped/block_entity] PistonArm — block-entity Bedrock sans équivalent Java connu (id CamelCase = Bedrock-only)
+[btj]   ×2 [dropped/block_entity] SculkCatalyst — block-entity Bedrock sans équivalent Java connu (id CamelCase = Bedrock-only)
+[btj]   ×2 [dropped/block_entity] SculkShrieker — block-entity Bedrock sans équivalent Java connu (id CamelCase = Bedrock-only)
+[btj]   ×1 [dropped/block_entity] Cauldron — block-entity Bedrock sans équivalent Java connu (id CamelCase = Bedrock-only)
+[btj]   ×1 [dropped/block_entity] Lodestone — block-entity Bedrock sans équivalent Java connu (id CamelCase = Bedrock-only)
+[btj]   ×1 [approximated/world_data] biomes 4x4x4 (dim0) — Bedrock stocke un biome par BLOC, Java un par cube 4x4x4 : dans les zones ou plusieurs biomes se melangent a l'interieur d'un meme cube, la cellule Java garde le biome MAJORITAIRE. Perte de RESOLUTION inevitable entre les deux formats, releve une fois par dimension. Le terrain, les blocs et les constructions sont intacts ; la finesse d'origine est archivee pour un retour vers Bedrock.
+[btj]   ×1 [archived/world_data] réglage Bedrock serverChunkTickRange — `serverChunkTickRange` = 4 (défaut 6) : rayon de chunks simulés (fermes, pousses, mobs) — côté Java c'est la distance de simulation, un réglage du client/serveur et non du monde. Le réglage ne peut pas être posé dans un monde Java ; il est conservé hors-jeu et revient à l'aller-retour.
+[btj]   ×1 [approximated/world_data] scoreboard : détenteur de score (UUID) — 1 real-player score holder(s) kept under their UUID: Bedrock stores no gamertag, and Java tracks players by name, so these scores no longer follow the live player
+[btj]   ×1 [dropped/world_data] structures generees (partiel) — Une partie des structures generees n'a pas pu etre transcrite — Bedrock n'a enregistre que leur boite englobante, sans aucune piece, et un `start` Java tire SA boite de ses pieces : minecraft:trial_chambers (2 instance(s)), minecraft:desert_pyramid (1 instance(s)). Leurs blocs et leurs coffres sont convertis normalement ; ce sont les APPARITIONS DE MOBS propres a ces structures qui ne reprendront pas (sorciere d'une hutte, blaze d'une forteresse, gardien d'un monument).
+[btj]   ×1 [approximated/world_data] zone de tick circulaire — 1 zone(s) de tick CIRCULAIRE(s) : Java ne force que des chunks, sans notion de disque. Les chunks du disque sont forcés un par un ; les chunks de bord peuvent différer de ce que Bedrock tenait exactement chargé.

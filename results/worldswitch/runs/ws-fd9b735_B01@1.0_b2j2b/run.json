@@ -1,0 +1,46 @@
+{
+ "schema": "mccb.run/1",
+ "run_id": "ws-fd9b735_B01@1.0_b2j2b",
+ "reconstructed": {
+  "original": false,
+  "status": "RECONSTRUCTED provenance — the original run.json is lost (never committed, not found on 2026-10-03); this is not the original file",
+  "reconstructed_on": "2026-10-03",
+  "method": "reports/provenance/reconstruct-ws-fd9b735-runs.mjs (see reports/provenance/ws-fd9b735-run-records.md)",
+  "fields_from_sources": {
+   "source.sha256": "FREEZE runs_to_grade = summary.direct_output_sha256 (the return run consumed the direct output)",
+   "output.sha256": "FREEZE runs_to_grade = OUTPUTS.sha256 = fd9b735 checksums = summary.roundtrip_output_sha256",
+   "output.file": "OUTPUTS.sha256 (3rd column)",
+   "direction": "run id suffix (no historical file records it)"
+  },
+  "not_recovered": [
+   "started_at",
+   "finished_at",
+   "duration_ms",
+   "exit_status",
+   "signal",
+   "error",
+   "environment",
+   "logs",
+   "peak",
+   "output.engine_filename",
+   "output.bytes",
+   "converter (only the build is recorded: FREEZE runs_to_grade \"fd9b735\")",
+   "options"
+  ],
+  "sources": {
+   "reports/freeze/FREEZE-v1.3.json": "8e317c7be305c990b6833657f9acbdba6076340fba9657960556610fbe4251a2",
+   "results/v1.3/OUTPUTS.sha256": "ac767c66831e7cf2124f8b92be8cdf46c7d20bffe59bf4ded667dbd20d4dafb4",
+   "checksums/MCCB-v1.3-runs-worldswitch-fd9b735.sha256": "53c182fd3a2e22bf5068f2c1023cc18b5a793b734af01fd0418f9730e2f1b7b1",
+   "results/v1.3/worldswitch/ws-fd9b735_B01@1.0_b2j/summary.json": "6a38dd07ef675e5839e76fda46cc29830bd8ffafbfa6787cab8aa9d266c6ea9b"
+  }
+ },
+ "direction": "java_to_bedrock",
+ "source": {
+  "ref": "ws-fd9b735_B01@1.0_b2j",
+  "sha256": "e513a66b5cad82e9ea08ed1f880b3ab0d4af0148faee337be3b4aa38e4e6a6d1"
+ },
+ "output": {
+  "file": "output.mcworld",
+  "sha256": "d67a6cfc1d9517bc8f972249d97df631a4eef1867aa052a23a38c4fb640779a8"
+ }
+}

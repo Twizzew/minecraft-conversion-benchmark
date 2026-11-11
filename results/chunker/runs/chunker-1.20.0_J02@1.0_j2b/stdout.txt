@@ -1,0 +1,20 @@
+Converting from Java 26.2.0 to Bedrock 1.26.40
+0,00%
+4,47%
+18,66%
+19,66%
+20,45%
+20,75%
+29,04%
+49,13%
+56,93%
+60,60%
+60,97%
+62,01%
+62,18%
+62,30%
+Compacting world, this may take a while...
+94,42%
+Finished compacting world.
+100,00%
+Conversion complete! Took 0h 0m 1s 942ms

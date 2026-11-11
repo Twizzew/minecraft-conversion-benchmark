@@ -1,0 +1,220 @@
+{
+ "schema": "mccb.run/1",
+ "run_id": "J03_aller",
+ "converter": {
+  "name": "WorldSwitch",
+  "engine_package": "worldswitch",
+  "engine_package_version": "2.8.0",
+  "commit": "5e2e2d528d469eb3fdd90dd318073304fa46fa25",
+  "working_tree_clean": false,
+  "patch": "arbre /srv/mccb-2026-11/src-c33 du labo (corrections non commitées du dépôt, voir 05-rapports)",
+  "build": "docker image mccb-ws:5e2e2d5-c33 (sha256:d198d4c6c42bf0a89e09c6c0588beddacc87674848132e456b16eb09fd17c9b2), Dockerfile du dépôt, git archive du commit",
+  "source_available": false
+ },
+ "direction": "java_to_bedrock",
+ "source": {
+  "ref": "source",
+  "file": "MCCB_J03_JAVA_26.3.zip",
+  "sha256": "703b04f39be6ded9ba1670c160f20a0401e87ae102ad8eefe90c1066644685d4",
+  "bytes": 78154522
+ },
+ "options": {
+  "targetVersion": "latest",
+  "recoverUnlinked": true,
+  "locale": "en"
+ },
+ "environment": {
+  "kind": "labo prod-like (docker-compose.yml)",
+  "limits": {
+   "converter": "cpus 4, memory 5632m, swap 0, read-only, network none, cap-drop ALL, pids 512",
+   "worker": "cpus 0.75, memory 512m, swap 0"
+  },
+  "host": {
+   "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor",
+   "nproc": 8,
+   "kernel": "6.18.58.1-microsoft-standard-WSL2",
+   "mem_total_kb": 8134304
+  }
+ },
+ "started_at": "2026-11-10T15:30:18.703Z",
+ "finished_at": "2026-11-10T15:30:34.931Z",
+ "duration_ms": 16228,
+ "exit_status": 0,
+ "error": null,
+ "output": {
+  "file": "output.mcworld",
+  "sha256": "8033ec7f322d0b39f050325d0d66aad137efe27db96f8fe5e2e41261ea09d7d5",
+  "bytes": 131876436,
+  "engine_filename": "J03_bedrock.mcworld"
+ },
+ "logs": [
+  "converter.log",
+  "worker.log",
+  "prep.log"
+ ],
+ "peak": {
+  "converter_memory_bytes": 2268524544,
+  "worker_memory_bytes": 92479488
+ },
+ "lab": {
+  "job_id": "f6339c84-aa51-48ad-8e92-b4660fc037cd",
+  "final_status": "done",
+  "attempts": 1,
+  "notice": {
+   "commands": {
+    "total": 7,
+    "byKind": {
+     "semantic_loss": 1,
+     "approximate_translation": 6
+    },
+    "disabled": 1,
+    "reportFile": "worldswitch_command_report.json",
+    "approximated": 6
+   },
+   "fidelity": {
+    "total": 14084,
+    "impacts": [
+     {
+      "en": "Approximated — entity `entities of an unfinished chunk` (×17)",
+      "fr": "Approximé — entité `entités d’un chunk non terminé` (×17)",
+      "category": "approximated"
+     },
+     {
+      "en": "Dropped — block entity `minecraft:vault.shared_data` (×11)",
+      "fr": "Supprimé — block entity `minecraft:vault.shared_data` (×11)",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — world data `world border (End)` (×3)",
+      "fr": "Supprimé — donnée de monde `bordure de monde (End)` (×3)",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — world data `world border (Nether)` (×3)",
+      "fr": "Supprimé — donnée de monde `bordure de monde (Nether)` (×3)",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — world data `paused dimension clock` (×3)",
+      "fr": "Supprimé — donnée de monde `horloge de dimension en pause` (×3)",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — world data `per-dimension clock` (×3)",
+      "fr": "Supprimé — donnée de monde `horloge propre à une dimension` (×3)",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — block entity `minecraft:crafter.crafting_ticks_remaining` (×2)",
+      "fr": "Supprimé — block entity `minecraft:crafter.crafting_ticks_remaining` (×2)",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — block entity `minecraft:crafter.triggered` (×2)",
+      "fr": "Supprimé — block entity `minecraft:crafter.triggered` (×2)",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — block entity `minecraft:sculk_catalyst.cursors` (×2)",
+      "fr": "Supprimé — block entity `minecraft:sculk_catalyst.cursors` (×2)",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — block entity `minecraft:sculk_sensor.listener` (×2)",
+      "fr": "Supprimé — block entity `minecraft:sculk_sensor.listener` (×2)",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — block entity `minecraft:sculk_shrieker.listener` (×2)",
+      "fr": "Supprimé — block entity `minecraft:sculk_shrieker.listener` (×2)",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — block entity `minecraft:sculk_shrieker.warning_level` (×2)",
+      "fr": "Supprimé — block entity `minecraft:sculk_shrieker.warning_level` (×2)",
+      "category": "dropped"
+     }
+    ],
+    "detailed": 39,
+    "families": 39,
+    "truncated": 0,
+    "byCategory": {
+     "dropped": 41,
+     "archived": 81,
+     "normalized": 13944,
+     "approximated": 18
+    }
+   }
+  },
+  "upload_ms": 493,
+  "analysis_ms": 684,
+  "analysis": {
+   "detectedType": "Java",
+   "version": "Java 26.3",
+   "sizeBytes": 78154522,
+   "sizeFormatted": "74.5 Mo",
+   "uncompressedBytes": 145776447,
+   "chunkCount": 35554,
+   "levelName": "J03",
+   "valid": true,
+   "gameMode": "creative",
+   "difficulty": "hard",
+   "spawn": "8, 301, 8",
+   "worldRootPrefix": "J03",
+   "worldCount": 1,
+   "players": [
+    {
+     "sourceId": "5bcbe855-323c-4f1e-a587-5f348834b848",
+     "isHost": true,
+     "sourceLabel": "Joueur principal",
+     "labelSource": "host",
+     "displayIndex": 1,
+     "identifiers": [],
+     "profile": {
+      "items": 0,
+      "armor": 0,
+      "ender": 0,
+      "xpLevel": 0,
+      "dimension": "overworld",
+      "pos": [
+       148,
+       324,
+       -7
+      ],
+      "nameHints": [],
+      "empty": true
+     },
+     "profileReadable": true,
+     "sharesAccountWith": 0
+    }
+   ],
+   "playersScanned": true,
+   "playersSkippedReason": null,
+   "playerLinkingSupported": false,
+   "terrainScan": {
+    "total": 24716,
+    "unreadable": 0,
+    "truncatedRegions": 0,
+    "complete": true
+   },
+   "terrainDimensions": {
+    "overworld": 19591,
+    "nether": 3555,
+    "end": 1570
+   }
+  },
+  "queue_to_done_ms": 17088,
+  "wall_s_worker_start_to_terminal": 17.973,
+  "converter": {
+   "memory_peak_bytes": 2268524544,
+   "cpu_usec": 39889076,
+   "oom_kills": 0,
+   "scratch_peak_bytes_sampled_2s": 371794900
+  },
+  "worker": {
+   "memory_peak_bytes": 92479488,
+   "cpu_usec": 1367498,
+   "scratch_peak_bytes_sampled_2s": 0
+  }
+ }
+}

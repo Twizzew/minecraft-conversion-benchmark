@@ -1,0 +1,2010 @@
+{
+ "schema": "mccb.runs/1",
+ "note": "A run is identified by source SHA-256 + converter build + options + direction. Outputs are release assets (output_release_asset).",
+ "runs": [
+  {
+   "run_id": "chunker-1.20.0_B01@1.0_b2j",
+   "leg": "direct",
+   "world": "B01@1.0",
+   "parent_run": null,
+   "identity": {
+    "source_sha256": "83e8e9909a3d8915980df317073b80c11421152d8f7ed88714fd196e45c0a667",
+    "converter": "Chunker",
+    "build": "1.20.0",
+    "options": {
+     "outputFormat": "JAVA_26_3"
+    },
+    "direction": "bedrock_to_java"
+   },
+   "converter": {
+    "name": "Chunker",
+    "slug": "chunker",
+    "version": "1.20.0",
+    "commit": "1.20.0",
+    "source_available": true,
+    "tool_file": "chunker-cli-1.20.0.jar",
+    "tool_sha256": "41efb80bba57c4eb08a810e5cc121211e2c0585aa8ff6eaf63d949782ecea502",
+    "command_template": "\"<HOME>\" -jar \"<LOCAL>/Benchmarcks/minecraft-conversion-benchmark/_staging/tools/chunker-cli-1.20.0.jar\" -i {input_dir} -o {output_dir} -f JAVA_26_3"
+   },
+   "direction": "bedrock_to_java",
+   "source": {
+    "ref": "B01@1.0",
+    "file": "MCCB_B01_STATIC_BEDROCK.mcworld",
+    "sha256": "83e8e9909a3d8915980df317073b80c11421152d8f7ed88714fd196e45c0a667",
+    "bytes": 119207
+   },
+   "options": {
+    "outputFormat": "JAVA_26_3"
+   },
+   "output": {
+    "file": "output.zip",
+    "packed_by": "mccb (sorted entries, fixed timestamp)",
+    "sha256": "59c680d59445c007d44e980d8afed4cb530e4f6aaec084c1499d6246deae0fc5",
+    "bytes": 26032,
+    "tree_sha256": "4a0dc783756d26f50b7ddab7634812a6dc173d4055200626b5047f30a1bc6039",
+    "files": 13
+   },
+   "output_release_asset": "chunker-1.20.0_B01@1.0_b2j.zip",
+   "started_at": "2026-09-25T05:43:28.810Z",
+   "finished_at": "2026-09-25T05:43:29.613Z",
+   "duration_ms": 802,
+   "exit_status": 0,
+   "environment": {
+    "node": "v24.16.0",
+    "platform": "win32",
+    "arch": "x64",
+    "os_release": "10.0.26200",
+    "cpus": 16,
+    "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor             ",
+    "total_mem_bytes": 33456947200
+   },
+   "logs": [
+    "results/chunker/runs/chunker-1.20.0_B01@1.0_b2j/stdout.txt",
+    "results/chunker/runs/chunker-1.20.0_B01@1.0_b2j/stderr.txt"
+   ],
+   "purpose": "benchmark"
+  },
+  {
+   "run_id": "chunker-1.20.0_B01@1.0_b2j2b",
+   "leg": "return",
+   "world": null,
+   "parent_run": "chunker-1.20.0_B01@1.0_b2j",
+   "identity": {
+    "source_sha256": "59c680d59445c007d44e980d8afed4cb530e4f6aaec084c1499d6246deae0fc5",
+    "converter": "Chunker",
+    "build": "1.20.0",
+    "options": {
+     "outputFormat": "BEDROCK_R26_40"
+    },
+    "direction": "java_to_bedrock"
+   },
+   "converter": {
+    "name": "Chunker",
+    "slug": "chunker",
+    "version": "1.20.0",
+    "commit": "1.20.0",
+    "source_available": true,
+    "tool_file": "chunker-cli-1.20.0.jar",
+    "tool_sha256": "41efb80bba57c4eb08a810e5cc121211e2c0585aa8ff6eaf63d949782ecea502",
+    "command_template": "\"<HOME>\" -jar \"<LOCAL>/Benchmarcks/minecraft-conversion-benchmark/_staging/tools/chunker-cli-1.20.0.jar\" -i {input_dir} -o {output_dir} -f BEDROCK_R26_40"
+   },
+   "direction": "java_to_bedrock",
+   "source": {
+    "ref": "chunker-1.20.0_B01@1.0_b2j",
+    "file": "output.zip",
+    "sha256": "59c680d59445c007d44e980d8afed4cb530e4f6aaec084c1499d6246deae0fc5",
+    "bytes": 26032
+   },
+   "options": {
+    "outputFormat": "BEDROCK_R26_40"
+   },
+   "output": {
+    "file": "output.mcworld",
+    "packed_by": "mccb (sorted entries, fixed timestamp)",
+    "sha256": "35a53742fc877a922f3e6b5405fd2953c16d037fe0726cf6d9db46c1543b677d",
+    "bytes": 14120,
+    "tree_sha256": "29445a0b75bab3a55b657933a425aabb0d4f037db5aea32c665145ddc923aedf",
+    "files": 5
+   },
+   "output_release_asset": "chunker-1.20.0_B01@1.0_b2j2b.mcworld",
+   "started_at": "2026-09-25T05:43:29.745Z",
+   "finished_at": "2026-09-25T05:43:30.628Z",
+   "duration_ms": 883,
+   "exit_status": 0,
+   "environment": {
+    "node": "v24.16.0",
+    "platform": "win32",
+    "arch": "x64",
+    "os_release": "10.0.26200",
+    "cpus": 16,
+    "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor             ",
+    "total_mem_bytes": 33456947200
+   },
+   "logs": [
+    "results/chunker/runs/chunker-1.20.0_B01@1.0_b2j2b/stdout.txt",
+    "results/chunker/runs/chunker-1.20.0_B01@1.0_b2j2b/stderr.txt"
+   ],
+   "purpose": "benchmark"
+  },
+  {
+   "run_id": "chunker-1.20.0_B02@1.0_b2j",
+   "leg": "direct",
+   "world": "B02@1.0",
+   "parent_run": null,
+   "identity": {
+    "source_sha256": "34d9b5dfaff557ef5e3907cae8fba31fc5de8dc03cb49c145ab14b0e6f6ccd10",
+    "converter": "Chunker",
+    "build": "1.20.0",
+    "options": {
+     "outputFormat": "JAVA_26_3"
+    },
+    "direction": "bedrock_to_java"
+   },
+   "converter": {
+    "name": "Chunker",
+    "slug": "chunker",
+    "version": "1.20.0",
+    "commit": "1.20.0",
+    "source_available": true,
+    "tool_file": "chunker-cli-1.20.0.jar",
+    "tool_sha256": "41efb80bba57c4eb08a810e5cc121211e2c0585aa8ff6eaf63d949782ecea502",
+    "command_template": "\"<HOME>\" -jar \"<LOCAL>/Benchmarcks/minecraft-conversion-benchmark/_staging/tools/chunker-cli-1.20.0.jar\" -i {input_dir} -o {output_dir} -f JAVA_26_3"
+   },
+   "direction": "bedrock_to_java",
+   "source": {
+    "ref": "B02@1.0",
+    "file": "MCCB_B02_LIVING_BEDROCK.mcworld",
+    "sha256": "34d9b5dfaff557ef5e3907cae8fba31fc5de8dc03cb49c145ab14b0e6f6ccd10",
+    "bytes": 159654
+   },
+   "options": {
+    "outputFormat": "JAVA_26_3"
+   },
+   "output": {
+    "file": "output.zip",
+    "packed_by": "mccb (sorted entries, fixed timestamp)",
+    "sha256": "9ac093121aca0e0ce548c22a8cfc0b20c2a9b23a1993d5d13ade48b580878c32",
+    "bytes": 55463,
+    "tree_sha256": "6361ae07371ae97ee7d78545cabc888b30d4b5196755c769023185f51291e277",
+    "files": 94
+   },
+   "output_release_asset": "chunker-1.20.0_B02@1.0_b2j.zip",
+   "started_at": "2026-09-25T05:43:30.728Z",
+   "finished_at": "2026-09-25T05:43:31.727Z",
+   "duration_ms": 999,
+   "exit_status": 0,
+   "environment": {
+    "node": "v24.16.0",
+    "platform": "win32",
+    "arch": "x64",
+    "os_release": "10.0.26200",
+    "cpus": 16,
+    "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor             ",
+    "total_mem_bytes": 33456947200
+   },
+   "logs": [
+    "results/chunker/runs/chunker-1.20.0_B02@1.0_b2j/stdout.txt",
+    "results/chunker/runs/chunker-1.20.0_B02@1.0_b2j/stderr.txt"
+   ],
+   "purpose": "benchmark"
+  },
+  {
+   "run_id": "chunker-1.20.0_B02@1.0_b2j2b",
+   "leg": "return",
+   "world": null,
+   "parent_run": "chunker-1.20.0_B02@1.0_b2j",
+   "identity": {
+    "source_sha256": "9ac093121aca0e0ce548c22a8cfc0b20c2a9b23a1993d5d13ade48b580878c32",
+    "converter": "Chunker",
+    "build": "1.20.0",
+    "options": {
+     "outputFormat": "BEDROCK_R26_40"
+    },
+    "direction": "java_to_bedrock"
+   },
+   "converter": {
+    "name": "Chunker",
+    "slug": "chunker",
+    "version": "1.20.0",
+    "commit": "1.20.0",
+    "source_available": true,
+    "tool_file": "chunker-cli-1.20.0.jar",
+    "tool_sha256": "41efb80bba57c4eb08a810e5cc121211e2c0585aa8ff6eaf63d949782ecea502",
+    "command_template": "\"<HOME>\" -jar \"<LOCAL>/Benchmarcks/minecraft-conversion-benchmark/_staging/tools/chunker-cli-1.20.0.jar\" -i {input_dir} -o {output_dir} -f BEDROCK_R26_40"
+   },
+   "direction": "java_to_bedrock",
+   "source": {
+    "ref": "chunker-1.20.0_B02@1.0_b2j",
+    "file": "output.zip",
+    "sha256": "9ac093121aca0e0ce548c22a8cfc0b20c2a9b23a1993d5d13ade48b580878c32",
+    "bytes": 55463
+   },
+   "options": {
+    "outputFormat": "BEDROCK_R26_40"
+   },
+   "output": {
+    "file": "output.mcworld",
+    "packed_by": "mccb (sorted entries, fixed timestamp)",
+    "sha256": "9e3c0287779ae8f6d38ce0924c7765c7303e678d9d26215bc071f162cf737ce2",
+    "bytes": 21657,
+    "tree_sha256": "64bc48566857876ad0454846583098c900a193f0dbe5ea9c44a18ae725107b1a",
+    "files": 5
+   },
+   "output_release_asset": "chunker-1.20.0_B02@1.0_b2j2b.mcworld",
+   "started_at": "2026-09-25T05:43:31.962Z",
+   "finished_at": "2026-09-25T05:43:32.963Z",
+   "duration_ms": 1001,
+   "exit_status": 0,
+   "environment": {
+    "node": "v24.16.0",
+    "platform": "win32",
+    "arch": "x64",
+    "os_release": "10.0.26200",
+    "cpus": 16,
+    "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor             ",
+    "total_mem_bytes": 33456947200
+   },
+   "logs": [
+    "results/chunker/runs/chunker-1.20.0_B02@1.0_b2j2b/stdout.txt",
+    "results/chunker/runs/chunker-1.20.0_B02@1.0_b2j2b/stderr.txt"
+   ],
+   "purpose": "benchmark"
+  },
+  {
+   "run_id": "chunker-1.20.0_B03@1.0_b2j",
+   "leg": "direct",
+   "world": "B03@1.0",
+   "parent_run": null,
+   "identity": {
+    "source_sha256": "fd16e5d795f6b707fb48bce821e09dcad5a8e15c87e101d6e080bb24c911a838",
+    "converter": "Chunker",
+    "build": "1.20.0",
+    "options": {
+     "outputFormat": "JAVA_26_3"
+    },
+    "direction": "bedrock_to_java"
+   },
+   "converter": {
+    "name": "Chunker",
+    "slug": "chunker",
+    "version": "1.20.0",
+    "commit": "1.20.0",
+    "source_available": true,
+    "tool_file": "chunker-cli-1.20.0.jar",
+    "tool_sha256": "41efb80bba57c4eb08a810e5cc121211e2c0585aa8ff6eaf63d949782ecea502",
+    "command_template": "\"<HOME>\" -jar \"<LOCAL>/Benchmarcks/minecraft-conversion-benchmark/_staging/tools/chunker-cli-1.20.0.jar\" -i {input_dir} -o {output_dir} -f JAVA_26_3"
+   },
+   "direction": "bedrock_to_java",
+   "source": {
+    "ref": "B03@1.0",
+    "file": "MCCB_B03_SYSTEMS_BEDROCK.mcworld",
+    "sha256": "fd16e5d795f6b707fb48bce821e09dcad5a8e15c87e101d6e080bb24c911a838",
+    "bytes": 779237
+   },
+   "options": {
+    "outputFormat": "JAVA_26_3"
+   },
+   "output": {
+    "file": "output.zip",
+    "packed_by": "mccb (sorted entries, fixed timestamp)",
+    "sha256": "6e4e18f245ea888621b659b336c89b5c2d045d7c08de215060cd20b53c35fb56",
+    "bytes": 756382,
+    "tree_sha256": "06fc36eac365992736ee07967389f57c7a9b311d2d9c223805c5b38c2e67f977",
+    "files": 29
+   },
+   "output_release_asset": "chunker-1.20.0_B03@1.0_b2j.zip",
+   "started_at": "2026-09-25T05:43:33.127Z",
+   "finished_at": "2026-09-25T05:43:34.248Z",
+   "duration_ms": 1120,
+   "exit_status": 0,
+   "environment": {
+    "node": "v24.16.0",
+    "platform": "win32",
+    "arch": "x64",
+    "os_release": "10.0.26200",
+    "cpus": 16,
+    "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor             ",
+    "total_mem_bytes": 33456947200
+   },
+   "logs": [
+    "results/chunker/runs/chunker-1.20.0_B03@1.0_b2j/stdout.txt",
+    "results/chunker/runs/chunker-1.20.0_B03@1.0_b2j/stderr.txt"
+   ],
+   "purpose": "benchmark"
+  },
+  {
+   "run_id": "chunker-1.20.0_B03@1.0_b2j2b",
+   "leg": "return",
+   "world": null,
+   "parent_run": "chunker-1.20.0_B03@1.0_b2j",
+   "identity": {
+    "source_sha256": "6e4e18f245ea888621b659b336c89b5c2d045d7c08de215060cd20b53c35fb56",
+    "converter": "Chunker",
+    "build": "1.20.0",
+    "options": {
+     "outputFormat": "BEDROCK_R26_40"
+    },
+    "direction": "java_to_bedrock"
+   },
+   "converter": {
+    "name": "Chunker",
+    "slug": "chunker",
+    "version": "1.20.0",
+    "commit": "1.20.0",
+    "source_available": true,
+    "tool_file": "chunker-cli-1.20.0.jar",
+    "tool_sha256": "41efb80bba57c4eb08a810e5cc121211e2c0585aa8ff6eaf63d949782ecea502",
+    "command_template": "\"<HOME>\" -jar \"<LOCAL>/Benchmarcks/minecraft-conversion-benchmark/_staging/tools/chunker-cli-1.20.0.jar\" -i {input_dir} -o {output_dir} -f BEDROCK_R26_40"
+   },
+   "direction": "java_to_bedrock",
+   "source": {
+    "ref": "chunker-1.20.0_B03@1.0_b2j",
+    "file": "output.zip",
+    "sha256": "6e4e18f245ea888621b659b336c89b5c2d045d7c08de215060cd20b53c35fb56",
+    "bytes": 756382
+   },
+   "options": {
+    "outputFormat": "BEDROCK_R26_40"
+   },
+   "output": {
+    "file": "output.mcworld",
+    "packed_by": "mccb (sorted entries, fixed timestamp)",
+    "sha256": "2e91d01496bbf401edc57cd270ee3ef49132bc81942e0a346989af38d987d63e",
+    "bytes": 624500,
+    "tree_sha256": "fe6e68060a7900f33b3ff7c5aafe40850a297e92151e4cfc3e2e123e6aa6f464",
+    "files": 5
+   },
+   "output_release_asset": "chunker-1.20.0_B03@1.0_b2j2b.mcworld",
+   "started_at": "2026-09-25T05:43:34.418Z",
+   "finished_at": "2026-09-25T05:43:35.806Z",
+   "duration_ms": 1388,
+   "exit_status": 0,
+   "environment": {
+    "node": "v24.16.0",
+    "platform": "win32",
+    "arch": "x64",
+    "os_release": "10.0.26200",
+    "cpus": 16,
+    "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor             ",
+    "total_mem_bytes": 33456947200
+   },
+   "logs": [
+    "results/chunker/runs/chunker-1.20.0_B03@1.0_b2j2b/stdout.txt",
+    "results/chunker/runs/chunker-1.20.0_B03@1.0_b2j2b/stderr.txt"
+   ],
+   "purpose": "benchmark"
+  },
+  {
+   "run_id": "chunker-1.20.0_J01@1.1_j2b",
+   "leg": "direct",
+   "world": "J01@1.1",
+   "parent_run": null,
+   "identity": {
+    "source_sha256": "b28294c78bb7e3c755827153b8d52bbdb5f80a9a45b598d6608a141493d26cf3",
+    "converter": "Chunker",
+    "build": "1.20.0",
+    "options": {
+     "outputFormat": "BEDROCK_R26_40"
+    },
+    "direction": "java_to_bedrock"
+   },
+   "converter": {
+    "name": "Chunker",
+    "slug": "chunker",
+    "version": "1.20.0",
+    "commit": "1.20.0",
+    "source_available": true,
+    "tool_file": "chunker-cli-1.20.0.jar",
+    "tool_sha256": "41efb80bba57c4eb08a810e5cc121211e2c0585aa8ff6eaf63d949782ecea502",
+    "command_template": "\"<HOME>\" -jar \"<LOCAL>/Benchmarcks/minecraft-conversion-benchmark/_staging/tools/chunker-cli-1.20.0.jar\" -i {input_dir} -o {output_dir} -f BEDROCK_R26_40"
+   },
+   "direction": "java_to_bedrock",
+   "source": {
+    "ref": "J01@1.1",
+    "file": "MCCB_J01_STATIC_JAVA_v1.1.zip",
+    "sha256": "b28294c78bb7e3c755827153b8d52bbdb5f80a9a45b598d6608a141493d26cf3",
+    "bytes": 7912549
+   },
+   "options": {
+    "outputFormat": "BEDROCK_R26_40"
+   },
+   "output": {
+    "file": "output.mcworld",
+    "packed_by": "mccb (sorted entries, fixed timestamp)",
+    "sha256": "366fc6ccb48754d54404555173c73d319632f3bcf3e86d8ec89b2beeec091248",
+    "bytes": 2846085,
+    "tree_sha256": "2111cdb242f4801b223b1f2f66d6a6f609ac9bf32e7a4746d9c5f9cd2e413909",
+    "files": 5
+   },
+   "output_release_asset": "chunker-1.20.0_J01@1.1_j2b.mcworld",
+   "started_at": "2026-09-25T05:43:07.820Z",
+   "finished_at": "2026-09-25T05:43:12.082Z",
+   "duration_ms": 4262,
+   "exit_status": 0,
+   "environment": {
+    "node": "v24.16.0",
+    "platform": "win32",
+    "arch": "x64",
+    "os_release": "10.0.26200",
+    "cpus": 16,
+    "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor             ",
+    "total_mem_bytes": 33456947200
+   },
+   "logs": [
+    "results/chunker/runs/chunker-1.20.0_J01@1.1_j2b/stdout.txt",
+    "results/chunker/runs/chunker-1.20.0_J01@1.1_j2b/stderr.txt"
+   ],
+   "purpose": "benchmark"
+  },
+  {
+   "run_id": "chunker-1.20.0_J01@1.1_j2b2j",
+   "leg": "return",
+   "world": null,
+   "parent_run": "chunker-1.20.0_J01@1.1_j2b",
+   "identity": {
+    "source_sha256": "366fc6ccb48754d54404555173c73d319632f3bcf3e86d8ec89b2beeec091248",
+    "converter": "Chunker",
+    "build": "1.20.0",
+    "options": {
+     "outputFormat": "JAVA_26_3"
+    },
+    "direction": "bedrock_to_java"
+   },
+   "converter": {
+    "name": "Chunker",
+    "slug": "chunker",
+    "version": "1.20.0",
+    "commit": "1.20.0",
+    "source_available": true,
+    "tool_file": "chunker-cli-1.20.0.jar",
+    "tool_sha256": "41efb80bba57c4eb08a810e5cc121211e2c0585aa8ff6eaf63d949782ecea502",
+    "command_template": "\"<HOME>\" -jar \"<LOCAL>/Benchmarcks/minecraft-conversion-benchmark/_staging/tools/chunker-cli-1.20.0.jar\" -i {input_dir} -o {output_dir} -f JAVA_26_3"
+   },
+   "direction": "bedrock_to_java",
+   "source": {
+    "ref": "chunker-1.20.0_J01@1.1_j2b",
+    "file": "output.mcworld",
+    "sha256": "366fc6ccb48754d54404555173c73d319632f3bcf3e86d8ec89b2beeec091248",
+    "bytes": 2846085
+   },
+   "options": {
+    "outputFormat": "JAVA_26_3"
+   },
+   "output": {
+    "file": "output.zip",
+    "packed_by": "mccb (sorted entries, fixed timestamp)",
+    "sha256": "285ca24e98b5417f8885a8bcd98f9ec94ba394ea6676c42a0f3761fa500546ca",
+    "bytes": 6810322,
+    "tree_sha256": "d275889ccb896fcc393b479abc09569d9c802e36073f8310d58785bd8e7b8296",
+    "files": 33
+   },
+   "output_release_asset": "chunker-1.20.0_J01@1.1_j2b2j.zip",
+   "started_at": "2026-09-25T05:43:12.277Z",
+   "finished_at": "2026-09-25T05:43:16.719Z",
+   "duration_ms": 4442,
+   "exit_status": 0,
+   "environment": {
+    "node": "v24.16.0",
+    "platform": "win32",
+    "arch": "x64",
+    "os_release": "10.0.26200",
+    "cpus": 16,
+    "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor             ",
+    "total_mem_bytes": 33456947200
+   },
+   "logs": [
+    "results/chunker/runs/chunker-1.20.0_J01@1.1_j2b2j/stdout.txt",
+    "results/chunker/runs/chunker-1.20.0_J01@1.1_j2b2j/stderr.txt"
+   ],
+   "purpose": "benchmark"
+  },
+  {
+   "run_id": "chunker-1.20.0_J02@1.0_j2b",
+   "leg": "direct",
+   "world": "J02@1.0",
+   "parent_run": null,
+   "identity": {
+    "source_sha256": "db97f7497094ed5681600b37a76ab81e975341280883dcf433b3d6c40e8f17a4",
+    "converter": "Chunker",
+    "build": "1.20.0",
+    "options": {
+     "outputFormat": "BEDROCK_R26_40"
+    },
+    "direction": "java_to_bedrock"
+   },
+   "converter": {
+    "name": "Chunker",
+    "slug": "chunker",
+    "version": "1.20.0",
+    "commit": "1.20.0",
+    "source_available": true,
+    "tool_file": "chunker-cli-1.20.0.jar",
+    "tool_sha256": "41efb80bba57c4eb08a810e5cc121211e2c0585aa8ff6eaf63d949782ecea502",
+    "command_template": "\"<HOME>\" -jar \"<LOCAL>/Benchmarcks/minecraft-conversion-benchmark/_staging/tools/chunker-cli-1.20.0.jar\" -i {input_dir} -o {output_dir} -f BEDROCK_R26_40"
+   },
+   "direction": "java_to_bedrock",
+   "source": {
+    "ref": "J02@1.0",
+    "file": "MCCB_J02_LIVING_JAVA.zip",
+    "sha256": "db97f7497094ed5681600b37a76ab81e975341280883dcf433b3d6c40e8f17a4",
+    "bytes": 3308679
+   },
+   "options": {
+    "outputFormat": "BEDROCK_R26_40"
+   },
+   "output": {
+    "file": "output.mcworld",
+    "packed_by": "mccb (sorted entries, fixed timestamp)",
+    "sha256": "6235bc2d1ae61e879dbc35262d28f92d56f19ce04cd8d6bcbfe3b251a07950b2",
+    "bytes": 934418,
+    "tree_sha256": "94c19802b3567de925cad11e80e9ebd94ac3cb2d7a8ff26d85dba7a31c71db98",
+    "files": 5
+   },
+   "output_release_asset": "chunker-1.20.0_J02@1.0_j2b.mcworld",
+   "started_at": "2026-09-25T05:42:36.578Z",
+   "finished_at": "2026-09-25T05:42:38.920Z",
+   "duration_ms": 2340,
+   "exit_status": 0,
+   "environment": {
+    "node": "v24.16.0",
+    "platform": "win32",
+    "arch": "x64",
+    "os_release": "10.0.26200",
+    "cpus": 16,
+    "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor             ",
+    "total_mem_bytes": 33456947200
+   },
+   "logs": [
+    "results/chunker/runs/chunker-1.20.0_J02@1.0_j2b/stdout.txt",
+    "results/chunker/runs/chunker-1.20.0_J02@1.0_j2b/stderr.txt"
+   ],
+   "purpose": "benchmark"
+  },
+  {
+   "run_id": "chunker-1.20.0_J02@1.0_j2b2j",
+   "leg": "return",
+   "world": null,
+   "parent_run": "chunker-1.20.0_J02@1.0_j2b",
+   "identity": {
+    "source_sha256": "6235bc2d1ae61e879dbc35262d28f92d56f19ce04cd8d6bcbfe3b251a07950b2",
+    "converter": "Chunker",
+    "build": "1.20.0",
+    "options": {
+     "outputFormat": "JAVA_26_3"
+    },
+    "direction": "bedrock_to_java"
+   },
+   "converter": {
+    "name": "Chunker",
+    "slug": "chunker",
+    "version": "1.20.0",
+    "commit": "1.20.0",
+    "source_available": true,
+    "tool_file": "chunker-cli-1.20.0.jar",
+    "tool_sha256": "41efb80bba57c4eb08a810e5cc121211e2c0585aa8ff6eaf63d949782ecea502",
+    "command_template": "\"<HOME>\" -jar \"<LOCAL>/Benchmarcks/minecraft-conversion-benchmark/_staging/tools/chunker-cli-1.20.0.jar\" -i {input_dir} -o {output_dir} -f JAVA_26_3"
+   },
+   "direction": "bedrock_to_java",
+   "source": {
+    "ref": "chunker-1.20.0_J02@1.0_j2b",
+    "file": "output.mcworld",
+    "sha256": "6235bc2d1ae61e879dbc35262d28f92d56f19ce04cd8d6bcbfe3b251a07950b2",
+    "bytes": 934418
+   },
+   "options": {
+    "outputFormat": "JAVA_26_3"
+   },
+   "output": {
+    "file": "output.zip",
+    "packed_by": "mccb (sorted entries, fixed timestamp)",
+    "sha256": "8c734af72e9a90ccc6c52d01813376c02075e131267b299e594af22ad114d21e",
+    "bytes": 2283182,
+    "tree_sha256": "1ad8a177dea78b646d657d3d6c6f35737d293e677ea1c7e55b050d90ef1b822f",
+    "files": 22
+   },
+   "output_release_asset": "chunker-1.20.0_J02@1.0_j2b2j.zip",
+   "started_at": "2026-09-25T05:42:39.055Z",
+   "finished_at": "2026-09-25T05:42:41.230Z",
+   "duration_ms": 2175,
+   "exit_status": 0,
+   "environment": {
+    "node": "v24.16.0",
+    "platform": "win32",
+    "arch": "x64",
+    "os_release": "10.0.26200",
+    "cpus": 16,
+    "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor             ",
+    "total_mem_bytes": 33456947200
+   },
+   "logs": [
+    "results/chunker/runs/chunker-1.20.0_J02@1.0_j2b2j/stdout.txt",
+    "results/chunker/runs/chunker-1.20.0_J02@1.0_j2b2j/stderr.txt"
+   ],
+   "purpose": "benchmark"
+  },
+  {
+   "run_id": "chunker-1.20.0_J03@1.0_j2b",
+   "leg": "direct",
+   "world": "J03@1.0",
+   "parent_run": null,
+   "identity": {
+    "source_sha256": "45c7ae7293ff1dfd3310757a8b56f1d094e6928aa20a82b68ff45428f55bbc50",
+    "converter": "Chunker",
+    "build": "1.20.0",
+    "options": {
+     "outputFormat": "BEDROCK_R26_40"
+    },
+    "direction": "java_to_bedrock"
+   },
+   "converter": {
+    "name": "Chunker",
+    "slug": "chunker",
+    "version": "1.20.0",
+    "commit": "1.20.0",
+    "source_available": true,
+    "tool_file": "chunker-cli-1.20.0.jar",
+    "tool_sha256": "41efb80bba57c4eb08a810e5cc121211e2c0585aa8ff6eaf63d949782ecea502",
+    "command_template": "\"<HOME>\" -jar \"<LOCAL>/Benchmarcks/minecraft-conversion-benchmark/_staging/tools/chunker-cli-1.20.0.jar\" -i {input_dir} -o {output_dir} -f BEDROCK_R26_40"
+   },
+   "direction": "java_to_bedrock",
+   "source": {
+    "ref": "J03@1.0",
+    "file": "MCCB_J03_SYSTEMS_JAVA.zip",
+    "sha256": "45c7ae7293ff1dfd3310757a8b56f1d094e6928aa20a82b68ff45428f55bbc50",
+    "bytes": 6325350
+   },
+   "options": {
+    "outputFormat": "BEDROCK_R26_40"
+   },
+   "output": {
+    "file": "output.mcworld",
+    "packed_by": "mccb (sorted entries, fixed timestamp)",
+    "sha256": "a14131d3870398754485c2995112934a0b6fb4ceab232918ad21b238f0e47cd0",
+    "bytes": 2128664,
+    "tree_sha256": "4b03ce86040bdacd730ed656ac8fd675d0d0a3d7a5a1233982d03eb5d39c21fd",
+    "files": 5
+   },
+   "output_release_asset": "chunker-1.20.0_J03@1.0_j2b.mcworld",
+   "started_at": "2026-09-25T05:43:17.207Z",
+   "finished_at": "2026-09-25T05:43:19.918Z",
+   "duration_ms": 2711,
+   "exit_status": 0,
+   "environment": {
+    "node": "v24.16.0",
+    "platform": "win32",
+    "arch": "x64",
+    "os_release": "10.0.26200",
+    "cpus": 16,
+    "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor             ",
+    "total_mem_bytes": 33456947200
+   },
+   "logs": [
+    "results/chunker/runs/chunker-1.20.0_J03@1.0_j2b/stdout.txt",
+    "results/chunker/runs/chunker-1.20.0_J03@1.0_j2b/stderr.txt"
+   ],
+   "purpose": "benchmark"
+  },
+  {
+   "run_id": "chunker-1.20.0_J03@1.0_j2b2j",
+   "leg": "return",
+   "world": null,
+   "parent_run": "chunker-1.20.0_J03@1.0_j2b",
+   "identity": {
+    "source_sha256": "a14131d3870398754485c2995112934a0b6fb4ceab232918ad21b238f0e47cd0",
+    "converter": "Chunker",
+    "build": "1.20.0",
+    "options": {
+     "outputFormat": "JAVA_26_3"
+    },
+    "direction": "bedrock_to_java"
+   },
+   "converter": {
+    "name": "Chunker",
+    "slug": "chunker",
+    "version": "1.20.0",
+    "commit": "1.20.0",
+    "source_available": true,
+    "tool_file": "chunker-cli-1.20.0.jar",
+    "tool_sha256": "41efb80bba57c4eb08a810e5cc121211e2c0585aa8ff6eaf63d949782ecea502",
+    "command_template": "\"<HOME>\" -jar \"<LOCAL>/Benchmarcks/minecraft-conversion-benchmark/_staging/tools/chunker-cli-1.20.0.jar\" -i {input_dir} -o {output_dir} -f JAVA_26_3"
+   },
+   "direction": "bedrock_to_java",
+   "source": {
+    "ref": "chunker-1.20.0_J03@1.0_j2b",
+    "file": "output.mcworld",
+    "sha256": "a14131d3870398754485c2995112934a0b6fb4ceab232918ad21b238f0e47cd0",
+    "bytes": 2128664
+   },
+   "options": {
+    "outputFormat": "JAVA_26_3"
+   },
+   "output": {
+    "file": "output.zip",
+    "packed_by": "mccb (sorted entries, fixed timestamp)",
+    "sha256": "143f5e6a027ea8750112a779b7b77bdf476cd3e9d6f33d6fe3bf139f03a15d72",
+    "bytes": 3797240,
+    "tree_sha256": "07b2ef7c9c3b8da3006d5933c0b988e8864df376edeb1de77f145116e4f78d6f",
+    "files": 53
+   },
+   "output_release_asset": "chunker-1.20.0_J03@1.0_j2b2j.zip",
+   "started_at": "2026-09-25T05:43:20.091Z",
+   "finished_at": "2026-09-25T05:43:22.759Z",
+   "duration_ms": 2668,
+   "exit_status": 0,
+   "environment": {
+    "node": "v24.16.0",
+    "platform": "win32",
+    "arch": "x64",
+    "os_release": "10.0.26200",
+    "cpus": 16,
+    "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor             ",
+    "total_mem_bytes": 33456947200
+   },
+   "logs": [
+    "results/chunker/runs/chunker-1.20.0_J03@1.0_j2b2j/stdout.txt",
+    "results/chunker/runs/chunker-1.20.0_J03@1.0_j2b2j/stderr.txt"
+   ],
+   "purpose": "benchmark"
+  },
+  {
+   "run_id": "chunker-1.20.0_J04@1.0_j2b",
+   "leg": "direct",
+   "world": "J04@1.0",
+   "parent_run": null,
+   "identity": {
+    "source_sha256": "44a58908bbf86554eb85c6c0fb6b8b060ed016965e943eab05e72145606a7b4c",
+    "converter": "Chunker",
+    "build": "1.20.0",
+    "options": {
+     "outputFormat": "BEDROCK_R26_40"
+    },
+    "direction": "java_to_bedrock"
+   },
+   "converter": {
+    "name": "Chunker",
+    "slug": "chunker",
+    "version": "1.20.0",
+    "commit": "1.20.0",
+    "source_available": true,
+    "tool_file": "chunker-cli-1.20.0.jar",
+    "tool_sha256": "41efb80bba57c4eb08a810e5cc121211e2c0585aa8ff6eaf63d949782ecea502",
+    "command_template": "\"<HOME>\" -jar \"<LOCAL>/Benchmarcks/minecraft-conversion-benchmark/_staging/tools/chunker-cli-1.20.0.jar\" -i {input_dir} -o {output_dir} -f BEDROCK_R26_40"
+   },
+   "direction": "java_to_bedrock",
+   "source": {
+    "ref": "J04@1.0",
+    "file": "MCCB_J04_COMMANDS_JAVA.zip",
+    "sha256": "44a58908bbf86554eb85c6c0fb6b8b060ed016965e943eab05e72145606a7b4c",
+    "bytes": 5986114
+   },
+   "options": {
+    "outputFormat": "BEDROCK_R26_40"
+   },
+   "output": {
+    "file": "output.mcworld",
+    "packed_by": "mccb (sorted entries, fixed timestamp)",
+    "sha256": "5ecd53911db7a7fb7d4fea8200293412f5ff8a131628cd42781cb18398fcb319",
+    "bytes": 1619776,
+    "tree_sha256": "c442fae1874d8b71bc3f82843afe5bff05852a087fd04df57cfe9fdb95ee7df4",
+    "files": 5
+   },
+   "output_release_asset": "chunker-1.20.0_J04@1.0_j2b.mcworld",
+   "started_at": "2026-09-25T05:43:23.084Z",
+   "finished_at": "2026-09-25T05:43:25.831Z",
+   "duration_ms": 2747,
+   "exit_status": 0,
+   "environment": {
+    "node": "v24.16.0",
+    "platform": "win32",
+    "arch": "x64",
+    "os_release": "10.0.26200",
+    "cpus": 16,
+    "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor             ",
+    "total_mem_bytes": 33456947200
+   },
+   "logs": [
+    "results/chunker/runs/chunker-1.20.0_J04@1.0_j2b/stdout.txt",
+    "results/chunker/runs/chunker-1.20.0_J04@1.0_j2b/stderr.txt"
+   ],
+   "purpose": "benchmark"
+  },
+  {
+   "run_id": "chunker-1.20.0_J04@1.0_j2b2j",
+   "leg": "return",
+   "world": null,
+   "parent_run": "chunker-1.20.0_J04@1.0_j2b",
+   "identity": {
+    "source_sha256": "5ecd53911db7a7fb7d4fea8200293412f5ff8a131628cd42781cb18398fcb319",
+    "converter": "Chunker",
+    "build": "1.20.0",
+    "options": {
+     "outputFormat": "JAVA_26_3"
+    },
+    "direction": "bedrock_to_java"
+   },
+   "converter": {
+    "name": "Chunker",
+    "slug": "chunker",
+    "version": "1.20.0",
+    "commit": "1.20.0",
+    "source_available": true,
+    "tool_file": "chunker-cli-1.20.0.jar",
+    "tool_sha256": "41efb80bba57c4eb08a810e5cc121211e2c0585aa8ff6eaf63d949782ecea502",
+    "command_template": "\"<HOME>\" -jar \"<LOCAL>/Benchmarcks/minecraft-conversion-benchmark/_staging/tools/chunker-cli-1.20.0.jar\" -i {input_dir} -o {output_dir} -f JAVA_26_3"
+   },
+   "direction": "bedrock_to_java",
+   "source": {
+    "ref": "chunker-1.20.0_J04@1.0_j2b",
+    "file": "output.mcworld",
+    "sha256": "5ecd53911db7a7fb7d4fea8200293412f5ff8a131628cd42781cb18398fcb319",
+    "bytes": 1619776
+   },
+   "options": {
+    "outputFormat": "JAVA_26_3"
+   },
+   "output": {
+    "file": "output.zip",
+    "packed_by": "mccb (sorted entries, fixed timestamp)",
+    "sha256": "3127e91bb0b73349bda953ce4122012a4f7c841b551b5877d37776ae572d8295",
+    "bytes": 3913849,
+    "tree_sha256": "b664e0252c26c242eadb34d070d158981de49724e8d3a24d97703c97e70db5c7",
+    "files": 28
+   },
+   "output_release_asset": "chunker-1.20.0_J04@1.0_j2b2j.zip",
+   "started_at": "2026-09-25T05:43:25.983Z",
+   "finished_at": "2026-09-25T05:43:28.551Z",
+   "duration_ms": 2568,
+   "exit_status": 0,
+   "environment": {
+    "node": "v24.16.0",
+    "platform": "win32",
+    "arch": "x64",
+    "os_release": "10.0.26200",
+    "cpus": 16,
+    "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor             ",
+    "total_mem_bytes": 33456947200
+   },
+   "logs": [
+    "results/chunker/runs/chunker-1.20.0_J04@1.0_j2b2j/stdout.txt",
+    "results/chunker/runs/chunker-1.20.0_J04@1.0_j2b2j/stderr.txt"
+   ],
+   "purpose": "benchmark"
+  },
+  {
+   "run_id": "ws-0308840_B01@1.0_b2j",
+   "leg": "direct",
+   "world": "B01@1.0",
+   "parent_run": null,
+   "identity": {
+    "source_sha256": "83e8e9909a3d8915980df317073b80c11421152d8f7ed88714fd196e45c0a667",
+    "converter": "WorldSwitch",
+    "build": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+    "options": {
+     "recoverUnlinked": true,
+     "locale": "en"
+    },
+    "direction": "bedrock_to_java"
+   },
+   "converter": {
+    "name": "WorldSwitch",
+    "engine_package": "minecraft-world-converter",
+    "engine_package_version": "2.7.80",
+    "commit": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+    "working_tree_clean": true,
+    "source_available": false,
+    "package_lock_sha256": "768190151a605671e126eb85165882a744956a3441ea03db666fde22c025340b",
+    "key_dependencies": {
+     "prismarine-nbt": "2.8.0",
+     "leveldb-zlib": "1.2.0",
+     "adm-zip": "0.6.1",
+     "unzipper": "0.8.14"
+    }
+   },
+   "direction": "bedrock_to_java",
+   "source": {
+    "ref": "B01@1.0",
+    "file": "MCCB_B01_STATIC_BEDROCK.mcworld",
+    "sha256": "83e8e9909a3d8915980df317073b80c11421152d8f7ed88714fd196e45c0a667",
+    "bytes": 119207
+   },
+   "options": {
+    "recoverUnlinked": true,
+    "locale": "en"
+   },
+   "output": {
+    "file": "output.zip",
+    "engine_filename": "B01_STATIC_Core_java.zip",
+    "sha256": "f70e957454ea3245a46e25f20df137ecf29321353ee14e61b548a6acc4d0b799",
+    "bytes": 163566
+   },
+   "output_release_asset": "ws-0308840_B01@1.0_b2j.zip",
+   "started_at": "2026-09-23T22:33:31.944Z",
+   "finished_at": "2026-09-23T22:33:32.477Z",
+   "duration_ms": 350,
+   "exit_status": 0,
+   "environment": {
+    "node": "v24.16.0",
+    "platform": "win32",
+    "arch": "x64",
+    "os_release": "10.0.26200",
+    "cpus": 16,
+    "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor             ",
+    "total_mem_bytes": 33456947200,
+    "engine_env_vars_removed": []
+   },
+   "logs": [
+    "results/worldswitch/runs/ws-0308840_B01@1.0_b2j/stdout.txt",
+    "results/worldswitch/runs/ws-0308840_B01@1.0_b2j/stderr.txt",
+    "results/worldswitch/runs/ws-0308840_B01@1.0_b2j/progress.json",
+    "results/worldswitch/runs/ws-0308840_B01@1.0_b2j/notices.json"
+   ],
+   "purpose": "benchmark"
+  },
+  {
+   "run_id": "ws-0308840_B01@1.0_b2j2b",
+   "leg": "return",
+   "world": null,
+   "parent_run": "ws-0308840_B01@1.0_b2j",
+   "identity": {
+    "source_sha256": "f70e957454ea3245a46e25f20df137ecf29321353ee14e61b548a6acc4d0b799",
+    "converter": "WorldSwitch",
+    "build": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+    "options": {
+     "targetVersion": "latest",
+     "recoverUnlinked": true,
+     "locale": "en"
+    },
+    "direction": "java_to_bedrock"
+   },
+   "converter": {
+    "name": "WorldSwitch",
+    "engine_package": "minecraft-world-converter",
+    "engine_package_version": "2.7.80",
+    "commit": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+    "working_tree_clean": true,
+    "source_available": false,
+    "package_lock_sha256": "768190151a605671e126eb85165882a744956a3441ea03db666fde22c025340b",
+    "key_dependencies": {
+     "prismarine-nbt": "2.8.0",
+     "leveldb-zlib": "1.2.0",
+     "adm-zip": "0.6.1",
+     "unzipper": "0.8.14"
+    }
+   },
+   "direction": "java_to_bedrock",
+   "source": {
+    "ref": "ws-0308840_B01@1.0_b2j",
+    "file": "output.zip",
+    "sha256": "f70e957454ea3245a46e25f20df137ecf29321353ee14e61b548a6acc4d0b799",
+    "bytes": 163566
+   },
+   "options": {
+    "targetVersion": "latest",
+    "recoverUnlinked": true,
+    "locale": "en"
+   },
+   "output": {
+    "file": "output.mcworld",
+    "engine_filename": "B01_STATIC_Core_bedrock.mcworld",
+    "sha256": "334cd0df8e569d8591ba3f9ba50a1b3c7c163c619c73a35ed50ccace549e51ed",
+    "bytes": 119351
+   },
+   "output_release_asset": "ws-0308840_B01@1.0_b2j2b.mcworld",
+   "started_at": "2026-09-23T22:33:32.598Z",
+   "finished_at": "2026-09-23T22:33:33.497Z",
+   "duration_ms": 712,
+   "exit_status": 0,
+   "environment": {
+    "node": "v24.16.0",
+    "platform": "win32",
+    "arch": "x64",
+    "os_release": "10.0.26200",
+    "cpus": 16,
+    "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor             ",
+    "total_mem_bytes": 33456947200,
+    "engine_env_vars_removed": []
+   },
+   "logs": [
+    "results/worldswitch/runs/ws-0308840_B01@1.0_b2j2b/stdout.txt",
+    "results/worldswitch/runs/ws-0308840_B01@1.0_b2j2b/stderr.txt",
+    "results/worldswitch/runs/ws-0308840_B01@1.0_b2j2b/progress.json",
+    "results/worldswitch/runs/ws-0308840_B01@1.0_b2j2b/notices.json"
+   ],
+   "purpose": "benchmark"
+  },
+  {
+   "run_id": "ws-0308840_B01@1.0_b2j_rerun1",
+   "leg": "direct",
+   "world": "B01@1.0",
+   "parent_run": null,
+   "identity": {
+    "source_sha256": "83e8e9909a3d8915980df317073b80c11421152d8f7ed88714fd196e45c0a667",
+    "converter": "WorldSwitch",
+    "build": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+    "options": {
+     "recoverUnlinked": true,
+     "locale": "en"
+    },
+    "direction": "bedrock_to_java"
+   },
+   "converter": {
+    "name": "WorldSwitch",
+    "engine_package": "minecraft-world-converter",
+    "engine_package_version": "2.7.80",
+    "commit": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+    "working_tree_clean": true,
+    "source_available": false,
+    "package_lock_sha256": "768190151a605671e126eb85165882a744956a3441ea03db666fde22c025340b",
+    "key_dependencies": {
+     "prismarine-nbt": "2.8.0",
+     "leveldb-zlib": "1.2.0",
+     "adm-zip": "0.6.1",
+     "unzipper": "0.8.14"
+    }
+   },
+   "direction": "bedrock_to_java",
+   "source": {
+    "ref": "B01@1.0",
+    "file": "MCCB_B01_STATIC_BEDROCK.mcworld",
+    "sha256": "83e8e9909a3d8915980df317073b80c11421152d8f7ed88714fd196e45c0a667",
+    "bytes": 119207
+   },
+   "options": {
+    "recoverUnlinked": true,
+    "locale": "en"
+   },
+   "output": {
+    "file": "output.zip",
+    "engine_filename": "B01_STATIC_Core_java.zip",
+    "sha256": "cd9922ecb87c7231c8fe1868938143f10d51afa8036011dd85097eeb23dd7e15",
+    "bytes": 163568
+   },
+   "output_release_asset": "ws-0308840_B01@1.0_b2j_rerun1.zip",
+   "started_at": "2026-09-23T22:33:44.050Z",
+   "finished_at": "2026-09-23T22:33:44.577Z",
+   "duration_ms": 344,
+   "exit_status": 0,
+   "environment": {
+    "node": "v24.16.0",
+    "platform": "win32",
+    "arch": "x64",
+    "os_release": "10.0.26200",
+    "cpus": 16,
+    "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor             ",
+    "total_mem_bytes": 33456947200,
+    "engine_env_vars_removed": []
+   },
+   "logs": [
+    "results/worldswitch/runs/ws-0308840_B01@1.0_b2j_rerun1/stdout.txt",
+    "results/worldswitch/runs/ws-0308840_B01@1.0_b2j_rerun1/stderr.txt",
+    "results/worldswitch/runs/ws-0308840_B01@1.0_b2j_rerun1/progress.json",
+    "results/worldswitch/runs/ws-0308840_B01@1.0_b2j_rerun1/notices.json"
+   ],
+   "purpose": "determinism-check"
+  },
+  {
+   "run_id": "ws-0308840_B02@1.0_b2j",
+   "leg": "direct",
+   "world": "B02@1.0",
+   "parent_run": null,
+   "identity": {
+    "source_sha256": "34d9b5dfaff557ef5e3907cae8fba31fc5de8dc03cb49c145ab14b0e6f6ccd10",
+    "converter": "WorldSwitch",
+    "build": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+    "options": {
+     "recoverUnlinked": true,
+     "locale": "en"
+    },
+    "direction": "bedrock_to_java"
+   },
+   "converter": {
+    "name": "WorldSwitch",
+    "engine_package": "minecraft-world-converter",
+    "engine_package_version": "2.7.80",
+    "commit": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+    "working_tree_clean": true,
+    "source_available": false,
+    "package_lock_sha256": "768190151a605671e126eb85165882a744956a3441ea03db666fde22c025340b",
+    "key_dependencies": {
+     "prismarine-nbt": "2.8.0",
+     "leveldb-zlib": "1.2.0",
+     "adm-zip": "0.6.1",
+     "unzipper": "0.8.14"
+    }
+   },
+   "direction": "bedrock_to_java",
+   "source": {
+    "ref": "B02@1.0",
+    "file": "MCCB_B02_LIVING_BEDROCK.mcworld",
+    "sha256": "34d9b5dfaff557ef5e3907cae8fba31fc5de8dc03cb49c145ab14b0e6f6ccd10",
+    "bytes": 159654
+   },
+   "options": {
+    "recoverUnlinked": true,
+    "locale": "en"
+   },
+   "output": {
+    "file": "output.zip",
+    "engine_filename": "Benchmarck_manuel_v1_java.zip",
+    "sha256": "c8fc90f6a2a7e600e13e4fb51ee9f6f30b07a32b1a646aec49acd67e1deae0f0",
+    "bytes": 276019
+   },
+   "output_release_asset": "ws-0308840_B02@1.0_b2j.zip",
+   "started_at": "2026-09-23T22:32:20.554Z",
+   "finished_at": "2026-09-23T22:32:21.420Z",
+   "duration_ms": 679,
+   "exit_status": 0,
+   "environment": {
+    "node": "v24.16.0",
+    "platform": "win32",
+    "arch": "x64",
+    "os_release": "10.0.26200",
+    "cpus": 16,
+    "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor             ",
+    "total_mem_bytes": 33456947200,
+    "engine_env_vars_removed": []
+   },
+   "logs": [
+    "results/worldswitch/runs/ws-0308840_B02@1.0_b2j/stdout.txt",
+    "results/worldswitch/runs/ws-0308840_B02@1.0_b2j/stderr.txt",
+    "results/worldswitch/runs/ws-0308840_B02@1.0_b2j/progress.json",
+    "results/worldswitch/runs/ws-0308840_B02@1.0_b2j/notices.json"
+   ],
+   "purpose": "benchmark"
+  },
+  {
+   "run_id": "ws-0308840_B02@1.0_b2j2b",
+   "leg": "return",
+   "world": null,
+   "parent_run": "ws-0308840_B02@1.0_b2j",
+   "identity": {
+    "source_sha256": "c8fc90f6a2a7e600e13e4fb51ee9f6f30b07a32b1a646aec49acd67e1deae0f0",
+    "converter": "WorldSwitch",
+    "build": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+    "options": {
+     "targetVersion": "latest",
+     "recoverUnlinked": true,
+     "locale": "en"
+    },
+    "direction": "java_to_bedrock"
+   },
+   "converter": {
+    "name": "WorldSwitch",
+    "engine_package": "minecraft-world-converter",
+    "engine_package_version": "2.7.80",
+    "commit": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+    "working_tree_clean": true,
+    "source_available": false,
+    "package_lock_sha256": "768190151a605671e126eb85165882a744956a3441ea03db666fde22c025340b",
+    "key_dependencies": {
+     "prismarine-nbt": "2.8.0",
+     "leveldb-zlib": "1.2.0",
+     "adm-zip": "0.6.1",
+     "unzipper": "0.8.14"
+    }
+   },
+   "direction": "java_to_bedrock",
+   "source": {
+    "ref": "ws-0308840_B02@1.0_b2j",
+    "file": "output.zip",
+    "sha256": "c8fc90f6a2a7e600e13e4fb51ee9f6f30b07a32b1a646aec49acd67e1deae0f0",
+    "bytes": 276019
+   },
+   "options": {
+    "targetVersion": "latest",
+    "recoverUnlinked": true,
+    "locale": "en"
+   },
+   "output": {
+    "file": "output.mcworld",
+    "engine_filename": "Benchmarck_manuel_v1_bedrock.mcworld",
+    "sha256": "eeb605e6796d3018731920a1375e964b942e63acc79eef66cc5bfae9d8a67571",
+    "bytes": 186411
+   },
+   "output_release_asset": "ws-0308840_B02@1.0_b2j2b.mcworld",
+   "started_at": "2026-09-23T22:33:33.605Z",
+   "finished_at": "2026-09-23T22:33:34.909Z",
+   "duration_ms": 1113,
+   "exit_status": 0,
+   "environment": {
+    "node": "v24.16.0",
+    "platform": "win32",
+    "arch": "x64",
+    "os_release": "10.0.26200",
+    "cpus": 16,
+    "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor             ",
+    "total_mem_bytes": 33456947200,
+    "engine_env_vars_removed": []
+   },
+   "logs": [
+    "results/worldswitch/runs/ws-0308840_B02@1.0_b2j2b/stdout.txt",
+    "results/worldswitch/runs/ws-0308840_B02@1.0_b2j2b/stderr.txt",
+    "results/worldswitch/runs/ws-0308840_B02@1.0_b2j2b/progress.json",
+    "results/worldswitch/runs/ws-0308840_B02@1.0_b2j2b/notices.json"
+   ],
+   "purpose": "benchmark"
+  },
+  {
+   "run_id": "ws-0308840_B03@1.0_b2j",
+   "leg": "direct",
+   "world": "B03@1.0",
+   "parent_run": null,
+   "identity": {
+    "source_sha256": "fd16e5d795f6b707fb48bce821e09dcad5a8e15c87e101d6e080bb24c911a838",
+    "converter": "WorldSwitch",
+    "build": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+    "options": {
+     "recoverUnlinked": true,
+     "locale": "en"
+    },
+    "direction": "bedrock_to_java"
+   },
+   "converter": {
+    "name": "WorldSwitch",
+    "engine_package": "minecraft-world-converter",
+    "engine_package_version": "2.7.80",
+    "commit": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+    "working_tree_clean": true,
+    "source_available": false,
+    "package_lock_sha256": "768190151a605671e126eb85165882a744956a3441ea03db666fde22c025340b",
+    "key_dependencies": {
+     "prismarine-nbt": "2.8.0",
+     "leveldb-zlib": "1.2.0",
+     "adm-zip": "0.6.1",
+     "unzipper": "0.8.14"
+    }
+   },
+   "direction": "bedrock_to_java",
+   "source": {
+    "ref": "B03@1.0",
+    "file": "MCCB_B03_SYSTEMS_BEDROCK.mcworld",
+    "sha256": "fd16e5d795f6b707fb48bce821e09dcad5a8e15c87e101d6e080bb24c911a838",
+    "bytes": 779237
+   },
+   "options": {
+    "recoverUnlinked": true,
+    "locale": "en"
+   },
+   "output": {
+    "file": "output.zip",
+    "engine_filename": "BO3_SYSTEMS_java.zip",
+    "sha256": "61fa3c0ce409c0cf10a704e24bfdf3bcc0bc19d515d5a6c214f700a4bc06a4b7",
+    "bytes": 871410
+   },
+   "output_release_asset": "ws-0308840_B03@1.0_b2j.zip",
+   "started_at": "2026-09-23T22:33:35.021Z",
+   "finished_at": "2026-09-23T22:33:36.127Z",
+   "duration_ms": 920,
+   "exit_status": 0,
+   "environment": {
+    "node": "v24.16.0",
+    "platform": "win32",
+    "arch": "x64",
+    "os_release": "10.0.26200",
+    "cpus": 16,
+    "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor             ",
+    "total_mem_bytes": 33456947200,
+    "engine_env_vars_removed": []
+   },
+   "logs": [
+    "results/worldswitch/runs/ws-0308840_B03@1.0_b2j/stdout.txt",
+    "results/worldswitch/runs/ws-0308840_B03@1.0_b2j/stderr.txt",
+    "results/worldswitch/runs/ws-0308840_B03@1.0_b2j/progress.json",
+    "results/worldswitch/runs/ws-0308840_B03@1.0_b2j/notices.json"
+   ],
+   "purpose": "benchmark"
+  },
+  {
+   "run_id": "ws-0308840_B03@1.0_b2j2b",
+   "leg": "return",
+   "world": null,
+   "parent_run": "ws-0308840_B03@1.0_b2j",
+   "identity": {
+    "source_sha256": "61fa3c0ce409c0cf10a704e24bfdf3bcc0bc19d515d5a6c214f700a4bc06a4b7",
+    "converter": "WorldSwitch",
+    "build": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+    "options": {
+     "targetVersion": "latest",
+     "recoverUnlinked": true,
+     "locale": "en"
+    },
+    "direction": "java_to_bedrock"
+   },
+   "converter": {
+    "name": "WorldSwitch",
+    "engine_package": "minecraft-world-converter",
+    "engine_package_version": "2.7.80",
+    "commit": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+    "working_tree_clean": true,
+    "source_available": false,
+    "package_lock_sha256": "768190151a605671e126eb85165882a744956a3441ea03db666fde22c025340b",
+    "key_dependencies": {
+     "prismarine-nbt": "2.8.0",
+     "leveldb-zlib": "1.2.0",
+     "adm-zip": "0.6.1",
+     "unzipper": "0.8.14"
+    }
+   },
+   "direction": "java_to_bedrock",
+   "source": {
+    "ref": "ws-0308840_B03@1.0_b2j",
+    "file": "output.zip",
+    "sha256": "61fa3c0ce409c0cf10a704e24bfdf3bcc0bc19d515d5a6c214f700a4bc06a4b7",
+    "bytes": 871410
+   },
+   "options": {
+    "targetVersion": "latest",
+    "recoverUnlinked": true,
+    "locale": "en"
+   },
+   "output": {
+    "file": "output.mcworld",
+    "engine_filename": "BO3_SYSTEMS_bedrock.mcworld",
+    "sha256": "21920c6ea4fbfd43e900200656e508c09723ed889776ff8dc3a1e7e419d0879c",
+    "bytes": 859344
+   },
+   "output_release_asset": "ws-0308840_B03@1.0_b2j2b.mcworld",
+   "started_at": "2026-09-23T22:33:36.239Z",
+   "finished_at": "2026-09-23T22:33:37.770Z",
+   "duration_ms": 1349,
+   "exit_status": 0,
+   "environment": {
+    "node": "v24.16.0",
+    "platform": "win32",
+    "arch": "x64",
+    "os_release": "10.0.26200",
+    "cpus": 16,
+    "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor             ",
+    "total_mem_bytes": 33456947200,
+    "engine_env_vars_removed": []
+   },
+   "logs": [
+    "results/worldswitch/runs/ws-0308840_B03@1.0_b2j2b/stdout.txt",
+    "results/worldswitch/runs/ws-0308840_B03@1.0_b2j2b/stderr.txt",
+    "results/worldswitch/runs/ws-0308840_B03@1.0_b2j2b/progress.json",
+    "results/worldswitch/runs/ws-0308840_B03@1.0_b2j2b/notices.json"
+   ],
+   "purpose": "benchmark"
+  },
+  {
+   "run_id": "ws-0308840_J01@1.1_j2b",
+   "leg": "direct",
+   "world": "J01@1.1",
+   "parent_run": null,
+   "identity": {
+    "source_sha256": "b28294c78bb7e3c755827153b8d52bbdb5f80a9a45b598d6608a141493d26cf3",
+    "converter": "WorldSwitch",
+    "build": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+    "options": {
+     "targetVersion": "latest",
+     "recoverUnlinked": true,
+     "locale": "en"
+    },
+    "direction": "java_to_bedrock"
+   },
+   "converter": {
+    "name": "WorldSwitch",
+    "engine_package": "minecraft-world-converter",
+    "engine_package_version": "2.7.80",
+    "commit": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+    "working_tree_clean": true,
+    "source_available": false,
+    "package_lock_sha256": "768190151a605671e126eb85165882a744956a3441ea03db666fde22c025340b",
+    "key_dependencies": {
+     "prismarine-nbt": "2.8.0",
+     "leveldb-zlib": "1.2.0",
+     "adm-zip": "0.6.1",
+     "unzipper": "0.8.14"
+    }
+   },
+   "direction": "java_to_bedrock",
+   "source": {
+    "ref": "J01@1.1",
+    "file": "MCCB_J01_STATIC_JAVA_v1.1.zip",
+    "sha256": "b28294c78bb7e3c755827153b8d52bbdb5f80a9a45b598d6608a141493d26cf3",
+    "bytes": 7912549
+   },
+   "options": {
+    "targetVersion": "latest",
+    "recoverUnlinked": true,
+    "locale": "en"
+   },
+   "output": {
+    "file": "output.mcworld",
+    "engine_filename": "MCCB_J01_STATIC_-_Java_26.2_bedrock.mcworld",
+    "sha256": "0b186da09daf796a7270e917d832a6bc39208dcef6c8c152208b102dba232146",
+    "bytes": 9047804
+   },
+   "output_release_asset": "ws-0308840_J01@1.1_j2b.mcworld",
+   "started_at": "2026-09-23T22:32:54.309Z",
+   "finished_at": "2026-09-23T22:33:00.131Z",
+   "duration_ms": 5564,
+   "exit_status": 0,
+   "environment": {
+    "node": "v24.16.0",
+    "platform": "win32",
+    "arch": "x64",
+    "os_release": "10.0.26200",
+    "cpus": 16,
+    "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor             ",
+    "total_mem_bytes": 33456947200,
+    "engine_env_vars_removed": []
+   },
+   "logs": [
+    "results/worldswitch/runs/ws-0308840_J01@1.1_j2b/stdout.txt",
+    "results/worldswitch/runs/ws-0308840_J01@1.1_j2b/stderr.txt",
+    "results/worldswitch/runs/ws-0308840_J01@1.1_j2b/progress.json",
+    "results/worldswitch/runs/ws-0308840_J01@1.1_j2b/notices.json"
+   ],
+   "purpose": "benchmark"
+  },
+  {
+   "run_id": "ws-0308840_J01@1.1_j2b2j",
+   "leg": "return",
+   "world": null,
+   "parent_run": "ws-0308840_J01@1.1_j2b",
+   "identity": {
+    "source_sha256": "0b186da09daf796a7270e917d832a6bc39208dcef6c8c152208b102dba232146",
+    "converter": "WorldSwitch",
+    "build": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+    "options": {
+     "recoverUnlinked": true,
+     "locale": "en"
+    },
+    "direction": "bedrock_to_java"
+   },
+   "converter": {
+    "name": "WorldSwitch",
+    "engine_package": "minecraft-world-converter",
+    "engine_package_version": "2.7.80",
+    "commit": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+    "working_tree_clean": true,
+    "source_available": false,
+    "package_lock_sha256": "768190151a605671e126eb85165882a744956a3441ea03db666fde22c025340b",
+    "key_dependencies": {
+     "prismarine-nbt": "2.8.0",
+     "leveldb-zlib": "1.2.0",
+     "adm-zip": "0.6.1",
+     "unzipper": "0.8.14"
+    }
+   },
+   "direction": "bedrock_to_java",
+   "source": {
+    "ref": "ws-0308840_J01@1.1_j2b",
+    "file": "output.mcworld",
+    "sha256": "0b186da09daf796a7270e917d832a6bc39208dcef6c8c152208b102dba232146",
+    "bytes": 9047804
+   },
+   "options": {
+    "recoverUnlinked": true,
+    "locale": "en"
+   },
+   "output": {
+    "file": "output.zip",
+    "engine_filename": "MCCB_J01_STATIC_-_Java_26.2_java.zip",
+    "sha256": "7252b3b17e568ee1e47c5b90e7d4810e50d3ca442e5390876ae1ca9818edec10",
+    "bytes": 6252112
+   },
+   "output_release_asset": "ws-0308840_J01@1.1_j2b2j.zip",
+   "started_at": "2026-09-23T22:33:00.269Z",
+   "finished_at": "2026-09-23T22:33:03.416Z",
+   "duration_ms": 2953,
+   "exit_status": 0,
+   "environment": {
+    "node": "v24.16.0",
+    "platform": "win32",
+    "arch": "x64",
+    "os_release": "10.0.26200",
+    "cpus": 16,
+    "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor             ",
+    "total_mem_bytes": 33456947200,
+    "engine_env_vars_removed": []
+   },
+   "logs": [
+    "results/worldswitch/runs/ws-0308840_J01@1.1_j2b2j/stdout.txt",
+    "results/worldswitch/runs/ws-0308840_J01@1.1_j2b2j/stderr.txt",
+    "results/worldswitch/runs/ws-0308840_J01@1.1_j2b2j/progress.json",
+    "results/worldswitch/runs/ws-0308840_J01@1.1_j2b2j/notices.json"
+   ],
+   "purpose": "benchmark"
+  },
+  {
+   "run_id": "ws-0308840_J02@1.0_j2b",
+   "leg": "direct",
+   "world": "J02@1.0",
+   "parent_run": null,
+   "identity": {
+    "source_sha256": "db97f7497094ed5681600b37a76ab81e975341280883dcf433b3d6c40e8f17a4",
+    "converter": "WorldSwitch",
+    "build": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+    "options": {
+     "targetVersion": "latest",
+     "recoverUnlinked": true,
+     "locale": "en"
+    },
+    "direction": "java_to_bedrock"
+   },
+   "converter": {
+    "name": "WorldSwitch",
+    "engine_package": "minecraft-world-converter",
+    "engine_package_version": "2.7.80",
+    "commit": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+    "working_tree_clean": true,
+    "source_available": false,
+    "package_lock_sha256": "768190151a605671e126eb85165882a744956a3441ea03db666fde22c025340b",
+    "key_dependencies": {
+     "prismarine-nbt": "2.8.0",
+     "leveldb-zlib": "1.2.0",
+     "adm-zip": "0.6.1",
+     "unzipper": "0.8.14"
+    }
+   },
+   "direction": "java_to_bedrock",
+   "source": {
+    "ref": "J02@1.0",
+    "file": "MCCB_J02_LIVING_JAVA.zip",
+    "sha256": "db97f7497094ed5681600b37a76ab81e975341280883dcf433b3d6c40e8f17a4",
+    "bytes": 3308679
+   },
+   "options": {
+    "targetVersion": "latest",
+    "recoverUnlinked": true,
+    "locale": "en"
+   },
+   "output": {
+    "file": "output.mcworld",
+    "engine_filename": "MCCB_J02_LIVING_JAVA26_2_bedrock.mcworld",
+    "sha256": "88bf98ee693928a3ac1feea4caa50e8136c7d5689bb81b907ecbd4a16a1c86fd",
+    "bytes": 4283906
+   },
+   "output_release_asset": "ws-0308840_J02@1.0_j2b.mcworld",
+   "started_at": "2026-09-23T22:33:03.543Z",
+   "finished_at": "2026-09-23T22:33:07.904Z",
+   "duration_ms": 4138,
+   "exit_status": 0,
+   "environment": {
+    "node": "v24.16.0",
+    "platform": "win32",
+    "arch": "x64",
+    "os_release": "10.0.26200",
+    "cpus": 16,
+    "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor             ",
+    "total_mem_bytes": 33456947200,
+    "engine_env_vars_removed": []
+   },
+   "logs": [
+    "results/worldswitch/runs/ws-0308840_J02@1.0_j2b/stdout.txt",
+    "results/worldswitch/runs/ws-0308840_J02@1.0_j2b/stderr.txt",
+    "results/worldswitch/runs/ws-0308840_J02@1.0_j2b/progress.json",
+    "results/worldswitch/runs/ws-0308840_J02@1.0_j2b/notices.json"
+   ],
+   "purpose": "benchmark"
+  },
+  {
+   "run_id": "ws-0308840_J02@1.0_j2b2j",
+   "leg": "return",
+   "world": null,
+   "parent_run": "ws-0308840_J02@1.0_j2b",
+   "identity": {
+    "source_sha256": "88bf98ee693928a3ac1feea4caa50e8136c7d5689bb81b907ecbd4a16a1c86fd",
+    "converter": "WorldSwitch",
+    "build": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+    "options": {
+     "recoverUnlinked": true,
+     "locale": "en"
+    },
+    "direction": "bedrock_to_java"
+   },
+   "converter": {
+    "name": "WorldSwitch",
+    "engine_package": "minecraft-world-converter",
+    "engine_package_version": "2.7.80",
+    "commit": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+    "working_tree_clean": true,
+    "source_available": false,
+    "package_lock_sha256": "768190151a605671e126eb85165882a744956a3441ea03db666fde22c025340b",
+    "key_dependencies": {
+     "prismarine-nbt": "2.8.0",
+     "leveldb-zlib": "1.2.0",
+     "adm-zip": "0.6.1",
+     "unzipper": "0.8.14"
+    }
+   },
+   "direction": "bedrock_to_java",
+   "source": {
+    "ref": "ws-0308840_J02@1.0_j2b",
+    "file": "output.mcworld",
+    "sha256": "88bf98ee693928a3ac1feea4caa50e8136c7d5689bb81b907ecbd4a16a1c86fd",
+    "bytes": 4283906
+   },
+   "options": {
+    "recoverUnlinked": true,
+    "locale": "en"
+   },
+   "output": {
+    "file": "output.zip",
+    "engine_filename": "MCCB_J02_LIVING_JAVA26_2_java.zip",
+    "sha256": "d815d842822b90db4e16af16d9864da138baff47d36fa9cfe03bb3c2fcee71fc",
+    "bytes": 2052419
+   },
+   "output_release_asset": "ws-0308840_J02@1.0_j2b2j.zip",
+   "started_at": "2026-09-23T22:33:08.025Z",
+   "finished_at": "2026-09-23T22:33:10.136Z",
+   "duration_ms": 1924,
+   "exit_status": 0,
+   "environment": {
+    "node": "v24.16.0",
+    "platform": "win32",
+    "arch": "x64",
+    "os_release": "10.0.26200",
+    "cpus": 16,
+    "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor             ",
+    "total_mem_bytes": 33456947200,
+    "engine_env_vars_removed": []
+   },
+   "logs": [
+    "results/worldswitch/runs/ws-0308840_J02@1.0_j2b2j/stdout.txt",
+    "results/worldswitch/runs/ws-0308840_J02@1.0_j2b2j/stderr.txt",
+    "results/worldswitch/runs/ws-0308840_J02@1.0_j2b2j/progress.json",
+    "results/worldswitch/runs/ws-0308840_J02@1.0_j2b2j/notices.json"
+   ],
+   "purpose": "benchmark"
+  },
+  {
+   "run_id": "ws-0308840_J03@1.0_j2b",
+   "leg": "direct",
+   "world": "J03@1.0",
+   "parent_run": null,
+   "identity": {
+    "source_sha256": "45c7ae7293ff1dfd3310757a8b56f1d094e6928aa20a82b68ff45428f55bbc50",
+    "converter": "WorldSwitch",
+    "build": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+    "options": {
+     "targetVersion": "latest",
+     "recoverUnlinked": true,
+     "locale": "en"
+    },
+    "direction": "java_to_bedrock"
+   },
+   "converter": {
+    "name": "WorldSwitch",
+    "engine_package": "minecraft-world-converter",
+    "engine_package_version": "2.7.80",
+    "commit": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+    "working_tree_clean": true,
+    "source_available": false,
+    "package_lock_sha256": "768190151a605671e126eb85165882a744956a3441ea03db666fde22c025340b",
+    "key_dependencies": {
+     "prismarine-nbt": "2.8.0",
+     "leveldb-zlib": "1.2.0",
+     "adm-zip": "0.6.1",
+     "unzipper": "0.8.14"
+    }
+   },
+   "direction": "java_to_bedrock",
+   "source": {
+    "ref": "J03@1.0",
+    "file": "MCCB_J03_SYSTEMS_JAVA.zip",
+    "sha256": "45c7ae7293ff1dfd3310757a8b56f1d094e6928aa20a82b68ff45428f55bbc50",
+    "bytes": 6325350
+   },
+   "options": {
+    "targetVersion": "latest",
+    "recoverUnlinked": true,
+    "locale": "en"
+   },
+   "output": {
+    "file": "output.mcworld",
+    "engine_filename": "MCCB_J03_SYSTEMS_JAVA26_bedrock.mcworld",
+    "sha256": "5fc8f695da40cc10c8b1ab69848522bb6fb9dfe175e49f5a9d990d388f4f128f",
+    "bytes": 8842355
+   },
+   "output_release_asset": "ws-0308840_J03@1.0_j2b.mcworld",
+   "started_at": "2026-09-23T22:33:10.257Z",
+   "finished_at": "2026-09-23T22:33:18.020Z",
+   "duration_ms": 7509,
+   "exit_status": 0,
+   "environment": {
+    "node": "v24.16.0",
+    "platform": "win32",
+    "arch": "x64",
+    "os_release": "10.0.26200",
+    "cpus": 16,
+    "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor             ",
+    "total_mem_bytes": 33456947200,
+    "engine_env_vars_removed": []
+   },
+   "logs": [
+    "results/worldswitch/runs/ws-0308840_J03@1.0_j2b/stdout.txt",
+    "results/worldswitch/runs/ws-0308840_J03@1.0_j2b/stderr.txt",
+    "results/worldswitch/runs/ws-0308840_J03@1.0_j2b/progress.json",
+    "results/worldswitch/runs/ws-0308840_J03@1.0_j2b/notices.json"
+   ],
+   "purpose": "benchmark"
+  },
+  {
+   "run_id": "ws-0308840_J03@1.0_j2b2j",
+   "leg": "return",
+   "world": null,
+   "parent_run": "ws-0308840_J03@1.0_j2b",
+   "identity": {
+    "source_sha256": "5fc8f695da40cc10c8b1ab69848522bb6fb9dfe175e49f5a9d990d388f4f128f",
+    "converter": "WorldSwitch",
+    "build": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+    "options": {
+     "recoverUnlinked": true,
+     "locale": "en"
+    },
+    "direction": "bedrock_to_java"
+   },
+   "converter": {
+    "name": "WorldSwitch",
+    "engine_package": "minecraft-world-converter",
+    "engine_package_version": "2.7.80",
+    "commit": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+    "working_tree_clean": true,
+    "source_available": false,
+    "package_lock_sha256": "768190151a605671e126eb85165882a744956a3441ea03db666fde22c025340b",
+    "key_dependencies": {
+     "prismarine-nbt": "2.8.0",
+     "leveldb-zlib": "1.2.0",
+     "adm-zip": "0.6.1",
+     "unzipper": "0.8.14"
+    }
+   },
+   "direction": "bedrock_to_java",
+   "source": {
+    "ref": "ws-0308840_J03@1.0_j2b",
+    "file": "output.mcworld",
+    "sha256": "5fc8f695da40cc10c8b1ab69848522bb6fb9dfe175e49f5a9d990d388f4f128f",
+    "bytes": 8842355
+   },
+   "options": {
+    "recoverUnlinked": true,
+    "locale": "en"
+   },
+   "output": {
+    "file": "output.zip",
+    "engine_filename": "MCCB_J03_SYSTEMS_JAVA26_java.zip",
+    "sha256": "804794dbe8ff3c3fad879336d354ccc55435ceff074b5871b221aab3a9a7a0e6",
+    "bytes": 5224714
+   },
+   "output_release_asset": "ws-0308840_J03@1.0_j2b2j.zip",
+   "started_at": "2026-09-23T22:33:18.161Z",
+   "finished_at": "2026-09-23T22:33:22.647Z",
+   "duration_ms": 4296,
+   "exit_status": 0,
+   "environment": {
+    "node": "v24.16.0",
+    "platform": "win32",
+    "arch": "x64",
+    "os_release": "10.0.26200",
+    "cpus": 16,
+    "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor             ",
+    "total_mem_bytes": 33456947200,
+    "engine_env_vars_removed": []
+   },
+   "logs": [
+    "results/worldswitch/runs/ws-0308840_J03@1.0_j2b2j/stdout.txt",
+    "results/worldswitch/runs/ws-0308840_J03@1.0_j2b2j/stderr.txt",
+    "results/worldswitch/runs/ws-0308840_J03@1.0_j2b2j/progress.json",
+    "results/worldswitch/runs/ws-0308840_J03@1.0_j2b2j/notices.json"
+   ],
+   "purpose": "benchmark"
+  },
+  {
+   "run_id": "ws-0308840_J04@1.0_j2b",
+   "leg": "direct",
+   "world": "J04@1.0",
+   "parent_run": null,
+   "identity": {
+    "source_sha256": "44a58908bbf86554eb85c6c0fb6b8b060ed016965e943eab05e72145606a7b4c",
+    "converter": "WorldSwitch",
+    "build": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+    "options": {
+     "targetVersion": "latest",
+     "recoverUnlinked": true,
+     "locale": "en"
+    },
+    "direction": "java_to_bedrock"
+   },
+   "converter": {
+    "name": "WorldSwitch",
+    "engine_package": "minecraft-world-converter",
+    "engine_package_version": "2.7.80",
+    "commit": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+    "working_tree_clean": true,
+    "source_available": false,
+    "package_lock_sha256": "768190151a605671e126eb85165882a744956a3441ea03db666fde22c025340b",
+    "key_dependencies": {
+     "prismarine-nbt": "2.8.0",
+     "leveldb-zlib": "1.2.0",
+     "adm-zip": "0.6.1",
+     "unzipper": "0.8.14"
+    }
+   },
+   "direction": "java_to_bedrock",
+   "source": {
+    "ref": "J04@1.0",
+    "file": "MCCB_J04_COMMANDS_JAVA.zip",
+    "sha256": "44a58908bbf86554eb85c6c0fb6b8b060ed016965e943eab05e72145606a7b4c",
+    "bytes": 5986114
+   },
+   "options": {
+    "targetVersion": "latest",
+    "recoverUnlinked": true,
+    "locale": "en"
+   },
+   "output": {
+    "file": "output.mcworld",
+    "engine_filename": "J04_COMMANDS_bedrock.mcworld",
+    "sha256": "7e8ee6870691644a6fc240d6f1ab3797a504dc3d5039d04c8f81f7ab22720fc7",
+    "bytes": 7965802
+   },
+   "output_release_asset": "ws-0308840_J04@1.0_j2b.mcworld",
+   "started_at": "2026-09-23T22:33:22.780Z",
+   "finished_at": "2026-09-23T22:33:28.577Z",
+   "duration_ms": 5524,
+   "exit_status": 0,
+   "environment": {
+    "node": "v24.16.0",
+    "platform": "win32",
+    "arch": "x64",
+    "os_release": "10.0.26200",
+    "cpus": 16,
+    "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor             ",
+    "total_mem_bytes": 33456947200,
+    "engine_env_vars_removed": []
+   },
+   "logs": [
+    "results/worldswitch/runs/ws-0308840_J04@1.0_j2b/stdout.txt",
+    "results/worldswitch/runs/ws-0308840_J04@1.0_j2b/stderr.txt",
+    "results/worldswitch/runs/ws-0308840_J04@1.0_j2b/progress.json",
+    "results/worldswitch/runs/ws-0308840_J04@1.0_j2b/notices.json"
+   ],
+   "purpose": "benchmark"
+  },
+  {
+   "run_id": "ws-0308840_J04@1.0_j2b2j",
+   "leg": "return",
+   "world": null,
+   "parent_run": "ws-0308840_J04@1.0_j2b",
+   "identity": {
+    "source_sha256": "7e8ee6870691644a6fc240d6f1ab3797a504dc3d5039d04c8f81f7ab22720fc7",
+    "converter": "WorldSwitch",
+    "build": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+    "options": {
+     "recoverUnlinked": true,
+     "locale": "en"
+    },
+    "direction": "bedrock_to_java"
+   },
+   "converter": {
+    "name": "WorldSwitch",
+    "engine_package": "minecraft-world-converter",
+    "engine_package_version": "2.7.80",
+    "commit": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+    "working_tree_clean": true,
+    "source_available": false,
+    "package_lock_sha256": "768190151a605671e126eb85165882a744956a3441ea03db666fde22c025340b",
+    "key_dependencies": {
+     "prismarine-nbt": "2.8.0",
+     "leveldb-zlib": "1.2.0",
+     "adm-zip": "0.6.1",
+     "unzipper": "0.8.14"
+    }
+   },
+   "direction": "bedrock_to_java",
+   "source": {
+    "ref": "ws-0308840_J04@1.0_j2b",
+    "file": "output.mcworld",
+    "sha256": "7e8ee6870691644a6fc240d6f1ab3797a504dc3d5039d04c8f81f7ab22720fc7",
+    "bytes": 7965802
+   },
+   "options": {
+    "recoverUnlinked": true,
+    "locale": "en"
+   },
+   "output": {
+    "file": "output.zip",
+    "engine_filename": "J04_COMMANDS_java.zip",
+    "sha256": "2975bda2afe105b1753eb0b6372d9182f50d88d16d8cd75e84cda13017657074",
+    "bytes": 4194006
+   },
+   "output_release_asset": "ws-0308840_J04@1.0_j2b2j.zip",
+   "started_at": "2026-09-23T22:33:28.709Z",
+   "finished_at": "2026-09-23T22:33:31.816Z",
+   "duration_ms": 2912,
+   "exit_status": 0,
+   "environment": {
+    "node": "v24.16.0",
+    "platform": "win32",
+    "arch": "x64",
+    "os_release": "10.0.26200",
+    "cpus": 16,
+    "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor             ",
+    "total_mem_bytes": 33456947200,
+    "engine_env_vars_removed": []
+   },
+   "logs": [
+    "results/worldswitch/runs/ws-0308840_J04@1.0_j2b2j/stdout.txt",
+    "results/worldswitch/runs/ws-0308840_J04@1.0_j2b2j/stderr.txt",
+    "results/worldswitch/runs/ws-0308840_J04@1.0_j2b2j/progress.json",
+    "results/worldswitch/runs/ws-0308840_J04@1.0_j2b2j/notices.json"
+   ],
+   "purpose": "benchmark"
+  },
+  {
+   "run_id": "ws-0308840_J04@1.0_j2b_rerun1",
+   "leg": "direct",
+   "world": "J04@1.0",
+   "parent_run": null,
+   "identity": {
+    "source_sha256": "44a58908bbf86554eb85c6c0fb6b8b060ed016965e943eab05e72145606a7b4c",
+    "converter": "WorldSwitch",
+    "build": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+    "options": {
+     "targetVersion": "latest",
+     "recoverUnlinked": true,
+     "locale": "en"
+    },
+    "direction": "java_to_bedrock"
+   },
+   "converter": {
+    "name": "WorldSwitch",
+    "engine_package": "minecraft-world-converter",
+    "engine_package_version": "2.7.80",
+    "commit": "030884039c78fd1c076fa42ba0975dd92c420b7e",
+    "working_tree_clean": true,
+    "source_available": false,
+    "package_lock_sha256": "768190151a605671e126eb85165882a744956a3441ea03db666fde22c025340b",
+    "key_dependencies": {
+     "prismarine-nbt": "2.8.0",
+     "leveldb-zlib": "1.2.0",
+     "adm-zip": "0.6.1",
+     "unzipper": "0.8.14"
+    }
+   },
+   "direction": "java_to_bedrock",
+   "source": {
+    "ref": "J04@1.0",
+    "file": "MCCB_J04_COMMANDS_JAVA.zip",
+    "sha256": "44a58908bbf86554eb85c6c0fb6b8b060ed016965e943eab05e72145606a7b4c",
+    "bytes": 5986114
+   },
+   "options": {
+    "targetVersion": "latest",
+    "recoverUnlinked": true,
+    "locale": "en"
+   },
+   "output": {
+    "file": "output.mcworld",
+    "engine_filename": "J04_COMMANDS_bedrock.mcworld",
+    "sha256": "d8f02c15109753d55eda1e82bb4db95b366ca2e9a824a40341033b21e0585a3f",
+    "bytes": 7965468
+   },
+   "output_release_asset": "ws-0308840_J04@1.0_j2b_rerun1.mcworld",
+   "started_at": "2026-09-23T22:33:37.962Z",
+   "finished_at": "2026-09-23T22:33:43.922Z",
+   "duration_ms": 5703,
+   "exit_status": 0,
+   "environment": {
+    "node": "v24.16.0",
+    "platform": "win32",
+    "arch": "x64",
+    "os_release": "10.0.26200",
+    "cpus": 16,
+    "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor             ",
+    "total_mem_bytes": 33456947200,
+    "engine_env_vars_removed": []
+   },
+   "logs": [
+    "results/worldswitch/runs/ws-0308840_J04@1.0_j2b_rerun1/stdout.txt",
+    "results/worldswitch/runs/ws-0308840_J04@1.0_j2b_rerun1/stderr.txt",
+    "results/worldswitch/runs/ws-0308840_J04@1.0_j2b_rerun1/progress.json",
+    "results/worldswitch/runs/ws-0308840_J04@1.0_j2b_rerun1/notices.json"
+   ],
+   "purpose": "determinism-check"
+  }
+ ]
+}

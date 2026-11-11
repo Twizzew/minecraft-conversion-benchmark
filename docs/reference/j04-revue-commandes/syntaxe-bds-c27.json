@@ -1,0 +1,157 @@
+[
+ {
+  "commande": "execute as @p[m=creative,r=64] if score \"#a\" j04367 matches 7 run title @s actionbar §aCMD-J-367 creative+score",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "execute if blocks 794 64 755 795 64 756 799 64 755 all if score \"#a\" j04342 matches 7 run setblock 797 64 755 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Source volume is not loaded | Execute subcommand if blocks test failed."
+ },
+ {
+  "commande": "execute if blocks 816 64 815 817 64 816 821 64 815 all if score \"#a\" j04379 matches 8 run setblock 819 64 815 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Source volume is not loaded | Execute subcommand if blocks test failed."
+ },
+ {
+  "commande": "execute if entity @e[tag=mccb_j04_051_target,c=1] run scoreboard players set #success j04051 1",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Execute subcommand if entity test failed."
+ },
+ {
+  "commande": "execute if score \"#a\" j04111 matches 4..12 run setblock 796 64 54 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "There is no tracked player '#a' on the scoreboard | Execute subcommand if score test failed."
+ },
+ {
+  "commande": "execute if score \"#a\" j04112 = \"#b\" j04112 run setblock 818 64 54 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "There is no tracked player '#a' on the scoreboard | There is no tracked player '#b' on the scoreboard | Execute subcommand if score test failed."
+ },
+ {
+  "commande": "execute if score \"#a\" j04113 < \"#b\" j04113 run setblock 840 64 54 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "There is no tracked player '#a' on the scoreboard | There is no tracked player '#b' on the scoreboard | Execute subcommand if score test failed."
+ },
+ {
+  "commande": "execute if score \"#a\" j04114 > \"#b\" j04114 run setblock 862 64 54 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "There is no tracked player '#a' on the scoreboard | There is no tracked player '#b' on the scoreboard | Execute subcommand if score test failed."
+ },
+ {
+  "commande": "execute if score \"#a\" j04343 < \"#b\" j04343 unless block 818 64 754 minecraft:bedrock run setblock 818 64 754 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "There is no tracked player '#a' on the scoreboard | There is no tracked player '#b' on the scoreboard | Execute subcommand if score test failed."
+ },
+ {
+  "commande": "execute if score \"#a\" j04355 matches 1.. if entity @e[tag=mccb_j04_355_target,c=1] run tellraw @p {\"rawtext\":[{\"text\":\"§aCMD-J-355 score=\"},{\"text\":\"§a\"},{\"score\":{\"name\":\"#a\",\"objective\":\"j04355\"}}]}",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "There is no tracked player '#a' on the scoreboard | Execute subcommand if score test failed."
+ },
+ {
+  "commande": "execute if score \"#a\" j04357 matches 7 if entity @p[r=64] run give @p minecraft:emerald 1",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "There is no tracked player '#a' on the scoreboard | Execute subcommand if score test failed."
+ },
+ {
+  "commande": "execute if score \"#a\" j04362 matches 7 in nether positioned 0 90 0 run setblock ~ ~ ~ minecraft:gold_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "There is no tracked player '#a' on the scoreboard | Execute subcommand if score test failed."
+ },
+ {
+  "commande": "execute if score \"#a\" j04363 matches 7 in the_end positioned 0 90 0 run particle minecraft:endrod ~ ~1 ~",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "There is no tracked player '#a' on the scoreboard | Execute subcommand if score test failed."
+ },
+ {
+  "commande": "execute if score \"#a\" j04391 matches 7 if entity @p[r=64] run give @p minecraft:diamond 2",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "There is no tracked player '#a' on the scoreboard | Execute subcommand if score test failed."
+ },
+ {
+  "commande": "execute if score \"#a\" j04396 matches 7 in nether positioned 8 90 8 run setblock ~ ~ ~ minecraft:gold_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "There is no tracked player '#a' on the scoreboard | Execute subcommand if score test failed."
+ },
+ {
+  "commande": "execute if score \"#a\" j04397 matches 7 in the_end positioned 8 90 8 run particle minecraft:endrod ~ ~1 ~",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "There is no tracked player '#a' on the scoreboard | Execute subcommand if score test failed."
+ },
+ {
+  "commande": "execute if score \"#case\" j04015 matches 1..3 run setblock 68 64 54 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "There is no tracked player '#case' on the scoreboard | Execute subcommand if score test failed."
+ },
+ {
+  "commande": "execute if score \"#case\" j04032 matches 2..4 run setblock 178 64 74 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "There is no tracked player '#case' on the scoreboard | Execute subcommand if score test failed."
+ },
+ {
+  "commande": "execute if score \"#case\" j04041 matches 3..5 run setblock 24 64 114 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "There is no tracked player '#case' on the scoreboard | Execute subcommand if score test failed."
+ },
+ {
+  "commande": "execute if score \"#case\" j04049 matches 4..6 run setblock 134 64 134 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "There is no tracked player '#case' on the scoreboard | Execute subcommand if score test failed."
+ },
+ {
+  "commande": "execute if score \"#loop\" j04297 matches ..4 run setblock 884 64 414 minecraft:sea_lantern",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "There is no tracked player '#loop' on the scoreboard | Execute subcommand if score test failed."
+ },
+ {
+  "commande": "execute if score \"#loop\" j04299 matches ..4 run scoreboard players add #seen j04299 1",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "There is no tracked player '#loop' on the scoreboard | Execute subcommand if score test failed."
+ },
+ {
+  "commande": "execute if score \"#loop\" j04300 matches 1..2 run playsound note.pling @p ~ ~ ~ 0.4 1",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "There is no tracked player '#loop' on the scoreboard | Execute subcommand if score test failed."
+ },
+ {
+  "commande": "execute if score \"#loop\" j04303 matches 3 run setblock 753 64 434 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "There is no tracked player '#loop' on the scoreboard | Execute subcommand if score test failed."
+ },
+ {
+  "commande": "execute unless entity @e[tag=mccb_j04_371_target_missing] unless block 906 64 794 minecraft:bedrock if score \"#a\" j04371 matches 7 run setblock 906 64 794 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Detect position: 906 64 794 is out of range. | Execute subcommand unless block test failed."
+ },
+ {
+  "commande": "execute unless score \"#case\" j04016 matches 1..3 run setblock 90 64 54 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "There is no tracked player '#case' on the scoreboard | Cannot place block outside of the world | Failed to execute 'setblock' as [Null]"
+ },
+ {
+  "commande": "execute unless score \"#case\" j04033 matches 2..4 run setblock 200 64 74 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "There is no tracked player '#case' on the scoreboard | Cannot place block outside of the world | Failed to execute 'setblock' as [Null]"
+ },
+ {
+  "commande": "execute unless score \"#case\" j04042 matches 3..5 run setblock 46 64 114 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "There is no tracked player '#case' on the scoreboard | Cannot place block outside of the world | Failed to execute 'setblock' as [Null]"
+ },
+ {
+  "commande": "execute unless score \"#case\" j04050 matches 4..6 run setblock 156 64 134 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "There is no tracked player '#case' on the scoreboard | Cannot place block outside of the world | Failed to execute 'setblock' as [Null]"
+ },
+ {
+  "commande": "tellraw @p {\"rawtext\":[{\"text\":\"§7\"},{\"translate\":\"tile.stone.stone.name\"}]}",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "tellraw @p {\"rawtext\":[{\"translate\":\"commands.give.success\",\"with\":{\"rawtext\":[{\"text\":\"stone\"},{\"text\":\"1\"},{\"selector\":\"@p\"}]}}]}",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ }
+]

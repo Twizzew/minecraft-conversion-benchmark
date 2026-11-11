@@ -1,0 +1,51 @@
+{
+  "schema": "mccb.run/1",
+  "run_id": "chunker-1.20.0_J04@1.0_j2b2j",
+  "converter": {
+    "name": "Chunker",
+    "slug": "chunker",
+    "version": "1.20.0",
+    "commit": "1.20.0",
+    "source_available": true,
+    "tool_file": "chunker-cli-1.20.0.jar",
+    "tool_sha256": "41efb80bba57c4eb08a810e5cc121211e2c0585aa8ff6eaf63d949782ecea502",
+    "command_template": "\"<HOME>\" -jar \"<LOCAL>/Benchmarcks/minecraft-conversion-benchmark/_staging/tools/chunker-cli-1.20.0.jar\" -i {input_dir} -o {output_dir} -f JAVA_26_3"
+  },
+  "direction": "bedrock_to_java",
+  "source": {
+    "ref": "chunker-1.20.0_J04@1.0_j2b",
+    "file": "output.mcworld",
+    "sha256": "5ecd53911db7a7fb7d4fea8200293412f5ff8a131628cd42781cb18398fcb319",
+    "bytes": 1619776
+  },
+  "options": {
+    "outputFormat": "JAVA_26_3"
+  },
+  "environment": {
+    "node": "v24.16.0",
+    "platform": "win32",
+    "arch": "x64",
+    "os_release": "10.0.26200",
+    "cpus": 16,
+    "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor             ",
+    "total_mem_bytes": 33456947200
+  },
+  "started_at": "2026-09-25T05:43:25.983Z",
+  "finished_at": "2026-09-25T05:43:28.551Z",
+  "duration_ms": 2568,
+  "exit_status": 0,
+  "signal": null,
+  "error": null,
+  "output": {
+    "file": "output.zip",
+    "packed_by": "mccb (sorted entries, fixed timestamp)",
+    "sha256": "3127e91bb0b73349bda953ce4122012a4f7c841b551b5877d37776ae572d8295",
+    "bytes": 3913849,
+    "tree_sha256": "b664e0252c26c242eadb34d070d158981de49724e8d3a24d97703c97e70db5c7",
+    "files": 28
+  },
+  "logs": [
+    "stdout.log",
+    "stderr.log"
+  ]
+}

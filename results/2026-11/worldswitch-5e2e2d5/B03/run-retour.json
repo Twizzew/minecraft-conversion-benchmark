@@ -1,0 +1,152 @@
+{
+ "schema": "mccb.run/1",
+ "run_id": "B03_retour",
+ "converter": {
+  "name": "WorldSwitch",
+  "engine_package": "worldswitch",
+  "engine_package_version": "2.8.0",
+  "commit": "5e2e2d528d469eb3fdd90dd318073304fa46fa25",
+  "working_tree_clean": true,
+  "build": "docker image mccb-ws:5e2e2d5 (sha256:6056b0f06d32a23b6df03d9c29faf18e494fe688e3a5ed5e6d90eb5667942ec8), Dockerfile du dépôt, git archive du commit",
+  "source_available": false
+ },
+ "direction": "java_to_bedrock",
+ "source": {
+  "ref": "B03_aller",
+  "file": "output.zip",
+  "sha256": "5e9a68d3f781fafde8861c57b354976316f2202196bde1b74d0804719f19bfaf",
+  "bytes": 871646
+ },
+ "options": {
+  "targetVersion": "latest",
+  "recoverUnlinked": true,
+  "locale": "en"
+ },
+ "environment": {
+  "kind": "labo prod-like (docker-compose.yml)",
+  "limits": {
+   "converter": "cpus 4, memory 5632m, swap 0, read-only, network none, cap-drop ALL, pids 512",
+   "worker": "cpus 0.75, memory 512m, swap 0"
+  },
+  "host": {
+   "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor",
+   "nproc": 8,
+   "kernel": "6.18.54.1-microsoft-standard-WSL2",
+   "mem_total_kb": 8134332
+  }
+ },
+ "started_at": "2026-11-01T01:57:25.068Z",
+ "finished_at": "2026-11-01T01:57:26.062Z",
+ "duration_ms": 994,
+ "exit_status": 0,
+ "error": null,
+ "output": {
+  "file": "output.mcworld",
+  "sha256": "51747714468a85e2214fe3703a90e70e17c1c59dbb4f795b02f9f151beac5b09",
+  "bytes": 778931,
+  "engine_filename": "BO3_SYSTEMS_bedrock.mcworld"
+ },
+ "logs": [
+  "converter.log",
+  "worker.log",
+  "prep.log"
+ ],
+ "peak": {
+  "converter_memory_bytes": 212680704,
+  "worker_memory_bytes": 52133888
+ },
+ "lab": {
+  "job_id": "9dc5a736-93da-4d00-9a35-767ab0f80d9a",
+  "final_status": "done",
+  "attempts": 1,
+  "notice": {
+   "fidelity": {
+    "total": 19,
+    "impacts": [
+     {
+      "en": "Archived — entity `minecraft:cat : sound_variant: fields with no equivalent`",
+      "fr": "Archivé — entité `minecraft:cat : sound_variant : champs sans équivalent`",
+      "category": "archived"
+     }
+    ],
+    "detailed": 6,
+    "families": 6,
+    "truncated": 0,
+    "byCategory": {
+     "archived": 1,
+     "normalized": 18
+    }
+   }
+  },
+  "upload_ms": 34,
+  "analysis_ms": 301,
+  "analysis": {
+   "detectedType": "Java",
+   "version": "Java 1.20.4",
+   "sizeBytes": 871646,
+   "sizeFormatted": "851 Ko",
+   "uncompressedBytes": 2331014,
+   "chunkCount": 402,
+   "levelName": "BO3 SYSTEMS",
+   "valid": true,
+   "gameMode": "creative",
+   "difficulty": "hard",
+   "spawn": "0, 201, 0",
+   "worldRootPrefix": "",
+   "worldCount": 1,
+   "players": [
+    {
+     "sourceId": "f5a1c0de-0000-4000-8000-000000000001",
+     "isHost": true,
+     "sourceLabel": "Joueur principal",
+     "labelSource": "host",
+     "displayIndex": 1,
+     "identifiers": [],
+     "profile": {
+      "items": 0,
+      "armor": 0,
+      "ender": 0,
+      "xpLevel": 0,
+      "dimension": "overworld",
+      "pos": [
+       19,
+       200,
+       39
+      ],
+      "nameHints": [],
+      "empty": true
+     },
+     "profileReadable": true,
+     "sharesAccountWith": 0
+    }
+   ],
+   "playersScanned": true,
+   "playersSkippedReason": null,
+   "playerLinkingSupported": false,
+   "terrainScan": {
+    "total": 200,
+    "unreadable": 0,
+    "truncatedRegions": 0,
+    "complete": true
+   },
+   "terrainDimensions": {
+    "overworld": 82,
+    "nether": 67,
+    "end": 51
+   }
+  },
+  "queue_to_done_ms": 1980,
+  "wall_s_worker_start_to_terminal": 2.847023445,
+  "converter": {
+   "memory_peak_bytes": 212680704,
+   "cpu_usec": 1959697,
+   "oom_kills": 0,
+   "scratch_peak_bytes_sampled_2s": 0
+  },
+  "worker": {
+   "memory_peak_bytes": 52133888,
+   "cpu_usec": 426292,
+   "scratch_peak_bytes_sampled_2s": 0
+  }
+ }
+}

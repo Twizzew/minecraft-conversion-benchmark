@@ -1,0 +1,17 @@
+INPUT=<LOCAL>/runs-diag/diag_J03/_work_uh1nnj/input
+data
+datapacks
+dimensions
+icon.png
+level.dat
+level.dat_old
+players
+session.lock
+--- region/:
+ls: cannot access '<LOCAL>/runs-diag/diag_J03/_work_uh1nnj/input/region': No such file or directory
+--- dimensions/minecraft/overworld/region/:
+r.-1.-1.mca
+r.-1.0.mca
+r.-1.1.mca
+0 chunks converted
+0.016s

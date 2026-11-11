@@ -1,0 +1,158 @@
+{
+ "schema": "mccb.run/1",
+ "run_id": "B01_retour",
+ "converter": {
+  "name": "WorldSwitch",
+  "engine_package": "worldswitch",
+  "engine_package_version": "2.8.0",
+  "commit": "5e2e2d528d469eb3fdd90dd318073304fa46fa25",
+  "working_tree_clean": false,
+  "patch": "arbre /srv/mccb-2026-11/src-c33 du labo (corrections non commitées du dépôt, voir 05-rapports)",
+  "build": "docker image mccb-ws:5e2e2d5-c33 (sha256:d198d4c6c42bf0a89e09c6c0588beddacc87674848132e456b16eb09fd17c9b2), Dockerfile du dépôt, git archive du commit",
+  "source_available": false
+ },
+ "direction": "java_to_bedrock",
+ "source": {
+  "ref": "B01_aller",
+  "file": "output.zip",
+  "sha256": "20138f6d8a6465825153c81b0d4eb46122decae12de388334e9701539ef3e89f",
+  "bytes": 165043
+ },
+ "options": {
+  "targetVersion": "latest",
+  "recoverUnlinked": true,
+  "locale": "en"
+ },
+ "environment": {
+  "kind": "labo prod-like (docker-compose.yml)",
+  "limits": {
+   "converter": "cpus 4, memory 5632m, swap 0, read-only, network none, cap-drop ALL, pids 512",
+   "worker": "cpus 0.75, memory 512m, swap 0"
+  },
+  "host": {
+   "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor",
+   "nproc": 8,
+   "kernel": "6.18.58.1-microsoft-standard-WSL2",
+   "mem_total_kb": 8134304
+  }
+ },
+ "started_at": "2026-11-10T15:29:01.384Z",
+ "finished_at": "2026-11-10T15:29:02.001Z",
+ "duration_ms": 617,
+ "exit_status": 0,
+ "error": null,
+ "output": {
+  "file": "output.mcworld",
+  "sha256": "c4785d60da1ca22183a598a90ee8651ec01653489516d9a18dec96a3e9e6e5c1",
+  "bytes": 109344,
+  "engine_filename": "B01_STATIC_Core_bedrock.mcworld"
+ },
+ "logs": [
+  "converter.log",
+  "worker.log",
+  "prep.log"
+ ],
+ "peak": {
+  "converter_memory_bytes": 151228416,
+  "worker_memory_bytes": 50970624
+ },
+ "lab": {
+  "job_id": "c8fc7bf6-4476-4de8-9efb-5f7dfb87b408",
+  "final_status": "done",
+  "attempts": 1,
+  "notice": {
+   "fidelity": {
+    "total": 3,
+    "impacts": [
+     {
+      "en": "Dropped — block entity `minecraft:lectern.Book.tag.resolved`",
+      "fr": "Supprimé — block entity `minecraft:lectern.Book.tag.resolved`",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — block entity `minecraft:potent_sulfur.countdown`",
+      "fr": "Supprimé — block entity `minecraft:potent_sulfur.countdown`",
+      "category": "dropped"
+     }
+    ],
+    "detailed": 3,
+    "families": 3,
+    "truncated": 0,
+    "byCategory": {
+     "dropped": 2,
+     "normalized": 1
+    }
+   }
+  },
+  "upload_ms": 31,
+  "analysis_ms": 312,
+  "analysis": {
+   "detectedType": "Java",
+   "version": "Java 1.20.4",
+   "sizeBytes": 165043,
+   "sizeFormatted": "161 Ko",
+   "uncompressedBytes": 1060654,
+   "chunkCount": 69,
+   "levelName": "B01 STATIC Core",
+   "valid": true,
+   "gameMode": "creative",
+   "difficulty": "normal",
+   "spawn": "0, 64, 0",
+   "worldRootPrefix": "",
+   "worldCount": 1,
+   "players": [
+    {
+     "sourceId": "f5a1c0de-0000-4000-8000-000000000001",
+     "isHost": true,
+     "sourceLabel": "Joueur principal",
+     "labelSource": "host",
+     "displayIndex": 1,
+     "identifiers": [],
+     "profile": {
+      "items": 17,
+      "armor": 0,
+      "ender": 0,
+      "xpLevel": 0,
+      "dimension": "overworld",
+      "pos": [
+       -9,
+       68,
+       -61
+      ],
+      "nameHints": [],
+      "empty": false
+     },
+     "profileReadable": true,
+     "sharesAccountWith": 0
+    }
+   ],
+   "playersScanned": true,
+   "playersSkippedReason": null,
+   "playerLinkingSupported": false,
+   "terrainScan": {
+    "total": 41,
+    "unreadable": 0,
+    "truncatedRegions": 0,
+    "complete": true
+   },
+   "terrainDimensions": {
+    "overworld": 41,
+    "nether": 0,
+    "end": 0
+   }
+  },
+  "queue_to_done_ms": 1473,
+  "wall_s_worker_start_to_terminal": 2.685,
+  "converter": {
+   "memory_peak_bytes": 151228416,
+   "cpu_usec": 1247764,
+   "oom_kills": 0,
+   "scratch_peak_bytes_sampled_2s": 0
+  },
+  "worker": {
+   "memory_peak_bytes": 50970624,
+   "cpu_usec": 396976,
+   "scratch_peak_bytes_sampled_2s": 0
+  }
+ }
+}

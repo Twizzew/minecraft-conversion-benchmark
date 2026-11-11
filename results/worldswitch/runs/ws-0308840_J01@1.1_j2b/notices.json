@@ -1,0 +1,17 @@
+[
+ {
+  "fidelity": {
+   "total": 5158,
+   "families": 81,
+   "byCategory": {
+    "normalized": 4153,
+    "archived": 953,
+    "dropped": 37,
+    "approximated": 9,
+    "cosmetic": 6
+   },
+   "detailed": 81,
+   "truncated": 0
+  }
+ }
+]

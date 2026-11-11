@@ -1,0 +1,967 @@
+== J01@1.1 (97 s, exit 0)
+J01@1.1 ws-0308840_J01@1.1_j2b + ws-0308840_J01@1.1_j2b2j: 46934 subjects in 94.7 s
+  block.identity.direct: PASS:32493 NOT_APPLICABLE:5
+  block.identity.behavior:  NOT_EVALUATED:32498
+  block.identity.roundtrip: PASS:32472 ADAPTED:4 FAIL:22
+  block.state.direct:  NOT_EVALUATED:32102
+  block.state.behavior:  NOT_EVALUATED:32102
+  block.state.roundtrip: PASS:20258 ADAPTED:10242 FAIL:1602
+  block.waterlog.direct: PASS:11728
+  block.waterlog.behavior:  NOT_EVALUATED:11728
+  block.waterlog.roundtrip: PASS:11728
+  block_entity.presence.direct: PASS:4697 NOT_APPLICABLE:4584
+  block_entity.presence.behavior:  NOT_EVALUATED:9281
+  block_entity.presence.roundtrip: PASS:9276 FAIL:5
+  block_entity.data.direct: NOT_APPLICABLE:4579 NOT_EVALUATED:4702
+  block_entity.data.behavior:  NOT_EVALUATED:9281
+  block_entity.data.roundtrip: PASS:9200 PARTIAL:76 FAIL:5
+  block_entity.sign_text.direct: PASS:1344 NOT_APPLICABLE:1351
+  block_entity.sign_text.behavior:  NOT_EVALUATED:2695
+  block_entity.sign_text.roundtrip: PASS:2695
+  block_entity.sign_flags.direct: PASS:1344 NOT_APPLICABLE:1351
+  block_entity.sign_flags.behavior:  NOT_EVALUATED:2695
+  block_entity.sign_flags.roundtrip: PASS:2695
+  block_entity.sign_color.direct: NOT_APPLICABLE:1351 NOT_EVALUATED:1344
+  block_entity.sign_color.behavior:  NOT_EVALUATED:2695
+  block_entity.sign_color.roundtrip: PASS:2695
+  block_entity.command.direct: PASS:36 NOT_APPLICABLE:36
+  block_entity.command.behavior:  NOT_EVALUATED:72
+  block_entity.command.roundtrip: PASS:72
+  block_entity.command_flags.direct: PASS:36 NOT_APPLICABLE:36
+  block_entity.command_flags.behavior:  NOT_EVALUATED:72
+  block_entity.command_flags.roundtrip: PASS:72
+  block_entity.record.direct: PASS:1
+  block_entity.record.behavior:  NOT_EVALUATED:1
+  block_entity.record.roundtrip: PASS:1
+  item_stack.identity.direct: PASS:2008 NOT_APPLICABLE:6
+  item_stack.identity.behavior:  NOT_EVALUATED:2014
+  item_stack.identity.roundtrip: PASS:2011 FAIL:3
+  item_stack.count.direct: PASS:2008 NOT_APPLICABLE:6
+  item_stack.count.behavior:  NOT_EVALUATED:2014
+  item_stack.count.roundtrip: PASS:2010 FAIL:4
+  item_stack.component:minecraft:damage.direct: PASS:3
+  item_stack.component:minecraft:damage.behavior:  NOT_EVALUATED:3
+  item_stack.component:minecraft:damage.roundtrip: PASS:3
+  item_stack.component:minecraft:custom_name.direct: PASS:1
+  item_stack.component:minecraft:custom_name.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:custom_name.roundtrip: FAIL:1
+  item_stack.component:minecraft:lore.direct: PASS:1
+  item_stack.component:minecraft:lore.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:lore.roundtrip: FAIL:1
+  item_stack.component:minecraft:enchantments.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:enchantments.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:enchantments.roundtrip: PASS:1
+  item_stack.component:minecraft:unbreakable.direct: PASS:1
+  item_stack.component:minecraft:unbreakable.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:unbreakable.roundtrip: PASS:1
+  item_stack.component:minecraft:custom_model_data.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:custom_model_data.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:custom_model_data.roundtrip: FAIL:1
+  item_stack.component:minecraft:max_stack_size.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:max_stack_size.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:max_stack_size.roundtrip: PASS:1
+  item_stack.component:minecraft:rarity.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:rarity.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:rarity.roundtrip: PASS:1
+  item_stack.component:minecraft:enchantment_glint_override.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:enchantment_glint_override.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:enchantment_glint_override.roundtrip: PASS:1
+  item_stack.component:minecraft:repair_cost.direct: PASS:1
+  item_stack.component:minecraft:repair_cost.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:repair_cost.roundtrip: PASS:1
+  item_stack.component:minecraft:tooltip_display.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:tooltip_display.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:tooltip_display.roundtrip: PASS:1
+  item_stack.component:minecraft:potion_contents.direct:  NOT_EVALUATED:182
+  item_stack.component:minecraft:potion_contents.behavior:  NOT_EVALUATED:182
+  item_stack.component:minecraft:potion_contents.roundtrip: PASS:182
+  item_stack.component:minecraft:trim.direct: PASS:198
+  item_stack.component:minecraft:trim.behavior:  NOT_EVALUATED:198
+  item_stack.component:minecraft:trim.roundtrip: PASS:198
+  item_stack.component:minecraft:axolotl/variant.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:axolotl/variant.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:axolotl/variant.roundtrip: PASS:1
+  item_stack.component:minecraft:rabbit/variant.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:rabbit/variant.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:rabbit/variant.roundtrip: PASS:1
+  item_stack.component:minecraft:mooshroom/variant.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:mooshroom/variant.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:mooshroom/variant.roundtrip: PASS:1
+  item_stack.component:minecraft:sheep/color.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:sheep/color.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:sheep/color.roundtrip: PASS:1
+  item_stack.component:minecraft:shulker/color.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:shulker/color.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:shulker/color.roundtrip: PASS:1
+  item_stack.component:minecraft:tropical_fish/pattern_color.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:tropical_fish/pattern_color.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:tropical_fish/pattern_color.roundtrip: PASS:1
+  item_stack.component:minecraft:tropical_fish/base_color.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:tropical_fish/base_color.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:tropical_fish/base_color.roundtrip: PASS:1
+  item_stack.component:minecraft:tropical_fish/pattern.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:tropical_fish/pattern.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:tropical_fish/pattern.roundtrip: PASS:1
+  item_stack.component:minecraft:item_model.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:item_model.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:item_model.roundtrip: PASS:1
+  item_stack.component:minecraft:item_name.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:item_name.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:item_name.roundtrip: PASS:1
+  item_stack.component:minecraft:enchantable.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:enchantable.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:enchantable.roundtrip: PASS:1
+  item_stack.component:minecraft:damage_resistant.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:damage_resistant.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:damage_resistant.roundtrip: PASS:1
+  item_stack.component:minecraft:intangible_projectile.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:intangible_projectile.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:intangible_projectile.roundtrip: PASS:1
+  item_stack.component:minecraft:glider.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:glider.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:glider.roundtrip: PASS:1
+  item_stack.component:minecraft:tool.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:tool.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:tool.roundtrip: PASS:1
+  item_stack.component:minecraft:dye.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:dye.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:dye.roundtrip: PASS:1
+  item_stack.component:minecraft:use_effects.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:use_effects.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:use_effects.roundtrip: PASS:1
+  item_stack.component:minecraft:minimum_attack_charge.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:minimum_attack_charge.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:minimum_attack_charge.roundtrip: PASS:1
+  item_stack.component:minecraft:damage_type.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:damage_type.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:damage_type.roundtrip: PASS:1
+  item_stack.component:minecraft:weapon.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:weapon.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:weapon.roundtrip: PASS:1
+  item_stack.component:minecraft:attack_range.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:attack_range.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:attack_range.roundtrip: PASS:1
+  item_stack.component:minecraft:attack_animation.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:attack_animation.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:attack_animation.roundtrip: PASS:1
+  item_stack.component:minecraft:interact_animation.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:interact_animation.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:interact_animation.roundtrip: PASS:1
+  item_stack.component:minecraft:potion_duration_scale.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:potion_duration_scale.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:potion_duration_scale.roundtrip: FAIL:1
+  item_stack.component:minecraft:food.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:food.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:food.roundtrip: PASS:1
+  item_stack.component:minecraft:consumable.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:consumable.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:consumable.roundtrip: PASS:1
+  item_stack.component:minecraft:use_remainder.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:use_remainder.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:use_remainder.roundtrip: PASS:1
+  item_stack.component:minecraft:use_cooldown.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:use_cooldown.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:use_cooldown.roundtrip: PASS:1
+  item_stack.component:minecraft:repairable.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:repairable.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:repairable.roundtrip: PASS:1
+  item_stack.component:minecraft:profile.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:profile.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:profile.roundtrip: PASS:1
+  item_stack.component:minecraft:note_block_sound.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:note_block_sound.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:note_block_sound.roundtrip: PASS:1
+  item_stack.component:minecraft:ominous_bottle_amplifier.direct:  NOT_EVALUATED:4
+  item_stack.component:minecraft:ominous_bottle_amplifier.behavior:  NOT_EVALUATED:4
+  item_stack.component:minecraft:ominous_bottle_amplifier.roundtrip: PASS:4
+  item_stack.component:minecraft:firework_explosion.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:firework_explosion.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:firework_explosion.roundtrip: FAIL:1
+  item_stack.component:minecraft:fireworks.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:fireworks.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:fireworks.roundtrip: FAIL:1
+  item_stack.component:minecraft:instrument.direct:  NOT_EVALUATED:7
+  item_stack.component:minecraft:instrument.behavior:  NOT_EVALUATED:7
+  item_stack.component:minecraft:instrument.roundtrip: PASS:7
+  item_stack.component:minecraft:written_book_content.direct: PASS:1
+  item_stack.component:minecraft:written_book_content.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:written_book_content.roundtrip: PASS:1
+  item_stack.component:minecraft:writable_book_content.direct: PASS:1
+  item_stack.component:minecraft:writable_book_content.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:writable_book_content.roundtrip: PASS:1
+  item_stack.component:minecraft:suspicious_stew_effects.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:suspicious_stew_effects.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:suspicious_stew_effects.roundtrip: PASS:1
+  item_stack.component:minecraft:dyed_color.direct: PASS:1
+  item_stack.component:minecraft:dyed_color.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:dyed_color.roundtrip: PASS:1
+  item_stack.component:minecraft:charged_projectiles.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:charged_projectiles.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:charged_projectiles.roundtrip: PASS:1
+  item_stack.component:minecraft:bundle_contents.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:bundle_contents.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:bundle_contents.roundtrip: PASS:1
+  item_stack.component:minecraft:container.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:container.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:container.roundtrip: PASS:1
+  item_stack.component:minecraft:custom_data.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:custom_data.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:custom_data.roundtrip: PASS:1
+  item_stack.component:minecraft:max_damage.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:max_damage.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:max_damage.roundtrip: FAIL:1
+  item_stack.component:minecraft:stored_enchantments.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:stored_enchantments.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:stored_enchantments.roundtrip: PASS:1
+  item_stack.component:minecraft:can_break.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:can_break.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:can_break.roundtrip: PASS:1
+  item_stack.component:minecraft:can_place_on.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:can_place_on.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:can_place_on.roundtrip: PASS:1
+  item_stack.component:minecraft:banner_patterns.direct:  NOT_EVALUATED:2
+  item_stack.component:minecraft:banner_patterns.behavior:  NOT_EVALUATED:2
+  item_stack.component:minecraft:banner_patterns.roundtrip: PASS:2
+  item_stack.component:minecraft:base_color.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:base_color.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:base_color.roundtrip: PASS:1
+  item_stack.component:minecraft:pot_decorations.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:pot_decorations.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:pot_decorations.roundtrip: PASS:1
+  item_stack.component:minecraft:bees.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:bees.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:bees.roundtrip: PASS:1
+  item_stack.component:minecraft:block_state.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:block_state.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:block_state.roundtrip: PASS:1
+  item_stack.component:minecraft:map_id.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:map_id.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:map_id.roundtrip: PASS:1
+  item_stack.component:minecraft:sulfur_cube_content.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:sulfur_cube_content.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:sulfur_cube_content.roundtrip: PASS:1
+  item_stack.component:minecraft:entity_data.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:entity_data.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:entity_data.roundtrip: PASS:1
+  item_stack.component:minecraft:bucket_entity_data.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:bucket_entity_data.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:bucket_entity_data.roundtrip: PASS:1
+  item_stack.component:minecraft:villager/variant.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:villager/variant.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:villager/variant.roundtrip: PASS:1
+  item_stack.component:minecraft:fox/variant.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:fox/variant.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:fox/variant.roundtrip: PASS:1
+  item_stack.component:minecraft:salmon/size.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:salmon/size.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:salmon/size.roundtrip: PASS:1
+  item_stack.component:minecraft:parrot/variant.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:parrot/variant.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:parrot/variant.roundtrip: PASS:1
+  item_stack.component:minecraft:horse/variant.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:horse/variant.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:horse/variant.roundtrip: PASS:1
+  item_stack.component:minecraft:llama/variant.direct:  NOT_EVALUATED:1
+  item_stack.component:minecraft:llama/variant.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:llama/variant.roundtrip: PASS:1
+  entity.identity.direct: PASS:121
+  entity.identity.behavior:  NOT_EVALUATED:121
+  entity.identity.roundtrip: PASS:121
+  entity.position.direct: PASS:121
+  entity.position.behavior:  NOT_EVALUATED:121
+  entity.position.roundtrip: PASS:121
+  entity.health.direct: PASS:118
+  entity.health.behavior:  NOT_EVALUATED:118
+  entity.health.roundtrip: PASS:118
+  entity.data.direct:  NOT_EVALUATED:121
+  entity.data.behavior:  NOT_EVALUATED:121
+  entity.data.roundtrip: PASS:37 PARTIAL:84
+  entity.baby.direct: PASS:6
+  entity.baby.behavior:  NOT_EVALUATED:6
+  entity.baby.roundtrip: PASS:6
+  entity.inventory.direct: FAIL:1
+  entity.inventory.behavior:  NOT_EVALUATED:1
+  entity.inventory.roundtrip: PASS:1
+  entity.trades.direct: PASS:7
+  entity.trades.behavior:  NOT_EVALUATED:7
+  entity.trades.roundtrip: PASS:7
+  world.opens.direct:  NOT_EVALUATED:1
+  world.opens.behavior:  NOT_EVALUATED:1
+  world.opens.roundtrip: PASS:1
+  world.value.direct: PASS:36 NOT_APPLICABLE:31 NOT_EVALUATED:4
+  world.value.behavior:  NOT_EVALUATED:71
+  world.value.roundtrip: PASS:71
+  scoreboard.presence.direct: PASS:1
+  scoreboard.presence.behavior:  NOT_EVALUATED:1
+  scoreboard.presence.roundtrip: PASS:1
+  scoreboard.display_name.direct: PASS:1
+  scoreboard.display_name.behavior:  NOT_EVALUATED:1
+  scoreboard.display_name.roundtrip: PASS:1
+  scoreboard.value.direct: PASS:45
+  scoreboard.value.behavior:  NOT_EVALUATED:45
+  scoreboard.value.roundtrip: PASS:45
+  custom_dimension.blocks.direct: NOT_APPLICABLE:2280
+  custom_dimension.blocks.behavior:  NOT_EVALUATED:2280
+  custom_dimension.blocks.roundtrip: PASS:2280
+  player.position.direct: NOT_APPLICABLE:1
+  player.position.behavior:  NOT_EVALUATED:1
+  player.position.roundtrip: PASS:1
+  player.dimension.direct: NOT_APPLICABLE:1
+  player.dimension.behavior:  NOT_EVALUATED:1
+  player.dimension.roundtrip: FAIL:1
+  player.game_mode.direct: PASS:1
+  player.game_mode.behavior:  NOT_EVALUATED:1
+  player.game_mode.roundtrip: PASS:1
+  player.health.direct: PASS:1
+  player.health.behavior:  NOT_EVALUATED:1
+  player.health.roundtrip: PASS:1
+  player.food.direct: PASS:1
+  player.food.behavior:  NOT_EVALUATED:1
+  player.food.roundtrip: PASS:1
+  player.xp_level.direct: PASS:1
+  player.xp_level.behavior:  NOT_EVALUATED:1
+  player.xp_level.roundtrip: PASS:1
+  player.inventory.direct: PASS:1
+  player.inventory.behavior:  NOT_EVALUATED:1
+  player.inventory.roundtrip: PASS:1
+  structure.generation_frontier.direct: FAIL:1 NOT_EVALUATED:1
+  structure.generation_frontier.behavior:  NOT_EVALUATED:2
+  structure.generation_frontier.roundtrip: FAIL:1 NOT_EVALUATED:1
+  structure.spawn_zone.direct:  NOT_EVALUATED:619
+  structure.spawn_zone.behavior:  NOT_EVALUATED:619
+  structure.spawn_zone.roundtrip: PASS:619
+[evaluate] block: 32498 subjects, 79 s elapsed
+[evaluate] block_entity: 9281 subjects, 82 s elapsed
+[evaluate] item_stack: 2014 subjects, 84 s elapsed
+[evaluate] entity: 121 subjects, 88 s elapsed
+[evaluate] world: 72 subjects, 88 s elapsed
+[evaluate] scoreboard: 46 subjects, 88 s elapsed
+[evaluate] custom_dimension: 2280 subjects, 93 s elapsed
+[evaluate] player: 1 subjects, 93 s elapsed
+[evaluate] structure: 621 subjects, 93 s elapsed
+
+== J02@1.0 (70 s, exit 0)
+J02@1.0 ws-0308840_J02@1.0_j2b + ws-0308840_J02@1.0_j2b2j: 957 subjects in 69.5 s
+  block.identity.direct: PASS:54
+  block.identity.behavior:  NOT_EVALUATED:54
+  block.identity.roundtrip: PASS:54
+  block.state.direct:  NOT_EVALUATED:49
+  block.state.behavior:  NOT_EVALUATED:49
+  block.state.roundtrip: PASS:49
+  block_entity.presence.direct: PASS:41
+  block_entity.presence.behavior:  NOT_EVALUATED:41
+  block_entity.presence.roundtrip: PASS:41
+  block_entity.data.direct:  NOT_EVALUATED:41
+  block_entity.data.behavior:  NOT_EVALUATED:41
+  block_entity.data.roundtrip: PASS:21 PARTIAL:20
+  block_entity.custom_name.direct: PASS:7
+  block_entity.custom_name.behavior:  NOT_EVALUATED:7
+  block_entity.custom_name.roundtrip: PASS:7
+  item_stack.identity.direct: PASS:59
+  item_stack.identity.behavior:  NOT_EVALUATED:59
+  item_stack.identity.roundtrip: PASS:59
+  item_stack.count.direct: PASS:59
+  item_stack.count.behavior:  NOT_EVALUATED:59
+  item_stack.count.roundtrip: PASS:59
+  entity.identity.direct: PASS:358 NOT_APPLICABLE:10 NOT_EVALUATED:1
+  entity.identity.behavior:  NOT_EVALUATED:369
+  entity.identity.roundtrip: PASS:360 FAIL:8 NOT_EVALUATED:1
+  entity.position.direct: PASS:356 NOT_APPLICABLE:10 NOT_EVALUATED:3
+  entity.position.behavior:  NOT_EVALUATED:369
+  entity.position.roundtrip: PASS:360 FAIL:8 NOT_EVALUATED:1
+  entity.health.direct: PASS:310 FAIL:1 NOT_APPLICABLE:3 NOT_EVALUATED:2
+  entity.health.behavior:  NOT_EVALUATED:316
+  entity.health.roundtrip: PASS:311 FAIL:3 NOT_EVALUATED:2
+  entity.data.direct:  NOT_EVALUATED:369
+  entity.data.behavior:  NOT_EVALUATED:369
+  entity.data.roundtrip: PASS:200 PARTIAL:160 FAIL:8 NOT_EVALUATED:1
+  entity.custom_name.direct: PASS:311 NOT_APPLICABLE:10 NOT_EVALUATED:2
+  entity.custom_name.behavior:  NOT_EVALUATED:323
+  entity.custom_name.roundtrip: PASS:269 FAIL:54
+  entity.tamed.direct: PASS:3
+  entity.tamed.behavior:  NOT_EVALUATED:3
+  entity.tamed.roundtrip: PASS:3
+  entity.equipment.direct: PASS:9 FAIL:1 NOT_APPLICABLE:2
+  entity.equipment.behavior:  NOT_EVALUATED:12
+  entity.equipment.roundtrip: PASS:9 PARTIAL:1 FAIL:2
+  entity.inventory.direct: PASS:5
+  entity.inventory.behavior:  NOT_EVALUATED:5
+  entity.inventory.roundtrip: PASS:2 FAIL:3
+  entity.baby.direct: PASS:9
+  entity.baby.behavior:  NOT_EVALUATED:9
+  entity.baby.roundtrip: PASS:9
+  entity.trades.direct: PASS:14
+  entity.trades.behavior:  NOT_EVALUATED:14
+  entity.trades.roundtrip: PASS:14
+  world.opens.direct:  NOT_EVALUATED:1
+  world.opens.behavior:  NOT_EVALUATED:1
+  world.opens.roundtrip: PASS:1
+  world.value.direct: PASS:36 ADAPTED:3 NOT_APPLICABLE:33 NOT_EVALUATED:4
+  world.value.behavior:  NOT_EVALUATED:76
+  world.value.roundtrip: PASS:76
+  player.position.direct: PASS:1
+  player.position.behavior:  NOT_EVALUATED:1
+  player.position.roundtrip: PASS:1
+  player.dimension.direct: PASS:1
+  player.dimension.behavior:  NOT_EVALUATED:1
+  player.dimension.roundtrip: PASS:1
+  player.game_mode.direct: PASS:1
+  player.game_mode.behavior:  NOT_EVALUATED:1
+  player.game_mode.roundtrip: PASS:1
+  player.health.direct: PASS:1
+  player.health.behavior:  NOT_EVALUATED:1
+  player.health.roundtrip: PASS:1
+  player.food.direct: PASS:1
+  player.food.behavior:  NOT_EVALUATED:1
+  player.food.roundtrip: PASS:1
+  player.xp_level.direct: PASS:1
+  player.xp_level.behavior:  NOT_EVALUATED:1
+  player.xp_level.roundtrip: PASS:1
+  player.inventory.direct: PASS:1
+  player.inventory.behavior:  NOT_EVALUATED:1
+  player.inventory.roundtrip: PASS:1
+  player.ender_chest.direct: PASS:1
+  player.ender_chest.behavior:  NOT_EVALUATED:1
+  player.ender_chest.roundtrip: PASS:1
+  player.armor.direct:  NOT_EVALUATED:1
+  player.armor.behavior:  NOT_EVALUATED:1
+  player.armor.roundtrip:  NOT_EVALUATED:1
+  player.spawn_point.direct: PASS:1
+  player.spawn_point.behavior:  NOT_EVALUATED:1
+  player.spawn_point.roundtrip: PASS:1
+  structure.generation_frontier.direct: FAIL:3 NOT_EVALUATED:3
+  structure.generation_frontier.behavior:  NOT_EVALUATED:6
+  structure.generation_frontier.roundtrip: FAIL:3 NOT_EVALUATED:3
+  structure.spawn_zone.direct:  NOT_EVALUATED:350
+  structure.spawn_zone.behavior:  NOT_EVALUATED:350
+  structure.spawn_zone.roundtrip: PASS:350
+[evaluate] block: 54 subjects, 68 s elapsed
+[evaluate] block_entity: 41 subjects, 69 s elapsed
+[evaluate] item_stack: 59 subjects, 69 s elapsed
+[evaluate] entity: 369 subjects, 69 s elapsed
+[evaluate] world: 77 subjects, 69 s elapsed
+[evaluate] scoreboard: 0 subjects, 69 s elapsed
+[evaluate] custom_dimension: 0 subjects, 69 s elapsed
+[evaluate] player: 1 subjects, 69 s elapsed
+[evaluate] structure: 356 subjects, 69 s elapsed
+
+== J03@1.0 (78 s, exit 0)
+J03@1.0 ws-0308840_J03@1.0_j2b + ws-0308840_J03@1.0_j2b2j: 915 subjects in 77.4 s
+  block.identity.direct: PASS:229 NOT_APPLICABLE:40
+  block.identity.behavior:  NOT_EVALUATED:269
+  block.identity.roundtrip: PASS:229 FAIL:40
+  block.state.direct: NOT_APPLICABLE:12 NOT_EVALUATED:165
+  block.state.behavior:  NOT_EVALUATED:177
+  block.state.roundtrip: PASS:164 ADAPTED:1 FAIL:12
+  block_entity.presence.direct: PASS:64 NOT_EVALUATED:1
+  block_entity.presence.behavior:  NOT_EVALUATED:65
+  block_entity.presence.roundtrip: PASS:64 NOT_EVALUATED:1
+  block_entity.data.direct:  NOT_EVALUATED:65
+  block_entity.data.behavior:  NOT_EVALUATED:65
+  block_entity.data.roundtrip: PASS:57 PARTIAL:7 NOT_EVALUATED:1
+  block_entity.command.direct:  NOT_EVALUATED:23
+  block_entity.command.behavior:  NOT_EVALUATED:23
+  block_entity.command.roundtrip: PASS:23
+  block_entity.command_flags.direct: PASS:22 NOT_EVALUATED:1
+  block_entity.command_flags.behavior:  NOT_EVALUATED:23
+  block_entity.command_flags.roundtrip: PASS:23
+  item_stack.identity.direct: PASS:22 FAIL:2
+  item_stack.identity.behavior:  NOT_EVALUATED:24
+  item_stack.identity.roundtrip: PASS:24
+  item_stack.count.direct: PASS:22 FAIL:2
+  item_stack.count.behavior:  NOT_EVALUATED:24
+  item_stack.count.roundtrip: PASS:24
+  item_stack.component:minecraft:potion_contents.direct:  NOT_EVALUATED:3
+  item_stack.component:minecraft:potion_contents.behavior:  NOT_EVALUATED:3
+  item_stack.component:minecraft:potion_contents.roundtrip: PASS:3
+  entity.identity.direct: PASS:28 NOT_EVALUATED:5
+  entity.identity.behavior:  NOT_EVALUATED:33
+  entity.identity.roundtrip: PASS:28 NOT_EVALUATED:5
+  entity.position.direct: PASS:28 NOT_EVALUATED:5
+  entity.position.behavior:  NOT_EVALUATED:33
+  entity.position.roundtrip: PASS:28 NOT_EVALUATED:5
+  entity.health.direct: PASS:14
+  entity.health.behavior:  NOT_EVALUATED:14
+  entity.health.roundtrip: PASS:14
+  entity.data.direct:  NOT_EVALUATED:33
+  entity.data.behavior:  NOT_EVALUATED:33
+  entity.data.roundtrip: PASS:18 PARTIAL:10 NOT_EVALUATED:5
+  world.opens.direct:  NOT_EVALUATED:1
+  world.opens.behavior:  NOT_EVALUATED:1
+  world.opens.roundtrip: PASS:1
+  world.value.direct: PASS:36 ADAPTED:1 NOT_APPLICABLE:35 NOT_EVALUATED:4
+  world.value.behavior:  NOT_EVALUATED:76
+  world.value.roundtrip: PASS:73 FAIL:3
+  scoreboard.presence.direct: PASS:4 NOT_APPLICABLE:1
+  scoreboard.presence.behavior:  NOT_EVALUATED:5
+  scoreboard.presence.roundtrip: PASS:5
+  scoreboard.display_name.direct: PASS:4 NOT_APPLICABLE:1
+  scoreboard.display_name.behavior:  NOT_EVALUATED:5
+  scoreboard.display_name.roundtrip: PASS:5
+  scoreboard.value.direct: PASS:77 NOT_APPLICABLE:1
+  scoreboard.value.behavior:  NOT_EVALUATED:78
+  scoreboard.value.roundtrip: PASS:78
+  player.position.direct: PASS:1
+  player.position.behavior:  NOT_EVALUATED:1
+  player.position.roundtrip: PASS:1
+  player.dimension.direct: PASS:1
+  player.dimension.behavior:  NOT_EVALUATED:1
+  player.dimension.roundtrip: PASS:1
+  player.game_mode.direct: PASS:1
+  player.game_mode.behavior:  NOT_EVALUATED:1
+  player.game_mode.roundtrip: PASS:1
+  player.health.direct: PASS:1
+  player.health.behavior:  NOT_EVALUATED:1
+  player.health.roundtrip: PASS:1
+  player.food.direct: PASS:1
+  player.food.behavior:  NOT_EVALUATED:1
+  player.food.roundtrip: PASS:1
+  player.xp_level.direct: PASS:1
+  player.xp_level.behavior:  NOT_EVALUATED:1
+  player.xp_level.roundtrip: PASS:1
+  structure.generation_frontier.direct: FAIL:3 NOT_EVALUATED:3
+  structure.generation_frontier.behavior:  NOT_EVALUATED:6
+  structure.generation_frontier.roundtrip: FAIL:3 NOT_EVALUATED:3
+  structure.spawn_zone.direct: PASS:150 NOT_EVALUATED:207
+  structure.spawn_zone.behavior:  NOT_EVALUATED:357
+  structure.spawn_zone.roundtrip: PASS:357
+[evaluate] block: 269 subjects, 70 s elapsed
+[evaluate] block_entity: 65 subjects, 71 s elapsed
+[evaluate] item_stack: 24 subjects, 71 s elapsed
+[evaluate] entity: 33 subjects, 74 s elapsed
+[evaluate] world: 77 subjects, 74 s elapsed
+[evaluate] scoreboard: 83 subjects, 74 s elapsed
+[evaluate] custom_dimension: 0 subjects, 74 s elapsed
+[evaluate] player: 1 subjects, 74 s elapsed
+[evaluate] structure: 363 subjects, 77 s elapsed
+
+== J04@1.0 (75 s, exit 0)
+J04@1.0 ws-0308840_J04@1.0_j2b + ws-0308840_J04@1.0_j2b2j: 13003 subjects in 73.7 s
+  block.identity.direct: PASS:6170
+  block.identity.behavior:  NOT_EVALUATED:6170
+  block.identity.roundtrip: PASS:6170
+  block.state.direct:  NOT_EVALUATED:5667
+  block.state.behavior:  NOT_EVALUATED:5667
+  block.state.roundtrip: PASS:5667
+  block_entity.presence.direct: PASS:4879 NOT_EVALUATED:7
+  block_entity.presence.behavior:  NOT_EVALUATED:4886
+  block_entity.presence.roundtrip: PASS:4879 NOT_EVALUATED:7
+  block_entity.sign_text.direct: PASS:400
+  block_entity.sign_text.behavior:  NOT_EVALUATED:400
+  block_entity.sign_text.roundtrip: PASS:400
+  block_entity.sign_flags.direct: PASS:400
+  block_entity.sign_flags.behavior:  NOT_EVALUATED:400
+  block_entity.sign_flags.roundtrip: PASS:400
+  block_entity.sign_color.direct:  NOT_EVALUATED:400
+  block_entity.sign_color.behavior:  NOT_EVALUATED:400
+  block_entity.sign_color.roundtrip: PASS:400
+  block_entity.data.direct:  NOT_EVALUATED:4886
+  block_entity.data.behavior:  NOT_EVALUATED:4886
+  block_entity.data.roundtrip: PASS:4470 PARTIAL:409 NOT_EVALUATED:7
+  block_entity.command.direct: FAIL:32 NOT_APPLICABLE:90 NOT_EVALUATED:3867
+  block_entity.command.behavior:  NOT_EVALUATED:3989
+  block_entity.command.roundtrip: PASS:3989
+  block_entity.command_flags.direct: PASS:3325 NOT_EVALUATED:664
+  block_entity.command_flags.behavior:  NOT_EVALUATED:3989
+  block_entity.command_flags.roundtrip: PASS:3989
+  item_stack.identity.direct: PASS:417
+  item_stack.identity.behavior:  NOT_EVALUATED:417
+  item_stack.identity.roundtrip: PASS:417
+  item_stack.count.direct: PASS:417
+  item_stack.count.behavior:  NOT_EVALUATED:417
+  item_stack.count.roundtrip: PASS:417
+  item_stack.component:minecraft:written_book_content.direct: PASS:400
+  item_stack.component:minecraft:written_book_content.behavior:  NOT_EVALUATED:400
+  item_stack.component:minecraft:written_book_content.roundtrip: PASS:400
+  item_stack.component:minecraft:custom_name.direct: PASS:1
+  item_stack.component:minecraft:custom_name.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:custom_name.roundtrip: PASS:1
+  entity.identity.direct: PASS:355 NOT_EVALUATED:30
+  entity.identity.behavior:  NOT_EVALUATED:385
+  entity.identity.roundtrip: PASS:355 NOT_EVALUATED:30
+  entity.position.direct: PASS:355 NOT_EVALUATED:30
+  entity.position.behavior:  NOT_EVALUATED:385
+  entity.position.roundtrip: PASS:355 NOT_EVALUATED:30
+  entity.health.direct: PASS:349 NOT_EVALUATED:25
+  entity.health.behavior:  NOT_EVALUATED:374
+  entity.health.roundtrip: PASS:349 NOT_EVALUATED:25
+  entity.data.direct:  NOT_EVALUATED:385
+  entity.data.behavior:  NOT_EVALUATED:385
+  entity.data.roundtrip: PASS:313 PARTIAL:42 NOT_EVALUATED:30
+  entity.baby.direct: PASS:1
+  entity.baby.behavior:  NOT_EVALUATED:1
+  entity.baby.roundtrip: PASS:1
+  entity.custom_name.direct: PASS:272
+  entity.custom_name.behavior:  NOT_EVALUATED:272
+  entity.custom_name.roundtrip: PASS:272
+  world.opens.direct:  NOT_EVALUATED:1
+  world.opens.behavior:  NOT_EVALUATED:1
+  world.opens.roundtrip: PASS:1
+  world.value.direct: PASS:36 ADAPTED:3 NOT_APPLICABLE:34 NOT_EVALUATED:4
+  world.value.behavior:  NOT_EVALUATED:77
+  world.value.roundtrip: PASS:76 FAIL:1
+  scoreboard.presence.direct: PASS:196
+  scoreboard.presence.behavior:  NOT_EVALUATED:196
+  scoreboard.presence.roundtrip: PASS:196
+  scoreboard.display_name.direct: PASS:196
+  scoreboard.display_name.behavior:  NOT_EVALUATED:196
+  scoreboard.display_name.roundtrip: PASS:196
+  scoreboard.value.direct: PASS:300 NOT_EVALUATED:19
+  scoreboard.value.behavior:  NOT_EVALUATED:319
+  scoreboard.value.roundtrip: PASS:319
+  player.position.direct: PASS:1
+  player.position.behavior:  NOT_EVALUATED:1
+  player.position.roundtrip: PASS:1
+  player.dimension.direct: PASS:1
+  player.dimension.behavior:  NOT_EVALUATED:1
+  player.dimension.roundtrip: PASS:1
+  player.game_mode.direct: PASS:1
+  player.game_mode.behavior:  NOT_EVALUATED:1
+  player.game_mode.roundtrip: PASS:1
+  player.health.direct: PASS:1
+  player.health.behavior:  NOT_EVALUATED:1
+  player.health.roundtrip: PASS:1
+  player.food.direct: PASS:1
+  player.food.behavior:  NOT_EVALUATED:1
+  player.food.roundtrip: PASS:1
+  player.xp_level.direct: PASS:1
+  player.xp_level.behavior:  NOT_EVALUATED:1
+  player.xp_level.roundtrip: PASS:1
+  player.inventory.direct: PASS:1
+  player.inventory.behavior:  NOT_EVALUATED:1
+  player.inventory.roundtrip: PASS:1
+  player.spawn_point.direct: PASS:1
+  player.spawn_point.behavior:  NOT_EVALUATED:1
+  player.spawn_point.roundtrip: PASS:1
+  structure.generation_frontier.direct: FAIL:3 NOT_EVALUATED:3
+  structure.generation_frontier.behavior:  NOT_EVALUATED:6
+  structure.generation_frontier.roundtrip: FAIL:3 NOT_EVALUATED:3
+  structure.spawn_zone.direct:  NOT_EVALUATED:545
+  structure.spawn_zone.behavior:  NOT_EVALUATED:545
+  structure.spawn_zone.roundtrip: PASS:545
+[evaluate] block: 6170 subjects, 70 s elapsed
+[evaluate] block_entity: 4886 subjects, 72 s elapsed
+[evaluate] item_stack: 417 subjects, 72 s elapsed
+[evaluate] entity: 385 subjects, 73 s elapsed
+[evaluate] world: 78 subjects, 73 s elapsed
+[evaluate] scoreboard: 515 subjects, 73 s elapsed
+[evaluate] custom_dimension: 0 subjects, 73 s elapsed
+[evaluate] player: 1 subjects, 73 s elapsed
+[evaluate] structure: 551 subjects, 74 s elapsed
+
+== B01@1.0 (68 s, exit 0)
+B01@1.0 ws-0308840_B01@1.0_b2j + ws-0308840_B01@1.0_b2j2b: 405 subjects in 67.3 s
+  block.identity.direct: PASS:238
+  block.identity.behavior:  NOT_EVALUATED:238
+  block.identity.roundtrip: PASS:238
+  block.state.direct:  NOT_EVALUATED:152
+  block.state.behavior:  NOT_EVALUATED:152
+  block.state.roundtrip: PASS:150 FAIL:2
+  block.waterlog.direct: PASS:1 NOT_APPLICABLE:2
+  block.waterlog.behavior:  NOT_EVALUATED:3
+  block.waterlog.roundtrip: PASS:1 FAIL:2
+  block_entity.presence.direct: PASS:56 FAIL:1 NOT_APPLICABLE:3
+  block_entity.presence.behavior:  NOT_EVALUATED:60
+  block_entity.presence.roundtrip: PASS:56 FAIL:4
+  block_entity.sign_text.direct: PASS:5
+  block_entity.sign_text.behavior:  NOT_EVALUATED:5
+  block_entity.sign_text.roundtrip: PASS:5
+  block_entity.sign_flags.direct: PASS:5
+  block_entity.sign_flags.behavior:  NOT_EVALUATED:5
+  block_entity.sign_flags.roundtrip: PASS:5
+  block_entity.sign_color.direct:  NOT_EVALUATED:5
+  block_entity.sign_color.behavior:  NOT_EVALUATED:5
+  block_entity.sign_color.roundtrip: PASS:5
+  block_entity.data.direct:  NOT_EVALUATED:60
+  block_entity.data.behavior:  NOT_EVALUATED:60
+  block_entity.data.roundtrip: PASS:42 PARTIAL:14 FAIL:4
+  block_entity.command.direct: PASS:1
+  block_entity.command.behavior:  NOT_EVALUATED:1
+  block_entity.command.roundtrip: PASS:1
+  block_entity.command_flags.direct: PASS:1
+  block_entity.command_flags.behavior:  NOT_EVALUATED:1
+  block_entity.command_flags.roundtrip: PASS:1
+  block_entity.lectern_book.direct: PASS:2
+  block_entity.lectern_book.behavior:  NOT_EVALUATED:2
+  block_entity.lectern_book.roundtrip: PASS:2
+  item_stack.identity.direct: PASS:46
+  item_stack.identity.behavior:  NOT_EVALUATED:46
+  item_stack.identity.roundtrip: PASS:46
+  item_stack.count.direct: PASS:46
+  item_stack.count.behavior:  NOT_EVALUATED:46
+  item_stack.count.roundtrip: PASS:46
+  item_stack.component:minecraft:writable_book_content.direct: PASS:1 FAIL:3
+  item_stack.component:minecraft:writable_book_content.behavior:  NOT_EVALUATED:4
+  item_stack.component:minecraft:writable_book_content.roundtrip: PASS:4
+  item_stack.tag.direct:  NOT_EVALUATED:6
+  item_stack.tag.behavior:  NOT_EVALUATED:6
+  item_stack.tag.roundtrip: PASS:6
+  item_stack.aux.direct:  NOT_EVALUATED:7
+  item_stack.aux.behavior:  NOT_EVALUATED:7
+  item_stack.aux.roundtrip: PASS:7
+  entity.identity.direct: PASS:11
+  entity.identity.behavior:  NOT_EVALUATED:11
+  entity.identity.roundtrip: PASS:11
+  entity.position.direct: PASS:11
+  entity.position.behavior:  NOT_EVALUATED:11
+  entity.position.roundtrip: PASS:11
+  entity.health.direct: PASS:11
+  entity.health.behavior:  NOT_EVALUATED:11
+  entity.health.roundtrip: PASS:11
+  entity.data.direct:  NOT_EVALUATED:11
+  entity.data.behavior:  NOT_EVALUATED:11
+  entity.data.roundtrip: PARTIAL:11
+  entity.baby.direct: PASS:1
+  entity.baby.behavior:  NOT_EVALUATED:1
+  entity.baby.roundtrip: PASS:1
+  entity.trades.direct: PASS:1
+  entity.trades.behavior:  NOT_EVALUATED:1
+  entity.trades.roundtrip: PASS:1
+  world.opens.direct:  NOT_EVALUATED:1
+  world.opens.behavior: PASS:1
+  world.opens.roundtrip:  NOT_EVALUATED:1
+  world.value.direct: PASS:36 NOT_APPLICABLE:8 NOT_EVALUATED:4
+  world.value.behavior:  NOT_EVALUATED:48
+  world.value.roundtrip: PASS:47 FAIL:1
+  player.position.direct: PASS:1
+  player.position.behavior:  NOT_EVALUATED:1
+  player.position.roundtrip: PASS:1
+  player.dimension.direct: PASS:1
+  player.dimension.behavior:  NOT_EVALUATED:1
+  player.dimension.roundtrip: PASS:1
+  player.game_mode.direct: PASS:1
+  player.game_mode.behavior:  NOT_EVALUATED:1
+  player.game_mode.roundtrip: PASS:1
+  player.health.direct: PASS:1
+  player.health.behavior:  NOT_EVALUATED:1
+  player.health.roundtrip: PASS:1
+  player.food.direct: PASS:1
+  player.food.behavior:  NOT_EVALUATED:1
+  player.food.roundtrip: PASS:1
+  player.xp_level.direct: PASS:1
+  player.xp_level.behavior:  NOT_EVALUATED:1
+  player.xp_level.roundtrip: PASS:1
+  player.inventory.direct: PASS:1
+  player.inventory.behavior:  NOT_EVALUATED:1
+  player.inventory.roundtrip: PARTIAL:1
+[evaluate] block: 238 subjects, 67 s elapsed
+[evaluate] block_entity: 60 subjects, 67 s elapsed
+[evaluate] item_stack: 46 subjects, 67 s elapsed
+[evaluate] entity: 11 subjects, 67 s elapsed
+[evaluate] world: 49 subjects, 67 s elapsed
+[evaluate] scoreboard: 0 subjects, 67 s elapsed
+[evaluate] custom_dimension: 0 subjects, 67 s elapsed
+[evaluate] player: 1 subjects, 67 s elapsed
+[evaluate] structure: 0 subjects, 67 s elapsed
+
+== B02@1.0 (68 s, exit 0)
+B02@1.0 ws-0308840_B02@1.0_b2j + ws-0308840_B02@1.0_b2j2b: 482 subjects in 67.7 s
+  block.identity.direct: PASS:297
+  block.identity.behavior:  NOT_EVALUATED:297
+  block.identity.roundtrip: PASS:297
+  block.state.direct:  NOT_EVALUATED:95
+  block.state.behavior:  NOT_EVALUATED:95
+  block.state.roundtrip: PASS:95
+  block_entity.presence.direct: PASS:10 NOT_APPLICABLE:42
+  block_entity.presence.behavior:  NOT_EVALUATED:52
+  block_entity.presence.roundtrip: PASS:52
+  block_entity.data.direct:  NOT_EVALUATED:52
+  block_entity.data.behavior:  NOT_EVALUATED:52
+  block_entity.data.roundtrip: PASS:48 PARTIAL:4
+  item_stack.identity.direct: PASS:2 FAIL:12
+  item_stack.identity.behavior:  NOT_EVALUATED:14
+  item_stack.identity.roundtrip: PASS:11 FAIL:3
+  item_stack.count.direct: PASS:2 FAIL:12
+  item_stack.count.behavior:  NOT_EVALUATED:14
+  item_stack.count.roundtrip: PASS:14
+  item_stack.tag.direct:  NOT_EVALUATED:11
+  item_stack.tag.behavior:  NOT_EVALUATED:11
+  item_stack.tag.roundtrip: PASS:10 FAIL:1
+  item_stack.aux.direct:  NOT_EVALUATED:1
+  item_stack.aux.behavior:  NOT_EVALUATED:1
+  item_stack.aux.roundtrip: PASS:1
+  item_stack.component:minecraft:damage.direct: FAIL:3
+  item_stack.component:minecraft:damage.behavior:  NOT_EVALUATED:3
+  item_stack.component:minecraft:damage.roundtrip: PASS:3
+  item_stack.component:minecraft:repair_cost.direct: FAIL:6
+  item_stack.component:minecraft:repair_cost.behavior:  NOT_EVALUATED:6
+  item_stack.component:minecraft:repair_cost.roundtrip: PASS:6
+  item_stack.component:minecraft:custom_name.direct: FAIL:1
+  item_stack.component:minecraft:custom_name.behavior:  NOT_EVALUATED:1
+  item_stack.component:minecraft:custom_name.roundtrip: PASS:1
+  entity.identity.direct: PASS:66 NOT_EVALUATED:2
+  entity.identity.behavior:  NOT_EVALUATED:68
+  entity.identity.roundtrip: PASS:66 NOT_EVALUATED:2
+  entity.position.direct: PASS:66 NOT_EVALUATED:2
+  entity.position.behavior:  NOT_EVALUATED:68
+  entity.position.roundtrip: PASS:65 FAIL:1 NOT_EVALUATED:2
+  entity.health.direct: PASS:52
+  entity.health.behavior:  NOT_EVALUATED:52
+  entity.health.roundtrip: PASS:52
+  entity.data.direct:  NOT_EVALUATED:68
+  entity.data.behavior:  NOT_EVALUATED:68
+  entity.data.roundtrip: PARTIAL:66 NOT_EVALUATED:2
+  entity.equipment.direct: PASS:9
+  entity.equipment.behavior:  NOT_EVALUATED:9
+  entity.equipment.roundtrip: PASS:6 FAIL:3
+  entity.tamed.direct: PASS:6 NOT_APPLICABLE:1
+  entity.tamed.behavior:  NOT_EVALUATED:7
+  entity.tamed.roundtrip: PASS:6 FAIL:1
+  entity.custom_name.direct: PASS:1
+  entity.custom_name.behavior:  NOT_EVALUATED:1
+  entity.custom_name.roundtrip: PASS:1
+  entity.inventory.direct:  NOT_EVALUATED:1
+  entity.inventory.behavior:  NOT_EVALUATED:1
+  entity.inventory.roundtrip: PARTIAL:1
+  entity.trades.direct: PASS:30 PARTIAL:1
+  entity.trades.behavior:  NOT_EVALUATED:31
+  entity.trades.roundtrip: PASS:2 PARTIAL:29
+  entity.baby.direct: PASS:1
+  entity.baby.behavior:  NOT_EVALUATED:1
+  entity.baby.roundtrip: PASS:1
+  world.opens.direct:  NOT_EVALUATED:1
+  world.opens.behavior: PASS:1
+  world.opens.roundtrip:  NOT_EVALUATED:1
+  world.value.direct: PASS:36 NOT_APPLICABLE:8 NOT_EVALUATED:4
+  world.value.behavior:  NOT_EVALUATED:48
+  world.value.roundtrip: PASS:47 FAIL:1
+  player.position.direct: PASS:1 NOT_EVALUATED:1
+  player.position.behavior:  NOT_EVALUATED:2
+  player.position.roundtrip: PASS:2
+  player.dimension.direct: PASS:1 NOT_EVALUATED:1
+  player.dimension.behavior:  NOT_EVALUATED:2
+  player.dimension.roundtrip: PASS:2
+  player.game_mode.direct: PASS:1 NOT_EVALUATED:1
+  player.game_mode.behavior:  NOT_EVALUATED:2
+  player.game_mode.roundtrip: PASS:2
+  player.health.direct: PASS:1 NOT_EVALUATED:1
+  player.health.behavior:  NOT_EVALUATED:2
+  player.health.roundtrip: PASS:2
+  player.food.direct: PASS:1 NOT_EVALUATED:1
+  player.food.behavior:  NOT_EVALUATED:2
+  player.food.roundtrip: PASS:2
+  player.xp_level.direct: PASS:1 NOT_EVALUATED:1
+  player.xp_level.behavior:  NOT_EVALUATED:2
+  player.xp_level.roundtrip: PASS:2
+  player.inventory.direct: PASS:1 NOT_EVALUATED:1
+  player.inventory.behavior:  NOT_EVALUATED:2
+  player.inventory.roundtrip: PARTIAL:2
+  player.ender_chest.direct: PASS:1
+  player.ender_chest.behavior:  NOT_EVALUATED:1
+  player.ender_chest.roundtrip: PARTIAL:1
+  player.armor.direct:  NOT_EVALUATED:2
+  player.armor.behavior:  NOT_EVALUATED:2
+  player.armor.roundtrip: FAIL:1 NOT_EVALUATED:1
+  player.spawn_point.direct: PASS:1 NOT_EVALUATED:1
+  player.spawn_point.behavior:  NOT_EVALUATED:2
+  player.spawn_point.roundtrip: FAIL:2
+[evaluate] block: 297 subjects, 67 s elapsed
+[evaluate] block_entity: 52 subjects, 67 s elapsed
+[evaluate] item_stack: 14 subjects, 67 s elapsed
+[evaluate] entity: 68 subjects, 68 s elapsed
+[evaluate] world: 49 subjects, 68 s elapsed
+[evaluate] scoreboard: 0 subjects, 68 s elapsed
+[evaluate] custom_dimension: 0 subjects, 68 s elapsed
+[evaluate] player: 2 subjects, 68 s elapsed
+[evaluate] structure: 0 subjects, 68 s elapsed
+
+== B03@1.0 (69 s, exit 0)
+B03@1.0 ws-0308840_B03@1.0_b2j + ws-0308840_B03@1.0_b2j2b: 1062 subjects in 67.9 s
+  block.identity.direct: PASS:145
+  block.identity.behavior:  NOT_EVALUATED:145
+  block.identity.roundtrip: PASS:132 FAIL:13
+  block.state.direct:  NOT_EVALUATED:83
+  block.state.behavior:  NOT_EVALUATED:83
+  block.state.roundtrip: PASS:68 FAIL:15
+  block_entity.presence.direct: PASS:88 NOT_APPLICABLE:34 NOT_EVALUATED:650
+  block_entity.presence.behavior:  NOT_EVALUATED:772
+  block_entity.presence.roundtrip: PASS:119 FAIL:3 NOT_EVALUATED:650
+  block_entity.data.direct:  NOT_EVALUATED:772
+  block_entity.data.behavior:  NOT_EVALUATED:772
+  block_entity.data.roundtrip: PASS:80 PARTIAL:39 FAIL:3 NOT_EVALUATED:650
+  block_entity.command.direct: PASS:24 NOT_EVALUATED:1
+  block_entity.command.behavior:  NOT_EVALUATED:25
+  block_entity.command.roundtrip: PASS:25
+  block_entity.command_flags.direct: PASS:25
+  block_entity.command_flags.behavior:  NOT_EVALUATED:25
+  block_entity.command_flags.roundtrip: PASS:25
+  block_entity.sign_text.direct: PASS:1
+  block_entity.sign_text.behavior:  NOT_EVALUATED:1
+  block_entity.sign_text.roundtrip: PASS:1
+  block_entity.sign_flags.direct: PASS:1
+  block_entity.sign_flags.behavior:  NOT_EVALUATED:1
+  block_entity.sign_flags.roundtrip: PASS:1
+  block_entity.sign_color.direct:  NOT_EVALUATED:1
+  block_entity.sign_color.behavior:  NOT_EVALUATED:1
+  block_entity.sign_color.roundtrip: PASS:1
+  item_stack.identity.direct: PASS:13 NOT_EVALUATED:1
+  item_stack.identity.behavior:  NOT_EVALUATED:14
+  item_stack.identity.roundtrip: PASS:11 FAIL:2 NOT_EVALUATED:1
+  item_stack.count.direct: PASS:13 NOT_EVALUATED:1
+  item_stack.count.behavior:  NOT_EVALUATED:14
+  item_stack.count.roundtrip: PASS:11 FAIL:2 NOT_EVALUATED:1
+  entity.identity.direct: PASS:60
+  entity.identity.behavior:  NOT_EVALUATED:60
+  entity.identity.roundtrip: PASS:60
+  entity.position.direct: PASS:60
+  entity.position.behavior:  NOT_EVALUATED:60
+  entity.position.roundtrip: PASS:60
+  entity.data.direct:  NOT_EVALUATED:60
+  entity.data.behavior:  NOT_EVALUATED:60
+  entity.data.roundtrip: PARTIAL:60
+  entity.health.direct: PASS:43
+  entity.health.behavior:  NOT_EVALUATED:43
+  entity.health.roundtrip: PASS:43
+  entity.tamed.direct: PASS:1
+  entity.tamed.behavior:  NOT_EVALUATED:1
+  entity.tamed.roundtrip: PASS:1
+  entity.equipment.direct: PASS:12
+  entity.equipment.behavior:  NOT_EVALUATED:12
+  entity.equipment.roundtrip: PASS:10 PARTIAL:1 FAIL:1
+  world.opens.direct:  NOT_EVALUATED:1
+  world.opens.behavior: PASS:1
+  world.opens.roundtrip:  NOT_EVALUATED:1
+  world.value.direct: PASS:36 ADAPTED:2 PARTIAL:1 NOT_APPLICABLE:8 NOT_EVALUATED:4
+  world.value.behavior:  NOT_EVALUATED:51
+  world.value.roundtrip: PASS:48 FAIL:3
+  scoreboard.presence.direct: PASS:2
+  scoreboard.presence.behavior:  NOT_EVALUATED:2
+  scoreboard.presence.roundtrip: PASS:2
+  scoreboard.display_name.direct: PASS:2
+  scoreboard.display_name.behavior:  NOT_EVALUATED:2
+  scoreboard.display_name.roundtrip: PASS:2
+  scoreboard.value.direct: PASS:14 NOT_EVALUATED:1
+  scoreboard.value.behavior:  NOT_EVALUATED:15
+  scoreboard.value.roundtrip: PASS:14 FAIL:1
+  player.position.direct: PASS:1
+  player.position.behavior:  NOT_EVALUATED:1
+  player.position.roundtrip: PASS:1
+  player.dimension.direct: PASS:1
+  player.dimension.behavior:  NOT_EVALUATED:1
+  player.dimension.roundtrip: PASS:1
+  player.game_mode.direct: PASS:1
+  player.game_mode.behavior:  NOT_EVALUATED:1
+  player.game_mode.roundtrip: PASS:1
+  player.health.direct: PASS:1
+  player.health.behavior:  NOT_EVALUATED:1
+  player.health.roundtrip: PASS:1
+  player.food.direct: PASS:1
+  player.food.behavior:  NOT_EVALUATED:1
+  player.food.roundtrip: PASS:1
+  player.xp_level.direct: PASS:1
+  player.xp_level.behavior:  NOT_EVALUATED:1
+  player.xp_level.roundtrip: PASS:1
+  structure.spawn_zone.direct: PASS:1
+  structure.spawn_zone.behavior:  NOT_EVALUATED:1
+  structure.spawn_zone.roundtrip: PASS:1
+[evaluate] block: 145 subjects, 68 s elapsed
+[evaluate] block_entity: 772 subjects, 68 s elapsed
+[evaluate] item_stack: 14 subjects, 68 s elapsed
+[evaluate] entity: 60 subjects, 68 s elapsed
+[evaluate] world: 52 subjects, 68 s elapsed
+[evaluate] scoreboard: 17 subjects, 68 s elapsed
+[evaluate] custom_dimension: 0 subjects, 68 s elapsed
+[evaluate] player: 1 subjects, 68 s elapsed
+[evaluate] structure: 1 subjects, 68 s elapsed
+
+suite complete: 7 result(s) promoted to <LOCAL>/rescore-public/results/worldswitch

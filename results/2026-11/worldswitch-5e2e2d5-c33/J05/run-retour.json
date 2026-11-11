@@ -1,0 +1,149 @@
+{
+ "schema": "mccb.run/1",
+ "run_id": "J05_retour",
+ "converter": {
+  "name": "WorldSwitch",
+  "engine_package": "worldswitch",
+  "engine_package_version": "2.8.0",
+  "commit": "5e2e2d528d469eb3fdd90dd318073304fa46fa25",
+  "working_tree_clean": false,
+  "patch": "arbre /srv/mccb-2026-11/src-c33 du labo (corrections non commitées du dépôt, voir 05-rapports)",
+  "build": "docker image mccb-ws:5e2e2d5-c33 (sha256:d198d4c6c42bf0a89e09c6c0588beddacc87674848132e456b16eb09fd17c9b2), Dockerfile du dépôt, git archive du commit",
+  "source_available": false
+ },
+ "direction": "bedrock_to_java",
+ "source": {
+  "ref": "J05_aller",
+  "file": "output.mcworld",
+  "sha256": "863b2e3a9fff0447710860536dc10432437ff74b1e8223982ba119fff7f02ae6",
+  "bytes": 1584476
+ },
+ "options": {
+  "recoverUnlinked": true,
+  "locale": "en",
+  "javaUuid": null,
+  "playerMap": null
+ },
+ "environment": {
+  "kind": "labo prod-like (docker-compose.yml)",
+  "limits": {
+   "converter": "cpus 4, memory 5632m, swap 0, read-only, network none, cap-drop ALL, pids 512",
+   "worker": "cpus 0.75, memory 512m, swap 0"
+  },
+  "host": {
+   "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor",
+   "nproc": 8,
+   "kernel": "6.18.58.1-microsoft-standard-WSL2",
+   "mem_total_kb": 8134304
+  }
+ },
+ "started_at": "2026-11-10T15:28:49.655Z",
+ "finished_at": "2026-11-10T15:28:50.699Z",
+ "duration_ms": 1044,
+ "exit_status": 0,
+ "error": null,
+ "output": {
+  "file": "output.zip",
+  "sha256": "7639210b8aed76cdf5b3102ae09639356d1d5b5a782041b527ba84747fefd7e3",
+  "bytes": 1010836,
+  "engine_filename": "MCCB_J05_java.zip"
+ },
+ "logs": [
+  "converter.log",
+  "worker.log",
+  "prep.log"
+ ],
+ "peak": {
+  "converter_memory_bytes": 275673088,
+  "worker_memory_bytes": 53981184
+ },
+ "lab": {
+  "job_id": "c7bf2d99-434e-4749-9653-1c081ff138d4",
+  "final_status": "done",
+  "attempts": 1,
+  "notice": {
+   "fidelity": {
+    "total": 2,
+    "impacts": [
+     {
+      "en": "Dropped — block entity `PistonArm`",
+      "fr": "Supprimé — block entity `PistonArm`",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — world data `generated structures`",
+      "fr": "Supprimé — donnée de monde `structures generees`",
+      "category": "dropped"
+     }
+    ],
+    "detailed": 2,
+    "families": 2,
+    "truncated": 0,
+    "byCategory": {
+     "dropped": 2
+    }
+   }
+  },
+  "upload_ms": 47,
+  "analysis_ms": 256,
+  "analysis": {
+   "detectedType": "Bedrock",
+   "version": "Bedrock 1.26.50",
+   "sizeBytes": 1584476,
+   "sizeFormatted": "1.5 Mo",
+   "uncompressedBytes": 15181924,
+   "chunkCount": 2,
+   "levelName": "MCCB_J05",
+   "valid": true,
+   "gameMode": "creative",
+   "difficulty": "normal",
+   "spawn": "0, -60, 0",
+   "worldRootPrefix": "",
+   "worldCount": 1,
+   "players": [
+    {
+     "sourceId": "~local_player",
+     "isHost": true,
+     "sourceLabel": "Joueur principal",
+     "labelSource": "host",
+     "displayIndex": 1,
+     "xuid": null,
+     "msaId": null,
+     "identifiers": [],
+     "profile": {
+      "items": 2,
+      "armor": 0,
+      "ender": 0,
+      "xpLevel": 2,
+      "dimension": "overworld",
+      "pos": [
+       5,
+       -39,
+       1
+      ],
+      "nameHints": [],
+      "empty": false
+     },
+     "profileReadable": true,
+     "sharesAccountWith": 0
+    }
+   ],
+   "playersScanned": true,
+   "playersSkippedReason": null,
+   "curedVillagers": 0
+  },
+  "queue_to_done_ms": 1892,
+  "wall_s_worker_start_to_terminal": 2.69,
+  "converter": {
+   "memory_peak_bytes": 275673088,
+   "cpu_usec": 1827312,
+   "oom_kills": 0,
+   "scratch_peak_bytes_sampled_2s": 0
+  },
+  "worker": {
+   "memory_peak_bytes": 53981184,
+   "cpu_usec": 400502,
+   "scratch_peak_bytes_sampled_2s": 0
+  }
+ }
+}

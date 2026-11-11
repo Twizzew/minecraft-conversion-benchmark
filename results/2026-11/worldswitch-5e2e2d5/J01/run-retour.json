@@ -1,0 +1,189 @@
+{
+ "schema": "mccb.run/1",
+ "run_id": "J01_retour",
+ "converter": {
+  "name": "WorldSwitch",
+  "engine_package": "worldswitch",
+  "engine_package_version": "2.8.0",
+  "commit": "5e2e2d528d469eb3fdd90dd318073304fa46fa25",
+  "working_tree_clean": true,
+  "build": "docker image mccb-ws:5e2e2d5 (sha256:6056b0f06d32a23b6df03d9c29faf18e494fe688e3a5ed5e6d90eb5667942ec8), Dockerfile du dépôt, git archive du commit",
+  "source_available": false
+ },
+ "direction": "bedrock_to_java",
+ "source": {
+  "ref": "J01_aller",
+  "file": "output.mcworld",
+  "sha256": "d3d6a20303dbee66e29ab44ae8a2b931e39b87570a65130f09767ebf22dc88dc",
+  "bytes": 210084596
+ },
+ "options": {
+  "recoverUnlinked": true,
+  "locale": "en",
+  "javaUuid": null,
+  "playerMap": null
+ },
+ "environment": {
+  "kind": "labo prod-like (docker-compose.yml)",
+  "limits": {
+   "converter": "cpus 4, memory 5632m, swap 0, read-only, network none, cap-drop ALL, pids 512",
+   "worker": "cpus 0.75, memory 512m, swap 0"
+  },
+  "host": {
+   "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor",
+   "nproc": 8,
+   "kernel": "6.18.54.1-microsoft-standard-WSL2",
+   "mem_total_kb": 8134332
+  }
+ },
+ "started_at": "2026-11-01T01:59:50.579Z",
+ "finished_at": "2026-11-01T02:00:15.839Z",
+ "duration_ms": 25260,
+ "exit_status": 0,
+ "error": null,
+ "output": {
+  "file": "output.zip",
+  "sha256": "4cd28da33ab00126ebf90f2ffb63bb356797e189ee1cbf8929f7ea83b737ca8c",
+  "bytes": 103963483,
+  "engine_filename": "J01_java.zip"
+ },
+ "logs": [
+  "converter.log",
+  "worker.log",
+  "prep.log"
+ ],
+ "peak": {
+  "converter_memory_bytes": 2454839296,
+  "worker_memory_bytes": 119451648
+ },
+ "lab": {
+  "job_id": "c3bcd5fb-d60e-40c5-a66e-10bf337b0957",
+  "final_status": "done",
+  "attempts": 1,
+  "notice": {
+   "fidelity": {
+    "total": 1780,
+    "impacts": [
+     {
+      "en": "Dropped — block entity `Music` (×1280)",
+      "fr": "Supprimé — block entity `Music` (×1280)",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — block entity `SporeBlossom` (×254)",
+      "fr": "Supprimé — block entity `SporeBlossom` (×254)",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — block entity `FlowerPot` (×205)",
+      "fr": "Supprimé — block entity `FlowerPot` (×205)",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — block entity `PistonArm` (×27)",
+      "fr": "Supprimé — block entity `PistonArm` (×27)",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — block entity `Cauldron` (×7)",
+      "fr": "Supprimé — block entity `Cauldron` (×7)",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — block entity `Lodestone` (×2)",
+      "fr": "Supprimé — block entity `Lodestone` (×2)",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — item property `modern Java components of minecraft:diamond_sword` (×2)",
+      "fr": "Supprimé — propriété d’objet `composants Java modernes de minecraft:diamond_sword` (×2)",
+      "category": "dropped"
+     },
+     {
+      "en": "Normalized — world data `biome sulfur_caves : Java 26.2 or newer`",
+      "fr": "Normalisé — donnée de monde `biome sulfur_caves : Java 26.2 ou plus récent`",
+      "category": "normalized"
+     },
+     {
+      "en": "Dropped — item property `modern Java components of minecraft:tipped_arrow`",
+      "fr": "Supprimé — propriété d’objet `composants Java modernes de minecraft:tipped_arrow`",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — item property `modern Java components of minecraft:potion`",
+      "fr": "Supprimé — propriété d’objet `composants Java modernes de minecraft:potion`",
+      "category": "dropped"
+     }
+    ],
+    "detailed": 10,
+    "families": 10,
+    "truncated": 0,
+    "byCategory": {
+     "dropped": 1779,
+     "normalized": 1
+    }
+   }
+  },
+  "upload_ms": 1027,
+  "analysis_ms": 679,
+  "analysis": {
+   "detectedType": "Bedrock",
+   "version": "Bedrock 1.26.50",
+   "sizeBytes": 210084596,
+   "sizeFormatted": "200.4 Mo",
+   "uncompressedBytes": 276637120,
+   "chunkCount": 2343,
+   "levelName": "J01",
+   "valid": true,
+   "gameMode": "creative",
+   "difficulty": "peaceful",
+   "spawn": "0, 70, 0",
+   "worldRootPrefix": "",
+   "worldCount": 1,
+   "players": [
+    {
+     "sourceId": "~local_player",
+     "isHost": true,
+     "sourceLabel": "Joueur principal",
+     "labelSource": "host",
+     "displayIndex": 1,
+     "xuid": null,
+     "msaId": null,
+     "identifiers": [],
+     "profile": {
+      "items": 18,
+      "armor": 4,
+      "ender": 0,
+      "xpLevel": 7,
+      "dimension": "overworld",
+      "pos": [
+       991,
+       355,
+       1459
+      ],
+      "nameHints": [],
+      "empty": false
+     },
+     "profileReadable": true,
+     "sharesAccountWith": 0
+    }
+   ],
+   "playersScanned": true,
+   "playersSkippedReason": null,
+   "curedVillagers": 0
+  },
+  "queue_to_done_ms": 26183,
+  "wall_s_worker_start_to_terminal": 27.548242805,
+  "converter": {
+   "memory_peak_bytes": 2454839296,
+   "cpu_usec": 64103515,
+   "oom_kills": 0,
+   "scratch_peak_bytes_sampled_2s": 675111555
+  },
+  "worker": {
+   "memory_peak_bytes": 119451648,
+   "cpu_usec": 1722511,
+   "scratch_peak_bytes_sampled_2s": 0
+  }
+ }
+}

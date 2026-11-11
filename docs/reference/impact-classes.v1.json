@@ -1,0 +1,301 @@
+{
+  "schema": "mccb.impact-classes/1",
+  "version": "1.14",
+  "written": "2026-11-01, before any WorldSwitch 5e2e2d5 output of MCCB 2026-11 was graded",
+  "purpose": "Sort FAIL / PARTIAL verdicts by what a PLAYER loses. It never changes a verdict and never names a converter. First matching rule wins (order matters).",
+  "classes": [
+    {
+      "id": "CRITICAL",
+      "label": "CRITIQUE",
+      "meaning": "Perte du travail ou de la progression du joueur, ou monde inutilisable : objets, inventaires, échanges de villageois, animaux apprivoisés, livres, panneaux, blocs de commande, dimension entière, monde qui ne s'ouvre pas."
+    },
+    {
+      "id": "MAJOR",
+      "label": "MAJEUR",
+      "meaning": "Différence visible dans le monde ou dans le jeu : bloc manquant ou remplacé, état de bloc (orientation, forme), créature absente, équipement, nom, santé, règles du monde, structures (apparition des créatures)."
+    },
+    {
+      "id": "MINOR",
+      "label": "MINEUR",
+      "meaning": "Détail visible mais secondaire : position d'une créature à quelques blocs près, couleur ou cire d'un panneau, réglages d'un bloc de commande, données internes sans effet de jeu évident."
+    },
+    {
+      "id": "TRANSIENT",
+      "label": "ÉTAT TEMPORAIRE",
+      "meaning": "Compteur ou état en cours qui se termine de lui-même (mèche, cuisson, temps de recharge, âge) : perdu, l'action reprend ou se termine plus tôt ou plus tard."
+    },
+    {
+      "id": "TECHNICAL",
+      "label": "TECHNIQUE (invisible)",
+      "meaning": "Donnée régénérée par le jeu ou sans effet observable en jeu (graines de butin, horodatages, caches)."
+    }
+  ],
+  "aspects": [
+    {
+      "match": "^entity.trade_details$",
+      "class": "CRITICAL",
+      "label": "détail d’un objet échangé par un villageois ou le marchand (livre enchanté, outil enchanté, potion, cuir teint…)"
+    },
+    {
+      "match": "^entity.trade_terms$",
+      "class": "MINOR",
+      "label": "conditions d’un échange : stock maximal, expérience du villageois ou du joueur"
+    },
+    {
+      "match": "^entity\\.trade_(max_uses|xp|reward_xp)$",
+      "class": "MINOR",
+      "label": "condition d’un échange : stock maximal, expérience du villageois, expérience donnée au joueur (une condition par aspect, registre r113)"
+    },
+    {
+      "match": "^entity.trade_uses$",
+      "class": "TRANSIENT",
+      "label": "échange épuisé ou non (le villageois réassortit à son poste de travail)"
+    },
+    {
+      "match": "^world\\.opens$",
+      "class": "CRITICAL",
+      "label": "le monde ne s'ouvre pas dans le jeu de référence"
+    },
+    {
+      "match": "^custom_dimension\\.blocks$",
+      "class": "CRITICAL",
+      "label": "dimension de datapack perdue ou abîmée (aller-retour)"
+    },
+    {
+      "match": "^item_stack\\.(identity|count)$",
+      "class": "CRITICAL",
+      "label": "objet perdu ou changé dans un conteneur"
+    },
+    {
+      "match": "^item_stack\\.component:(minecraft:)?(enchantments|stored_enchantments|container|bundle_contents|written_book_content|writable_book_content|custom_name|charged_projectiles|potion_contents|firework_explosion|fireworks|trim|lodestone_tracker|map_id|instrument|jukebox_playable|banner_patterns|base_color|dyed_color|profile)$",
+      "class": "CRITICAL",
+      "label": "propriété importante d'un objet (enchantements, contenu, livre, nom…)"
+    },
+    {
+      "match": "^item_stack\\.(tag|aux)$",
+      "class": "MAJOR",
+      "label": "données Bedrock d'un objet (tag / aux)"
+    },
+    {
+      "match": "^item_stack\\.component:",
+      "class": "MAJOR",
+      "label": "autre propriété d'un objet"
+    },
+    {
+      "match": "^entity\\.(inventory|trades|tamed)$",
+      "class": "CRITICAL",
+      "label": "inventaire, échanges ou apprivoisement d'une créature"
+    },
+    {
+      "match": "^player\\.(inventory|ender_chest|armor|xp_level)$",
+      "class": "CRITICAL",
+      "label": "inventaire, coffre de l'Ender, armure ou niveau du joueur"
+    },
+    {
+      "match": "^player\\.details$",
+      "class": "CRITICAL",
+      "label": "détail d’un objet du joueur (enchantement, décoration d’armure, potion, contenu…)"
+    },
+    {
+      "match": "^block_entity\\.(sign_text|lectern_book|command)$",
+      "class": "CRITICAL",
+      "label": "texte de panneau, livre de pupitre ou commande"
+    },
+    {
+      "match": "^world\\.value:seed$",
+      "class": "CRITICAL",
+      "label": "graine du monde (terrain futur différent)"
+    },
+    {
+      "match": "^world\\.value:(game_type|hardcore|commands|difficulty|spawn)$",
+      "class": "MAJOR",
+      "label": "réglage majeur du monde"
+    },
+    {
+      "match": "^world\\.value:gamerule:(keepInventory|keep_inventory|doMobSpawning|spawn_mobs|doDaylightCycle|advance_time|mobGriefing|mob_griefing|doFireTick|naturalRegeneration|natural_health_regeneration|doImmediateRespawn|showCoordinates|show_coordinates|pvp|tntexplodes|tnt_explodes)$",
+      "class": "MAJOR",
+      "label": "règle de jeu qui change la partie"
+    },
+    {
+      "match": "^world\\.value:(forced_chunks|ticking_area)$",
+      "class": "MAJOR",
+      "label": "zones chargées en permanence (fermes, horloges)"
+    },
+    {
+      "match": "^world\\.value:",
+      "class": "MINOR",
+      "label": "autre donnée de monde"
+    },
+    {
+      "match": "^block\\.identity$",
+      "class": "MAJOR",
+      "label": "bloc manquant ou remplacé"
+    },
+    {
+      "match": "^block\\.state$",
+      "class": "MAJOR",
+      "label": "état du bloc (orientation, forme, âge…)"
+    },
+    {
+      "match": "^block\\.waterlog$",
+      "class": "MAJOR",
+      "label": "eau dans le bloc"
+    },
+    {
+      "match": "^block_entity\\.(presence|record|custom_name)$",
+      "class": "MAJOR",
+      "label": "bloc-entité absent, disque ou nom de conteneur"
+    },
+    {
+      "match": "^block_entity\\.(sign_flags|sign_color|command_flags)$",
+      "class": "MINOR",
+      "label": "couleur / cire / lueur d'un panneau, réglage d'un bloc de commande"
+    },
+    {
+      "match": "^entity_extra\\.extra$",
+      "class": "MAJOR",
+      "label": "créature présente seulement dans la sortie (ajoutée par la conversion)"
+    },
+    {
+      "match": "^entity\\.(identity|custom_name|baby|equipment|health)$",
+      "class": "MAJOR",
+      "label": "créature absente, nom, bébé, équipement ou santé"
+    },
+    {
+      "match": "^entity\\.details$",
+      "class": "MAJOR",
+      "label": "détail d’un objet porté par une créature (enchantement, décoration d’armure, flèches chargées…)"
+    },
+    {
+      "match": "^entity\\.position$",
+      "class": "MINOR",
+      "label": "position d'une créature"
+    },
+    {
+      "match": "^player\\.(position|dimension|spawn_point|game_mode|health|food)$",
+      "class": "MAJOR",
+      "label": "position, point de réapparition, mode de jeu, santé ou faim du joueur"
+    },
+    {
+      "match": "^scoreboard\\.",
+      "class": "MAJOR",
+      "label": "tableau des scores (objectifs, scores, affichage)"
+    },
+    {
+      "match": "^structure\\.(spawn_zone|generation_frontier)$",
+      "class": "MAJOR",
+      "label": "structure (zone d'apparition des créatures) ou bord de génération"
+    }
+  ],
+  "aspect_default": "MINOR",
+  "data_keys": [
+    {
+      "match": "^(ArmorItems|HandItems|ArmorDropChances|HandDropChances)$",
+      "class": "TECHNICAL"
+    },
+    {
+      "match": "^TradeTablePath$",
+      "class": "MAJOR",
+      "label": "table des échanges futurs d’un villageois Bedrock, incohérente avec son métier (échanges faux aux niveaux suivants)"
+    },
+    {
+      "match": "^(LootTable|Sheared|RabbitType|Size|ChestedHorse|Strength|sherds|SpawnData)$",
+      "class": "MAJOR",
+      "lot": "1.11"
+    },
+    {
+      "match": "^(Items|Inventory|Offers|Recipes|Book|Text|front_text|back_text|Command|CustomName|Owner|OwnerNew|Tame|IsTamed|Sitting|Saddle|SaddleItem|ArmorItem|equipment|Bees|bees|Occupants|RecordItem|record_item|item|Item|Patterns|patterns|Book|Lock|lock|Variant|variant|Color|color|CollarColor|Type|type|Profession|VillagerData|Xp|xp|Leash|leash|Passengers|Riding|Attributes|attributes|Brain|Effects|active_effects|ActiveEffects|mobEffects|definitions|identifier|Charged|Powered|CustomNameVisible|ConversionTime|PatrolLeader|IsIllagerCaptain|IsBaby|LinksTag)$",
+      "class": "MAJOR"
+    },
+    {
+      "match": "^(Fuse|fuse|BurnTime|BurnDuration|CookTime|CookTimeTotal|lit_time_remaining|lit_total_time|cooking_time_spent|cooking_total_time|BrewTime|Fuel|CookingTimes|CookingTotalTimes|ItemTime\\d|TransferCooldown|Cooldown|cooldown|progress|Progress|LastProgress|NewState|State|extending|Extending|source|Age|age|Life|life|LifeTime|Lifetime|PickupDelay|Duration|duration|WaitTime|ReapplicationDelay|Time|HurtTime|DeathTime|ticks_since_song_started|ticks|TicksInGround|inGround|life_ticks|explosion_power|ExplosionRadius|ignited|IsIgnited|FuseTimer|warning_time|spawn_delay|SpawnDelay|ticks_in_hive|TicksInHive|MinOccupationTicks|crafting_ticks_remaining|AnimationProgress|animation_progress|last_vibration_frequency|cooldown_end_at|next_mob_spawns_at)$",
+      "class": "TRANSIENT"
+    },
+    {
+      "match": "^(LootTableSeed|LootTable|loot_table_seed|UUID|uuid|UniqueID|LastPlayed|LastUpdated|DataVersion|version|keepPacked|isMovable|PortalCooldown|FallDistance|fall_distance|Motion|Rotation|OnGround|Air|Fire|Invulnerable|LastDimensionId|internalComponents|tick|Persistent|PersistenceRequired)$",
+      "class": "TECHNICAL"
+    }
+  ],
+  "data_default": "MINOR",
+  "changelog": [
+    {
+      "version": "1.1",
+      "date": "2026-11-01",
+      "seen_outputs": "J05 (WorldSwitch 5e2e2d5)",
+      "change": "ArmorItems/HandItems retirés de MAJOR et classés TECHNICAL : ce sont des clés d’ancien format qu’une sortie 1.20.4 garde après la mise à niveau Mojang ; le jeu 26.3 ne les lit pas et les objets portés sont jugés par entity.equipment. Une clé PERDUE dont la valeur source est nulle (0, 0b, 0f, \"\", [], {}) est TECHNICAL : le jeu relit l’absence comme cette valeur (vérifié sur les poulets de J05 : Age 0, InLove 0, AgeLocked 0b…)."
+    },
+    {
+      "version": "1.2",
+      "date": "2026-11-01",
+      "seen_outputs": "B01, B02 (WorldSwitch 5e2e2d5)",
+      "change": "Un inventaire (joueur, créature) dont CHAQUE pile en défaut est le même objet, en même nombre, au même emplacement — seules ses données internes diffèrent (constaté : compound Block{name,states} des objets-blocs absent au retour Bedrock) — passe de CRITIQUE à MAJEUR. Le verdict MCCB (PARTIAL) ne change pas. À vérifier en jeu : la pile se combine-t-elle avec le même objet ramassé neuf ?"
+    },
+    "1.3 (2026-11-02) : data À L'ALLER jugée (règle 59, tools/lib/cross-data.mjs) ; ConversionTime (soin en cours) et PatrolLeader/IsIllagerCaptain (capitaine) = MAJEUR.",
+    {
+      "version": "1.4",
+      "date": "2026-11-02",
+      "seen_outputs": "R01 (WorldSwitch 5e2e2d5-c10)",
+      "change": "Une perte dont la preuve porte technical_only (règle de lecture MCCB 2026-11 : même objet à la même position, seuls des champs sans effet en jeu diffèrent — WasPickedUp, wasJustBrewed, ancien nom Bedrock renommé par le jeu, position dans un inventaire non ouvrable ; ou échange dont seul buyA.Count, remise périmée, est rendu au prix de base buyCountA inchangé) est TECHNICAL. Le verdict MCCB (PARTIAL) ne change pas : la différence reste comptée. Vérifié en jeu le 02/11/2026 : potions et prix des villageois identiques dans les 3 mondes."
+    },
+    {
+      "version": "1.5",
+      "date": "2026-11-02",
+      "seen_outputs": "R01 (WorldSwitch 5e2e2d5-c12)",
+      "change": "Une clé Bedrock DOUBLON d'une autre (legacy_duplicate_keys : OwnerID, ancienne graphie de OwnerNew — la source porte la même valeur dans les deux sur 95 409 objets au sol de R01) perdue alors que la clé moderne revient (ni perdue ni modifiée) est TECHNICAL. Si la clé moderne change, c'est elle qui porte la gravité. Le verdict MCCB ne change pas. Une clé AJOUTÉE au retour que le jeu efface au rechargement de l'acteur (added_ignored_keys : JavaSaveData, annexe Java du convertisseur — bedrock_server 1.26.36.1 supprime les balises inconnues d'un acteur dès qu'il le réécrit, mesuré le 03/08/2026, worldswitch/proof/entity-passthrough-bds-2026-08-03/) est TECHNICAL. Lecture des preuves (lib/slots.mjs, lib/key-detail.mjs, sans changer la table) : pile identique dans la vue lue par le jeu (semx:equal — Block dérivé, tag.Items vide d un seul côté) = technique ; definitions rejouées (+g/-g) : mêmes groupes actifs = TECHNICAL, écart limité aux groupes posés par l horloge du jeu (schedule_* de villager_v2.json, attack_cooldown, angry, celebrate) = MINOR. `item` (champ Java du trident/flèche recopié pour l aller-retour J→B→J ; nom inconnu de Bedrock, qui l efface au rechargement de l acteur) rejoint added_ignored_keys."
+    },
+    {
+      "version": "1.12",
+      "date": "2026-11-09",
+      "seen_outputs": "aucune sortie lue pour fixer ces classes (audit des scripts)",
+      "change": "Révision 1.12 du registre : état et détails des échanges jugés à l’aller (families/entity.mjs). trade_details CRITIQUE comme les échanges et les enchantements d’un objet ; trade_terms (maxUses, xp ↔ traderExp, rewardExp) MINEUR ; trade_uses (uses) TRANSITOIRE (réassort). Défauts Java prouvés au jar 26.3 (codec MerchantOffer). Aussi : structure.spawn_zone d’une structure sans règle d’apparition (trail_ruins, igloo : spawn_overrides vide) marquée minor_only par la famille ; santé, faim et XP du joueur lues avec les défauts du jeu (Java) ou non jugées (Bedrock absent). Clé TradeTablePath (J→B) : table d’échanges futurs incohérente avec le métier de la sortie — MAJEUR ; absente = non jugée."
+    }
+  ],
+  "changes_1_6": {
+    "date": "2026-11-04",
+    "seen_outputs": "R01 (WorldSwitch 5e2e2d5-c18)",
+    "change": "Aucun verdict changé, aucune différence retirée du compte. Lecture : lib/key-detail.mjs (groupes passagers justifiés par événement BDS, effets, ruches, échanges buyCount, recul du hoglin), families/item_stack.mjs (normePile : Potion qui redit l'aux, Type 0, Block dérivé), families/block.mjs (même fluide, même liquid_depth)."
+  },
+  "zero_lost_is_technical": true,
+  "same_item_wrong_is_major": true,
+  "technical_only_is_technical": true,
+  "legacy_duplicate_keys": {
+    "OwnerID": "OwnerNew"
+  },
+  "added_ignored_keys": [
+    "JavaSaveData",
+    "item"
+  ],
+  "changes_1_7": {
+    "date": "2026-11-04",
+    "seen_outputs": "R01, J02, B02 (WorldSwitch 5e2e2d5-c19)",
+    "change": "Aucun verdict changé, aucune différence retirée du compte. Lecture : families/entity.mjs (appariement au retour d’un bateau écrit en forme 1.20.4 boat/chest_boat + Type, que BoatSplitFix du jeu 26.3 renomme en l’id par essence) ; lib/key-detail.mjs (id/Type de ce bateau ; valeur par défaut écrite d’un seul côté : Tame 0, ConversionTime/DrownedConversionTime/anger_end_time −1, liens Bedrock −1 ; Variant inerte du cochon et du bogged, Variant imposé par le groupe de métier du villageois ; groupes passagers justifiés par événement BDS 1.26.36.1 : can_have_equipment, alert_for_attack_targets, wild_child_ocelot_spawn, jockeys, emerging/pushable, angry_bee/take_nearest_target, slime_calm/aggressive, village_created, horaires ; groupes d’attaque réglés par capteur du squelette, du stray, du bogged et du noyé)."
+  },
+  "changes_1_8": {
+    "date": "2026-11-04",
+    "seen_outputs": "R01, J05, B02 (WorldSwitch 5e2e2d5-c20, c21)",
+    "change": "Aucun verdict changé, aucune différence retirée du compte. Lecture : families/entity.mjs + lib/key-detail.mjs (lien Bedrock vers un ACTEUR — balle de shulker, flèche — : même acteur au retour, même type à 1 bloc près, ou cible absente des DEUX mondes, le jeu résolvant le lien par UniqueID → TECHNICAL ; un lien vers un joueur garde la règle des joueurs) ; lib/key-detail.mjs (effets 1.20.4 `ActiveEffects` à Id numérique ≡ `active_effects` moderne, sortie DataVersion 3700 que le DataFixer renomme ; objet porté — `Item` d’un objet au sol — normalisé comme la famille item_stack : `tag.Potion` qui redit l’aux) ; lib/slots.mjs (`tooltip_display.hide_tooltip` faux ≡ absent : champ facultatif de TooltipDisplay, jar 26.2, que le DataFixer écrit en migrant HideFlags) ; families/block.mjs (pot de fleurs, `update_bit` seul : les 5 pots R01 à 1 portent une plante écrite par une version ancienne, les 10 pots plantés récents sont à 0 → evidence technical_only) ; lib/key-detail.mjs (source Java : `equipment` moderne contre `HandItems`/`ArmorItems` 1.20.4 au retour, mêmes emplacements, objets et nombres → MINOR, le contenu étant jugé par l’aspect entity.equipment)."
+  },
+  "empty_item_lost_is_technical": true,
+  "changes_1_9": {
+    "date": "2026-11-06",
+    "seen_outputs": "R01 (Chunker 1.21.0, je2be core-8dfc4de)",
+    "change": "Aucune différence retirée du compte. Clé perdue dont la valeur source est une pile VIDE (Count 0, nom vide ou minecraft:air) = TECHNICAL : rien n'est retiré du monde. Constaté sur les pots décorés (`item`) : 950 pots vides de R01 natif sur 951, 1 de B01, 92 de B03 portent tous la pile vide ; un pot sans `item` ne peut pas contenir d'objet. S'applique à tous les convertisseurs. Lecture (families/entity.mjs) : appariement des objets au sol, passe 2a — à rayon égal, d'abord l'objet au sol qui porte le MÊME objet (je2be renumérote les entités : un tas mélangé était apparié en croix, laine ↔ mouton cuit, sondé sur R01 entity/006227 et 006419). Lecture (lib/java/world.mjs chunksStream, lib/structures.mjs, families/block_entity.mjs) : parcours complets sans cache (J04 Chunker > 22 Go), aucune note changée (J04 WorldSwitch renoté à l'identique)."
+  },
+  "double_chest_swap_is_minor": true,
+  "changes_1_10": {
+    "date": "2026-11-07",
+    "seen_outputs": "R01 (Chunker 1.21.0), B02 (UMT 1.5.10)",
+    "decision": "utilisateur, 07/11/2026",
+    "change": "Aucun verdict changé, aucune différence retirée du compte. Pile de coffre double retrouvée, même objet, à l’emplacement miroir de l’autre moitié (preuve cause = double-chest-halves-shown-in-other-order, règle 49 : les deux moitiés sont montrées dans l’autre ordre) = MINOR : rien n’est perdu, le contenu est décalé d’une moitié à l’autre. Toute autre pile perdue ou changée garde sa gravité."
+  },
+  "changes_1_11": {
+    "date": "2026-11-08",
+    "seen_outputs": "B02 (4 convertisseurs, essai du lot 1)",
+    "change": "Lot 1 « détails » : aspects ajoutés par la révision 1.11 du registre (fixtures/derive-r111.mjs). item_stack.component:X à l’aller classé par les règles item_stack.component existantes ; component:mccb:couleur (couleur d’un lit ou d’une bannière) = MAJOR (règle générale item_stack.component:) ; player.details = CRITICAL comme l’inventaire du joueur ; entity.details = MAJOR comme l’équipement. Aucun verdict existant changé. Clés de données (lots 2 et 3) : `LootTable` (table de butin d’un conteneur pas encore ouvert — la perdre vide le coffre) passe de TECHNICAL à MAJOR, `LootTableSeed` reste TECHNICAL ; tonte, type de lapin, taille du slime, coffre et force du lama, tessons, créature du générateur = MAJOR. Objet au sol (`Item`) dont la source Bedrock porte un `Block` ancien (état disparu, ex. sand + sand_type=red) : sa différence au retour = TECHNICAL (règle 40 étendue, le jeu met ce Block à jour) ; même règle pour une pile rangée dans un objet (boîte, sac) : identité non jugée, nombre jugé (lib/details-objet.mjs)."
+  },
+  "legacy_item_block_is_technical": true,
+  "changes_1_12": "Ajout de trois aspects d’échange (registre r112) ; aucune classe existante modifiée.",
+  "changes_1_13": "Contrôles du audit externe du 09/11/2026 (registre r113) : aspects trade_max_uses / trade_xp / trade_reward_xp (MINEUR, comme trade_terms qu’ils remplacent), famille entity_extra (MAJEUR, comme une créature absente), clés IsBaby (adulte devenu bébé) et LinksTag (passagers Bedrock) en MAJEUR comme Tame et Passengers. Aucune classe existante modifiée.",
+  "falling_block_variant_is_technical": true,
+  "changes_1_14": "10/11/2026 (WorldSwitch c29, R01 : 115 blocs en chute) : le Variant d’une entité minecraft:falling_block est l’identifiant réseau du bloc qui tombe (FNV-1a de {name, states} depuis 1.19.80, ancien index avant), dérivé de FallingBlock — jugé à part. Sorties lues : R01 source gravier Variant 13134 (index ancien) ; retour Variant 1529044762 (hachage, identique aux natifs récents), FallingBlock gravier identique. Classé TECHNICAL ; aucune autre classe modifiée."
+}

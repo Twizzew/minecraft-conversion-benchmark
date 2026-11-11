@@ -1,0 +1,2877 @@
+[
+ {
+  "commande": "advancement grant @p only minecraft:story/upgrade_tools",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: advancement. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "advancement revoke @p only minecraft:story/smelt_iron",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: advancement. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "attribute @e[tag=mccb_j04_325_target,limit=1] minecraft:max_health get",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: attribute. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "attribute @e[tag=mccb_j04_326_target,limit=1] minecraft:movement_speed base set 0.25",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: attribute. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "bossbar add mccb_j04:cmd-j-304 {text:'CMD-J-304'}",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: bossbar. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "bossbar set mccb_j04:cmd-j-305 value 35",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: bossbar. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "bossbar set mccb_j04:cmd-j-306 max 200",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: bossbar. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "bossbar set mccb_j04:cmd-j-307 visible true",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: bossbar. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "bossbar set mccb_j04:cmd-j-308 players @p",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: bossbar. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "bossbar set mccb_j04:cmd-j-309 color blue",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: bossbar. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "bossbar set mccb_j04:cmd-j-310 style notched_10",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: bossbar. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "bossbar set mccb_j04:cmd-j-320 name {text:'CMD-J-320 UPDATED',color:'green'}",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: bossbar. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "clear @p minecraft:paper -1 2",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "clear @p minecraft:paper 2",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "clear @p minecraft:paper[minecraft:custom_name={text:'CMD-J-181',color:'gold'}] 1",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"[\": at \"raft:paper>>[<<minecraft:\""
+ },
+ {
+  "commande": "clear @p minecraft:stick -1 1",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "clear @p minecraft:stick 1",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "clone 1136 64 35 1138 65 37 1141 64 35 replace normal",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot access blocks outside of the world"
+ },
+ {
+  "commande": "clone 1158 64 35 1160 65 37 1163 64 35 masked normal",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot access blocks outside of the world"
+ },
+ {
+  "commande": "clone 1180 64 35 1182 65 37 1185 64 35 filtered minecraft:gold_block normal",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"minecraft:gold_block\": at \" filtered >>minecraft:gold_block<< normal\""
+ },
+ {
+  "commande": "clone 1180 64 35 1182 65 37 1185 64 35 filtered normal minecraft:gold_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot access blocks outside of the world"
+ },
+ {
+  "commande": "clone 982 64 75 984 65 77 987 64 75 filtered minecraft:gold_block normal",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"minecraft:gold_block\": at \" filtered >>minecraft:gold_block<< normal\""
+ },
+ {
+  "commande": "clone 982 64 75 984 65 77 987 64 75 filtered normal minecraft:gold_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot access blocks outside of the world"
+ },
+ {
+  "commande": "compute block 133 64 774 integer 7",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: compute. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "compute default float 1.5 2.0",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: compute. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "compute default integer 5",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: compute. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "compute entity @e[tag=mccb_j04_281_target,limit=1] integer 9",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: compute. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "data get block 68 64 754",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: data. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "data get entity @e[tag=mccb_j04_263_target,limit=1] Pos[0]",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: data. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "data get entity @e[tag=mccb_j04_275_target,limit=1] Pos[1]",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: data. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "data get storage mccb_j04:cmd-j-268 value",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: data. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "data merge block 90 64 754 {CustomName:{text:'CMD-J-266'}}",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: data. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "data merge entity @e[tag=mccb_j04_264_target,limit=1] {Glowing:1b}",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: data. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "data merge entity @e[tag=mccb_j04_276_target,limit=1] {Silent:1b}",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: data. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "data modify storage mccb_j04:cmd-j-267 value set value 10",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: data. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "data modify storage mccb_j04:cmd-j-269 pos set from entity @e[tag=mccb_j04_269_target,limit=1] Pos",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: data. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "data modify storage mccb_j04:cmd-j-270 list append value 3",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: data. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "data modify storage mccb_j04:cmd-j-271 list insert 0 value 7",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: data. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "data modify storage mccb_j04:cmd-j-274 barrel set from block 266 64 754",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: data. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "data modify storage mccb_j04:cmd-j-279 value set value 11",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: data. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "data modify storage mccb_j04:cmd-j-282 list append value 4",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: data. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "data modify storage mccb_j04:cmd-j-283 list insert 0 value 8",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: data. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "data modify storage mccb_j04:cmd-j-284 value set compute default integer 11",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: data. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "data modify storage mccb_j04:cmd-j-301 ticks set value 1b",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: data. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "data modify storage mccb_j04:cmd-j-383 calc set compute entity @e[tag=mccb_j04_383_target,limit=1] integer 17",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: data. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "data remove storage mccb_j04:cmd-j-272 temp",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: data. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "difficulty hard",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Set game difficulty to HARD"
+ },
+ {
+  "commande": "effect @e[tag=mccb_j04_215_target,c=1] clear",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "effect @e[tag=mccb_j04_226_target,c=1] speed 10 1 true",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "effect clear @e[tag=mccb_j04_214_target,limit=1] minecraft:glowing",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"@e\": at \"ect clear >>@e<<[tag=mccb_\""
+ },
+ {
+  "commande": "effect clear @e[tag=mccb_j04_215_target,limit=1]",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"@e\": at \"ect clear >>@e<<[tag=mccb_\""
+ },
+ {
+  "commande": "effect give @e[tag=mccb_j04_213_target,limit=1] minecraft:glowing 5 0 true",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"@e\": at \"fect give >>@e<<[tag=mccb_\""
+ },
+ {
+  "commande": "effect give @e[tag=mccb_j04_226_target,limit=1] minecraft:speed 10 1 true",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"@e\": at \"fect give >>@e<<[tag=mccb_\""
+ },
+ {
+  "commande": "effect give @e[tag=mccb_j04_298_target,limit=1] minecraft:glowing 1 0 true",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"@e\": at \"fect give >>@e<<[tag=mccb_\""
+ },
+ {
+  "commande": "execute as @a[distance=..16] at @s run particle minecraft:happy_villager ~ ~1 ~ 0 0 0 0 1 force",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"distance\": at \"ute as @a[>>distance<<=..16] at \""
+ },
+ {
+  "commande": "execute as @a[distance=1..16] at @s run particle minecraft:happy_villager ~ ~2 ~ 0 0 0 0 2 force",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"distance\": at \"ute as @a[>>distance<<=1..16] at\""
+ },
+ {
+  "commande": "execute as @a[r=16] at @s run particle minecraft:villager_happy ~ ~1 ~",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "execute as @a[rm=1,r=16] at @s run particle minecraft:villager_happy ~ ~2 ~",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_001_target,limit=1] run data merge entity @s {Glowing:1b}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"01_target,>>limit<<=1] run da\""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_006_target,c=1] at @s facing 138 65 33 run tp @s ^ ^ ^1",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_006_target,limit=1] at @s facing 138 65 33 run tp @s ^ ^ ^1",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"06_target,>>limit<<=1] at @s \""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_007_target,c=1] at @s facing entity @p eyes run tp @s ^ ^ ^1",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_007_target,limit=1] at @s facing entity @p eyes run tp @s ^ ^ ^1",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"07_target,>>limit<<=1] at @s \""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_009_target,c=1] at @s anchored eyes run particle minecraft:villager_happy ^ ^ ^1",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_009_target,limit=1] at @s anchored eyes run particle minecraft:happy_villager ^ ^ ^1 0 0 0 0 3 force",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"09_target,>>limit<<=1] at @s \""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_023_target,c=1] at @s facing 248 65 54 run tp @s ^ ^ ^1",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_023_target,limit=1] at @s facing 248 65 54 run tp @s ^ ^ ^1",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"23_target,>>limit<<=1] at @s \""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_037_target,c=1] at @s facing 94 65 95 run tp @s ^ ^ ^1",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_037_target,limit=1] at @s facing 94 65 95 run tp @s ^ ^ ^1",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"37_target,>>limit<<=1] at @s \""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_045_target,c=1] at @s facing 204 65 116 run tp @s ^ ^ ^1",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_045_target,limit=1] at @s facing 204 65 116 run tp @s ^ ^ ^1",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"45_target,>>limit<<=1] at @s \""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_055_target,limit=1] if entity @s run data merge entity @s {Glowing:1b}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"55_target,>>limit<<=1] if ent\""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_065_target,sort=nearest,limit=1] run data merge entity @s {Glowing:1b}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"sort\": at \"65_target,>>sort<<=nearest,l\""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_074_target,limit=1] run data merge entity @s {Silent:1b}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"74_target,>>limit<<=1] run da\""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_075_target,limit=1] if entity @s run data merge entity @s {Silent:1b}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"75_target,>>limit<<=1] if ent\""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_086_target,sort=nearest,limit=1] run data merge entity @s {Silent:1b}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"sort\": at \"86_target,>>sort<<=nearest,l\""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_209_target,c=1] at @s run tp @s ~1 ~1 ~",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_209_target,limit=1] at @s run tp @s ~1 ~1 ~",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"09_target,>>limit<<=1] at @s \""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_210_target,c=1] at @s rotated 0 0 run tp @s ^ ^ ^2",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_210_target,limit=1] at @s rotated 0 0 run tp @s ^ ^ ^2",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"10_target,>>limit<<=1] at @s \""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_223_target,c=1] at @s run tp @s ~2 ~1 ~",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_223_target,limit=1] at @s run tp @s ~2 ~1 ~",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"23_target,>>limit<<=1] at @s \""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_224_target,c=1] at @s rotated 90 0 run tp @s ^ ^ ^3",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_224_target,limit=1] at @s rotated 90 0 run tp @s ^ ^ ^3",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"24_target,>>limit<<=1] at @s \""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_243_target,c=1] at @s anchored eyes run particle minecraft:endrod ^ ^ ^1",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_243_target,limit=1] at @s anchored eyes run particle minecraft:end_rod ^ ^ ^1 0 0 0 0 2 force",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"43_target,>>limit<<=1] at @s \""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_244_target,c=1] at @s rotated as @p run tp @s ^ ^ ^1",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_244_target,limit=1] at @s rotated as @p run tp @s ^ ^ ^1",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"44_target,>>limit<<=1] at @s \""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_336_target,c=1] at @s if block ~ ~-1 ~ minecraft:gold_block if score @s j04336 matches 5.. run tp @s ~ ~2 ~",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_336_target,limit=1] at @s if block ~ ~-1 ~ minecraft:gold_block if score @s j04336 matches 5.. run tp @s ~ ~2 ~",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"36_target,>>limit<<=1] at @s \""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_337_target,limit=1] at @s unless block ~ ~-1 ~ minecraft:bedrock if entity @p[distance=..32] run effect give @s minecraft:glowing 5 0 true",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"37_target,>>limit<<=1] at @s \""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_339_target,c=1] at @s rotated 0 0 if entity @p[r=32] run tp @s ^0 ^1 ^2",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_339_target,limit=1] at @s rotated 0 0 if entity @p[distance=..32] run tp @s ^0 ^1 ^2",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"39_target,>>limit<<=1] at @s \""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_340_target,c=1] at @s facing entity @p eyes if score @s j04340 matches 1.. run tp @s ^ ^ ^1",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_340_target,limit=1] at @s facing entity @p eyes if score @s j04340 matches 1.. run tp @s ^ ^ ^1",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"40_target,>>limit<<=1] at @s \""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_345_target,nbt={NoGravity:1b},limit=1] if score @s j04345 matches 5.. run tag @s add mccb_j04_345_target_ok",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"nbt\": at \"45_target,>>nbt<<={NoGravit\""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_346_target,limit=1] store result score @s j04346 run data get entity @s Pos[1] 1",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"46_target,>>limit<<=1] store \""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_349_target,c=1] at @s if score @s j04349 matches 5.. unless entity @e[tag=mccb_j04_349_target_spawned,r=6] run summon minecraft:chicken ~2 ~ ~",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_349_target,limit=1] at @s if score @s j04349 matches 5.. unless entity @e[tag=mccb_j04_349_target_spawned,distance=..6] run summon minecraft:chicken ~2 ~ ~ {Tags:[\"mccb_j04_349_target_spawned\"]}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"49_target,>>limit<<=1] at @s \""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_350_target,c=1] at @s if block ~ ~-1 ~ minecraft:gold_block unless entity @e[tag=mccb_j04_350_target_ok] run tag @s add mccb_j04_350_target_ok",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_350_target,limit=1] at @s if block ~ ~-1 ~ minecraft:gold_block unless entity @e[tag=mccb_j04_350_target_ok] run tag @s add mccb_j04_350_target_ok",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"50_target,>>limit<<=1] at @s \""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_352_target,c=1] if score @s j04352 matches 5.. at @s if block ~ ~-1 ~ minecraft:gold_block run effect @s speed 5 0 true",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_352_target,limit=1] if score @s j04352 matches 5.. at @s if block ~ ~-1 ~ minecraft:gold_block run effect give @s minecraft:speed 5 0 true",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"52_target,>>limit<<=1] if sco\""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_353_target,c=1] at @s if score @s j04353 matches 5.. if block ~ ~-1 ~ minecraft:gold_block run tp @s ~1 ~ ~1",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_353_target,limit=1] at @s if score @s j04353 matches 5.. if block ~ ~-1 ~ minecraft:gold_block run tp @s ~1 ~ ~1",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"53_target,>>limit<<=1] at @s \""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_354_target,c=1] at @s anchored eyes facing entity @p eyes positioned ^ ^ ^1 run particle minecraft:endrod ~ ~ ~",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_354_target,limit=1] at @s anchored eyes facing entity @p eyes positioned ^ ^ ^1 run particle minecraft:end_rod ~ ~ ~ 0 0 0 0 3 force",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"54_target,>>limit<<=1] at @s \""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_360_target,limit=1] if score @s j04360 matches 5.. run data merge entity @s {Glowing:1b,Silent:0b}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"60_target,>>limit<<=1] if sco\""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_368_target,rym=80,ry=100,c=1] at @s anchored eyes positioned ^0 ^ ^2 run particle minecraft:villager_happy ~ ~ ~",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_368_target,y_rotation=80..100,limit=1] at @s anchored eyes positioned ^0 ^ ^2 run particle minecraft:happy_villager ~ ~ ~ 0 0 0 0 3 force",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"y_rotation\": at \"68_target,>>y_rotation<<=80..100,l\""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_370_target,x=880,y=63,z=790,dx=8,dy=6,dz=8,scores={j04370=5..},limit=1] run effect give @s minecraft:glowing 5 0 true",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"4370=5..},>>limit<<=1] run ef\""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_372_target,c=1] at @s anchored eyes facing entity @p eyes positioned ^ ^ ^1 if score @s j04372 matches 5.. unless block ~ ~ ~ minecraft:bedrock run setblock ~ ~ ~ minecraft:sea_lantern",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_372_target,limit=1] at @s anchored eyes facing entity @p eyes positioned ^ ^ ^1 if score @s j04372 matches 5.. unless block ~ ~ ~ minecraft:bedrock run setblock ~ ~ ~ minecraft:sea_lantern",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"72_target,>>limit<<=1] at @s \""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_373_target,c=1] at @s if block ~ ~-1 ~ minecraft:gold_block if score @s j04373 matches 6.. run tp @s ~ ~3 ~",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_373_target,limit=1] at @s if block ~ ~-1 ~ minecraft:gold_block if score @s j04373 matches 6.. run tp @s ~ ~3 ~",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"73_target,>>limit<<=1] at @s \""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_374_target,limit=1] at @s unless block ~ ~-1 ~ minecraft:bedrock if entity @p[distance=..32] run effect give @s minecraft:glowing 6 0 true",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"74_target,>>limit<<=1] at @s \""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_376_target,c=1] at @s rotated 90 0 if entity @p[r=32] run tp @s ^1 ^1 ^2",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_376_target,limit=1] at @s rotated 90 0 if entity @p[distance=..32] run tp @s ^1 ^1 ^2",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"76_target,>>limit<<=1] at @s \""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_377_target,c=1] at @s facing entity @p eyes if score @s j04377 matches 1.. run tp @s ^ ^ ^2",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_377_target,limit=1] at @s facing entity @p eyes if score @s j04377 matches 1.. run tp @s ^ ^ ^2",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"77_target,>>limit<<=1] at @s \""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_386_target,c=1] at @s if score @s j04386 matches 6.. unless entity @e[tag=mccb_j04_386_target_spawned,r=6] run summon minecraft:chicken ~2 ~ ~",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_386_target,limit=1] at @s if score @s j04386 matches 6.. unless entity @e[tag=mccb_j04_386_target_spawned,distance=..6] run summon minecraft:chicken ~2 ~ ~ {Tags:[\"mccb_j04_386_target_spawned\"]}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"86_target,>>limit<<=1] at @s \""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_387_target,limit=1] at @s if slots block 729 64 834 container.* if score @s j04387 matches 5.. run particle minecraft:happy_villager ~ ~1 ~ 0 0 0 0 3 force",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"87_target,>>limit<<=1] at @s \""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_388_target,c=1] if score @s j04388 matches 5.. at @s if block ~ ~-1 ~ minecraft:gold_block run effect @s speed 6 1 true",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_388_target,limit=1] if score @s j04388 matches 5.. at @s if block ~ ~-1 ~ minecraft:gold_block run effect give @s minecraft:speed 6 1 true",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"88_target,>>limit<<=1] if sco\""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_389_target,c=1] at @s if score @s j04389 matches 5.. if block ~ ~-1 ~ minecraft:gold_block run tp @s ~2 ~ ~2",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_389_target,limit=1] at @s if score @s j04389 matches 5.. if block ~ ~-1 ~ minecraft:gold_block run tp @s ~2 ~ ~2",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"89_target,>>limit<<=1] at @s \""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_390_target,c=1] at @s anchored eyes facing entity @p eyes positioned ^ ^ ^2 run particle minecraft:endrod ~ ~ ~",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_390_target,limit=1] at @s anchored eyes facing entity @p eyes positioned ^ ^ ^2 run particle minecraft:end_rod ~ ~ ~ 0 0 0 0 3 force",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"90_target,>>limit<<=1] at @s \""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_394_target,limit=1] if score @s j04394 matches 5.. run data merge entity @s {Glowing:1b,Silent:1b}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"94_target,>>limit<<=1] if sco\""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_398_target,rym=80,ry=100,c=1] at @s anchored eyes positioned ^1 ^ ^2 run particle minecraft:villager_happy ~ ~ ~",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_398_target,y_rotation=80..100,limit=1] at @s anchored eyes positioned ^1 ^ ^2 run particle minecraft:happy_villager ~ ~ ~ 0 0 0 0 3 force",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"y_rotation\": at \"98_target,>>y_rotation<<=80..100,l\""
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_400_target,c=1] at @s anchored eyes facing entity @p eyes positioned ^ ^ ^2 if score @s j04400 matches 5.. unless block ~ ~ ~ minecraft:bedrock run setblock ~ ~ ~ minecraft:sea_lantern",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "execute as @e[tag=mccb_j04_400_target,limit=1] at @s anchored eyes facing entity @p eyes positioned ^ ^ ^2 if score @s j04400 matches 5.. unless block ~ ~ ~ minecraft:bedrock run setblock ~ ~ ~ minecraft:sea_lantern",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"00_target,>>limit<<=1] at @s \""
+ },
+ {
+  "commande": "execute as @e[type=minecraft:armor_stand,tag=mccb_j04_344_target,scores={j04344=5..},sort=nearest,limit=1] at @s if entity @p[distance=..32] run effect give @s minecraft:glowing 5 0 true",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"sort\": at \"4344=5..},>>sort<<=nearest,l\""
+ },
+ {
+  "commande": "execute as @p run setblock 344 64 34 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "execute as @p run setblock 564 64 54 minecraft:emerald_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "execute as @p[gamemode=creative,distance=..64] if score #a j04367 matches 7 run title @s actionbar {text:'CMD-J-367 creative+score',color:'green'}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"gamemode\": at \"ute as @p[>>gamemode<<=creative,\""
+ },
+ {
+  "commande": "execute as @p[m=creative,r=64] if score #a j04367 matches 7 run title @s actionbar §aCMD-J-367 creative+score",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"#\": at \" if score >>#<<a j04367 m\""
+ },
+ {
+  "commande": "execute as @r[distance=..64] run title @s actionbar {text:'CMD-J-054 @r',color:'green'}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"distance\": at \"ute as @r[>>distance<<=..64] run\""
+ },
+ {
+  "commande": "execute as @r[r=64] run titleraw @s actionbar {\"rawtext\":[{\"text\":\"§aCMD-J-054 @r\"}]}",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "execute at @e[tag=mccb_j04_002_target,c=1] run setblock ~ ~2 ~ minecraft:emerald_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "execute at @e[tag=mccb_j04_002_target,limit=1] run setblock ~ ~2 ~ minecraft:emerald_block",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"02_target,>>limit<<=1] run se\""
+ },
+ {
+  "commande": "execute if block 111 63 73 minecraft:iron_block run setblock 112 64 74 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Detect position: 111 63 73 is out of range. | Execute subcommand if block test failed."
+ },
+ {
+  "commande": "execute if block 221 63 93 minecraft:copper_block run setblock 222 64 94 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Detect position: 221 63 93 is out of range. | Execute subcommand if block test failed."
+ },
+ {
+  "commande": "execute if block 265 63 33 minecraft:gold_block run setblock 266 64 34 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Detect position: 265 63 33 is out of range. | Execute subcommand if block test failed."
+ },
+ {
+  "commande": "execute if block 664 64 854 minecraft:barrel run item replace block 664 64 854 container.1 with minecraft:gold_ingot 3",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"item\": at \"arrel run >>item<< replace b\""
+ },
+ {
+  "commande": "execute if block 664 64 854 minecraft:barrel run replaceitem block 664 64 854 slot.container 1 minecraft:gold_ingot 3",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Detect position: 664 64 854 is out of range. | Execute subcommand if block test failed."
+ },
+ {
+  "commande": "execute if block 67 63 133 minecraft:diamond_block run setblock 68 64 134 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Detect position: 67 63 133 is out of range. | Execute subcommand if block test failed."
+ },
+ {
+  "commande": "execute if block 685 63 793 minecraft:gold_block run data modify storage mccb_j04:cmd-j-361 value set value 20",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"data\": at \"block run >>data<< modify st\""
+ },
+ {
+  "commande": "execute if block 707 63 853 minecraft:gold_block run data modify storage mccb_j04:cmd-j-395 value set value 21",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"data\": at \"block run >>data<< modify st\""
+ },
+ {
+  "commande": "execute if block 906 64 774 minecraft:barrel run item replace block 906 64 774 container.0 with minecraft:gold_ingot 2",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"item\": at \"arrel run >>item<< replace b\""
+ },
+ {
+  "commande": "execute if block 906 64 774 minecraft:barrel run replaceitem block 906 64 774 slot.container 0 minecraft:gold_ingot 2",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Detect position: 906 64 774 is out of range. | Execute subcommand if block test failed."
+ },
+ {
+  "commande": "execute if blocks 110 63 135 111 64 136 114 63 135 all run setblock 112 64 134 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Source volume is not loaded | Execute subcommand if blocks test failed."
+ },
+ {
+  "commande": "execute if blocks 154 63 75 155 64 76 158 63 75 all run setblock 156 64 74 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Source volume is not loaded | Execute subcommand if blocks test failed."
+ },
+ {
+  "commande": "execute if blocks 44 63 55 45 64 56 48 63 55 all run setblock 46 64 54 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Source volume is not loaded | Execute subcommand if blocks test failed."
+ },
+ {
+  "commande": "execute if blocks 794 64 755 795 64 756 799 64 755 all if score #a j04342 matches 7 run setblock 797 64 755 minecraft:lime_wool",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"#\": at \" if score >>#<<a j04342 m\""
+ },
+ {
+  "commande": "execute if blocks 816 64 815 817 64 816 821 64 815 all if score #a j04379 matches 8 run setblock 819 64 815 minecraft:lime_wool",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"#\": at \" if score >>#<<a j04379 m\""
+ },
+ {
+  "commande": "execute if entity @e[name=CMD-J-057,tag=mccb_j04_057_target,c=1] run setblock 498 64 34 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Execute subcommand if entity test failed."
+ },
+ {
+  "commande": "execute if entity @e[name=CMD-J-057,tag=mccb_j04_057_target,limit=1] run setblock 498 64 34 minecraft:lime_wool",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"57_target,>>limit<<=1] run se\""
+ },
+ {
+  "commande": "execute if entity @e[name=CMD-J-078,tag=mccb_j04_078_target,c=1] run setblock 454 64 74 minecraft:emerald_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Execute subcommand if entity test failed."
+ },
+ {
+  "commande": "execute if entity @e[name=CMD-J-078,tag=mccb_j04_078_target,limit=1] run setblock 454 64 74 minecraft:emerald_block",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"78_target,>>limit<<=1] run se\""
+ },
+ {
+  "commande": "execute if entity @e[tag=mccb_j04_010_target,c=1] run setblock 222 64 34 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Execute subcommand if entity test failed."
+ },
+ {
+  "commande": "execute if entity @e[tag=mccb_j04_010_target,limit=1] run setblock 222 64 34 minecraft:lime_wool",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"10_target,>>limit<<=1] run se\""
+ },
+ {
+  "commande": "execute if entity @e[tag=mccb_j04_027_target,c=1] run setblock 68 64 74 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Execute subcommand if entity test failed."
+ },
+ {
+  "commande": "execute if entity @e[tag=mccb_j04_027_target,limit=1] run setblock 68 64 74 minecraft:lime_wool",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"27_target,>>limit<<=1] run se\""
+ },
+ {
+  "commande": "execute if entity @e[tag=mccb_j04_059_target,x=538,y=63,z=30,dx=8,dy=6,dz=8] run setblock 542 64 34 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Execute subcommand if entity test failed."
+ },
+ {
+  "commande": "execute if entity @e[tag=mccb_j04_060_target,scores={j04060=5..9},c=1] run setblock 564 64 34 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Execute subcommand if entity test failed."
+ },
+ {
+  "commande": "execute if entity @e[tag=mccb_j04_060_target,scores={j04060=5..9},limit=1] run setblock 564 64 34 minecraft:lime_wool",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"060=5..9},>>limit<<=1] run se\""
+ },
+ {
+  "commande": "execute if entity @e[tag=mccb_j04_061_target,team=j04061,limit=1] run setblock 586 64 34 minecraft:lime_wool",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"team\": at \"61_target,>>team<<=j04061,li\""
+ },
+ {
+  "commande": "execute if entity @e[tag=mccb_j04_066_target,nbt={NoGravity:1b},limit=1] run setblock 432 64 54 minecraft:lime_wool",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"nbt\": at \"66_target,>>nbt<<={NoGravit\""
+ },
+ {
+  "commande": "execute if entity @e[tag=mccb_j04_067_target,rxm=-10,rx=10,rym=80,ry=100,c=1] run setblock 454 64 54 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Execute subcommand if entity test failed."
+ },
+ {
+  "commande": "execute if entity @e[tag=mccb_j04_067_target,y_rotation=80..100,x_rotation=-10..10,limit=1] run setblock 454 64 54 minecraft:lime_wool",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"y_rotation\": at \"67_target,>>y_rotation<<=80..100,x\""
+ },
+ {
+  "commande": "execute if entity @e[tag=mccb_j04_068_target,type=!minecraft:pig,c=1] run setblock 476 64 54 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Execute subcommand if entity test failed."
+ },
+ {
+  "commande": "execute if entity @e[tag=mccb_j04_068_target,type=!minecraft:pig,limit=1] run setblock 476 64 54 minecraft:lime_wool",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"craft:pig,>>limit<<=1] run se\""
+ },
+ {
+  "commande": "execute if entity @e[tag=mccb_j04_069_target,tag=!mccb_j04_absent,c=1] run setblock 498 64 54 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Execute subcommand if entity test failed."
+ },
+ {
+  "commande": "execute if entity @e[tag=mccb_j04_069_target,tag=!mccb_j04_absent,limit=1] run setblock 498 64 54 minecraft:lime_wool",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"04_absent,>>limit<<=1] run se\""
+ },
+ {
+  "commande": "execute if entity @e[tag=mccb_j04_077_target,c=1] run setblock 432 64 74 minecraft:emerald_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Execute subcommand if entity test failed."
+ },
+ {
+  "commande": "execute if entity @e[tag=mccb_j04_077_target,limit=1] run setblock 432 64 74 minecraft:emerald_block",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"77_target,>>limit<<=1] run se\""
+ },
+ {
+  "commande": "execute if entity @e[tag=mccb_j04_080_target,x=494,y=63,z=70,dx=8,dy=6,dz=8] run setblock 498 64 74 minecraft:emerald_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Execute subcommand if entity test failed."
+ },
+ {
+  "commande": "execute if entity @e[tag=mccb_j04_081_target,scores={j04081=5..9},c=1] run setblock 520 64 74 minecraft:emerald_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Execute subcommand if entity test failed."
+ },
+ {
+  "commande": "execute if entity @e[tag=mccb_j04_081_target,scores={j04081=5..9},limit=1] run setblock 520 64 74 minecraft:emerald_block",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"081=5..9},>>limit<<=1] run se\""
+ },
+ {
+  "commande": "execute if entity @e[tag=mccb_j04_082_target,team=j04082,limit=1] run setblock 542 64 74 minecraft:emerald_block",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"team\": at \"82_target,>>team<<=j04082,li\""
+ },
+ {
+  "commande": "execute if entity @e[tag=mccb_j04_087_target,nbt={NoGravity:1b},limit=1] run setblock 388 64 94 minecraft:emerald_block",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"nbt\": at \"87_target,>>nbt<<={NoGravit\""
+ },
+ {
+  "commande": "execute if entity @e[tag=mccb_j04_088_target,rxm=-10,rx=10,rym=80,ry=100,c=1] run setblock 410 64 94 minecraft:emerald_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Execute subcommand if entity test failed."
+ },
+ {
+  "commande": "execute if entity @e[tag=mccb_j04_088_target,y_rotation=80..100,x_rotation=-10..10,limit=1] run setblock 410 64 94 minecraft:emerald_block",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"y_rotation\": at \"88_target,>>y_rotation<<=80..100,x\""
+ },
+ {
+  "commande": "execute if entity @e[tag=mccb_j04_089_target,type=!minecraft:pig,c=1] run setblock 432 64 94 minecraft:emerald_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Execute subcommand if entity test failed."
+ },
+ {
+  "commande": "execute if entity @e[tag=mccb_j04_089_target,type=!minecraft:pig,limit=1] run setblock 432 64 94 minecraft:emerald_block",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"craft:pig,>>limit<<=1] run se\""
+ },
+ {
+  "commande": "execute if entity @e[tag=mccb_j04_090_target,tag=!mccb_j04_absent,c=1] run setblock 454 64 94 minecraft:emerald_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Execute subcommand if entity test failed."
+ },
+ {
+  "commande": "execute if entity @e[tag=mccb_j04_090_target,tag=!mccb_j04_absent,limit=1] run setblock 454 64 94 minecraft:emerald_block",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"04_absent,>>limit<<=1] run se\""
+ },
+ {
+  "commande": "execute if entity @e[tag=mccb_j04_351_target_ready,c=1] unless entity @e[tag=mccb_j04_351_target_missing] run setblock 730 64 774 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Execute subcommand if entity test failed."
+ },
+ {
+  "commande": "execute if entity @e[tag=mccb_j04_351_target_ready,limit=1] unless entity @e[tag=mccb_j04_351_target_missing] run setblock 730 64 774 minecraft:lime_wool",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"get_ready,>>limit<<=1] unless\""
+ },
+ {
+  "commande": "execute if entity @e[tag=mccb_j04_356_target,c=1] if block 839 63 773 minecraft:gold_block run title @p actionbar §aCMD-J-356 READY",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Execute subcommand if entity test failed."
+ },
+ {
+  "commande": "execute if entity @e[tag=mccb_j04_356_target,limit=1] if block 839 63 773 minecraft:gold_block run title @p actionbar {text:'CMD-J-356 READY',color:'green'}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"56_target,>>limit<<=1] if blo\""
+ },
+ {
+  "commande": "execute if entity @e[tag=mccb_j04_358_target,c=1] as @p run clear @s minecraft:stick -1 1",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Execute subcommand if entity test failed."
+ },
+ {
+  "commande": "execute if entity @e[tag=mccb_j04_358_target,limit=1] as @p run clear @s minecraft:stick 1",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"58_target,>>limit<<=1] as @p \""
+ },
+ {
+  "commande": "execute if entity @e[tag=mccb_j04_364_target,team=j04364,limit=1] unless entity @e[tag=mccb_j04_364_target_missing] run setblock 752 64 794 minecraft:lime_wool",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"team\": at \"64_target,>>team<<=j04364,li\""
+ },
+ {
+  "commande": "execute if entity @e[tag=mccb_j04_392_target,c=1] as @p run clear @s minecraft:stick -1 2",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Execute subcommand if entity test failed."
+ },
+ {
+  "commande": "execute if entity @e[tag=mccb_j04_392_target,limit=1] as @p run clear @s minecraft:stick 2",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"92_target,>>limit<<=1] as @p \""
+ },
+ {
+  "commande": "execute if entity @e[type=!minecraft:pig,tag=mccb_j04_071_target,tag=!mccb_j04_absent,distance=1..10,limit=1] run setblock 542 64 54 minecraft:lime_wool",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"distance\": at \"04_absent,>>distance<<=1..10,lim\""
+ },
+ {
+  "commande": "execute if entity @e[type=!minecraft:pig,tag=mccb_j04_071_target,tag=!mccb_j04_absent,rm=1,r=10,c=1] run setblock 542 64 54 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Execute subcommand if entity test failed."
+ },
+ {
+  "commande": "execute if entity @e[type=!minecraft:pig,tag=mccb_j04_092_target,tag=!mccb_j04_absent,distance=1..10,limit=1] run setblock 498 64 94 minecraft:emerald_block",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"distance\": at \"04_absent,>>distance<<=1..10,lim\""
+ },
+ {
+  "commande": "execute if entity @e[type=!minecraft:pig,tag=mccb_j04_092_target,tag=!mccb_j04_absent,rm=1,r=10,c=1] run setblock 498 64 94 minecraft:emerald_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Execute subcommand if entity test failed."
+ },
+ {
+  "commande": "execute if entity @e[type=minecraft:armor_stand,tag=mccb_j04_056_target,c=1] run setblock 454 64 34 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Execute subcommand if entity test failed."
+ },
+ {
+  "commande": "execute if entity @e[type=minecraft:armor_stand,tag=mccb_j04_056_target,limit=1] run setblock 454 64 34 minecraft:lime_wool",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"56_target,>>limit<<=1] run se\""
+ },
+ {
+  "commande": "execute if entity @e[type=minecraft:armor_stand,tag=mccb_j04_070_target,distance=..12,scores={j04070=5..9},sort=nearest,limit=1] run setblock 520 64 54 minecraft:lime_wool",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"distance\": at \"70_target,>>distance<<=..12,scor\""
+ },
+ {
+  "commande": "execute if entity @e[type=minecraft:armor_stand,tag=mccb_j04_070_target,scores={j04070=5..9},r=12,c=1] run setblock 520 64 54 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Execute subcommand if entity test failed."
+ },
+ {
+  "commande": "execute if entity @e[type=minecraft:armor_stand,tag=mccb_j04_076_target,c=1] run setblock 410 64 74 minecraft:emerald_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Execute subcommand if entity test failed."
+ },
+ {
+  "commande": "execute if entity @e[type=minecraft:armor_stand,tag=mccb_j04_076_target,limit=1] run setblock 410 64 74 minecraft:emerald_block",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"76_target,>>limit<<=1] run se\""
+ },
+ {
+  "commande": "execute if entity @e[type=minecraft:armor_stand,tag=mccb_j04_091_target,distance=..12,scores={j04091=5..9},sort=nearest,limit=1] run setblock 476 64 94 minecraft:emerald_block",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"distance\": at \"91_target,>>distance<<=..12,scor\""
+ },
+ {
+  "commande": "execute if entity @e[type=minecraft:armor_stand,tag=mccb_j04_091_target,scores={j04091=5..9},r=12,c=1] run setblock 476 64 94 minecraft:emerald_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Execute subcommand if entity test failed."
+ },
+ {
+  "commande": "execute if entity @p[advancements={minecraft:story/iron_tools=true},distance=..64] run tellraw @p {text:'CMD-J-366 advancement OK',color:'green'}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"advancements\": at \"entity @p[>>advancements<<={minecraf\""
+ },
+ {
+  "commande": "execute if entity @p[advancements={minecraft:story/mine_stone=true},distance=..32] run setblock 344 64 94 minecraft:emerald_block",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"advancements\": at \"entity @p[>>advancements<<={minecraf\""
+ },
+ {
+  "commande": "execute if entity @p[advancements={minecraft:story/root=true},distance=..32] run setblock 388 64 54 minecraft:lime_wool",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"advancements\": at \"entity @p[>>advancements<<={minecraf\""
+ },
+ {
+  "commande": "execute if entity @p[gamemode=creative,distance=..32] run setblock 344 64 54 minecraft:lime_wool",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"gamemode\": at \"entity @p[>>gamemode<<=creative,\""
+ },
+ {
+  "commande": "execute if entity @p[gamemode=creative,distance=..32] run setblock 564 64 74 minecraft:emerald_block",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"gamemode\": at \"entity @p[>>gamemode<<=creative,\""
+ },
+ {
+  "commande": "execute if entity @p[level=7..,distance=..32] run setblock 366 64 54 minecraft:lime_wool",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"level\": at \"entity @p[>>level<<=7..,dista\""
+ },
+ {
+  "commande": "execute if entity @p[level=7..,distance=..32] run setblock 586 64 74 minecraft:emerald_block",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"level\": at \"entity @p[>>level<<=7..,dista\""
+ },
+ {
+  "commande": "execute if entity @p[m=creative,r=32] run setblock 344 64 54 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Execute subcommand if entity test failed."
+ },
+ {
+  "commande": "execute if entity @p[m=creative,r=32] run setblock 564 64 74 minecraft:emerald_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Execute subcommand if entity test failed."
+ },
+ {
+  "commande": "execute if entity @p[r=32,lm=7] run setblock 366 64 54 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Execute subcommand if entity test failed."
+ },
+ {
+  "commande": "execute if entity @p[r=32,lm=7] run setblock 586 64 74 minecraft:emerald_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Execute subcommand if entity test failed."
+ },
+ {
+  "commande": "execute if items block 155 64 54 container.* minecraft:stone run setblock 157 64 54 minecraft:lime_wool",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"items\": at \"xecute if >>items<< block 155\""
+ },
+ {
+  "commande": "execute if items block 45 64 74 container.* minecraft:paper[minecraft:custom_name={text:\"CMD-J-026\"}] run setblock 47 64 74 minecraft:lime_wool",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"items\": at \"xecute if >>items<< block 45 \""
+ },
+ {
+  "commande": "execute if items block 861 64 814 container.* minecraft:stone if entity @e[tag=mccb_j04_381_target,limit=1] run tag @e[tag=mccb_j04_381_target,limit=1] add mccb_j04_381_target_ok",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"items\": at \"xecute if >>items<< block 861\""
+ },
+ {
+  "commande": "execute if score #a j04111 matches 4..12 run setblock 796 64 54 minecraft:lime_wool",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"#\": at \" if score >>#<<a j04111 m\""
+ },
+ {
+  "commande": "execute if score #a j04112 = #b j04112 run setblock 818 64 54 minecraft:lime_wool",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"#\": at \" if score >>#<<a j04112 =\""
+ },
+ {
+  "commande": "execute if score #a j04113 < #b j04113 run setblock 840 64 54 minecraft:lime_wool",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"#\": at \" if score >>#<<a j04113 <\""
+ },
+ {
+  "commande": "execute if score #a j04114 > #b j04114 run setblock 862 64 54 minecraft:lime_wool",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"#\": at \" if score >>#<<a j04114 >\""
+ },
+ {
+  "commande": "execute if score #a j04343 < #b j04343 unless block 818 64 754 minecraft:bedrock run setblock 818 64 754 minecraft:lime_wool",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"#\": at \" if score >>#<<a j04343 <\""
+ },
+ {
+  "commande": "execute if score #a j04355 matches 1.. if entity @e[tag=mccb_j04_355_target,c=1] run tellraw @p {\"rawtext\":[{\"text\":\"§aCMD-J-355 score=\"},{\"text\":\"§a\"},{\"score\":{\"name\":\"#a\",\"objective\":\"j04355\"}}]}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"#\": at \" if score >>#<<a j04355 m\""
+ },
+ {
+  "commande": "execute if score #a j04355 matches 1.. if entity @e[tag=mccb_j04_355_target,limit=1] run tellraw @p {text:'CMD-J-355 score=',extra:[{score:{name:'#a',objective:'j04355'}}],color:'green'}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"#\": at \" if score >>#<<a j04355 m\""
+ },
+ {
+  "commande": "execute if score #a j04357 matches 7 if entity @p[distance=..64] run give @p minecraft:emerald 1",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"#\": at \" if score >>#<<a j04357 m\""
+ },
+ {
+  "commande": "execute if score #a j04357 matches 7 if entity @p[r=64] run give @p minecraft:emerald 1",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"#\": at \" if score >>#<<a j04357 m\""
+ },
+ {
+  "commande": "execute if score #a j04362 matches 7 in minecraft:the_nether positioned 0 90 0 run setblock ~ ~ ~ minecraft:gold_block",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"#\": at \" if score >>#<<a j04362 m\""
+ },
+ {
+  "commande": "execute if score #a j04362 matches 7 in nether positioned 0 90 0 run setblock ~ ~ ~ minecraft:gold_block",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"#\": at \" if score >>#<<a j04362 m\""
+ },
+ {
+  "commande": "execute if score #a j04363 matches 7 in minecraft:the_end positioned 0 90 0 run particle minecraft:end_rod ~ ~1 ~ 0 0 0 0 4 force",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"#\": at \" if score >>#<<a j04363 m\""
+ },
+ {
+  "commande": "execute if score #a j04363 matches 7 in the_end positioned 0 90 0 run particle minecraft:endrod ~ ~1 ~",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"#\": at \" if score >>#<<a j04363 m\""
+ },
+ {
+  "commande": "execute if score #a j04391 matches 7 if entity @p[distance=..64] run give @p minecraft:diamond 2",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"#\": at \" if score >>#<<a j04391 m\""
+ },
+ {
+  "commande": "execute if score #a j04391 matches 7 if entity @p[r=64] run give @p minecraft:diamond 2",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"#\": at \" if score >>#<<a j04391 m\""
+ },
+ {
+  "commande": "execute if score #a j04396 matches 7 in minecraft:the_nether positioned 8 90 8 run setblock ~ ~ ~ minecraft:gold_block",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"#\": at \" if score >>#<<a j04396 m\""
+ },
+ {
+  "commande": "execute if score #a j04396 matches 7 in nether positioned 8 90 8 run setblock ~ ~ ~ minecraft:gold_block",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"#\": at \" if score >>#<<a j04396 m\""
+ },
+ {
+  "commande": "execute if score #a j04397 matches 7 in minecraft:the_end positioned 8 90 8 run particle minecraft:end_rod ~ ~1 ~ 0 0 0 0 4 force",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"#\": at \" if score >>#<<a j04397 m\""
+ },
+ {
+  "commande": "execute if score #a j04397 matches 7 in the_end positioned 8 90 8 run particle minecraft:endrod ~ ~1 ~",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"#\": at \" if score >>#<<a j04397 m\""
+ },
+ {
+  "commande": "execute if score #case j04015 matches 1..3 run setblock 68 64 54 minecraft:lime_wool",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"#\": at \" if score >>#<<case j0401\""
+ },
+ {
+  "commande": "execute if score #case j04032 matches 2..4 run setblock 178 64 74 minecraft:lime_wool",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"#\": at \" if score >>#<<case j0403\""
+ },
+ {
+  "commande": "execute if score #case j04041 matches 3..5 run setblock 24 64 114 minecraft:lime_wool",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"#\": at \" if score >>#<<case j0404\""
+ },
+ {
+  "commande": "execute if score #case j04049 matches 4..6 run setblock 134 64 134 minecraft:lime_wool",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"#\": at \" if score >>#<<case j0404\""
+ },
+ {
+  "commande": "execute if score #loop j04297 matches ..4 run setblock 884 64 414 minecraft:sea_lantern",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"#\": at \" if score >>#<<loop j0429\""
+ },
+ {
+  "commande": "execute if score #loop j04299 matches ..4 run scoreboard players add #seen j04299 1",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"#\": at \" if score >>#<<loop j0429\""
+ },
+ {
+  "commande": "execute if score #loop j04300 matches 1..2 run playsound minecraft:block.note_block.pling master @p ~ ~ ~ 0.4 1",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"#\": at \" if score >>#<<loop j0430\""
+ },
+ {
+  "commande": "execute if score #loop j04300 matches 1..2 run playsound note.pling @p ~ ~ ~ 0.4 1",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"#\": at \" if score >>#<<loop j0430\""
+ },
+ {
+  "commande": "execute if score #loop j04303 matches 3 run setblock 753 64 434 minecraft:lime_wool",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"#\": at \" if score >>#<<loop j0430\""
+ },
+ {
+  "commande": "execute if slots block 133 64 54 container.* run setblock 135 64 54 minecraft:lime_wool",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"slots\": at \"xecute if >>slots<< block 133\""
+ },
+ {
+  "commande": "execute if slots block 265 64 54 {type:\"minecraft:slot_range\",slots:\"container.*\"} run setblock 267 64 54 minecraft:lime_wool",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"slots\": at \"xecute if >>slots<< block 265\""
+ },
+ {
+  "commande": "execute if slots block 839 64 814 container.* if score #a j04380 matches 7 run setblock 841 64 814 minecraft:lime_wool",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"slots\": at \"xecute if >>slots<< block 839\""
+ },
+ {
+  "commande": "execute if slots entity @e[tag=mccb_j04_034_target,limit=1] armor.* run setblock 223 64 74 minecraft:lime_wool",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"slots\": at \"xecute if >>slots<< entity @e\""
+ },
+ {
+  "commande": "execute in minecraft:overworld positioned 0 80 0 run setblock ~ ~ ~ minecraft:emerald_block",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"minecraft:overworld\": at \"xecute in >>minecraft:overworld<< positione\""
+ },
+ {
+  "commande": "execute in minecraft:overworld positioned 8 80 8 if block 8 79 8 minecraft:obsidian run setblock ~ ~ ~ minecraft:sea_lantern",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"minecraft:overworld\": at \"xecute in >>minecraft:overworld<< positione\""
+ },
+ {
+  "commande": "execute in minecraft:the_end positioned 0 80 0 run setblock ~ ~ ~ minecraft:diamond_block",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"minecraft:the_end\": at \"xecute in >>minecraft:the_end<< positione\""
+ },
+ {
+  "commande": "execute in minecraft:the_end positioned 4 80 4 if block ~ ~-1 ~ minecraft:obsidian run setblock ~ ~ ~ minecraft:purpur_block",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"minecraft:the_end\": at \"xecute in >>minecraft:the_end<< positione\""
+ },
+ {
+  "commande": "execute in minecraft:the_end positioned 8 80 8 run setblock ~1 ~ ~1 minecraft:redstone_block",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"minecraft:the_end\": at \"xecute in >>minecraft:the_end<< positione\""
+ },
+ {
+  "commande": "execute in minecraft:the_end positioned 8 80 8 run summon minecraft:armor_stand ~ ~ ~ {Tags:[\"mccb_j04_261_spawned\"],NoGravity:1b}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"minecraft:the_end\": at \"xecute in >>minecraft:the_end<< positione\""
+ },
+ {
+  "commande": "execute in minecraft:the_nether positioned 0 80 0 if entity @e[type=minecraft:piglin,tag=mccb_j04_260_remote,distance=..16,limit=1] run setblock 6 81 6 minecraft:lime_wool",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"minecraft:the_nether\": at \"xecute in >>minecraft:the_nether<< positione\""
+ },
+ {
+  "commande": "execute in minecraft:the_nether positioned 0 80 0 run setblock ~ ~ ~ minecraft:gold_block",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"minecraft:the_nether\": at \"xecute in >>minecraft:the_nether<< positione\""
+ },
+ {
+  "commande": "execute in minecraft:the_nether positioned 2 80 2 run summon minecraft:piglin ~ ~ ~ {Tags:[\"mccb_j04_255_spawned\"],PersistenceRequired:1b}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"minecraft:the_nether\": at \"xecute in >>minecraft:the_nether<< positione\""
+ },
+ {
+  "commande": "execute in minecraft:the_nether positioned 8 80 8 run setblock ~1 ~ ~1 minecraft:lapis_block",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"minecraft:the_nether\": at \"xecute in >>minecraft:the_nether<< positione\""
+ },
+ {
+  "commande": "execute in nether positioned 0 80 0 if entity @e[type=minecraft:piglin,tag=mccb_j04_260_remote,r=16,c=1] run setblock 6 81 6 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Execute subcommand if entity test failed."
+ },
+ {
+  "commande": "execute in nether positioned 0 80 0 run setblock ~ ~ ~ minecraft:gold_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world | Failed to execute 'setblock' as [Null]"
+ },
+ {
+  "commande": "execute in nether positioned 2 80 2 run summon minecraft:piglin ~ ~ ~",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Unable to summon object | Failed to execute 'summon' as [Null]"
+ },
+ {
+  "commande": "execute in nether positioned 8 80 8 run setblock ~1 ~ ~1 minecraft:lapis_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world | Failed to execute 'setblock' as [Null]"
+ },
+ {
+  "commande": "execute in overworld positioned 0 80 0 run setblock ~ ~ ~ minecraft:emerald_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world | Failed to execute 'setblock' as [Null]"
+ },
+ {
+  "commande": "execute in overworld positioned 8 80 8 if block 8 79 8 minecraft:obsidian run setblock ~ ~ ~ minecraft:sea_lantern",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Detect position: 8 79 8 is out of range. | Execute subcommand if block test failed."
+ },
+ {
+  "commande": "execute in the_end positioned 0 80 0 run setblock ~ ~ ~ minecraft:diamond_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world | Failed to execute 'setblock' as [Null]"
+ },
+ {
+  "commande": "execute in the_end positioned 4 80 4 if block ~ ~-1 ~ minecraft:obsidian run setblock ~ ~ ~ minecraft:purpur_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Detect position: 4 79 4 is out of range. | Execute subcommand if block test failed."
+ },
+ {
+  "commande": "execute in the_end positioned 8 80 8 run setblock ~1 ~ ~1 minecraft:redstone_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world | Failed to execute 'setblock' as [Null]"
+ },
+ {
+  "commande": "execute in the_end positioned 8 80 8 run summon minecraft:armor_stand ~ ~ ~",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Unable to summon object | Failed to execute 'summon' as [Null]"
+ },
+ {
+  "commande": "execute positioned -40 64 -40 run setblock ~ ~1 ~ minecraft:amethyst_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world | Failed to execute 'setblock' as [Null]"
+ },
+ {
+  "commande": "execute positioned -60 64 -60 run setblock ~ ~1 ~ minecraft:amethyst_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world | Failed to execute 'setblock' as [Null]"
+ },
+ {
+  "commande": "execute positioned 1004 64 392 run setblock ~2 ~1 ~1 minecraft:emerald_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world | Failed to execute 'setblock' as [Null]"
+ },
+ {
+  "commande": "execute positioned 1004 64 54 run setblock ~1 ~1 ~ minecraft:sea_lantern",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world | Failed to execute 'setblock' as [Null]"
+ },
+ {
+  "commande": "execute positioned 1009 66 417 run setblock ~-3 ~-1 ~-2 minecraft:diamond_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world | Failed to execute 'setblock' as [Null]"
+ },
+ {
+  "commande": "execute positioned 1027 65 55 rotated 0 0 run setblock ^ ^ ^3 minecraft:glowstone",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world | Failed to execute 'setblock' as [Null]"
+ },
+ {
+  "commande": "execute positioned 1028 65 414 rotated 90 0 run setblock ^ ^ ^3 minecraft:lapis_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world | Failed to execute 'setblock' as [Null]"
+ },
+ {
+  "commande": "execute positioned 1031 66 397 run setblock ~-2 ~-1 ~-1 minecraft:diamond_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world | Failed to execute 'setblock' as [Null]"
+ },
+ {
+  "commande": "execute positioned 1050 65 394 rotated 0 0 run setblock ^ ^ ^2 minecraft:lapis_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world | Failed to execute 'setblock' as [Null]"
+ },
+ {
+  "commande": "execute positioned 1050 65 414 rotated 135 10 run particle minecraft:happy_villager ^2 ^1 ^3 0 0 0 0 3 force",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"0\": at \" ^2 ^1 ^3 >>0<< 0 0 0 3 f\""
+ },
+ {
+  "commande": "execute positioned 1050 65 414 rotated 135 10 run particle minecraft:villager_happy ^2 ^1 ^3",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Request to create minecraft:villager_happy sent to all players."
+ },
+ {
+  "commande": "execute positioned 1070 64 74 run setblock ~2 ~1 ~ minecraft:sea_lantern",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world | Failed to execute 'setblock' as [Null]"
+ },
+ {
+  "commande": "execute positioned 1072 65 394 rotated 45 0 run particle minecraft:happy_villager ^1 ^1 ^2 0 0 0 0 3 force",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"0\": at \" ^1 ^1 ^2 >>0<< 0 0 0 3 f\""
+ },
+ {
+  "commande": "execute positioned 1072 65 394 rotated 45 0 run particle minecraft:villager_happy ^1 ^1 ^2",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Request to create minecraft:villager_happy sent to all players."
+ },
+ {
+  "commande": "execute positioned 1093 65 75 rotated 90 0 run setblock ^ ^ ^3 minecraft:glowstone",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world | Failed to execute 'setblock' as [Null]"
+ },
+ {
+  "commande": "execute positioned 1120 -20 398 run setblock ~ ~ ~ minecraft:glass",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world | Failed to execute 'setblock' as [Null]"
+ },
+ {
+  "commande": "execute positioned 1136.7 65.8 412.2 align xyz run setblock ~ ~ ~ minecraft:quartz_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world | Failed to execute 'setblock' as [Null]"
+ },
+ {
+  "commande": "execute positioned 1158.7 65.8 392.2 align xyz run setblock ~ ~ ~ minecraft:quartz_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world | Failed to execute 'setblock' as [Null]"
+ },
+ {
+  "commande": "execute positioned 132.45 65.75 92.6 align yz run setblock ~ ~ ~ minecraft:amethyst_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world | Failed to execute 'setblock' as [Null]"
+ },
+ {
+  "commande": "execute positioned 135 65 112 run setblock ~ ~ ~ minecraft:diamond_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world | Failed to execute 'setblock' as [Null]"
+ },
+ {
+  "commande": "execute positioned 176.25 65.75 32.6 align x run setblock ~ ~ ~ minecraft:amethyst_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world | Failed to execute 'setblock' as [Null]"
+ },
+ {
+  "commande": "execute positioned 177 65 52 run setblock ~ ~ ~ minecraft:diamond_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world | Failed to execute 'setblock' as [Null]"
+ },
+ {
+  "commande": "execute positioned 22.35 65.75 72.6 align xz run setblock ~ ~ ~ minecraft:amethyst_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world | Failed to execute 'setblock' as [Null]"
+ },
+ {
+  "commande": "execute positioned 24 65 92 run setblock ~ ~ ~ minecraft:diamond_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world | Failed to execute 'setblock' as [Null]"
+ },
+ {
+  "commande": "execute positioned 242.55 65.75 112.6 align xyz run setblock ~ ~ ~ minecraft:amethyst_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world | Failed to execute 'setblock' as [Null]"
+ },
+ {
+  "commande": "execute positioned 472 64 70 if entity @e[tag=mccb_j04_079_target,distance=..8] run setblock 476 64 74 minecraft:emerald_block",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"distance\": at \"79_target,>>distance<<=..8] run \""
+ },
+ {
+  "commande": "execute positioned 472 64 70 if entity @e[tag=mccb_j04_079_target,r=8] run setblock 476 64 74 minecraft:emerald_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Execute subcommand if entity test failed."
+ },
+ {
+  "commande": "execute positioned 516 64 30 if entity @e[tag=mccb_j04_058_target,distance=..8] run setblock 520 64 34 minecraft:lime_wool",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"distance\": at \"58_target,>>distance<<=..8] run \""
+ },
+ {
+  "commande": "execute positioned 516 64 30 if entity @e[tag=mccb_j04_058_target,r=8] run setblock 520 64 34 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Execute subcommand if entity test failed."
+ },
+ {
+  "commande": "execute positioned 66 65 32 run setblock ~ ~ ~ minecraft:diamond_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world | Failed to execute 'setblock' as [Null]"
+ },
+ {
+  "commande": "execute positioned 664 65 774 if block ~ ~-1 ~ minecraft:gold_block unless entity @e[tag=mccb_j04_348_target_spawned,distance=..4] run summon minecraft:pig ~ ~ ~ {Tags:[\"mccb_j04_348_target_spawned\"]}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"distance\": at \"t_spawned,>>distance<<=..4] run \""
+ },
+ {
+  "commande": "execute positioned 664 65 774 if block ~ ~-1 ~ minecraft:gold_block unless entity @e[tag=mccb_j04_348_target_spawned,r=4] run summon minecraft:pig ~ ~ ~",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Detect position: 664 64 774 is out of range. | Execute subcommand if block test failed."
+ },
+ {
+  "commande": "execute positioned 773.7 65.2 753.8 align xyz unless block ~ ~ ~ minecraft:bedrock run setblock ~ ~ ~ minecraft:emerald_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Detect position: 773 65 753 is out of range. | Execute subcommand unless block test failed."
+ },
+ {
+  "commande": "execute positioned 795.7 65.2 813.8 align xyz unless block ~ ~ ~ minecraft:bedrock run setblock ~ ~ ~ minecraft:diamond_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Detect position: 795 65 813 is out of range. | Execute subcommand unless block test failed."
+ },
+ {
+  "commande": "execute positioned 858 64 790 as @e[tag=mccb_j04_369_target,distance=1..10,scores={j04369=5..},limit=1] at @s run tp @s ~ ~1 ~",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"distance\": at \"69_target,>>distance<<=1..10,sco\""
+ },
+ {
+  "commande": "execute positioned 858 64 790 as @e[tag=mccb_j04_369_target,scores={j04369=5..},rm=1,r=10,c=1] at @s run tp @s ~ ~1 ~",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "execute positioned 880 64 850 as @e[tag=mccb_j04_399_target,distance=1..10,scores={j04399=5..},limit=1] at @s run tp @s ~ ~2 ~",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"distance\": at \"99_target,>>distance<<=1..10,sco\""
+ },
+ {
+  "commande": "execute positioned 880 64 850 as @e[tag=mccb_j04_399_target,scores={j04399=5..},rm=1,r=10,c=1] at @s run tp @s ~ ~2 ~",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "execute positioned 982 64 412 run setblock ~3 ~1 ~2 minecraft:emerald_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world | Failed to execute 'setblock' as [Null]"
+ },
+ {
+  "commande": "execute positioned as @e[tag=mccb_j04_004_target,c=1] run setblock ~1 ~ ~ minecraft:lapis_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "execute positioned as @e[tag=mccb_j04_004_target,limit=1] run setblock ~1 ~ ~ minecraft:lapis_block",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"04_target,>>limit<<=1] run se\""
+ },
+ {
+  "commande": "execute positioned as @e[tag=mccb_j04_338_target,c=1] if entity @p[r=32] positioned ~ ~1 ~ run particle minecraft:villager_happy ~ ~ ~",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "execute positioned as @e[tag=mccb_j04_338_target,limit=1] if entity @p[distance=..32] positioned ~ ~1 ~ run particle minecraft:happy_villager ~ ~ ~ 0 0 0 0 3 force",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"38_target,>>limit<<=1] if ent\""
+ },
+ {
+  "commande": "execute positioned as @e[tag=mccb_j04_375_target,c=1] if entity @p[r=32] positioned ~ ~2 ~ run particle minecraft:villager_happy ~ ~ ~",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "execute positioned as @e[tag=mccb_j04_375_target,limit=1] if entity @p[distance=..32] positioned ~ ~2 ~ run particle minecraft:happy_villager ~ ~ ~ 0 0 0 0 4 force",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"75_target,>>limit<<=1] if ent\""
+ },
+ {
+  "commande": "execute rotated -90 30 run tp @e[tag=mccb_j04_044_target,c=1] ^ ^ ^1.5",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector | Failed to execute 'teleport' as [Null]"
+ },
+ {
+  "commande": "execute rotated -90 30 run tp @e[tag=mccb_j04_044_target,limit=1] ^ ^ ^1.5",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"44_target,>>limit<<=1] ^ ^ ^1\""
+ },
+ {
+  "commande": "execute rotated 0 0 run tp @e[tag=mccb_j04_005_target,c=1] ^ ^ ^1",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector | Failed to execute 'teleport' as [Null]"
+ },
+ {
+  "commande": "execute rotated 0 0 run tp @e[tag=mccb_j04_005_target,limit=1] ^ ^ ^1",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"05_target,>>limit<<=1] ^ ^ ^1\""
+ },
+ {
+  "commande": "execute rotated 180 -15 run tp @e[tag=mccb_j04_036_target,c=1] ^ ^ ^3",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector | Failed to execute 'teleport' as [Null]"
+ },
+ {
+  "commande": "execute rotated 180 -15 run tp @e[tag=mccb_j04_036_target,limit=1] ^ ^ ^3",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"36_target,>>limit<<=1] ^ ^ ^3\""
+ },
+ {
+  "commande": "execute rotated 90 15 run tp @e[tag=mccb_j04_022_target,c=1] ^ ^ ^2",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector | Failed to execute 'teleport' as [Null]"
+ },
+ {
+  "commande": "execute rotated 90 15 run tp @e[tag=mccb_j04_022_target,limit=1] ^ ^ ^2",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"22_target,>>limit<<=1] ^ ^ ^2\""
+ },
+ {
+  "commande": "execute store result bossbar mccb_j04:cmd-j-365 value run scoreboard players get #a j04365",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"store\": at \"/execute >>store<< result bo\""
+ },
+ {
+  "commande": "execute store result score #calc j04382 run compute default integer 13",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"store\": at \"/execute >>store<< result sc\""
+ },
+ {
+  "commande": "execute store result score #out j04017 run data get entity @e[tag=mccb_j04_017_target,limit=1] Pos[1] 1",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"store\": at \"/execute >>store<< result sc\""
+ },
+ {
+  "commande": "execute store result storage mccb_j04:cmd-j-273 result int 1 run data get entity @e[tag=mccb_j04_273_target,limit=1] Pos[1]",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"store\": at \"/execute >>store<< result st\""
+ },
+ {
+  "commande": "execute store result storage mccb_j04:cmd-j-347 score int 1 run scoreboard players get #a j04347",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"store\": at \"/execute >>store<< result st\""
+ },
+ {
+  "commande": "execute store success score #success j04051 if entity @e[tag=mccb_j04_051_target,limit=1]",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"store\": at \"/execute >>store<< success s\""
+ },
+ {
+  "commande": "execute unless block 133 63 73 minecraft:bedrock run setblock 134 64 74 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Detect position: 133 63 73 is out of range. | Execute subcommand unless block test failed."
+ },
+ {
+  "commande": "execute unless block 23 63 53 minecraft:bedrock run setblock 24 64 54 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Detect position: 23 63 53 is out of range. | Execute subcommand unless block test failed."
+ },
+ {
+  "commande": "execute unless blocks 264 63 95 265 64 96 268 63 95 masked run setblock 266 64 94 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Source volume is not loaded | Execute subcommand unless blocks test failed."
+ },
+ {
+  "commande": "execute unless entity @e[tag=mccb_j04_011_target_missing] run setblock 244 64 34 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world | Failed to execute 'setblock' as [Null]"
+ },
+ {
+  "commande": "execute unless entity @e[tag=mccb_j04_028_target_missing] run setblock 90 64 74 minecraft:lime_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world | Failed to execute 'setblock' as [Null]"
+ },
+ {
+  "commande": "execute unless entity @e[tag=mccb_j04_371_target_missing] unless block 906 64 794 minecraft:bedrock if score #a j04371 matches 7 run setblock 906 64 794 minecraft:lime_wool",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"#\": at \" if score >>#<<a j04371 m\""
+ },
+ {
+  "commande": "execute unless items block 199 64 54 container.* minecraft:diamond run setblock 201 64 54 minecraft:lime_wool",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"items\": at \"te unless >>items<< block 199\""
+ },
+ {
+  "commande": "execute unless score #case j04016 matches 1..3 run setblock 90 64 54 minecraft:lime_wool",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"#\": at \"ess score >>#<<case j0401\""
+ },
+ {
+  "commande": "execute unless score #case j04033 matches 2..4 run setblock 200 64 74 minecraft:lime_wool",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"#\": at \"ess score >>#<<case j0403\""
+ },
+ {
+  "commande": "execute unless score #case j04042 matches 3..5 run setblock 46 64 114 minecraft:lime_wool",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"#\": at \"ess score >>#<<case j0404\""
+ },
+ {
+  "commande": "execute unless score #case j04050 matches 4..6 run setblock 156 64 134 minecraft:lime_wool",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"#\": at \"ess score >>#<<case j0405\""
+ },
+ {
+  "commande": "fetchprofile entity @p",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: fetchprofile. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "fill 1048 64 35 1051 65 36 minecraft:blue_wool replace",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place blocks outside of the world"
+ },
+ {
+  "commande": "fill 1070 64 35 1074 64 37 minecraft:lime_wool replace minecraft:stone",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place blocks outside of the world"
+ },
+ {
+  "commande": "fill 1092 64 35 1096 64 37 minecraft:glass keep",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place blocks outside of the world"
+ },
+ {
+  "commande": "fill 1114 64 35 1116 64 37 minecraft:redstone_block destroy",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place blocks outside of the world"
+ },
+ {
+  "commande": "fill 1114 64 55 1117 65 56 minecraft:yellow_wool replace",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place blocks outside of the world"
+ },
+ {
+  "commande": "forceload add 0 32",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: forceload. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "forceload remove 32 32",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: forceload. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "gamerule dodaylightcycle true",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Game rule dodaylightcycle has been updated to true"
+ },
+ {
+  "commande": "gamerule minecraft:advance_time true",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"minecraft:advance_time\": at \"/gamerule >>minecraft:advance_time<< true\""
+ },
+ {
+  "commande": "give @p minecraft:diamond 1",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "give @p minecraft:diamond_sword 1",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "give @p minecraft:diamond_sword[minecraft:enchantments={\"minecraft:sharpness\":3}] 1",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"[\": at \"mond_sword>>[<<minecraft:\""
+ },
+ {
+  "commande": "give @p minecraft:diamond_sword[minecraft:enchantments={\"minecraft:sharpness\":4}] 1",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"[\": at \"mond_sword>>[<<minecraft:\""
+ },
+ {
+  "commande": "give @p minecraft:emerald 2",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "give @p minecraft:paper 1",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "give @p minecraft:paper[minecraft:custom_name={text:'CMD-J-172',color:'gold'}] 1",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"[\": at \"raft:paper>>[<<minecraft:\""
+ },
+ {
+  "commande": "give @p minecraft:potion 1 31",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "give @p minecraft:potion 1 5",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "give @p minecraft:potion[minecraft:potion_contents={potion:'minecraft:night_vision'}] 1",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"[\": at \"aft:potion>>[<<minecraft:\""
+ },
+ {
+  "commande": "give @p minecraft:potion[minecraft:potion_contents={potion:'minecraft:strength'}] 1",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"[\": at \"aft:potion>>[<<minecraft:\""
+ },
+ {
+  "commande": "give @p minecraft:written_book[minecraft:written_book_content={title:{raw:\"CMD-J-182\"},author:\"MCCB\",pages:[{raw:{text:\"Test book CMD-J-182\"}}],generation:0,resolved:true}] 1",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"minecraft:written_book\": at \"/give @p >>minecraft:written_book<<[minecraft\""
+ },
+ {
+  "commande": "item fill block 133 64 454 container.* with minecraft:stone 1",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: item. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "item fill block 155 64 494 container.* from block 156 64 494 container.0",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: item. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "item fill block 663 64 834 {type:\"minecraft:slot_range\",slots:\"container.*\"} with minecraft:stone 1",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: item. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "item modify block 24 64 454 container.0 {type:\"minecraft:set_count\",count:2}",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: item. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "item override block 67 64 474 container.* with minecraft:stone 1",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: item. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "item replace block 1050 64 74 container.1 with minecraft:emerald 2",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: item. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "item replace block 24 64 474 container.1 with minecraft:golden_apple 2",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: item. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "item replace block 89 64 474 {type:\"minecraft:slot_range\",slots:\"container.0\"} with minecraft:diamond 1",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: item. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "item replace block 984 64 54 container.0 with minecraft:diamond 1",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: item. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "item replace entity @p armor.head with minecraft:diamond_helmet",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: item. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "item replace entity @p armor.head with minecraft:golden_helmet",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: item. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "item replace entity @p hotbar.1 from entity @p hotbar.0",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: item. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "item replace entity @p weapon.mainhand with minecraft:diamond_sword",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: item. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "item replace entity @p weapon.mainhand with minecraft:iron_axe",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: item. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "item replace entity @p weapon.offhand from entity @p weapon.mainhand",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: item. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "item replace entity @p weapon.offhand with minecraft:shield",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: item. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "item replace entity @p weapon.offhand with minecraft:torch",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: item. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "locate biome minecraft:plains",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "The nearest minecraft:plains is at block -32, -60, -32 (45 blocks away)"
+ },
+ {
+  "commande": "particle minecraft:basic_flame_particle 730 66 434",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Request to create minecraft:basic_flame_particle sent to all players."
+ },
+ {
+  "commande": "particle minecraft:flame 730 66 434 0.25 0.25 0.25 0.01 4 force",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"0.25\": at \"30 66 434 >>0.25<< 0.25 0.25\""
+ },
+ {
+  "commande": "particle minecraft:happy_villager 862 66 414 0 0 0 0 1 force",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"0\": at \"62 66 414 >>0<< 0 0 0 1 f\""
+ },
+ {
+  "commande": "particle minecraft:happy_villager 90 66 494 0.2 0.2 0.2 0.01 5 force @a",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"0.2\": at \"90 66 494 >>0.2<< 0.2 0.2 0\""
+ },
+ {
+  "commande": "particle minecraft:villager_happy 862 66 414",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Request to create minecraft:villager_happy sent to all players."
+ },
+ {
+  "commande": "particle minecraft:villager_happy 90 66 494",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Request to create minecraft:villager_happy sent to all players."
+ },
+ {
+  "commande": "playsound minecraft:block.note_block.pling master @p 108 64 490 1 1.0",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"@p\": at \"ng master >>@p<< 108 64 49\""
+ },
+ {
+  "commande": "playsound note.pling @p 108 64 490 1 1.0",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "posteffect list @p",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: posteffect. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "recipe give @p minecraft:WorkBench_recipeId",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector | That player cannot be found"
+ },
+ {
+  "commande": "recipe give @p minecraft:crafting_table",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector | That player cannot be found"
+ },
+ {
+  "commande": "recipe take @p minecraft:stick",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector | That player cannot be found"
+ },
+ {
+  "commande": "replaceitem block 1050 64 74 slot.container 1 minecraft:emerald 2",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Block at Pos(1050,64,74) is not a container"
+ },
+ {
+  "commande": "replaceitem block 24 64 474 slot.container 1 minecraft:golden_apple 2 0",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Block at Pos(24,64,474) is not a container"
+ },
+ {
+  "commande": "replaceitem block 984 64 54 slot.container 0 minecraft:diamond 1",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Block at Pos(984,64,54) is not a container"
+ },
+ {
+  "commande": "replaceitem entity @p slot.armor.head 0 minecraft:diamond_helmet 1",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "replaceitem entity @p slot.armor.head 0 minecraft:golden_helmet 1",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "replaceitem entity @p slot.weapon.mainhand 0 minecraft:diamond_sword 1",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "replaceitem entity @p slot.weapon.mainhand 0 minecraft:iron_axe 1",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "replaceitem entity @p slot.weapon.offhand 0 minecraft:shield 1",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "replaceitem entity @p slot.weapon.offhand 0 minecraft:torch 1",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "ride @e[tag=mccb_j04_324_target,c=1] start_riding @e[tag=mccb_j04_324_vehicle,c=1]",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "ride @e[tag=mccb_j04_324_target,limit=1] mount @e[tag=mccb_j04_324_vehicle,limit=1]",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"24_target,>>limit<<=1] mount \""
+ },
+ {
+  "commande": "scoreboard objectives add xj04093 dummy",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Added new objective 'xj04093' successfully"
+ },
+ {
+  "commande": "scoreboard objectives add xj04095 dummy",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Added new objective 'xj04095' successfully"
+ },
+ {
+  "commande": "scoreboard objectives add xj04095 trigger",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"trigger\": at \"d xj04095 >>trigger<<\""
+ },
+ {
+  "commande": "scoreboard objectives add xj04096 minecraft.custom:minecraft.jump",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"minecraft.custom:minecraft.jump\": at \"d xj04096 >>minecraft.custom:minecraft.jump<<\""
+ },
+ {
+  "commande": "scoreboard objectives remove xj04094",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No objective was found by the name 'xj04094'"
+ },
+ {
+  "commande": "scoreboard players add #a j04098 3",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No objective was found by the name 'j04098'"
+ },
+ {
+  "commande": "scoreboard players add #a j04116 7",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No objective was found by the name 'j04116'"
+ },
+ {
+  "commande": "scoreboard players add #chain j04288 1",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No objective was found by the name 'j04288'"
+ },
+ {
+  "commande": "scoreboard players add #loop j04295 1",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No objective was found by the name 'j04295'"
+ },
+ {
+  "commande": "scoreboard players get #a j04101",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"get\": at \"d players >>get<< #a j04101\""
+ },
+ {
+  "commande": "scoreboard players operation #a j04102 += #b j04102",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No objective was found by the name 'j04102'"
+ },
+ {
+  "commande": "scoreboard players operation #a j04103 -= #b j04103",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No objective was found by the name 'j04103'"
+ },
+ {
+  "commande": "scoreboard players operation #a j04104 *= #b j04104",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No objective was found by the name 'j04104'"
+ },
+ {
+  "commande": "scoreboard players operation #a j04105 /= #b j04105",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No objective was found by the name 'j04105'"
+ },
+ {
+  "commande": "scoreboard players operation #a j04106 %= #b j04106",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No objective was found by the name 'j04106'"
+ },
+ {
+  "commande": "scoreboard players operation #a j04107 = #b j04107",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No objective was found by the name 'j04107'"
+ },
+ {
+  "commande": "scoreboard players operation #a j04108 < #b j04108",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No objective was found by the name 'j04108'"
+ },
+ {
+  "commande": "scoreboard players operation #a j04109 > #b j04109",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No objective was found by the name 'j04109'"
+ },
+ {
+  "commande": "scoreboard players operation #a j04110 >< #b j04110",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No objective was found by the name 'j04110'"
+ },
+ {
+  "commande": "scoreboard players remove #a j04099 3",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No objective was found by the name 'j04099'"
+ },
+ {
+  "commande": "scoreboard players remove #a j04117 7",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No objective was found by the name 'j04117'"
+ },
+ {
+  "commande": "scoreboard players reset #a j04100",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No objective was found by the name 'j04100'"
+ },
+ {
+  "commande": "scoreboard players set #a j04097 3",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No objective was found by the name 'j04097'"
+ },
+ {
+  "commande": "scoreboard players set #a j04115 7",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No objective was found by the name 'j04115'"
+ },
+ {
+  "commande": "scoreboard players set #gate j04293 1",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No objective was found by the name 'j04293'"
+ },
+ {
+  "commande": "scoreboard players set #gate j04294 2",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No objective was found by the name 'j04294'"
+ },
+ {
+  "commande": "scoreboard players test #a j04101 * *",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No objective was found by the name 'j04101'"
+ },
+ {
+  "commande": "seed",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: seed. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "setblock 1006 64 34 minecraft:emerald_block destroy",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world"
+ },
+ {
+  "commande": "setblock 1006 64 74 minecraft:oak_stairs [\"weirdo_direction\"=2,\"upside_down_bit\"=false,\"minecraft:corner\"=\"none\"]",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world"
+ },
+ {
+  "commande": "setblock 1006 64 74 minecraft:oak_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"facing\": at \"ak_stairs[>>facing<<=south,hal\""
+ },
+ {
+  "commande": "setblock 1028 64 34 minecraft:amethyst_block keep",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world"
+ },
+ {
+  "commande": "setblock 1028 64 74 minecraft:observer [\"minecraft:facing_direction\"=\"west\",\"powered_bit\"=false]",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world"
+ },
+ {
+  "commande": "setblock 1028 64 74 minecraft:observer[facing=west,powered=false]",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"facing\": at \":observer[>>facing<<=west,powe\""
+ },
+ {
+  "commande": "setblock 1050 64 54 minecraft:diamond_block replace",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world"
+ },
+ {
+  "commande": "setblock 1072 64 54 minecraft:lapis_block destroy",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world"
+ },
+ {
+  "commande": "setblock 1094 64 54 minecraft:copper_block keep",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world"
+ },
+ {
+  "commande": "setblock 1119 64 416 minecraft:redstone_lamp",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world"
+ },
+ {
+  "commande": "setblock 1135 64 400 minecraft:redstone_lamp",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world"
+ },
+ {
+  "commande": "setblock 1204 64 34 minecraft:oak_stairs [\"weirdo_direction\"=0,\"upside_down_bit\"=false,\"minecraft:corner\"=\"none\"]",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world"
+ },
+ {
+  "commande": "setblock 1204 64 34 minecraft:oak_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"facing\": at \"ak_stairs[>>facing<<=east,half\""
+ },
+ {
+  "commande": "setblock 1226 64 34 minecraft:observer [\"minecraft:facing_direction\"=\"up\",\"powered_bit\"=false]",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world"
+ },
+ {
+  "commande": "setblock 1226 64 34 minecraft:observer[facing=up,powered=false]",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"facing\": at \":observer[>>facing<<=up,powere\""
+ },
+ {
+  "commande": "setblock 1227 65 394 minecraft:gold_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world"
+ },
+ {
+  "commande": "setblock 45 65 414 minecraft:sand keep",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world"
+ },
+ {
+  "commande": "setblock 664 64 395 minecraft:red_wool",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world"
+ },
+ {
+  "commande": "setblock 686 64 395 minecraft:stone",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world"
+ },
+ {
+  "commande": "setblock 708 64 395 minecraft:stone keep",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world"
+ },
+ {
+  "commande": "setblock 774 64 395 minecraft:gold_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world"
+ },
+ {
+  "commande": "setblock 818 64 395 minecraft:redstone_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world"
+ },
+ {
+  "commande": "setblock 90 65 434 minecraft:sand keep",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world"
+ },
+ {
+  "commande": "setblock 984 64 34 minecraft:gold_block replace",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world"
+ },
+ {
+  "commande": "setblock 984 65 394 minecraft:gold_block",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Cannot place block outside of the world"
+ },
+ {
+  "commande": "setworldspawn 0 64 0",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Set the world spawn point to (0, 64, 0)"
+ },
+ {
+  "commande": "spawnpoint @p 0 64 0",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "stopsound @p master minecraft:block.note_block.pling",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"minecraft:block.note_block.pling\": at \"@p master >>minecraft:block.note_block.pling<<\""
+ },
+ {
+  "commande": "stopsound @p note.pling",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "summon minecraft:armor_stand \"CMD-J-147\" 111 65 394",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Unable to summon object"
+ },
+ {
+  "commande": "summon minecraft:armor_stand \"CMD-J-161\" 156 65 414",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Unable to summon object"
+ },
+ {
+  "commande": "summon minecraft:armor_stand 111 65 394 {Tags:[\"mccb_j04_147_target\"],CustomName:{text:\"CMD-J-147\"},CustomNameVisible:1b,NoGravity:1b}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"{\": at \"11 65 394 >>{<<Tags:[\"mcc\""
+ },
+ {
+  "commande": "summon minecraft:armor_stand 156 65 414 {Tags:[\"mccb_j04_161_target\"],CustomName:{text:\"CMD-J-161\"},CustomNameVisible:1b,NoGravity:1b}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"{\": at \"56 65 414 >>{<<Tags:[\"mcc\""
+ },
+ {
+  "commande": "summon minecraft:arrow 23 65 414",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Unable to summon object"
+ },
+ {
+  "commande": "summon minecraft:arrow 23 65 414 {Tags:[\"mccb_j04_155_target\"],pickup:0b}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"{\": at \"23 65 414 >>{<<Tags:[\"mcc\""
+ },
+ {
+  "commande": "summon minecraft:arrow 68 65 434",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Unable to summon object"
+ },
+ {
+  "commande": "summon minecraft:arrow 68 65 434 {Tags:[\"mccb_j04_169_target\"],pickup:0b}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"{\": at \"68 65 434 >>{<<Tags:[\"mcc\""
+ },
+ {
+  "commande": "summon minecraft:block_display 221 65 394 {Tags:[\"mccb_j04_152_target\"],block_state:{id:\"minecraft:red_wool\"}}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"minecraft:block_display\": at \"/summon >>minecraft:block_display<< 221 65 39\""
+ },
+ {
+  "commande": "summon minecraft:block_display 266 65 414 {Tags:[\"mccb_j04_166_target\"],block_state:{id:\"minecraft:red_wool\"}}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"minecraft:block_display\": at \"/summon >>minecraft:block_display<< 266 65 41\""
+ },
+ {
+  "commande": "summon minecraft:boat 133 65 394",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Unable to summon object"
+ },
+ {
+  "commande": "summon minecraft:boat 178 65 414",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Unable to summon object"
+ },
+ {
+  "commande": "summon minecraft:cow \"CMD-J-144\" 45 65 394",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Unable to summon object"
+ },
+ {
+  "commande": "summon minecraft:cow \"CMD-J-158\" 90 65 414",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Unable to summon object"
+ },
+ {
+  "commande": "summon minecraft:cow 45 65 394 {Tags:[\"mccb_j04_144_target\"],CustomName:{text:\"CMD-J-144\"}}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"{\": at \"45 65 394 >>{<<Tags:[\"mcc\""
+ },
+ {
+  "commande": "summon minecraft:cow 90 65 414 {Tags:[\"mccb_j04_158_target\"],CustomName:{text:\"CMD-J-158\"}}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"{\": at \"90 65 414 >>{<<Tags:[\"mcc\""
+ },
+ {
+  "commande": "summon minecraft:falling_block 45 65 414 {Tags:[\"mccb_j04_156_target\"],BlockState:{id:\"minecraft:sand\"},Time:1}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"minecraft:falling_block\": at \"/summon >>minecraft:falling_block<< 45 65 414\""
+ },
+ {
+  "commande": "summon minecraft:falling_block 90 65 434 {Tags:[\"mccb_j04_170_target\"],BlockState:{id:\"minecraft:sand\"},Time:1}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"minecraft:falling_block\": at \"/summon >>minecraft:falling_block<< 90 65 434\""
+ },
+ {
+  "commande": "summon minecraft:item 177 65 394 {Tags:[\"mccb_j04_150_target\"],Item:{id:\"minecraft:diamond\",count:1}}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"minecraft:item\": at \"/summon >>minecraft:item<< 177 65 39\""
+ },
+ {
+  "commande": "summon minecraft:item 222 65 414 {Tags:[\"mccb_j04_164_target\"],Item:{id:\"minecraft:diamond\",count:1}}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"minecraft:item\": at \"/summon >>minecraft:item<< 222 65 41\""
+ },
+ {
+  "commande": "summon minecraft:item_display 199 65 394 {Tags:[\"mccb_j04_151_target\"],item:{id:\"minecraft:emerald\",count:1}}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"minecraft:item_display\": at \"/summon >>minecraft:item_display<< 199 65 39\""
+ },
+ {
+  "commande": "summon minecraft:item_display 244 65 414 {Tags:[\"mccb_j04_165_target\"],item:{id:\"minecraft:emerald\",count:1}}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"minecraft:item_display\": at \"/summon >>minecraft:item_display<< 244 65 41\""
+ },
+ {
+  "commande": "summon minecraft:minecart 155 65 394",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Unable to summon object"
+ },
+ {
+  "commande": "summon minecraft:minecart 155 65 394 {Tags:[\"mccb_j04_149_target\"]}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"{\": at \"55 65 394 >>{<<Tags:[\"mcc\""
+ },
+ {
+  "commande": "summon minecraft:minecart 200 65 414",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Unable to summon object"
+ },
+ {
+  "commande": "summon minecraft:minecart 200 65 414 {Tags:[\"mccb_j04_163_target\"]}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"{\": at \"00 65 414 >>{<<Tags:[\"mcc\""
+ },
+ {
+  "commande": "summon minecraft:oak_boat 133 65 394 {Tags:[\"mccb_j04_148_target\"]}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"minecraft:oak_boat\": at \"/summon >>minecraft:oak_boat<< 133 65 39\""
+ },
+ {
+  "commande": "summon minecraft:oak_boat 178 65 414 {Tags:[\"mccb_j04_162_target\"]}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"minecraft:oak_boat\": at \"/summon >>minecraft:oak_boat<< 178 65 41\""
+ },
+ {
+  "commande": "summon minecraft:pig \"CMD-J-143\" 23 65 394",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Unable to summon object"
+ },
+ {
+  "commande": "summon minecraft:pig \"CMD-J-157\" 68 65 414",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Unable to summon object"
+ },
+ {
+  "commande": "summon minecraft:pig 23 65 394 {Tags:[\"mccb_j04_143_target\"],CustomName:{text:\"CMD-J-143\"}}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"{\": at \"23 65 394 >>{<<Tags:[\"mcc\""
+ },
+ {
+  "commande": "summon minecraft:pig 68 65 414 {Tags:[\"mccb_j04_157_target\"],CustomName:{text:\"CMD-J-157\"}}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"{\": at \"68 65 414 >>{<<Tags:[\"mcc\""
+ },
+ {
+  "commande": "summon minecraft:pig 796 65 395",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Unable to summon object"
+ },
+ {
+  "commande": "summon minecraft:pig 796 65 395 {Tags:[\"mccb_j04_290_target_pig\"]}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"{\": at \"96 65 395 >>{<<Tags:[\"mcc\""
+ },
+ {
+  "commande": "summon minecraft:skeleton \"CMD-J-146\" 89 65 394",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Unable to summon object"
+ },
+ {
+  "commande": "summon minecraft:skeleton \"CMD-J-160\" 134 65 414",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Unable to summon object"
+ },
+ {
+  "commande": "summon minecraft:skeleton 134 65 414 {Tags:[\"mccb_j04_160_target\"],CustomName:{text:\"CMD-J-160\"},PersistenceRequired:1b}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"{\": at \"34 65 414 >>{<<Tags:[\"mcc\""
+ },
+ {
+  "commande": "summon minecraft:skeleton 89 65 394 {Tags:[\"mccb_j04_146_target\"],CustomName:{text:\"CMD-J-146\"},PersistenceRequired:1b}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"{\": at \"89 65 394 >>{<<Tags:[\"mcc\""
+ },
+ {
+  "commande": "summon minecraft:snowball 265 65 394",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Unable to summon object"
+ },
+ {
+  "commande": "summon minecraft:snowball 265 65 394 {Tags:[\"mccb_j04_154_target\"]}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"{\": at \"65 65 394 >>{<<Tags:[\"mcc\""
+ },
+ {
+  "commande": "summon minecraft:snowball 46 65 434",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Unable to summon object"
+ },
+ {
+  "commande": "summon minecraft:snowball 46 65 434 {Tags:[\"mccb_j04_168_target\"]}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"{\": at \"46 65 434 >>{<<Tags:[\"mcc\""
+ },
+ {
+  "commande": "summon minecraft:text_display 24 65 434 {Tags:[\"mccb_j04_167_target\"],text:{text:\"MCCB CMD-J-167\"}}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"minecraft:text_display\": at \"/summon >>minecraft:text_display<< 24 65 434\""
+ },
+ {
+  "commande": "summon minecraft:text_display 243 65 394 {Tags:[\"mccb_j04_153_target\"],text:{text:\"MCCB CMD-J-153\"}}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"minecraft:text_display\": at \"/summon >>minecraft:text_display<< 243 65 39\""
+ },
+ {
+  "commande": "summon minecraft:zombie \"CMD-J-145\" 67 65 394",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Unable to summon object"
+ },
+ {
+  "commande": "summon minecraft:zombie \"CMD-J-159\" 112 65 414",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Unable to summon object"
+ },
+ {
+  "commande": "summon minecraft:zombie 112 65 414 {Tags:[\"mccb_j04_159_target\"],CustomName:{text:\"CMD-J-159\"},PersistenceRequired:1b}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"{\": at \"12 65 414 >>{<<Tags:[\"mcc\""
+ },
+ {
+  "commande": "summon minecraft:zombie 67 65 394 {Tags:[\"mccb_j04_145_target\"],CustomName:{text:\"CMD-J-145\"},PersistenceRequired:1b}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"{\": at \"67 65 394 >>{<<Tags:[\"mcc\""
+ },
+ {
+  "commande": "swing @p mainhand stab 10t",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: swing. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "swing @p offhand",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: swing. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "tag @e[tag=mccb_j04_216_target,c=1] add mccb_j04_216_target_added",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "tag @e[tag=mccb_j04_216_target,limit=1] add mccb_j04_216_target_added",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"16_target,>>limit<<=1] add mc\""
+ },
+ {
+  "commande": "tag @e[tag=mccb_j04_217_target,c=1] remove mccb_j04_217_target_added",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "tag @e[tag=mccb_j04_217_target,limit=1] remove mccb_j04_217_target_added",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"17_target,>>limit<<=1] remove\""
+ },
+ {
+  "commande": "tag @e[tag=mccb_j04_218_target,c=1] list",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "tag @e[tag=mccb_j04_218_target,limit=1] list",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"18_target,>>limit<<=1] list\""
+ },
+ {
+  "commande": "team add j04311 {text:'CMD-J-311'}",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: team. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "team join j04312 @e[tag=mccb_j04_312_target,limit=1]",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: team. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "team leave @e[tag=mccb_j04_313_target,limit=1]",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: team. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "team list j04321",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: team. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "team modify j04314 color aqua",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: team. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "team modify j04315 friendlyFire false",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: team. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "team modify j04316 collisionRule never",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: team. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "team modify j04317 prefix {text:'[CMD-J-317] ',color:'gold'}",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: team. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "team modify j04318 suffix {text:' OK',color:'green'}",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: team. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "team modify j04319 nametagVisibility never",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: team. Please check that the command exists and that you have permission to use it."
+ },
+ {
+  "commande": "tellraw @p [{text:'CMD-J-204 ',color:'gray'},{text:'BOLD',bold:true},{text:' ITALIC',italic:true,color:'blue'}]",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"{\": at \"llraw @p [>>{<<text:'CMD-\""
+ },
+ {
+  "commande": "tellraw @p {\"rawtext\":[{\"text\":\"Score: \"},{\"score\":{\"name\":\"#a\",\"objective\":\"j04198\"}}]}",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "tellraw @p {\"rawtext\":[{\"text\":\"Target: \"},{\"selector\":\"@e[tag=mccb_j04_197_target,c=1]\"}]}",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "tellraw @p {\"rawtext\":[{\"text\":\"§6§lCMD-J-196\"}]}",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "tellraw @p {\"rawtext\":[{\"text\":\"§7\"},{\"translate\":\"block.minecraft.stone\"}]}",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "tellraw @p {\"rawtext\":[{\"text\":\"§7CMD-J-204 \"},{\"text\":\"§7§lBOLD\"},{\"text\":\"§9§o ITALIC\"}]}",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "tellraw @p {\"rawtext\":[{\"text\":\"§aCMD-J-195 PASS\"}]}",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "tellraw @p {\"rawtext\":[{\"text\":\"§bCHAIN CMD-J-292\"}]}",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "tellraw @p {\"rawtext\":[{\"text\":\"§fMCCB \"},{\"text\":\"§bCMD-J-199\"},{\"text\":\"§a§l OK\"}]}",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "tellraw @p {\"rawtext\":[{\"translate\":\"commands.give.success.single\",\"with\":{\"rawtext\":[{\"text\":\"1\"},{\"text\":\"stone\"},{\"selector\":\"@p\"}]}}]}",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "tellraw @p {text:'CHAIN CMD-J-292',color:'aqua'}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"'CHAIN\": at \" @p {text:>>'CHAIN<< CMD-J-292\""
+ },
+ {
+  "commande": "tellraw @p {text:'CMD-J-195 PASS',color:'green'}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"'CMD-J-195\": at \" @p {text:>>'CMD-J-195<< PASS',col\""
+ },
+ {
+  "commande": "tellraw @p {text:'CMD-J-196',color:'gold',bold:true,underlined:true}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"'CMD-J-196',color:'gold',bold:true,underlined:true}\": at \" @p {text:>>'CMD-J-196',color:'gold',bold:true,underlined:true}<<\""
+ },
+ {
+  "commande": "tellraw @p {text:'MCCB ',color:'white',extra:[{text:'CMD-J-199',color:'aqua'},{text:' OK',color:'green',bold:true}]}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"'MCCB\": at \" @p {text:>>'MCCB<< ',color:'\""
+ },
+ {
+  "commande": "tellraw @p {text:'Score: ',extra:[{score:{name:'#a',objective:'j04198'}}]}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"'Score:\": at \" @p {text:>>'Score:<< ',extra:[\""
+ },
+ {
+  "commande": "tellraw @p {text:'Target: ',extra:[{selector:'@e[tag=mccb_j04_197_target,limit=1]'}]}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"'Target:\": at \" @p {text:>>'Target:<< ',extra:[\""
+ },
+ {
+  "commande": "tellraw @p {translate:'block.minecraft.stone',color:'gray'}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"'block.minecraft.stone',color:'gray'}\": at \"translate:>>'block.minecraft.stone',color:'gray'}<<\""
+ },
+ {
+  "commande": "tellraw @p {translate:'commands.give.success.single',with:[1,{text:'stone'},{selector:'@p'}]}",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"'commands.give.success.single',with:[1,{text:'stone'},{selector:'@p'}]}\": at \"translate:>>'commands.give.success.single',with:[1,{text:'stone'},{selector:'@p'}]}<<\""
+ },
+ {
+  "commande": "tickingarea add 0 0 32 0 0 32",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Added ticking area from 0, 0, 32 to 15, 0, 47. | 1/10 ticking areas in use."
+ },
+ {
+  "commande": "tickingarea remove 32 0 32",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No ticking areas containing the block position 32, 0, 32 exist in the current dimension."
+ },
+ {
+  "commande": "time add 1000",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Added 1000 time to 'minecraft:overworld'. Time is now 2503"
+ },
+ {
+  "commande": "time set 6000",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Set the time of 'minecraft:overworld' to 6000"
+ },
+ {
+  "commande": "time set noon",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Set the time of 'minecraft:overworld' to 30000"
+ },
+ {
+  "commande": "title @p actionbar {text:'ACTION CMD-J-202',color:'aqua'}",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "title @p actionbar {text:'Nearest: ',extra:[{selector:'@p'}],color:'green'}",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "title @p actionbar §bACTION CMD-J-202",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "title @p subtitle {text:'SUBTITLE CMD-J-201',color:'yellow'}",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "title @p subtitle §eSUBTITLE CMD-J-201",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "title @p title {text:'CMD-J-200',color:'green'}",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "title @p title §aCMD-J-200",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "titleraw @p actionbar {\"rawtext\":[{\"text\":\"§aNearest: \"},{\"text\":\"§a\"},{\"selector\":\"@p\"}]}",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "tp @e[tag=mccb_j04_208_target,c=1] 114 65 476",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "tp @e[tag=mccb_j04_208_target,limit=1] 114 65 476",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"08_target,>>limit<<=1] 114 65\""
+ },
+ {
+  "commande": "tp @e[tag=mccb_j04_211_target,c=1] ~ ~ ~ 45 0",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "tp @e[tag=mccb_j04_211_target,limit=1] ~ ~ ~ 45 0",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"11_target,>>limit<<=1] ~ ~ ~ \""
+ },
+ {
+  "commande": "tp @e[tag=mccb_j04_212_target,c=1] 201 65 475 facing @p",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "tp @e[tag=mccb_j04_212_target,limit=1] 201 65 475 facing entity @p eyes",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"12_target,>>limit<<=1] 201 65\""
+ },
+ {
+  "commande": "tp @e[tag=mccb_j04_225_target,c=1] ~ ~ ~ 135 10",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "No targets matched selector"
+ },
+ {
+  "commande": "tp @e[tag=mccb_j04_225_target,limit=1] ~ ~ ~ 135 10",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"limit\": at \"25_target,>>limit<<=1] ~ ~ ~ \""
+ },
+ {
+  "commande": "weather rain 100",
+  "verdict": "SYNTAXE_ACCEPTEE",
+  "reponse": "Changing to rainy weather"
+ },
+ {
+  "commande": "weather rain 5s",
+  "verdict": "SYNTAXE_REFUSEE",
+  "reponse": "Syntax error: Unexpected \"5s\": at \"ther rain >>5s<<\""
+ },
+ {
+  "commande": "worldborder get",
+  "verdict": "COMMANDE_INCONNUE",
+  "reponse": "Unknown command: worldborder. Please check that the command exists and that you have permission to use it."
+ }
+]

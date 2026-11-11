@@ -1,0 +1,60 @@
+{
+ "schema": "mccb.reference/bedrock-effect-ids/1",
+ "meaning": "numéro d'effet que le moteur Bedrock ÉCRIT dans ActiveEffects[].Id, par nom d'effet Bedrock",
+ "source": {
+  "method": "preuve runtime BDS 1.26.36.1 : un golem de fer par effet, effet appliqué PAR SON NOM avec /effect, ActiveEffects[].Id relu dans le monde sauvegardé ; témoins speed=1, wither=20 revenus attendus",
+  "proof": "worldswitch/proof/effect-enchant-ids-bds-2026-08-09 (table-effets.json, reproduce.mjs)",
+  "date": "2026-08-09"
+ },
+ "note": "Le résumé du Minecraft Wiki consulté le 09/11/2026 inversait 26/27 ; la mesure BDS fait foi (conduit_power 26, slow_falling 27).",
+ "bedrock_to_java_name": {
+  "village_hero": "hero_of_the_village"
+ },
+ "bedrock_only": [
+  "fatal_poison"
+ ],
+ "java_only": [
+  "luck",
+  "unluck",
+  "dolphins_grace",
+  "glowing"
+ ],
+ "ids": {
+  "speed": 1,
+  "slowness": 2,
+  "haste": 3,
+  "mining_fatigue": 4,
+  "strength": 5,
+  "instant_health": 6,
+  "jump_boost": 8,
+  "nausea": 9,
+  "regeneration": 10,
+  "resistance": 11,
+  "fire_resistance": 12,
+  "water_breathing": 13,
+  "invisibility": 14,
+  "blindness": 15,
+  "night_vision": 16,
+  "hunger": 17,
+  "weakness": 18,
+  "poison": 19,
+  "wither": 20,
+  "health_boost": 21,
+  "absorption": 22,
+  "saturation": 23,
+  "levitation": 24,
+  "fatal_poison": 25,
+  "conduit_power": 26,
+  "slow_falling": 27,
+  "bad_omen": 28,
+  "village_hero": 29,
+  "darkness": 30,
+  "trial_omen": 31,
+  "wind_charged": 32,
+  "weaving": 33,
+  "oozing": 34,
+  "infested": 35,
+  "raid_omen": 36,
+  "breath_of_the_nautilus": 37
+ }
+}

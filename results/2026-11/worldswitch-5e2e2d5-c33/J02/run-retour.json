@@ -1,0 +1,150 @@
+{
+ "schema": "mccb.run/1",
+ "run_id": "J02_retour",
+ "converter": {
+  "name": "WorldSwitch",
+  "engine_package": "worldswitch",
+  "engine_package_version": "2.8.0",
+  "commit": "5e2e2d528d469eb3fdd90dd318073304fa46fa25",
+  "working_tree_clean": false,
+  "patch": "arbre /srv/mccb-2026-11/src-c33 du labo (corrections non commitées du dépôt, voir 05-rapports)",
+  "build": "docker image mccb-ws:5e2e2d5-c33 (sha256:d198d4c6c42bf0a89e09c6c0588beddacc87674848132e456b16eb09fd17c9b2), Dockerfile du dépôt, git archive du commit",
+  "source_available": false
+ },
+ "direction": "bedrock_to_java",
+ "source": {
+  "ref": "J02_aller",
+  "file": "output.mcworld",
+  "sha256": "4194c997c7a4030eec2655e2401389eedd772881028e1c30ed9795c4ac867324",
+  "bytes": 5984121
+ },
+ "options": {
+  "recoverUnlinked": true,
+  "locale": "en",
+  "javaUuid": null,
+  "playerMap": null
+ },
+ "environment": {
+  "kind": "labo prod-like (docker-compose.yml)",
+  "limits": {
+   "converter": "cpus 4, memory 5632m, swap 0, read-only, network none, cap-drop ALL, pids 512",
+   "worker": "cpus 0.75, memory 512m, swap 0"
+  },
+  "host": {
+   "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor",
+   "nproc": 8,
+   "kernel": "6.18.58.1-microsoft-standard-WSL2",
+   "mem_total_kb": 8134304
+  }
+ },
+ "started_at": "2026-11-10T15:29:44.018Z",
+ "finished_at": "2026-11-10T15:29:46.996Z",
+ "duration_ms": 2978,
+ "exit_status": 0,
+ "error": null,
+ "output": {
+  "file": "output.zip",
+  "sha256": "f2008988976dfe025f9ea71580718e4a6f7d3feb2dd3d8473194f057ad49d478",
+  "bytes": 3387468,
+  "engine_filename": "J02_java.zip"
+ },
+ "logs": [
+  "converter.log",
+  "worker.log",
+  "prep.log"
+ ],
+ "peak": {
+  "converter_memory_bytes": 429858816,
+  "worker_memory_bytes": 63619072
+ },
+ "lab": {
+  "job_id": "814c23aa-fb0c-4b56-a8b6-aee758bed56e",
+  "final_status": "done",
+  "attempts": 1,
+  "notice": {
+   "fidelity": {
+    "total": 2,
+    "impacts": [
+     {
+      "en": "Dropped — block entity `Lodestone`",
+      "fr": "Supprimé — block entity `Lodestone`",
+      "category": "dropped"
+     },
+     {
+      "en": "Approximated — entity `minecraft:wither.Health`",
+      "fr": "Approximé — entité `minecraft:wither.Health`",
+      "category": "approximated"
+     }
+    ],
+    "detailed": 2,
+    "families": 2,
+    "truncated": 0,
+    "byCategory": {
+     "dropped": 1,
+     "approximated": 1
+    }
+   }
+  },
+  "upload_ms": 74,
+  "analysis_ms": 241,
+  "analysis": {
+   "detectedType": "Bedrock",
+   "version": "Bedrock 1.26.50",
+   "sizeBytes": 5984121,
+   "sizeFormatted": "5.7 Mo",
+   "uncompressedBytes": 60108520,
+   "chunkCount": 15,
+   "levelName": "J02",
+   "valid": true,
+   "gameMode": "creative",
+   "difficulty": "normal",
+   "spawn": "0, -60, 0",
+   "worldRootPrefix": "",
+   "worldCount": 1,
+   "players": [
+    {
+     "sourceId": "~local_player",
+     "isHost": true,
+     "sourceLabel": "Joueur principal",
+     "labelSource": "host",
+     "displayIndex": 1,
+     "xuid": null,
+     "msaId": null,
+     "identifiers": [],
+     "profile": {
+      "items": 0,
+      "armor": 0,
+      "ender": 0,
+      "xpLevel": 0,
+      "dimension": "overworld",
+      "pos": [
+       -37,
+       223,
+       2
+      ],
+      "nameHints": [],
+      "empty": true
+     },
+     "profileReadable": true,
+     "sharesAccountWith": 0
+    }
+   ],
+   "playersScanned": true,
+   "playersSkippedReason": null,
+   "curedVillagers": 2
+  },
+  "queue_to_done_ms": 3843,
+  "wall_s_worker_start_to_terminal": 4.87,
+  "converter": {
+   "memory_peak_bytes": 429858816,
+   "cpu_usec": 4844415,
+   "oom_kills": 0,
+   "scratch_peak_bytes_sampled_2s": 72763257
+  },
+  "worker": {
+   "memory_peak_bytes": 63619072,
+   "cpu_usec": 501877,
+   "scratch_peak_bytes_sampled_2s": 0
+  }
+ }
+}

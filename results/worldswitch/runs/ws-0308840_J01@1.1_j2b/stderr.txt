@@ -1,0 +1,65 @@
+(node:4224) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of <LOCAL>/worldswitch/lib/converter.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to <LOCAL>\worldswitch\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:4224) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of <LOCAL>/worldswitch/lib/converter.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to <LOCAL>\worldswitch\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:4224) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of <LOCAL>/worldswitch/lib/converter.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to <LOCAL>\worldswitch\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:4224) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of <LOCAL>/worldswitch/lib/converter.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to <LOCAL>\worldswitch\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:4224) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of <LOCAL>/worldswitch/lib/converter.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to <LOCAL>\worldswitch\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:4224) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of <LOCAL>/worldswitch/lib/converter.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to <LOCAL>\worldswitch\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:4224) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of <LOCAL>/worldswitch/lib/converter.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to <LOCAL>\worldswitch\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:4224) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of <LOCAL>/worldswitch/lib/converter.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to <LOCAL>\worldswitch\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:4224) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of <LOCAL>/worldswitch/lib/converter.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to <LOCAL>\worldswitch\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[jtb] 6 objet(s) sans identifiant équivalent, 6 cas :
+[jtb]   ×1 minecraft:test_block (laissé tel quel) — bloc de test, propre à Java
+[jtb]   ×1 minecraft:test_instance_block (laissé tel quel) — bloc de test, propre à Java
+[jtb]   ×1 minecraft:spectral_arrow → minecraft:arrow — l'effet Lueur
+[jtb]   ×1 minecraft:knowledge_book (laissé tel quel) — livre de recettes, propre à Java
+[jtb]   ×1 minecraft:debug_stick (laissé tel quel) — objet de débogage, propre à Java
+[jtb]   ×1 minecraft:furnace_minecart → minecraft:minecart — le four (retiré de Bedrock)
+[jtb] 81 famille(s) de perte de fidélité :
+[jtb]   ×4126 [normalized/block_state] minecraft:<stairs>.shape — outer_left non écrit : Bedrock recalcule la forme d'angle depuis les voisins
+[jtb]   ×384 [archived/block_entity] minecraft:calibrated_sculk_sensor — recopiée verbatim faute de schéma Bedrock relevé : l'aller-retour la retrouve, le jeu non
+[jtb]   ×256 [archived/block_entity] minecraft:copper_golem_statue — recopiée verbatim faute de schéma Bedrock relevé : l'aller-retour la retrouve, le jeu non
+[jtb]   ×96 [archived/block_entity] minecraft:sculk_sensor — recopiée verbatim faute de schéma Bedrock relevé : l'aller-retour la retrouve, le jeu non
+[jtb]   ×34 [archived/entity] minecraft:villager : CanPickUpLoot — Champs Java sans equivalent Bedrock (CanPickUpLoot) : conserves pour un retour IMMEDIAT vers Java seulement. Le moteur Bedrock les SUPPRIME des qu'il recharge l'entite, et le comportement correspondant n'existe pas sous Bedrock.
+[jtb]   ×32 [archived/block_entity] minecraft:daylight_detector — recopiée verbatim faute de schéma Bedrock relevé : l'aller-retour la retrouve, le jeu non
+[jtb]   ×24 [normalized/block_state] minecraft:big_dripleaf.tilt — unstable → none (état transitoire réarmé)
+[jtb]   ×23 [archived/entity] minecraft:pig : sound_variant — Champs Java sans equivalent Bedrock (sound_variant) : conserves pour un retour IMMEDIAT vers Java seulement. Le moteur Bedrock les SUPPRIME des qu'il recharge l'entite, et le comportement correspondant n'existe pas sous Bedrock.
+[jtb]   ×18 [archived/block_entity] minecraft:creaking_heart — recopiée verbatim faute de schéma Bedrock relevé : l'aller-retour la retrouve, le jeu non
+[jtb]   ×17 [archived/entity] minecraft:chicken : EggLayTime — Champs Java sans equivalent Bedrock (EggLayTime) : conserves pour un retour IMMEDIAT vers Java seulement. Le moteur Bedrock les SUPPRIME des qu'il recharge l'entite, et le comportement correspondant n'existe pas sous Bedrock.
+[jtb]   ×16 [archived/entity] minecraft:chicken : sound_variant — Champs Java sans equivalent Bedrock (sound_variant) : conserves pour un retour IMMEDIAT vers Java seulement. Le moteur Bedrock les SUPPRIME des qu'il recharge l'entite, et le comportement correspondant n'existe pas sous Bedrock.
+[jtb]   ×13 [archived/entity] minecraft:cow : sound_variant — Champs Java sans equivalent Bedrock (sound_variant) : conserves pour un retour IMMEDIAT vers Java seulement. Le moteur Bedrock les SUPPRIME des qu'il recharge l'entite, et le comportement correspondant n'existe pas sous Bedrock.
+[jtb]   ×9 [dropped/world_data] planification du marchand ambulant — Java garde l'état du PROCHAIN marchand ambulant (prochain passage dans 20400 tick(s)). Bedrock gère cette planification en interne, sans réglage équivalent : le compteur repart de zéro. Un marchand DÉJÀ dans le monde, lui, est bien converti.
+[jtb]   ×9 [archived/world_data] suites aléatoires (butin déterministe) — 8 suite(s) aléatoire(s) enregistrée(s). Java s'en sert pour que le butin d'un coffre non encore ouvert soit reproductible ; Bedrock tire le sien autrement. Le contenu déjà généré ne bouge pas — ce qui reste à tirer peut différer.
+[jtb]   ×8 [dropped/block_state] minecraft:decorated_pot.cracked — cracked=1
+[jtb]   ×8 [archived/block_entity] minecraft:sculk_shrieker — recopiée verbatim faute de schéma Bedrock relevé : l'aller-retour la retrouve, le jeu non
+[jtb]   ×6 [archived/entity] minecraft:cat : sound_variant — Champs Java sans equivalent Bedrock (sound_variant) : conserves pour un retour IMMEDIAT vers Java seulement. Le moteur Bedrock les SUPPRIME des qu'il recharge l'entite, et le comportement correspondant n'existe pas sous Bedrock.
+[jtb]   ×4 [approximated/item_component] minecraft:fireworks (couleur) — #ff0000 → teinture Bedrock la plus proche (#b3312c) : Bedrock n'a que 16 couleurs de gerbe
+[jtb]   ×4 [dropped/block_entity] minecraft:test_block — bloc absent de la version-cible Bedrock 1.26.40 : block-entity orpheline
+[jtb]   ×3 [archived/entity] minecraft:iron_golem : PlayerCreated — Champs Java sans equivalent Bedrock (PlayerCreated) : conserves pour un retour IMMEDIAT vers Java seulement. Le moteur Bedrock les SUPPRIME des qu'il recharge l'entite, et le comportement correspondant n'existe pas sous Bedrock.
+[jtb]   … et 61 autre(s) famille(s)

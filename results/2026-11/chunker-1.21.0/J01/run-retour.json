@@ -1,0 +1,50 @@
+{
+ "schema": "mccb.run/1",
+ "run_id": "J01_retour",
+ "converter": {
+  "name": "Chunker",
+  "slug": "chunker",
+  "version": "1.21.0",
+  "release": "https://github.com/HiveGamesOSS/Chunker/releases/tag/1.21.0",
+  "tool_file": "chunker-cli-1.21.0.jar",
+  "tool_sha256": "63148e587f5ee5a2ca7ebae1079b235c82ae4d1eff8f7a8a8a3398332513dda6",
+  "runtime": "eclipse-temurin:25-jre, -XX:MaxRAMPercentage=75",
+  "formats": {
+   "java_to_bedrock": "BEDROCK_R26_40",
+   "bedrock_to_java": "JAVA_26_3"
+  },
+  "source_available": true,
+  "build": "docker image mccb-chunker:1.21.0 (sha256:7ad5ce64693caafe47a382f758ce46a57cd0e54a3168be2d6e14c18e85cf0024)",
+  "command_template": "S=$(date +%s%N); java -XX:MaxRAMPercentage=75 -jar /opt/chunker-cli-1.21.0.jar -i /in -o /out -f JAVA_26_3; E=$?; echo MCCB_MS=$(( ($(date +%s%N) - S) / 1000000 )) >&2; exit $E"
+ },
+ "direction": "bedrock_to_java",
+ "source": {
+  "ref": "J01_aller",
+  "file": "output.mcworld",
+  "sha256": "2a2cbb7ba961a8353e13522ff7a4e7e2d9076b9c6f02496652c6e867ecfa0c90",
+  "bytes": 81637988
+ },
+ "options": {},
+ "environment": {
+  "kind": "labo prod-like, conteneur identique au convertisseur WorldSwitch",
+  "limits": "--cpus 4 --memory 5632m --memory-swap 5632m --network none"
+ },
+ "started_at": "2026-11-06T11:13:11.244609837Z",
+ "finished_at": "2026-11-06T11:13:23.715127543Z",
+ "duration_ms": 12391,
+ "exit_status": 0,
+ "oom_killed": false,
+ "error": null,
+ "output": {
+  "file": "output.zip",
+  "sha256": "0c2b992c2f14263d9d72406130f25128276a89a8c86ddaefb09fdef73908e9f1",
+  "bytes": 99725534
+ },
+ "logs": [
+  "stdout.log",
+  "stderr.log"
+ ],
+ "peak": {
+  "converter_memory_bytes": 2195783680
+ }
+}

@@ -1,0 +1,23 @@
+[
+ {
+  "fidelity": {
+   "total": 7,
+   "families": 5,
+   "byCategory": {
+    "dropped": 6,
+    "archived": 1
+   },
+   "detailed": 5,
+   "truncated": 0
+  },
+  "commands": {
+   "total": 1,
+   "disabled": 0,
+   "approximated": 1,
+   "byKind": {
+    "approximate_translation": 1
+   },
+   "reportFile": "worldswitch_command_report.json"
+  }
+ }
+]

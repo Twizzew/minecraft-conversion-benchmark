@@ -1,0 +1,49 @@
+{
+  "schema": "mccb.run/1",
+  "run_id": "diag_J03",
+  "converter": {
+    "name": "je2be",
+    "slug": "je2be",
+    "version": "core-8dfc4de",
+    "commit": "8dfc4de1ba5c7f72e804abea8663380c0dbd5680",
+    "source_available": true,
+    "tool_file": "j2b",
+    "tool_sha256": "172652363a8db105f2cc3f740517fba1ec3d79db5fe6fe100538098bfb8dc293",
+    "command_template": "echo INPUT={input_dir}; ls {input_dir}; echo '--- region/:'; ls {input_dir}/region 2>&1; echo '--- dimensions/minecraft/overworld/region/:'; ls {input_dir}/dimensions/minecraft/overworld/region 2>&1 | head -3; <BUILD>/j2b -i {input_dir} -o {output_dir}"
+  },
+  "direction": "java_to_bedrock",
+  "source": {
+    "ref": "diag",
+    "file": "MCCB_J03_SYSTEMS_JAVA.zip",
+    "sha256": "45c7ae7293ff1dfd3310757a8b56f1d094e6928aa20a82b68ff45428f55bbc50",
+    "bytes": 6325350
+  },
+  "options": {},
+  "environment": {
+    "node": "v22.22.2",
+    "platform": "linux",
+    "arch": "x64",
+    "os_release": "6.18.44-fc-v37",
+    "cpus": 4,
+    "cpu_model": "Intel(R) Xeon(R) Processor @ 2.80GHz",
+    "total_mem_bytes": 16877547520
+  },
+  "started_at": "2026-09-29T16:15:42.307Z",
+  "finished_at": "2026-09-29T16:15:42.343Z",
+  "duration_ms": 36,
+  "exit_status": 0,
+  "signal": null,
+  "error": null,
+  "output": {
+    "file": "output.mcworld",
+    "packed_by": "mccb (sorted entries, fixed timestamp)",
+    "sha256": "d2beda40a65cfc985f05abea87fb164fbb50daa6c93496763a1996a153ada4b6",
+    "bytes": 2265,
+    "tree_sha256": "9dff2368edb112db1879c1799db6ba3a3a4d2ef92d5aa8cab4b70c08621cac6c",
+    "files": 5
+  },
+  "logs": [
+    "stdout.log",
+    "stderr.log"
+  ]
+}

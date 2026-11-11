@@ -1,0 +1,70 @@
+{
+ "schema": "mccb.run/1",
+ "run_id": "J04_retour",
+ "converter": {
+  "name": "Universal Minecraft Tool",
+  "slug": "umt",
+  "version": "1.5.10",
+  "release": "v1.5.10, © 2023 Pryze Software LLC (Settings › About & Licenses) ; application Windows payante, abonnement de l'utilisateur",
+  "app_settings": "Converter : Copy Bedrock Worlds = oui (UMT travaille sur une copie), Copy Java Worlds = non, Remember Conversion Options = oui ; Auto Update = oui",
+  "tool_file": "UniversalMinecraftTool.exe",
+  "tool_sha256": "9c35ed26d7b49abed4c0448bea674e428f8481554fa925c298985f8564c0dc51",
+  "runtime": "Windows 11 (PC de l'utilisateur), interface graphique pilotée à l'écran",
+  "formats": {
+   "java_to_bedrock": "Bedrock 26.50 (Latest)",
+   "bedrock_to_java": "Java 26.3 (Latest)"
+  },
+  "source_available": false,
+  "build": "installateur officiel, C:\\Program Files (x86)\\Universal Minecraft Tool",
+  "command_template": "Converter : Input (dossier du monde) → Output (édition, version « Latest ») → Options (défauts) → Start Conversion → Save World"
+ },
+ "direction": "bedrock_to_java",
+ "source": {
+  "ref": "J04_aller",
+  "file": "output.mcworld",
+  "sha256": "25f2fb6d59b359a95acb7f92af7c1027c8afd9665bd76a2c65a48783d8ae289a",
+  "bytes": 917800
+ },
+ "options": {
+  "dimensions": "Overworld, Nether, The End",
+  "tile_entities": true,
+  "entities": true,
+  "ticks": true,
+  "skip_partially_generated_chunks": true,
+  "allow_older_chunk_versions": true,
+  "game_mode": "No Change",
+  "difficulty": "No Change",
+  "depth_fixer": "Clip + Bedrock",
+  "new_world_center": "Coords X 0 Z 0",
+  "note": "réglages par défaut d'UMT, aucun modifié"
+ },
+ "environment": {
+  "kind": "Windows 11, PC de l'utilisateur (PAS le labo Linux) : UMT est une application Windows à fenêtres sans mode commande",
+  "limits": "aucune limite imposée (16 cœurs vus par UMT, 31 Go de RAM)"
+ },
+ "started_at": "2026-11-07T09:58:23.958Z",
+ "finished_at": "2026-11-07T09:58:40.971Z",
+ "duration_ms": 17013,
+ "timing": {
+  "measured": "heure système (Bash) juste avant le clic « Start Conversion » → juste après avoir vu « Conversion Successful » à l'écran ; mesuré sous Windows",
+  "precision": "majorant : inclut le délai du pilotage à l'écran (≈ 5 à 8 s par mesure)",
+  "umt_elapsed_display": "0:07",
+  "umt_chunks_converted": 15591,
+  "save_ms": 9378,
+  "save_measured": "Entrée dans la boîte « Enregistrer » → message « The world has been saved! » vu (majorant, même délai)"
+ },
+ "exit_status": 0,
+ "oom_killed": false,
+ "error": null,
+ "output": {
+  "file": "output.zip",
+  "sha256": "b4b8cc0ea82ec69449113a7d3d5d108bf06ddb7f815e6de371ebe40199e52510",
+  "bytes": 4297327
+ },
+ "logs": [
+  "pilotage.log"
+ ],
+ "peak": {
+  "converter_memory_bytes": null
+ }
+}

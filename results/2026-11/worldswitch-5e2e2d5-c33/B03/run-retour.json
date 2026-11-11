@@ -1,0 +1,158 @@
+{
+ "schema": "mccb.run/1",
+ "run_id": "B03_retour",
+ "converter": {
+  "name": "WorldSwitch",
+  "engine_package": "worldswitch",
+  "engine_package_version": "2.8.0",
+  "commit": "5e2e2d528d469eb3fdd90dd318073304fa46fa25",
+  "working_tree_clean": false,
+  "patch": "arbre /srv/mccb-2026-11/src-c33 du labo (corrections non commitées du dépôt, voir 05-rapports)",
+  "build": "docker image mccb-ws:5e2e2d5-c33 (sha256:d198d4c6c42bf0a89e09c6c0588beddacc87674848132e456b16eb09fd17c9b2), Dockerfile du dépôt, git archive du commit",
+  "source_available": false
+ },
+ "direction": "java_to_bedrock",
+ "source": {
+  "ref": "B03_aller",
+  "file": "output.zip",
+  "sha256": "8cfbf654c34e977bf092d80ccf8ea37f42a6ae4bb2c6dd6de3d5d29f3d156749",
+  "bytes": 886800
+ },
+ "options": {
+  "targetVersion": "latest",
+  "recoverUnlinked": true,
+  "locale": "en"
+ },
+ "environment": {
+  "kind": "labo prod-like (docker-compose.yml)",
+  "limits": {
+   "converter": "cpus 4, memory 5632m, swap 0, read-only, network none, cap-drop ALL, pids 512",
+   "worker": "cpus 0.75, memory 512m, swap 0"
+  },
+  "host": {
+   "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor",
+   "nproc": 8,
+   "kernel": "6.18.58.1-microsoft-standard-WSL2",
+   "mem_total_kb": 8134304
+  }
+ },
+ "started_at": "2026-11-10T15:29:28.245Z",
+ "finished_at": "2026-11-10T15:29:29.29Z",
+ "duration_ms": 1045,
+ "exit_status": 0,
+ "error": null,
+ "output": {
+  "file": "output.mcworld",
+  "sha256": "23d96e068466cf1948686413cead13875e4212eec804bf04c160c11abe9da650",
+  "bytes": 783687,
+  "engine_filename": "BO3_SYSTEMS_bedrock.mcworld"
+ },
+ "logs": [
+  "converter.log",
+  "worker.log",
+  "prep.log"
+ ],
+ "peak": {
+  "converter_memory_bytes": 225247232,
+  "worker_memory_bytes": 52105216
+ },
+ "lab": {
+  "job_id": "aa4d5885-f8ca-4b16-891a-39edfdde4c1e",
+  "final_status": "done",
+  "attempts": 1,
+  "notice": {
+   "fidelity": {
+    "total": 20,
+    "impacts": [
+     {
+      "en": "Archived — entity `minecraft:cat : sound_variant: fields with no equivalent`",
+      "fr": "Archivé — entité `minecraft:cat : sound_variant : champs sans équivalent`",
+      "category": "archived"
+     },
+     {
+      "en": "Archived — entity `minecraft:iron_golem : PlayerCreated: fields with no equivalent`",
+      "fr": "Archivé — entité `minecraft:iron_golem : PlayerCreated : champs sans équivalent`",
+      "category": "archived"
+     }
+    ],
+    "detailed": 7,
+    "families": 7,
+    "truncated": 0,
+    "byCategory": {
+     "archived": 2,
+     "normalized": 18
+    }
+   }
+  },
+  "upload_ms": 34,
+  "analysis_ms": 296,
+  "analysis": {
+   "detectedType": "Java",
+   "version": "Java 1.20.4",
+   "sizeBytes": 886800,
+   "sizeFormatted": "866 Ko",
+   "uncompressedBytes": 2342576,
+   "chunkCount": 402,
+   "levelName": "BO3 SYSTEMS",
+   "valid": true,
+   "gameMode": "creative",
+   "difficulty": "hard",
+   "spawn": "0, 201, 0",
+   "worldRootPrefix": "",
+   "worldCount": 1,
+   "players": [
+    {
+     "sourceId": "f5a1c0de-0000-4000-8000-000000000001",
+     "isHost": true,
+     "sourceLabel": "Joueur principal",
+     "labelSource": "host",
+     "displayIndex": 1,
+     "identifiers": [],
+     "profile": {
+      "items": 0,
+      "armor": 0,
+      "ender": 0,
+      "xpLevel": 0,
+      "dimension": "overworld",
+      "pos": [
+       19,
+       200,
+       39
+      ],
+      "nameHints": [],
+      "empty": true
+     },
+     "profileReadable": true,
+     "sharesAccountWith": 0
+    }
+   ],
+   "playersScanned": true,
+   "playersSkippedReason": null,
+   "playerLinkingSupported": false,
+   "terrainScan": {
+    "total": 200,
+    "unreadable": 0,
+    "truncatedRegions": 0,
+    "complete": true
+   },
+   "terrainDimensions": {
+    "overworld": 82,
+    "nether": 67,
+    "end": 51
+   }
+  },
+  "queue_to_done_ms": 1867,
+  "wall_s_worker_start_to_terminal": 2.686,
+  "converter": {
+   "memory_peak_bytes": 225247232,
+   "cpu_usec": 1899226,
+   "oom_kills": 0,
+   "scratch_peak_bytes_sampled_2s": 0
+  },
+  "worker": {
+   "memory_peak_bytes": 52105216,
+   "cpu_usec": 410622,
+   "scratch_peak_bytes_sampled_2s": 0
+  }
+ }
+}

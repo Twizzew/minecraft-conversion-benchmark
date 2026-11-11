@@ -1,0 +1,16 @@
+J05_aller	jtb	MCCB_J05_JAVA_26.3.zip
+J05_retour	btj	@J05_aller
+B01_aller	btj	MCCB_B01_STATIC_BEDROCK.mcworld
+B01_retour	jtb	@B01_aller
+B02_aller	btj	MCCB_B02_LIVING_BEDROCK.mcworld
+B02_retour	jtb	@B02_aller
+B03_aller	btj	MCCB_B03_SYSTEMS_BEDROCK.mcworld
+B03_retour	jtb	@B03_aller
+J02_aller	jtb	MCCB_J02_JAVA_26.3.zip
+J02_retour	btj	@J02_aller
+J04_aller	jtb	MCCB_J04_JAVA_26.3.zip
+J04_retour	btj	@J04_aller
+J03_aller	jtb	MCCB_J03_JAVA_26.3.zip
+J03_retour	btj	@J03_aller
+J01_aller	jtb	MCCB_J01_JAVA_26.3.zip
+J01_retour	btj	@J01_aller

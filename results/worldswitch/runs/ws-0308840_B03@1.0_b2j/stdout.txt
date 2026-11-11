@@ -1,0 +1,8 @@
+[btj] joueurs : 1 détecté(s), 0 rattaché(s) à un compte Java cible
+[btj] structures Bedrock : 102 entrée(s) 0x77 + 0 zone(s) 0x39 (trial_chambers×52, fortress×47, desert_pyramid×3) → 55 start(s) Java sur 55 chunk(s)
+[btj] régions : 17 tâche(s) en séquentiel
+[btj] 200 charge(s) biome Bedrock reportée(s) au sidecar
+[btj] scoreboard → data/scoreboard.dat
+[btj] zones de tick : 3 zone(s) → 34 chunk(s) forcé(s) dans 3 dimension(s) (data/chunks.dat)
+[btj] sidecar : 1449 enregistrements Bedrock conservés
+[btj] 1529 subchunks, 649 BE, 60 entities, 0 maps, player=yes, legacyB=0

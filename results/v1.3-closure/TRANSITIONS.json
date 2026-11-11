@@ -1,0 +1,82 @@
+{
+ "schema": "mccb.closure-transitions/1",
+ "worlds": [
+  "J01@1.1",
+  "J02@1.0",
+  "J03@1.0",
+  "J04@1.0",
+  "B01@1.0",
+  "B02@1.0",
+  "B03@1.0"
+ ],
+ "by_build": {
+  "ws-0308840": {
+   "B01 | block_entity.data | roundtrip | PASS -> PARTIAL | block_entity.data.roundtrip": 4,
+   "B02 | entity.inventory | direct | PASS -> NOT_EVALUATED | no-cross-edition-slot-reference": 1,
+   "B02 | item_stack.component:minecraft:custom_name | direct | PASS -> FAIL | item_stack.component:minecraft:custom_name": 1,
+   "B02 | item_stack.component:minecraft:damage | direct | PASS -> FAIL | item_stack.component:minecraft:damage": 3,
+   "B02 | item_stack.component:minecraft:repair_cost | direct | PASS -> FAIL | item_stack.component:minecraft:repair_cost": 6,
+   "B02 | item_stack.count | direct | PASS -> FAIL | item_stack.count": 12,
+   "B02 | item_stack.identity | direct | PASS -> FAIL | item_stack.identity": 12,
+   "B02 | item_stack.identity | roundtrip | PASS -> FAIL | item_stack.identity.roundtrip.aux": 3,
+   "B02 | player.armor | direct | PASS -> NOT_EVALUATED | source-slot-not-recorded-in-v1.3-fixture": 1,
+   "B02 | player.armor | roundtrip | PASS -> NOT_EVALUATED | source-slot-not-recorded-in-v1.3-fixture": 1,
+   "B03 | item_stack.count | roundtrip | PASS -> FAIL | item_stack.count.roundtrip": 2,
+   "B03 | item_stack.identity | roundtrip | PASS -> FAIL | item_stack.identity.roundtrip": 2,
+   "J02 | entity.data | roundtrip | PASS -> PARTIAL | entity.data.roundtrip": 18,
+   "J02 | entity.equipment | direct | PASS -> FAIL | entity.equipment.direct": 1,
+   "J02 | entity.equipment | roundtrip | PASS -> PARTIAL | entity.equipment.roundtrip": 1,
+   "J02 | player.armor | direct | PASS -> NOT_EVALUATED | source-slot-not-recorded-in-v1.3-fixture": 1,
+   "J02 | player.armor | roundtrip | PASS -> NOT_EVALUATED | source-slot-not-recorded-in-v1.3-fixture": 1,
+   "J03 | entity.data | roundtrip | PASS -> PARTIAL | entity.data.roundtrip": 6,
+   "J03 | item_stack.count | direct | PASS -> FAIL | item_stack.count": 2,
+   "J03 | item_stack.identity | direct | PASS -> FAIL | item_stack.identity": 2,
+   "J04 | entity.data | roundtrip | PASS -> PARTIAL | entity.data.roundtrip": 6
+  },
+  "ws-fd9b735": {
+   "B01 | block_entity.data | roundtrip | PASS -> PARTIAL | block_entity.data.roundtrip": 4,
+   "B02 | entity.equipment | roundtrip | PASS -> FAIL | entity.equipment.roundtrip": 1,
+   "B02 | entity.inventory | direct | PASS -> NOT_EVALUATED | no-cross-edition-slot-reference": 1,
+   "B02 | player.armor | direct | PASS -> NOT_EVALUATED | source-slot-not-recorded-in-v1.3-fixture": 1,
+   "B02 | player.armor | roundtrip | PASS -> NOT_EVALUATED | source-slot-not-recorded-in-v1.3-fixture": 1,
+   "J02 | entity.data | roundtrip | PASS -> PARTIAL | entity.data.roundtrip": 21,
+   "J02 | entity.equipment | direct | PASS -> FAIL | entity.equipment.direct": 1,
+   "J02 | entity.equipment | roundtrip | PASS -> PARTIAL | entity.equipment.roundtrip": 1,
+   "J02 | player.armor | direct | PASS -> NOT_EVALUATED | source-slot-not-recorded-in-v1.3-fixture": 1,
+   "J02 | player.armor | roundtrip | PASS -> NOT_EVALUATED | source-slot-not-recorded-in-v1.3-fixture": 1,
+   "J03 | entity.data | roundtrip | PASS -> PARTIAL | entity.data.roundtrip": 6,
+   "J04 | entity.data | roundtrip | PASS -> PARTIAL | entity.data.roundtrip": 5
+  },
+  "chunker-1.20.0": {
+   "B01 | block_entity.data | roundtrip | PASS -> PARTIAL | block_entity.data.roundtrip": 31,
+   "B01 | player.inventory | roundtrip | PARTIAL -> FAIL | player.inventory.roundtrip": 1,
+   "B02 | block_entity.data | roundtrip | PASS -> PARTIAL | block_entity.data.roundtrip": 5,
+   "B02 | item_stack.aux | roundtrip | PASS -> FAIL | item_stack.aux.roundtrip": 1,
+   "B02 | item_stack.component:minecraft:custom_name | direct | PASS -> FAIL | item_stack.component:minecraft:custom_name": 1,
+   "B02 | item_stack.component:minecraft:custom_name | roundtrip | PASS -> FAIL | item_stack.component:minecraft:custom_name.roundtrip": 1,
+   "B02 | item_stack.component:minecraft:damage | direct | PASS -> FAIL | item_stack.component:minecraft:damage": 3,
+   "B02 | item_stack.component:minecraft:damage | roundtrip | PASS -> FAIL | item_stack.component:minecraft:damage.roundtrip": 3,
+   "B02 | item_stack.component:minecraft:repair_cost | direct | PASS -> FAIL | item_stack.component:minecraft:repair_cost": 6,
+   "B02 | item_stack.component:minecraft:repair_cost | roundtrip | PASS -> FAIL | item_stack.component:minecraft:repair_cost.roundtrip": 6,
+   "B02 | item_stack.count | direct | PASS -> FAIL | item_stack.count": 12,
+   "B02 | item_stack.count | roundtrip | PASS -> FAIL | item_stack.count.roundtrip": 12,
+   "B02 | item_stack.identity | direct | PASS -> FAIL | item_stack.identity": 12,
+   "B02 | item_stack.identity | roundtrip | PASS -> FAIL | item_stack.identity.roundtrip": 12,
+   "B02 | item_stack.tag | roundtrip | PASS -> FAIL | item_stack.tag.roundtrip": 4,
+   "B02 | player.armor | direct | PASS -> NOT_EVALUATED | source-slot-not-recorded-in-v1.3-fixture": 1,
+   "B02 | player.armor | roundtrip | PARTIAL -> FAIL | player.armor.roundtrip": 1,
+   "B02 | player.inventory | roundtrip | PARTIAL -> FAIL | player.inventory.roundtrip": 1,
+   "B03 | block_entity.data | roundtrip | PASS -> PARTIAL | block_entity.data.roundtrip": 14,
+   "J01 | block_entity.data | roundtrip | PASS -> PARTIAL | block_entity.data.roundtrip": 27,
+   "J02 | player.armor | direct | PASS -> NOT_EVALUATED | source-slot-not-recorded-in-v1.3-fixture": 1,
+   "J02 | player.armor | roundtrip | PASS -> NOT_EVALUATED | source-slot-not-recorded-in-v1.3-fixture": 1
+  },
+  "je2be-core-8dfc4de": {
+   "B01 | block_entity.data | roundtrip | PASS -> PARTIAL | block_entity.data.roundtrip": 4,
+   "B02 | block_entity.data | roundtrip | PASS -> PARTIAL | block_entity.data.roundtrip": 1,
+   "B02 | entity.data | roundtrip | PASS -> PARTIAL | entity.data.roundtrip": 3,
+   "B02 | entity.inventory | direct | PASS -> NOT_EVALUATED | no-cross-edition-slot-reference": 1,
+   "B03 | entity.data | roundtrip | PASS -> PARTIAL | entity.data.roundtrip": 7
+  }
+ }
+}

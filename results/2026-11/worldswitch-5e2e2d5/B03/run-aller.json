@@ -1,0 +1,199 @@
+{
+ "schema": "mccb.run/1",
+ "run_id": "B03_aller",
+ "converter": {
+  "name": "WorldSwitch",
+  "engine_package": "worldswitch",
+  "engine_package_version": "2.8.0",
+  "commit": "5e2e2d528d469eb3fdd90dd318073304fa46fa25",
+  "working_tree_clean": true,
+  "build": "docker image mccb-ws:5e2e2d5 (sha256:6056b0f06d32a23b6df03d9c29faf18e494fe688e3a5ed5e6d90eb5667942ec8), Dockerfile du dépôt, git archive du commit",
+  "source_available": false
+ },
+ "direction": "bedrock_to_java",
+ "source": {
+  "ref": "source",
+  "file": "MCCB_B03_SYSTEMS_BEDROCK.mcworld",
+  "sha256": "fd16e5d795f6b707fb48bce821e09dcad5a8e15c87e101d6e080bb24c911a838",
+  "bytes": 779237
+ },
+ "options": {
+  "recoverUnlinked": true,
+  "locale": "en",
+  "javaUuid": null,
+  "playerMap": null
+ },
+ "environment": {
+  "kind": "labo prod-like (docker-compose.yml)",
+  "limits": {
+   "converter": "cpus 4, memory 5632m, swap 0, read-only, network none, cap-drop ALL, pids 512",
+   "worker": "cpus 0.75, memory 512m, swap 0"
+  },
+  "host": {
+   "cpu_model": "AMD Ryzen 7 9700X 8-Core Processor",
+   "nproc": 8,
+   "kernel": "6.18.54.1-microsoft-standard-WSL2",
+   "mem_total_kb": 8134332
+  }
+ },
+ "started_at": "2026-11-01T01:57:17.052Z",
+ "finished_at": "2026-11-01T01:57:17.931Z",
+ "duration_ms": 879,
+ "exit_status": 0,
+ "error": null,
+ "output": {
+  "file": "output.zip",
+  "sha256": "5e9a68d3f781fafde8861c57b354976316f2202196bde1b74d0804719f19bfaf",
+  "bytes": 871646,
+  "engine_filename": "BO3_SYSTEMS_java.zip"
+ },
+ "logs": [
+  "converter.log",
+  "worker.log",
+  "prep.log"
+ ],
+ "peak": {
+  "converter_memory_bytes": 245547008,
+  "worker_memory_bytes": 54558720
+ },
+ "lab": {
+  "job_id": "1c0281d3-0480-4935-ac5c-24b30497755d",
+  "final_status": "done",
+  "attempts": 1,
+  "notice": {
+   "commands": {
+    "total": 23,
+    "byKind": {
+     "approximate_translation": 23
+    },
+    "disabled": 0,
+    "reportFile": "worldswitch_command_report.json",
+    "approximated": 23
+   },
+   "fidelity": {
+    "total": 113,
+    "impacts": [
+     {
+      "en": "Dropped — block entity `SporeBlossom` (×75)",
+      "fr": "Supprimé — block entity `SporeBlossom` (×75)",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — block entity `FlowerPot` (×29)",
+      "fr": "Supprimé — block entity `FlowerPot` (×29)",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — block entity `PistonArm` (×2)",
+      "fr": "Supprimé — block entity `PistonArm` (×2)",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — block entity `Cauldron`",
+      "fr": "Supprimé — block entity `Cauldron`",
+      "category": "dropped"
+     },
+     {
+      "en": "Dropped — block entity `Lodestone`",
+      "fr": "Supprimé — block entity `Lodestone`",
+      "category": "dropped"
+     },
+     {
+      "en": "Approximated — world data `4x4x4 biomes (dim0)`",
+      "fr": "Approximé — donnée de monde `biomes 4x4x4 (dim0)`",
+      "category": "approximated"
+     },
+     {
+      "en": "Approximated — world data `scoreboard: score holder (UUID)`",
+      "fr": "Approximé — donnée de monde `scoreboard : détenteur de score (UUID)`",
+      "category": "approximated"
+     },
+     {
+      "en": "Dropped — world data `generated structures (partial)`",
+      "fr": "Supprimé — donnée de monde `structures generees (partiel)`",
+      "category": "dropped"
+     },
+     {
+      "en": "Approximated — world data `circular ticking area`",
+      "fr": "Approximé — donnée de monde `zone de tick circulaire`",
+      "category": "approximated"
+     },
+     {
+      "en": "Archived — world data `Bedrock setting serverChunkTickRange`",
+      "fr": "Archivé — donnée de monde `réglage Bedrock serverChunkTickRange`",
+      "category": "archived"
+     }
+    ],
+    "detailed": 10,
+    "families": 10,
+    "truncated": 0,
+    "byCategory": {
+     "dropped": 109,
+     "archived": 1,
+     "approximated": 3
+    }
+   }
+  },
+  "upload_ms": 33,
+  "analysis_ms": 200,
+  "analysis": {
+   "detectedType": "Bedrock",
+   "version": "Bedrock 1.26.45",
+   "sizeBytes": 779237,
+   "sizeFormatted": "761 Ko",
+   "uncompressedBytes": 854712,
+   "chunkCount": 20,
+   "levelName": "BO3 SYSTEMS",
+   "valid": true,
+   "gameMode": "creative",
+   "difficulty": "hard",
+   "spawn": "0, 201, 0",
+   "worldRootPrefix": "",
+   "worldCount": 1,
+   "players": [
+    {
+     "sourceId": "~local_player",
+     "isHost": true,
+     "sourceLabel": "Joueur principal",
+     "labelSource": "host",
+     "displayIndex": 1,
+     "xuid": null,
+     "msaId": null,
+     "identifiers": [],
+     "profile": {
+      "items": 0,
+      "armor": 0,
+      "ender": 0,
+      "xpLevel": 0,
+      "dimension": "overworld",
+      "pos": [
+       19,
+       202,
+       39
+      ],
+      "nameHints": [],
+      "empty": true
+     },
+     "profileReadable": true,
+     "sharesAccountWith": 0
+    }
+   ],
+   "playersScanned": true,
+   "playersSkippedReason": null,
+   "curedVillagers": 0
+  },
+  "queue_to_done_ms": 1843,
+  "wall_s_worker_start_to_terminal": 2.864093835,
+  "converter": {
+   "memory_peak_bytes": 245547008,
+   "cpu_usec": 2085173,
+   "oom_kills": 0,
+   "scratch_peak_bytes_sampled_2s": 0
+  },
+  "worker": {
+   "memory_peak_bytes": 54558720,
+   "cpu_usec": 431281,
+   "scratch_peak_bytes_sampled_2s": 0
+  }
+ }
+}

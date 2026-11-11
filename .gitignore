@@ -12,3 +12,16 @@ MCCB_J0*.zip
 *.log
 .DS_Store
 Thumbs.db
+
+# Local staging (release candidates, conversion runs, scratch) — never committed
+_staging/
+node_modules/
+_work*/
+
+# Minecraft writes ./logs when its code runs (normaliser); never committed
+logs/
+
+# Monde privé R01 (R01) : ni registre, ni notation, ni sortie ne sont jamais publiés
+fixtures/R01*
+**/R01/
+**/R01_*
